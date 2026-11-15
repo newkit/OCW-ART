@@ -1,0 +1,4 @@
+# Copy to ocw-art.toml (git-ignored) to point the tool at an OCW checkout
+# that is not ../OCW next to this one. OCW_REPO (environment) wins over it.
+# A relative path is relative to this checkout.
+ocw_repo = "../OCW"

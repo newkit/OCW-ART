@@ -1,9 +1,10 @@
-"""Unit tests of the art project's tool (art/ART-PROJECT.md): masking of the
+"""Unit tests of the art project's tool (ART-PROJECT.md): masking of the
 tracked text files, check-masked, the collector's days, the lock, the status
-file and scripts/art-collect.sh. A small fixture archive in a temporary
-directory; no real archive, no network, no ffmpeg.
+file, the OCW checkout setting, GitHub targets and collect.sh. A small
+fixture archive in a temporary directory; no real archive, no network, no
+ffmpeg. The OCW checkout (OCW_REPO, else ../OCW) is only read (git log).
 
-    /usr/bin/python3 -m unittest discover -s art -p 'test_*.py'   (make test-art)
+    /usr/bin/python3 -m unittest discover -s . -p 'test_*.py'   (make test)
 """
 
 from __future__ import annotations
@@ -43,40 +44,47 @@ def tree_state(root: Path) -> dict:
     return out
 
 
-# The real archive at the default place (the main checkout has one): the tests
-# must never touch it. They hold its lock meanwhile (the hourly collector
-# waits), and compare every file's size and mtime before and after.
-REAL_HIST = diary.ROOT / "art" / "build-history"
-_real = {"lock": None, "state": None}
+# The real archive at the default place (this checkout's build-history/) and
+# at its old place in the OCW checkout (OCW/art/build-history/, until it is
+# moved): the tests must never touch either. They hold each one's lock
+# meanwhile (the hourly collector waits), and compare every file's size and
+# mtime before and after.
+REAL_HISTS = [diary.ART / "build-history", diary.ROOT / "art" / "build-history"]
+_real: dict[Path, dict] = {}
 
 
 def setUpModule():
-    if not REAL_HIST.is_dir():
-        return
     import fcntl
-    lock = REAL_HIST / ".lock"
-    if lock.exists():  # (no lock file: creating one would touch the archive)
-        f = open(lock, "r")
-        try:
-            fcntl.flock(f, fcntl.LOCK_SH | fcntl.LOCK_NB)
-        except BlockingIOError:
-            f.close()
-            return  # a collector or diary run is busy: no stable state to compare
-        _real["lock"] = f
-    _real["state"] = tree_state(REAL_HIST)
+    for hist in REAL_HISTS:
+        if not hist.is_dir():
+            continue
+        entry = {"lock": None, "state": None}
+        lock = hist / ".lock"
+        if lock.exists():  # (no lock file: creating one would touch the archive)
+            f = open(lock, "r")
+            try:
+                fcntl.flock(f, fcntl.LOCK_SH | fcntl.LOCK_NB)
+            except BlockingIOError:
+                f.close()
+                continue  # a collector or diary run is busy: no stable state to compare
+            entry["lock"] = f
+        entry["state"] = tree_state(hist)
+        _real[hist] = entry
 
 
 def tearDownModule():
-    if _real["state"] is None:
-        return
-    try:
-        after = tree_state(REAL_HIST)
-        changed = sorted(k for k in set(after) | set(_real["state"]) if after.get(k) != _real["state"].get(k))
-        if changed:
-            raise AssertionError(f"the tests changed the real archive {REAL_HIST}: {changed[:10]}")
-    finally:
-        if _real["lock"] is not None:
-            _real["lock"].close()
+    errors = []
+    for hist, entry in _real.items():
+        try:
+            after = tree_state(hist)
+            changed = sorted(k for k in set(after) | set(entry["state"]) if after.get(k) != entry["state"].get(k))
+            if changed:
+                errors.append(f"the tests changed the real archive {hist}: {changed[:10]}")
+        finally:
+            if entry["lock"] is not None:
+                entry["lock"].close()
+    if errors:
+        raise AssertionError("; ".join(errors))
 
 
 class Fixture(unittest.TestCase):
@@ -276,21 +284,98 @@ class LockTest(Fixture):
 
 
 class OldPlaceTest(Fixture):
-    def test_refuses_while_archive_at_old_place(self):
-        old = self.tmp / "artwork" / "build-history"
-        (old / DAY).mkdir(parents=True)
+    def test_refuses_while_archive_in_the_ocw_checkout(self):
+        old = self.tmp / "OCW" / "art" / "build-history"
+        old.mkdir(parents=True)
         with mock.patch.object(diary, "OLD_HIST", old), mock.patch.dict(os.environ):
             os.environ.pop("OCW_ART_HISTORY", None)
+            (old / ".lock").write_text("")
+            diary.check_old_place()  # only a lock file left: moved
+            (old / DAY).mkdir()
             with self.assertRaises(SystemExit) as e:
                 diary.check_old_place()
-            self.assertIn("art/build-history", str(e.exception))
-            self.assertIn("mv artwork/build-history art/build-history", str(e.exception))
-            (self.hist / DAY).mkdir()
-            with self.assertRaises(SystemExit) as e:
-                diary.check_old_place()
-            self.assertIn("both", str(e.exception))
+            msg = str(e.exception)
+            self.assertIn(str(old), msg)
+            self.assertIn(f"mv {old} {self.hist}", msg)
+            os.environ["OCW_ART_HISTORY"] = str(self.hist)
+            diary.check_old_place()  # an explicit archive (tests): no check
+            os.environ.pop("OCW_ART_HISTORY")
             subprocess.run(["rm", "-rf", "--", str(old)], check=True)
             diary.check_old_place()  # moved: fine
+
+
+class OcwRepoTest(Fixture):
+    """The OCW checkout the tool reads: OCW_REPO, else ocw-art.toml, else ../OCW."""
+
+    def test_env_then_config_then_sibling(self):
+        art = self.tmp / "OCW-ART"
+        art.mkdir()
+        conf = art / "ocw-art.toml"
+        with mock.patch.object(diary, "ART", art), mock.patch.object(diary, "CONFIG", conf), \
+                mock.patch.dict(os.environ):
+            os.environ.pop("OCW_REPO", None)
+            self.assertEqual(diary.ocw_repo(), (self.tmp / "OCW").resolve())
+            conf.write_text('ocw_repo = "../src/OCW-main"\n')
+            self.assertEqual(diary.ocw_repo(), (self.tmp / "src" / "OCW-main").resolve())
+            os.environ["OCW_REPO"] = str(self.tmp / "elsewhere")
+            self.assertEqual(diary.ocw_repo(), (self.tmp / "elsewhere").resolve())
+            conf.write_text("ocw_repo = [\n")
+            os.environ.pop("OCW_REPO")
+            with self.assertRaises(SystemExit):
+                diary.ocw_repo()
+
+    def test_check_ocw_needs_a_checkout(self):
+        with mock.patch.object(diary, "ROOT", self.tmp / "nothing"):
+            with self.assertRaises(SystemExit) as e:
+                diary.check_ocw()
+            self.assertIn("OCW_REPO", str(e.exception))
+        diary.check_ocw()  # the checkout the tests run against
+
+    def test_cli_prints_the_checkout(self):
+        r = subprocess.run([sys.executable, str(HERE / "diary.py"), "ocw-repo"],
+                           env={**os.environ, "OCW_REPO": str(self.tmp)}, capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(r.stdout.strip(), str(self.tmp.resolve()))
+
+    def test_cli_refuses_without_an_ocw_checkout(self):
+        r = subprocess.run([sys.executable, str(HERE / "diary.py"), "check-masked"],
+                           env={**os.environ, "OCW_REPO": str(self.tmp / "nothing"),
+                                "OCW_ART_HISTORY": str(self.hist)}, capture_output=True, text=True)
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("no OCW checkout", r.stderr)
+
+
+class GitHubTest(Fixture):
+    """publish uploads to newkit/OCW-ART; fetch falls back to OCW's release."""
+
+    def test_publish_goes_to_ocw_art(self):
+        (self.hist / "diary").mkdir()
+        (self.hist / "diary" / "ocw-build-diary.mp4").write_bytes(b"video")
+        calls = []
+
+        def fake_run(cmd, **kw):
+            calls.append([str(c) for c in cmd])
+            return subprocess.CompletedProcess(cmd, 0, "", "")
+        with mock.patch.object(diary, "run", side_effect=fake_run):
+            diary.publish([])
+        gh = [c for c in calls if c[:1] == ["gh"]]
+        self.assertTrue(gh)
+        for c in gh:
+            self.assertEqual(c[c.index("-R") + 1], "newkit/OCW-ART")
+        self.assertEqual(gh[-1][:3], ["gh", "release", "upload"])
+        self.assertTrue((self.hist / "SHA256SUMS").read_text().rstrip().endswith("  ocw-build-diary.mp4"))
+
+    def test_fetch_falls_back_to_the_ocw_release(self):
+        repos = []
+
+        def fake_run(cmd, **kw):
+            cmd = [str(c) for c in cmd]
+            if cmd[:3] == ["gh", "release", "download"]:
+                repos.append(cmd[cmd.index("-R") + 1])
+            return subprocess.CompletedProcess(cmd, 1, "", "")
+        with mock.patch.object(diary, "run", side_effect=fake_run):
+            diary.fetch(DAY)
+        self.assertEqual(repos, ["newkit/OCW-ART", "newkit/OCW"])
 
 
 class CollectTest(Fixture):
@@ -336,12 +421,13 @@ class CollectTest(Fixture):
 
 
 class CollectScriptTest(Fixture):
-    """scripts/art-collect.sh on the fixture (OCW_ART_HISTORY, OCW_TEST_OUTPUT)."""
+    """collect.sh on the fixture (OCW_ART_HISTORY, OCW_TEST_OUTPUT)."""
 
-    SCRIPT = HERE.parent / "scripts" / "art-collect.sh"
+    SCRIPT = HERE / "collect.sh"
 
     def script_env(self, **kw):
-        return {**os.environ, "OCW_ART_HISTORY": str(self.hist), "OCW_TEST_OUTPUT": str(self.out),
+        return {**os.environ, "OCW_REPO": str(diary.ROOT), "OCW_ART_HISTORY": str(self.hist),
+                "OCW_TEST_OUTPUT": str(self.out),
                 "OCW_TRANSCRIPTS": str(self.tmp / "no-transcripts"), "OCW_ART_PYTHON": sys.executable, **kw}
 
     def test_locked_run_gives_up(self):
@@ -476,68 +562,101 @@ class IncidentTest(Fixture):
         (self.hist / self.DAY2).mkdir(parents=True)
         (self.hist / self.DAY2 / "incidents.md").write_text("## 00:39\n\nssh builder@buildhost.example.lan\n")
         self.assertTrue(any(f.startswith(f"{self.DAY2}/incidents.md:3:") for f in diary.check_masked()))
-        root = diary.ROOT
-        for rel, ignored in ((f"art/build-history/{self.DAY2}/incidents.md", False),
-                             (f"art/build-history/{self.DAY2}/journal.md", False),
-                             (f"art/build-history/{self.DAY2}/logs/build-log/incidents.jsonl", True),
-                             (f"art/build-history/{self.DAY2}/prompts.md", True)):
+        root = diary.ART
+        for rel, ignored in ((f"build-history/{self.DAY2}/incidents.md", False),
+                             (f"build-history/{self.DAY2}/journal.md", False),
+                             (f"build-history/{self.DAY2}/logs/build-log/incidents.jsonl", True),
+                             (f"build-history/{self.DAY2}/prompts.md", True)):
             r = subprocess.run(["git", "-C", str(root), "check-ignore", "-q", "--no-index", rel])
             self.assertEqual(r.returncode == 0, ignored, rel)
 
 
 class DefaultArchiveUntouchedTest(Fixture):
-    """The collector run with OCW_ART_HISTORY / OCW_TEST_OUTPUT, in a copy of
-    the repository that has a real-looking archive at the default place
-    (art/build-history/), its own test-output/ and an agent worktree with
-    media of the day: none of these may be read into or written by the run."""
+    """The collector run with OCW_ART_HISTORY / OCW_TEST_OUTPUT, from a copy
+    of this checkout that has a real-looking archive at the default place
+    (build-history/), next to a fake OCW checkout (OCW_REPO) with its own
+    test-output/, an agent worktree with media of the day and an archive at
+    the old place (art/build-history/): none of these may be read into or
+    written by the run."""
 
-    def make_repo(self) -> Path:
-        repo = self.tmp / "repo"
-        (repo / "art").mkdir(parents=True)
-        (repo / "scripts").mkdir()
-        for rel in ("art/diary.py", "art/music.py", "art/features.py", "scripts/art-collect.sh"):
-            (repo / rel).write_bytes((HERE.parent / rel).read_bytes())
-            (repo / rel).chmod(0o755)
-        env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.org",
-               "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.org",
-               "GIT_AUTHOR_DATE": f"{DAY}T10:00:00", "GIT_COMMITTER_DATE": f"{DAY}T10:00:00"}
-        for cmd in (["init", "-q"], ["add", "art/diary.py", "art/music.py", "art/features.py", "scripts/art-collect.sh"],
-                    ["commit", "-q", "-m", "fixture"]):
+    ENV = {"GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.org",
+           "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.org",
+           "GIT_AUTHOR_DATE": f"{DAY}T10:00:00", "GIT_COMMITTER_DATE": f"{DAY}T10:00:00"}
+
+    def git_repo(self, repo: Path, files: list[str]):
+        env = {**os.environ, **self.ENV}
+        for cmd in (["init", "-q"], ["add", *files], ["commit", "-q", "-m", "fixture"]):
             subprocess.run(["git", "-C", str(repo), *cmd], env=env, check=True, capture_output=True)
-        # The real-looking archive at the default place, with its lock file.
-        real = repo / "art" / "build-history"
+
+    def real_looking_archive(self, real: Path):
         (real / DAY / "logs" / "build-log").mkdir(parents=True)
         for name, data in (("index.md", "# Build history\n"), (".lock", ""), ("SENTINEL", "do not touch\n"),
                            (f"{DAY}/090000-real-shot.jpg", "jpeg"), (f"{DAY}/journal.json", "{}\n"),
                            (f"{DAY}/logs/build-log/runs.jsonl", "{}\n")):
             (real / name).write_text(data)
-        # Media of the day in the repository's own test-output and in a worktree.
-        for leak in (repo / "test-output" / DAY, repo / ".claude" / "worktrees" / "agent-x" / "test-output" / DAY):
+
+    def make_repos(self) -> tuple[Path, Path]:
+        art, ocw = self.tmp / "OCW-ART", self.tmp / "OCW"
+        art.mkdir()
+        for rel in ("diary.py", "music.py", "features.py", "collect.sh"):
+            (art / rel).write_bytes((HERE / rel).read_bytes())
+            (art / rel).chmod(0o755)
+        self.git_repo(art, ["diary.py", "music.py", "features.py", "collect.sh"])
+        (ocw / "scripts").mkdir(parents=True)
+        (ocw / "SPECIFICATION.md").write_text("# Open Cycling World\n")
+        self.git_repo(ocw, ["SPECIFICATION.md"])
+        self.real_looking_archive(art / "build-history")
+        # Media of the day in OCW's own test-output and in a worktree.
+        for leak in (ocw / "test-output" / DAY, ocw / ".claude" / "worktrees" / "agent-x" / "test-output" / DAY):
             leak.mkdir(parents=True)
             (leak / "110000-leak.jpg").write_bytes(b"\xff\xd8 must not be gathered")
-        return repo
+        return art, ocw
 
     def test_overrides_keep_the_default_archive_untouched(self):
-        repo = self.make_repo()
-        watched = {p: tree_state(p) for p in (repo / "art" / "build-history", repo / "test-output",
-                                              repo / ".claude")}
+        art, ocw = self.make_repos()
+        self.real_looking_archive(ocw / "art" / "build-history")  # the old place, not yet moved
+        watched = {p: tree_state(p) for p in (art / "build-history", ocw / "art", ocw / "test-output",
+                                              ocw / ".claude")}
         (self.out / DAY).mkdir(parents=True)
         (self.out / DAY / "101500-shot.jpg").write_bytes(b"\xff\xd8 fixture")
-        env = {**os.environ, "OCW_ART_HISTORY": str(self.hist), "OCW_TEST_OUTPUT": str(self.out),
-               "OCW_TRANSCRIPTS": str(self.tmp / "no-transcripts"), "OCW_ART_PYTHON": sys.executable}
+        env = {**os.environ, "OCW_REPO": str(ocw), "OCW_ART_HISTORY": str(self.hist),
+               "OCW_TEST_OUTPUT": str(self.out), "OCW_TRANSCRIPTS": str(self.tmp / "no-transcripts"),
+               "OCW_ART_PYTHON": sys.executable}
         env.pop("OCW_ART_WORKTREES", None)
         time.sleep(0.05)  # an mtime change would be visible
-        r = subprocess.run([str(repo / "scripts" / "art-collect.sh"), "--no-sheets", DAY], env=env,
+        r = subprocess.run([str(art / "collect.sh"), "--no-sheets", DAY], env=env,
                            capture_output=True, text=True, timeout=300)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         for p, before in watched.items():
             self.assertEqual(tree_state(p), before, f"{p} was changed")
-        self.assertEqual((repo / "art" / "build-history" / "SENTINEL").read_text(), "do not touch\n")
+        self.assertEqual((art / "build-history" / "SENTINEL").read_text(), "do not touch\n")
         # Only the fixture's own media were gathered (no leak, no real files).
         self.assertEqual(sorted(f.name for f in (self.hist / DAY).iterdir() if f.suffix == ".jpg"),
                          ["101500-shot.jpg"])
         st = json.loads((self.out / "build-log" / dt.date.today().isoformat() / "art.json").read_text())
         self.assertEqual(st["days"][DAY]["media"], 1)
+
+    def test_default_run_refuses_while_the_archive_is_at_the_old_place(self):
+        """Without OCW_ART_HISTORY the collector stops (status failed) and
+        changes nothing while OCW/art/build-history/ still holds the archive."""
+        art, ocw = self.make_repos()
+        self.real_looking_archive(ocw / "art" / "build-history")
+        watched = {p: tree_state(p) for p in (art / "build-history" / DAY, ocw / "art")}
+        env = {**os.environ, "OCW_REPO": str(ocw), "OCW_TEST_OUTPUT": str(self.out),
+               "OCW_TRANSCRIPTS": str(self.tmp / "no-transcripts"), "OCW_ART_PYTHON": sys.executable,
+               "OCW_ART_LOCK_WAIT": "5"}
+        env.pop("OCW_ART_HISTORY", None)
+        time.sleep(0.05)
+        r = subprocess.run([str(art / "collect.sh"), "--no-sheets", DAY], env=env,
+                           capture_output=True, text=True, timeout=300)
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("still in the OCW checkout", r.stdout + r.stderr)
+        st = json.loads((self.out / "build-log" / dt.date.today().isoformat() / "art.json").read_text())
+        self.assertEqual(st["status"], "failed")
+        # (the collector writes only its lock file in the default archive)
+        for p, before in watched.items():
+            self.assertEqual(tree_state(p), before, f"{p} was changed")
+        self.assertEqual((art / "build-history" / "SENTINEL").read_text(), "do not touch\n")
 
     def test_sources_honour_the_overrides(self):
         """In-process: with WORKTREES off only TEST_OUTPUT is a source."""

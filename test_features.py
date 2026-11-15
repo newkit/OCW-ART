@@ -1,9 +1,9 @@
-"""Unit tests of the features log (art/features.py, ART-PROJECT §2.7) and its
+"""Unit tests of the features log (features.py, ART-PROJECT §2.7) and its
 diary.py glue: spec-row parsing from fixture diffs, merge matching, the
 check-run lookup on a fixture build log, agent-event appending and masking,
 the roll layout. No live git history, gh or journal.
 
-    /usr/bin/python3 -m unittest discover -s art -p 'test_*.py'   (make test-art)
+    /usr/bin/python3 -m unittest discover -s . -p 'test_*.py'   (make test)
 """
 
 from __future__ import annotations

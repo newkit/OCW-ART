@@ -1,14 +1,14 @@
-# The art project's hourly collector (art/ART-PROJECT.md §5.1): gather +
+# The art project's hourly collector (ART-PROJECT.md §5.1): gather +
 # journal of yesterday and today, the mask check, the contact sheets in the
 # 23:xx run. Started by ocw-art-collect.timer; installed by
-# `make art-install-timer`, which fills in @REPO@ (the main checkout).
+# `make install-timer` in the OCW-ART checkout, which fills in @REPO@ (that checkout).
 [Unit]
-Description=OCW Build Diary: hourly collector (art/ART-PROJECT.md §5.1)
+Description=OCW Build Diary: hourly collector (ART-PROJECT.md §5.1)
 
 [Service]
 Type=oneshot
 WorkingDirectory=@REPO@
-ExecStart=@REPO@/scripts/art-collect.sh
+ExecStart=@REPO@/collect.sh
 # git, ffmpeg, flock, gh; not the pyenv shims (the script picks /usr/bin/python3).
 Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
 # Up to 45 min waiting for a manual diary.py run (the lock), then the run itself.

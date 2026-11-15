@@ -1,49 +1,56 @@
 #!/usr/bin/env python3
-"""OCW Build Diary: the art project's tool (art/ART-PROJECT.md).
+"""OCW Build Diary: the art project's tool (ART-PROJECT.md).
 
-    art/diary.py fetch   [DAY...]   download and unpack the day zips from the
-                                    GitHub release `build-history`
-    art/diary.py gather  [DAY...]   collect every image, video, sound, text and
-                                    log of the day into art/build-history/DAY/
-    art/diary.py stamp   [DAY...]   write the ISO 8601 capture time into every
-                                    archived PNG/MP4 that has none (gather does it)
-    art/diary.py prompts [DAY...]   the user's prompts of the day (from the Claude
-                                    Code transcripts, masked) – journal runs it
-    art/diary.py journal [DAY...]   write DAY/journal.md + journal.json (commits,
-                                    merges, spec versions, tests, media; masked)
-    art/diary.py sheet   DAY        contact sheets of the day's media (for
-                                    writing the day's script)
-    art/diary.py render  [DAY...]   render the day video(s) from art/days/DAY.toml
-    art/diary.py diary              chain all day videos into the diary video
-    art/diary.py publish [DAY...]   zip the day folders and upload zips and
-                                    videos to the release `build-history`
-                                    (--videos: only the videos and SHA256SUMS)
-    art/diary.py all     [DAY...]   gather + journal + render + diary
-    art/diary.py collect [--sheets|--no-sheets] [DAY...]
-                                    the hourly collector (scripts/art-collect.sh):
-                                    gather + journal of yesterday and today, the
-                                    mask check, contact sheets in the 23:xx run;
-                                    status in test-output/build-log/DAY/art.json
-    art/diary.py agent-event --task T --branch B --event E [--agent ID]
+    diary.py fetch   [DAY...]   download and unpack the day zips from the
+                                GitHub release `build-history` (OCW-ART,
+                                else OCW's for days 1-4)
+    diary.py gather  [DAY...]   collect every image, video, sound, text and
+                                log of the day into build-history/DAY/
+    diary.py stamp   [DAY...]   write the ISO 8601 capture time into every
+                                archived PNG/MP4 that has none (gather does it)
+    diary.py prompts [DAY...]   the user's prompts of the day (from the Claude
+                                Code transcripts, masked) – journal runs it
+    diary.py journal [DAY...]   write DAY/journal.md + journal.json (commits,
+                                merges, spec versions, tests, media; masked)
+    diary.py sheet   DAY        contact sheets of the day's media (for
+                                writing the day's script)
+    diary.py render  [DAY...]   render the day video(s) from days/DAY.toml
+    diary.py diary              chain all day videos into the diary video
+    diary.py publish [DAY...]   zip the day folders and upload zips and
+                                videos to the release `build-history` of
+                                newkit/OCW-ART (--videos: only the videos
+                                and SHA256SUMS)
+    diary.py all     [DAY...]   gather + journal + render + diary
+    diary.py collect [--sheets|--no-sheets] [DAY...]
+                                the hourly collector (collect.sh): gather +
+                                journal of yesterday and today, the mask
+                                check, contact sheets in the 23:xx run;
+                                status in OCW's test-output/build-log/DAY/
+                                art.json (the build dashboard reads it)
+    diary.py agent-event --task T --branch B --event E [--agent ID]
                  [--commits C] [--note N] [--time ISO] [--day DAY]
-                                    append an agent job event (E: started,
-                                    reported, interrupted, resumed, merged,
-                                    abandoned) to test-output/build-log/DAY/
-                                    agents.jsonl, masked (the coordinator)
-    art/diary.py agent-backfill DAY  the day's agent jobs from git (merged
-                                    agent branches) and the incident log
-    art/diary.py check-masked [--fix]
-                                    fail if a tracked text file of the archive
-                                    (index.md, SHA256SUMS, DAY/journal.*,
-                                    DAY/tokens.json) holds a private pattern;
-                                    --fix masks them in place
+                                append an agent job event (E: started,
+                                reported, interrupted, resumed, merged,
+                                abandoned) to OCW's test-output/build-log/
+                                DAY/agents.jsonl, masked (the coordinator)
+    diary.py agent-backfill DAY the day's agent jobs from git (merged agent
+                                branches) and the incident log
+    diary.py check-masked [--fix]
+                                fail if a tracked text file of the archive
+                                (index.md, SHA256SUMS, DAY/journal.*,
+                                DAY/tokens.json, DAY/incidents.md) holds a
+                                private pattern; --fix masks them in place
+    diary.py ocw-repo           print the OCW checkout the tool reads
 
-DAY is YYYY-MM-DD; without DAY: every day that has a script in art/days/.
+DAY is YYYY-MM-DD; without DAY: every day that has a script in days/.
+The OCW checkout (git log, SPECIFICATION.md, test-output/, config/
+machines.toml for the mask): OCW_REPO, else `ocw_repo` in ocw-art.toml,
+else ../OCW next to this checkout.
 Needs Python 3.11+ (tomllib), ffmpeg/ffprobe with libass, and `gh` for
-fetch/publish. Media stay out of git (spec §11.3): they land in the
-git-ignored art/build-history/; only its masked text files are tracked.
+fetch/publish. Media stay out of git: they land in the git-ignored
+build-history/; only its masked text files are tracked.
 Runs never overlap: every command but check-masked takes the lock
-art/build-history/.lock (scripts/art-collect.sh takes the same one).
+build-history/.lock (collect.sh takes the same one).
 """
 
 from __future__ import annotations
@@ -67,13 +74,47 @@ import wave
 from array import array
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-ART = ROOT / "art"
+# This checkout (OCW-ART, https://github.com/newkit/OCW-ART): the tool, the
+# day scripts and the archive. OCW itself (its git log, SPECIFICATION.md,
+# test-output/, config/machines.toml and scripts/remote.sh) is read from the
+# OCW checkout named by OCW_REPO, else `ocw_repo` in ocw-art.toml, else
+# ../OCW next to this checkout (ART-PROJECT §5).
+ART = Path(__file__).resolve().parent
 DAYS = ART / "days"
+ASSETS = ART / "assets"
+CONFIG = ART / "ocw-art.toml"
+
+
+def ocw_repo() -> Path:
+    """The OCW checkout the tool reads (OCW_REPO, ocw-art.toml, ../OCW)."""
+    env = os.environ.get("OCW_REPO")
+    if env:
+        return Path(env).expanduser().resolve()
+    if CONFIG.is_file():
+        try:
+            v = tomllib.loads(CONFIG.read_text()).get("ocw_repo")
+        except tomllib.TOMLDecodeError as e:
+            raise SystemExit(f"{CONFIG.name}: {e}") from None
+        if v:
+            return (ART / Path(v).expanduser()).resolve()
+    return (ART.parent / "OCW").resolve()
+
+
+ROOT = ocw_repo()
+
+
+def check_ocw():
+    """Stops with a clear message when OCW_REPO is not an OCW checkout."""
+    if not (ROOT / "SPECIFICATION.md").is_file() or not (ROOT / ".git").exists():
+        raise SystemExit(f"no OCW checkout at {ROOT}: clone https://github.com/newkit/OCW next to this "
+                         f"checkout (../OCW), or set OCW_REPO / `ocw_repo` in {CONFIG.name} (ART-PROJECT §5)")
+
+
 # The archive (ART-PROJECT §2): media git-ignored, masked text tracked.
-# OCW_ART_HISTORY moves it (tests); its old place was artwork/build-history/.
-HIST = Path(os.environ.get("OCW_ART_HISTORY") or ROOT / "art" / "build-history")
-OLD_HIST = ROOT / "artwork" / "build-history"
+# OCW_ART_HISTORY moves it (tests). Until 2026-11-15 it lived in the OCW
+# checkout, at art/build-history/ (before 2026-11-14: artwork/build-history/).
+HIST = Path(os.environ.get("OCW_ART_HISTORY") or ART / "build-history")
+OLD_HIST = ROOT / "art" / "build-history"
 OUT = HIST / "diary"
 WORK = HIST / ".work"
 TEST_OUTPUT = Path(os.environ.get("OCW_TEST_OUTPUT") or ROOT / "test-output")
@@ -83,7 +124,16 @@ TEST_OUTPUT = Path(os.environ.get("OCW_TEST_OUTPUT") or ROOT / "test-output")
 _wt = os.environ.get("OCW_ART_WORKTREES")
 WORKTREES = (Path(_wt) if _wt else None) if _wt is not None else (
     None if os.environ.get("OCW_TEST_OUTPUT") else ROOT / ".claude" / "worktrees")
-FONTS = ROOT / "crates" / "ocw-render" / "assets" / "fonts"
+# Fira Mono (the app's UI font, copied from OCW's crates/ocw-render/assets/
+# fonts/) and the logo (copied from OCW's artwork/logos/).
+FONTS = ASSETS / "fonts"
+LOGO = ASSETS / "logos" / "ocw-512.png"
+# GitHub: the art project's release (videos, day zips, SHA256SUMS) is on
+# OCW-ART; OCW's own release `build-history` holds days 1-4 too (fetch falls
+# back to it) and the README's product images. OCW's releases are listed in
+# the journal (features, §2.7).
+ART_GH = os.environ.get("OCW_ART_GH_REPO", "newkit/OCW-ART")
+OCW_GH = "newkit/OCW"
 RELEASE = "build-history"
 
 IMAGE = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
@@ -95,7 +145,7 @@ LOGS = {".log", ".json", ".jsonl", ".args", ".route", ".toml", ".csv"}
 W, H, FPS = 1920, 1080, 30
 RATE = 44100
 
-# Brand colours (artwork/logos/ocw.svg): rider pink, deep violet, gold.
+# Brand colours (assets/logos/ocw.svg): rider pink, deep violet, gold.
 PINK, VIOLET, GOLD, INK = "FF1472", "3A2F55", "C98A00", "2B2B3A"
 
 
@@ -112,29 +162,26 @@ def set_history(path: Path):
 
 
 def check_old_place():
-    """The archive moved from artwork/build-history/ to art/build-history/
-    (2026-11-14): refuse to work on an empty new place while the old one
-    still holds it."""
+    """The archive moved out of the OCW checkout (OCW/art/build-history/) into
+    this checkout's build-history/ (2026-11-15): refuse to work while the old
+    place still holds it."""
     if os.environ.get("OCW_ART_HISTORY") or not OLD_HIST.is_dir():
         return
-    if not any(OLD_HIST.iterdir()):
+    if not any(p.name != ".lock" for p in OLD_HIST.iterdir()):
         return
-    rel_old, rel_new = "artwork/build-history", "art/build-history"
-    if HIST.is_dir() and any(p.name != ".lock" for p in HIST.iterdir()):
-        raise SystemExit(
-            f"The build history is in both {rel_old}/ and {rel_new}/. It lives in {rel_new}/ now "
-            f"(art/ART-PROJECT.md §2): move what is left in {rel_old}/ over by hand, then remove it.")
     raise SystemExit(
-        f"The build history is still at its old place, {rel_old}/. It lives in {rel_new}/ now "
-        f"(art/ART-PROJECT.md §2). Move it once (same file system, instant):\n"
-        f"    rmdir {rel_new} 2>/dev/null; mv {rel_old} {rel_new}\n"
-        f"then mask and commit its text files: art/diary.py check-masked --fix")
+        f"The build history is still in the OCW checkout, at {OLD_HIST}. It lives in this checkout's "
+        f"build-history/ now (ART-PROJECT §5.2). Stop the collector timer and move it once (same file "
+        f"system, instant):\n"
+        f"    rm -rf {HIST} && mv {OLD_HIST} {HIST}\n"
+        f"(this checkout's build-history/ holds only tracked text, restored by git if needed), "
+        f"then: git -C {ART} status build-history")
 
 
 # ------------------------------------------------------------------- lock
 #
 # Runs never overlap (ART-PROJECT §5.1): every writing command takes an
-# exclusive flock on art/build-history/.lock. scripts/art-collect.sh takes
+# exclusive flock on build-history/.lock. collect.sh takes
 # the same lock itself and sets OCW_ART_LOCK_HELD=1 for the diary.py it runs.
 
 LOCK_NAME = ".lock"
@@ -278,10 +325,12 @@ def fetch(day: str):
     z = HIST / f"ocw-build-history-{day}.zip"
     if not z.exists():
         r = run(
-            ["gh", "release", "download", RELEASE, "-R", "newkit/OCW", "-D", HIST,
-             "-p", z.name],
+            ["gh", "release", "download", RELEASE, "-R", ART_GH, "-D", HIST, "-p", z.name],
             check=False,
         )
+        if r.returncode:  # days 1-4 are on OCW's release too
+            r = run(["gh", "release", "download", RELEASE, "-R", OCW_GH, "-D", HIST, "-p", z.name],
+                    check=False)
         if r.returncode:
             log(f"{day}: no zip on the release")
             return
@@ -902,7 +951,7 @@ def builds_of(day: str) -> dict:
 # journal of this machine (OOM kills, failed and restarted units, read-only)
 # and from the build log (machines offline / online, disks over 90 %,
 # janitor deletions, failed remote.sh runs); plus the coordinator's
-# root-cause notes in art/build-history/DAY/incidents.md (tracked, masked).
+# root-cause notes in build-history/DAY/incidents.md (tracked, masked).
 
 INCIDENTS_NAME = "incidents.jsonl"
 DISK_FULL_PCT = 90.0
@@ -1061,7 +1110,7 @@ def incidents_of(day: str) -> dict:
 # merge that landed each, its check run on marge (build log), the deploys
 # (deploys.jsonl, scripts/deploy-test.sh) and releases (gh, skipped when it
 # fails or OCW_ART_GH=0); the agent jobs from the coordinator's
-# test-output/build-log/DAY/agents.jsonl. Pure parts in art/features.py.
+# test-output/build-log/DAY/agents.jsonl. Pure parts in features.py.
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import features as F  # noqa: E402
@@ -1098,7 +1147,7 @@ def releases_of(day: str) -> list[dict]:
     if os.environ.get("OCW_ART_GH") == "0":
         return []
     try:
-        r = run(["gh", "release", "list", "-R", "newkit/OCW", "--limit", "50", "--json",
+        r = run(["gh", "release", "list", "-R", OCW_GH, "--limit", "50", "--json",
                  "tagName,name,publishedAt,isPrerelease"], capture_output=True, text=True, check=False, timeout=30)
         rel = json.loads(r.stdout) if r.returncode == 0 else []
     except (OSError, ValueError, subprocess.TimeoutExpired):
@@ -1469,13 +1518,15 @@ ENC = ["-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv4
 
 
 def media_path(day: str, name: str) -> Path:
-    """A shot's file: the day folder, else a path in the repository."""
+    """A shot's file: the day folder, else a path in this checkout (e.g.
+    assets/logos/ocw-512.png), else one in the OCW checkout."""
     p = HIST / day / name
     if p.exists():
         return p
-    p = ROOT / name
-    if p.exists():
-        return p
+    for root in (ART, ROOT):
+        p = root / name
+        if p.exists():
+            return p
     raise SystemExit(f"{day}: shot file not found: {name}")
 
 
@@ -1734,7 +1785,7 @@ class Subs:
 
 
 # The music (ART-PROJECT §3.2): a style per day, varied within the video;
-# art/music.py.
+# music.py.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from music import Music  # noqa: E402
 
@@ -1797,7 +1848,7 @@ def write_wav(path: Path, data):
 def load_script(day: str) -> dict:
     p = DAYS / f"{day}.toml"
     if not p.exists():
-        raise SystemExit(f"no script for {day}: write art/days/{day}.toml (see art/ART-PROJECT.md)")
+        raise SystemExit(f"no script for {day}: write days/{day}.toml (see ART-PROJECT.md)")
     return tomllib.loads(p.read_text())
 
 
@@ -2093,7 +2144,7 @@ def diary() -> Path:
     """The diary: a short opener, then every day video in order."""
     days = [p for p in sorted(OUT.glob("ocw-diary-day-*.mp4"))]
     if not days:
-        raise SystemExit("no day videos yet: art/diary.py render")
+        raise SystemExit("no day videos yet: diary.py render")
     work = WORK / "diary"
     work.mkdir(parents=True, exist_ok=True)
     opener = work / "opener.mp4"
@@ -2108,7 +2159,7 @@ def diary() -> Path:
                   f"day{'s' if len(days) != 1 else ''} so far"), pre="{\\pos(960,640)\\fad(0,300)}")
     ass = work / "opener.ass"
     sub.write(ass)
-    logo = ROOT / "artwork" / "logos" / "ocw-512.png"
+    logo = LOGO
     ffmpeg("-f", "lavfi", "-i", f"color=c=0x{VIOLET}:s={W}x{H}:r={FPS}", "-loop", "1", "-i", logo,
            "-f", "lavfi", "-i", f"anullsrc=r=48000:cl=stereo",
            "-filter_complex",
@@ -2179,12 +2230,31 @@ def publish(days: list[str]):
     files.append(sums)
     for f in files:
         log(f"upload {f.name} ({f.stat().st_size / 1e6:.1f} MB)")
-    run(["gh", "release", "upload", RELEASE, "-R", "newkit/OCW", "--clobber", *files])
+    ensure_release()
+    run(["gh", "release", "upload", RELEASE, "-R", ART_GH, "--clobber", *files])
+
+
+RELEASE_NOTES = (
+    "The OCW Build Diary (https://github.com/newkit/OCW-ART): a video per build day of Open Cycling World "
+    "(`ocw-diary-day-NN-YYYY-MM-DD.mp4`), the growing diary (`ocw-build-diary.mp4`), and the day's archive, "
+    "one zip per day (`ocw-build-history-YYYY-MM-DD.zip`: screenshots, videos, sounds, logs, journal; text "
+    "masked). `SHA256SUMS` lists every file; `index.md` describes the test-output files.\n\n"
+    "Not a software release. Map renders contain OpenStreetMap-derived data: © OpenStreetMap contributors "
+    "(ODbL).\n")
+
+
+def ensure_release():
+    """Creates the release `build-history` on OCW-ART when it is missing."""
+    if run(["gh", "release", "view", RELEASE, "-R", ART_GH], capture_output=True, check=False).returncode == 0:
+        return
+    log(f"creating the release {RELEASE} on {ART_GH}")
+    run(["gh", "release", "create", RELEASE, "-R", ART_GH, "--prerelease",
+         "--title", "OCW Build Diary (videos and day archives)", "--notes", RELEASE_NOTES])
 
 
 # ----------------------------------------------------------------- collect
 #
-# The hourly collector (ART-PROJECT §5.1; scripts/art-collect.sh, the
+# The hourly collector (ART-PROJECT §5.1; collect.sh, the
 # systemd user timer ocw-art-collect.timer on the dev machine): gather +
 # journal of yesterday and today (the last hour before midnight is not
 # lost; gather is idempotent), the mask check of the tracked text files,
@@ -2248,7 +2318,7 @@ def collect(days: list[str] | None = None, sheets: bool | None = None,
         for f in found:
             log("private pattern: " + f)
         if found:
-            st["errors"].append(f"mask check: {len(found)} finding(s) (art/diary.py check-masked)")
+            st["errors"].append(f"mask check: {len(found)} finding(s) (diary.py check-masked)")
     except Exception as e:
         st["mask_check"] = "error"
         st["errors"].append(f"mask check: {type(e).__name__}: {mask(str(e))[:300]}")
@@ -2270,7 +2340,11 @@ def main():
         print(__doc__)
         return
     cmd, args = sys.argv[1], sys.argv[2:]
+    if cmd == "ocw-repo":  # for collect.sh and the Makefile
+        print(ROOT)
+        return
     try:
+        check_ocw()
         check_old_place()
     except SystemExit as e:
         if cmd == "collect":  # the dashboard shows why the collector stopped
@@ -2284,7 +2358,7 @@ def main():
     days = [a for a in args if not a.startswith("--")]
     if cmd == "agent-event":
         import argparse
-        ap = argparse.ArgumentParser(prog="art/diary.py agent-event")
+        ap = argparse.ArgumentParser(prog="diary.py agent-event")
         ap.add_argument("--task", required=True)
         ap.add_argument("--branch", required=True)
         ap.add_argument("--event", required=True, choices=F.EVENTS)
@@ -2307,7 +2381,7 @@ def main():
         n = len(tracked_files())
         if found:
             raise SystemExit(f"check-masked: {len(found)} private pattern(s) in the tracked text files "
-                             f"(values not shown); `art/diary.py check-masked --fix` masks them")
+                             f"(values not shown); `diary.py check-masked --fix` masks them")
         log(f"check-masked: {n} tracked text files, no private patterns")
         return
     for d in days:
@@ -2348,7 +2422,7 @@ def run_command(cmd: str, days: list[str], flags: set[str] = frozenset()):
         for d in days:
             fn(d)
     else:
-        raise SystemExit(f"unknown command {cmd}; see art/diary.py --help")
+        raise SystemExit(f"unknown command {cmd}; see diary.py --help")
 
 
 if __name__ == "__main__":

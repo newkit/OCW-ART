@@ -1,4 +1,4 @@
-"""The OCW Build Diary's music (art/ART-PROJECT.md §3.2): synthesised, no
+"""The OCW Build Diary's music (ART-PROJECT.md §3.2): synthesised, no
 samples, no licences, deterministic from the seed.
 
 Every day has its own style (a band, a mode, a groove, a set of chord

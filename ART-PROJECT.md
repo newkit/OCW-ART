@@ -1,6 +1,6 @@
 # OCW Build Diary – Art Project Specification
 
-Version 1.8 – 15 November 2026
+Version 1.9 – 15 November 2026
 
 | Version | Change |
 |---|---|
@@ -13,6 +13,7 @@ Version 1.8 – 15 November 2026
 | 1.6 | Music with more variety and a style per day (user 2026-11-14): synthwave, funk, lofi, chiptune, house (`style` and `mode` in the day script, else picked by the day number). It varies within the video: a progression, drum pattern, bass line and arpeggio per chapter; fills, build-ups and stops at chapter changes; crashes, a breakdown, a bridge and a key lift in long videos; a developing lead (motif, variations, call and response); and swells. Deterministic, loudness-normalised, tested (`art/music.py`, §3.2, §4) |
 | 1.7 | Incident log (user 2026-11-15, §2.6): the hourly collector gathers OOM kills, failed and restarted units (journalctl), machines offline / online, full disks, janitor deletions and failed runs into `test-output/build-log/DAY/incidents.jsonl` (masked). The coordinator writes root-cause notes to `DAY/incidents.md` (tracked, masked). The journal merges both under "Incidents", and a day script can show an incident as a card (`incident = "HH:MM"`, §4). First entry: the 2026-11-15 00:39 OOM on deb |
 | 1.8 | Features and agent jobs (user 2026-11-15, §2.7): the journal lists the day's spec rows with the merge that landed each, its marge check (suites, passed, failed), deploys (`deploys.jsonl` from `deploy-test.sh`) and releases. Agent jobs come from the coordinator's `agents.jsonl` (`diary.py agent-event`, `agent-backfill`). The day video closes with a "Today's features" roll (`features_roll`, §4). `remote.sh` logs each run's commit |
+| 1.9 | **Own repository** (user 2026-11-15: "Use this repository for everything ART related", "also move the build-history to the new art project location"): the art project moved out of OCW into [newkit/OCW-ART](https://github.com/newkit/OCW-ART), with the history of OCW's `art/`. The former `art/` is its root; `scripts/art-collect.sh` is `collect.sh`; the `make art-*` targets are `make gather`, `render`, … in OCW-ART. The tool reads OCW from outside (`OCW_REPO`, else `ocw_repo` in `ocw-art.toml`, else `../OCW`): git log, `SPECIFICATION.md`, `test-output/`, `config/machines.toml` (§5). The archive is OCW-ART's `build-history/` (§2, §5.2: how it moves). New videos and day zips go to the release `build-history` of OCW-ART, where days 1–4 were copied; OCW's release keeps the README images. Logo and Fira Mono are copied into `assets/`. The status file stays in OCW's `test-output/build-log/DAY/art.json`, so the build dashboard is unchanged. The regional reference boards (`reference/`) serve OCW's world look and stay in OCW, now `docs/reference/` |
 
 ## 1. The brief
 
@@ -69,14 +70,18 @@ selection happens only in the video.
   A joined image is made only to show a comparison (before / after, two settings,
   two dates or places side by side); it is kept as well, next to the single pictures,
   labelled `…-compare-….jpg`.
-- **Where:** `art/build-history/YYYY-MM-DD/` of the main checkout (until
-  2026-11-14: `artwork/build-history/`; `art/diary.py` stops with a message
-  while the archive is still there). Media never go into git (spec §11.3;
-  the history was rewritten on 2026-11-12 to remove them); its text files
-  are tracked, masked (§2.5).
+- **Where:** `build-history/YYYY-MM-DD/` of the OCW-ART checkout on the dev
+  machine (until 2026-11-15: `art/build-history/` of the OCW checkout, until
+  2026-11-14 `artwork/build-history/`; `diary.py` stops with a message while
+  the archive is still at the old place, §5.2). Media never go into git
+  (OCW spec §11.3; OCW's history was rewritten on 2026-11-12 to remove
+  them); its text files are tracked, masked (§2.5).
 - **Published:** one zip per day, `ocw-build-history-YYYY-MM-DD.zip`, on the GitHub
-  release [`build-history`](https://github.com/newkit/OCW/releases/tag/build-history),
-  next to the videos. `art/diary.py fetch` restores a day on another machine.
+  release [`build-history`](https://github.com/newkit/OCW-ART/releases/tag/build-history) of OCW-ART,
+  next to the videos. `diary.py fetch` (`make fetch DAY=…`) restores a day on
+  another machine. It looks on OCW-ART's release first, then on OCW's
+  [`build-history`](https://github.com/newkit/OCW/releases/tag/build-history),
+  which still has days 1–4 (and OCW's README images, which stay there).
   The zip's text files (logs, build log, journal, prompts) are masked like the
   prompts (§2.3: build machines' hosts and users, the home directory, e-mail
   addresses, private IP addresses); the local archive keeps the originals.
@@ -96,14 +101,14 @@ UTC offset, e.g. `2026-11-12T22:14:05+01:00`) twice:
 - **In the file:** PNG `tEXt` chunk `Creation Time` (plus `Software`); MP4
   `creation_time` (UTC, the start of the recording). The diary videos carry
   their render time.
-- **Older material** (made before this rule): `art/diary.py stamp` (run by
+- **Older material** (made before this rule): `diary.py stamp` (run by
   `gather`) writes the capture time from the file name into the archive copy's
   metadata; the picture itself is left as it was taken.
 
 ### 2.2 The build process: runs, build times, errors, build servers
 
 The build infrastructure is part of the story, so it is recorded continuously,
-in `test-output/build-log/YYYY-MM-DD/` of the main checkout (git-ignored;
+in `test-output/build-log/YYYY-MM-DD/` of the OCW main checkout (git-ignored;
 gathered into the day folder's `logs/build-log/`):
 
 | File | Written by | Content |
@@ -114,7 +119,7 @@ gathered into the day folder's `logs/build-log/`):
 
 - **Privacy:** host names, addresses, user names and key paths are replaced by
   the machine's name before anything is written (the dashboard masks too).
-- **Journal:** `art/diary.py journal` adds "Builds and build servers" to the day's
+- **Journal:** `diary.py journal` adds "Builds and build servers" to the day's
   `journal.md`: runs, build hours, failures with their commands and logs, the
   longest runs, and each server's online share. The day video's end card shows
   BUILD RUNS and BUILD HOURS.
@@ -130,7 +135,7 @@ of the story.
   user's own messages, including those sent while Claude was working; not the
   agents' messages, tool output or notifications; slash commands as `/name args`.
 - **Kept as:** `DAY/prompts.jsonl` (time, ISO 8601, text) and `DAY/prompts.md`;
-  the journal lists them. `art/diary.py prompts DAY` (run by `journal`).
+  the journal lists them. `diary.py prompts DAY` (run by `journal`).
 - **Masked** before they are written: every build machine's host and user name,
   e-mail addresses, private IP addresses and the home directory. The day zips are public.
 - **In the video:** during the time-lapse each prompt pops up as a chat bubble
@@ -151,12 +156,12 @@ How much model work went into the build is part of the record too.
 - **Per task:** an agent's task description (e.g. "agent: Fix wheels sinking
   into road"); the main session's work under the user prompt it answered
   ("coordination: <prompt>", masked like the prompts, §2.3).
-- **Per feature:** tasks are grouped by keywords (`FEATURES` in `art/diary.py`:
+- **Per feature:** tasks are grouped by keywords (`FEATURES` in `diary.py`:
   art project, materials & look, menus, sky & time, audio, multiplayer,
   riders, worlds & terrain, build & infra, planning; the first match wins).
 - **Kept as:** `DAY/tokens.json`; the journal has a "Token usage" section
   (per feature, the 40 biggest tasks); the day video's end card shows
-  MILLION TOKENS. `art/diary.py tokens DAY` (run by `journal`).
+  MILLION TOKENS. `diary.py tokens DAY` (run by `journal`).
 - Most of the total is cache reads (the conversation re-read from the cache
   on every step); output tokens are about 0.2 % of it.
 
@@ -164,7 +169,7 @@ How much model work went into the build is part of the record too.
 
 The archive's text record is versioned with the code; its media are not.
 
-| In `art/build-history/` | Git |
+| In `build-history/` | Git |
 |---|---|
 | `index.md`, `SHA256SUMS` | **tracked** |
 | per day `journal.md`, `journal.json`, `tokens.json` | **tracked** |
@@ -172,9 +177,9 @@ The archive's text record is versioned with the code; its media are not.
 | per day `logs/` (unmasked originals), `prompts.*` (published masked in the zip), `.txt` verdicts | ignored |
 | `.work/` (render and contact-sheet files), `.lock` | ignored |
 
-- `.gitignore` ignores `/art/build-history/**` and re-includes exactly the
+- `.gitignore` ignores `/build-history/**` and re-includes exactly the
   tracked files above.
-- **Masked:** the tracked files are written masked by `art/diary.py`
+- **Masked:** the tracked files are written masked by `diary.py`
   (`journal`, `tokens`, `publish`'s `SHA256SUMS`), with the same mask as the
   zip's text (§2.3). The mask replaces each build machine's host with the
   machine's name and its user with `user`. The host and user list comes from
@@ -184,9 +189,9 @@ The archive's text record is versioned with the code; its media are not.
   with `<e-mail>` and private IP addresses with `<ip>`. A user name is masked
   as a word of its own (`claude@host`, `"claude"`). It is not masked inside a
   path or a name such as `~/.claude/` or `claude.ai`.
-- **`art/diary.py check-masked`** (`make art-check`; the hourly collector runs
+- **`diary.py check-masked`** (`make check`; the hourly collector runs
   it too) fails if a tracked file still holds a private pattern. It prints
-  `file:line: kind`, never the value. `check-masked --fix` (`make art-check
+  `file:line: kind`, never the value. `check-masked --fix` (`make check
   FIX=1`) masks the files in place, for files written before this rule
   (`index.md`, old journals). The untracked originals are left as they are.
 
@@ -215,7 +220,7 @@ machines dropping out, full disks.
     - janitor deletions (`janitor-delete`);
     - the failed `remote.sh` runs of the day, as a count per machine
       (`runs-failed`).
-- **Root-cause notes** by the coordinator: `art/build-history/DAY/incidents.md`,
+- **Root-cause notes** by the coordinator: `build-history/DAY/incidents.md`,
   tracked in git, masked and checked by `check-masked`. It has one `## HH:MM –
   title` section per incident, with **What happened**, **Cause**, **Effect**,
   **Fix** and **Follow-up**. The first entry is 2026-11-15, 00:39, when deb
@@ -234,7 +239,7 @@ machines dropping out, full disks.
 What got built each day, and by which agent job, is part of the record.
 
 - **Features** (`journal.md` "Features", `journal.json` `features`, `deploys`,
-  `releases`), built automatically by `journal` (`art/features.py`):
+  `releases`), built automatically by `journal` (`features.py`):
   - *Spec rows:* the `SPECIFICATION.md` version rows that are in the
     end-of-day spec but were not in the start-of-day spec. Each gets its
     number and a title: the first clause, without parentheses and bold.
@@ -258,12 +263,12 @@ What got built each day, and by which agent job, is part of the record.
   (git-ignored, masked). It has one line per event: `time`,
   `agent_id_short`, `task`, `branch`, `event` (`started`, `reported`,
   `interrupted`, `resumed`, `merged` or `abandoned`), `commits` and `note`.
-  - Appending: `art/diary.py agent-event --task … --branch … --event …
+  - Appending: `diary.py agent-event --task … --branch … --event …
     [--commits …] [--note …]`. The agent id comes from the branch name
     (`worktree-agent-<id>`).
   - The journal shows one row per job: task, start, end, status (the last
     event), interruptions and the merged commit.
-  - `art/diary.py agent-backfill DAY` derives a day's merged jobs from git
+  - `diary.py agent-backfill DAY` derives a day's merged jobs from git
     (first and last branch commit, the merge) and the incident log (an OOM
     kill of the coordinator's session interrupts the jobs running then). It
     replaces only its own earlier lines ("backfilled from git"). 2026-11-15
@@ -311,17 +316,17 @@ day is the same as appending the new day to the previous diary.
 
 ### 3.1 Visual identity
 
-- Colours from the logo (`artwork/logos/ocw.svg`): rider pink `#FF1472`, deep
+- Colours from the logo (`assets/logos/ocw.svg`, a copy of OCW's `artwork/logos/`): rider pink `#FF1472`, deep
   violet `#3A2F55`, gold `#C98A00`; sticker yellow `#FFE45C`.
 - Type: **Lato** (Black, Heavy, Semibold, Medium Italic) for titles and captions,
-  **Fira Mono** (the app's UI font, `crates/ocw-render/assets/fonts/`) for clocks,
+  **Fira Mono** (the app's UI font, `assets/fonts/`, copied from OCW's `crates/ocw-render/assets/fonts/`) for clocks,
   counters, the commit log and badges.
 - Pictures that are not 16:9 sit on a blurred, darkened copy of themselves (no
   black bars). Time-lapse and end card get a light vignette.
 
 ### 3.2 Sound
 
-- **Music** (`art/music.py`): synthesised by the tool itself (no samples, no
+- **Music** (`music.py`): synthesised by the tool itself (no samples, no
   licences), deterministic from the day's seed. The same seed gives the same
   samples, in every process.
 - **A style per day** (decided by the user 2026-11-14: "make different music
@@ -374,7 +379,7 @@ day is the same as appending the new day to the previous diary.
 - **Levels:** the music is normalised to an RMS of about −19 dBFS, with peaks
   at most −2.5 dBFS (headroom for the effects). Chapters with game audio
   duck it. `music.stats` reports peak, RMS, brightness, zero-crossing rate
-  and onsets per second. The tests (`art/test_music.py`, in `make test-art`)
+  and onsets per second. The tests (`test_music.py`, in `make test`)
   check determinism, that the days sound different, that nothing clips, the
   loudness, and the variation.
 - Tempo and key per day (`bpm`, `key`).
@@ -383,7 +388,7 @@ day is the same as appending the new day to the previous diary.
 - **Game audio** from the day's archive (e.g. the freehub demo) can be mixed in
   per chapter.
 
-## 4. The day script (`art/days/YYYY-MM-DD.toml`)
+## 4. The day script (`days/YYYY-MM-DD.toml`)
 
 The story is written per day. It can be changed at any time and the video
 rendered again.
@@ -425,7 +430,7 @@ shots = [
 ```
 
 `file` is a name in the day folder, or a path in the repository (e.g.
-`artwork/logos/ocw-512.png`), or `../YYYY-MM-DD/name` for another day.
+`assets/logos/ocw-512.png`), or `../YYYY-MM-DD/name` for another day.
 
 Writing guidelines:
 
@@ -446,20 +451,40 @@ Needs Python 3.11+ (`/usr/bin/python3` on Debian 13; the pyenv default 3.8 is to
 old), ffmpeg with libass, `zip`, and `gh` (logged in) for fetching/publishing.
 The tool runs on the dev machine (no Rust build involved).
 
+**Two checkouts.** This repository ([newkit/OCW-ART](https://github.com/newkit/OCW-ART))
+holds the tool, the day scripts and the archive. OCW is read from its own
+checkout, by default `../OCW` next to this one (on deb `~/data/git/OCW` next
+to `~/data/git/OCW-ART`; after the coordinator's move to its new user on deb
+`~/src/OCW` and `~/src/OCW-ART`). `OCW_REPO` (environment) or
+`ocw_repo` in a git-ignored `ocw-art.toml` (see `ocw-art.example.toml`) point
+elsewhere; `make ocw-repo` prints the one in use. From OCW the tool reads only:
+
+- `git log` and `SPECIFICATION.md` (commits, merges, spec rows, day numbers);
+- `test-output/` (media, the build log, `agents.jsonl`, `deploys.jsonl`,
+  incidents) and the agent worktrees' `.claude/worktrees/*/test-output/`;
+- `config/machines.toml` through OCW's `scripts/remote.sh … field`, for the
+  mask list (in an agent worktree the main checkout's). **Without a machine
+  list it refuses to mask** (`OCW_ART_NO_MACHINES=1` is for tests only).
+
+It writes into OCW only the collector's status and logs
+(`test-output/build-log/DAY/art.json`, `art-runs.jsonl`, `art.log`,
+`incidents.jsonl`) and `agents.jsonl` (`agent-event`), so the build
+dashboard's "Art project" panel keeps working unchanged.
+
 ```bash
-make art-gather DAY=2026-11-13    # collect everything of the day, stamp times, journal
-make art-sheets DAY=2026-11-13    # contact sheets: art/build-history/.work/DAY/sheets/
-# write art/days/2026-11-13.toml (story, shots, jokes)
-make art-render DAY=2026-11-13    # → art/build-history/diary/ocw-diary-day-NN-DAY.mp4
-make art-diary                    # → art/build-history/diary/ocw-build-diary.mp4
-make art-publish DAY=2026-11-13   # day zip + all videos → release build-history
-make art-check                    # tracked text files masked? (FIX=1 masks them)
-git commit art/build-history/index.md art/build-history/SHA256SUMS \
-    art/build-history/2026-11-13/{journal.md,journal.json,tokens.json}
-make test-art                     # unit tests of the tool and the collector
+make gather DAY=2026-11-13    # collect everything of the day, stamp times, journal
+make sheets DAY=2026-11-13    # contact sheets: build-history/.work/DAY/sheets/
+# write days/2026-11-13.toml (story, shots, jokes)
+make render DAY=2026-11-13    # → build-history/diary/ocw-diary-day-NN-DAY.mp4
+make diary                    # → build-history/diary/ocw-build-diary.mp4
+make publish DAY=2026-11-13   # day zip + all videos → release build-history of OCW-ART
+make check                    # tracked text files masked? (FIX=1 masks them)
+git commit build-history/index.md build-history/SHA256SUMS \
+    build-history/2026-11-13/{journal.md,journal.json,tokens.json}
+make test                     # unit tests of the tool and the collector
 ```
 
-or directly `art/diary.py gather|journal|sheet|render|diary|publish|all|collect|check-masked [DAY…]`.
+or directly `diary.py gather|journal|sheet|render|diary|publish|all|collect|check-masked [DAY…]`.
 
 **At the end of every build day** (or when asked): the hourly collector (§5.1)
 has already gathered the day and written its journal. The coordinator writes the
@@ -470,14 +495,14 @@ in `test-output/` (the test harnesses already do), so the gather step finds them
 ### 5.1 The hourly collector (decided by the user 2026-11-14)
 
 Collecting no longer waits for a session. A systemd user timer on the dev machine
-(deb, the coordinator's machine with the main checkout) collects the day's data
-every hour.
+(deb, the coordinator's machine with the OCW main checkout and the OCW-ART
+checkout) collects the day's data every hour.
 
-**Each hour** `scripts/art-collect.sh` runs `art/diary.py collect`, which does:
+**Each hour** `collect.sh` runs `diary.py collect`, which does:
 
 1. **`gather` + `journal` for yesterday and today**, so the last hour before
    midnight is not lost. Other days can be given as arguments:
-   `scripts/art-collect.sh 2026-11-12`. `gather` is idempotent: sources are
+   `collect.sh 2026-11-12`. `gather` is idempotent: sources are
    deduplicated by SHA-256, and the build log is updated in place. A day
    that fails is reported, and the other day is still collected. Each day's
    incidents are collected too (§2.6), and the status counts them.
@@ -490,7 +515,7 @@ No Claude run, no render, no publish: the coordinator writes the day script,
 renders and publishes in a session.
 
 - **Lock:** runs never overlap. The script holds an `flock` on
-  `art/build-history/.lock`. Every `art/diary.py` command takes the same lock,
+  `build-history/.lock`. Every `diary.py` command takes the same lock,
   including manual runs and `check-masked --fix`; plain `check-masked` reads
   only and takes none. A manual run waits for the collector (it says whose
   lock it waits for), and the collector waits up to 45 min
@@ -499,21 +524,23 @@ renders and publishes in a session.
   failure. The script sets `OCW_ART_LOCK_HELD=1` for the `diary.py` it starts,
   which then does not lock again.
 - **Python:** `/usr/bin/python3` (3.11+; `OCW_ART_PYTHON` overrides), never the
-  pyenv default 3.8. The script finds the repository from its own path.
-- **Overrides (tests):** `OCW_ART_HISTORY` replaces the archive. `OCW_TEST_OUTPUT`
-  replaces `test-output/`: it is then the only source of `gather`, without
+  pyenv default 3.8. The script finds this checkout from its own path and
+  OCW through `diary.py ocw-repo` (§5).
+- **Overrides (tests):** `OCW_REPO` names the OCW checkout. `OCW_ART_HISTORY`
+  replaces the archive. `OCW_TEST_OUTPUT` replaces OCW's `test-output/`
+  (and receives the status): it is then the only source of `gather`, without
   the agent worktrees' `test-output/` (`OCW_ART_WORKTREES` names a worktrees
   folder, `""` none). `OCW_TRANSCRIPTS` replaces the Claude Code transcripts.
-  `make test-art` checks that a real archive at the default place stays
-  untouched (it holds that archive's lock and compares every file's size and
-  mtime).
-- **Status file:** `test-output/build-log/DAY/art.json` holds the latest run
+  `make test` checks that a real archive at the default place and at the old
+  place in OCW stays untouched (it holds each archive's lock and compares
+  every file's size and mtime).
+- **Status file:** OCW's `test-output/build-log/DAY/art.json` holds the latest run
   of DAY: start, end, status (`running`, `ok`, `failed`, `locked`), new
   files, media of today, the mask check, contact sheets yes/no, errors
   (masked), and new files and media per day. `art-runs.jsonl` next to it
   has one line per run. The exit code is 0 for ok, 1 for failed and 75 for
   locked.
-- **Logs:** the output of every run is appended to `test-output/build-log/DAY/art.log`
+- **Logs:** the output of every run is appended to OCW's `test-output/build-log/DAY/art.log`
   (one `=== start` / `=== exit` block per run). The systemd journal has it too
   (`journalctl --user -u ocw-art-collect`). The collector's own files are
   gathered into the day's `logs/build-log/` like the rest of the build log,
@@ -522,23 +549,64 @@ renders and publishes in a session.
   `/api/status` → `art`) shows the last run from the newest `art.json`:
   time, status, new files, media of today, the mask check and errors. It is
   flagged **late** when no run has ended for 2.5 h.
-- **Units:** `art/systemd/ocw-art-collect.service` (oneshot, `nice`, idle I/O,
+- **Units:** `systemd/ocw-art-collect.service` (oneshot, `nice`, idle I/O,
   `TimeoutStartSec=75min`) and `ocw-art-collect.timer` (`OnCalendar=hourly`,
   `Persistent=true`, so missed runs are made up after boot, and
   `RandomizedDelaySec=5min`). The contact sheets are part of the 23:xx run,
   so there is no separate sheets timer.
 
 ```bash
-make art-install-timer     # units → ~/.config/systemd/user/ (this checkout's path filled in),
-                           # daemon-reload, enable --now ocw-art-collect.timer
-make art-timer-status      # list-timers + the last status file
-make art-collect           # one run now (DAY=… for other days)
-make art-uninstall-timer   # stop and remove the timer and service
+make install-timer     # units → ~/.config/systemd/user/ (this checkout's path filled in),
+                       # daemon-reload, enable --now ocw-art-collect.timer
+make timer-status      # list-timers, the installed ExecStart, the last status file
+make collect           # one run now (DAY=… for other days)
+make uninstall-timer   # stop and remove the timer and service
 sudo loginctl enable-linger $USER   # once: user timers run without a login session
 ```
 
-Install the timer from the **main checkout**, never from an agent worktree:
-the units point to the checkout they were installed from.
+Install the timer from the **OCW-ART checkout on the dev machine**, never
+from a worktree: the units point to the checkout they were installed from.
+
+### 5.2 Moving to OCW-ART (2026-11-15)
+
+Until 2026-11-15 the art project lived in OCW (`art/`, `scripts/art-collect.sh`,
+`make art-*`), with its archive in OCW's `art/build-history/` and the timer
+installed from OCW. The move, once, on the dev machine; the timer and the
+archive move together, so that the hourly collector never writes into a
+half-moved archive. `ART` is the OCW-ART checkout, `OCW` the OCW main checkout
+(on deb `~/data/git/OCW-ART` and `~/data/git/OCW`):
+
+```bash
+ART=~/data/git/OCW-ART OCW=~/data/git/OCW
+# 1. stop the timer (installed from OCW; the units are the same files either way)
+systemctl --user disable --now ocw-art-collect.timer
+systemctl --user stop ocw-art-collect.service
+flock "$OCW/art/build-history/.lock" true          # waits for a running diary.py to finish
+# 2. move the archive (same file system: instant). ART's build-history/ holds
+#    only tracked text, which the moved archive has in the same or a newer state.
+rm -rf "$ART/build-history" && mv "$OCW/art/build-history" "$ART/build-history"
+git -C "$ART" status --short build-history        # only journals the collector rewrote since
+#    then merge OCW's cleanup branch (removes art/ from OCW) and: rm -rf "$OCW/art"
+# 3. the timer from OCW-ART
+make -C "$ART" install-timer                      # units now point to $ART/collect.sh
+# 4. the first collector run (yesterday and today)
+make -C "$ART" collect
+# 5. the mask check, then commit the rewritten journals in OCW-ART
+make -C "$ART" check && make -C "$ART" timer-status
+```
+
+- Before step 2 the tool refuses to work (`still in the OCW checkout`), and the
+  collector's status says so on the dashboard; that is the old place check.
+- After the move `make uninstall-timer` / `install-timer` are OCW-ART's;
+  OCW's `make art-*` targets only print where they went.
+- Publishing goes to OCW-ART's release `build-history`. Days 1–4 (videos, zips,
+  `SHA256SUMS`, `index.md`) were copied there from OCW's release with matching
+  SHA-256; OCW's release still has them and the README's product images
+  (`world-*.jpg`, `readme-*.png`), which stay.
+- Another user (the coordinator's move to a new user on deb): clone OCW-ART
+  next to OCW (`~/src/OCW-ART` next to `~/src/OCW`), copy the git-ignored
+  media of `build-history/` into it (OCW's `scripts/migrate-user.sh` and
+  `docs/MIGRATE-DEB-USER.md` do it), then `make install-timer` there.
 
 ## 6. Future elements (ideas, not built yet)
 

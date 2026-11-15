@@ -1,5 +1,5 @@
-"""The Build Diary's features log (art/ART-PROJECT.md §2.7): pure functions,
-no git, gh or files here (art/diary.py feeds them).
+"""The Build Diary's features log (ART-PROJECT.md §2.7): pure functions,
+no git, gh or files here (diary.py feeds them).
 
 - spec rows added on a day (from `git log -p` of SPECIFICATION.md), their
   titles, and the commit (merge) that landed each one;

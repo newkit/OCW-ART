@@ -1,9 +1,9 @@
-"""Unit tests of the Build Diary's music (art/music.py, ART-PROJECT §3.2):
+"""Unit tests of the Build Diary's music (music.py, ART-PROJECT §3.2):
 determinism, a different style per day, variation within a video, no
 clipping and a sane loudness. Nobody can listen here, so the tests (and
 `music.stats`) look at the waveform.
 
-    /usr/bin/python3 -m unittest discover -s art -p 'test_*.py'   (make test-art)
+    /usr/bin/python3 -m unittest discover -s . -p 'test_*.py'   (make test)
 """
 
 from __future__ import annotations

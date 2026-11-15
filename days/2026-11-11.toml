@@ -1,5 +1,5 @@
 # OCW Build Diary – day 1 (art/ART-PROJECT.md describes every field).
-# Shots are files in art/build-history/2026-11-11/ (or repo paths).
+# Shots are files in build-history/2026-11-11/ (or paths in this checkout).
 
 title = "From five capsules to the Principality of Liechtenstein"
 tagline = "In which a spec is written at 00:38 and the riders are mostly capsules."
@@ -70,7 +70,7 @@ time = "17:13"
 title = "A logo is born"
 caption = "Branding meeting outcome: a unicorn riding a bike over a rainbow. The vote was unanimous."
 shots = [
-  { file = "artwork/logos/ocw-512.png", seconds = 5.6, note = "no further questions." },
+  { file = "assets/logos/ocw-512.png", seconds = 5.6, note = "no further questions." },
 ]
 
 [[chapter]]

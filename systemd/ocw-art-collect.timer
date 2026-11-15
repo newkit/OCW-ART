@@ -1,5 +1,5 @@
-# Every hour (art/ART-PROJECT.md §5.1); missed runs (machine off or asleep)
-# are made up after boot. `make art-install-timer` installs and starts it.
+# Every hour (ART-PROJECT.md §5.1); missed runs (machine off or asleep)
+# are made up after boot. `make install-timer` in the OCW-ART checkout installs and starts it.
 [Unit]
 Description=OCW Build Diary: hourly collector timer
 
