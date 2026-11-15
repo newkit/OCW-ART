@@ -1,6 +1,6 @@
 # Incidents – 2026-11-15
 
-Root-cause notes by the coordinator (art/ART-PROJECT.md §2.6). The collected
+Root-cause notes by the coordinator (docs/ART-PROJECT.md §2.6). The collected
 entries (journal, build log) are in `logs/build-log/incidents.jsonl` and in
 the journal's "Incidents" section.
 

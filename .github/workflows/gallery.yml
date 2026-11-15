@@ -1,0 +1,44 @@
+# The gallery on GitHub Pages (docs/ART-PROJECT.md §6): unpacks the gallery
+# zips that `diary.py gallery publish` uploaded to the release build-history
+# (gallery-pages.zip and one gallery-YYYY-MM-DD.zip per day: thumbnails, web
+# copies, poster frames; built on the dev machine, masked) and deploys them.
+# No checkout: nothing comes from git, so no Git LFS bandwidth is used (§2.8;
+# a checkout added here must keep `lfs: false`). Release downloads do not
+# count against the LFS quota.
+name: Gallery
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download the gallery zips from the release build-history
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p dl _site
+          gh release download build-history -R "$GITHUB_REPOSITORY" -p 'gallery-*.zip' -D dl
+          for z in dl/gallery-*.zip; do unzip -q -o "$z" -d _site; done
+          test -f _site/index.html
+          du -sh _site
+          size=$(du -sb _site | cut -f1)
+          if [ "$size" -ge 1000000000 ]; then echo "the site is over 1 GB (Pages' limit)"; exit 1; fi
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v5

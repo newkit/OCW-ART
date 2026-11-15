@@ -1,8 +1,12 @@
-# The build history (ART-PROJECT.md §2.5): media, day zips, diary videos,
-# logs/ (unmasked originals), prompts.* and render work files live on the
-# GitHub release "build-history" of newkit/OCW-ART, not in git. Tracked:
-# only the masked text files index.md, SHA256SUMS and per day journal.md,
-# journal.json, tokens.json, incidents.md (the root-cause notes, §2.6).
+# The build history (docs/ART-PROJECT.md §2.5, §2.8): day zips, diary
+# videos, logs/ (unmasked originals), prompts.* and the work files (.work/:
+# renders, contact sheets, the gallery) are not in git; the zips and videos
+# are on the GitHub release "build-history" of newkit/OCW-ART. Tracked: the
+# masked text files index.md, SHA256SUMS and per day journal.md,
+# journal.json, tokens.json, incidents.md (the root-cause notes, §2.6), and,
+# through Git LFS (.gitattributes), the pictures and videos of the days in
+# the managed `lfs-days` block at the end (`diary.py lfs-commit`, within the
+# budget; the media of the other days stay local and ignored).
 /build-history/**
 !/build-history/????-??-??/
 !/build-history/index.md

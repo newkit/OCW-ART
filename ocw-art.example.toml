@@ -1,4 +1,13 @@
-# Copy to ocw-art.toml (git-ignored) to point the tool at an OCW checkout
-# that is not ../OCW next to this one. OCW_REPO (environment) wins over it.
-# A relative path is relative to this checkout.
+# Copy to ocw-art.toml (git-ignored) for the settings of this machine.
+# Environment variables win over it (OCW_REPO, OCW_ART_LFS_POLICY,
+# OCW_ART_LFS_BUDGET_GIB).
+
+# The OCW checkout the tool reads, when it is not ../OCW next to this one
+# (a relative path is relative to this checkout).
 ocw_repo = "../OCW"
+
+# Git LFS (docs/ART-PROJECT.md §2.8): which media go into LFS, "all"
+# (pictures and videos) or "pictures", and the budget in GiB (at most the
+# free plan's 10 GiB).
+# lfs_policy = "all"
+# lfs_budget_gib = 9.0

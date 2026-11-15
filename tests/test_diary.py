@@ -1,10 +1,10 @@
-"""Unit tests of the art project's tool (ART-PROJECT.md): masking of the
+"""Unit tests of the art project's tool (docs/ART-PROJECT.md): masking of the
 tracked text files, check-masked, the collector's days, the lock, the status
 file, the OCW checkout setting, GitHub targets and collect.sh. A small
 fixture archive in a temporary directory; no real archive, no network, no
 ffmpeg. The OCW checkout (OCW_REPO, else ../OCW) is only read (git log).
 
-    /usr/bin/python3 -m unittest discover -s . -p 'test_*.py'   (make test)
+    /usr/bin/python3 -m unittest discover -s tests -p 'test_*.py'   (make test)
 """
 
 from __future__ import annotations
@@ -21,11 +21,12 @@ from pathlib import Path
 from unittest import mock
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
+REPO = HERE.parent  # the OCW-ART checkout: diary.py, bin/collect.sh, ocwart/
+sys.path.insert(0, str(REPO))
 
-import diary  # noqa: E402
+from ocwart import agents, archive, collect, core, incidents, journal, mask, prompts, publish  # noqa: E402
 
-# Fake build machines: (value, replacement) as diary._secrets() returns them.
+# Fake build machines: (value, replacement) as mask._secrets() returns them.
 SECRETS = [("buildhost.example.lan", "marge"), ("10.20.30.40", "leela"), ("builder", "user"),
            ("/home/devuser", "~")]
 PRIVATE = ["buildhost.example.lan", "10.20.30.40", "builder@", "/home/devuser", "/home/builder",
@@ -44,12 +45,10 @@ def tree_state(root: Path) -> dict:
     return out
 
 
-# The real archive at the default place (this checkout's build-history/) and
-# at its old place in the OCW checkout (OCW/art/build-history/, until it is
-# moved): the tests must never touch either. They hold each one's lock
-# meanwhile (the hourly collector waits), and compare every file's size and
-# mtime before and after.
-REAL_HISTS = [diary.ART / "build-history", diary.ROOT / "art" / "build-history"]
+# The real archive at the default place (this checkout's build-history/):
+# the tests must never touch it. They hold its lock meanwhile (the hourly
+# collector waits), and compare every file's size and mtime before and after.
+REAL_HISTS = [core.ART / "build-history"]
 _real: dict[Path, dict] = {}
 
 
@@ -96,22 +95,24 @@ class Fixture(unittest.TestCase):
         self.out = self.tmp / "test-output"
         self.hist.mkdir()
         self.out.mkdir()
-        self._saved = (diary.HIST, diary.TEST_OUTPUT, diary._SECRETS, diary.TRANSCRIPTS, diary.WORKTREES)
-        diary.set_history(self.hist)
-        diary.TEST_OUTPUT = self.out
-        diary.TRANSCRIPTS = str(self.tmp / "no-transcripts")
-        diary.WORKTREES = None  # never the real agent worktrees' test-output
-        diary._SECRETS = sorted(SECRETS, key=lambda kv: -len(kv[0]))
+        self._saved = (core.HIST, core.TEST_OUTPUT, mask._SECRETS, prompts.TRANSCRIPTS, core.WORKTREES)
+        core.set_history(self.hist)
+        core.TEST_OUTPUT = self.out
+        prompts.TRANSCRIPTS = str(self.tmp / "no-transcripts")
+        core.WORKTREES = None  # never the real agent worktrees' test-output
+        mask._SECRETS = sorted(SECRETS, key=lambda kv: -len(kv[0]))
         self.env = mock.patch.dict(os.environ, {"OCW_TRANSCRIPTS": str(self.tmp / "no-transcripts"),
                                                   "OCW_ART_JOURNAL": "0",  # never the live journal
-                                                  "OCW_ART_NO_MACHINES": "1", "OCW_ART_GH": "0"})
+                                                  "OCW_ART_NO_MACHINES": "1", "OCW_ART_GH": "0",
+                                                  # the gallery and LFS have their own tests
+                                                  "OCW_ART_GALLERY": "0", "OCW_ART_LFS": "0"})
         self.env.start()
         os.environ.pop("OCW_ART_LOCK_HELD", None)
 
     def tearDown(self):
         self.env.stop()
-        diary.set_history(self._saved[0])
-        diary.TEST_OUTPUT, diary._SECRETS, diary.TRANSCRIPTS, diary.WORKTREES = self._saved[1:]
+        core.set_history(self._saved[0])
+        core.TEST_OUTPUT, mask._SECRETS, prompts.TRANSCRIPTS, core.WORKTREES = self._saved[1:]
         subprocess.run(["rm", "-rf", "--", str(self.tmp)], check=False)
 
     def assert_clean(self, text: str):
@@ -123,7 +124,7 @@ class MaskTest(Fixture):
     def test_mask_hosts_users_homes_mails_ips(self):
         t = ("ssh builder@buildhost.example.lan; ping 10.20.30.40; cd /home/devuser/src; "
              "ls /home/builder/src/OCW; mail dev@mail.example.org; 192.168.7.9; C:\\Users\\builder\\x")
-        m = diary.mask(t)
+        m = mask.mask(t)
         self.assert_clean(m)
         self.assertIn("user@marge", m)
         self.assertIn("~/src/OCW", m)
@@ -132,13 +133,13 @@ class MaskTest(Fixture):
 
     def test_mask_keeps_public_names(self):
         t = "~/.builder/worktrees builder.ai icon@2x.png react@18.3.1 https://x.org/home/page"
-        self.assertEqual(diary.mask(t), t)
-        self.assertEqual(diary.private_findings(t), [])
+        self.assertEqual(mask.mask(t), t)
+        self.assertEqual(mask.private_findings(t), [])
 
     def test_mask_is_idempotent(self):
         t = "builder@buildhost.example.lan /home/devuser/x 10.20.30.40"
-        self.assertEqual(diary.mask(diary.mask(t)), diary.mask(t))
-        self.assertEqual(diary.private_findings(diary.mask(t)), [])
+        self.assertEqual(mask.mask(mask.mask(t)), mask.mask(t))
+        self.assertEqual(mask.private_findings(mask.mask(t)), [])
 
     def test_tracked_files_written_masked(self):
         """journal.md, journal.json and tokens.json land masked on disk."""
@@ -149,22 +150,22 @@ class MaskTest(Fixture):
                   "tasks": {"agent: fix /home/devuser/x on 10.20.30.40": {"feature": "Other", "total": 10,
                                                                           "output": 4, "messages": 1}},
                   "features": {"Other": {"total": 10, "output": 4, "messages": 1}}, "models": {}}
-        with mock.patch.object(diary, "commits_of", return_value=commits), \
-                mock.patch.object(diary, "tokens_of", return_value=tokens), \
-                mock.patch.object(diary, "all_days", return_value=["2026-11-11", DAY]):
-            j = diary.journal(DAY)
+        with mock.patch.object(journal, "commits_of", return_value=commits), \
+                mock.patch.object(prompts, "tokens_of", return_value=tokens), \
+                mock.patch.object(core, "all_days", return_value=["2026-11-11", DAY]):
+            j = journal.journal(DAY)
         self.assertEqual(j["number"], 2)
-        for name in diary.TRACKED_DAY[:3]:  # (incidents.md is written by the coordinator)
+        for name in mask.TRACKED_DAY[:3]:  # (incidents.md is written by the coordinator)
             text = (self.hist / DAY / name).read_text()
             self.assert_clean(text)
         self.assertIn("~/src/OCW", (self.hist / DAY / "journal.md").read_text())
         json.loads((self.hist / DAY / "journal.json").read_text())  # still valid JSON
-        self.assertEqual(diary.check_masked(), [])
+        self.assertEqual(mask.check_masked(), [])
 
     def test_day_number_without_commits_yet(self):
-        with mock.patch.object(diary, "all_days", return_value=["2026-11-11", "2026-11-12"]):
-            self.assertEqual(diary.day_number("2026-11-12"), 2)
-            self.assertEqual(diary.day_number("2026-11-13"), 3)
+        with mock.patch.object(core, "all_days", return_value=["2026-11-11", "2026-11-12"]):
+            self.assertEqual(core.day_number("2026-11-12"), 2)
+            self.assertEqual(core.day_number("2026-11-13"), 3)
 
 
 class MachinesConfTest(Fixture):
@@ -177,21 +178,21 @@ class MachinesConfTest(Fixture):
         (main / "config").mkdir(parents=True)
         (main / "config" / "machines.toml").write_text('[[machine]]\nname = "marge"\n')
         here.mkdir()
-        with mock.patch.object(diary, "ROOT", here), mock.patch.object(diary, "main_checkout", return_value=main):
-            self.assertEqual(diary.machines_conf(), main / "config" / "machines.toml")
+        with mock.patch.object(core, "ROOT", here), mock.patch.object(mask, "main_checkout", return_value=main):
+            self.assertEqual(mask.machines_conf(), main / "config" / "machines.toml")
             (here / "config").mkdir()
             (here / "config" / "machines.toml").write_text("")
-            self.assertEqual(diary.machines_conf(), here / "config" / "machines.toml")
+            self.assertEqual(mask.machines_conf(), here / "config" / "machines.toml")
 
     def test_refuses_to_mask_without_a_machine_list(self):
-        with mock.patch.object(diary, "machines_conf", return_value=None), mock.patch.object(diary, "_SECRETS", None), \
+        with mock.patch.object(mask, "machines_conf", return_value=None), mock.patch.object(mask, "_SECRETS", None), \
                 mock.patch.dict(os.environ):
             os.environ.pop("OCW_ART_NO_MACHINES", None)
             with self.assertRaises(SystemExit) as e:
-                diary._secrets()
+                mask._secrets()
             self.assertIn("machines.toml", str(e.exception))
             os.environ["OCW_ART_NO_MACHINES"] = "1"
-            self.assertEqual([r for _, r in diary._secrets()], ["~"])
+            self.assertEqual([r for _, r in mask._secrets()], ["~"])
 
 
 class CheckMaskedTest(Fixture):
@@ -209,99 +210,89 @@ class CheckMaskedTest(Fixture):
         # Untracked text keeps the originals: not checked.
         self.write(f"{DAY}/logs/run.log", "10.20.30.40 /home/devuser\n")
         self.write(f"{DAY}/prompts.md", "dev@mail.example.org\n")
-        found = diary.check_masked()
+        found = mask.check_masked()
         self.assertIn("index.md:3: home directory", found)
         self.assertTrue(any(f.startswith(f"{DAY}/journal.json:1: ") for f in found))
         self.assertFalse(any("logs" in f or "prompts" in f for f in found))
         for f in found:  # the values are never reported
             self.assert_clean(f)
 
+    def test_media_file_names_are_checked_masked(self):
+        """File names go public (Git LFS, gallery, day zips): a private
+        pattern in one is a finding, reported masked."""
+        (self.hist / DAY).mkdir(parents=True)
+        (self.hist / DAY / "090000-shot-buildhost.example.lan.png").write_bytes(b"x")
+        (self.hist / DAY / "091000-shot-ok.png").write_bytes(b"x")
+        (self.hist / DAY / "092000-notes-buildhost.example.lan.txt").write_text("x")  # not media: zip text is masked
+        found = mask.check_masked()
+        self.assertEqual(found, [f"{DAY}/090000-shot-marge.png: build-machine host in the file name"])
+        self.assertEqual(mask.check_masked(fix=True), found)  # never renamed
+
     def test_fix_masks_in_place(self):
         p = self.write("index.md", "from /home/builder/src/OCW on 10.20.30.40\n")
         log_ = self.write(f"{DAY}/logs/run.log", "10.20.30.40\n")
-        self.assertTrue(diary.check_masked())
-        self.assertEqual(diary.check_masked(fix=True), [])
+        self.assertTrue(mask.check_masked())
+        self.assertEqual(mask.check_masked(fix=True), [])
         self.assertEqual(p.read_text(), "from ~/src/OCW on leela\n")
         self.assertEqual(log_.read_text(), "10.20.30.40\n")  # originals stay
-        self.assertEqual(diary.check_masked(), [])
+        self.assertEqual(mask.check_masked(), [])
 
     def test_cli_exit_code(self):
         self.write("index.md", "cd /home/someone/x\n")
         env = {**os.environ, "OCW_ART_HISTORY": str(self.hist)}
-        r = subprocess.run([sys.executable, str(HERE / "diary.py"), "check-masked"], env=env,
+        r = subprocess.run([sys.executable, str(REPO / "diary.py"), "check-masked"], env=env,
                            capture_output=True, text=True)
         self.assertNotEqual(r.returncode, 0)
         self.assertIn("index.md:1: home directory", r.stdout)
         self.assertNotIn("/home/someone", r.stdout + r.stderr)
-        r = subprocess.run([sys.executable, str(HERE / "diary.py"), "check-masked", "--fix"], env=env,
+        r = subprocess.run([sys.executable, str(REPO / "diary.py"), "check-masked", "--fix"], env=env,
                            capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stderr)
 
 
 class DaysTest(unittest.TestCase):
     def test_today_and_yesterday(self):
-        self.assertEqual(diary.default_collect_days(dt.datetime(2026, 11, 14, 9, 5)),
+        self.assertEqual(collect.default_collect_days(dt.datetime(2026, 11, 14, 9, 5)),
                          ["2026-11-13", "2026-11-14"])
 
     def test_month_and_year_boundary(self):
-        self.assertEqual(diary.default_collect_days(dt.datetime(2026, 12, 1, 0, 3)),
+        self.assertEqual(collect.default_collect_days(dt.datetime(2026, 12, 1, 0, 3)),
                          ["2026-11-30", "2026-12-01"])
-        self.assertEqual(diary.default_collect_days(dt.datetime(2027, 1, 1, 0, 1)),
+        self.assertEqual(collect.default_collect_days(dt.datetime(2027, 1, 1, 0, 1)),
                          ["2026-12-31", "2027-01-01"])
 
 
 class LockTest(Fixture):
     def test_second_run_waits_and_times_out(self):
-        with diary.art_lock("first"):
-            self.assertIn("diary.py first", diary.lock_path().read_text())
+        with core.art_lock("first"):
+            self.assertIn("diary.py first", core.lock_path().read_text())
             t0 = time.monotonic()
             with self.assertRaises(TimeoutError):
-                with diary.art_lock("second", wait=0.3):
+                with core.art_lock("second", wait=0.3):
                     pass
             self.assertGreaterEqual(time.monotonic() - t0, 0.3)
-        with diary.art_lock("third", wait=0.3):  # free again
+        with core.art_lock("third", wait=0.3):  # free again
             pass
 
     def test_lock_held_by_the_collector_script(self):
-        with diary.art_lock("collector"):
+        with core.art_lock("collector"):
             with mock.patch.dict(os.environ, {"OCW_ART_LOCK_HELD": "1"}):
-                with diary.art_lock("child", wait=0.1):  # no deadlock
+                with core.art_lock("child", wait=0.1):  # no deadlock
                     pass
 
     def test_lock_excludes_another_process(self):
-        holder = subprocess.Popen(["flock", str(diary.lock_path()), "sleep", "5"])
+        holder = subprocess.Popen(["flock", str(core.lock_path()), "sleep", "5"])
         try:
             deadline = time.monotonic() + 3
-            while not diary.lock_path().exists() and time.monotonic() < deadline:
+            while not core.lock_path().exists() and time.monotonic() < deadline:
                 time.sleep(0.05)
             time.sleep(0.2)
             with self.assertRaises(TimeoutError):
-                with diary.art_lock("x", wait=0.3):
+                with core.art_lock("x", wait=0.3):
                     pass
         finally:
             holder.kill()
             holder.wait()
-
-
-class OldPlaceTest(Fixture):
-    def test_refuses_while_archive_in_the_ocw_checkout(self):
-        old = self.tmp / "OCW" / "art" / "build-history"
-        old.mkdir(parents=True)
-        with mock.patch.object(diary, "OLD_HIST", old), mock.patch.dict(os.environ):
-            os.environ.pop("OCW_ART_HISTORY", None)
-            (old / ".lock").write_text("")
-            diary.check_old_place()  # only a lock file left: moved
-            (old / DAY).mkdir()
-            with self.assertRaises(SystemExit) as e:
-                diary.check_old_place()
-            msg = str(e.exception)
-            self.assertIn(str(old), msg)
-            self.assertIn(f"mv {old} {self.hist}", msg)
-            os.environ["OCW_ART_HISTORY"] = str(self.hist)
-            diary.check_old_place()  # an explicit archive (tests): no check
-            os.environ.pop("OCW_ART_HISTORY")
-            subprocess.run(["rm", "-rf", "--", str(old)], check=True)
-            diary.check_old_place()  # moved: fine
 
 
 class OcwRepoTest(Fixture):
@@ -311,34 +302,34 @@ class OcwRepoTest(Fixture):
         art = self.tmp / "OCW-ART"
         art.mkdir()
         conf = art / "ocw-art.toml"
-        with mock.patch.object(diary, "ART", art), mock.patch.object(diary, "CONFIG", conf), \
+        with mock.patch.object(core, "ART", art), mock.patch.object(core, "CONFIG", conf), \
                 mock.patch.dict(os.environ):
             os.environ.pop("OCW_REPO", None)
-            self.assertEqual(diary.ocw_repo(), (self.tmp / "OCW").resolve())
+            self.assertEqual(core.ocw_repo(), (self.tmp / "OCW").resolve())
             conf.write_text('ocw_repo = "../src/OCW-main"\n')
-            self.assertEqual(diary.ocw_repo(), (self.tmp / "src" / "OCW-main").resolve())
+            self.assertEqual(core.ocw_repo(), (self.tmp / "src" / "OCW-main").resolve())
             os.environ["OCW_REPO"] = str(self.tmp / "elsewhere")
-            self.assertEqual(diary.ocw_repo(), (self.tmp / "elsewhere").resolve())
+            self.assertEqual(core.ocw_repo(), (self.tmp / "elsewhere").resolve())
             conf.write_text("ocw_repo = [\n")
             os.environ.pop("OCW_REPO")
             with self.assertRaises(SystemExit):
-                diary.ocw_repo()
+                core.ocw_repo()
 
     def test_check_ocw_needs_a_checkout(self):
-        with mock.patch.object(diary, "ROOT", self.tmp / "nothing"):
+        with mock.patch.object(core, "ROOT", self.tmp / "nothing"):
             with self.assertRaises(SystemExit) as e:
-                diary.check_ocw()
+                core.check_ocw()
             self.assertIn("OCW_REPO", str(e.exception))
-        diary.check_ocw()  # the checkout the tests run against
+        core.check_ocw()  # the checkout the tests run against
 
     def test_cli_prints_the_checkout(self):
-        r = subprocess.run([sys.executable, str(HERE / "diary.py"), "ocw-repo"],
+        r = subprocess.run([sys.executable, str(REPO / "diary.py"), "ocw-repo"],
                            env={**os.environ, "OCW_REPO": str(self.tmp)}, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stderr)
         self.assertEqual(r.stdout.strip(), str(self.tmp.resolve()))
 
     def test_cli_refuses_without_an_ocw_checkout(self):
-        r = subprocess.run([sys.executable, str(HERE / "diary.py"), "check-masked"],
+        r = subprocess.run([sys.executable, str(REPO / "diary.py"), "check-masked"],
                            env={**os.environ, "OCW_REPO": str(self.tmp / "nothing"),
                                 "OCW_ART_HISTORY": str(self.hist)}, capture_output=True, text=True)
         self.assertNotEqual(r.returncode, 0)
@@ -356,8 +347,8 @@ class GitHubTest(Fixture):
         def fake_run(cmd, **kw):
             calls.append([str(c) for c in cmd])
             return subprocess.CompletedProcess(cmd, 0, "", "")
-        with mock.patch.object(diary, "run", side_effect=fake_run):
-            diary.publish([])
+        with mock.patch.object(publish, "run", side_effect=fake_run):
+            publish.publish([])
         gh = [c for c in calls if c[:1] == ["gh"]]
         self.assertTrue(gh)
         for c in gh:
@@ -373,8 +364,8 @@ class GitHubTest(Fixture):
             if cmd[:3] == ["gh", "release", "download"]:
                 repos.append(cmd[cmd.index("-R") + 1])
             return subprocess.CompletedProcess(cmd, 1, "", "")
-        with mock.patch.object(diary, "run", side_effect=fake_run):
-            diary.fetch(DAY)
+        with mock.patch.object(archive, "run", side_effect=fake_run):
+            archive.fetch(DAY)
         self.assertEqual(repos, ["newkit/OCW-ART", "newkit/OCW"])
 
 
@@ -389,10 +380,10 @@ class CollectTest(Fixture):
 
     def test_status_file(self):
         now = dt.datetime(2026, 11, 14, 15, 2)
-        with mock.patch.object(diary, "gather", side_effect=self.fake_gather), \
-                mock.patch.object(diary, "journal") as journal, \
-                mock.patch.object(diary, "sheet") as sheet:
-            st = diary.collect(now=now)
+        with mock.patch.object(collect, "gather", side_effect=self.fake_gather), \
+                mock.patch.object(collect, "journal") as journal, \
+                mock.patch.object(collect, "sheet") as sheet:
+            st = collect.collect(now=now)
         self.assertEqual([c.args[0] for c in journal.call_args_list], [DAY])  # the failed day: no journal
         sheet.assert_not_called()  # not the 23:xx run
         status = json.loads((self.out / "build-log" / DAY / "art.json").read_text())
@@ -411,9 +402,9 @@ class CollectTest(Fixture):
 
     def test_sheets_in_the_23h_run_and_mask_failure(self):
         (self.hist / "index.md").write_text("ssh builder@buildhost.example.lan\n")
-        with mock.patch.object(diary, "gather", return_value=0), \
-                mock.patch.object(diary, "journal"), mock.patch.object(diary, "sheet") as sheet:
-            st = diary.collect(now=dt.datetime(2026, 11, 14, 23, 3))
+        with mock.patch.object(collect, "gather", return_value=0), \
+                mock.patch.object(collect, "journal"), mock.patch.object(collect, "sheet") as sheet:
+            st = collect.collect(now=dt.datetime(2026, 11, 14, 23, 3))
         sheet.assert_called_once_with(DAY)
         self.assertTrue(st["sheets"])
         self.assertEqual(st["status"], "failed")
@@ -423,10 +414,10 @@ class CollectTest(Fixture):
 class CollectScriptTest(Fixture):
     """collect.sh on the fixture (OCW_ART_HISTORY, OCW_TEST_OUTPUT)."""
 
-    SCRIPT = HERE / "collect.sh"
+    SCRIPT = REPO / "bin" / "collect.sh"
 
     def script_env(self, **kw):
-        return {**os.environ, "OCW_REPO": str(diary.ROOT), "OCW_ART_HISTORY": str(self.hist),
+        return {**os.environ, "OCW_REPO": str(core.ROOT), "OCW_ART_HISTORY": str(self.hist),
                 "OCW_TEST_OUTPUT": str(self.out),
                 "OCW_TRANSCRIPTS": str(self.tmp / "no-transcripts"), "OCW_ART_PYTHON": sys.executable, **kw}
 
@@ -497,7 +488,7 @@ class IncidentTest(Fixture):
     DAY2 = "2026-11-15"
 
     def test_parse_journal(self):
-        got = diary.parse_journal(JOURNAL_SAMPLE)
+        got = incidents.parse_journal(JOURNAL_SAMPLE)
         self.assertEqual([(e["time"], e["kind"]) for e in got], [
             ("00:39:18", "oom-kill"), ("00:39:29", "unit-restart"), ("00:39:47", "oom-kill"),
             ("00:39:50", "oom-kill"), ("03:00:05", "unit-failed")])
@@ -526,7 +517,7 @@ class IncidentTest(Fixture):
             {"start": f"{self.DAY2}T05:00:00+01:00", "machine": "marge", "exit": 0},
             {"start": f"{self.DAY2}T05:10:00+01:00", "machine": "marge", "exit": 101},
             {"start": f"{self.DAY2}T05:20:00+01:00", "machine": "macos", "exit": 1}]) + "\n")
-        got = diary.incidents(self.DAY2, JOURNAL_SAMPLE[:1])
+        got = incidents.incidents(self.DAY2, JOURNAL_SAMPLE[:1])
         kinds = [e["kind"] for e in got]
         self.assertEqual(kinds, ["oom-kill", "machine-offline", "machine-online", "disk-full", "janitor-delete",
                                  "runs-failed"])
@@ -538,31 +529,31 @@ class IncidentTest(Fixture):
     def test_journal_merges_collected_and_notes(self):
         bl = self.out / "build-log" / self.DAY2
         bl.mkdir(parents=True)
-        diary.incidents(self.DAY2, JOURNAL_SAMPLE)
+        incidents.incidents(self.DAY2, JOURNAL_SAMPLE)
         (self.hist / self.DAY2).mkdir(parents=True)
         (self.hist / self.DAY2 / "incidents.md").write_text(
             "# Incidents – 2026-11-15\n\n## 00:39 – OOM on deb\n\n- **Cause:** VMs on 10.20.30.40\n")
-        with mock.patch.object(diary, "commits_of", return_value=[]), \
-                mock.patch.object(diary, "tokens_of", return_value={"total": {}, "tasks": {}, "features": {},
+        with mock.patch.object(journal, "commits_of", return_value=[]), \
+                mock.patch.object(prompts, "tokens_of", return_value={"total": {}, "tasks": {}, "features": {},
                                                                     "models": {}}), \
-                mock.patch.object(diary, "all_days", return_value=[DAY]):
-            j = diary.journal(self.DAY2)
+                mock.patch.object(core, "all_days", return_value=[DAY]):
+            j = journal.journal(self.DAY2)
         self.assertEqual(len(j["incidents"]["auto"]), 5)
         self.assertEqual(j["incidents"]["noted"], ["00:39 – OOM on deb"])
         md = (self.hist / self.DAY2 / "journal.md").read_text()
         self.assertIn("## Incidents", md)
         self.assertIn("### 00:39 – OOM on deb", md)
         self.assert_clean(md)
-        self.assertEqual(diary.incident_text(j, "00:39"), "OOM on deb")
-        self.assertEqual(diary.incident_text(j, "03:00"), "ocw-art-collect.service failed (exit-code)")
-        self.assertEqual(diary.incident_text(j, "00:39", "custom"), "custom")
+        self.assertEqual(journal.incident_text(j, "00:39"), "OOM on deb")
+        self.assertEqual(journal.incident_text(j, "03:00"), "ocw-art-collect.service failed (exit-code)")
+        self.assertEqual(journal.incident_text(j, "00:39", "custom"), "custom")
 
     def test_incidents_md_is_tracked_and_checked(self):
-        self.assertIn("incidents.md", diary.TRACKED_DAY)
+        self.assertIn("incidents.md", mask.TRACKED_DAY)
         (self.hist / self.DAY2).mkdir(parents=True)
         (self.hist / self.DAY2 / "incidents.md").write_text("## 00:39\n\nssh builder@buildhost.example.lan\n")
-        self.assertTrue(any(f.startswith(f"{self.DAY2}/incidents.md:3:") for f in diary.check_masked()))
-        root = diary.ART
+        self.assertTrue(any(f.startswith(f"{self.DAY2}/incidents.md:3:") for f in mask.check_masked()))
+        root = core.ART
         for rel, ignored in ((f"build-history/{self.DAY2}/incidents.md", False),
                              (f"build-history/{self.DAY2}/journal.md", False),
                              (f"build-history/{self.DAY2}/logs/build-log/incidents.jsonl", True),
@@ -575,9 +566,8 @@ class DefaultArchiveUntouchedTest(Fixture):
     """The collector run with OCW_ART_HISTORY / OCW_TEST_OUTPUT, from a copy
     of this checkout that has a real-looking archive at the default place
     (build-history/), next to a fake OCW checkout (OCW_REPO) with its own
-    test-output/, an agent worktree with media of the day and an archive at
-    the old place (art/build-history/): none of these may be read into or
-    written by the run."""
+    test-output/ and an agent worktree with media of the day: none of these
+    may be read into or written by the run."""
 
     ENV = {"GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.org",
            "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.org",
@@ -598,10 +588,12 @@ class DefaultArchiveUntouchedTest(Fixture):
     def make_repos(self) -> tuple[Path, Path]:
         art, ocw = self.tmp / "OCW-ART", self.tmp / "OCW"
         art.mkdir()
-        for rel in ("diary.py", "music.py", "features.py", "collect.sh"):
-            (art / rel).write_bytes((HERE / rel).read_bytes())
+        files = ["diary.py", "bin/collect.sh", *(p.relative_to(REPO).as_posix() for p in (REPO / "ocwart").glob("*.py"))]
+        for rel in files:
+            (art / rel).parent.mkdir(parents=True, exist_ok=True)
+            (art / rel).write_bytes((REPO / rel).read_bytes())
             (art / rel).chmod(0o755)
-        self.git_repo(art, ["diary.py", "music.py", "features.py", "collect.sh"])
+        self.git_repo(art, files)
         (ocw / "scripts").mkdir(parents=True)
         (ocw / "SPECIFICATION.md").write_text("# Open Cycling World\n")
         self.git_repo(ocw, ["SPECIFICATION.md"])
@@ -614,9 +606,7 @@ class DefaultArchiveUntouchedTest(Fixture):
 
     def test_overrides_keep_the_default_archive_untouched(self):
         art, ocw = self.make_repos()
-        self.real_looking_archive(ocw / "art" / "build-history")  # the old place, not yet moved
-        watched = {p: tree_state(p) for p in (art / "build-history", ocw / "art", ocw / "test-output",
-                                              ocw / ".claude")}
+        watched = {p: tree_state(p) for p in (art / "build-history", ocw / "test-output", ocw / ".claude")}
         (self.out / DAY).mkdir(parents=True)
         (self.out / DAY / "101500-shot.jpg").write_bytes(b"\xff\xd8 fixture")
         env = {**os.environ, "OCW_REPO": str(ocw), "OCW_ART_HISTORY": str(self.hist),
@@ -624,7 +614,7 @@ class DefaultArchiveUntouchedTest(Fixture):
                "OCW_ART_PYTHON": sys.executable}
         env.pop("OCW_ART_WORKTREES", None)
         time.sleep(0.05)  # an mtime change would be visible
-        r = subprocess.run([str(art / "collect.sh"), "--no-sheets", DAY], env=env,
+        r = subprocess.run([str(art / "bin" / "collect.sh"), "--no-sheets", DAY], env=env,
                            capture_output=True, text=True, timeout=300)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         for p, before in watched.items():
@@ -636,35 +626,13 @@ class DefaultArchiveUntouchedTest(Fixture):
         st = json.loads((self.out / "build-log" / dt.date.today().isoformat() / "art.json").read_text())
         self.assertEqual(st["days"][DAY]["media"], 1)
 
-    def test_default_run_refuses_while_the_archive_is_at_the_old_place(self):
-        """Without OCW_ART_HISTORY the collector stops (status failed) and
-        changes nothing while OCW/art/build-history/ still holds the archive."""
-        art, ocw = self.make_repos()
-        self.real_looking_archive(ocw / "art" / "build-history")
-        watched = {p: tree_state(p) for p in (art / "build-history" / DAY, ocw / "art")}
-        env = {**os.environ, "OCW_REPO": str(ocw), "OCW_TEST_OUTPUT": str(self.out),
-               "OCW_TRANSCRIPTS": str(self.tmp / "no-transcripts"), "OCW_ART_PYTHON": sys.executable,
-               "OCW_ART_LOCK_WAIT": "5"}
-        env.pop("OCW_ART_HISTORY", None)
-        time.sleep(0.05)
-        r = subprocess.run([str(art / "collect.sh"), "--no-sheets", DAY], env=env,
-                           capture_output=True, text=True, timeout=300)
-        self.assertNotEqual(r.returncode, 0)
-        self.assertIn("still in the OCW checkout", r.stdout + r.stderr)
-        st = json.loads((self.out / "build-log" / dt.date.today().isoformat() / "art.json").read_text())
-        self.assertEqual(st["status"], "failed")
-        # (the collector writes only its lock file in the default archive)
-        for p, before in watched.items():
-            self.assertEqual(tree_state(p), before, f"{p} was changed")
-        self.assertEqual((art / "build-history" / "SENTINEL").read_text(), "do not touch\n")
-
     def test_sources_honour_the_overrides(self):
         """In-process: with WORKTREES off only TEST_OUTPUT is a source."""
-        self.assertEqual(diary.sources(), [self.out])
+        self.assertEqual(archive.sources(), [self.out])
         wt = self.tmp / "wt" / "agent-y" / "test-output"
         wt.mkdir(parents=True)
-        diary.WORKTREES = self.tmp / "wt"
-        self.assertEqual(diary.sources(), [self.out, wt])
+        core.WORKTREES = self.tmp / "wt"
+        self.assertEqual(archive.sources(), [self.out, wt])
 
 
 if __name__ == "__main__":
