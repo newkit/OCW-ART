@@ -122,7 +122,9 @@ def collect(days: list[str] | None = None, sheets: bool | None = None,
             st["lfs"] = {"policy": b["policy"], "stored_gib": round(b["stored_bytes"] / lfs.GIB, 2),
                          "pending_gib": round(b["pending_bytes"] / lfs.GIB, 2),
                          "budget_gib": round(b["budget"] / lfs.GIB, 2),
-                         "days_left": None if b["days_left"] is None else round(b["days_left"], 1)}
+                         "days_left": None if b["days_left"] is None else round(b["days_left"], 1),
+                         "days_left_largest": None if b.get("days_left_largest") is None
+                         else round(b["days_left_largest"], 1)}
             if b["days_left"] is not None and b["days_left"] < 1:
                 st["warnings"].append("LFS budget (nearly) reached: " + lfs.budget_advice())
         except (Exception, SystemExit) as e:

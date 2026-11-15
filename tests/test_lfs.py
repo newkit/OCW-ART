@@ -111,11 +111,14 @@ class LfsRepoTest(Fixture):
         self.media(D2, "090000-c.jpg", 2500)
         self.media(D3, "090000-d.jpg", 3000)  # would cross the 5000-byte budget
         (self.hist / D1 / "notes.txt").write_text("not media\n")
+        self.media(D1, "092000-aborted.jpg", 0)  # an aborted capture: committed empty, no LFS object
         st = lfs.status(today=TODAY)
-        self.assertEqual((st["stored_bytes"], st["pending_bytes"], st["pending_files"]), (0, 7500, 4))
+        self.assertEqual((st["stored_bytes"], st["pending_bytes"], st["pending_files"]), (0, 7500, 5))
         self.assertTrue(st["over_budget"])
         self.assertEqual(st["rate_per_day"], 2500)  # (2000 + 2500 + 3000) / 3 finished days
+        self.assertEqual(st["largest_day"], 3000)
         self.assertLess(st["days_left"], 0)
+        self.assertLess(st["days_left_largest"], 0)
         self.assertIn("budget", lfs.report(st))
 
         r = lfs.commit_days(today=TODAY, trailers=["Co-Authored-By: Test Rider <rider@example.org>"])
@@ -124,7 +127,7 @@ class LfsRepoTest(Fixture):
         self.assertTrue(any("LFS budget reached" in w for w in r["warnings"]))
         log = self.git("log", "--format=%s", "-n", "2").splitlines()
         self.assertEqual(log, [f"Build history {D2}: 1 pictures and 0 videos in Git LFS (0 MB; ART-PROJECT §2.8)",
-                               f"Build history {D1}: 1 pictures and 1 videos in Git LFS (0 MB; ART-PROJECT §2.8)"])
+                               f"Build history {D1}: 2 pictures and 1 videos in Git LFS (0 MB; ART-PROJECT §2.8)"])
         self.assertIn("Co-Authored-By: Test Rider", self.git("log", "-1", "--format=%B"))
         # the media are LFS pointers, the text file and day 3 are not committed
         self.assertTrue(self.git("show", f"HEAD:build-history/{D1}/091000-b.mp4").startswith(
@@ -136,15 +139,18 @@ class LfsRepoTest(Fixture):
                                   f"build-history/{D3}/090000-d.jpg"]).returncode == 0
         self.assertTrue(ignored)  # left local and ignored
         gi = (self.tmp / ".gitignore").read_text()
-        self.assertEqual(lfs.ignore_block(gi), {D1: {".png", ".mp4"}, D2: {".jpg"}})
+        self.assertEqual(lfs.ignore_block(gi), {D1: {".png", ".mp4", ".jpg"}, D2: {".jpg"}})
         self.assertIn(".gitignore", self.git("show", "--name-only", "--format=", f"HEAD~1"))
         self.assertEqual(self.git("status", "--porcelain", "--", ".gitignore"), "")
 
+        self.assertIn(f"build-history/{D1}/092000-aborted.jpg", files)
+        self.assertEqual(self.git("status", "--porcelain", "--", "build-history"), "")
         v = lfs.verify()
-        self.assertEqual((v["lfs_files"], v["committed_media"], v["ok"]), (3, 3, True))
+        self.assertEqual((v["lfs_files"], v["committed_media"], v["empty_files"], v["ok"]), (3, 3, 1, True))
         self.assertEqual(lfs.stored_bytes(), (4500, 3))
         st = lfs.status(today=TODAY)
         self.assertEqual((st["stored_bytes"], st["pending_files"]), (4500, 1))
+        self.assertEqual(st["days"][D1]["pending_files"], 0)
 
         p = lfs.push()
         self.assertEqual((p["pushed"], p["ok"]), (2, True))

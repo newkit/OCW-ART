@@ -148,7 +148,7 @@ class BuildTest(GalleryFixture):
         self.assertNotIn("ocw-build-history-2026-10-02.zip\"", page2)
         index = self.site("index.html")
         self.assertLess(index.index(DAY2), index.index(DAY1))  # newest first
-        self.assertIn(f"days/{DAY1}/t/120000-shot-hills.png.jpg", index)  # the script's hero
+        self.assertIn(f"days/{DAY1}/w/120000-shot-hills.png.jpg", index)  # the script's hero, the web copy
         self.assertIn("3 pictures · 1 videos", index)
         self.assertIn("OpenStreetMap contributors", index)
         self.assertIn("MIT OR Apache-2.0", index)

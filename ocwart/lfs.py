@@ -108,10 +108,12 @@ def rel(p: Path) -> str:
 
 
 def tracked() -> dict[str, int]:
-    """{path: size} of the media of the archive committed at HEAD (LFS pointers)."""
+    """{path: size} of the media of the archive committed at HEAD (LFS
+    pointers, and empty files with size 0)."""
     out = {}
     if not git("rev-parse", "--verify", "-q", "HEAD", check=False).strip():
         return out
+    out.update({x: 0 for x in committed_empty()})
     prefix = rel(C.HIST) + "/"
     try:
         data = json.loads(git("lfs", "ls-files", "--json") or "{}")
@@ -144,10 +146,21 @@ def media_days() -> list[str]:
                   and re.fullmatch(r"\d{4}-\d{2}-\d{2}", d.name))
 
 
-def day_media(day: str, kinds=PICTURES + VIDEOS) -> list[Path]:
+EMPTY_BLOB = "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"  # git's empty blob: an aborted capture
+
+
+def day_media(day: str, kinds=PICTURES + VIDEOS, empty: bool = False) -> list[Path]:
+    """The day's media files; `empty`: also those of 0 bytes (aborted
+    captures, committed as plain empty files: LFS keeps no object for them)."""
     d = C.HIST / day
-    return sorted(f for f in d.iterdir() if f.is_file() and f.suffix in kinds and f.stat().st_size > 0) \
-        if d.is_dir() else []
+    return sorted(f for f in d.iterdir() if f.is_file() and f.suffix in kinds
+                  and (empty or f.stat().st_size > 0)) if d.is_dir() else []
+
+
+def committed_empty() -> set[str]:
+    prefix = rel(C.HIST) + "/"
+    return {line.split("\t", 1)[1] for line in git("ls-files", "-s", "--", prefix).splitlines()
+            if "\t" in line and line.split()[1] == EMPTY_BLOB}
 
 
 def pending(day: str, have: dict[str, int], pol: str, secrets=None) -> dict:
@@ -155,7 +168,7 @@ def pending(day: str, have: dict[str, int], pol: str, secrets=None) -> dict:
     and those held back: a private pattern in the name (never committed),
     or a kind the policy leaves out."""
     new, private, left_out = [], [], []
-    for f in day_media(day):
+    for f in day_media(day, empty=True):
         r = rel(f)
         if r in have and have[r] == f.stat().st_size:
             continue  # committed (a changed file of the same size is caught by git status)
@@ -186,12 +199,14 @@ def status(secrets=None, today: str | None = None) -> dict:
                    "left_out_files": len(p["left_out"]), "left_out_bytes": p["left_out_bytes"]}
     finished = [d for d in days if d < today and days[d]["local_bytes"]]
     rate = sum(days[d]["local_bytes"] for d in finished) / len(finished) if finished else 0
+    biggest = max((days[d]["local_bytes"] for d in finished), default=0)
     pend = sum(v["pending_bytes"] for v in days.values())
     free = budget - stored - pend
     return {"policy": pol, "budget": budget, "quota": int(QUOTA_GIB * GIB), "stored_bytes": stored,
             "stored_objects": objects, "tracked_files": len(have), "pending_bytes": pend,
             "pending_files": sum(v["pending_files"] for v in days.values()),
             "rate_per_day": int(rate), "days_left": (free / rate) if rate else None,
+            "largest_day": int(biggest), "days_left_largest": (free / biggest) if biggest else None,
             "over_budget": stored + pend > budget, "days": days}
 
 
@@ -211,9 +226,9 @@ def report(st: dict) -> str:
                                                                                    else ""))
     if st["rate_per_day"]:
         left = st["days_left"]
-        lines.append(f"Rate: {g(st['rate_per_day'])} per build day; "
-                     + (f"{left:.1f} days left in the budget" if left > 0 else
-                        "the budget is reached: " + budget_advice()))
+        lines.append(f"Rate: {g(st['rate_per_day'])} per build day (largest day {g(st['largest_day'])}); "
+                     + (f"{left:.1f} days left in the budget ({st['days_left_largest']:.1f} at the largest "
+                        f"day's size)" if left > 0 else "the budget is reached: " + budget_advice()))
     if st["over_budget"]:
         lines.append("WARNING: the pending media do not all fit the budget; lfs-commit adds whole days while "
                      "they fit and leaves the rest local (git-ignored).")
@@ -314,7 +329,8 @@ def commit_days(days: list[str] | None = None, dry_run: bool = False, secrets=No
         # Every staged media file must be an LFS pointer (never a raw blob in git).
         attrs = git("check-attr", "filter", "--stdin", "-z", input="\0".join(paths) + "\0").split("\0")
         bad = [attrs[i] for i in range(0, len(attrs) - 2, 3) if attrs[i + 2] != "lfs"]
-        staged_raw = [x for x in paths[:50] if not git("cat-file", "-p", f":{x}").startswith(
+        sized = [x for x, f in zip(paths, p["files"]) if f.stat().st_size > 0][:50]
+        staged_raw = [x for x in sized if not git("cat-file", "-p", f":{x}").startswith(
             "version https://git-lfs.github.com/spec/v1")]
         if bad or staged_raw:
             git("reset", "-q", "--", *(bad or staged_raw)[:50], check=False)
@@ -370,8 +386,11 @@ def verify() -> dict:
     committed = [x for x in git("ls-files", "-z", "--", prefix).split("\0")
                  if x and Path(x).suffix in PICTURES + VIDEOS and re.match(re.escape(prefix) + r"\d{4}-\d{2}-\d{2}/",
                                                                             x)]
+    empty = committed_empty()
+    committed = [x for x in committed if x not in empty]  # (LFS keeps no object for an empty file)
     stored, objects = stored_bytes()
-    return {"lfs_files": lfs_n, "committed_media": len(committed), "ok": lfs_n == len(committed),
+    return {"lfs_files": lfs_n, "committed_media": len(committed), "empty_files": len(empty),
+            "ok": lfs_n == len(committed),
             "stored_bytes": stored, "stored_objects": objects}
 
 

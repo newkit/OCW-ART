@@ -427,7 +427,7 @@ def day_page(day: str, info: dict, items: list[dict], tier: str, links: dict, pr
 def index_page(cards: list[dict], total: dict, links: dict) -> str:
     rows = []
     for c in reversed(cards):  # newest first
-        img = (f'<img loading="lazy" src="days/{c["day"]}/t/{q(c["hero"]["file"])}.jpg" alt="">'
+        img = (f'<img loading="lazy" src="days/{c["day"]}/{c["hero_dir"]}/{q(c["hero"]["file"])}.jpg" alt="">'
                if c["hero"] else '<span class="noimg"></span>')
         title = f"Day {c['number']}" if c.get("number") else c["day"]
         vid = (f' <a class="btn" href="{DOWNLOAD}{q(c["links"]["video"])}">▶ Day video</a>'
@@ -526,9 +526,10 @@ def build(max_mb: float = DEFAULT_MAX_MB, jobs: int = DEFAULT_JOBS, assets: set[
         imgs = sum(i["kind"] == "image" for i in its)
         total["images"] += imgs
         total["videos"] += len(its) - imgs
+        hero = hero_of(its, info["hero"], have)
         cards.append({"day": d, "number": info["number"], "title": info["title"], "commits": info["commits"],
-                      "images": imgs, "videos": len(its) - imgs, "links": links,
-                      "hero": hero_of(its, info["hero"], have)})
+                      "images": imgs, "videos": len(its) - imgs, "links": links, "hero": hero,
+                      "hero_dir": "w" if hero and web and have(hero, web) else "t"})
     (new / "index.html").write_text(index_page(cards, total, day_links("", assets)))
     # Every text on the pages passes the mask rules (§2.5): fail before anything is replaced.
     found = []

@@ -313,7 +313,8 @@ free GitHub plan's quota, which nothing may exceed:
   `# <<< lfs-days`; one `!/build-history/DAY/*.ext` per committed kind).
   Without days it takes every finished day (before today) with new media,
   oldest first. Late additions to a committed day get a small commit of
-  their own. It refuses to run without git-lfs ("install git-lfs (make
+  their own. Empty files (aborted captures) are committed as plain empty
+  files: LFS keeps no object for them. It refuses to run without git-lfs ("install git-lfs (make
   deps)"), off `main`, or during a merge or rebase. It checks that every
   staged file is an LFS pointer, never a raw blob. `--dry-run` shows what it
   would do.
@@ -322,7 +323,7 @@ free GitHub plan's quota, which nothing may exceed:
   the media about to be added, against the budget: **9 GiB** by default
   (`lfs_budget_gib` in `ocw-art.toml` or `OCW_ART_LFS_BUDGET_GIB`; at most
   the 10 GiB quota). It reports the total, the files, the rate (the average
-  media of a finished day) and the days left. `lfs-commit` adds whole days
+  media of a finished day, and the largest day) and the days left at both. `lfs-commit` adds whole days
   while they fit. The first day that does not fit, and every later day,
   stays local and ignored, with the warning "LFS budget reached".
 - **Policy** (`lfs_policy` in `ocw-art.toml` or `OCW_ART_LFS_POLICY`): `all`
