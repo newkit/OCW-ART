@@ -33,4 +33,7 @@ __pycache__/
 !/build-history/2026-11-13/*.jpg
 !/build-history/2026-11-13/*.mp4
 !/build-history/2026-11-13/*.png
+!/build-history/2026-11-14/*.jpg
+!/build-history/2026-11-14/*.mp4
+!/build-history/2026-11-14/*.webm
 # <<< lfs-days
