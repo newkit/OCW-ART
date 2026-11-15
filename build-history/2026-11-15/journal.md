@@ -1,6 +1,6 @@
 # OCW build diary – day 5, 2026-11-15
 
-97 commits (30 merges), +33083 / −2643 lines, 523 images, 9 videos, 0 sounds.
+144 commits (37 merges), +48682 / −33437 lines, 734 images, 9 videos, 0 sounds.
 
 ## Commits
 
@@ -101,19 +101,66 @@
 | 12:16 | `866a5a2` (merge) | Merge main into vegetation (spec version 3.48) |
 | 12:18 | `e2b4bda` (merge) | Merge sign-in with Google and Strava: ocw-auth, the ocw-accounts backend (OIDC-shaped endpoints, device flow, rotation, export/delete), game-server token check, Settings → Account in both apps; fictional test identities (spec 3.46) |
 | 12:21 | `a88498c` | Coordinator move nils@deb -> user@deb: checklist (docs/MIGRATE-DEB-USER.md) and root copy script (scripts/migrate-user.sh, dry run by default) |
+| 13:01 | `cf8eb83` | The art project moves to its own repository, newkit/OCW-ART (spec 3.50) |
 | 13:14 | `331a29f` | Plan Phase 15 (3D objects as glTF model files in artwork/3dmodels: format comparison, model contract, import/export/loader, migration M1-M6) and Phase 16 (OCW Studio: models, world patches, GPX routes, routing planners with licence check) (spec 3.48) |
 | 13:15 | `259934b` (merge) | Merge realistic vegetation (Phase 8 T8): flora species, VEGE crops and plantations, planted trees in OBST, world-builder vegetation, flora/vegetation renderer (spec 3.49) |
+| 13:30 | `b521838` (merge) | Merge the art project's move to newkit/OCW-ART: art/ and its build history leave OCW, make art-* point there, docs/reference/ keeps the world-look boards, the user move uses ~/src/OCW and ~/src/OCW-ART (spec 3.50) |
+| 13:30 | `b04d1a8` | Web preview: each ride card shows its download size and the load time at 50 Mbit/s (app, plus the world package for world rides) (spec B8a, v3.51) |
+| 13:34 | `e611d0b` | Preview worlds: ids with several levels (europe/spain/tenerife) are found – the release index moves into scripts/preview_worlds_index.py with a regression test; assets of older versions are removed from the release |
+| 13:45 | `019f2ac` | Open questions brought up to date (spec 3.51): Phase 11 Q1 marked decided, new Phase 10 Q7, Phase 11 Q8/Q9, Phase 12 Q8, §11.3 Q1; Tenerife in the web preview and ride download sizes recorded |
+| 13:56 | `320c32d` | VR dependencies: make deps-vr and deps-vr-linux (OpenXR loader + Monado for the simulated-headset tests); Phase 11 Q9 decided – Monado installed on marge (spec 3.52) |
+| 14:10 | `9df5de0` | Phase 15 Q1-Q4 decided: generators kept plus Blender sources, Git LFS, attribution-only third-party licences, Blender on marge; new Q5 (the GPL add-on) (spec 3.53) |
+| 14:23 | `2e21e61` | test-web: a later world ride waits until the rider has moved (> 5 m) or `seconds` – 3 s from a standstill were not always enough (live preview world checks, 2026-11-15) |
+| 14:24 | `7cdb6f3` | MIGRATE-DEB-USER: OCW-ART's media are in Git LFS – clone with skip-smudge (the media come by rsync), git-lfs among deb's tools, the collector is bin/collect.sh (OCW-ART ART-PROJECT 2.0) |
+| 14:35 | `9c0194c` | Build dashboard: the coordinator (deb) card and the Claude tasks with the cutover check (spec 3.54, §11.2.1) |
+| 14:35 | `fc9f929` (merge) | Merge deb monitoring and Claude tasks into the build dashboard: Coordinator (deb) card – memory, swap, top processes, PSI, disks, big dirs, OOM history, alerts, 24 h history (deb.jsonl) – and the Claude tasks section with the cutover check (spec 3.54) |
+| 14:51 | `47f1860` | Plan Phase 9 S9: a calendar on World -> Time (month grid banded with the place's season, moon, sun times, season-start shortcuts) and a season override for the landscape; Q11, Q12 (spec 3.55) |
+| 14:55 | `c1c241b` | Dashboard decision: Phase 10 Q7 closed – the preview stays at Liechtenstein and Tenerife (spec 3.56) |
+| 15:13 | `ee15425` | Riding aids allowed by default in all races (Phase 12 Q8) and a workout's ERG step pauses while the rider is down (Phase 12 Q4) (spec 3.57, 3.58) |
+| 15:13 | `dae0586` | Dashboard decisions: Phase 9 Q12 (start at the place's real date, season follows), Phase 16 Q1 (own app), Q4 (browser later), Q5 (simple mesh tools, stage E4b) (spec 3.59) |
+| 15:14 | `4e0ffcd` | Dashboard decision: Phase 14 Q2 – WebXR first, native OpenXR later (spec 3.60) |
+| 15:22 | `8b874e8` | Dashboard decision: Phase 9 Q11 – a season choice jumps the date to its representative day, no decoupled override (spec 3.61) |
+| 15:26 | `a03f748` | Phase 16 Q2 decided: world patches plus Fix in OSM, user-signed shareable packages (spec 3.62) |
+| 15:32 | `2a968e2` | Phase 16 Q3 decided: BRouter first, server left to the rider; route planner plan for the game and the studio (spec 3.63) |
+| 15:36 | `ef4c9d0` | Plan rider status signs (§2.6): headphones while voice is muted, the phone from the back pocket while in the menu, visible to everybody; open questions §2.6 Q1-Q3 (spec 3.64) |
+| 15:36 | `f7d1903` | Rider status signs: the open questions as §2.6 Q1-Q3 so the dashboard lists them |
+| 15:38 | `24229bf` | README: hosting your own world server – static HTTPS with range requests and CORS, own root and signing keys, world-builder publish layout, Caddy and nginx examples, curl checks, riders on desktop and browser, ODbL duties |
+| 15:40 | `aa3ba7f` | Plan the render distance: a slider and a dynamic mode following the frame rate; Phase 10 Q8, Q9 (spec 3.65) |
+| 15:45 | `92c94ba` | Phase 10 Q8 decided: the render distance's dynamic mode is on by default (spec 3.66) |
+| 15:47 | `26aaeac` | Phase 10 Q9 decided: target the display refresh on the desktop, 60 fps in the browser (spec 3.67) |
+| 16:10 | `96a2bdb` | Browser app on Safari and iPhones: Safari's WebKit takes the WebGL 2 build, a WebGPU watchdog falls back to WebGL 2 instead of a black screen (spec 3.56, §14 Phase 10 B7) |
+| 16:11 | `fb06017` (merge) | Merge the browser app on Safari and iPhones: WebGL 2 for Safari and iOS, a WebGPU watchdog with automatic fallback, renderer errors reported instead of quitting, mobile canvas and start-page fixes, test-web-gpu and test-web-webkit (spec 3.68) |
+| 16:18 | `b586135` | Smooth junctions investigated and planned (spec 3.66, §4.8.8) |
+| 16:33 | `8382442` | Smooth junctions: what the first junction-* pictures show (spec §4.8.8) |
+| 16:55 | `4ffda1e` | Smooth junctions: fmt and clippy of the junction_seams analysis; spec row renumbered to 3.69 |
+| 16:55 | `4cf45cf` (merge) | Merge the junction investigation: findings, design J1-J3 for smooth junctions (spec §4.8.8, Q1-Q5), 14 junction-* scenes, the junction_seams analysis test (spec 3.69) |
+| 17:01 | `f0f0174` | Trust dialog for user-signed worlds: fingerprint, trusted keys, shared rides (spec 3.63, §4.7 User keys) |
+| 17:07 | `10eaaa4` | Phase 8 T8 memory regression fixed: near plants built only near the camera, bounded tile builds (spec 3.54) |
+| 17:08 | `16e4ff1` (merge) | Merge the vegetation memory fix: near plants as recipes built only near the camera, the tile stream never restarts pending tiles; browser Liechtenstein 3.1 GB -> 0.43 GB, Tenerife rides; memory budgets as tests, test-web fails above 1.5 GB (spec 3.70) |
+| 17:35 | `ee3efc2` | Trust dialog: wide panel and a compact data line so every source group fits; the browser keeps trusted keys in localStorage |
+| 17:36 | `3c946f3` (merge) | Merge the trust dialog for user-signed worlds: user keys (world-builder keys init-user), fingerprints, a trust store per user, the dialog in both apps (Trust / Load once / Cancel), trusted keys in Settings, world trust commands, shared rides check each client (spec 3.71) |
+| 17:53 | `88fc663` | README: the world server section uses the trust dialog for browser riders and user keys |
+| 18:45 | `200bc7b` | README: riding on a server on the internet – server with a fixed certificate and open UDP port, router port forwarding, CGNAT and IPv6, the riders' command, the world on each side, sign-in, the args file, troubleshooting |
+| 19:14 | `82a05d6` | Kiosk mode starts a game server: ocw-server with the app's world and route, bots and a kept certificate, the app as its client so others can join; both restart on deploys and crashes; test-kiosk with a fake server (spec 3.72) |
+| 19:16 | `f2fab7a` | Kiosk restarts itself when a deploy replaces ocw-kiosk.sh; test-kiosk checks it and counts only its own kiosks |
+| 19:22 | `ba2d32d` | Kiosk joins a game server already running on the machine instead of starting another; OCW_KIOSK_SERVER=join; test-kiosk covers it |
+| 19:48 | `dbd9798` | README: troubleshooting – connect with the server's real address, not localhost (Debian's 127.0.1.1 host name entry) |
+| 19:58 | `476e2fa` | Deploy: machine-local kiosk arguments (kiosk-local.args, kept across deploys); a devices file there drops the show mode's virtual trainer so the real trainer rides |
+| 19:58 | `fc65548` | README: machine-local kiosk arguments (kiosk-local.args) and the KICKR on marge |
+| 20:16 | `3b92d6b` | Ride -> Join and Ride -> Host a ride: join links, runtime join/leave, in-process hosting (spec 3.73) |
+| 20:25 | `7977102` | Join and hosting pages: the link field shows its start, the join link wraps in the page text |
+| 20:42 | `d8eaaca` (merge) | Merge Ride -> Join and Ride -> Host a ride: join links (ocw://, https://, pasted command), the Join page with text entry, runtime switch to a shared ride and back, the hosting wizard with an in-app server on 0.0.0.0:47800, join link with copy, Events page (spec 3.73) |
 
 ## Builds and build servers
 
-131 build/test runs on the build machines, 47.4 h in total, 11 failed; 796 server samples; cargo compiled 2581 crates in 1.8 h, 25.7 h waiting for build slots.
+243 build/test runs on the build machines, 59.4 h in total, 18 failed; 1320 server samples; cargo compiled 2926 crates in 2.8 h, 27.7 h waiting for build slots.
 
 | Machine | Runs | Hours | Cargo h | Crates | Waited h | Failed | Online |
 |---|---|---|---|---|---|---|---|
 | Win11Builder | 7 | 2.3 | 0.0 | 0 | 1.0 | 0 | 100% |
-| leela | 7 | 0.8 | 0.5 | 6 | 0.0 | 2 | 36% |
-| macos | 47 | 4.6 | 0.1 | 23 | 2.3 | 5 | 100% |
-| marge | 70 | 39.6 | 1.2 | 2552 | 22.4 | 4 | 100% |
+| leela | 7 | 0.8 | 0.5 | 6 | 0.0 | 2 | 31% |
+| macos | 52 | 4.8 | 0.1 | 23 | 2.3 | 5 | 100% |
+| marge | 177 | 51.4 | 2.2 | 2897 | 24.3 | 11 | 100% |
 
 Failed runs:
 
@@ -128,6 +175,13 @@ Failed runs:
 - 09:20 leela: `   set -e   D=/var/tmp/ocw   put() { install -m $1 "$2" "$D/.$3.new" && mv -f "$` (exit 255, log `build-log/092051-leela-3657912.log`)
 - 08:46 marge: `bash scripts/vr-check.sh full` (exit 1, log `build-log/084611-marge-3616020.log`)
 - 10:17 leela: `   set -e   D=/var/tmp/ocw   put() { install -m $1 "$2" "$D/.$3.new" && mv -f "$` (exit 255, log `build-log/101718-leela-3713165.log`)
+- 13:29 marge: `python3 scripts/test_web_scripts.py 2>&1 | tail -4` (exit 1, log `build-log/132952-marge-3938543.log`)
+- 15:00 marge: `set -e; cargo fmt --all --check; cargo clippy -q -p ocw-sim -p ocw-client -p ocw` (exit 101, log `build-log/150012-marge-11567.log`)
+- 15:34 marge: `scripts/render-scenes.sh --out test-output/scenes/2026-11-15-153427 --only veg-l` (exit 1, log `build-log/153427-marge-55680.log`)
+- 16:34 marge: `set -e; cargo fmt --all --check; cargo clippy -q -p ocw-render --all-targets -- ` (exit 1, log `build-log/163420-marge-150285.log`)
+- 16:49 marge: `source ~/.cargo/env; cargo fmt --all && cargo clippy -p ocw-render --all-targets` (exit 129, log `build-log/164913-marge-165581.log`)
+- 19:13 marge: `for i in 1 2; do bash scripts/test-kiosk.sh > /tmp/kt.log 2>&1; echo rc=$?; grep` (exit 1, log `build-log/191342-marge-330806.log`)
+- 20:55 marge: `scripts/test-devices-menu.sh shot /tmp/ocw-devices-menu-x11` (exit 1, log `build-log/205543-marge-446778.log`)
 
 Longest runs:
 
@@ -139,18 +193,20 @@ Longest runs:
 
 ## Token usage
 
-1.12 B tokens in 2,628 model messages (output 1.8 M, cache reads 1.09 B, cache writes 28.1 M, uncached input 6 k). Full breakdown: [tokens.json](tokens.json).
+1.65 B tokens in 4,415 model messages (output 3.3 M, cache reads 1.61 B, cache writes 37.3 M, uncached input 10 k). Full breakdown: [tokens.json](tokens.json).
 
 | Feature | Tokens | Output | Messages |
 |---|---|---|---|
-| Other | 487.4 M | 908 k | 1,276 |
-| Planning & spec | 400.8 M | 652 k | 833 |
-| Riders & bikes | 109.9 M | 100 k | 209 |
-| Art project | 54.0 M | 116 k | 190 |
-| Build, release & infra | 22.1 M | 12 k | 27 |
-| Worlds & terrain | 19.1 M | 19 k | 36 |
-| UI & menus | 17.1 M | 17 k | 49 |
-| Multiplayer & server | 7.1 M | 5 k | 8 |
+| Other | 701.1 M | 1.7 M | 2,162 |
+| Planning & spec | 403.5 M | 654 k | 839 |
+| Worlds & terrain | 114.9 M | 257 k | 315 |
+| Riders & bikes | 110.9 M | 103 k | 213 |
+| Art project | 101.6 M | 169 k | 300 |
+| UI & menus | 92.4 M | 225 k | 272 |
+| Multiplayer & server | 77.2 M | 192 k | 227 |
+| Build, release & infra | 34.7 M | 28 k | 55 |
+| Audio & voice | 12.5 M | 15 k | 26 |
+| Sky, time & weather | 2.1 M | 7 k | 6 |
 
 | Task | Feature | Tokens | Output |
 |---|---|---|---|
@@ -158,46 +214,46 @@ Longest runs:
 | agent: Realistic vegetation and crops | Other | 148.4 M | 332 k |
 | agent: VR X1: OpenXR viewing mode | Planning & spec | 122.7 M | 231 k |
 | agent: Animations and K6 organiser rules | Riders & bikes | 105.5 M | 61 k |
+| agent: Trust dialog for user-signed worlds | Worlds & terrain | 85.7 M | 212 k |
 | agent: Phase 7: training history, rebinding | Planning & spec | 80.5 M | 51 k |
 | agent: B8a: GitHub Pages preview | Other | 70.2 M | 158 k |
+| agent: Ride → Join: join a server by URL | Multiplayer & server | 66.8 M | 184 k |
+| agent: OCW-ART gallery and restructure | Other | 54.6 M | 231 k |
 | agent: Cooler helmets | Other | 54.3 M | 57 k |
+| agent: Fix web memory blow-up from vegetation | Other | 52.7 M | 154 k |
 | agent: Art: hourly collector, move history | Other | 48.6 M | 155 k |
 | coordination: send me the videos here and to that with future videos as well | Other | 43.6 M | 23 k |
+| agent: Fix Bluetooth trainer scan and selection | Other | 31.8 M | 121 k |
+| coordination: create/update README for the art project showing a nice overview (visually) over… | Art project | 31.2 M | 26 k |
+| agent: Fix web app black screen on iOS Safari | Other | 29.8 M | 133 k |
 | agent: Research vegetation and data sources | Other | 24.9 M | 109 k |
 | coordination: once the helmets are reworked, send images | Other | 24.9 M | 12 k |
+| agent: Dashboard: monitor deb | UI & menus | 19.5 M | 119 k |
 | agent: Split art project into OCW-ART | Art project | 17.8 M | 80 k |
 | agent: God mode in the browser | Planning & spec | 17.2 M | 14 k |
 | agent: Console autocomplete, GPS in HUD | UI & menus | 17.1 M | 17 k |
+| agent: Investigate rough road junctions | Other | 17.0 M | 80 k |
+| coordination: add the startup of the game server to the kiosk mode. | UI & menus | 15.6 M | 24 k |
 | agent: Web mode: fix 404, pinned browser, README test | Art project | 15.5 M | 22 k |
 | agent: Port bevy_mod_openxr to Bevy 0.20 | Other | 14.8 M | 24 k |
 | coordination: are there any smaller buildjobs that could be run on mac/windows? | Build, release & infra | 13.1 M | 6 k |
 | coordination: let's prepare the move to the user@deb session | Other | 13.1 M | 13 k |
 | coordination: make the other world maps (tenerife and all black forests) also available for we… | Worlds & terrain | 12.8 M | 7 k |
+| coordination: ERG answer: pause the step until you’re riding again, so you don’t miss part of … | Other | 11.9 M | 15 k |
+| coordination: add info to all running user tasks to build dashboard | UI & menus | 10.8 M | 18 k |
 | coordination: i've enabled leela. do one "build all" on leela. | Build, release & infra | 8.1 M | 5 k |
 | coordination: yes, and record the definition in art projwct, too. | Other | 8.0 M | 5 k |
+| coordination: how to build ocw-devices | Build, release & infra | 7.1 M | 4 k |
+| coordination: add the usage of the kickr device to /var/tmp/ocw/ocw-desktop.args and fix the s… | UI & menus | 6.9 M | 7 k |
+| coordination: how do i connect the desktop app to a server in the internet? tellme and documen… | Art project | 6.6 M | 6 k |
+| coordination: how to start server in voice mode? | Audio & voice | 6.6 M | 4 k |
+| coordination: i cannot connect to a seperate hosted server. help me debugging. I started the s… | UI & menus | 6.1 M | 6 k |
+| coordination: bug: on mobile (iphone 15 with IOS 26.x.y) the web app does not work. I see the … | Audio & voice | 5.9 M | 11 k |
 | coordination: i've stopped the vms. check the worktrees and resume | Other | 5.7 M | 3 k |
-| coordination: the preview works now. | Other | 5.5 M | 2 k |
-| coordination: use windows and mac build servers, too | Multiplayer & server | 5.3 M | 3 k |
-| coordination: locations will be user@deb:~/src/OCW and OCW-ART | Other | 4.8 M | 2 k |
-| coordination: plan: prepare moving all activities from nils@deb to user@deb. let me know if … | Planning & spec | 4.7 M | 6 k |
-| coordination: make the trees and vegetation more realistic. get information about the (big) pl… | Worlds & terrain | 4.1 M | 5 k |
-| coordination: also move the build-history to the new art project location. | Art project | 3.8 M | 2 k |
-| coordination: github is setup for user@deb. continue with move. | Other | 3.8 M | 3 k |
-| coordination: i cannot get the browser version of OCW on this url you put in the README "https… | Art project | 3.6 M | 2 k |
-| coordination: okay, do the changes and implement the small preview hosting on github. add do r… | Art project | 3.3 M | 6 k |
-| coordination: are the art diary video builds running? | Art project | 3.3 M | 1 k |
-| coordination: done | Other | 2.9 M | 1 k |
-| coordination: Refinement, ... use it for everhing related to the art project. | Art project | 2.9 M | 1 k |
-| coordination: why did user crash on deb? | Other | 2.8 M | 2 k |
-| coordination: plan a new feature (->spec): after having 3d models, we need an editor where obj… | Riders & bikes | 2.4 M | 18 k |
-| coordination: postpone the move for now | Other | 2.4 M | 1 k |
-| coordination: art project: are finished build jobs and their status as well as finished featur… | Art project | 2.3 M | 1 k |
-| coordination: do you see a second session on deb from the system user named "user" | Other | 2.3 M | 1 k |
-| coordination: can you make the black forest and tenarife maps also available in the public web… | Worlds & terrain | 2.2 M | 7 k |
 
 ## Prompts
 
-35 prompts (full text: [prompts.md](prompts.md)).
+91 prompts (full text: [prompts.md](prompts.md)).
 
 | Time | Prompt |
 |---|---|
@@ -236,10 +292,66 @@ Longest runs:
 | 13:06 | plan a new feature (SPECIFICATION.md): Rather than encoding all objects in code, use a standardizes open source 3D model format (make a prop |
 | 13:10 | plan a new feature (->spec): after having 3d models, we need an editor where objects can be viewed and edited. also the world files should b |
 | 13:15 | can you make the black forest and tenarife maps also available in the public web demo? |
+| 13:20 | how much would tenerife and BF south be? |
+| 13:23 | let me do the deletion manuall, just give me the folders |
+| 13:24 | then release only tenerife for now for the public web preview. |
+| 13:26 | where are those files located:   * `ocw-build-diary.mp4` * `ocw-diary-day-01-2026-11-11.mp4` * `ocw-diary-day-02-2026-11-12.mp4` * `ocw-diar |
+| 13:27 | add the size information the the published routes in the web preview, too, so the user can decide which to test and what load time to expect |
+| 13:29 | okay, delete the build history and related files from OCW.git |
+| 13:31 | since the split is finished now, check that there is now OCW and OCW-ART. prepare moving them one by one. |
+| 13:39 | i miss seeing the actual photos and videos for the art project, where are they stored again? |
+| 13:40 | but are those files tracked in git? |
+| 13:41 | yes, create that thumbnail overview page. build a reusable script for that. i noticed the ART-Project looks a bit unstructured. Re-structure |
+| 13:42 | whats the git lfs quota? |
+| 13:43 | update the open questions section in spec and build dashboard |
+| 13:45 | add the fotos and videos into the free git LFS |
+| 13:46 | what is Monado |
+| 13:46 | what riding aids are you referring to? |
+| 13:47 | whats the outcome of the 3d model planning and research? |
+| 13:50 | would adding the monado test mean anything for our project in terms of license? |
+| 13:51 | i've installed (sudo apt install git-lfs) on deb. add it to the build dependencies where it fits. |
+| 13:53 | I've installed monado on marge. add it to the build dependencies, create a new dependency category deps-vt and the subcategory deps-vr-linux |
+| 14:00 | Q1: Keep the generators and commit bekder sources too. Q2: LFS Q3: If the license only requires naming it, it's fine, we use thouse sources. |
+| 14:04 | add monitoring of deb to build dashboard |
+| 14:11 | for switching the user to user@deb - all running jobs should be done i assume? |
+| 14:13 | add info to all running user tasks to build dashboard |
+| 14:45 | yes, do the workspace cleanup on deb |
+| 14:50 | planning: add a calender for better date picking in the world section. also allow changing season. |
+| 14:53 | bug: on mobile (iphone 15 with IOS 26.x.y) the web app does not work. I see the load screen and hear the sound, but see no image. |
+| 14:58 | whats ERG in this context? |
+| 14:59 | ERG answer:  pause the step until you’re riding again, so you don’t miss part of the interval. |
+| 15:22 | whats exactly the question for Q2 |
+| 15:26 | (b) and (c), make world shareable with user key |
+| 15:26 | implement showing a dialog that requires trusting the key (show fingerprint). |
+| 15:26 | whats 16 Q3 |
+| 15:30 | can we implement an outside brouter instance? |
+| 15:32 | yeah, use brouter and leave the server to choose open for now. do not start implementing yet. just planning, |
+| 15:35 | design (planning) add on: add showing the status of the rider. if he has his voice input feature muted, put big headphones on him. If he is  |
+| 15:37 | document how to host your own world server in the readme. |
+| 15:39 | design feature add: make render depth configurable: add a dyamic mode (checkbox) that increases/decreases depending on framerate as well as  |
+| 15:44 | bugfix (planning - investigation no implementation yet): i see junctions of roads sometimes not cleanly going into oneanother but having rat |
+| 15:45 | Q8: make dynamic mode default: on |
+| 15:47 | Q9: target the display refresh rate. 60 on browser and phone via browser. |
+| 15:52 | create/update README for the art project showing a nice overview (visually) over the project, the evolution and the build days. link the ima |
+| 18:44 | how do i connect the desktop app to a server in the internet? tellme and document in the readme. |
+| 19:10 | add the startup of the game server to the kiosk mode. |
+| 19:19 | whats the manual command to launch the server with the rustup toolchain? |
+| 19:21 | make the kiosk connect to the local server |
+| 19:26 | in the menu under Ride make an entry join where the user can enter a URL of a server/game/ride he would like to join. |
+| 19:30 | Also add the menu item Ride->Host a Ride where you can select a Map and route to host. Also make it possible to select date/time and weather |
+| 19:34 | stop the kiosk on marge |
+| 19:45 | i cannot connect to a seperate hosted server. help me debugging. I started the server as user@marge:47800. make the kiosk app connect to thi |
+| 19:47 | i found the issue, i have to connect to marges ip, not marge localhost |
+| 19:57 | add the usage of the kickr device to /var/tmp/ocw/ocw-desktop.args and fix the startup of the kiosk. make the kiosk server starup and listen |
+| 20:29 | bug: bluetooth scan for trainer and show is not working. the selection amongst the found devices to select one and then writing it to the de |
+| 20:29 | how to figure out bluetooth id of  a trainer? |
+| 20:30 | dtermin device id on windows |
+| 20:31 | how to build ocw-devices |
+| 21:03 | how to start server in voice mode? |
 
 ## Features
 
-14 spec versions added, 12 landed by a merge; 10 deploys, 1 releases.
+38 spec versions added, 19 landed by a merge; 17 deploys, 1 releases.
 
 | Spec | Feature | Landed | Check (marge) |
 |---|---|---|---|
@@ -257,6 +369,30 @@ Longest runs:
 | 3.47 | The remaining rider animations and Phase 12 K6, the organiser's options | 11:20 `594e8c1` (merge) | ok at 06:15, 1 suites, 1 passed, 0 failed (branch) |
 | 3.48 | Two new phases planned | 13:14 `331a29f` | – |
 | 3.49 | Phase 8 T8 | 13:15 `259934b` (merge) | ok at 08:05 (branch) |
+| 3.50 | The art project has its own repository | 13:30 `b521838` (merge) | ok at 13:30 (commit) |
+| 3.51 | Public web preview | 13:45 `019f2ac` | – |
+| 3.52 | Phase 11 Q9 decided | 13:56 `320c32d` | – |
+| 3.53 | Phase 15 Q1 | 14:10 `9df5de0` | – |
+| 3.54 | The coordinator and the Claude tasks on the build dashboard | 14:35 `fc9f929` (merge) | ok at 15:11, 19 suites, 954 passed, 0 failed (main after merge) |
+| 3.55 | Phase 9 S9 planned | 14:51 `47f1860` | – |
+| 3.56 | Decision from the build dashboard | 14:55 `c1c241b` | – |
+| 3.57 | Decision from the build dashboard | 15:13 `ee15425` | – |
+| 3.58 | Decision by the user | 15:13 `ee15425` | – |
+| 3.59 | Decisions from the build dashboard | 15:13 `dae0586` | – |
+| 3.60 | Decision from the build dashboard | 15:14 `4e0ffcd` | – |
+| 3.61 | Decision from the build dashboard | 15:22 `8b874e8` | – |
+| 3.62 | Decision by the user | 15:26 `a03f748` | – |
+| 3.63 | Decision by the user | 15:32 `2a968e2` | – |
+| 3.64 | Rider status signs planned | 15:36 `ef4c9d0` | – |
+| 3.65 | Render distance planned | 15:40 `aa3ba7f` | – |
+| 3.66 | Decision by the user | 15:45 `92c94ba` | – |
+| 3.67 | Decision by the user | 15:47 `26aaeac` | – |
+| 3.68 | The browser app on Safari and iPhones | 16:11 `fb06017` (merge) | exit 1 at 16:34 (commit) |
+| 3.69 | Smooth junctions investigated and planned | 16:55 `4cf45cf` (merge) | ok at 16:55, 1 suites, 1 passed, 0 failed (commit) |
+| 3.70 | T8 memory regression fixed | 17:08 `16e4ff1` (merge) | ok at 16:32, 1 suites, 5 passed, 0 failed (branch) |
+| 3.71 | The trust dialog for user keys built | 17:36 `3c946f3` (merge) | ok at 17:24, 11 suites, 876 passed, 0 failed (branch) |
+| 3.72 | The kiosk starts a game server | 19:14 `82a05d6` | – |
+| 3.73 | Ride → Join and Ride → Host a ride | 20:42 `d8eaaca` (merge) | ok at 20:40, 5 suites, 528 passed, 0 failed (commit) |
 
 Deploys:
 
@@ -270,6 +406,13 @@ Deploys:
 - 12:08 leela: `42b48df-dirty` (ok)
 - 12:56 marge: `a88498c-dirty` (ok)
 - 12:59 leela: `a88498c-dirty` (ok)
+- 17:34 marge: `16e4ff1` (ok)
+- 17:54 marge: `88fc663` (ok)
+- 19:16 marge: `f2fab7a` (ok)
+- 19:22 marge: `ba2d32d` (ok)
+- 19:58 marge: `476e2fa` (ok)
+- 19:58 marge: `476e2fa` (ok)
+- 20:53 marge: `d8eaaca` (ok)
 
 Releases:
 
@@ -277,7 +420,7 @@ Releases:
 
 ## Agent jobs
 
-12 jobs (coordinator log agents.jsonl).
+20 jobs (coordinator log agents.jsonl).
 
 | Task | Branch | Start | End | Status | Interrupted | Merged |
 |---|---|---|---|---|---|---|
@@ -293,10 +436,18 @@ Releases:
 | WIP console Tab completion and GPS line | a3bffa51 | 06:46 | 08:47 | merged |  | `5e96eb2` |
 | Art features log | a43d6ec0 | 07:53 | 07:53 | merged |  | `b28542c` |
 | Cooler helmets | a9236ac6 | 07:53 | 09:47 | merged |  | `5410232` |
+| a30f88c1d22fae636 | gallery- | 13:43 | 16:02 | merged |  | `5be528d` |
+| a2c89e06798607f0d | dashboar | 14:11 | 14:36 | merged |  | `9c0194c` |
+| ac555517fcdeb939b | vegetati | 14:23 | 17:08 | merged |  | `10eaaa4` |
+| a3a97602a1f43e378 | web-ios- | 14:54 | 16:11 | merged |  | `96a2bdb` |
+| aedfc4cef970ce697 | world-tr | 15:27 | 17:53 | merged |  | `ee3efc2` |
+| a175685ff5bb69e3e | junction | 15:45 | 16:56 | merged |  | `4ffda1e` |
+| a125e69b5981e0797 | ride-joi | 19:26 | 20:42 | merged |  | `7977102` |
+| aeaa126364911a5b6 | ble-sele | 20:29 |  | started |  |  |
 
 ## Incidents
 
-69 collected (janitor-delete 37, machine-offline 11, machine-online 11, oom-kill 2, runs-failed 1, unit-failed 6, unit-restart 1), 2 with root-cause notes ([incidents.md](incidents.md)).
+109 collected (janitor-delete 56, machine-offline 22, machine-online 21, oom-kill 2, runs-failed 1, unit-failed 6, unit-restart 1), 2 with root-cause notes ([incidents.md](incidents.md)).
 
 | Time | Kind | Machine | What |
 |---|---|---|---|
@@ -335,7 +486,6 @@ Releases:
 | 08:11 | janitor-delete | macos | janitor delete OCW-worktree-agent-add2bafdd6a4b0c43/target/debug (4.6 GB) |
 | 08:28 | machine-offline | leela | leela unreachable (timeout) |
 | 09:45 | janitor-delete | marge | janitor delete OCW-worktree-agent-aca12fe4f3f6386c9/target/debug (19.2 GB) |
-| 10:17 | runs-failed | leela, macos, marge | 11 failed remote.sh runs (leela 2, macos 5, marge 4) |
 | 10:17 | janitor-delete | marge | janitor delete OCW-worktree-agent-ab18479c7c2ff5bd4/target (32.3 GB) |
 | 10:18 | janitor-delete | macos | janitor delete OCW-worktree-agent-ab18479c7c2ff5bd4/target (4.6 GB) |
 | 10:18 | janitor-delete | marge | janitor delete OCW-worktree-agent-a3bffa51d30d0cfa2/target (30.0 GB) |
@@ -360,11 +510,12 @@ Releases:
 | 12:53 | machine-offline | leela | leela unreachable (timeout) |
 | 12:54 | machine-online | leela | leela back online |
 | 13:02 | janitor-delete | marge | janitor delete OCW/target (0.0 GB) |
+| 13:03 | janitor-delete | marge | janitor delete OCW-worktree-agent-a61e55158bce4740b/target (38.2 GB) |
 
 ### Root-cause notes
 
 
-Root-cause notes by the coordinator (art/ART-PROJECT.md §2.6). The collected
+Root-cause notes by the coordinator (docs/ART-PROJECT.md §2.6). The collected
 entries (journal, build log) are in `logs/build-log/incidents.jsonl` and in
 the journal's "Incidents" section.
 
@@ -947,3 +1098,214 @@ the journal's "Incidents" section.
 | 12:06:12 | [120612-account-device-page.png](120612-account-device-page.png) |
 | 12:06:35 | [120635-vr-vr-sim-blackforest.jpg](120635-vr-vr-sim-blackforest.jpg) |
 | 12:07:10 | [120710-vr-vr-no-runtime.jpg](120710-vr-vr-no-runtime.jpg) |
+| 13:59:42 | [135942-web-preview-preview-credits.jpg](135942-web-preview-preview-credits.jpg) |
+| 13:59:42 | [135942-web-preview-preview-hills.jpg](135942-web-preview-preview-hills.jpg) |
+| 13:59:42 | [135942-web-preview-preview-start.jpg](135942-web-preview-preview-start.jpg) |
+| 13:59:42 | [135942-web-preview-preview-untrusted.jpg](135942-web-preview-preview-untrusted.jpg) |
+| 13:59:42 | [135942-web-preview-preview-webgl2.jpg](135942-web-preview-preview-webgl2.jpg) |
+| 13:59:42 | [135942-web-preview-preview-world-world-loading.jpg](135942-web-preview-preview-world-world-loading.jpg) |
+| 13:59:42 | [135942-web-preview-preview-world-world.jpg](135942-web-preview-preview-world-world.jpg) |
+| 13:59:42 | [135942-web-preview-preview-world.jpg](135942-web-preview-preview-world.jpg) |
+| 14:06:08 | [140608-web-preview-tenerife-preview-hills.jpg](140608-web-preview-tenerife-preview-hills.jpg) |
+| 14:06:08 | [140608-web-preview-tenerife-preview-untrusted.jpg](140608-web-preview-tenerife-preview-untrusted.jpg) |
+| 14:06:08 | [140608-web-preview-tenerife-preview-webgl2.jpg](140608-web-preview-tenerife-preview-webgl2.jpg) |
+| 14:06:08 | [140608-web-preview-tenerife-preview-world-world-loading.jpg](140608-web-preview-tenerife-preview-world-world-loading.jpg) |
+| 14:06:08 | [140608-web-preview-tenerife-preview-world-world.jpg](140608-web-preview-tenerife-preview-world-world.jpg) |
+| 14:21:27 | [142127-web-preview-preview-world-world-loading.jpg](142127-web-preview-preview-world-world-loading.jpg) |
+| 14:21:27 | [142127-web-preview-preview-world-world.jpg](142127-web-preview-preview-world-world.jpg) |
+| 14:21:27 | [142127-web-preview-preview-world.jpg](142127-web-preview-preview-world.jpg) |
+| 14:21:48 | [142148-web-preview-tenerife-preview-world-world-loading.jpg](142148-web-preview-tenerife-preview-world-world-loading.jpg) |
+| 14:21:48 | [142148-web-preview-tenerife-preview-world-world.jpg](142148-web-preview-tenerife-preview-world-world.jpg) |
+| 14:33:17 | [143317-art-gallery-gallery-day-2026-11-14.png](143317-art-gallery-gallery-day-2026-11-14.png) |
+| 14:33:17 | [143317-art-gallery-gallery-index-phone.png](143317-art-gallery-gallery-index-phone.png) |
+| 14:33:17 | [143317-art-gallery-gallery-index.png](143317-art-gallery-gallery-index.png) |
+| 14:33:17 | [143317-art-gallery-gallery-lightbox-2026-11-14.png](143317-art-gallery-gallery-lightbox-2026-11-14.png) |
+| 14:34:47 | [143447-dashboard-deb-dashboard-deb-2026-11-15.png](143447-dashboard-deb-dashboard-deb-2026-11-15.png) |
+| 15:08:22 | [150822-web-memfix-web-world-cached.jpg](150822-web-memfix-web-world-cached.jpg) |
+| 15:08:22 | [150822-web-memfix-web-world-first-loading.jpg](150822-web-memfix-web-world-first-loading.jpg) |
+| 15:08:22 | [150822-web-memfix-web-world-teleport.jpg](150822-web-memfix-web-world-teleport.jpg) |
+| 15:08:22 | [150822-web-memfix-web-world.jpg](150822-web-memfix-web-world.jpg) |
+| 15:09:38 | [150938-web-memfix-web-world.jpg](150938-web-memfix-web-world.jpg) |
+| 15:10:22 | [151022-web-memfix-web-world-cached-loading.jpg](151022-web-memfix-web-world-cached-loading.jpg) |
+| 15:10:22 | [151022-web-memfix-web-world-cached.jpg](151022-web-memfix-web-world-cached.jpg) |
+| 15:10:22 | [151022-web-memfix-web-world-first-loading.jpg](151022-web-memfix-web-world-first-loading.jpg) |
+| 15:10:22 | [151022-web-memfix-web-world-teleport.jpg](151022-web-memfix-web-world-teleport.jpg) |
+| 15:10:22 | [151022-web-memfix-web-world.jpg](151022-web-memfix-web-world.jpg) |
+| 15:11:28 | [151128-web-memfix-web-world-first-loading.jpg](151128-web-memfix-web-world-first-loading.jpg) |
+| 15:11:28 | [151128-web-memfix-web-world.jpg](151128-web-memfix-web-world.jpg) |
+| 15:11:32 | [151132-agent-web-safari-playwright-webkit-preview-hills-webgl2.png](151132-agent-web-safari-playwright-webkit-preview-hills-webgl2.png) |
+| 15:12:19 | [151219-agent-web-safari-playwright-webkit-iphone15-preview-hills-before.png](151219-agent-web-safari-playwright-webkit-iphone15-preview-hills-before.png) |
+| 15:14:56 | [151456-web-memfix-web-world-cached-loading.jpg](151456-web-memfix-web-world-cached-loading.jpg) |
+| 15:14:56 | [151456-web-memfix-web-world-cached.jpg](151456-web-memfix-web-world-cached.jpg) |
+| 15:14:56 | [151456-web-memfix-web-world-first-loading.jpg](151456-web-memfix-web-world-first-loading.jpg) |
+| 15:14:56 | [151456-web-memfix-web-world-teleport.jpg](151456-web-memfix-web-world-teleport.jpg) |
+| 15:14:56 | [151456-web-memfix-web-world.jpg](151456-web-memfix-web-world.jpg) |
+| 15:15:42 | [151542-web-memfix-web-world-cached-loading.jpg](151542-web-memfix-web-world-cached-loading.jpg) |
+| 15:15:42 | [151542-web-memfix-web-world-cached.jpg](151542-web-memfix-web-world-cached.jpg) |
+| 15:15:42 | [151542-web-memfix-web-world-first-loading.jpg](151542-web-memfix-web-world-first-loading.jpg) |
+| 15:15:42 | [151542-web-memfix-web-world-teleport.jpg](151542-web-memfix-web-world-teleport.jpg) |
+| 15:15:42 | [151542-web-memfix-web-world.jpg](151542-web-memfix-web-world.jpg) |
+| 15:33:52 | [153352-agent-web-web-gpu-device-webgl2.jpg](153352-agent-web-web-gpu-device-webgl2.jpg) |
+| 15:33:52 | [153352-agent-web-web-gpu-forced-webgpu.jpg](153352-agent-web-web-gpu-forced-webgpu.jpg) |
+| 15:33:52 | [153352-agent-web-web-gpu-iphone-safari.jpg](153352-agent-web-web-gpu-iphone-safari.jpg) |
+| 15:33:52 | [153352-agent-web-web-gpu-noframe-webgl2.jpg](153352-agent-web-web-gpu-noframe-webgl2.jpg) |
+| 15:33:52 | [153352-agent-web-web-gpu-uncaptured-webgl2.jpg](153352-agent-web-web-gpu-uncaptured-webgl2.jpg) |
+| 15:33:52 | [153352-agent-web-web-gpu-webgpu.jpg](153352-agent-web-web-gpu-webgpu.jpg) |
+| 15:34:22 | [153422-web-memfix-web-world-cached-loading.jpg](153422-web-memfix-web-world-cached-loading.jpg) |
+| 15:34:22 | [153422-web-memfix-web-world-cached.jpg](153422-web-memfix-web-world-cached.jpg) |
+| 15:34:22 | [153422-web-memfix-web-world-first-loading.jpg](153422-web-memfix-web-world-first-loading.jpg) |
+| 15:34:22 | [153422-web-memfix-web-world.jpg](153422-web-memfix-web-world.jpg) |
+| 15:34:27 | [153427-scenes-veg-li-fields-summer.jpg](153427-scenes-veg-li-fields-summer.jpg) |
+| 15:34:27 | [153427-scenes-veg-li-triesenberg-forest.jpg](153427-scenes-veg-li-triesenberg-forest.jpg) |
+| 15:34:27 | [153427-scenes-veg-li-vaduz-vineyards.jpg](153427-scenes-veg-li-vaduz-vineyards.jpg) |
+| 15:34:27 | [153427-scenes-veg-tf-bananas.jpg](153427-scenes-veg-tf-bananas.jpg) |
+| 15:36:22 | [153622-agent-web-web-webkit-iphone-start.png](153622-agent-web-web-webkit-iphone-start.png) |
+| 15:36:22 | [153622-agent-web-web-webkit-iphone.png](153622-agent-web-web-webkit-iphone.png) |
+| 15:36:22 | [153622-agent-web-web-webkit-mac.png](153622-agent-web-web-webkit-mac.png) |
+| 15:40:46 | [154046-shot-wayland-veg-li-vaduz-vineyards.jpg](154046-shot-wayland-veg-li-vaduz-vineyards.jpg) |
+| 15:42:10 | [154210-shot-wayland-veg-li-triesenberg-forest.jpg](154210-shot-wayland-veg-li-triesenberg-forest.jpg) |
+| 15:43:28 | [154328-shot-wayland-veg-li-fields-summer.jpg](154328-shot-wayland-veg-li-fields-summer.jpg) |
+| 15:49:21 | [154921-shot-wayland-veg-tf-bananas.jpg](154921-shot-wayland-veg-tf-bananas.jpg) |
+| 15:55:30 | [155530-agent-web-web-console.jpg](155530-agent-web-web-console.jpg) |
+| 15:55:30 | [155530-agent-web-web-gamepad.jpg](155530-agent-web-web-gamepad.jpg) |
+| 15:55:30 | [155530-agent-web-web-gps.jpg](155530-agent-web-web-gps.jpg) |
+| 15:55:30 | [155530-agent-web-web-hud.jpg](155530-agent-web-web-hud.jpg) |
+| 15:55:30 | [155530-agent-web-web-menu.jpg](155530-agent-web-web-menu.jpg) |
+| 15:55:30 | [155530-agent-web-web-riders.jpg](155530-agent-web-web-riders.jpg) |
+| 15:55:30 | [155530-agent-web-web-settings.jpg](155530-agent-web-web-settings.jpg) |
+| 15:55:30 | [155530-agent-web-web-unicorn-flight.jpg](155530-agent-web-web-unicorn-flight.jpg) |
+| 15:55:30 | [155530-agent-web-web-unicorn-inspect.jpg](155530-agent-web-web-unicorn-inspect.jpg) |
+| 15:55:30 | [155530-agent-web-web-unicorn-menu.jpg](155530-agent-web-web-unicorn-menu.jpg) |
+| 15:55:30 | [155530-agent-web-web-weather.jpg](155530-agent-web-web-weather.jpg) |
+| 15:55:30 | [155530-agent-web-web.jpg](155530-agent-web-web.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-console.jpg](155657-agent-web-web-webgl2-console.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-gamepad.jpg](155657-agent-web-web-webgl2-gamepad.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-gps.jpg](155657-agent-web-web-webgl2-gps.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-hud.jpg](155657-agent-web-web-webgl2-hud.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-menu.jpg](155657-agent-web-web-webgl2-menu.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-riders.jpg](155657-agent-web-web-webgl2-riders.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-settings.jpg](155657-agent-web-web-webgl2-settings.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-unicorn-flight.jpg](155657-agent-web-web-webgl2-unicorn-flight.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-unicorn-inspect.jpg](155657-agent-web-web-webgl2-unicorn-inspect.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-unicorn-menu.jpg](155657-agent-web-web-webgl2-unicorn-menu.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2-weather.jpg](155657-agent-web-web-webgl2-weather.jpg) |
+| 15:56:57 | [155657-agent-web-web-webgl2.jpg](155657-agent-web-web-webgl2.jpg) |
+| 15:58:17 | [155817-agent-web-web-compare-webgl2-graphics.jpg](155817-agent-web-web-compare-webgl2-graphics.jpg) |
+| 15:58:17 | [155817-agent-web-web-compare-webgl2-low.jpg](155817-agent-web-web-compare-webgl2-low.jpg) |
+| 15:58:17 | [155817-agent-web-web-compare-webgpu-high.jpg](155817-agent-web-web-compare-webgpu-high.jpg) |
+| 15:58:17 | [155817-agent-web-web-compare.jpg](155817-agent-web-web-compare.jpg) |
+| 15:59:13 | [155913-agent-web-web-gpu-device-webgl2.jpg](155913-agent-web-web-gpu-device-webgl2.jpg) |
+| 15:59:13 | [155913-agent-web-web-gpu-forced-webgpu.jpg](155913-agent-web-web-gpu-forced-webgpu.jpg) |
+| 15:59:13 | [155913-agent-web-web-gpu-iphone-safari.jpg](155913-agent-web-web-gpu-iphone-safari.jpg) |
+| 15:59:13 | [155913-agent-web-web-gpu-noframe-webgl2.jpg](155913-agent-web-web-gpu-noframe-webgl2.jpg) |
+| 15:59:13 | [155913-agent-web-web-gpu-uncaptured-webgl2.jpg](155913-agent-web-web-gpu-uncaptured-webgl2.jpg) |
+| 15:59:13 | [155913-agent-web-web-gpu-webgpu.jpg](155913-agent-web-web-gpu-webgpu.jpg) |
+| 15:59:23 | [155923-art-gallery-github-readme-full.png](155923-art-gallery-github-readme-full.png) |
+| 15:59:23 | [155923-art-gallery-github-readme-top.png](155923-art-gallery-github-readme-top.png) |
+| 16:00:56 | [160056-agent-web-web-webkit-iphone.png](160056-agent-web-web-webkit-iphone.png) |
+| 16:00:56 | [160056-agent-web-web-webkit-mac.png](160056-agent-web-web-webkit-mac.png) |
+| 16:00:59 | [160059-art-gallery-github-readme-full.png](160059-art-gallery-github-readme-full.png) |
+| 16:04:50 | [160450-scenes-veg-memfix-wayland-veg-li-vaduz-vineyards.jpg](160450-scenes-veg-memfix-wayland-veg-li-vaduz-vineyards.jpg) |
+| 16:05:03 | [160503-scenes-veg-memfix-wayland-veg-li-triesenberg-forest.jpg](160503-scenes-veg-memfix-wayland-veg-li-triesenberg-forest.jpg) |
+| 16:05:15 | [160515-scenes-veg-memfix-wayland-veg-li-fields-summer.jpg](160515-scenes-veg-memfix-wayland-veg-li-fields-summer.jpg) |
+| 16:05:32 | [160532-scenes-veg-memfix-wayland-veg-tf-bananas.jpg](160532-scenes-veg-memfix-wayland-veg-tf-bananas.jpg) |
+| 16:05:49 | [160549-scenes-veg-memfix-x11-veg-li-vaduz-vineyards.jpg](160549-scenes-veg-memfix-x11-veg-li-vaduz-vineyards.jpg) |
+| 16:06:11 | [160611-scenes-veg-memfix-x11-veg-li-triesenberg-forest.jpg](160611-scenes-veg-memfix-x11-veg-li-triesenberg-forest.jpg) |
+| 16:06:35 | [160635-scenes-veg-memfix-x11-veg-li-fields-summer.jpg](160635-scenes-veg-memfix-x11-veg-li-fields-summer.jpg) |
+| 16:07:06 | [160706-scenes-veg-memfix-x11-veg-tf-bananas.jpg](160706-scenes-veg-memfix-x11-veg-tf-bananas.jpg) |
+| 16:31:18 | [163118-scenes-veg-memfix-x11-veg-tf-bananas-30s.jpg](163118-scenes-veg-memfix-x11-veg-tf-bananas-30s.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-adlerkreisel-drone.jpg](163333-junctions-investigation-junction-adlerkreisel-drone.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-adlerkreisel-rider.jpg](163333-junctions-investigation-junction-adlerkreisel-rider.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-bergstrasse-drone.jpg](163333-junctions-investigation-junction-bergstrasse-drone.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-bergstrasse-rider.jpg](163333-junctions-investigation-junction-bergstrasse-rider.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-hagstrasse-drone.jpg](163333-junctions-investigation-junction-hagstrasse-drone.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-hagstrasse-rider.jpg](163333-junctions-investigation-junction-hagstrasse-rider.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-landstrasse-split-drone.jpg](163333-junctions-investigation-junction-landstrasse-split-drone.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-landstrasse-split-rider.jpg](163333-junctions-investigation-junction-landstrasse-split-rider.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-planknerstrasse-drone.jpg](163333-junctions-investigation-junction-planknerstrasse-drone.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-planknerstrasse-rider.jpg](163333-junctions-investigation-junction-planknerstrasse-rider.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-spoerryweg-drone.jpg](163333-junctions-investigation-junction-spoerryweg-drone.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-spoerryweg-rider.jpg](163333-junctions-investigation-junction-spoerryweg-rider.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-vorarlberger-drone.jpg](163333-junctions-investigation-junction-vorarlberger-drone.jpg) |
+| 16:33:33 | [163333-junctions-investigation-junction-vorarlberger-rider.jpg](163333-junctions-investigation-junction-vorarlberger-rider.jpg) |
+| 16:35:15 | [163515-scenes-veg-memfix-wayland-veg-li-vaduz-vineyards.jpg](163515-scenes-veg-memfix-wayland-veg-li-vaduz-vineyards.jpg) |
+| 16:35:27 | [163527-scenes-veg-memfix-wayland-veg-li-triesenberg-forest.jpg](163527-scenes-veg-memfix-wayland-veg-li-triesenberg-forest.jpg) |
+| 16:35:40 | [163540-scenes-veg-memfix-wayland-veg-li-fields-summer.jpg](163540-scenes-veg-memfix-wayland-veg-li-fields-summer.jpg) |
+| 16:35:57 | [163557-scenes-veg-memfix-wayland-veg-tf-bananas.jpg](163557-scenes-veg-memfix-wayland-veg-tf-bananas.jpg) |
+| 16:36:17 | [163617-scenes-veg-memfix-x11-veg-li-vaduz-vineyards.jpg](163617-scenes-veg-memfix-x11-veg-li-vaduz-vineyards.jpg) |
+| 16:36:44 | [163644-scenes-veg-memfix-x11-veg-li-triesenberg-forest.jpg](163644-scenes-veg-memfix-x11-veg-li-triesenberg-forest.jpg) |
+| 16:37:14 | [163714-scenes-veg-memfix-x11-veg-li-fields-summer.jpg](163714-scenes-veg-memfix-x11-veg-li-fields-summer.jpg) |
+| 16:37:43 | [163743-scenes-veg-memfix-x11-veg-tf-bananas.jpg](163743-scenes-veg-memfix-x11-veg-tf-bananas.jpg) |
+| 16:38:53 | [163853-rss-before-li.jpg](163853-rss-before-li.jpg) |
+| 16:39:58 | [163958-rss-before-tf.jpg](163958-rss-before-tf.jpg) |
+| 16:40:52 | [164052-rss-after-li.jpg](164052-rss-after-li.jpg) |
+| 16:41:48 | [164148-rss-after-tf.jpg](164148-rss-after-tf.jpg) |
+| 17:04:22 | [170422-web-memfix-web-world-cached-loading.jpg](170422-web-memfix-web-world-cached-loading.jpg) |
+| 17:04:22 | [170422-web-memfix-web-world-cached.jpg](170422-web-memfix-web-world-cached.jpg) |
+| 17:04:22 | [170422-web-memfix-web-world-first-loading.jpg](170422-web-memfix-web-world-first-loading.jpg) |
+| 17:04:22 | [170422-web-memfix-web-world-teleport.jpg](170422-web-memfix-web-world-teleport.jpg) |
+| 17:04:22 | [170422-web-memfix-web-world.jpg](170422-web-memfix-web-world.jpg) |
+| 17:05:36 | [170536-web-memfix-web-world-cached-loading.jpg](170536-web-memfix-web-world-cached-loading.jpg) |
+| 17:05:36 | [170536-web-memfix-web-world-cached.jpg](170536-web-memfix-web-world-cached.jpg) |
+| 17:05:36 | [170536-web-memfix-web-world-first-loading.jpg](170536-web-memfix-web-world-first-loading.jpg) |
+| 17:05:36 | [170536-web-memfix-web-world-teleport.jpg](170536-web-memfix-web-world-teleport.jpg) |
+| 17:05:36 | [170536-web-memfix-web-world.jpg](170536-web-memfix-web-world.jpg) |
+| 17:34:52 | [173452-web-web-trust-declined.jpg](173452-web-web-trust-declined.jpg) |
+| 17:34:52 | [173452-web-web-trust-dialog.jpg](173452-web-web-trust-dialog.jpg) |
+| 17:34:52 | [173452-web-web-trust-trusted.jpg](173452-web-web-trust-trusted.jpg) |
+| 17:36:38 | [173638-trust-trust-dialog-wayland.jpg](173638-trust-trust-dialog-wayland.jpg) |
+| 17:36:38 | [173638-trust-trust-dialog-x11.jpg](173638-trust-trust-dialog-x11.jpg) |
+| 17:36:38 | [173638-trust-trusted-key-page.jpg](173638-trust-trusted-key-page.jpg) |
+| 20:24:09 | [202409-shot-wayland-menu-ride.jpg](202409-shot-wayland-menu-ride.jpg) |
+| 20:24:18 | [202418-shot-wayland-menu-join.jpg](202418-shot-wayland-menu-join.jpg) |
+| 20:24:24 | [202424-shot-wayland-menu-host-world.jpg](202424-shot-wayland-menu-host-world.jpg) |
+| 20:24:32 | [202432-shot-wayland-menu-host-summary.jpg](202432-shot-wayland-menu-host-summary.jpg) |
+| 20:24:43 | [202443-shot-wayland-menu-hosting.jpg](202443-shot-wayland-menu-hosting.jpg) |
+| 20:25:54 | [202554-shot-wayland-menu-ride.jpg](202554-shot-wayland-menu-ride.jpg) |
+| 20:26:02 | [202602-shot-wayland-menu-join.jpg](202602-shot-wayland-menu-join.jpg) |
+| 20:26:09 | [202609-shot-wayland-menu-host-world.jpg](202609-shot-wayland-menu-host-world.jpg) |
+| 20:26:18 | [202618-shot-wayland-menu-host-summary.jpg](202618-shot-wayland-menu-host-summary.jpg) |
+| 20:26:29 | [202629-shot-wayland-menu-hosting.jpg](202629-shot-wayland-menu-hosting.jpg) |
+| 20:27:11 | [202711-shot-menu-ride.jpg](202711-shot-menu-ride.jpg) |
+| 20:27:47 | [202747-shot-menu-join.jpg](202747-shot-menu-join.jpg) |
+| 20:28:20 | [202820-shot-menu-host-world.jpg](202820-shot-menu-host-world.jpg) |
+| 20:28:56 | [202856-shot-menu-host-summary.jpg](202856-shot-menu-host-summary.jpg) |
+| 20:29:25 | [202925-shot-menu-hosting.jpg](202925-shot-menu-hosting.jpg) |
+| 20:38:24 | [203824-web-web-join.jpg](203824-web-web-join.jpg) |
+| 20:38:24 | [203824-web-web-ride.jpg](203824-web-web-ride.jpg) |
+| 21:43:38 | [214338-devices-menu-x11-1-scanning.png](214338-devices-menu-x11-1-scanning.png) |
+| 21:43:46 | [214346-devices-menu-x11-2-found.png](214346-devices-menu-x11-2-found.png) |
+| 21:43:51 | [214351-devices-menu-x11-3-connecting.png](214351-devices-menu-x11-3-connecting.png) |
+| 21:44:16 | [214416-devices-menu-x11-4-connected.png](214416-devices-menu-x11-4-connected.png) |
+| 21:44:18 | [214418-devices-menu-x11-5-list.png](214418-devices-menu-x11-5-list.png) |
+| 21:44:34 | [214434-devices-menu-x11-6-end.jpg](214434-devices-menu-x11-6-end.jpg) |
+| 21:44:47 | [214447-devices-menu-wayland-1-scanning.png](214447-devices-menu-wayland-1-scanning.png) |
+| 21:44:55 | [214455-devices-menu-wayland-2-found.png](214455-devices-menu-wayland-2-found.png) |
+| 21:45:00 | [214500-devices-menu-wayland-3-connecting.png](214500-devices-menu-wayland-3-connecting.png) |
+| 21:45:25 | [214525-devices-menu-wayland-4-connected.png](214525-devices-menu-wayland-4-connected.png) |
+| 21:45:26 | [214526-devices-menu-wayland-5-list.png](214526-devices-menu-wayland-5-list.png) |
+| 21:45:57 | [214557-devices-menu-wayland-6-end.jpg](214557-devices-menu-wayland-6-end.jpg) |
+| 23:45:50 | [234550-agent-scenes-helmets-before-wayland-helmet-mirror-road.jpg](234550-agent-scenes-helmets-before-wayland-helmet-mirror-road.jpg) |
+| 23:45:56 | [234556-agent-scenes-helmets-before-x11-helmet-mirror-road.jpg](234556-agent-scenes-helmets-before-x11-helmet-mirror-road.jpg) |
+| 23:46:17 | [234617-agent-scenes-helmets-before-wayland-helmet-mirror-road-side.jpg](234617-agent-scenes-helmets-before-wayland-helmet-mirror-road-side.jpg) |
+| 23:46:31 | [234631-agent-scenes-helmets-before-x11-helmet-mirror-road-side.jpg](234631-agent-scenes-helmets-before-x11-helmet-mirror-road-side.jpg) |
+| 23:46:43 | [234643-agent-scenes-helmets-before-wayland-helmet-mirror-light.jpg](234643-agent-scenes-helmets-before-wayland-helmet-mirror-light.jpg) |
+| 23:47:07 | [234707-agent-scenes-helmets-before-x11-helmet-mirror-light.jpg](234707-agent-scenes-helmets-before-x11-helmet-mirror-light.jpg) |
+| 23:47:10 | [234710-agent-scenes-helmets-before-wayland-helmet-mirror-light-side.jpg](234710-agent-scenes-helmets-before-wayland-helmet-mirror-light-side.jpg) |
+| 23:47:36 | [234736-agent-scenes-helmets-before-wayland-helmet-mirror-aero-road.jpg](234736-agent-scenes-helmets-before-wayland-helmet-mirror-aero-road.jpg) |
+| 23:47:46 | [234746-agent-scenes-helmets-before-x11-helmet-mirror-light-side.jpg](234746-agent-scenes-helmets-before-x11-helmet-mirror-light-side.jpg) |
+| 23:48:03 | [234803-agent-scenes-helmets-before-wayland-helmet-mirror-aero-road-side.jpg](234803-agent-scenes-helmets-before-wayland-helmet-mirror-aero-road-side.jpg) |
+| 23:48:23 | [234823-agent-scenes-helmets-before-x11-helmet-mirror-aero-road.jpg](234823-agent-scenes-helmets-before-x11-helmet-mirror-aero-road.jpg) |
+| 23:48:29 | [234829-agent-scenes-helmets-before-wayland-helmet-mirror-tt.jpg](234829-agent-scenes-helmets-before-wayland-helmet-mirror-tt.jpg) |
+| 23:48:56 | [234856-agent-scenes-helmets-before-wayland-helmet-mirror-tt-side.jpg](234856-agent-scenes-helmets-before-wayland-helmet-mirror-tt-side.jpg) |
+| 23:49:03 | [234903-agent-scenes-helmets-before-x11-helmet-mirror-aero-road-side.jpg](234903-agent-scenes-helmets-before-x11-helmet-mirror-aero-road-side.jpg) |
+| 23:49:24 | [234924-agent-scenes-helmets-before-wayland-helmet-mirror-cap.jpg](234924-agent-scenes-helmets-before-wayland-helmet-mirror-cap.jpg) |
+| 23:49:35 | [234935-agent-scenes-helmets-before-wayland-helmet-road-behind.jpg](234935-agent-scenes-helmets-before-wayland-helmet-road-behind.jpg) |
+| 23:49:39 | [234939-agent-scenes-helmets-before-x11-helmet-mirror-tt.jpg](234939-agent-scenes-helmets-before-x11-helmet-mirror-tt.jpg) |
+| 23:49:45 | [234945-agent-scenes-helmets-before-wayland-helmet-tt-position.jpg](234945-agent-scenes-helmets-before-wayland-helmet-tt-position.jpg) |
+| 23:50:01 | [235001-agent-scenes-helmets-before-wayland-helmet-group-chase.jpg](235001-agent-scenes-helmets-before-wayland-helmet-group-chase.jpg) |
+| 23:50:19 | [235019-agent-scenes-helmets-before-x11-helmet-mirror-tt-side.jpg](235019-agent-scenes-helmets-before-x11-helmet-mirror-tt-side.jpg) |
+| 23:51:06 | [235106-agent-scenes-helmets-before-x11-helmet-mirror-cap.jpg](235106-agent-scenes-helmets-before-x11-helmet-mirror-cap.jpg) |
+| 23:51:43 | [235143-agent-scenes-helmets-before-x11-helmet-road-behind.jpg](235143-agent-scenes-helmets-before-x11-helmet-road-behind.jpg) |
+| 23:52:19 | [235219-agent-scenes-helmets-before-x11-helmet-tt-position.jpg](235219-agent-scenes-helmets-before-x11-helmet-tt-position.jpg) |
+| 23:52:50 | [235250-agent-scenes-helmets-before-x11-helmet-group-chase.jpg](235250-agent-scenes-helmets-before-x11-helmet-group-chase.jpg) |

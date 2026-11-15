@@ -763,6 +763,14 @@
    "removed": 0
   },
   {
+   "sha": "cf8eb83",
+   "time": "13:01:29",
+   "merge": false,
+   "subject": "The art project moves to its own repository, newkit/OCW-ART (spec 3.50)",
+   "added": 110,
+   "removed": 30371
+  },
+  {
    "sha": "331a29f",
    "time": "13:14:38",
    "merge": false,
@@ -777,11 +785,379 @@
    "subject": "Merge realistic vegetation (Phase 8 T8): flora species, VEGE crops and plantations, planted trees in OBST, world-builder vegetation, flora/vegetation renderer (spec 3.49)",
    "added": 0,
    "removed": 0
+  },
+  {
+   "sha": "b521838",
+   "time": "13:30:31",
+   "merge": true,
+   "subject": "Merge the art project's move to newkit/OCW-ART: art/ and its build history leave OCW, make art-* point there, docs/reference/ keeps the world-look boards, the user move uses ~/src/OCW and ~/src/OCW-ART (spec 3.50)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b04d1a8",
+   "time": "13:30:55",
+   "merge": false,
+   "subject": "Web preview: each ride card shows its download size and the load time at 50 Mbit/s (app, plus the world package for world rides) (spec B8a, v3.51)",
+   "added": 84,
+   "removed": 6
+  },
+  {
+   "sha": "e611d0b",
+   "time": "13:34:49",
+   "merge": false,
+   "subject": "Preview worlds: ids with several levels (europe/spain/tenerife) are found – the release index moves into scripts/preview_worlds_index.py with a regression test; assets of older versions are removed from the release",
+   "added": 139,
+   "removed": 58
+  },
+  {
+   "sha": "019f2ac",
+   "time": "13:45:19",
+   "merge": false,
+   "subject": "Open questions brought up to date (spec 3.51): Phase 11 Q1 marked decided, new Phase 10 Q7, Phase 11 Q8/Q9, Phase 12 Q8, §11.3 Q1; Tenerife in the web preview and ride download sizes recorded",
+   "added": 9,
+   "removed": 3
+  },
+  {
+   "sha": "320c32d",
+   "time": "13:56:36",
+   "merge": false,
+   "subject": "VR dependencies: make deps-vr and deps-vr-linux (OpenXR loader + Monado for the simulated-headset tests); Phase 11 Q9 decided – Monado installed on marge (spec 3.52)",
+   "added": 43,
+   "removed": 3
+  },
+  {
+   "sha": "9df5de0",
+   "time": "14:10:44",
+   "merge": false,
+   "subject": "Phase 15 Q1-Q4 decided: generators kept plus Blender sources, Git LFS, attribution-only third-party licences, Blender on marge; new Q5 (the GPL add-on) (spec 3.53)",
+   "added": 14,
+   "removed": 20
+  },
+  {
+   "sha": "2e21e61",
+   "time": "14:23:29",
+   "merge": false,
+   "subject": "test-web: a later world ride waits until the rider has moved (> 5 m) or `seconds` – 3 s from a standstill were not always enough (live preview world checks, 2026-11-15)",
+   "added": 8,
+   "removed": 1
+  },
+  {
+   "sha": "7cdb6f3",
+   "time": "14:24:20",
+   "merge": false,
+   "subject": "MIGRATE-DEB-USER: OCW-ART's media are in Git LFS – clone with skip-smudge (the media come by rsync), git-lfs among deb's tools, the collector is bin/collect.sh (OCW-ART ART-PROJECT 2.0)",
+   "added": 6,
+   "removed": 5
+  },
+  {
+   "sha": "9c0194c",
+   "time": "14:35:13",
+   "merge": false,
+   "subject": "Build dashboard: the coordinator (deb) card and the Claude tasks with the cutover check (spec 3.54, §11.2.1)",
+   "added": 2281,
+   "removed": 7
+  },
+  {
+   "sha": "fc9f929",
+   "time": "14:35:55",
+   "merge": true,
+   "subject": "Merge deb monitoring and Claude tasks into the build dashboard: Coordinator (deb) card – memory, swap, top processes, PSI, disks, big dirs, OOM history, alerts, 24 h history (deb.jsonl) – and the Claude tasks section with the cutover check (spec 3.54)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "47f1860",
+   "time": "14:51:23",
+   "merge": false,
+   "subject": "Plan Phase 9 S9: a calendar on World -> Time (month grid banded with the place's season, moon, sun times, season-start shortcuts) and a season override for the landscape; Q11, Q12 (spec 3.55)",
+   "added": 76,
+   "removed": 2
+  },
+  {
+   "sha": "c1c241b",
+   "time": "14:55:11",
+   "merge": false,
+   "subject": "Dashboard decision: Phase 10 Q7 closed – the preview stays at Liechtenstein and Tenerife (spec 3.56)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "ee15425",
+   "time": "15:13:32",
+   "merge": false,
+   "subject": "Riding aids allowed by default in all races (Phase 12 Q8) and a workout's ERG step pauses while the rider is down (Phase 12 Q4) (spec 3.57, 3.58)",
+   "added": 138,
+   "removed": 30
+  },
+  {
+   "sha": "dae0586",
+   "time": "15:13:49",
+   "merge": false,
+   "subject": "Dashboard decisions: Phase 9 Q12 (start at the place's real date, season follows), Phase 16 Q1 (own app), Q4 (browser later), Q5 (simple mesh tools, stage E4b) (spec 3.59)",
+   "added": 9,
+   "removed": 7
+  },
+  {
+   "sha": "4e0ffcd",
+   "time": "15:14:01",
+   "merge": false,
+   "subject": "Dashboard decision: Phase 14 Q2 – WebXR first, native OpenXR later (spec 3.60)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "8b874e8",
+   "time": "15:22:14",
+   "merge": false,
+   "subject": "Dashboard decision: Phase 9 Q11 – a season choice jumps the date to its representative day, no decoupled override (spec 3.61)",
+   "added": 4,
+   "removed": 3
+  },
+  {
+   "sha": "a03f748",
+   "time": "15:26:21",
+   "merge": false,
+   "subject": "Phase 16 Q2 decided: world patches plus Fix in OSM, user-signed shareable packages (spec 3.62)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "2a968e2",
+   "time": "15:32:34",
+   "merge": false,
+   "subject": "Phase 16 Q3 decided: BRouter first, server left to the rider; route planner plan for the game and the studio (spec 3.63)",
+   "added": 8,
+   "removed": 5
+  },
+  {
+   "sha": "ef4c9d0",
+   "time": "15:36:19",
+   "merge": false,
+   "subject": "Plan rider status signs (§2.6): headphones while voice is muted, the phone from the back pocket while in the menu, visible to everybody; open questions §2.6 Q1-Q3 (spec 3.64)",
+   "added": 15,
+   "removed": 1
+  },
+  {
+   "sha": "f7d1903",
+   "time": "15:36:53",
+   "merge": false,
+   "subject": "Rider status signs: the open questions as §2.6 Q1-Q3 so the dashboard lists them",
+   "added": 8,
+   "removed": 5
+  },
+  {
+   "sha": "24229bf",
+   "time": "15:38:09",
+   "merge": false,
+   "subject": "README: hosting your own world server – static HTTPS with range requests and CORS, own root and signing keys, world-builder publish layout, Caddy and nginx examples, curl checks, riders on desktop and browser, ODbL duties",
+   "added": 96,
+   "removed": 1
+  },
+  {
+   "sha": "aa3ba7f",
+   "time": "15:40:44",
+   "merge": false,
+   "subject": "Plan the render distance: a slider and a dynamic mode following the frame rate; Phase 10 Q8, Q9 (spec 3.65)",
+   "added": 19,
+   "removed": 1
+  },
+  {
+   "sha": "92c94ba",
+   "time": "15:45:29",
+   "merge": false,
+   "subject": "Phase 10 Q8 decided: the render distance's dynamic mode is on by default (spec 3.66)",
+   "added": 4,
+   "removed": 3
+  },
+  {
+   "sha": "26aaeac",
+   "time": "15:47:33",
+   "merge": false,
+   "subject": "Phase 10 Q9 decided: target the display refresh on the desktop, 60 fps in the browser (spec 3.67)",
+   "added": 4,
+   "removed": 3
+  },
+  {
+   "sha": "96a2bdb",
+   "time": "16:10:16",
+   "merge": false,
+   "subject": "Browser app on Safari and iPhones: Safari's WebKit takes the WebGL 2 build, a WebGPU watchdog falls back to WebGL 2 instead of a black screen (spec 3.56, §14 Phase 10 B7)",
+   "added": 1322,
+   "removed": 45
+  },
+  {
+   "sha": "fb06017",
+   "time": "16:11:06",
+   "merge": true,
+   "subject": "Merge the browser app on Safari and iPhones: WebGL 2 for Safari and iOS, a WebGPU watchdog with automatic fallback, renderer errors reported instead of quitting, mobile canvas and start-page fixes, test-web-gpu and test-web-webkit (spec 3.68)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b586135",
+   "time": "16:18:04",
+   "merge": false,
+   "subject": "Smooth junctions investigated and planned (spec 3.66, §4.8.8)",
+   "added": 852,
+   "removed": 2
+  },
+  {
+   "sha": "8382442",
+   "time": "16:33:41",
+   "merge": false,
+   "subject": "Smooth junctions: what the first junction-* pictures show (spec §4.8.8)",
+   "added": 5,
+   "removed": 1
+  },
+  {
+   "sha": "4ffda1e",
+   "time": "16:55:33",
+   "merge": false,
+   "subject": "Smooth junctions: fmt and clippy of the junction_seams analysis; spec row renumbered to 3.69",
+   "added": 44,
+   "removed": 22
+  },
+  {
+   "sha": "4cf45cf",
+   "time": "16:55:57",
+   "merge": true,
+   "subject": "Merge the junction investigation: findings, design J1-J3 for smooth junctions (spec §4.8.8, Q1-Q5), 14 junction-* scenes, the junction_seams analysis test (spec 3.69)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "f0f0174",
+   "time": "17:01:58",
+   "merge": false,
+   "subject": "Trust dialog for user-signed worlds: fingerprint, trusted keys, shared rides (spec 3.63, §4.7 User keys)",
+   "added": 3763,
+   "removed": 44
+  },
+  {
+   "sha": "10eaaa4",
+   "time": "17:07:26",
+   "merge": false,
+   "subject": "Phase 8 T8 memory regression fixed: near plants built only near the camera, bounded tile builds (spec 3.54)",
+   "added": 934,
+   "removed": 37
+  },
+  {
+   "sha": "16e4ff1",
+   "time": "17:08:08",
+   "merge": true,
+   "subject": "Merge the vegetation memory fix: near plants as recipes built only near the camera, the tile stream never restarts pending tiles; browser Liechtenstein 3.1 GB -> 0.43 GB, Tenerife rides; memory budgets as tests, test-web fails above 1.5 GB (spec 3.70)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ee3efc2",
+   "time": "17:35:50",
+   "merge": false,
+   "subject": "Trust dialog: wide panel and a compact data line so every source group fits; the browser keeps trusted keys in localStorage",
+   "added": 79,
+   "removed": 14
+  },
+  {
+   "sha": "3c946f3",
+   "time": "17:36:56",
+   "merge": true,
+   "subject": "Merge the trust dialog for user-signed worlds: user keys (world-builder keys init-user), fingerprints, a trust store per user, the dialog in both apps (Trust / Load once / Cancel), trusted keys in Settings, world trust commands, shared rides check each client (spec 3.71)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "88fc663",
+   "time": "17:53:58",
+   "merge": false,
+   "subject": "README: the world server section uses the trust dialog for browser riders and user keys",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "200bc7b",
+   "time": "18:45:20",
+   "merge": false,
+   "subject": "README: riding on a server on the internet – server with a fixed certificate and open UDP port, router port forwarding, CGNAT and IPv6, the riders' command, the world on each side, sign-in, the args file, troubleshooting",
+   "added": 38,
+   "removed": 0
+  },
+  {
+   "sha": "82a05d6",
+   "time": "19:14:22",
+   "merge": false,
+   "subject": "Kiosk mode starts a game server: ocw-server with the app's world and route, bots and a kept certificate, the app as its client so others can join; both restart on deploys and crashes; test-kiosk with a fake server (spec 3.72)",
+   "added": 144,
+   "removed": 6
+  },
+  {
+   "sha": "f2fab7a",
+   "time": "19:16:57",
+   "merge": false,
+   "subject": "Kiosk restarts itself when a deploy replaces ocw-kiosk.sh; test-kiosk checks it and counts only its own kiosks",
+   "added": 31,
+   "removed": 1
+  },
+  {
+   "sha": "ba2d32d",
+   "time": "19:22:17",
+   "merge": false,
+   "subject": "Kiosk joins a game server already running on the machine instead of starting another; OCW_KIOSK_SERVER=join; test-kiosk covers it",
+   "added": 40,
+   "removed": 4
+  },
+  {
+   "sha": "dbd9798",
+   "time": "19:48:19",
+   "merge": false,
+   "subject": "README: troubleshooting – connect with the server's real address, not localhost (Debian's 127.0.1.1 host name entry)",
+   "added": 1,
+   "removed": 0
+  },
+  {
+   "sha": "476e2fa",
+   "time": "19:58:08",
+   "merge": false,
+   "subject": "Deploy: machine-local kiosk arguments (kiosk-local.args, kept across deploys); a devices file there drops the show mode's virtual trainer so the real trainer rides",
+   "added": 13,
+   "removed": 1
+  },
+  {
+   "sha": "fc65548",
+   "time": "19:58:49",
+   "merge": false,
+   "subject": "README: machine-local kiosk arguments (kiosk-local.args) and the KICKR on marge",
+   "added": 2,
+   "removed": 0
+  },
+  {
+   "sha": "3b92d6b",
+   "time": "20:16:35",
+   "merge": false,
+   "subject": "Ride -> Join and Ride -> Host a ride: join links, runtime join/leave, in-process hosting (spec 3.73)",
+   "added": 5224,
+   "removed": 70
+  },
+  {
+   "sha": "7977102",
+   "time": "20:25:26",
+   "merge": false,
+   "subject": "Join and hosting pages: the link field shows its start, the join link wraps in the page text",
+   "added": 20,
+   "removed": 4
+  },
+  {
+   "sha": "d8eaaca",
+   "time": "20:42:04",
+   "merge": true,
+   "subject": "Merge Ride -> Join and Ride -> Host a ride: join links (ocw://, https://, pasted command), the Join page with text entry, runtime switch to a shared ride and back, the hosting wizard with an in-app server on 0.0.0.0:47800, join link with copy, Events page (spec 3.73)",
+   "added": 0,
+   "removed": 0
   }
  ],
- "merges": 30,
- "lines_added": 33083,
- "lines_removed": 2643,
+ "merges": 37,
+ "lines_added": 48682,
+ "lines_removed": 33437,
  "spec_versions": [
   "3.36",
   "3.37",
@@ -812,8 +1188,38 @@
   "3.46",
   "3.47",
   "3.46",
+  "3.50",
   "3.48",
-  "3.49"
+  "3.49",
+  "3.50",
+  "3.51",
+  "3.52",
+  "3.53",
+  "3.54",
+  "3.54",
+  "3.55",
+  "3.56",
+  "3.57",
+  "3.59",
+  "3.60",
+  "3.61",
+  "3.62",
+  "3.63",
+  "3.64",
+  "3.65",
+  "3.66",
+  "3.67",
+  "3.56",
+  "3.68",
+  "3.66",
+  "3.69",
+  "3.63",
+  "3.54",
+  "3.70",
+  "3.71",
+  "3.72",
+  "3.73",
+  "3.73"
  ],
  "tests": null,
  "media": [
@@ -3476,17 +3882,1072 @@
    "file": "120710-vr-vr-no-runtime.jpg",
    "time": "12:07:10",
    "kind": "image"
+  },
+  {
+   "file": "135942-web-preview-preview-credits.jpg",
+   "time": "13:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "135942-web-preview-preview-hills.jpg",
+   "time": "13:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "135942-web-preview-preview-start.jpg",
+   "time": "13:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "135942-web-preview-preview-untrusted.jpg",
+   "time": "13:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "135942-web-preview-preview-webgl2.jpg",
+   "time": "13:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "135942-web-preview-preview-world-world-loading.jpg",
+   "time": "13:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "135942-web-preview-preview-world-world.jpg",
+   "time": "13:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "135942-web-preview-preview-world.jpg",
+   "time": "13:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "140608-web-preview-tenerife-preview-hills.jpg",
+   "time": "14:06:08",
+   "kind": "image"
+  },
+  {
+   "file": "140608-web-preview-tenerife-preview-untrusted.jpg",
+   "time": "14:06:08",
+   "kind": "image"
+  },
+  {
+   "file": "140608-web-preview-tenerife-preview-webgl2.jpg",
+   "time": "14:06:08",
+   "kind": "image"
+  },
+  {
+   "file": "140608-web-preview-tenerife-preview-world-world-loading.jpg",
+   "time": "14:06:08",
+   "kind": "image"
+  },
+  {
+   "file": "140608-web-preview-tenerife-preview-world-world.jpg",
+   "time": "14:06:08",
+   "kind": "image"
+  },
+  {
+   "file": "142127-web-preview-preview-world-world-loading.jpg",
+   "time": "14:21:27",
+   "kind": "image"
+  },
+  {
+   "file": "142127-web-preview-preview-world-world.jpg",
+   "time": "14:21:27",
+   "kind": "image"
+  },
+  {
+   "file": "142127-web-preview-preview-world.jpg",
+   "time": "14:21:27",
+   "kind": "image"
+  },
+  {
+   "file": "142148-web-preview-tenerife-preview-world-world-loading.jpg",
+   "time": "14:21:48",
+   "kind": "image"
+  },
+  {
+   "file": "142148-web-preview-tenerife-preview-world-world.jpg",
+   "time": "14:21:48",
+   "kind": "image"
+  },
+  {
+   "file": "143317-art-gallery-gallery-day-2026-11-14.png",
+   "time": "14:33:17",
+   "kind": "image"
+  },
+  {
+   "file": "143317-art-gallery-gallery-index-phone.png",
+   "time": "14:33:17",
+   "kind": "image"
+  },
+  {
+   "file": "143317-art-gallery-gallery-index.png",
+   "time": "14:33:17",
+   "kind": "image"
+  },
+  {
+   "file": "143317-art-gallery-gallery-lightbox-2026-11-14.png",
+   "time": "14:33:17",
+   "kind": "image"
+  },
+  {
+   "file": "143447-dashboard-deb-dashboard-deb-2026-11-15.png",
+   "time": "14:34:47",
+   "kind": "image"
+  },
+  {
+   "file": "150822-web-memfix-web-world-cached.jpg",
+   "time": "15:08:22",
+   "kind": "image"
+  },
+  {
+   "file": "150822-web-memfix-web-world-first-loading.jpg",
+   "time": "15:08:22",
+   "kind": "image"
+  },
+  {
+   "file": "150822-web-memfix-web-world-teleport.jpg",
+   "time": "15:08:22",
+   "kind": "image"
+  },
+  {
+   "file": "150822-web-memfix-web-world.jpg",
+   "time": "15:08:22",
+   "kind": "image"
+  },
+  {
+   "file": "150938-web-memfix-web-world.jpg",
+   "time": "15:09:38",
+   "kind": "image"
+  },
+  {
+   "file": "151022-web-memfix-web-world-cached-loading.jpg",
+   "time": "15:10:22",
+   "kind": "image"
+  },
+  {
+   "file": "151022-web-memfix-web-world-cached.jpg",
+   "time": "15:10:22",
+   "kind": "image"
+  },
+  {
+   "file": "151022-web-memfix-web-world-first-loading.jpg",
+   "time": "15:10:22",
+   "kind": "image"
+  },
+  {
+   "file": "151022-web-memfix-web-world-teleport.jpg",
+   "time": "15:10:22",
+   "kind": "image"
+  },
+  {
+   "file": "151022-web-memfix-web-world.jpg",
+   "time": "15:10:22",
+   "kind": "image"
+  },
+  {
+   "file": "151128-web-memfix-web-world-first-loading.jpg",
+   "time": "15:11:28",
+   "kind": "image"
+  },
+  {
+   "file": "151128-web-memfix-web-world.jpg",
+   "time": "15:11:28",
+   "kind": "image"
+  },
+  {
+   "file": "151132-agent-web-safari-playwright-webkit-preview-hills-webgl2.png",
+   "time": "15:11:32",
+   "kind": "image"
+  },
+  {
+   "file": "151219-agent-web-safari-playwright-webkit-iphone15-preview-hills-before.png",
+   "time": "15:12:19",
+   "kind": "image"
+  },
+  {
+   "file": "151456-web-memfix-web-world-cached-loading.jpg",
+   "time": "15:14:56",
+   "kind": "image"
+  },
+  {
+   "file": "151456-web-memfix-web-world-cached.jpg",
+   "time": "15:14:56",
+   "kind": "image"
+  },
+  {
+   "file": "151456-web-memfix-web-world-first-loading.jpg",
+   "time": "15:14:56",
+   "kind": "image"
+  },
+  {
+   "file": "151456-web-memfix-web-world-teleport.jpg",
+   "time": "15:14:56",
+   "kind": "image"
+  },
+  {
+   "file": "151456-web-memfix-web-world.jpg",
+   "time": "15:14:56",
+   "kind": "image"
+  },
+  {
+   "file": "151542-web-memfix-web-world-cached-loading.jpg",
+   "time": "15:15:42",
+   "kind": "image"
+  },
+  {
+   "file": "151542-web-memfix-web-world-cached.jpg",
+   "time": "15:15:42",
+   "kind": "image"
+  },
+  {
+   "file": "151542-web-memfix-web-world-first-loading.jpg",
+   "time": "15:15:42",
+   "kind": "image"
+  },
+  {
+   "file": "151542-web-memfix-web-world-teleport.jpg",
+   "time": "15:15:42",
+   "kind": "image"
+  },
+  {
+   "file": "151542-web-memfix-web-world.jpg",
+   "time": "15:15:42",
+   "kind": "image"
+  },
+  {
+   "file": "153352-agent-web-web-gpu-device-webgl2.jpg",
+   "time": "15:33:52",
+   "kind": "image"
+  },
+  {
+   "file": "153352-agent-web-web-gpu-forced-webgpu.jpg",
+   "time": "15:33:52",
+   "kind": "image"
+  },
+  {
+   "file": "153352-agent-web-web-gpu-iphone-safari.jpg",
+   "time": "15:33:52",
+   "kind": "image"
+  },
+  {
+   "file": "153352-agent-web-web-gpu-noframe-webgl2.jpg",
+   "time": "15:33:52",
+   "kind": "image"
+  },
+  {
+   "file": "153352-agent-web-web-gpu-uncaptured-webgl2.jpg",
+   "time": "15:33:52",
+   "kind": "image"
+  },
+  {
+   "file": "153352-agent-web-web-gpu-webgpu.jpg",
+   "time": "15:33:52",
+   "kind": "image"
+  },
+  {
+   "file": "153422-web-memfix-web-world-cached-loading.jpg",
+   "time": "15:34:22",
+   "kind": "image"
+  },
+  {
+   "file": "153422-web-memfix-web-world-cached.jpg",
+   "time": "15:34:22",
+   "kind": "image"
+  },
+  {
+   "file": "153422-web-memfix-web-world-first-loading.jpg",
+   "time": "15:34:22",
+   "kind": "image"
+  },
+  {
+   "file": "153422-web-memfix-web-world.jpg",
+   "time": "15:34:22",
+   "kind": "image"
+  },
+  {
+   "file": "153427-scenes-veg-li-fields-summer.jpg",
+   "time": "15:34:27",
+   "kind": "image"
+  },
+  {
+   "file": "153427-scenes-veg-li-triesenberg-forest.jpg",
+   "time": "15:34:27",
+   "kind": "image"
+  },
+  {
+   "file": "153427-scenes-veg-li-vaduz-vineyards.jpg",
+   "time": "15:34:27",
+   "kind": "image"
+  },
+  {
+   "file": "153427-scenes-veg-tf-bananas.jpg",
+   "time": "15:34:27",
+   "kind": "image"
+  },
+  {
+   "file": "153622-agent-web-web-webkit-iphone-start.png",
+   "time": "15:36:22",
+   "kind": "image"
+  },
+  {
+   "file": "153622-agent-web-web-webkit-iphone.png",
+   "time": "15:36:22",
+   "kind": "image"
+  },
+  {
+   "file": "153622-agent-web-web-webkit-mac.png",
+   "time": "15:36:22",
+   "kind": "image"
+  },
+  {
+   "file": "154046-shot-wayland-veg-li-vaduz-vineyards.jpg",
+   "time": "15:40:46",
+   "kind": "image"
+  },
+  {
+   "file": "154210-shot-wayland-veg-li-triesenberg-forest.jpg",
+   "time": "15:42:10",
+   "kind": "image"
+  },
+  {
+   "file": "154328-shot-wayland-veg-li-fields-summer.jpg",
+   "time": "15:43:28",
+   "kind": "image"
+  },
+  {
+   "file": "154921-shot-wayland-veg-tf-bananas.jpg",
+   "time": "15:49:21",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-console.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-gamepad.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-gps.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-hud.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-menu.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-riders.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-settings.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-unicorn-flight.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-unicorn-inspect.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-unicorn-menu.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web-weather.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155530-agent-web-web.jpg",
+   "time": "15:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-console.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-gamepad.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-gps.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-hud.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-menu.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-riders.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-settings.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-unicorn-flight.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-unicorn-inspect.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-unicorn-menu.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2-weather.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155657-agent-web-web-webgl2.jpg",
+   "time": "15:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "155817-agent-web-web-compare-webgl2-graphics.jpg",
+   "time": "15:58:17",
+   "kind": "image"
+  },
+  {
+   "file": "155817-agent-web-web-compare-webgl2-low.jpg",
+   "time": "15:58:17",
+   "kind": "image"
+  },
+  {
+   "file": "155817-agent-web-web-compare-webgpu-high.jpg",
+   "time": "15:58:17",
+   "kind": "image"
+  },
+  {
+   "file": "155817-agent-web-web-compare.jpg",
+   "time": "15:58:17",
+   "kind": "image"
+  },
+  {
+   "file": "155913-agent-web-web-gpu-device-webgl2.jpg",
+   "time": "15:59:13",
+   "kind": "image"
+  },
+  {
+   "file": "155913-agent-web-web-gpu-forced-webgpu.jpg",
+   "time": "15:59:13",
+   "kind": "image"
+  },
+  {
+   "file": "155913-agent-web-web-gpu-iphone-safari.jpg",
+   "time": "15:59:13",
+   "kind": "image"
+  },
+  {
+   "file": "155913-agent-web-web-gpu-noframe-webgl2.jpg",
+   "time": "15:59:13",
+   "kind": "image"
+  },
+  {
+   "file": "155913-agent-web-web-gpu-uncaptured-webgl2.jpg",
+   "time": "15:59:13",
+   "kind": "image"
+  },
+  {
+   "file": "155913-agent-web-web-gpu-webgpu.jpg",
+   "time": "15:59:13",
+   "kind": "image"
+  },
+  {
+   "file": "155923-art-gallery-github-readme-full.png",
+   "time": "15:59:23",
+   "kind": "image"
+  },
+  {
+   "file": "155923-art-gallery-github-readme-top.png",
+   "time": "15:59:23",
+   "kind": "image"
+  },
+  {
+   "file": "160056-agent-web-web-webkit-iphone.png",
+   "time": "16:00:56",
+   "kind": "image"
+  },
+  {
+   "file": "160056-agent-web-web-webkit-mac.png",
+   "time": "16:00:56",
+   "kind": "image"
+  },
+  {
+   "file": "160059-art-gallery-github-readme-full.png",
+   "time": "16:00:59",
+   "kind": "image"
+  },
+  {
+   "file": "160450-scenes-veg-memfix-wayland-veg-li-vaduz-vineyards.jpg",
+   "time": "16:04:50",
+   "kind": "image"
+  },
+  {
+   "file": "160503-scenes-veg-memfix-wayland-veg-li-triesenberg-forest.jpg",
+   "time": "16:05:03",
+   "kind": "image"
+  },
+  {
+   "file": "160515-scenes-veg-memfix-wayland-veg-li-fields-summer.jpg",
+   "time": "16:05:15",
+   "kind": "image"
+  },
+  {
+   "file": "160532-scenes-veg-memfix-wayland-veg-tf-bananas.jpg",
+   "time": "16:05:32",
+   "kind": "image"
+  },
+  {
+   "file": "160549-scenes-veg-memfix-x11-veg-li-vaduz-vineyards.jpg",
+   "time": "16:05:49",
+   "kind": "image"
+  },
+  {
+   "file": "160611-scenes-veg-memfix-x11-veg-li-triesenberg-forest.jpg",
+   "time": "16:06:11",
+   "kind": "image"
+  },
+  {
+   "file": "160635-scenes-veg-memfix-x11-veg-li-fields-summer.jpg",
+   "time": "16:06:35",
+   "kind": "image"
+  },
+  {
+   "file": "160706-scenes-veg-memfix-x11-veg-tf-bananas.jpg",
+   "time": "16:07:06",
+   "kind": "image"
+  },
+  {
+   "file": "163118-scenes-veg-memfix-x11-veg-tf-bananas-30s.jpg",
+   "time": "16:31:18",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-adlerkreisel-drone.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-adlerkreisel-rider.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-bergstrasse-drone.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-bergstrasse-rider.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-hagstrasse-drone.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-hagstrasse-rider.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-landstrasse-split-drone.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-landstrasse-split-rider.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-planknerstrasse-drone.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-planknerstrasse-rider.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-spoerryweg-drone.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-spoerryweg-rider.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-vorarlberger-drone.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163333-junctions-investigation-junction-vorarlberger-rider.jpg",
+   "time": "16:33:33",
+   "kind": "image"
+  },
+  {
+   "file": "163515-scenes-veg-memfix-wayland-veg-li-vaduz-vineyards.jpg",
+   "time": "16:35:15",
+   "kind": "image"
+  },
+  {
+   "file": "163527-scenes-veg-memfix-wayland-veg-li-triesenberg-forest.jpg",
+   "time": "16:35:27",
+   "kind": "image"
+  },
+  {
+   "file": "163540-scenes-veg-memfix-wayland-veg-li-fields-summer.jpg",
+   "time": "16:35:40",
+   "kind": "image"
+  },
+  {
+   "file": "163557-scenes-veg-memfix-wayland-veg-tf-bananas.jpg",
+   "time": "16:35:57",
+   "kind": "image"
+  },
+  {
+   "file": "163617-scenes-veg-memfix-x11-veg-li-vaduz-vineyards.jpg",
+   "time": "16:36:17",
+   "kind": "image"
+  },
+  {
+   "file": "163644-scenes-veg-memfix-x11-veg-li-triesenberg-forest.jpg",
+   "time": "16:36:44",
+   "kind": "image"
+  },
+  {
+   "file": "163714-scenes-veg-memfix-x11-veg-li-fields-summer.jpg",
+   "time": "16:37:14",
+   "kind": "image"
+  },
+  {
+   "file": "163743-scenes-veg-memfix-x11-veg-tf-bananas.jpg",
+   "time": "16:37:43",
+   "kind": "image"
+  },
+  {
+   "file": "163853-rss-before-li.jpg",
+   "time": "16:38:53",
+   "kind": "image"
+  },
+  {
+   "file": "163958-rss-before-tf.jpg",
+   "time": "16:39:58",
+   "kind": "image"
+  },
+  {
+   "file": "164052-rss-after-li.jpg",
+   "time": "16:40:52",
+   "kind": "image"
+  },
+  {
+   "file": "164148-rss-after-tf.jpg",
+   "time": "16:41:48",
+   "kind": "image"
+  },
+  {
+   "file": "170422-web-memfix-web-world-cached-loading.jpg",
+   "time": "17:04:22",
+   "kind": "image"
+  },
+  {
+   "file": "170422-web-memfix-web-world-cached.jpg",
+   "time": "17:04:22",
+   "kind": "image"
+  },
+  {
+   "file": "170422-web-memfix-web-world-first-loading.jpg",
+   "time": "17:04:22",
+   "kind": "image"
+  },
+  {
+   "file": "170422-web-memfix-web-world-teleport.jpg",
+   "time": "17:04:22",
+   "kind": "image"
+  },
+  {
+   "file": "170422-web-memfix-web-world.jpg",
+   "time": "17:04:22",
+   "kind": "image"
+  },
+  {
+   "file": "170536-web-memfix-web-world-cached-loading.jpg",
+   "time": "17:05:36",
+   "kind": "image"
+  },
+  {
+   "file": "170536-web-memfix-web-world-cached.jpg",
+   "time": "17:05:36",
+   "kind": "image"
+  },
+  {
+   "file": "170536-web-memfix-web-world-first-loading.jpg",
+   "time": "17:05:36",
+   "kind": "image"
+  },
+  {
+   "file": "170536-web-memfix-web-world-teleport.jpg",
+   "time": "17:05:36",
+   "kind": "image"
+  },
+  {
+   "file": "170536-web-memfix-web-world.jpg",
+   "time": "17:05:36",
+   "kind": "image"
+  },
+  {
+   "file": "173452-web-web-trust-declined.jpg",
+   "time": "17:34:52",
+   "kind": "image"
+  },
+  {
+   "file": "173452-web-web-trust-dialog.jpg",
+   "time": "17:34:52",
+   "kind": "image"
+  },
+  {
+   "file": "173452-web-web-trust-trusted.jpg",
+   "time": "17:34:52",
+   "kind": "image"
+  },
+  {
+   "file": "173638-trust-trust-dialog-wayland.jpg",
+   "time": "17:36:38",
+   "kind": "image"
+  },
+  {
+   "file": "173638-trust-trust-dialog-x11.jpg",
+   "time": "17:36:38",
+   "kind": "image"
+  },
+  {
+   "file": "173638-trust-trusted-key-page.jpg",
+   "time": "17:36:38",
+   "kind": "image"
+  },
+  {
+   "file": "202409-shot-wayland-menu-ride.jpg",
+   "time": "20:24:09",
+   "kind": "image"
+  },
+  {
+   "file": "202418-shot-wayland-menu-join.jpg",
+   "time": "20:24:18",
+   "kind": "image"
+  },
+  {
+   "file": "202424-shot-wayland-menu-host-world.jpg",
+   "time": "20:24:24",
+   "kind": "image"
+  },
+  {
+   "file": "202432-shot-wayland-menu-host-summary.jpg",
+   "time": "20:24:32",
+   "kind": "image"
+  },
+  {
+   "file": "202443-shot-wayland-menu-hosting.jpg",
+   "time": "20:24:43",
+   "kind": "image"
+  },
+  {
+   "file": "202554-shot-wayland-menu-ride.jpg",
+   "time": "20:25:54",
+   "kind": "image"
+  },
+  {
+   "file": "202602-shot-wayland-menu-join.jpg",
+   "time": "20:26:02",
+   "kind": "image"
+  },
+  {
+   "file": "202609-shot-wayland-menu-host-world.jpg",
+   "time": "20:26:09",
+   "kind": "image"
+  },
+  {
+   "file": "202618-shot-wayland-menu-host-summary.jpg",
+   "time": "20:26:18",
+   "kind": "image"
+  },
+  {
+   "file": "202629-shot-wayland-menu-hosting.jpg",
+   "time": "20:26:29",
+   "kind": "image"
+  },
+  {
+   "file": "202711-shot-menu-ride.jpg",
+   "time": "20:27:11",
+   "kind": "image"
+  },
+  {
+   "file": "202747-shot-menu-join.jpg",
+   "time": "20:27:47",
+   "kind": "image"
+  },
+  {
+   "file": "202820-shot-menu-host-world.jpg",
+   "time": "20:28:20",
+   "kind": "image"
+  },
+  {
+   "file": "202856-shot-menu-host-summary.jpg",
+   "time": "20:28:56",
+   "kind": "image"
+  },
+  {
+   "file": "202925-shot-menu-hosting.jpg",
+   "time": "20:29:25",
+   "kind": "image"
+  },
+  {
+   "file": "203824-web-web-join.jpg",
+   "time": "20:38:24",
+   "kind": "image"
+  },
+  {
+   "file": "203824-web-web-ride.jpg",
+   "time": "20:38:24",
+   "kind": "image"
+  },
+  {
+   "file": "214338-devices-menu-x11-1-scanning.png",
+   "time": "21:43:38",
+   "kind": "image"
+  },
+  {
+   "file": "214346-devices-menu-x11-2-found.png",
+   "time": "21:43:46",
+   "kind": "image"
+  },
+  {
+   "file": "214351-devices-menu-x11-3-connecting.png",
+   "time": "21:43:51",
+   "kind": "image"
+  },
+  {
+   "file": "214416-devices-menu-x11-4-connected.png",
+   "time": "21:44:16",
+   "kind": "image"
+  },
+  {
+   "file": "214418-devices-menu-x11-5-list.png",
+   "time": "21:44:18",
+   "kind": "image"
+  },
+  {
+   "file": "214434-devices-menu-x11-6-end.jpg",
+   "time": "21:44:34",
+   "kind": "image"
+  },
+  {
+   "file": "214447-devices-menu-wayland-1-scanning.png",
+   "time": "21:44:47",
+   "kind": "image"
+  },
+  {
+   "file": "214455-devices-menu-wayland-2-found.png",
+   "time": "21:44:55",
+   "kind": "image"
+  },
+  {
+   "file": "214500-devices-menu-wayland-3-connecting.png",
+   "time": "21:45:00",
+   "kind": "image"
+  },
+  {
+   "file": "214525-devices-menu-wayland-4-connected.png",
+   "time": "21:45:25",
+   "kind": "image"
+  },
+  {
+   "file": "214526-devices-menu-wayland-5-list.png",
+   "time": "21:45:26",
+   "kind": "image"
+  },
+  {
+   "file": "214557-devices-menu-wayland-6-end.jpg",
+   "time": "21:45:57",
+   "kind": "image"
+  },
+  {
+   "file": "234550-agent-scenes-helmets-before-wayland-helmet-mirror-road.jpg",
+   "time": "23:45:50",
+   "kind": "image"
+  },
+  {
+   "file": "234556-agent-scenes-helmets-before-x11-helmet-mirror-road.jpg",
+   "time": "23:45:56",
+   "kind": "image"
+  },
+  {
+   "file": "234617-agent-scenes-helmets-before-wayland-helmet-mirror-road-side.jpg",
+   "time": "23:46:17",
+   "kind": "image"
+  },
+  {
+   "file": "234631-agent-scenes-helmets-before-x11-helmet-mirror-road-side.jpg",
+   "time": "23:46:31",
+   "kind": "image"
+  },
+  {
+   "file": "234643-agent-scenes-helmets-before-wayland-helmet-mirror-light.jpg",
+   "time": "23:46:43",
+   "kind": "image"
+  },
+  {
+   "file": "234707-agent-scenes-helmets-before-x11-helmet-mirror-light.jpg",
+   "time": "23:47:07",
+   "kind": "image"
+  },
+  {
+   "file": "234710-agent-scenes-helmets-before-wayland-helmet-mirror-light-side.jpg",
+   "time": "23:47:10",
+   "kind": "image"
+  },
+  {
+   "file": "234736-agent-scenes-helmets-before-wayland-helmet-mirror-aero-road.jpg",
+   "time": "23:47:36",
+   "kind": "image"
+  },
+  {
+   "file": "234746-agent-scenes-helmets-before-x11-helmet-mirror-light-side.jpg",
+   "time": "23:47:46",
+   "kind": "image"
+  },
+  {
+   "file": "234803-agent-scenes-helmets-before-wayland-helmet-mirror-aero-road-side.jpg",
+   "time": "23:48:03",
+   "kind": "image"
+  },
+  {
+   "file": "234823-agent-scenes-helmets-before-x11-helmet-mirror-aero-road.jpg",
+   "time": "23:48:23",
+   "kind": "image"
+  },
+  {
+   "file": "234829-agent-scenes-helmets-before-wayland-helmet-mirror-tt.jpg",
+   "time": "23:48:29",
+   "kind": "image"
+  },
+  {
+   "file": "234856-agent-scenes-helmets-before-wayland-helmet-mirror-tt-side.jpg",
+   "time": "23:48:56",
+   "kind": "image"
+  },
+  {
+   "file": "234903-agent-scenes-helmets-before-x11-helmet-mirror-aero-road-side.jpg",
+   "time": "23:49:03",
+   "kind": "image"
+  },
+  {
+   "file": "234924-agent-scenes-helmets-before-wayland-helmet-mirror-cap.jpg",
+   "time": "23:49:24",
+   "kind": "image"
+  },
+  {
+   "file": "234935-agent-scenes-helmets-before-wayland-helmet-road-behind.jpg",
+   "time": "23:49:35",
+   "kind": "image"
+  },
+  {
+   "file": "234939-agent-scenes-helmets-before-x11-helmet-mirror-tt.jpg",
+   "time": "23:49:39",
+   "kind": "image"
+  },
+  {
+   "file": "234945-agent-scenes-helmets-before-wayland-helmet-tt-position.jpg",
+   "time": "23:49:45",
+   "kind": "image"
+  },
+  {
+   "file": "235001-agent-scenes-helmets-before-wayland-helmet-group-chase.jpg",
+   "time": "23:50:01",
+   "kind": "image"
+  },
+  {
+   "file": "235019-agent-scenes-helmets-before-x11-helmet-mirror-tt-side.jpg",
+   "time": "23:50:19",
+   "kind": "image"
+  },
+  {
+   "file": "235106-agent-scenes-helmets-before-x11-helmet-mirror-cap.jpg",
+   "time": "23:51:06",
+   "kind": "image"
+  },
+  {
+   "file": "235143-agent-scenes-helmets-before-x11-helmet-road-behind.jpg",
+   "time": "23:51:43",
+   "kind": "image"
+  },
+  {
+   "file": "235219-agent-scenes-helmets-before-x11-helmet-tt-position.jpg",
+   "time": "23:52:19",
+   "kind": "image"
+  },
+  {
+   "file": "235250-agent-scenes-helmets-before-x11-helmet-group-chase.jpg",
+   "time": "23:52:50",
+   "kind": "image"
   }
  ],
- "images": 523,
+ "images": 734,
  "videos": 9,
  "sounds": 0,
  "builds": {
-  "runs": 131,
-  "seconds": 170709.4,
-  "cargo_s": 6378.0,
-  "compiled": 2581,
-  "wait_s": 92699.0,
+  "runs": 243,
+  "seconds": 213674.1,
+  "cargo_s": 10238.8,
+  "compiled": 2926,
+  "wait_s": 99584.0,
   "failed": [
    {
     "start": "2026-11-15T00:09:38+01:00",
@@ -3669,24 +5130,143 @@
     "cargo_builds": 0,
     "compiled": 0,
     "wait_s": null
+   },
+   {
+    "start": "2026-11-15T13:29:52+01:00",
+    "seconds": 0.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "259934b-dirty",
+    "command": "python3 scripts/test_web_scripts.py 2>&1 | tail -4",
+    "exit": 1,
+    "log": "132952-marge-3938543.log",
+    "sync_s": 0.5,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-15T15:00:12+01:00",
+    "seconds": 414.9,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "c1c241b-dirty",
+    "command": "set -e; cargo fmt --all --check; cargo clippy -q -p ocw-sim -p ocw-client -p ocw-protocol -p ocw-server -p ocw-ui -p ocw-render --all-targets -- -D warnings; cargo test -q -p ocw-sim -p ocw-client ...",
+    "exit": 101,
+    "log": "150012-marge-11567.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 410
+   },
+   {
+    "start": "2026-11-15T15:34:27+01:00",
+    "seconds": 918.6,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-ac555517fcdeb939b",
+    "branch": "worktree-agent-ac555517fcdeb939b",
+    "commit": "9df5de0-dirty",
+    "command": "scripts/render-scenes.sh --out test-output/scenes/2026-11-15-153427 --only veg-li-vaduz-vineyards,veg-li-triesenberg-forest,veg-li-fields-summer,veg-tf-bananas --x11",
+    "exit": 1,
+    "log": "153427-marge-55680.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 48
+   },
+   {
+    "start": "2026-11-15T16:34:20+01:00",
+    "seconds": 345.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "fb06017-dirty",
+    "command": "set -e; cargo fmt --all --check; cargo clippy -q -p ocw-render --all-targets -- -D warnings; cargo test -q -p ocw-render --test junction_seams 2>&1 | grep -E \"test result|FAILED\"; echo DONE",
+    "exit": 1,
+    "log": "163420-marge-150285.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 343
+   },
+   {
+    "start": "2026-11-15T16:49:13+01:00",
+    "seconds": 148.4,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a175685ff5bb69e3e",
+    "branch": "worktree-agent-a175685ff5bb69e3e",
+    "commit": "8382442-dirty",
+    "command": "source ~/.cargo/env; cargo fmt --all && cargo clippy -p ocw-render --all-targets -- -D warnings 2>&1 | grep -A15 \"^error\\|^warning\" | head -60; git diff --stat",
+    "exit": 129,
+    "log": "164913-marge-165581.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-15T19:13:42+01:00",
+    "seconds": 19.0,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "200bc7b-dirty",
+    "command": "for i in 1 2; do bash scripts/test-kiosk.sh > /tmp/kt.log 2>&1; echo rc=$?; grep -E \"FAIL|passed\" /tmp/kt.log; done; command -v shellcheck >/dev/null && shellcheck -S warning scripts/ocw-kiosk.sh s...",
+    "exit": 1,
+    "log": "191342-marge-330806.log",
+    "sync_s": 0.5,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-15T20:55:43+01:00",
+    "seconds": 411.6,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-aeaa126364911a5b6",
+    "branch": "worktree-agent-aeaa126364911a5b6",
+    "commit": "fc65548-dirty",
+    "command": "scripts/test-devices-menu.sh shot /tmp/ocw-devices-menu-x11",
+    "exit": 1,
+    "log": "205543-marge-446778.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
    }
   ],
   "machines": {
    "macos": {
-    "runs": 47,
-    "seconds": 16652.1,
+    "runs": 52,
+    "seconds": 17354.899999999998,
     "failed": 5,
     "cargo_s": 518.9000000000001,
     "compiled": 23,
     "wait_s": 8240.0
    },
    "marge": {
-    "runs": 70,
-    "seconds": 142663.0,
-    "failed": 4,
-    "cargo_s": 4221.099999999999,
-    "compiled": 2552,
-    "wait_s": 80746.0
+    "runs": 177,
+    "seconds": 184924.9,
+    "failed": 11,
+    "cargo_s": 8081.900000000001,
+    "compiled": 2897,
+    "wait_s": 87631.0
    },
    "Win11Builder": {
     "runs": 7,
@@ -3706,12 +5286,12 @@
    }
   },
   "online": {
-   "leela": 0.35678391959798994,
+   "leela": 0.3106060606060606,
    "marge": 1.0,
-   "Win11Builder": 0.9987437185929648,
+   "Win11Builder": 0.9992424242424243,
    "macos": 1.0
   },
-  "samples": 796
+  "samples": 1320
  },
  "prompts": [
   {
@@ -3888,81 +5468,377 @@
    "time": "13:15:22",
    "iso": "2026-11-15T13:15:22+01:00",
    "text": "can you make the black forest and tenarife maps also available in the public web demo?"
+  },
+  {
+   "time": "13:20:22",
+   "iso": "2026-11-15T13:20:22+01:00",
+   "text": "how much would tenerife and BF south be?"
+  },
+  {
+   "time": "13:23:25",
+   "iso": "2026-11-15T13:23:25+01:00",
+   "text": "let me do the deletion manuall, just give me the folders"
+  },
+  {
+   "time": "13:24:32",
+   "iso": "2026-11-15T13:24:32+01:00",
+   "text": "then release only tenerife for now for the public web preview."
+  },
+  {
+   "time": "13:26:27",
+   "iso": "2026-11-15T13:26:27+01:00",
+   "text": "where are those files located: \n\n* `ocw-build-diary.mp4`\n* `ocw-diary-day-01-2026-11-11.mp4`\n* `ocw-diary-day-02-2026-11-12.mp4`\n* `ocw-diary-day-03-2026-11-13.mp4`\n* `ocw-diary-day-04-2026-11-14.mp4`\n* `ocw-build-history-2026-11-11.zip`\n* `ocw-build-history-2026-11-12.zip`\n* `ocw-build-history-2026-11-13.zip`\n* `ocw-build-history-2026-11-14.zip`"
+  },
+  {
+   "time": "13:27:25",
+   "iso": "2026-11-15T13:27:25+01:00",
+   "text": "add the size information the the published routes in the web preview, too, so the user can decide which to test and what load time to expect."
+  },
+  {
+   "time": "13:29:16",
+   "iso": "2026-11-15T13:29:16+01:00",
+   "text": "okay, delete the build history and related files from OCW.git"
+  },
+  {
+   "time": "13:31:51",
+   "iso": "2026-11-15T13:31:51+01:00",
+   "text": "since the split is finished now, check that there is now OCW and OCW-ART. prepare moving them one by one."
+  },
+  {
+   "time": "13:39:18",
+   "iso": "2026-11-15T13:39:18+01:00",
+   "text": "i miss seeing the actual photos and videos for the art project, where are they stored again?"
+  },
+  {
+   "time": "13:40:43",
+   "iso": "2026-11-15T13:40:43+01:00",
+   "text": "but are those files tracked in git?"
+  },
+  {
+   "time": "13:41:58",
+   "iso": "2026-11-15T13:41:58+01:00",
+   "text": "yes, create that thumbnail overview page. build a reusable script for that. i noticed the ART-Project looks a bit unstructured. Re-structure and cleanup."
+  },
+  {
+   "time": "13:42:09",
+   "iso": "2026-11-15T13:42:09+01:00",
+   "text": "whats the git lfs quota?"
+  },
+  {
+   "time": "13:43:57",
+   "iso": "2026-11-15T13:43:57+01:00",
+   "text": "update the open questions section in spec and build dashboard"
+  },
+  {
+   "time": "13:45:13",
+   "iso": "2026-11-15T13:45:13+01:00",
+   "text": "add the fotos and videos into the free git LFS"
+  },
+  {
+   "time": "13:46:30",
+   "iso": "2026-11-15T13:46:30+01:00",
+   "text": "what is Monado"
+  },
+  {
+   "time": "13:46:56",
+   "iso": "2026-11-15T13:46:56+01:00",
+   "text": "what riding aids are you referring to?"
+  },
+  {
+   "time": "13:47:15",
+   "iso": "2026-11-15T13:47:15+01:00",
+   "text": "whats the outcome of the 3d model planning and research?"
+  },
+  {
+   "time": "13:50:33",
+   "iso": "2026-11-15T13:50:33+01:00",
+   "text": "would adding the monado test mean anything for our project in terms of license?"
+  },
+  {
+   "time": "13:51:52",
+   "iso": "2026-11-15T13:51:52+01:00",
+   "text": "i've installed (sudo apt install git-lfs) on deb. add it to the build dependencies where it fits."
+  },
+  {
+   "time": "13:53:08",
+   "iso": "2026-11-15T13:53:08+01:00",
+   "text": "I've installed monado on marge. add it to the build dependencies, create a new dependency category deps-vt and the subcategory deps-vr-linux."
+  },
+  {
+   "time": "14:00:33",
+   "iso": "2026-11-15T14:00:33+01:00",
+   "text": "Q1: Keep the generators and commit bekder sources too.\nQ2: LFS\nQ3: If the license only requires naming it, it's fine, we use thouse sources.\nQ4: Yes, we can install blender on marge\n\nRegarding disk usage - there is a special disk for ~, but i need to switch to that user first."
+  },
+  {
+   "time": "14:04:44",
+   "iso": "2026-11-15T14:04:44+01:00",
+   "text": "add monitoring of deb to build dashboard"
+  },
+  {
+   "time": "14:11:45",
+   "iso": "2026-11-15T14:11:45+01:00",
+   "text": "for switching the user to user@deb - all running jobs should be done i assume?"
+  },
+  {
+   "time": "14:13:06",
+   "iso": "2026-11-15T14:13:06+01:00",
+   "text": "add info to all running user tasks to build dashboard"
+  },
+  {
+   "time": "14:45:19",
+   "iso": "2026-11-15T14:45:19+01:00",
+   "text": "yes, do the workspace cleanup on deb"
+  },
+  {
+   "time": "14:50:17",
+   "iso": "2026-11-15T14:50:17+01:00",
+   "text": "planning: add a calender for better date picking in the world section. also allow changing season."
+  },
+  {
+   "time": "14:53:25",
+   "iso": "2026-11-15T14:53:25+01:00",
+   "text": "bug: on mobile (iphone 15 with IOS 26.x.y) the web app does not work. I see the load screen and hear the sound, but see no image."
+  },
+  {
+   "time": "14:58:01",
+   "iso": "2026-11-15T14:58:01+01:00",
+   "text": "whats ERG in this context?"
+  },
+  {
+   "time": "14:59:04",
+   "iso": "2026-11-15T14:59:04+01:00",
+   "text": "ERG answer:  pause the step until you’re riding again, so you don’t miss part of the interval."
+  },
+  {
+   "time": "15:22:56",
+   "iso": "2026-11-15T15:22:56+01:00",
+   "text": "whats exactly the question for Q2"
+  },
+  {
+   "time": "15:26:13",
+   "iso": "2026-11-15T15:26:13+01:00",
+   "text": "(b) and (c), make world shareable with user key"
+  },
+  {
+   "time": "15:26:41",
+   "iso": "2026-11-15T15:26:41+01:00",
+   "text": "implement showing a dialog that requires trusting the key (show fingerprint)."
+  },
+  {
+   "time": "15:26:58",
+   "iso": "2026-11-15T15:26:58+01:00",
+   "text": "whats 16 Q3"
+  },
+  {
+   "time": "15:30:13",
+   "iso": "2026-11-15T15:30:13+01:00",
+   "text": "can we implement an outside brouter instance?"
+  },
+  {
+   "time": "15:32:18",
+   "iso": "2026-11-15T15:32:18+01:00",
+   "text": "yeah, use brouter and leave the server to choose open for now. do not start implementing yet. just planning,"
+  },
+  {
+   "time": "15:35:31",
+   "iso": "2026-11-15T15:35:31+01:00",
+   "text": "design (planning) add on: add showing the status of the rider. if he has his voice input feature muted, put big headphones on him. If he is looking up something in the menu, make him look into his smartphone in his hand while riding. smartphone is stored and grabbed from his back jersey pocket. animate the process of grabbing and storing visible to everybody."
+  },
+  {
+   "time": "15:37:06",
+   "iso": "2026-11-15T15:37:06+01:00",
+   "text": "document how to host your own world server in the readme."
+  },
+  {
+   "time": "15:39:58",
+   "iso": "2026-11-15T15:39:58+01:00",
+   "text": "design feature add: make render depth configurable: add a dyamic mode (checkbox) that increases/decreases depending on framerate as well as a fixed setting (slider)"
+  },
+  {
+   "time": "15:44:42",
+   "iso": "2026-11-15T15:44:42+01:00",
+   "text": "bugfix (planning - investigation no implementation yet): i see junctions of roads sometimes not cleanly going into oneanother but having rather some bumps and quirks because it the road segments just seem to be slammed together. fix this by making junctions smooth."
+  },
+  {
+   "time": "15:45:21",
+   "iso": "2026-11-15T15:45:21+01:00",
+   "text": "Q8: make dynamic mode default: on"
+  },
+  {
+   "time": "15:47:25",
+   "iso": "2026-11-15T15:47:25+01:00",
+   "text": "Q9: target the display refresh rate. 60 on browser and phone via browser."
+  },
+  {
+   "time": "15:52:02",
+   "iso": "2026-11-15T15:52:02+01:00",
+   "text": "create/update README for the art project showing a nice overview (visually) over the project, the evolution and the build days. link the images and videos."
+  },
+  {
+   "time": "18:44:24",
+   "iso": "2026-11-15T18:44:24+01:00",
+   "text": "how do i connect the desktop app to a server in the internet? tellme and document in the readme."
+  },
+  {
+   "time": "19:10:49",
+   "iso": "2026-11-15T19:10:49+01:00",
+   "text": "add the startup of the game server to the kiosk mode."
+  },
+  {
+   "time": "19:19:01",
+   "iso": "2026-11-15T19:19:01+01:00",
+   "text": "whats the manual command to launch the server with the rustup toolchain?"
+  },
+  {
+   "time": "19:21:17",
+   "iso": "2026-11-15T19:21:17+01:00",
+   "text": "make the kiosk connect to the local server"
+  },
+  {
+   "time": "19:26:08",
+   "iso": "2026-11-15T19:26:08+01:00",
+   "text": "in the menu under Ride make an entry join where the user can enter a URL of a server/game/ride he would like to join."
+  },
+  {
+   "time": "19:30:07",
+   "iso": "2026-11-15T19:30:07+01:00",
+   "text": "Also add the menu item Ride->Host a Ride where you can select a Map and route to host. Also make it possible to select date/time and weather. When user done, start the server on this machine on 0.0.0.0:47800"
+  },
+  {
+   "time": "19:34:33",
+   "iso": "2026-11-15T19:34:33+01:00",
+   "text": "stop the kiosk on marge"
+  },
+  {
+   "time": "19:45:17",
+   "iso": "2026-11-15T19:45:17+01:00",
+   "text": "i cannot connect to a seperate hosted server. help me debugging. I started the server as user@marge:47800. make the kiosk app connect to this but before test if you can connect. give me the command you used."
+  },
+  {
+   "time": "19:47:52",
+   "iso": "2026-11-15T19:47:52+01:00",
+   "text": "i found the issue, i have to connect to marges ip, not marge localhost"
+  },
+  {
+   "time": "19:57:22",
+   "iso": "2026-11-15T19:57:22+01:00",
+   "text": "add the usage of the kickr device to /var/tmp/ocw/ocw-desktop.args and fix the startup of the kiosk. make the kiosk server starup and listen on 0.0.0.0"
+  },
+  {
+   "time": "20:29:00",
+   "iso": "2026-11-15T20:29:00+01:00",
+   "text": "bug: bluetooth scan for trainer and show is not working. the selection amongst the found devices to select one and then writing it to the default devices.toml is missing."
+  },
+  {
+   "time": "20:29:13",
+   "iso": "2026-11-15T20:29:13+01:00",
+   "text": "how to figure out bluetooth id of  a trainer?"
+  },
+  {
+   "time": "20:30:52",
+   "iso": "2026-11-15T20:30:52+01:00",
+   "text": "dtermin device id on windows"
+  },
+  {
+   "time": "20:31:08",
+   "iso": "2026-11-15T20:31:08+01:00",
+   "text": "how to build ocw-devices"
+  },
+  {
+   "time": "21:03:59",
+   "iso": "2026-11-15T21:03:59+01:00",
+   "text": "how to start server in voice mode?"
   }
  ],
  "tokens": {
   "total": {
-   "input": 5659,
-   "cache_write": 28075693,
-   "cache_read": 1087600557,
-   "output": 1829716,
-   "total": 1117511625,
-   "messages": 2628
+   "input": 9513,
+   "cache_write": 37295431,
+   "cache_read": 1610214301,
+   "output": 3336575,
+   "total": 1650855820,
+   "messages": 4415
   },
   "features": {
    "Art project": {
-    "input": 454,
-    "cache_write": 1982352,
-    "cache_read": 51887176,
-    "output": 116089,
-    "total": 53986071,
-    "messages": 190
+    "input": 718,
+    "cache_write": 2114704,
+    "cache_read": 99325501,
+    "output": 169147,
+    "total": 101610070,
+    "messages": 300
    },
    "Planning & spec": {
-    "input": 1756,
-    "cache_write": 10238256,
-    "cache_read": 389913124,
-    "output": 652440,
-    "total": 400805576,
-    "messages": 833
+    "input": 1776,
+    "cache_write": 10242581,
+    "cache_read": 392585724,
+    "output": 654384,
+    "total": 403484465,
+    "messages": 839
    },
    "Worlds & terrain": {
-    "input": 94,
-    "cache_write": 52566,
-    "cache_read": 19027244,
-    "output": 18956,
-    "total": 19098860,
-    "messages": 36
+    "input": 674,
+    "cache_write": 608972,
+    "cache_read": 114003177,
+    "output": 256879,
+    "total": 114869702,
+    "messages": 315
    },
    "Other": {
-    "input": 2712,
-    "cache_write": 11997855,
-    "cache_read": 474450685,
-    "output": 908429,
-    "total": 487359681,
-    "messages": 1276
+    "input": 4582,
+    "cache_write": 18270181,
+    "cache_read": 681184315,
+    "output": 1687022,
+    "total": 701146100,
+    "messages": 2162
    },
    "Build, release & infra": {
-    "input": 65,
-    "cache_write": 35994,
-    "cache_read": 22066193,
-    "output": 11813,
-    "total": 22114065,
-    "messages": 27
+    "input": 137,
+    "cache_write": 69195,
+    "cache_read": 34557185,
+    "output": 27674,
+    "total": 34654191,
+    "messages": 55
    },
    "Multiplayer & server": {
-    "input": 26,
-    "cache_write": 8275,
-    "cache_read": 7128124,
-    "output": 5090,
-    "total": 7141515,
-    "messages": 8
+    "input": 488,
+    "cache_write": 1788956,
+    "cache_read": 75169570,
+    "output": 191931,
+    "total": 77150945,
+    "messages": 227
    },
    "Riders & bikes": {
-    "input": 440,
-    "cache_write": 1416562,
-    "cache_read": 108343906,
-    "output": 99915,
-    "total": 109860823,
-    "messages": 209
+    "input": 454,
+    "cache_write": 1420355,
+    "cache_read": 109390161,
+    "output": 102855,
+    "total": 110913825,
+    "messages": 213
    },
    "UI & menus": {
-    "input": 112,
-    "cache_write": 2343833,
-    "cache_read": 14784105,
-    "output": 16984,
-    "total": 17145034,
-    "messages": 49
+    "input": 602,
+    "cache_write": 2733307,
+    "cache_read": 89479018,
+    "output": 224778,
+    "total": 92437705,
+    "messages": 272
+   },
+   "Sky, time & weather": {
+    "input": 14,
+    "cache_write": 15950,
+    "cache_read": 2088437,
+    "output": 6671,
+    "total": 2111072,
+    "messages": 6
+   },
+   "Audio & voice": {
+    "input": 68,
+    "cache_write": 31230,
+    "cache_read": 12431213,
+    "output": 15234,
+    "total": 12477745,
+    "messages": 26
    }
   }
  },
@@ -4214,13 +6090,6 @@
     "text": "janitor delete OCW-worktree-agent-aca12fe4f3f6386c9/target/debug (19.2 GB)"
    },
    {
-    "time": "10:17:18",
-    "kind": "runs-failed",
-    "source": "remote.sh",
-    "machine": "leela, macos, marge",
-    "text": "11 failed remote.sh runs (leela 2, macos 5, marge 4)"
-   },
-   {
     "time": "10:17:59",
     "kind": "janitor-delete",
     "source": "janitor",
@@ -4450,9 +6319,296 @@
     "source": "dashboard",
     "machine": "leela",
     "text": "leela back online"
+   },
+   {
+    "time": "13:30:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "13:31:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "13:41:06",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aa822ba7b91d3a262/target (32.7 GB)"
+   },
+   {
+    "time": "13:41:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-aa822ba7b91d3a262/target (11.2 GB)"
+   },
+   {
+    "time": "14:03:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (ssh error)"
+   },
+   {
+    "time": "14:04:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "14:07:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "14:09:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "14:24:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "14:26:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "14:27:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "14:29:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "14:34:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "15:05:09",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "15:13:09",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "15:14:09",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "15:20:09",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "15:21:09",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a14e20b4135819064/target (23.4 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a28ab4794ac3d1ad8/target (31.2 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a5ed5b3cc41ad3235/target (25.6 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a68e0bb1639fc2950/target (21.3 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a91fc84c3afffd6c8/target (23.7 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a99613c9983b557e5/target (24.1 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab2900937eba3f076/target (25.7 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab886c17ece2bab7f/target (17.6 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-acb661a2884cd61db/target (19.9 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-af34d3cf80ac1115d/target (26.0 GB)"
+   },
+   {
+    "time": "15:41:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-afd928e4c40170f8d/target (29.1 GB)"
+   },
+   {
+    "time": "15:48:09",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (ssh error)"
+   },
+   {
+    "time": "15:51:09",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "16:03:09",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "16:33:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a3a97602a1f43e378/target (19.0 GB)"
+   },
+   {
+    "time": "16:42:10",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "16:47:10",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "16:56:29",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a175685ff5bb69e3e/target (11.3 GB)"
+   },
+   {
+    "time": "17:53:26",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aedfc4cef970ce697/target (39.7 GB)"
+   },
+   {
+    "time": "17:53:45",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ac555517fcdeb939b/target (38.5 GB)"
+   },
+   {
+    "time": "20:54:32",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a125e69b5981e0797/target (41.4 GB)"
+   },
+   {
+    "time": "20:54:38",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a125e69b5981e0797/target (5.3 GB)"
+   },
+   {
+    "time": "20:55:43",
+    "kind": "runs-failed",
+    "source": "remote.sh",
+    "machine": "leela, macos, marge",
+    "text": "18 failed remote.sh runs (leela 2, macos 5, marge 11)"
    }
   ],
-  "notes": "# Incidents – 2026-11-15\n\nRoot-cause notes by the coordinator (art/ART-PROJECT.md §2.6). The collected\nentries (journal, build log) are in `logs/build-log/incidents.jsonl` and in\nthe journal's \"Incidents\" section.\n\n## 00:39 – deb ran out of memory: the dashboard and the coordinator session were killed\n\n- **What happened:** the OOM killer stopped `ocw-build-dashboard.service`\n  (00:39:18) and the coordinator's Claude Code session, its tmux scope\n  (00:39:47), on deb. systemd restarted the dashboard 11 s later.\n- **Cause:** two QEMU VMs (\"windows\", \"macos\") held about 8 GB of deb's 15 GB\n  permanently. On top of that ran about 10 parallel agents in one Claude Code\n  process (6.8 GB peak), the re-renders of the diary videos (ffmpeg) and the\n  art collector. Swap was full (4 of 4 GB).\n- **Effect:** the session crashed and 8 running agents were interrupted.\n  Their worktrees were intact, and they were resumed at about 06:15. The\n  day-4 video rendering at that moment was left truncated and was rendered\n  again.\n- **Fix:** the user stopped the VMs, and the dashboard was restarted. From now\n  on at most about 5 agents run at a time, and renders don't run in parallel\n  with many agents. Renders on deb run one day at a time.\n- **Follow-up:** the dashboard unit got `Restart=on-failure` and\n  `MemoryHigh=768M` / `MemoryMax=1G` (`tools/build-dashboard/ocw-build-dashboard.service`).\n  It takes effect after `make dashboard-install`.\n\n## 01:05 – the art collector failed every hour: journals written without the users masked\n\n- **What happened:** `ocw-art-collect.service` failed every hour from 01:05 to\n  06:05. Its mask check found 16 unmasked build-machine user names in the\n  tracked journals and token files of days 1–4.\n- **Cause:** the music agent re-rendered days 1–4 from its agent worktree\n  against the main archive (00:24–00:39), and `render` rewrites the day's\n  journal. `diary.py` read the machine list from the worktree's\n  `config/machines.toml`, which a worktree doesn't have, so the users and\n  hosts were left out of the mask. Only the home directory, e-mail and IP\n  patterns applied.\n- **Effect:** the tracked text files in the main checkout held the build user\n  name as a word (not committed). The re-rendered day videos of that run\n  could show it in prompt bubbles; they were published at about 06:15 and\n  replaced at 06:43.\n  No hosts and no IP addresses were affected.\n- **Fix:** `check-masked --fix` with the main checkout's tool re-masked the\n  files, and the check passes again. `diary.py` now finds `config/machines.toml`\n  in the main checkout too, and refuses to mask without a machine list.\n  Days 1–4 and the diary were rendered again and re-published.\n- **Follow-up:** a regression test (`MachinesConfTest`). The collector's mask\n  check did its job; the incident log made the hourly failures visible.\n",
+  "notes": "# Incidents – 2026-11-15\n\nRoot-cause notes by the coordinator (docs/ART-PROJECT.md §2.6). The collected\nentries (journal, build log) are in `logs/build-log/incidents.jsonl` and in\nthe journal's \"Incidents\" section.\n\n## 00:39 – deb ran out of memory: the dashboard and the coordinator session were killed\n\n- **What happened:** the OOM killer stopped `ocw-build-dashboard.service`\n  (00:39:18) and the coordinator's Claude Code session, its tmux scope\n  (00:39:47), on deb. systemd restarted the dashboard 11 s later.\n- **Cause:** two QEMU VMs (\"windows\", \"macos\") held about 8 GB of deb's 15 GB\n  permanently. On top of that ran about 10 parallel agents in one Claude Code\n  process (6.8 GB peak), the re-renders of the diary videos (ffmpeg) and the\n  art collector. Swap was full (4 of 4 GB).\n- **Effect:** the session crashed and 8 running agents were interrupted.\n  Their worktrees were intact, and they were resumed at about 06:15. The\n  day-4 video rendering at that moment was left truncated and was rendered\n  again.\n- **Fix:** the user stopped the VMs, and the dashboard was restarted. From now\n  on at most about 5 agents run at a time, and renders don't run in parallel\n  with many agents. Renders on deb run one day at a time.\n- **Follow-up:** the dashboard unit got `Restart=on-failure` and\n  `MemoryHigh=768M` / `MemoryMax=1G` (`tools/build-dashboard/ocw-build-dashboard.service`).\n  It takes effect after `make dashboard-install`.\n\n## 01:05 – the art collector failed every hour: journals written without the users masked\n\n- **What happened:** `ocw-art-collect.service` failed every hour from 01:05 to\n  06:05. Its mask check found 16 unmasked build-machine user names in the\n  tracked journals and token files of days 1–4.\n- **Cause:** the music agent re-rendered days 1–4 from its agent worktree\n  against the main archive (00:24–00:39), and `render` rewrites the day's\n  journal. `diary.py` read the machine list from the worktree's\n  `config/machines.toml`, which a worktree doesn't have, so the users and\n  hosts were left out of the mask. Only the home directory, e-mail and IP\n  patterns applied.\n- **Effect:** the tracked text files in the main checkout held the build user\n  name as a word (not committed). The re-rendered day videos of that run\n  could show it in prompt bubbles; they were published at about 06:15 and\n  replaced at 06:43.\n  No hosts and no IP addresses were affected.\n- **Fix:** `check-masked --fix` with the main checkout's tool re-masked the\n  files, and the check passes again. `diary.py` now finds `config/machines.toml`\n  in the main checkout too, and refuses to mask without a machine list.\n  Days 1–4 and the diary were rendered again and re-published.\n- **Follow-up:** a regression test (`MachinesConfTest`). The collector's mask\n  check did its job; the incident log made the hourly failures visible.\n",
   "noted": [
    "00:39 – deb ran out of memory: the dashboard and the coordinator session were killed",
    "01:05 – the art collector failed every hour: journals written without the users masked"
@@ -4644,6 +6800,320 @@
     "failed": 0,
     "failed_suites": 0
    }
+  },
+  {
+   "version": "3.50",
+   "title": "The art project has its own repository",
+   "commit": "b521838",
+   "sha": "b521838b7257c339698b07b558eb6a09f38338ac",
+   "time": "2026-11-15T13:30:31+01:00",
+   "merge": true,
+   "subject": "Merge the art project's move to newkit/OCW-ART: art/ and its build history leave OCW, make art-* point there, docs/reference/ keeps the world-look boards, the user move uses ~/src/OCW and ~/src/OCW-ART (spec 3.50)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T13:30:37+01:00",
+    "exit": 0,
+    "branch": "main",
+    "command": "python3 scripts/test_web_scripts.py 2>&1 | tail -3; make -s help >/dev/null && echo make-ok; make test-art 2>&1 | tail -",
+    "log": "133037-marge-3939500.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.51",
+   "title": "Public web preview",
+   "commit": "019f2ac",
+   "sha": "019f2ac3430747ac18212f2c570ea451a44a02c9",
+   "time": "2026-11-15T13:45:19+01:00",
+   "merge": false,
+   "subject": "Open questions brought up to date (spec 3.51): Phase 11 Q1 marked decided, new Phase 10 Q7, Phase 11 Q8/Q9, Phase 12 Q8, §11.3 Q1; Tenerife in the web preview and ride download sizes recorded"
+  },
+  {
+   "version": "3.52",
+   "title": "Phase 11 Q9 decided",
+   "commit": "320c32d",
+   "sha": "320c32d6333f090bf0e9af211daec915b4934162",
+   "time": "2026-11-15T13:56:36+01:00",
+   "merge": false,
+   "subject": "VR dependencies: make deps-vr and deps-vr-linux (OpenXR loader + Monado for the simulated-headset tests); Phase 11 Q9 decided – Monado installed on marge (spec 3.52)"
+  },
+  {
+   "version": "3.53",
+   "title": "Phase 15 Q1",
+   "commit": "9df5de0",
+   "sha": "9df5de0a3779b67670f468181c44c0b819fffba4",
+   "time": "2026-11-15T14:10:44+01:00",
+   "merge": false,
+   "subject": "Phase 15 Q1-Q4 decided: generators kept plus Blender sources, Git LFS, attribution-only third-party licences, Blender on marge; new Q5 (the GPL add-on) (spec 3.53)"
+  },
+  {
+   "version": "3.54",
+   "title": "The coordinator and the Claude tasks on the build dashboard",
+   "commit": "fc9f929",
+   "sha": "fc9f9291cf806da3d25843c50b311f84037ca06d",
+   "time": "2026-11-15T14:35:55+01:00",
+   "merge": true,
+   "subject": "Merge deb monitoring and Claude tasks into the build dashboard: Coordinator (deb) card – memory, swap, top processes, PSI, disks, big dirs, OOM history, alerts, 24 h history (deb.jsonl) – and the Claude tasks section with the cutover check (spec 3.54)",
+   "branch": "worktree-agent-a2c89e06798607f0d",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T15:11:04+01:00",
+    "exit": 0,
+    "branch": "main",
+    "command": "set -e; cargo fmt --all --check; cargo clippy -q -p ocw-sim -p ocw-client -p ocw-protocol -p ocw-server -p ocw-ui -p ocw",
+    "log": "151104-marge-29592.log",
+    "how": "main after merge",
+    "suites": 19,
+    "passed": 954,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.55",
+   "title": "Phase 9 S9 planned",
+   "commit": "47f1860",
+   "sha": "47f1860e6299212b8323c29d2ed288fabd4912ff",
+   "time": "2026-11-15T14:51:23+01:00",
+   "merge": false,
+   "subject": "Plan Phase 9 S9: a calendar on World -> Time (month grid banded with the place's season, moon, sun times, season-start shortcuts) and a season override for the landscape; Q11, Q12 (spec 3.55)"
+  },
+  {
+   "version": "3.56",
+   "title": "Decision from the build dashboard",
+   "commit": "c1c241b",
+   "sha": "c1c241b5c1bcab70fbb6c20b9bbf9c8c3763ed62",
+   "time": "2026-11-15T14:55:11+01:00",
+   "merge": false,
+   "subject": "Dashboard decision: Phase 10 Q7 closed – the preview stays at Liechtenstein and Tenerife (spec 3.56)"
+  },
+  {
+   "version": "3.57",
+   "title": "Decision from the build dashboard",
+   "commit": "ee15425",
+   "sha": "ee154252ba504220d01e2495f696279e4a4137b6",
+   "time": "2026-11-15T15:13:32+01:00",
+   "merge": false,
+   "subject": "Riding aids allowed by default in all races (Phase 12 Q8) and a workout's ERG step pauses while the rider is down (Phase 12 Q4) (spec 3.57, 3.58)"
+  },
+  {
+   "version": "3.58",
+   "title": "Decision by the user",
+   "commit": "ee15425",
+   "sha": "ee154252ba504220d01e2495f696279e4a4137b6",
+   "time": "2026-11-15T15:13:32+01:00",
+   "merge": false,
+   "subject": "Riding aids allowed by default in all races (Phase 12 Q8) and a workout's ERG step pauses while the rider is down (Phase 12 Q4) (spec 3.57, 3.58)"
+  },
+  {
+   "version": "3.59",
+   "title": "Decisions from the build dashboard",
+   "commit": "dae0586",
+   "sha": "dae0586524e5b2bde542832df0201deeda08e6da",
+   "time": "2026-11-15T15:13:49+01:00",
+   "merge": false,
+   "subject": "Dashboard decisions: Phase 9 Q12 (start at the place's real date, season follows), Phase 16 Q1 (own app), Q4 (browser later), Q5 (simple mesh tools, stage E4b) (spec 3.59)"
+  },
+  {
+   "version": "3.60",
+   "title": "Decision from the build dashboard",
+   "commit": "4e0ffcd",
+   "sha": "4e0ffcdc64f20dbf51f39c301b2ee05527e9772c",
+   "time": "2026-11-15T15:14:01+01:00",
+   "merge": false,
+   "subject": "Dashboard decision: Phase 14 Q2 – WebXR first, native OpenXR later (spec 3.60)"
+  },
+  {
+   "version": "3.61",
+   "title": "Decision from the build dashboard",
+   "commit": "8b874e8",
+   "sha": "8b874e82ae8e03d26ece022d41e53add93572fb2",
+   "time": "2026-11-15T15:22:14+01:00",
+   "merge": false,
+   "subject": "Dashboard decision: Phase 9 Q11 – a season choice jumps the date to its representative day, no decoupled override (spec 3.61)"
+  },
+  {
+   "version": "3.62",
+   "title": "Decision by the user",
+   "commit": "a03f748",
+   "sha": "a03f7488d47e579d40b9f67ca4ab88730cd8f67a",
+   "time": "2026-11-15T15:26:21+01:00",
+   "merge": false,
+   "subject": "Phase 16 Q2 decided: world patches plus Fix in OSM, user-signed shareable packages (spec 3.62)"
+  },
+  {
+   "version": "3.63",
+   "title": "Decision by the user",
+   "commit": "2a968e2",
+   "sha": "2a968e2ac53efd962390996b2afe66126b2f8d3d",
+   "time": "2026-11-15T15:32:34+01:00",
+   "merge": false,
+   "subject": "Phase 16 Q3 decided: BRouter first, server left to the rider; route planner plan for the game and the studio (spec 3.63)"
+  },
+  {
+   "version": "3.64",
+   "title": "Rider status signs planned",
+   "commit": "ef4c9d0",
+   "sha": "ef4c9d0f143018b6a3bbed361054dc7535e1e827",
+   "time": "2026-11-15T15:36:19+01:00",
+   "merge": false,
+   "subject": "Plan rider status signs (§2.6): headphones while voice is muted, the phone from the back pocket while in the menu, visible to everybody; open questions §2.6 Q1-Q3 (spec 3.64)"
+  },
+  {
+   "version": "3.65",
+   "title": "Render distance planned",
+   "commit": "aa3ba7f",
+   "sha": "aa3ba7f8864b33962cddb5d5f764a083bc6444fa",
+   "time": "2026-11-15T15:40:44+01:00",
+   "merge": false,
+   "subject": "Plan the render distance: a slider and a dynamic mode following the frame rate; Phase 10 Q8, Q9 (spec 3.65)"
+  },
+  {
+   "version": "3.66",
+   "title": "Decision by the user",
+   "commit": "92c94ba",
+   "sha": "92c94ba0eae428a9c1524cae7704baae2531f6d5",
+   "time": "2026-11-15T15:45:29+01:00",
+   "merge": false,
+   "subject": "Phase 10 Q8 decided: the render distance's dynamic mode is on by default (spec 3.66)"
+  },
+  {
+   "version": "3.67",
+   "title": "Decision by the user",
+   "commit": "26aaeac",
+   "sha": "26aaeacc1934858a8f34b66bf19fd64dd7f9a249",
+   "time": "2026-11-15T15:47:33+01:00",
+   "merge": false,
+   "subject": "Phase 10 Q9 decided: target the display refresh on the desktop, 60 fps in the browser (spec 3.67)"
+  },
+  {
+   "version": "3.68",
+   "title": "The browser app on Safari and iPhones",
+   "commit": "fb06017",
+   "sha": "fb06017d299ef4e501aed5754b3b82f4cae64830",
+   "time": "2026-11-15T16:11:06+01:00",
+   "merge": true,
+   "subject": "Merge the browser app on Safari and iPhones: WebGL 2 for Safari and iOS, a WebGPU watchdog with automatic fallback, renderer errors reported instead of quitting, mobile canvas and start-page fixes, test-web-gpu and test-web-webkit (spec 3.68)",
+   "branch": "worktree-agent-a3a97602a1f43e378",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T16:34:20+01:00",
+    "exit": 1,
+    "branch": "main",
+    "command": "set -e; cargo fmt --all --check; cargo clippy -q -p ocw-render --all-targets -- -D warnings; cargo test -q -p ocw-render",
+    "log": "163420-marge-150285.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.69",
+   "title": "Smooth junctions investigated and planned",
+   "commit": "4cf45cf",
+   "sha": "4cf45cf3ee70c55b56380ba2da27c4f8e9c6bc61",
+   "time": "2026-11-15T16:55:57+01:00",
+   "merge": true,
+   "subject": "Merge the junction investigation: findings, design J1-J3 for smooth junctions (spec §4.8.8, Q1-Q5), 14 junction-* scenes, the junction_seams analysis test (spec 3.69)",
+   "branch": "worktree-agent-a175685ff5bb69e3e",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T16:55:57+01:00",
+    "exit": 0,
+    "branch": "main",
+    "command": "set -e; cargo fmt --all --check; cargo clippy -q -p ocw-render --all-targets -- -D warnings; cargo test -q -p ocw-render",
+    "log": "165557-marge-172735.log",
+    "how": "commit",
+    "suites": 1,
+    "passed": 1,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.70",
+   "title": "T8 memory regression fixed",
+   "commit": "16e4ff1",
+   "sha": "16e4ff1982946fd14acf2189af56967345d2f201",
+   "time": "2026-11-15T17:08:08+01:00",
+   "merge": true,
+   "subject": "Merge the vegetation memory fix: near plants as recipes built only near the camera, the tile stream never restarts pending tiles; browser Liechtenstein 3.1 GB -> 0.43 GB, Tenerife rides; memory budgets as tests, test-web fails above 1.5 GB (spec 3.70)",
+   "branch": "worktree-agent-ac555517fcdeb939b",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T16:32:24+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ac555517fcdeb939b",
+    "command": "cargo test --release -p ocw-render --lib -- vegetation tile_builds 2>&1 | grep -E \"^test |test result|panicked\" ; cargo ",
+    "log": "163224-marge-147400.log",
+    "how": "branch",
+    "suites": 1,
+    "passed": 5,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.71",
+   "title": "The trust dialog for user keys built",
+   "commit": "3c946f3",
+   "sha": "3c946f3f6c7b6900dbe59565c20898cc165fa007",
+   "time": "2026-11-15T17:36:56+01:00",
+   "merge": true,
+   "subject": "Merge the trust dialog for user-signed worlds: user keys (world-builder keys init-user), fingerprints, a trust store per user, the dialog in both apps (Trust / Load once / Cancel), trusted keys in Settings, world trust commands, shared rides check each client (spec 3.71)",
+   "branch": "worktree-agent-aedfc4cef970ce697",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T17:24:57+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-aedfc4cef970ce697",
+    "command": "cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)\" -A12 | head -80; echo CLIPPY-DON",
+    "log": "172457-marge-210632.log",
+    "how": "branch",
+    "suites": 11,
+    "passed": 876,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.72",
+   "title": "The kiosk starts a game server",
+   "commit": "82a05d6",
+   "sha": "82a05d6dcbbffdd4afb6b0108df232d5b3d0a3b3",
+   "time": "2026-11-15T19:14:22+01:00",
+   "merge": false,
+   "subject": "Kiosk mode starts a game server: ocw-server with the app's world and route, bots and a kept certificate, the app as its client so others can join; both restart on deploys and crashes; test-kiosk with a fake server (spec 3.72)"
+  },
+  {
+   "version": "3.73",
+   "title": "Ride → Join and Ride → Host a ride",
+   "commit": "d8eaaca",
+   "sha": "d8eaacafadc621fda9099043e755d6b96f92d329",
+   "time": "2026-11-15T20:42:04+01:00",
+   "merge": true,
+   "subject": "Merge Ride -> Join and Ride -> Host a ride: join links (ocw://, https://, pasted command), the Join page with text entry, runtime switch to a shared ride and back, the hosting wizard with an in-app server on 0.0.0.0:47800, join link with copy, Events page (spec 3.73)",
+   "branch": "worktree-agent-a125e69b5981e0797",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T20:40:00+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a125e69b5981e0797",
+    "command": "cargo clippy -p ocw-desktop -p ocw-client --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)\" | head; cargo t",
+    "log": "204000-marge-429010.log",
+    "how": "commit",
+    "suites": 5,
+    "passed": 528,
+    "failed": 0,
+    "failed_suites": 0
+   }
   }
  ],
  "deploys": [
@@ -4715,6 +7185,55 @@
    "end": "2026-11-15T13:03:11+01:00",
    "machine": "leela",
    "commit": "a88498c-dirty",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T17:34:52+01:00",
+   "end": "2026-11-15T17:36:05+01:00",
+   "machine": "marge",
+   "commit": "16e4ff1",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T17:54:02+01:00",
+   "end": "2026-11-15T17:55:11+01:00",
+   "machine": "marge",
+   "commit": "88fc663",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T19:16:59+01:00",
+   "end": "2026-11-15T19:17:56+01:00",
+   "machine": "marge",
+   "commit": "f2fab7a",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T19:22:19+01:00",
+   "end": "2026-11-15T19:22:39+01:00",
+   "machine": "marge",
+   "commit": "ba2d32d",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T19:58:10+01:00",
+   "end": "2026-11-15T19:58:28+01:00",
+   "machine": "marge",
+   "commit": "476e2fa",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T19:58:35+01:00",
+   "end": "2026-11-15T19:58:40+01:00",
+   "machine": "marge",
+   "commit": "476e2fa",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T20:53:25+01:00",
+   "end": "2026-11-15T20:54:13+01:00",
+   "machine": "marge",
+   "commit": "d8eaaca",
    "exit": 0
   }
  ],
@@ -4858,6 +7377,94 @@
    "interruptions": 0,
    "merged": "5410232",
    "events": 3
+  },
+  {
+   "agent": "gallery-",
+   "task": "a30f88c1d22fae636",
+   "branch": "gallery-restructure",
+   "start": "2026-11-15T13:43:00+01:00",
+   "end": "2026-11-15T16:02:22+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "5be528d",
+   "events": 2
+  },
+  {
+   "agent": "dashboar",
+   "task": "a2c89e06798607f0d",
+   "branch": "dashboard-deb",
+   "start": "2026-11-15T14:11:23+01:00",
+   "end": "2026-11-15T14:36:35+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "9c0194c",
+   "events": 2
+  },
+  {
+   "agent": "vegetati",
+   "task": "ac555517fcdeb939b",
+   "branch": "vegetation-memfix",
+   "start": "2026-11-15T14:23:28+01:00",
+   "end": "2026-11-15T17:08:19+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "10eaaa4",
+   "events": 2
+  },
+  {
+   "agent": "web-ios-",
+   "task": "a3a97602a1f43e378",
+   "branch": "web-ios-safari",
+   "start": "2026-11-15T14:54:12+01:00",
+   "end": "2026-11-15T16:11:15+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "96a2bdb",
+   "events": 2
+  },
+  {
+   "agent": "world-tr",
+   "task": "aedfc4cef970ce697",
+   "branch": "world-trust-dialog",
+   "start": "2026-11-15T15:27:12+01:00",
+   "end": "2026-11-15T17:53:11+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "ee3efc2",
+   "events": 3
+  },
+  {
+   "agent": "junction",
+   "task": "a175685ff5bb69e3e",
+   "branch": "junctions-investigation",
+   "start": "2026-11-15T15:45:14+01:00",
+   "end": "2026-11-15T16:56:14+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "4ffda1e",
+   "events": 2
+  },
+  {
+   "agent": "ride-joi",
+   "task": "a125e69b5981e0797",
+   "branch": "ride-join",
+   "start": "2026-11-15T19:26:42+01:00",
+   "end": "2026-11-15T20:42:07+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "7977102",
+   "events": 2
+  },
+  {
+   "agent": "ble-sele",
+   "task": "aeaa126364911a5b6",
+   "branch": "ble-select",
+   "start": "2026-11-15T20:29:27+01:00",
+   "end": null,
+   "status": "started",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
   }
  ]
 }
