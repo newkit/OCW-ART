@@ -1,6 +1,6 @@
 # OCW build diary – day 4, 2026-11-14
 
-155 commits (47 merges), +151071 / −14750 lines, 535 images, 39 videos, 2 sounds.
+160 commits (49 merges), +159713 / −15032 lines, 535 images, 39 videos, 2 sounds.
 
 ## Commits
 
@@ -157,6 +157,11 @@
 | 23:24 | `f813e5a` | README build infrastructure: root only for linger, one serving dashboard instance |
 | 23:28 | `5bf6b52` (merge) | Merge build infrastructure docs: README Build infrastructure chapter (remote builds, dashboard, cleanup, kiosks, profiling, harness, releases, world builds), spec §11.2 / §11.2.1 / §11.3 (spec 3.32); make help lists targets with digits |
 | 23:29 | `5dd86ca` | Untrack compiled Python files (__pycache__ is already git-ignored; running the dashboard rewrote them) |
+| 23:45 | `bc14a6d` | Rider animations (spec 2.6: cornering, U-turn, finish, victory, foot down at a stop) and Phase 12 K6 organiser options (aids, chaotic bots, time limit, neutral service wait, DNF reasons; event options and the Organiser rules page); spec 3.32 |
+| 23:46 | `a4c6a55` (merge) | Merge main (spec 3.32 build infrastructure) into the animations / K6 branch; this work becomes spec 3.33 |
+| 23:46 | `60c89ae` | Renumber the animations / K6 version to 3.33; countdown test with the rules line |
+| 23:51 | `e3b4d97` | Phase 7: training history and M9 key rebinding / accessibility (spec 3.33) |
+| 23:52 | `1bc5f8e` (merge) | Merge branch 'main' into worktree-agent-ab18479c7c2ff5bd4 |
 | 23:52 | `c03317c` | Spec 3.33: sign-in with Google and Strava, brokered by our own backend (§9.1) |
 | 23:53 | `0d64c56` | Spec 3.34: VR starts now (Phase 11 Q6), X1 first |
 | 23:56 | `4aececa` (merge) | Merge art collector: hourly systemd user timer (art-collect), archive moved to art/build-history with masked text tracked in git, lock, status file and dashboard panel, ART-PROJECT v1.5 (spec 3.35) |
@@ -328,6 +333,154 @@ Longest runs:
 | 23:54 | plan for previewing the web version on the internet. what would be required for hosting a dev build? could it be hostet on github? |
 | 23:55 | i do have  a quest 1. it should work via oculus link but also standalone. |
 | 23:59 | okay, do the changes and implement the small preview hosting on github. add do readme after headline as preview. yes, record this in spec an |
+
+## Features
+
+70 spec versions added, 31 landed by a merge; 0 deploys, 1 releases.
+
+| Spec | Feature | Landed | Check (marge) |
+|---|---|---|---|
+| 2.66 | Build infrastructure | 00:11 `fc8c397` (merge) | – |
+| 2.67 | God mode refined | 00:01 `427d41a` | – |
+| 2.68 | Phase 4 decisions | 00:09 `03eaed0` | – |
+| 2.69 | Decisions from the build dashboard | 00:13 `8e3ba43` | – |
+| 2.70 | Decision from the build dashboard | 00:14 `888a33a` | – |
+| 2.71 | Decision from the build dashboard | 00:14 `1efbad1` | – |
+| 2.72 | Decision from the build dashboard | 00:15 `1c97a5e` | – |
+| 2.73 | Decision from the build dashboard | 00:18 `c5bd97d` | – |
+| 2.74 | Decision from the build dashboard | 00:19 `cd44fdc` | – |
+| 2.75 | Decision from the build dashboard | 00:19 `e68d49c` | – |
+| 2.76 | Decision from the build dashboard | 00:20 `ff26081` | – |
+| 2.77 | Decision from the build dashboard | 00:21 `03650f5` | – |
+| 2.78 | Decision from the build dashboard | 00:22 `2e100e4` | – |
+| 2.79 | Decision from the build dashboard | 00:22 `5c520a8` | – |
+| 2.80 | Decision from the build dashboard | 00:22 `bb98a02` | – |
+| 2.81 | Decision from the build dashboard | 00:23 `8de74cc` | – |
+| 2.82 | God mode as built to 2.67 | 00:24 `b40b1a9` (merge) | ok at 00:07, 7 suites, 678 passed, 0 failed (branch) |
+| 2.83 | Decision from the build dashboard | 00:24 `fd87152` | – |
+| 2.84 | Decision from the build dashboard | 00:25 `0fcf78f` | – |
+| 2.85 | Decision from the build dashboard | 00:25 `1adf7a8` | – |
+| 2.86 | Decision from the build dashboard | 00:25 `1120509` | – |
+| 2.87 | Research on Phase 9 Q7, star catalogue licences | 00:26 `01f90ad` | – |
+| 2.88 | Decision from the build dashboard | 00:27 `c58c411` | – |
+| 2.89 | Decision from the build dashboard | 00:28 `20fb1cb` | – |
+| 2.90 | Decision from the build dashboard | 00:29 `1bef6f6` | – |
+| 2.91 | Phase 14 planned | 00:29 `44c0f4a` | – |
+| 2.92 | Decision from the build dashboard | 00:30 `5237cd8` | – |
+| 2.93 | Decision from the build dashboard | 00:31 `19a2d24` | – |
+| 2.94 | Decisions from the build dashboard | 00:47 `78acea9` | – |
+| 2.95 | Build infrastructure | 01:42 `b74653a` (merge) | – |
+| 2.96 | Voice echo test | 01:43 `55429b2` (merge) | ok at 01:27 (branch) |
+| 2.97 | Phase 10 B1 built | 01:58 `483417b` (merge) | ok at 01:16, 46 suites, 1298 passed, 0 failed (branch) |
+| 2.98 | Phase 12 K1 + K2 built | 03:24 `fe448c1` (merge) | ok at 02:50, 7 suites, 438 passed, 2 failed (branch) |
+| 2.99 | Phase 10 B2 built | 05:04 `fa2723f` | – |
+| 3.00 | Phase 4 W1 + W2 built | 05:24 `4766822` (merge) | ok at 04:48 (branch) |
+| 3.01 | Build dashboard defined as a whole | 06:39 `05b8bc8` | – |
+| 3.02 | Phase 10 B3 built | 06:40 `e55d1a8` (merge) | ok at 05:51 (branch) |
+| 3.03 | Phase 4 W3 built | 06:47 `235a725` (merge) | ok at 06:19 (branch) |
+| 3.04 | Kit gives a slight benefit | 06:52 `739bf9f` | – |
+| 3.05 | Aero effects depend on speed | 06:59 `fc990eb` | – |
+| 3.06 | Decision from the build dashboard | 07:06 `17b34c9` | – |
+| 3.07 | Phase 4 W4 built | 08:26 `d3f5168` (merge) | ok at 08:18, 5 suites, 547 passed, 0 failed (branch) |
+| 3.08 | Phase 9 S2 built | 09:23 `44c4fd8` (merge) | ok at 09:17 (branch) |
+| 3.09 | Phase 10 B4 built | 09:47 `a7d82cb` (merge) | ok at 09:45, 5 suites, 686 passed, 0 failed (branch) |
+| 3.10 | Phase 8 T7 | 10:26 `2625e71` (merge) | ok at 02:27 (branch) |
+| 3.11 | Phase 9 S4 built | 11:10 `85e4ed0` (merge) | ok at 10:22, 3 suites, 421 passed, 0 failed (branch) |
+| 3.12 | Phase 8 T6 built | 11:38 `9c12aac` (merge) | ok at 10:42, 2 suites, 283 passed, 3 failed (branch) |
+| 3.13 | Phase 9 S5 built | 12:28 `0b17e07` (merge) | ok at 12:03 (branch) |
+| 3.14 | Phase 12 K3 built | 12:34 `1d8fadb` (merge) | ok at 11:38, 1 suites, 2 passed, 0 failed (branch) |
+| 3.15 | Open items of Phase 4 W2 / 4M, Phase 8 T5 / T6 and Phase 9 9I-S2 done | 13:17 `0d62f45` (merge) | ok at 13:14, 3 suites, 258 passed, 0 failed (branch) |
+| 3.16 | Phase 9 S7 built | 13:55 `c699d17` (merge) | ok at 13:34, 1 suites, 14 passed, 0 failed (branch) |
+| 3.17 | Phase 12 K4 + K5 built and Phase 4 W6 | 14:51 `e107920` (merge) | ok at 14:30 (branch) |
+| 3.18 | Phase 9 S8 built | 15:22 `68340e6` (merge) | ok at 14:22, 3 suites, 8 passed, 0 failed (branch) |
+| 3.19 | Phase 9 S6 built | 15:44 `baa2ba7` (merge) | ok at 15:41, 1 suites, 354 passed, 0 failed (branch) |
+| 3.20 | Phase 8 T3 complete | 16:36 `eb17602` (merge) | ok at 15:58, 31 suites, 1857 passed, 0 failed (branch) |
+| 3.21 | Phase 10 B5 built | 17:10 `284441f` (merge) | ok at 17:42 (main after merge) |
+| 3.22 | Phase 12 / 13 leftovers built | 18:46 `abe1abd` (merge) | ok at 18:34 (branch) |
+| 3.23 | Phase 4 leftovers built | 18:35 `74151f9` (merge) | ok at 18:31, 5 suites, 3 passed, 2 failed (branch) |
+| 3.24 | Phase 10 B6 built | 20:11 `b3cdc56` (merge) | – |
+| 3.25 | Test pictures stand alone | 20:18 `bfddece` | – |
+| 3.26 | Phase 8 T4 open items built | 21:30 `f250b61` (merge) | ok at 20:32 (branch) |
+| 3.27 | Phase 10 B7's WebGL 2 part built | 22:06 `e57f2e2` (merge) | ok at 21:50, 2 suites, 13 passed, 0 failed (branch) |
+| 3.28 | Documentation catch-up | 22:18 `1d57b7a` | – |
+| 3.29 | VR headset corrected by the user | 22:26 `99dd6f9` | – |
+| 3.30 | Decision from the build dashboard | 22:27 `b6e5662` | – |
+| 3.31 | VR decisions by the user | 22:29 `c2157f9` | – |
+| 3.32 | Build infrastructure documented | 23:28 `5bf6b52` (merge) | – |
+| 3.33 | Sign-in decided by the user | 23:52 `c03317c` | – |
+| 3.34 | VR starts now | 23:53 `0d64c56` | – |
+| 3.35 | Art project | 23:56 `4aececa` (merge) | – |
+
+Releases:
+
+- 01:41 v0.2.1 (pre-release)
+
+## Incidents
+
+113 collected (disk-full 2, janitor-delete 100, machine-offline 5, machine-online 5, runs-failed 1), 0 with root-cause notes ([incidents.md](incidents.md)).
+
+| Time | Kind | Machine | What |
+|---|---|---|---|
+| 00:40 | machine-offline | leela | leela unreachable (timeout) |
+| 00:47 | janitor-delete | marge | janitor delete OCW-worktree-agent-a79d5b738f6b3a776/target/debug (1.3 GB) |
+| 01:58 | janitor-delete | marge | janitor delete OCW/target/debug (23.5 GB) |
+| 07:04 | machine-online | leela | leela back online |
+| 07:07 | janitor-delete | leela | janitor delete OCW/target/debug (39.9 GB) |
+| 07:58 | janitor-delete | macos | janitor delete OCW-worktree-agent-a28ab4794ac3d1ad8/target/debug (5.4 GB) |
+| 07:58 | janitor-delete | marge | janitor delete OCW-worktree-agent-a28ab4794ac3d1ad8/target/debug (19.6 GB) |
+| 11:28 | disk-full | macos | disk home on macos at 90 % |
+| 11:32 | disk-full | marge | disk home on marge at 90 % |
+| 11:51 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 12:01 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 12:01 | janitor-delete | marge | janitor delete OCW/target (1.6 GB) |
+| 12:12 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 12:22 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 12:32 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 12:35 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 12:45 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 12:46 | janitor-delete | marge | janitor delete OCW/target (0.0 GB) |
+| 12:55 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 13:05 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 13:16 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 13:26 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 13:36 | janitor-delete | marge | janitor alert  (0.0 GB) |
+| 13:47 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 13:57 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 14:06 | janitor-delete | marge | janitor delete OCW-worktree-agent-a4505c166634b08e1/target (21.7 GB) |
+| 14:06 | janitor-delete | macos | janitor failed OCW-worktree-agent-a4505c166634b08e1/target (0.0 GB) |
+| 14:07 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 14:17 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 14:27 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 14:37 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 14:48 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 14:58 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 14:58 | janitor-delete | marge | janitor delete OCW-worktree-agent-a40de89137e6a33b2/target (38.8 GB) |
+| 14:58 | janitor-delete | macos | janitor failed OCW-worktree-agent-a40de89137e6a33b2/target (0.0 GB) |
+| 15:08 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 15:18 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 15:29 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 15:30 | janitor-delete | marge | janitor delete OCW-worktree-agent-acb5596ed5a267ba2/target (25.5 GB) |
+| 15:30 | janitor-delete | macos | janitor failed OCW-worktree-agent-acb5596ed5a267ba2/target (0.0 GB) |
+| 15:39 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 15:49 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 15:51 | janitor-delete | marge | janitor delete OCW-worktree-agent-a2709c32cf67f8741/target (19.8 GB) |
+| 15:52 | janitor-delete | macos | janitor delete OCW-worktree-agent-a2709c32cf67f8741/target (0.5 GB) |
+| 15:59 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 16:09 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 16:19 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 16:30 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 16:40 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 16:50 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 16:53 | janitor-delete | marge | janitor delete OCW-worktree-agent-a43ce31b19d29fdb9/target (18.8 GB) |
+| 16:53 | janitor-delete | macos | janitor failed OCW-worktree-agent-a43ce31b19d29fdb9/target (0.0 GB) |
+| 17:00 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 17:10 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 17:17 | janitor-delete | marge | janitor delete OCW-worktree-agent-a98249453c64264c9/target (31.5 GB) |
+| 17:20 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 17:31 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 17:41 | janitor-delete | macos | janitor alert  (0.0 GB) |
+| 17:45 | janitor-delete | macos | janitor delete OCW-worktree-agent-a09cdbcff127205c5/target (1.2 GB) |
+| 17:46 | janitor-delete | macos | janitor delete OCW-worktree-agent-a14e20b4135819064/target (7.4 GB) |
 
 ## Media
 

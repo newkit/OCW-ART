@@ -1211,6 +1211,46 @@
    "removed": 0
   },
   {
+   "sha": "bc14a6d",
+   "time": "23:45:24",
+   "merge": false,
+   "subject": "Rider animations (spec 2.6: cornering, U-turn, finish, victory, foot down at a stop) and Phase 12 K6 organiser options (aids, chaotic bots, time limit, neutral service wait, DNF reasons; event options and the Organiser rules page); spec 3.32",
+   "added": 2423,
+   "removed": 119
+  },
+  {
+   "sha": "a4c6a55",
+   "time": "23:46:09",
+   "merge": true,
+   "subject": "Merge main (spec 3.32 build infrastructure) into the animations / K6 branch; this work becomes spec 3.33",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "60c89ae",
+   "time": "23:46:09",
+   "merge": false,
+   "subject": "Renumber the animations / K6 version to 3.33; countdown test with the rules line",
+   "added": 18,
+   "removed": 18
+  },
+  {
+   "sha": "e3b4d97",
+   "time": "23:51:46",
+   "merge": false,
+   "subject": "Phase 7: training history and M9 key rebinding / accessibility (spec 3.33)",
+   "added": 6201,
+   "removed": 145
+  },
+  {
+   "sha": "1bc5f8e",
+   "time": "23:52:08",
+   "merge": true,
+   "subject": "Merge branch 'main' into worktree-agent-ab18479c7c2ff5bd4",
+   "added": 0,
+   "removed": 0
+  },
+  {
    "sha": "c03317c",
    "time": "23:52:13",
    "merge": false,
@@ -1243,9 +1283,9 @@
    "removed": 1
   }
  ],
- "merges": 47,
- "lines_added": 151071,
- "lines_removed": 14750,
+ "merges": 49,
+ "lines_added": 159713,
+ "lines_removed": 15032,
  "spec_versions": [
   "2.67",
   "2.67",
@@ -1356,6 +1396,9 @@
   "3.34",
   "3.36",
   "3.32",
+  "2.6",
+  "3.32",
+  "3.33",
   "3.33",
   "3.34",
   "3.35"
@@ -5037,8 +5080,1816 @@
   }
  },
  "incidents": {
-  "auto": [],
+  "auto": [
+   {
+    "time": "00:40:57",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "00:47:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a79d5b738f6b3a776/target/debug (1.3 GB)"
+   },
+   {
+    "time": "01:58:54",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target/debug (23.5 GB)"
+   },
+   {
+    "time": "07:04:58",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "07:07:10",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW/target/debug (39.9 GB)"
+   },
+   {
+    "time": "07:58:55",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a28ab4794ac3d1ad8/target/debug (5.4 GB)"
+   },
+   {
+    "time": "07:58:56",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a28ab4794ac3d1ad8/target/debug (19.6 GB)"
+   },
+   {
+    "time": "11:28:59",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "macos",
+    "text": "disk home on macos at 90 %"
+   },
+   {
+    "time": "11:32:59",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "marge",
+    "text": "disk home on marge at 90 %"
+   },
+   {
+    "time": "11:51:27",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "12:01:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "12:01:35",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (1.6 GB)"
+   },
+   {
+    "time": "12:12:00",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "12:22:24",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "12:32:32",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "12:35:48",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "12:45:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "12:46:00",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "12:55:46",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "13:05:56",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "13:16:31",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "13:26:53",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "13:36:52",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "13:47:03",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "13:57:12",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:06:12",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a4505c166634b08e1/target (21.7 GB)"
+   },
+   {
+    "time": "14:06:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor failed OCW-worktree-agent-a4505c166634b08e1/target (0.0 GB)"
+   },
+   {
+    "time": "14:07:23",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:17:35",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:27:45",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:37:57",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:48:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:58:17",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:58:20",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a40de89137e6a33b2/target (38.8 GB)"
+   },
+   {
+    "time": "14:58:29",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor failed OCW-worktree-agent-a40de89137e6a33b2/target (0.0 GB)"
+   },
+   {
+    "time": "15:08:43",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "15:18:53",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "15:29:03",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "15:30:27",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-acb5596ed5a267ba2/target (25.5 GB)"
+   },
+   {
+    "time": "15:30:35",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor failed OCW-worktree-agent-acb5596ed5a267ba2/target (0.0 GB)"
+   },
+   {
+    "time": "15:39:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "15:49:23",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "15:51:57",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a2709c32cf67f8741/target (19.8 GB)"
+   },
+   {
+    "time": "15:52:05",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a2709c32cf67f8741/target (0.5 GB)"
+   },
+   {
+    "time": "15:59:33",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "16:09:43",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "16:19:53",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "16:30:03",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "16:40:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "16:50:23",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "16:53:36",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a43ce31b19d29fdb9/target (18.8 GB)"
+   },
+   {
+    "time": "16:53:44",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor failed OCW-worktree-agent-a43ce31b19d29fdb9/target (0.0 GB)"
+   },
+   {
+    "time": "17:00:33",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "17:10:44",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "17:17:29",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a98249453c64264c9/target (31.5 GB)"
+   },
+   {
+    "time": "17:20:54",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "17:31:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "17:41:14",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "17:45:46",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a09cdbcff127205c5/target (1.2 GB)"
+   },
+   {
+    "time": "17:46:15",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a14e20b4135819064/target (7.4 GB)"
+   },
+   {
+    "time": "17:46:18",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a18d20449774f2675/target (6.4 GB)"
+   },
+   {
+    "time": "17:46:21",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a1c9a111de4bbfda1/target (5.2 GB)"
+   },
+   {
+    "time": "17:46:25",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a232dd34cb256c06e/target (17.1 GB)"
+   },
+   {
+    "time": "17:46:27",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a281a46a07f822117/target (0.8 GB)"
+   },
+   {
+    "time": "17:46:31",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a28ab4794ac3d1ad8/target (6.4 GB)"
+   },
+   {
+    "time": "17:46:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a3b317fb1393f6d1f/target (5.2 GB)"
+   },
+   {
+    "time": "17:46:36",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a3e1df5b365835068/target (1.0 GB)"
+   },
+   {
+    "time": "17:46:38",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a40de89137e6a33b2/target (4.4 GB)"
+   },
+   {
+    "time": "17:46:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a43ce31b19d29fdb9/target (1.6 GB)"
+   },
+   {
+    "time": "17:46:44",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a4505c166634b08e1/target (5.2 GB)"
+   },
+   {
+    "time": "17:46:50",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a4e6bc385ccdf40f0/target (12.6 GB)"
+   },
+   {
+    "time": "17:46:53",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a507bcaff0a2af98c/target (7.1 GB)"
+   },
+   {
+    "time": "17:46:57",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a5ed5b3cc41ad3235/target (1.4 GB)"
+   },
+   {
+    "time": "17:46:59",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a68e0bb1639fc2950/target (4.6 GB)"
+   },
+   {
+    "time": "17:47:03",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a79d5b738f6b3a776/target (5.7 GB)"
+   },
+   {
+    "time": "17:47:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a8a0d2c6eeb4556d9/target (6.0 GB)"
+   },
+   {
+    "time": "17:47:12",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a91fc84c3afffd6c8/target (3.8 GB)"
+   },
+   {
+    "time": "17:47:16",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a99613c9983b557e5/target (4.3 GB)"
+   },
+   {
+    "time": "17:47:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ab2900937eba3f076/target (6.3 GB)"
+   },
+   {
+    "time": "17:47:24",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ab886c17ece2bab7f/target (4.9 GB)"
+   },
+   {
+    "time": "17:47:28",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-acafa3212c0c9925a/target (2.0 GB)"
+   },
+   {
+    "time": "17:47:31",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-acb5596ed5a267ba2/target (4.7 GB)"
+   },
+   {
+    "time": "17:47:33",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-acb661a2884cd61db/target (4.8 GB)"
+   },
+   {
+    "time": "17:47:37",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-acf229e1ec2f3ec92/target (11.8 GB)"
+   },
+   {
+    "time": "17:47:42",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-af34d3cf80ac1115d/target (1.2 GB)"
+   },
+   {
+    "time": "17:47:45",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-afd928e4c40170f8d/target (4.3 GB)"
+   },
+   {
+    "time": "18:07:29",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (1.9 GB)"
+   },
+   {
+    "time": "18:46:43",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a4765f0e41cbf0099/target (25.2 GB)"
+   },
+   {
+    "time": "18:58:10",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab5b62071e8425803/target (31.5 GB)"
+   },
+   {
+    "time": "18:58:18",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ab5b62071e8425803/target (0.4 GB)"
+   },
+   {
+    "time": "18:58:23",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a98249453c64264c9/target (19.5 GB)"
+   },
+   {
+    "time": "20:05:39",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "20:26:17",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.1 GB)"
+   },
+   {
+    "time": "20:27:31",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a2d82f2d3eb0b5673/target (28.0 GB)"
+   },
+   {
+    "time": "20:27:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a2d82f2d3eb0b5673/target (5.4 GB)"
+   },
+   {
+    "time": "20:50:22",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "21:03:28",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "21:04:28",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "21:34:28",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (ssh error)"
+   },
+   {
+    "time": "21:37:28",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "21:37:28",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "21:41:21",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.2 GB)"
+   },
+   {
+    "time": "21:51:32",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.2 GB)"
+   },
+   {
+    "time": "22:01:28",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "22:03:28",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a13befb3a595ea7b4/target (27.9 GB)"
+   },
+   {
+    "time": "22:04:15",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a13befb3a595ea7b4/target (0.3 GB)"
+   },
+   {
+    "time": "22:07:28",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "22:09:28",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "22:37:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab219a368de806d4e/target (26.8 GB)"
+   },
+   {
+    "time": "22:38:08",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ab219a368de806d4e/target (6.4 GB)"
+   },
+   {
+    "time": "22:38:11",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aa898b5e37a69f20f/target (6.3 GB)"
+   },
+   {
+    "time": "23:31:06",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "23:34:27",
+    "kind": "runs-failed",
+    "source": "remote.sh",
+    "machine": "Win11Builder, leela, macos, marge",
+    "text": "23 failed remote.sh runs (Win11Builder 4, leela 1, macos 1, marge 17)"
+   }
+  ],
   "notes": "",
   "noted": []
- }
+ },
+ "features": [
+  {
+   "version": "2.66",
+   "title": "Build infrastructure",
+   "commit": "fc8c397",
+   "sha": "fc8c3979625d84bcbe83697a330caec533ba3ee8",
+   "time": "2026-11-14T00:11:16+01:00",
+   "merge": true,
+   "subject": "Merge build dashboard machine controls: enable/disable machines for building, slots per machine; remote.sh refuses disabled machines (deploys still allowed) (spec 2.66)",
+   "branch": "worktree-agent-ab34882405374445d",
+   "check": null
+  },
+  {
+   "version": "2.67",
+   "title": "God mode refined",
+   "commit": "427d41a",
+   "sha": "427d41a61ff1f2464ceb204aff91e12053a499c7",
+   "time": "2026-11-14T00:01:51+01:00",
+   "merge": false,
+   "subject": "Spec 2.67: god mode refined – plane-like flight, + up / − down by typed character, no saddle cloth, bird-like wingbeat"
+  },
+  {
+   "version": "2.68",
+   "title": "Phase 4 decisions",
+   "commit": "03eaed0",
+   "sha": "03eaed0efbd1bc3aeaf60ff2406234f744be63fa",
+   "time": "2026-11-14T00:09:50+01:00",
+   "merge": false,
+   "subject": "Spec 2.68: Phase 4 decisions from the build dashboard – changes on leaving the workshop, bounded parts with Profile mode, hearts without daily cap, kit costs hearts (glasses free), touch testing postponed"
+  },
+  {
+   "version": "2.69",
+   "title": "Decisions from the build dashboard",
+   "commit": "8e3ba43",
+   "sha": "8e3ba435e09d3094ee4d843b29966751a25c63b5",
+   "time": "2026-11-14T00:13:12+01:00",
+   "merge": false,
+   "subject": "Spec 2.69: dashboard answers – time/weather control host-only in shared sessions; 3D building data postponed"
+  },
+  {
+   "version": "2.70",
+   "title": "Decision from the build dashboard",
+   "commit": "888a33a",
+   "sha": "888a33ad7613dae160071c573dffb607c881c54d",
+   "time": "2026-11-14T00:14:27+01:00",
+   "merge": false,
+   "subject": "Spec 2.70: night keeps a minimum brightness; bike lights are bought and fitted in the workshop"
+  },
+  {
+   "version": "2.71",
+   "title": "Decision from the build dashboard",
+   "commit": "1efbad1",
+   "sha": "1efbad17794c68f0afbe945bc763724e5dddf1ce",
+   "time": "2026-11-14T00:14:42+01:00",
+   "merge": false,
+   "subject": "Spec 2.71: wind load sent to trainers that support it"
+  },
+  {
+   "version": "2.72",
+   "title": "Decision from the build dashboard",
+   "commit": "1c97a5e",
+   "sha": "1c97a5e80b640362e02f448da59454674f0afd73",
+   "time": "2026-11-14T00:15:35+01:00",
+   "merge": false,
+   "subject": "Spec 2.72: weather providers MeteoSwiss + DWD, MET Norway fallback, Open-Meteo; selectable in the menu"
+  },
+  {
+   "version": "2.73",
+   "title": "Decision from the build dashboard",
+   "commit": "c5bd97d",
+   "sha": "c5bd97de3d4db4ac1fcd11f12e33c5e0149a1d44",
+   "time": "2026-11-14T00:18:08+01:00",
+   "merge": false,
+   "subject": "Spec 2.73: historic weather kept – ERA5 under CC BY 4.0 / Copernicus licence fits rule 8A"
+  },
+  {
+   "version": "2.74",
+   "title": "Decision from the build dashboard",
+   "commit": "cd44fdc",
+   "sha": "cd44fdca311beb29063e915293f442665b744f62",
+   "time": "2026-11-14T00:19:28+01:00",
+   "merge": false,
+   "subject": "Spec 2.74: browser targets – Chromium for trainer rides, others with virtual power and the bridge"
+  },
+  {
+   "version": "2.75",
+   "title": "Decision from the build dashboard",
+   "commit": "e68d49c",
+   "sha": "e68d49c1c6c427bb01e75574982106cbb15bb6df",
+   "time": "2026-11-14T00:19:43+01:00",
+   "merge": false,
+   "subject": "Spec 2.75: build the sensor bridge for browser rides"
+  },
+  {
+   "version": "2.76",
+   "title": "Decision from the build dashboard",
+   "commit": "ff26081",
+   "sha": "ff26081415ebe01e322b6e0efe56e91c63439558",
+   "time": "2026-11-14T00:20:50+01:00",
+   "merge": false,
+   "subject": "Spec 2.76: browser app starts now (B1 first)"
+  },
+  {
+   "version": "2.77",
+   "title": "Decision from the build dashboard",
+   "commit": "03650f5",
+   "sha": "03650f562a31c5747cf50e17d0457fdc15ae53e1",
+   "time": "2026-11-14T00:21:01+01:00",
+   "merge": false,
+   "subject": "Spec 2.77: browser app hosted on own servers for now"
+  },
+  {
+   "version": "2.78",
+   "title": "Decision from the build dashboard",
+   "commit": "2e100e4",
+   "sha": "2e100e407a88a237a2f86d2236e74935261dee00",
+   "time": "2026-11-14T00:22:05+01:00",
+   "merge": false,
+   "subject": "Spec 2.78: anonymous riding allowed with a plain bike and character; customization for logged-in users only"
+  },
+  {
+   "version": "2.79",
+   "title": "Decision from the build dashboard",
+   "commit": "5c520a8",
+   "sha": "5c520a88001e826e59a510e5f5c2ee7a6ffd2637",
+   "time": "2026-11-14T00:22:20+01:00",
+   "merge": false,
+   "subject": "Spec 2.79: browser app with full parity"
+  },
+  {
+   "version": "2.80",
+   "title": "Decision from the build dashboard",
+   "commit": "bb98a02",
+   "sha": "bb98a029e305c25a762782821952651758c2548c",
+   "time": "2026-11-14T00:22:36+01:00",
+   "merge": false,
+   "subject": "Spec 2.80: Linux VR is a target"
+  },
+  {
+   "version": "2.81",
+   "title": "Decision from the build dashboard",
+   "commit": "8de74cc",
+   "sha": "8de74cc9d47c8531d45d45fe667e95956efc73d4",
+   "time": "2026-11-14T00:23:24+01:00",
+   "merge": false,
+   "subject": "Spec 2.81: VR spike builds and compares both OpenXR integrations"
+  },
+  {
+   "version": "2.82",
+   "title": "God mode as built to 2.67",
+   "commit": "b40b1a9",
+   "sha": "b40b1a9543aa5b6bc164d3f92ee218d1e9703440",
+   "time": "2026-11-14T00:24:07+01:00",
+   "merge": true,
+   "subject": "Merge god mode refined: plane-like flight, + / − by typed character, no saddle cloth, bird-like wingbeat (spec 2.67)",
+   "branch": "worktree-agent-a3b317fb1393f6d1f",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T00:07:53+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a3b317fb1393f6d1f",
+    "command": "cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)\" -A12 | head -120; echo CLIPPY_EX",
+    "log": "000753-marge-1159290.log",
+    "how": "branch",
+    "suites": 7,
+    "passed": 678,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "2.83",
+   "title": "Decision from the build dashboard",
+   "commit": "fd87152",
+   "sha": "fd871520aac108c56c8ff10cf0d9b09a14632cc5",
+   "time": "2026-11-14T00:24:32+01:00",
+   "merge": false,
+   "subject": "Spec 2.83: VR steering stays on keys, gamepad and autodrive (no head-lean)"
+  },
+  {
+   "version": "2.84",
+   "title": "Decision from the build dashboard",
+   "commit": "0fcf78f",
+   "sha": "0fcf78fe9a0f87338e1fff18fefc0813207c43a3",
+   "time": "2026-11-14T00:25:22+01:00",
+   "merge": false,
+   "subject": "Spec 2.84: standalone VR (Quest / Pico) and WebXR wanted – new phase"
+  },
+  {
+   "version": "2.85",
+   "title": "Decision from the build dashboard",
+   "commit": "1adf7a8",
+   "sha": "1adf7a8ee4a25f518c6b3c86de6a83917fe52804",
+   "time": "2026-11-14T00:25:35+01:00",
+   "merge": false,
+   "subject": "Spec 2.85: VR at the end of the phase order"
+  },
+  {
+   "version": "2.86",
+   "title": "Decision from the build dashboard",
+   "commit": "1120509",
+   "sha": "11205092e616cff3d71ced07c0252813c856c814",
+   "time": "2026-11-14T00:25:46+01:00",
+   "merge": false,
+   "subject": "Spec 2.86: collisions on, damage off by default"
+  },
+  {
+   "version": "2.87",
+   "title": "Research on Phase 9 Q7, star catalogue licences",
+   "commit": "01f90ad",
+   "sha": "01f90ad8054fdb3488fd852dc27178682f2ac483",
+   "time": "2026-11-14T00:26:47+01:00",
+   "merge": false,
+   "subject": "Spec 2.87: star catalogue licence research for Phase 9 Q7 (proposal, still open)"
+  },
+  {
+   "version": "2.88",
+   "title": "Decision from the build dashboard",
+   "commit": "c58c411",
+   "sha": "c58c411fd055b7af2f9acb154044bbbe6d323d77",
+   "time": "2026-11-14T00:27:04+01:00",
+   "merge": false,
+   "subject": "Spec 2.88: group rides soft bumps only, races full collision model"
+  },
+  {
+   "version": "2.89",
+   "title": "Decision from the build dashboard",
+   "commit": "20fb1cb",
+   "sha": "20fb1cbb26e0997bcfff5a39df6e1a379e5b6f8f",
+   "time": "2026-11-14T00:28:17+01:00",
+   "merge": false,
+   "subject": "Spec 2.89: chaotic bots as a setting"
+  },
+  {
+   "version": "2.90",
+   "title": "Decision from the build dashboard",
+   "commit": "1bef6f6",
+   "sha": "1bef6f631c910a3ad184fc84f582bdcd5c8c8dd0",
+   "time": "2026-11-14T00:29:16+01:00",
+   "merge": false,
+   "subject": "Spec 2.90: falls as ragdolls with a physics engine"
+  },
+  {
+   "version": "2.91",
+   "title": "Phase 14 planned",
+   "commit": "44c0f4a",
+   "sha": "44c0f4aa400007d49aa1105fb42f17edff944622",
+   "time": "2026-11-14T00:29:52+01:00",
+   "merge": false,
+   "subject": "Spec 2.91: Phase 14 planned – standalone VR (Quest / Pico native OpenXR) and WebXR"
+  },
+  {
+   "version": "2.92",
+   "title": "Decision from the build dashboard",
+   "commit": "5237cd8",
+   "sha": "5237cd8aae67d21d6470598ccd6e87858d1a4e15",
+   "time": "2026-11-14T00:30:27+01:00",
+   "merge": false,
+   "subject": "Spec: persistence decision renumbered to 2.92 (2.91 is Phase 14)"
+  },
+  {
+   "version": "2.93",
+   "title": "Decision from the build dashboard",
+   "commit": "19a2d24",
+   "sha": "19a2d24fd65c9bece5cacaf8623de90e0d48136d",
+   "time": "2026-11-14T00:31:09+01:00",
+   "merge": false,
+   "subject": "Spec 2.93: road gates and barriers hidden by default, a setting shows them"
+  },
+  {
+   "version": "2.94",
+   "title": "Decisions from the build dashboard",
+   "commit": "78acea9",
+   "sha": "78acea98117076af08bae0b6e87c33dc69dfc605",
+   "time": "2026-11-14T00:47:20+01:00",
+   "merge": false,
+   "subject": "Unicorn mode: the UI name of god mode (spec 2.94, Phase 13 Q6); trainer flat while flying (Q4)"
+  },
+  {
+   "version": "2.95",
+   "title": "Build infrastructure",
+   "commit": "b74653a",
+   "sha": "b74653ab44f3286ec9b1e12d24d6c0aca81a4982",
+   "time": "2026-11-14T01:42:37+01:00",
+   "merge": true,
+   "subject": "Merge Windows sync fix: new checkouts get the whole tree, manifest bound to its checkout, safety net for missing files (spec 2.95)",
+   "branch": "worktree-agent-ac264ba6885768656",
+   "check": null
+  },
+  {
+   "version": "2.96",
+   "title": "Voice echo test",
+   "commit": "55429b2",
+   "sha": "55429b22404c89cfa4e3affbd33914f5640b0f7f",
+   "time": "2026-11-14T01:43:14+01:00",
+   "merge": true,
+   "subject": "Merge voice echo bot: Echo rider, delayed spatial playback of your voice, Settings → Audio → Voice, voice.echo console, LiveKit echo participant (spec 2.96)",
+   "branch": "worktree-agent-a281a46a07f822117",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T01:27:23+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a281a46a07f822117",
+    "command": "cargo fmt --all --check && echo FMT-OK; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -cE \"^(warning",
+    "log": "012723-marge-1263896.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "2.97",
+   "title": "Phase 10 B1 built",
+   "commit": "483417b",
+   "sha": "483417bc1fcb2fc861a45b497db0af03082ecdb1",
+   "time": "2026-11-14T01:58:40+01:00",
+   "merge": true,
+   "subject": "Merge Phase 10 B1: the browser app – shared ocw-client crate, apps/web on WebGPU, frame-driven local server, make web / web-serve / test-web (spec 2.97)",
+   "branch": "worktree-agent-a79d5b738f6b3a776",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T01:16:43+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a79d5b738f6b3a776",
+    "command": "cargo test --workspace --no-fail-fast 2>&1 | grep -E \"^test result|FAILED|panicked|error(\\[|:)\" | head -80; echo EXIT ${",
+    "log": "011643-marge-1252384.log",
+    "how": "branch",
+    "suites": 46,
+    "passed": 1298,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "2.98",
+   "title": "Phase 12 K1 + K2 built",
+   "commit": "fe448c1",
+   "sha": "fe448c10c5611246ce105afc0cf5b47e660e41fe",
+   "time": "2026-11-14T03:24:37+01:00",
+   "merge": true,
+   "subject": "Merge Phase 12 K1+K2: rider collisions, soft bumps, crashes with Avian ragdoll falls, autodrive avoidance (spec 2.98)",
+   "branch": "worktree-agent-a507bcaff0a2af98c",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T02:50:43+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a507bcaff0a2af98c",
+    "command": "cargo fmt --all -- --check 2>&1 | head -5; echo FMT_DONE; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | g",
+    "log": "025043-marge-1347749.log",
+    "how": "branch",
+    "suites": 7,
+    "passed": 438,
+    "failed": 2,
+    "failed_suites": 1
+   }
+  },
+  {
+   "version": "2.99",
+   "title": "Phase 10 B2 built",
+   "commit": "fa2723f",
+   "sha": "fa2723fd38c0846c229b2283a104d4d3caf82433",
+   "time": "2026-11-14T05:04:16+01:00",
+   "merge": false,
+   "subject": "Spec: B2 is version 2.99"
+  },
+  {
+   "version": "3.00",
+   "title": "Phase 4 W1 + W2 built",
+   "commit": "4766822",
+   "sha": "4766822f004603105863b6419f3264fb1b98c95c",
+   "time": "2026-11-14T05:24:01+01:00",
+   "merge": true,
+   "subject": "Merge Phase 4 W1+W2: the 3D workshop – bikes on the stand and the wall, part hotspots and picker, 76-part catalogue in hearts, local wallet, server-credited hearts, BikeChange (spec 3.00)",
+   "branch": "worktree-agent-a09cdbcff127205c5",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T04:48:47+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a09cdbcff127205c5",
+    "command": "make test-web-build 2>&1 | tail -6",
+    "log": "044847-marge-1464786.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.01",
+   "title": "Build dashboard defined as a whole",
+   "commit": "05b8bc8",
+   "sha": "05b8bc859a05a63ff9796d55a2b0dfad89c8aa72",
+   "time": "2026-11-14T06:39:03+01:00",
+   "merge": false,
+   "subject": "Spec 3.01: the build dashboard defined as a whole (§11.2.1)"
+  },
+  {
+   "version": "3.02",
+   "title": "Phase 10 B3 built",
+   "commit": "e55d1a8",
+   "sha": "e55d1a8a69f0843c5d7c158b067f10da83c8c4f2",
+   "time": "2026-11-14T06:40:22+01:00",
+   "merge": true,
+   "subject": "Merge Phase 10 B3: browser multiplayer over WebTransport (web-transport-quinn on our quinn endpoint), anonymous browser riders (spec 3.02)",
+   "branch": "worktree-agent-af34d3cf80ac1115d",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T05:51:42+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-af34d3cf80ac1115d",
+    "command": "make test-web-multiplayer 2>&1 | grep -v \"^\\s*Compiling\" | tail -120",
+    "log": "055142-marge-1528983.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.03",
+   "title": "Phase 4 W3 built",
+   "commit": "235a725",
+   "sha": "235a7253f356ca93571a31b226965d749a38cb09",
+   "time": "2026-11-14T06:47:06+01:00",
+   "merge": true,
+   "subject": "Merge Phase 4 W3: parts physics within the caps, Profile / Equal / Open race modes, others see fitted parts (spec 3.03)",
+   "branch": "worktree-agent-ab886c17ece2bab7f",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T06:19:11+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ab886c17ece2bab7f",
+    "command": "cargo test --workspace 2>&1 | grep -E \"^error|panicked|test result: FAILED|FAILED|failures:|^    [a-z_:]+$\" | head -60; ",
+    "log": "061911-marge-1561483.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.04",
+   "title": "Kit gives a slight benefit",
+   "commit": "739bf9f",
+   "sha": "739bf9fdc6293d2782d72349dc1d1bfe1013dcf6",
+   "time": "2026-11-14T06:52:12+01:00",
+   "merge": false,
+   "subject": "Spec 3.04: kit gives a slight benefit with a benefit score per item (TT helmet faster), within the build caps"
+  },
+  {
+   "version": "3.05",
+   "title": "Aero effects depend on speed",
+   "commit": "fc990eb",
+   "sha": "fc990ebfef100e36b4b6022fbdeb9ce6301dd3a8",
+   "time": "2026-11-14T06:59:16+01:00",
+   "merge": false,
+   "subject": "Spec 3.05: aero effects depend on speed – investigated thresholds and magnitudes, scores by speed, caps at three reference powers"
+  },
+  {
+   "version": "3.06",
+   "title": "Decision from the build dashboard",
+   "commit": "17b34c9",
+   "sha": "17b34c93e53c22e93090c15a58845bb0bd9d1afd",
+   "time": "2026-11-14T07:06:15+01:00",
+   "merge": false,
+   "subject": "Spec 3.06: no WASD in Unicorn mode, the gamepad instead"
+  },
+  {
+   "version": "3.07",
+   "title": "Phase 4 W4 built",
+   "commit": "d3f5168",
+   "sha": "d3f51687696fdae65250286492d50cb77720c816",
+   "time": "2026-11-14T08:26:52+01:00",
+   "merge": true,
+   "subject": "Merge Phase 4 W4: the character corner – mirror editor, free character, kit for hearts with speed-dependent benefits, try on the bike (spec 3.07)",
+   "branch": "worktree-agent-a99613c9983b557e5",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T08:18:35+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a99613c9983b557e5",
+    "command": "cargo fmt --all --check >/dev/null && echo FMT-OK; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E ",
+    "log": "081835-marge-1691406.log",
+    "how": "branch",
+    "suites": 5,
+    "passed": 547,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.08",
+   "title": "Phase 9 S2 built",
+   "commit": "44c4fd8",
+   "sha": "44c4fd863be95cd1e620e0daad623d0651a54479",
+   "time": "2026-11-14T09:23:10+01:00",
+   "merge": true,
+   "subject": "Merge Phase 9 S2: the night sky without stars – moon (ELP), planets, Milky Way, moonlight, street lamps (LITR), light pollution, bike lights follow the fitted part (spec 3.08)",
+   "branch": "worktree-agent-a5ed5b3cc41ad3235",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T09:17:40+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a5ed5b3cc41ad3235",
+    "command": "cargo test --workspace 2>&1 | grep -cE \"FAILED|panicked\"; cargo test --workspace 2>&1 | grep -E \"^test result\" | wc -l",
+    "log": "091740-marge-1761943.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.09",
+   "title": "Phase 10 B4 built",
+   "commit": "a7d82cb",
+   "sha": "a7d82cbfdd45fc6f4c0d026573a47939344f78ed",
+   "time": "2026-11-14T09:47:44+01:00",
+   "merge": true,
+   "subject": "Merge Phase 10 B4: devices in the browser – Web Bluetooth GattLink on the shared BLE protocol, reconnecting supervisor, SIM from the build in force (spec 3.09)",
+   "branch": "worktree-agent-a91fc84c3afffd6c8",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T09:45:12+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a91fc84c3afffd6c8",
+    "command": "cargo fmt --all -- --check && echo FMT_OK; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E \"^(error",
+    "log": "094512-marge-1794242.log",
+    "how": "branch",
+    "suites": 5,
+    "passed": 686,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.10",
+   "title": "Phase 8 T7",
+   "commit": "2625e71",
+   "sha": "2625e71f1535b242b01b832d6fda7005bda34ce6",
+   "time": "2026-11-14T10:26:11+01:00",
+   "merge": true,
+   "subject": "Merge Phase 8 T7: orthophoto corridor (ORTC), on by default in every world package; packages rebuilt with ORTC and LITR (spec 3.10)",
+   "branch": "worktree-agent-a28ab4794ac3d1ad8",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T02:27:43+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a28ab4794ac3d1ad8",
+    "command": "make test-wasm 2>&1 | tail -3",
+    "log": "022743-marge-1323831.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.11",
+   "title": "Phase 9 S4 built",
+   "commit": "85e4ed0",
+   "sha": "85e4ed09a20d97c44d4e13dc9b05951dc3330d3f",
+   "time": "2026-11-14T11:10:29+01:00",
+   "merge": true,
+   "subject": "Merge Phase 9 S4: weather simulation and rendering – ocw-weather crate, session weather on the server, clouds, rain/snow/hail, fog, wet roads, snow cover, wind, lightning and thunder, weather sounds (spec 3.11)",
+   "branch": "worktree-agent-afd928e4c40170f8d",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T10:22:09+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-afd928e4c40170f8d",
+    "command": "cargo test -p ocw-desktop -p ocw-client 2>&1 | grep -E \"^test result|FAILED|panicked\" | head -20; echo DESK=${PIPESTATUS",
+    "log": "102209-marge-1839545.log",
+    "how": "branch",
+    "suites": 3,
+    "passed": 421,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.12",
+   "title": "Phase 8 T6 built",
+   "commit": "9c12aac",
+   "sha": "9c12aac4f7cd7ee2695b9b4f085349c8a47bee55",
+   "time": "2026-11-14T11:38:41+01:00",
+   "merge": true,
+   "subject": "Merge Phase 8 T6: rider and bike materials (carbon, spun metal, tyres, fabrics), jersey designer and kit colours (spec 3.12)",
+   "branch": "worktree-agent-acb661a2884cd61db",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T10:42:34+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-acb661a2884cd61db",
+    "command": "cargo test --workspace --no-fail-fast 2>&1 | grep -E \"^test result|FAILED|panicked|^error|left:|right:|-->\" | grep -v \"t",
+    "log": "104234-marge-1862311.log",
+    "how": "branch",
+    "suites": 2,
+    "passed": 283,
+    "failed": 3,
+    "failed_suites": 2
+   }
+  },
+  {
+   "version": "3.13",
+   "title": "Phase 9 S5 built",
+   "commit": "0b17e07",
+   "sha": "0b17e0752e0b143e1e8aab27600a587203310d50",
+   "time": "2026-11-14T12:28:56+01:00",
+   "merge": true,
+   "subject": "Merge Phase 9 S5: the weather machine – World → Weather with presets grid, custom editor, transitions, random weather; event weather set by organisers (spec 3.13)",
+   "branch": "worktree-agent-a68e0bb1639fc2950",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T12:03:22+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a68e0bb1639fc2950",
+    "command": "cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)|-->\" -A 6 | head -60; echo CLIPPY",
+    "log": "120322-marge-1961566.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.14",
+   "title": "Phase 12 K3 built",
+   "commit": "1d8fadb",
+   "sha": "1d8fadb6ab84333a45a504ab39a0726e1dab8238",
+   "time": "2026-11-14T12:34:56+01:00",
+   "merge": true,
+   "subject": "Merge Phase 12 K3: world objects – OBST section, wild-mode collisions with trees, fences, walls, railings and tunnel walls, road barriers hidden by default (spec 3.14)",
+   "branch": "worktree-agent-a14e20b4135819064",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T11:38:06+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a14e20b4135819064",
+    "command": "cargo test --release -p ocw-sim a_hundred -- --nocapture 2>&1 | grep -E \"ms per tick|test result|panicked\"; K3_WORLDS=\"l",
+    "log": "113806-marge-1929541.log",
+    "how": "branch",
+    "suites": 1,
+    "passed": 2,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.15",
+   "title": "Open items of Phase 4 W2 / 4M, Phase 8 T5 / T6 and Phase 9 9I-S2 done",
+   "commit": "0d62f45",
+   "sha": "0d62f4554bc7f18bd8cfa771fb39566483c5ffdf",
+   "time": "2026-11-14T13:17:44+01:00",
+   "merge": true,
+   "subject": "Merge polish bundle: groupset fits its crankset/cassette/chain, console over the workshop, near-black carbon, hip number plates, brushed vs spun metal, warm varied lit windows, kerbs in wild mode, round sidewalk corners (spec 3.15)",
+   "branch": "worktree-agent-ab2900937eba3f076",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T13:14:54+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ab2900937eba3f076",
+    "command": "cargo fmt --all -- --check && echo FMT_OK; cargo clippy -q -p ocw-desktop -p ocw-sim --all-targets -- -D warnings && ech",
+    "log": "131454-marge-2053169.log",
+    "how": "branch",
+    "suites": 3,
+    "passed": 258,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.16",
+   "title": "Phase 9 S7 built",
+   "commit": "c699d17",
+   "sha": "c699d17b3bf8544564af5dfec84bcbb3f068dc85",
+   "time": "2026-11-14T13:55:49+01:00",
+   "merge": true,
+   "subject": "Merge Phase 9 S7: real weather – MeteoSwiss, DWD, MET Norway, Open-Meteo via the game server, ERA5 history (ride a day), Real weather page with attribution (spec 3.16)",
+   "branch": "worktree-agent-a4505c166634b08e1",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T13:34:53+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a4505c166634b08e1",
+    "command": "cargo test -p ocw-desktop -- every_menu_page_fits weather 2>&1 | grep -E \"panicked|vh|left|right|test result|^error|FAIL",
+    "log": "133453-marge-2077263.log",
+    "how": "branch",
+    "suites": 1,
+    "passed": 14,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.17",
+   "title": "Phase 12 K4 + K5 built and Phase 4 W6",
+   "commit": "e107920",
+   "sha": "e107920102a0c3c3d1dcad4b9af1cf2d927f4973",
+   "time": "2026-11-14T14:51:29+01:00",
+   "merge": true,
+   "subject": "Merge Phase 12 K4 + K5 and Phase 4 W6 repairs: damage model, damage indicator and visible damage, persistent part conditions, repairs in hearts; crash notice on its own box (spec 3.17)",
+   "branch": "worktree-agent-a40de89137e6a33b2",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T14:30:21+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a40de89137e6a33b2",
+    "command": "cargo clippy --workspace --all-targets --message-format short -- -D warnings 2>&1 | grep -E \"^(error|warning)|^[a-z/_-]+",
+    "log": "143021-marge-2154056.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.18",
+   "title": "Phase 9 S8 built",
+   "commit": "68340e6",
+   "sha": "68340e6e08acaae44dd9c1076a4f90ad097a9dc6",
+   "time": "2026-11-14T15:22:40+01:00",
+   "merge": true,
+   "subject": "Merge Phase 9 S8: seasons – phenology by degree days and altitude, deciduous trees and larches through the year, crop calendar, climatological snow line, real snow depth (spec 3.18)",
+   "branch": "worktree-agent-acb5596ed5a267ba2",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T14:22:53+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-acb5596ed5a267ba2",
+    "command": "cargo clippy -p ocw-render -p ocw-sky -p ocw-world --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)|-->|^ *",
+    "log": "142253-marge-2145184.log",
+    "how": "branch",
+    "suites": 3,
+    "passed": 8,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.19",
+   "title": "Phase 9 S6 built",
+   "commit": "baa2ba7",
+   "sha": "baa2ba7e64751232a0a583f17e5e2501a0042df6",
+   "time": "2026-11-14T15:44:57+01:00",
+   "merge": true,
+   "subject": "Merge Phase 9 S6: weather physics – headwind along the direction of travel, air density, wet-road rolling resistance and grip, crosswind drafting, tunnel shelter, trainer wind (FTMS / Wahoo) and folded gradient, HUD wind (spec 3.19)",
+   "branch": "worktree-agent-a2709c32cf67f8741",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T15:41:17+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a2709c32cf67f8741",
+    "command": "cargo test -p ocw-desktop 2>&1 | grep -E \"FAILED|panicked|^test result|left:|right:\" | head -30",
+    "log": "154117-marge-2254130.log",
+    "how": "branch",
+    "suites": 1,
+    "passed": 354,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.20",
+   "title": "Phase 8 T3 complete",
+   "commit": "eb17602",
+   "sha": "eb17602ff88ef88fab14b3c715fa29a8de09009c",
+   "time": "2026-11-14T16:36:25+01:00",
+   "merge": true,
+   "subject": "Merge Phase 8 T3: forest type and density from the Copernicus HRL (Dominant Leaf Type, Tree Cover Density 2018) – section FRST, measured leaf type, density-driven tree placement and far canopy (spec 3.20)",
+   "branch": "worktree-agent-a43ce31b19d29fdb9",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T15:58:28+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a43ce31b19d29fdb9",
+    "command": "cargo test --workspace 2>&1 | grep -E \"test result|FAILED|panicked|^error|failures:\" | sort | uniq -c | sort -rn | head ",
+    "log": "155828-marge-2283672.log",
+    "how": "branch",
+    "suites": 31,
+    "passed": 1857,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.21",
+   "title": "Phase 10 B5 built",
+   "commit": "284441f",
+   "sha": "284441f1e6b1ff0c91b92141bd2bcf53b0f2edb7",
+   "time": "2026-11-14T17:10:00+01:00",
+   "merge": true,
+   "subject": "Merge Phase 10 B5: audio and voice in the browser – shared ocw-audio mixer, Web Audio scheduling with the autoplay gate, LiveKit JS voice behind ocw_voice::web, shared settings registry, Sound & voice panel (spec 3.21)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T17:42:32+01:00",
+    "exit": 0,
+    "branch": "main",
+    "command": "export PATH=$HOME/.local/bin:$PATH; make test-web-livekit 2>&1 | tail -40",
+    "log": "174232-marge-2437148.log",
+    "how": "main after merge",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.22",
+   "title": "Phase 12 / 13 leftovers built",
+   "commit": "abe1abd",
+   "sha": "abe1abd1dca403e66833cd5b3d4fbc47b05a197c",
+   "time": "2026-11-14T18:46:27+01:00",
+   "merge": true,
+   "subject": "Merge Phase 12 / 13 leftovers: wet-road grip in crashes and skids (Slide), chase camera shake and wider orbit, last-moment warning and proximity arrow as graphics, guided camera paths (G5), rider list page; deterministic frame-server test (spec 3.22)",
+   "branch": "worktree-agent-ab5b62071e8425803",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T18:34:59+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ab5b62071e8425803",
+    "command": "CC=clang-21 CXX=clang++-21 cargo clippy --workspace --all-targets --features ocw-desktop/voice -- -D warnings 2>&1 | gre",
+    "log": "183459-marge-2515407.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.23",
+   "title": "Phase 4 leftovers built",
+   "commit": "74151f9",
+   "sha": "74151f952e0656187b2af7f0e3076d64d40096a7",
+   "time": "2026-11-14T18:35:38+01:00",
+   "merge": true,
+   "subject": "Merge Phase 4 leftovers: bench catalogue (4D) with the + hook, fitted lights drive the ride's bike lights, trainer SIM per race mode test, idle pose at the mirror, kit colours for shorts / socks / shoes / gloves (spec 3.23)",
+   "branch": "worktree-agent-a4765f0e41cbf0099",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T18:31:17+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a4765f0e41cbf0099",
+    "command": "source ~/.cargo/env 2>/dev/null; for i in 1 2 3 4 5; do cargo test -q -p ocw-server --lib frame_server_matches 2>&1 | gr",
+    "log": "183117-marge-2509083.log",
+    "how": "branch",
+    "suites": 5,
+    "passed": 3,
+    "failed": 2,
+    "failed_suites": 2
+   }
+  },
+  {
+   "version": "3.24",
+   "title": "Phase 10 B6 built",
+   "commit": "b3cdc56",
+   "sha": "b3cdc561962f1873a42e922f59117e2d950f0623",
+   "time": "2026-11-14T20:11:48+01:00",
+   "merge": true,
+   "subject": "Merge Phase 10 B6: UI parity in the browser – shared menus, settings, HUD, time and weather machines in ocw-client / the new ocw-ui crate, platform filter, gamepad, timestamped captures (JPEG, WebM) and FIT download (spec 3.24)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "3.25",
+   "title": "Test pictures stand alone",
+   "commit": "bfddece",
+   "sha": "bfddece30cb2bf865f0e22d3854a7c97d668cc11",
+   "time": "2026-11-14T20:18:36+01:00",
+   "merge": false,
+   "subject": "Spec 3.25: test pictures stand alone – sent and archived one by one, joined only to show a comparison (§11.4, ART-PROJECT §2)"
+  },
+  {
+   "version": "3.26",
+   "title": "Phase 8 T4 open items built",
+   "commit": "f250b61",
+   "sha": "f250b61dc79ed6f33c4763d87799796b1bc07b14",
+   "time": "2026-11-14T21:30:30+01:00",
+   "merge": true,
+   "subject": "Merge Phase 8 T4 open items: straight-skeleton roofs on any footprint, dormers and roof windows, style-driven balconies, building:part (BPRT), min_height fix (spec 3.26)",
+   "branch": "worktree-agent-a13befb3a595ea7b4",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T20:32:25+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a13befb3a595ea7b4",
+    "command": "OCW_PACKAGE=$PWD/data/pilot/liechtenstein.ocwpkg cargo test -q --release -p ocw-world --lib list_building_parts -- --ign",
+    "log": "203225-marge-2700578.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.27",
+   "title": "Phase 10 B7's WebGL 2 part built",
+   "commit": "e57f2e2",
+   "sha": "e57f2e2016f05fe7945a738768a6f6619e4d2fcc",
+   "time": "2026-11-14T22:06:26+01:00",
+   "merge": true,
+   "subject": "Merge Phase 10 B7 (WebGL 2 part): a second web build for WebGL 2 chosen at page load, adapter-checked workarounds (simple sky, texture-array fallback, abrupt LOD ranges, one cascade), quality presets Low / Medium / High / Auto as display.quality for both apps, gpu and quality commands (spec 3.27)",
+   "branch": "worktree-agent-ab219a368de806d4e",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-14T21:50:03+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ab219a368de806d4e",
+    "command": "cargo fmt --all --check >/dev/null 2>&1 && echo fmt-ok || echo fmt-DIFF; cargo test -p ocw-ui 2>&1 | grep -E \"test resul",
+    "log": "215003-marge-2799008.log",
+    "how": "branch",
+    "suites": 2,
+    "passed": 13,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.28",
+   "title": "Documentation catch-up",
+   "commit": "1d57b7a",
+   "sha": "1d57b7a63d704d19a4427bb488cbdc88329106ca",
+   "time": "2026-11-14T22:18:51+01:00",
+   "merge": false,
+   "subject": "Docs catch-up (spec 3.28): CLAUDE.md project status and code map (forest, roof skeleton, seasons, quality, WebGL 2), machine notes (Mac zsh globs, livekit-server on marge, package rollout); spec phase headings 8 / 9 / 10 with their status, janitor /bin/sh note"
+  },
+  {
+   "version": "3.29",
+   "title": "VR headset corrected by the user",
+   "commit": "99dd6f9",
+   "sha": "99dd6f9d2fb63fd2e55b3b0f2ccd12aca80cd044",
+   "time": "2026-11-14T22:26:05+01:00",
+   "merge": false,
+   "subject": "Spec 3.29: VR development headset is the Oculus Quest (first generation) – focus on it, other models postponed; Quest 1 facts (Link / Air Link / ALVR, SD835 72 Hz, sideload only); new Phase 11 Q7 (which PC drives it)"
+  },
+  {
+   "version": "3.30",
+   "title": "Decision from the build dashboard",
+   "commit": "b6e5662",
+   "sha": "b6e56625c658f23b59a94ddf7146cef9fbc4b7f8",
+   "time": "2026-11-14T22:27:02+01:00",
+   "merge": false,
+   "subject": "Spec 3.30: Phase 14 Q4 (BLE fallback) postponed (dashboard)"
+  },
+  {
+   "version": "3.31",
+   "title": "VR decisions by the user",
+   "commit": "c2157f9",
+   "sha": "c2157f9888ade4181a210e7dcdbba3aec68dc1eb",
+   "time": "2026-11-14T22:29:16+01:00",
+   "merge": false,
+   "subject": "Spec 3.31: VR starts with Oculus Link (Quest 1 as a viewing device of the desktop app); standalone app by sideloading only"
+  },
+  {
+   "version": "3.32",
+   "title": "Build infrastructure documented",
+   "commit": "5bf6b52",
+   "sha": "5bf6b52de115178529b95967859d15d4b7211eda",
+   "time": "2026-11-14T23:28:58+01:00",
+   "merge": true,
+   "subject": "Merge build infrastructure docs: README Build infrastructure chapter (remote builds, dashboard, cleanup, kiosks, profiling, harness, releases, world builds), spec §11.2 / §11.2.1 / §11.3 (spec 3.32); make help lists targets with digits",
+   "branch": "worktree-agent-a7da6b9f9f4a8ccf0",
+   "check": null
+  },
+  {
+   "version": "3.33",
+   "title": "Sign-in decided by the user",
+   "commit": "c03317c",
+   "sha": "c03317cf20ff560ddbd4e0d37bf84de2cda383b1",
+   "time": "2026-11-14T23:52:13+01:00",
+   "merge": false,
+   "subject": "Spec 3.33: sign-in with Google and Strava, brokered by our own backend (§9.1)"
+  },
+  {
+   "version": "3.34",
+   "title": "VR starts now",
+   "commit": "0d64c56",
+   "sha": "0d64c566e367a7d16c2ae60c5cd8bc9697fb0a24",
+   "time": "2026-11-14T23:53:05+01:00",
+   "merge": false,
+   "subject": "Spec 3.34: VR starts now (Phase 11 Q6), X1 first"
+  },
+  {
+   "version": "3.35",
+   "title": "Art project",
+   "commit": "4aececa",
+   "sha": "4aececaafae6f0c61f78cddd1f9fcdfb5f0bdd64",
+   "time": "2026-11-14T23:56:46+01:00",
+   "merge": true,
+   "subject": "Merge art collector: hourly systemd user timer (art-collect), archive moved to art/build-history with masked text tracked in git, lock, status file and dashboard panel, ART-PROJECT v1.5 (spec 3.35)",
+   "branch": null,
+   "check": null
+  }
+ ],
+ "deploys": [],
+ "releases": [
+  {
+   "tag": "v0.2.1",
+   "name": "Open Cycling World 0.2.1 (development build)",
+   "time": "2026-11-14T01:41:47+01:00",
+   "prerelease": true
+  }
+ ],
+ "agent_jobs": []
 }

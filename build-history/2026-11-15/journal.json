@@ -9,13 +9,811 @@
    "subject": "Spec 3.36: public preview of the browser app on GitHub Pages (B8a, stage 1)",
    "added": 3,
    "removed": 1
+  },
+  {
+   "sha": "8ea61cc",
+   "time": "00:01:43",
+   "merge": false,
+   "subject": "Art: collector tests never touch the real archive; gather's sources honour OCW_TEST_OUTPUT (no agent worktrees then)",
+   "added": 128,
+   "removed": 3
+  },
+  {
+   "sha": "965431b",
+   "time": "00:01:44",
+   "merge": false,
+   "subject": "Phase 7: cargo fmt",
+   "added": 687,
+   "removed": 153
+  },
+  {
+   "sha": "ed4da5f",
+   "time": "00:16:03",
+   "merge": false,
+   "subject": "Phase 7: clippy (duplicate allow, test-only helpers, a type alias)",
+   "added": 19,
+   "removed": 9
+  },
+  {
+   "sha": "098915a",
+   "time": "00:21:50",
+   "merge": true,
+   "subject": "Merge branch 'main' into worktree-agent-a43d6ec0bd80728f8",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "9212b31",
+   "time": "06:15:27",
+   "merge": false,
+   "subject": "wip: browser setup",
+   "added": 1498,
+   "removed": 87
+  },
+  {
+   "sha": "3e6cf9e",
+   "time": "06:15:32",
+   "merge": false,
+   "subject": "Unicorn mode in the browser (spec §14 Phase 13 G5): god mode shared as ocw_ui::god",
+   "added": 1788,
+   "removed": 924
+  },
+  {
+   "sha": "ee4ad6f",
+   "time": "06:15:33",
+   "merge": false,
+   "subject": "Art: more varied music and a style per day (spec 3.37, ART-PROJECT 1.6 §3.2, §4)",
+   "added": 1006,
+   "removed": 145
+  },
+  {
+   "sha": "00bed8b",
+   "time": "06:15:42",
+   "merge": true,
+   "subject": "Merge main (spec 3.36) into the animations / K6 branch; this work becomes spec 3.37",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "4e43b82",
+   "time": "06:15:44",
+   "merge": true,
+   "subject": "Merge branch 'main' into worktree-agent-ab18479c7c2ff5bd4",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "9adc4fd",
+   "time": "06:15:47",
+   "merge": true,
+   "subject": "Merge branch 'main' into worktree-agent-ab2216bf39859444d",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "3fdb5f8",
+   "time": "06:15:59",
+   "merge": true,
+   "subject": "Merge main (spec 3.36); unicorn mode in the browser becomes spec 3.37",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b0a7126",
+   "time": "06:17:55",
+   "merge": false,
+   "subject": "U-turn cue regression test; scene timings; version references 3.37",
+   "added": 41,
+   "removed": 31
+  },
+  {
+   "sha": "8f5f1b3",
+   "time": "06:27:21",
+   "merge": false,
+   "subject": "Art: incident log (spec 3.38, ART-PROJECT 1.7 §2.6); mask list found from worktrees; dashboard unit memory cap",
+   "added": 471,
+   "removed": 11
+  },
+  {
+   "sha": "499b9a2",
+   "time": "06:44:20",
+   "merge": false,
+   "subject": "Art: incident note 01:05 - correct the publish times",
+   "added": 2,
+   "removed": 1
+  },
+  {
+   "sha": "9c2044d",
+   "time": "06:44:56",
+   "merge": true,
+   "subject": "Merge art project: hermetic collector tests, varied per-day music (art/music.py, five styles), incident log with root-cause notes, dashboard memory cap (spec 3.37, 3.38)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "36d9c9e",
+   "time": "06:46:00",
+   "merge": false,
+   "subject": "Art: re-masked journals and token counts of days 1–4, today's journals and the first incident notes (00:39 OOM, the masking slip)",
+   "added": 1626,
+   "removed": 380
+  },
+  {
+   "sha": "a8c519f",
+   "time": "06:46:26",
+   "merge": false,
+   "subject": "WIP console Tab completion and GPS line",
+   "added": 1820,
+   "removed": 62
+  },
+  {
+   "sha": "b7b2a7e",
+   "time": "06:46:33",
+   "merge": true,
+   "subject": "Merge main into the console completion / GPS branch",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "d9a9b05",
+   "time": "07:03:11",
+   "merge": true,
+   "subject": "Merge Unicorn mode in the browser: god-mode glue shared in ocw-ui (flight, touch, inspection, HUD), Pointer Lock in the browser, test-web-unicorn (spec 3.39)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "4dc6f23",
+   "time": "07:04:21",
+   "merge": true,
+   "subject": "Merge main (unicorn mode in the browser) into the console completion / GPS branch; spec 3.40",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "9cb2372",
+   "time": "07:09:00",
+   "merge": false,
+   "subject": "Browser app setup: web-serve guard, make web-remote, WEB_BIND, pinned Chromium, README walkthrough test (spec 3.37)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "85c04fd",
+   "time": "07:15:20",
+   "merge": true,
+   "subject": "Merge branch 'main' into worktree-agent-ab18479c7c2ff5bd4",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "6348358",
+   "time": "07:15:20",
+   "merge": false,
+   "subject": "HUD: the top panel stays clear of the top-right column at every HUD size; bindings for the shared unicorn mode (spec 3.40)",
+   "added": 111,
+   "removed": 22
+  },
+  {
+   "sha": "719fe40",
+   "time": "07:22:58",
+   "merge": false,
+   "subject": "ocw-ui god: cargo fmt",
+   "added": 1,
+   "removed": 5
+  },
+  {
+   "sha": "371ffb4",
+   "time": "07:27:29",
+   "merge": false,
+   "subject": "ocw-ui menu test: unicorn rows on Controls -> Unicorn mode after the merge",
+   "added": 5,
+   "removed": 2
+  },
+  {
+   "sha": "a08c638",
+   "time": "07:41:09",
+   "merge": false,
+   "subject": "Art: features log and agent jobs in the journal, \"Today's features\" roll (spec 3.40, ART-PROJECT 1.8 §2.7)",
+   "added": 754,
+   "removed": 11
+  },
+  {
+   "sha": "559f594",
+   "time": "07:51:36",
+   "merge": false,
+   "subject": "Helmets (spec §2.6): sculpted road-style shells with vents, rim, retention band and straps, two-tone; TT teardrop with tail and visor; tests",
+   "added": 1215,
+   "removed": 121
+  },
+  {
+   "sha": "e3364d8",
+   "time": "07:51:57",
+   "merge": true,
+   "subject": "Merge main into the helmet rework (spec 3.40)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "163da1e",
+   "time": "07:52:06",
+   "merge": false,
+   "subject": "Helmets: spec references 3.40",
+   "added": 6,
+   "removed": 6
+  },
+  {
+   "sha": "ed821d6",
+   "time": "07:52:25",
+   "merge": true,
+   "subject": "Merge browser setup fixes: web-serve stops without a build, make web-remote, WEB_BIND, cargo profile web-release, pinned Chromium 157 for the browser tests, make test-web-readme (spec 3.40)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b28542c",
+   "time": "07:52:42",
+   "merge": true,
+   "subject": "Merge art features log: Features and Agent jobs in the journal, agent-event, commit in the build log, deploys log, Today's features roll (spec 3.41)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "59f1f44",
+   "time": "07:52:52",
+   "merge": false,
+   "subject": "Helmets: type aliases (clippy)",
+   "added": 9,
+   "removed": 7
+  },
+  {
+   "sha": "1c1aefe",
+   "time": "07:55:05",
+   "merge": false,
+   "subject": "ocw-ui menu test: cargo fmt",
+   "added": 1,
+   "removed": 4
+  },
+  {
+   "sha": "7ccb1ea",
+   "time": "07:55:49",
+   "merge": false,
+   "subject": "WIP sign-in with Google and Strava (spec §9.1): ocw-auth, ocw-accounts backend, game server token check, Account page (desktop, browser)",
+   "added": 11640,
+   "removed": 83
+  },
+  {
+   "sha": "3d15557",
+   "time": "07:55:54",
+   "merge": true,
+   "subject": "Merge main into the sign-in branch",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b64711c",
+   "time": "07:56:48",
+   "merge": false,
+   "subject": "Spec 3.42: sign-in build note (§9.1.1, Phase 5)",
+   "added": 39,
+   "removed": 1
+  },
+  {
+   "sha": "47540c5",
+   "time": "07:56:54",
+   "merge": false,
+   "subject": "Cargo.lock after the merge",
+   "added": 2,
+   "removed": 0
+  },
+  {
+   "sha": "14e09b4",
+   "time": "07:57:49",
+   "merge": false,
+   "subject": "README: Accounts and sign-in (users, operator setup: Google client, Strava app, config, redirect URIs)",
+   "added": 95,
+   "removed": 2
+  },
+  {
+   "sha": "2574052",
+   "time": "07:58:44",
+   "merge": false,
+   "subject": "Account page screenshots against the fake providers (scripts/test-account-pages.sh); OCW_ACCOUNT_FILE",
+   "added": 58,
+   "removed": 1
+  },
+  {
+   "sha": "d5d52b2",
+   "time": "07:59:23",
+   "merge": false,
+   "subject": "Sign-in: OCW_OPEN_URL (not the browser tests' OCW_BROWSER) names the desktop's browser command",
+   "added": 7,
+   "removed": 7
+  },
+  {
+   "sha": "f74e76c",
+   "time": "08:00:54",
+   "merge": false,
+   "subject": "WIP B8a: web preview (page config, preview root, site assembly, workflow)",
+   "added": 1718,
+   "removed": 36
+  },
+  {
+   "sha": "bc5df14",
+   "time": "08:01:29",
+   "merge": false,
+   "subject": "Sign-in: the fake Google's RSA key made at run time (no private key in the repository), axum's get no longer shadowed; make test-web-account",
+   "added": 230,
+   "removed": 32
+  },
+  {
+   "sha": "e8f6cdc",
+   "time": "08:02:24",
+   "merge": false,
+   "subject": "accounts: code redemption without holding the state lock across the match",
+   "added": 9,
+   "removed": 14
+  },
+  {
+   "sha": "1c48027",
+   "time": "08:02:27",
+   "merge": true,
+   "subject": "Merge main into the B8a web preview branch (profile web-preview-release, pinned test browser)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "f883a5b",
+   "time": "08:04:06",
+   "merge": false,
+   "subject": "Console Tab completion and the GPS line (spec 3.40): hud-gps-route scene rides the package route by its name",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "94d30e3",
+   "time": "08:04:23",
+   "merge": false,
+   "subject": "B8a: publish-preview-worlds.sh names the repository for gh (build checkouts have no .git); README profile names",
+   "added": 6,
+   "removed": 4
+  },
+  {
+   "sha": "e6dafa2",
+   "time": "08:05:06",
+   "merge": false,
+   "subject": "accounts: build fixes (Strava client type, borrows)",
+   "added": 16,
+   "removed": 8
+  },
+  {
+   "sha": "316a4ec",
+   "time": "08:05:07",
+   "merge": false,
+   "subject": "WIP vegetation: flora species rules, VEGE section, plantings rows, planted-tree obstacles",
+   "added": 2364,
+   "removed": 5
+  },
+  {
+   "sha": "1b4cded",
+   "time": "08:05:07",
+   "merge": true,
+   "subject": "Merge main into vegetation",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "1b1dc2b",
+   "time": "08:11:39",
+   "merge": false,
+   "subject": "Helmets: narrower dark side band, shorter TT visor; models regenerated",
+   "added": 8,
+   "removed": 7
+  },
+  {
+   "sha": "9141b51",
+   "time": "08:11:42",
+   "merge": false,
+   "subject": "Sign-in: clippy fixes (desktop menu pages list, link URL borrow, boxed Welcome in the server test)",
+   "added": 6,
+   "removed": 4
+  },
+  {
+   "sha": "8955bf2",
+   "time": "08:19:12",
+   "merge": false,
+   "subject": "Sign-in: the example config lives in services/accounts (remote.sh never copies config/)",
+   "added": 5,
+   "removed": 5
+  },
+  {
+   "sha": "45730a5",
+   "time": "08:25:01",
+   "merge": false,
+   "subject": "WIP vegetation: species models, tile plants in near/far chunks, VEGE builder, crop share in the colour map",
+   "added": 3005,
+   "removed": 63
+  },
+  {
+   "sha": "85db4ca",
+   "time": "08:30:11",
+   "merge": false,
+   "subject": "WIP vegetation: build scripts, spots, VEGE spec, README, far conifer tone",
+   "added": 236,
+   "removed": 2
+  },
+  {
+   "sha": "e52ae73",
+   "time": "08:41:43",
+   "merge": false,
+   "subject": "WIP vegetation: measured crop maps (EUCROPMAP 2022, Mapa de Cultivos de Canarias), tuned tables",
+   "added": 665,
+   "removed": 41
+  },
+  {
+   "sha": "e145767",
+   "time": "08:43:42",
+   "merge": false,
+   "subject": "WIP vegetation: spec §4.6.1 research tables and data sources, version 3.42",
+   "added": 86,
+   "removed": 20
+  },
+  {
+   "sha": "3613063",
+   "time": "08:45:34",
+   "merge": false,
+   "subject": "ocw-ui test: Display is the fifth Settings item now (Account first)",
+   "added": 2,
+   "removed": 1
+  },
+  {
+   "sha": "a96c869",
+   "time": "08:46:12",
+   "merge": false,
+   "subject": "WIP vegetation: fmt, small fixes",
+   "added": 441,
+   "removed": 120
+  },
+  {
+   "sha": "c926016",
+   "time": "08:46:59",
+   "merge": true,
+   "subject": "Merge Phase 7: training history (rides, totals, bests, power curve, FIT import/export) and M9 key/button rebinding with accessibility options; HUD panel stays clear of the FPS column (spec 3.42)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "5e96eb2",
+   "time": "08:47:31",
+   "merge": true,
+   "subject": "Merge console Tab completion and the GPS line restored (route rides kept no geographic origin since fae1547), rider.gps and hud.gps in both apps, browser origin= option (spec 3.43)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "9848f41",
+   "time": "08:48:22",
+   "merge": false,
+   "subject": "WIP vegetation: float-safe flora tests",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "62eb12a",
+   "time": "08:48:25",
+   "merge": true,
+   "subject": "Merge main (Phase 7, shared unicorn mode, browser setup; spec 3.42) into the animations / K6 branch; this work becomes spec 3.44",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "06f5768",
+   "time": "08:48:37",
+   "merge": true,
+   "subject": "Merge main (spec 3.43 console completion, GPS line)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "cfaad72",
+   "time": "09:07:38",
+   "merge": false,
+   "subject": "B8a: web-preview-release at opt-level z (measured), WEB_WASM_OPT=off, README notes",
+   "added": 18,
+   "removed": 7
+  },
+  {
+   "sha": "f8ca730",
+   "time": "09:10:52",
+   "merge": false,
+   "subject": "Helmets: rustfmt",
+   "added": 3,
+   "removed": 1
+  },
+  {
+   "sha": "15f4104",
+   "time": "09:11:56",
+   "merge": false,
+   "subject": "B8a: spec build note (sizes, trust, worlds, workflow), README sizes",
+   "added": 38,
+   "removed": 5
+  },
+  {
+   "sha": "e80662d",
+   "time": "09:12:29",
+   "merge": false,
+   "subject": "desktop account: clippy (OpenUrl type, userinfo only in tests)",
+   "added": 7,
+   "removed": 3
+  },
+  {
+   "sha": "f2d8fef",
+   "time": "09:21:32",
+   "merge": false,
+   "subject": "WIP vegetation: quality test for the far tree range; drive.sh OCW_APP",
+   "added": 12,
+   "removed": 1
+  },
+  {
+   "sha": "35be02d",
+   "time": "09:23:59",
+   "merge": false,
+   "subject": "WIP vegetation: dragon tree tufts sway with their height",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "6106e44",
+   "time": "09:28:56",
+   "merge": false,
+   "subject": "WIP vegetation: clippy",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "189bada",
+   "time": "09:29:34",
+   "merge": false,
+   "subject": "WIP vegetation: spec Phase 8 T8 notes",
+   "added": 6,
+   "removed": 0
+  },
+  {
+   "sha": "5410232",
+   "time": "09:46:54",
+   "merge": true,
+   "subject": "Merge cooler helmets: sculpted road / lightweight / aero road shells with vents, two-tone, retention band and straps; TT teardrop with wrap visor; no clipping with hair, caps and glasses (spec 3.44)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "0ff7a70",
+   "time": "09:47:27",
+   "merge": true,
+   "subject": "Merge main (spec 3.44 helmets); this work becomes spec 3.45",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a6a05a5",
+   "time": "10:03:48",
+   "merge": false,
+   "subject": "WIP vegetation: scenes veg-li-*, veg-tf-*",
+   "added": 118,
+   "removed": 0
+  },
+  {
+   "sha": "0ca2f20",
+   "time": "10:08:15",
+   "merge": false,
+   "subject": "B8a: the preview's line in the ride above the height profile (clear of the route label)",
+   "added": 5,
+   "removed": 3
+  },
+  {
+   "sha": "ebec766",
+   "time": "10:08:35",
+   "merge": false,
+   "subject": "B8a: spec and README: site size, test results, open points",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "d6e843e",
+   "time": "10:32:19",
+   "merge": false,
+   "subject": "WIP vegetation: scenes veg-bf-*",
+   "added": 64,
+   "removed": 0
+  },
+  {
+   "sha": "f085e50",
+   "time": "10:33:47",
+   "merge": false,
+   "subject": "test-account-pages: open the Account page at the start (software rendering is slow)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "8ab9209",
+   "time": "10:42:46",
+   "merge": true,
+   "subject": "Merge B8a public preview on GitHub Pages: size-optimised preview build (wasm-opt, fat LTO), preview signing root, page config, start and credits pages, signed Liechtenstein release asset, Pages workflow, README link (spec 3.45)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "226d3fe",
+   "time": "10:43:15",
+   "merge": true,
+   "subject": "Merge main (spec 3.45 GitHub Pages preview); this work becomes spec 3.46",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "96c6062",
+   "time": "10:51:11",
+   "merge": false,
+   "subject": "WIP vegetation: detail chunks for bananas and vines, lighter banana model, rounded vine canopy, species-relative scale, palms and Canary pines refined",
+   "added": 116,
+   "removed": 58
+  },
+  {
+   "sha": "4d33012",
+   "time": "10:55:16",
+   "merge": false,
+   "subject": "Spec 3.42: the browser sign-in test and the screenshots in §9.1.1",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "114666b",
+   "time": "10:56:05",
+   "merge": false,
+   "subject": "Renumber the animations / K6 version to spec 3.47",
+   "added": 24,
+   "removed": 24
+  },
+  {
+   "sha": "beb5a4e",
+   "time": "10:56:19",
+   "merge": false,
+   "subject": "Sign-in tests and fakes: fictional names (Ada Rider, Bea Climber, Cleo Sprinter, Dora Tempo) instead of real riders",
+   "added": 35,
+   "removed": 39
+  },
+  {
+   "sha": "8796545",
+   "time": "10:57:00",
+   "merge": true,
+   "subject": "Merge main (3.45) into the sign-in branch; sign-in is spec 3.46",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "594e8c1",
+   "time": "11:20:38",
+   "merge": true,
+   "subject": "Merge rider animations (foot down, cornering, U-turn look, finish throw, victory) and Phase 12 K6 organiser rules (aids, chaotic bots, time limit, service wait, DNF reasons) (spec 3.47)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "bb11aa0",
+   "time": "11:21:05",
+   "merge": true,
+   "subject": "Merge main (3.47) into the sign-in branch; sign-in stays 3.46 below 3.47",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "53a853b",
+   "time": "11:37:33",
+   "merge": false,
+   "subject": "WIP vegetation: bumpy crop stands, varied autumn vines, longer fruit blossom",
+   "added": 82,
+   "removed": 35
+  },
+  {
+   "sha": "42b48df",
+   "time": "11:48:26",
+   "merge": false,
+   "subject": "B8a: the public preview is live on GitHub Pages – live test passed, Pages gzips the wasm (spec B8a note, README)",
+   "added": 5,
+   "removed": 4
+  },
+  {
+   "sha": "1f2a0da",
+   "time": "12:15:58",
+   "merge": false,
+   "subject": "Spec Phase 8 T8: packages, frame rate, renders, tests, open points",
+   "added": 5,
+   "removed": 0
+  },
+  {
+   "sha": "bbed3f1",
+   "time": "12:16:05",
+   "merge": false,
+   "subject": "Spec: Phase 8 heading and §4.6 point to T8",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "866a5a2",
+   "time": "12:16:32",
+   "merge": true,
+   "subject": "Merge main into vegetation (spec version 3.48)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "e2b4bda",
+   "time": "12:18:36",
+   "merge": true,
+   "subject": "Merge sign-in with Google and Strava: ocw-auth, the ocw-accounts backend (OIDC-shaped endpoints, device flow, rotation, export/delete), game-server token check, Settings → Account in both apps; fictional test identities (spec 3.46)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a88498c",
+   "time": "12:21:48",
+   "merge": false,
+   "subject": "Coordinator move nils@deb -> user@deb: checklist (docs/MIGRATE-DEB-USER.md) and root copy script (scripts/migrate-user.sh, dry run by default)",
+   "added": 188,
+   "removed": 0
+  },
+  {
+   "sha": "331a29f",
+   "time": "13:14:38",
+   "merge": false,
+   "subject": "Plan Phase 15 (3D objects as glTF model files in artwork/3dmodels: format comparison, model contract, import/export/loader, migration M1-M6) and Phase 16 (OCW Studio: models, world patches, GPX routes, routing planners with licence check) (spec 3.48)",
+   "added": 508,
+   "removed": 4
+  },
+  {
+   "sha": "259934b",
+   "time": "13:15:45",
+   "merge": true,
+   "subject": "Merge realistic vegetation (Phase 8 T8): flora species, VEGE crops and plantations, planted trees in OBST, world-builder vegetation, flora/vegetation renderer (spec 3.49)",
+   "added": 0,
+   "removed": 0
   }
  ],
- "merges": 0,
- "lines_added": 3,
- "lines_removed": 1,
+ "merges": 30,
+ "lines_added": 33083,
+ "lines_removed": 2643,
  "spec_versions": [
-  "3.36"
+  "3.36",
+  "3.37",
+  "3.36",
+  "3.36",
+  "3.38",
+  "3.37",
+  "3.39",
+  "3.40",
+  "3.37",
+  "3.40",
+  "3.40",
+  "3.40",
+  "3.40",
+  "3.41",
+  "3.42",
+  "3.40",
+  "3.42",
+  "3.43",
+  "3.42",
+  "3.43",
+  "3.44",
+  "3.44",
+  "3.45",
+  "3.45",
+  "3.42",
+  "3.47",
+  "3.46",
+  "3.47",
+  "3.46",
+  "3.48",
+  "3.49"
  ],
  "tests": null,
  "media": [
@@ -188,17 +986,2507 @@
    "file": "003211-shot-wayland-god-menu-world.jpg",
    "time": "00:32:11",
    "kind": "image"
+  },
+  {
+   "file": "061728-frames-c1.jpg",
+   "time": "06:17:28",
+   "kind": "image"
+  },
+  {
+   "file": "061729-frames-c1.5.jpg",
+   "time": "06:17:29",
+   "kind": "image"
+  },
+  {
+   "file": "061730-frames-c2.jpg",
+   "time": "06:17:30",
+   "kind": "image"
+  },
+  {
+   "file": "061731-frames-c2.5.jpg",
+   "time": "06:17:31",
+   "kind": "image"
+  },
+  {
+   "file": "061732-frames-c3.5.jpg",
+   "time": "06:17:32",
+   "kind": "image"
+  },
+  {
+   "file": "061734-frames-c4.jpg",
+   "time": "06:17:34",
+   "kind": "image"
+  },
+  {
+   "file": "061734-frames-strip.jpg",
+   "time": "06:17:34",
+   "kind": "image"
+  },
+  {
+   "file": "064743-web-web-unicorn-flight.jpg",
+   "time": "06:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "064743-web-web-unicorn-inspect.jpg",
+   "time": "06:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "064743-web-web-unicorn-menu.jpg",
+   "time": "06:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "065714-scenes-p7-wayland-menu-history-rides.jpg",
+   "time": "06:57:14",
+   "kind": "image"
+  },
+  {
+   "file": "065724-scenes-p7-wayland-menu-history-ride.jpg",
+   "time": "06:57:24",
+   "kind": "image"
+  },
+  {
+   "file": "065734-scenes-p7-wayland-menu-bindings-conflict.jpg",
+   "time": "06:57:34",
+   "kind": "image"
+  },
+  {
+   "file": "065745-scenes-p7-wayland-menu-accessibility.jpg",
+   "time": "06:57:45",
+   "kind": "image"
+  },
+  {
+   "file": "065752-scenes-p7-wayland-access-hud.jpg",
+   "time": "06:57:52",
+   "kind": "image"
+  },
+  {
+   "file": "065816-scenes-p7-x11-menu-history-rides.jpg",
+   "time": "06:58:16",
+   "kind": "image"
+  },
+  {
+   "file": "065840-scenes-p7-x11-menu-history-ride.jpg",
+   "time": "06:58:40",
+   "kind": "image"
+  },
+  {
+   "file": "065904-scenes-p7-x11-menu-bindings-conflict.jpg",
+   "time": "06:59:04",
+   "kind": "image"
+  },
+  {
+   "file": "065929-scenes-p7-x11-menu-accessibility.jpg",
+   "time": "06:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "065948-scenes-p7-x11-access-hud.jpg",
+   "time": "06:59:48",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-01-root.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-02-root.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-03-route-hills.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-04-route-hills-bots-5-power-200-start-0-name-ada-ftp-250-qualit.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-05-route-loop-bots-3-power-250-start-1-5-name-ada-ftp-250.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-06-route-hills-gpu-webgl2-quality-low.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-07-world-liechtenstein-route-vaduz-malbun-key-first-loading.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-07-world-liechtenstein-route-vaduz-malbun-key.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-08-world-liechtenstein-route-vaduz-malbun-bots-5-power-250-name-first-loading.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-08-world-liechtenstein-route-vaduz-malbun-bots-5-power-250-name.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-09-world-liechtenstein-free-1-key-first-loading.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-09-world-liechtenstein-free-1-key.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-10-world-liechtenstein-key-first-loading.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-10-world-liechtenstein-key.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "065952-web-readme-11-route-hills.jpg",
+   "time": "06:59:52",
+   "kind": "image"
+  },
+  {
+   "file": "070129-web-web-world-unicorn-flight.jpg",
+   "time": "07:01:29",
+   "kind": "image"
+  },
+  {
+   "file": "070129-web-web-world-unicorn-inspect.jpg",
+   "time": "07:01:29",
+   "kind": "image"
+  },
+  {
+   "file": "070129-web-web-world-unicorn-menu.jpg",
+   "time": "07:01:29",
+   "kind": "image"
+  },
+  {
+   "file": "070944-scenes-p7-x11b-menu-history-rides.jpg",
+   "time": "07:09:44",
+   "kind": "image"
+  },
+  {
+   "file": "071016-scenes-p7-x11b-menu-history-ride.jpg",
+   "time": "07:10:16",
+   "kind": "image"
+  },
+  {
+   "file": "071050-scenes-p7-x11b-menu-bindings-conflict.jpg",
+   "time": "07:10:50",
+   "kind": "image"
+  },
+  {
+   "file": "071117-scenes-p7-x11b-menu-accessibility.jpg",
+   "time": "07:11:17",
+   "kind": "image"
+  },
+  {
+   "file": "071150-scenes-p7-x11b-access-hud.jpg",
+   "time": "07:11:50",
+   "kind": "image"
+  },
+  {
+   "file": "071544-shot-wayland-console-completion-cycle.jpg",
+   "time": "07:15:44",
+   "kind": "image"
+  },
+  {
+   "file": "071617-shot-wayland-k6-event-rules.jpg",
+   "time": "07:16:17",
+   "kind": "image"
+  },
+  {
+   "file": "071624-shot-wayland-k6-organiser-rules-menu.jpg",
+   "time": "07:16:24",
+   "kind": "image"
+  },
+  {
+   "file": "071716-shot-wayland-k6-results-rules.jpg",
+   "time": "07:17:16",
+   "kind": "image"
+  },
+  {
+   "file": "071723-shot-wayland-a26-foot-down.jpg",
+   "time": "07:17:23",
+   "kind": "image"
+  },
+  {
+   "file": "071752-video-wayland-a26-foot-down-video.jpg",
+   "time": "07:17:52",
+   "kind": "image"
+  },
+  {
+   "file": "071752-video-wayland-a26-foot-down-video.mp4",
+   "time": "07:17:52",
+   "kind": "video"
+  },
+  {
+   "file": "071806-shot-wayland-a26-cornering.jpg",
+   "time": "07:18:06",
+   "kind": "image"
+  },
+  {
+   "file": "071935-video-wayland-a26-uturn-video.jpg",
+   "time": "07:19:35",
+   "kind": "image"
+  },
+  {
+   "file": "071935-video-wayland-a26-uturn-video.mp4",
+   "time": "07:19:35",
+   "kind": "video"
+  },
+  {
+   "file": "071944-shot-wayland-a26-uturn-look.jpg",
+   "time": "07:19:44",
+   "kind": "image"
+  },
+  {
+   "file": "071959-shot-wayland-a26-uturn-loop.jpg",
+   "time": "07:19:59",
+   "kind": "image"
+  },
+  {
+   "file": "072134-video-wayland-a26-victory-video.jpg",
+   "time": "07:21:34",
+   "kind": "image"
+  },
+  {
+   "file": "072134-video-wayland-a26-victory-video.mp4",
+   "time": "07:21:34",
+   "kind": "video"
+  },
+  {
+   "file": "072221-shot-wayland-a26-victory.jpg",
+   "time": "07:22:21",
+   "kind": "image"
+  },
+  {
+   "file": "073036-shot-wayland-console-completion.jpg",
+   "time": "07:30:36",
+   "kind": "image"
+  },
+  {
+   "file": "073051-shot-wayland-hud-gps-route.jpg",
+   "time": "07:30:51",
+   "kind": "image"
+  },
+  {
+   "file": "073127-shot-k6-event-rules.jpg",
+   "time": "07:31:27",
+   "kind": "image"
+  },
+  {
+   "file": "073203-shot-k6-organiser-rules-menu.jpg",
+   "time": "07:32:03",
+   "kind": "image"
+  },
+  {
+   "file": "073304-shot-k6-results-rules.jpg",
+   "time": "07:33:04",
+   "kind": "image"
+  },
+  {
+   "file": "073339-shot-a26-foot-down.jpg",
+   "time": "07:33:39",
+   "kind": "image"
+  },
+  {
+   "file": "073731-video-a26-foot-down-video.jpg",
+   "time": "07:37:31",
+   "kind": "image"
+  },
+  {
+   "file": "073731-video-a26-foot-down-video.mp4",
+   "time": "07:37:31",
+   "kind": "video"
+  },
+  {
+   "file": "073757-shot-a26-cornering.jpg",
+   "time": "07:37:57",
+   "kind": "image"
+  },
+  {
+   "file": "074521-scenes-p7-hudfit-access-hud.jpg",
+   "time": "07:45:21",
+   "kind": "image"
+  },
+  {
+   "file": "074712-video-a26-uturn-video.jpg",
+   "time": "07:47:12",
+   "kind": "image"
+  },
+  {
+   "file": "074712-video-a26-uturn-video.mp4",
+   "time": "07:47:12",
+   "kind": "video"
+  },
+  {
+   "file": "074742-web-web-console.jpg",
+   "time": "07:47:42",
+   "kind": "image"
+  },
+  {
+   "file": "074742-web-web-gps.jpg",
+   "time": "07:47:42",
+   "kind": "image"
+  },
+  {
+   "file": "074742-web-web-hud.jpg",
+   "time": "07:47:42",
+   "kind": "image"
+  },
+  {
+   "file": "074803-shot-a26-uturn-look.jpg",
+   "time": "07:48:03",
+   "kind": "image"
+  },
+  {
+   "file": "074856-shot-a26-uturn-loop.jpg",
+   "time": "07:48:56",
+   "kind": "image"
+  },
+  {
+   "file": "075633-shot-wayland-helmet-mirror-road.jpg",
+   "time": "07:56:33",
+   "kind": "image"
+  },
+  {
+   "file": "075701-shot-wayland-helmet-mirror-road-side.jpg",
+   "time": "07:57:01",
+   "kind": "image"
+  },
+  {
+   "file": "075727-shot-wayland-helmet-mirror-light.jpg",
+   "time": "07:57:27",
+   "kind": "image"
+  },
+  {
+   "file": "075755-shot-wayland-helmet-mirror-light-side.jpg",
+   "time": "07:57:55",
+   "kind": "image"
+  },
+  {
+   "file": "075821-shot-wayland-helmet-mirror-aero-road.jpg",
+   "time": "07:58:21",
+   "kind": "image"
+  },
+  {
+   "file": "075849-shot-wayland-helmet-mirror-aero-road-side.jpg",
+   "time": "07:58:49",
+   "kind": "image"
+  },
+  {
+   "file": "075903-video-a26-victory-video.jpg",
+   "time": "07:59:03",
+   "kind": "image"
+  },
+  {
+   "file": "075903-video-a26-victory-video.mp4",
+   "time": "07:59:03",
+   "kind": "video"
+  },
+  {
+   "file": "075915-shot-wayland-helmet-mirror-tt.jpg",
+   "time": "07:59:15",
+   "kind": "image"
+  },
+  {
+   "file": "075942-shot-wayland-helmet-mirror-tt-side.jpg",
+   "time": "07:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "075951-shot-a26-victory.jpg",
+   "time": "07:59:51",
+   "kind": "image"
+  },
+  {
+   "file": "080010-shot-wayland-helmet-mirror-cap.jpg",
+   "time": "08:00:10",
+   "kind": "image"
+  },
+  {
+   "file": "080021-shot-wayland-helmet-road-behind.jpg",
+   "time": "08:00:21",
+   "kind": "image"
+  },
+  {
+   "file": "080032-shot-wayland-helmet-tt-position.jpg",
+   "time": "08:00:32",
+   "kind": "image"
+  },
+  {
+   "file": "080043-shot-wayland-helmet-group-chase.jpg",
+   "time": "08:00:43",
+   "kind": "image"
+  },
+  {
+   "file": "080106-scenes-helmets-before-wayland-helmet-mirror-aero-road-closeup-back.jpg",
+   "time": "08:01:06",
+   "kind": "image"
+  },
+  {
+   "file": "080106-scenes-helmets-before-wayland-helmet-mirror-light-closeup-back.jpg",
+   "time": "08:01:06",
+   "kind": "image"
+  },
+  {
+   "file": "080106-scenes-helmets-before-wayland-helmet-mirror-light-closeup-mirror.jpg",
+   "time": "08:01:06",
+   "kind": "image"
+  },
+  {
+   "file": "080106-scenes-helmets-before-wayland-helmet-mirror-road-closeup-back.jpg",
+   "time": "08:01:06",
+   "kind": "image"
+  },
+  {
+   "file": "080106-scenes-helmets-before-wayland-helmet-mirror-road-closeup-mirror.jpg",
+   "time": "08:01:06",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-aero-road-closeup-mirror.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-aero-road-side-closeup-back.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-aero-road-side-closeup-mirror.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-cap-closeup-back.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-cap-closeup-mirror.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-light-side-closeup-back.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-light-side-closeup-mirror.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-road-side-closeup-back.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-road-side-closeup-mirror.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-tt-closeup-back.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-tt-closeup-mirror.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080107-scenes-helmets-before-wayland-helmet-mirror-tt-side-closeup-back.jpg",
+   "time": "08:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-after1-wayland-helmet-mirror-light-closeup-back.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-after1-wayland-helmet-mirror-light-closeup-mirror.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-after1-wayland-helmet-mirror-road-closeup-back.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-after1-wayland-helmet-mirror-road-closeup-mirror.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-before-wayland-helmet-group-chase-closeup.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-before-wayland-helmet-mirror-tt-side-closeup-mirror.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-before-wayland-helmet-road-behind-closeup.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-before-wayland-helmet-tt-position-closeup.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-before2-wayland-helmet-group-chase-closeup.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-before2-wayland-helmet-road-behind-closeup.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080108-scenes-helmets-before2-wayland-helmet-tt-position-closeup.jpg",
+   "time": "08:01:08",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-aero-road-closeup-back.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-aero-road-closeup-mirror.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-aero-road-side-closeup-back.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-aero-road-side-closeup-mirror.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-cap-closeup-back.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-cap-closeup-mirror.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-light-side-closeup-back.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-light-side-closeup-mirror.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-road-side-closeup-back.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-road-side-closeup-mirror.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-tt-closeup-back.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080109-scenes-helmets-after1-wayland-helmet-mirror-tt-closeup-mirror.jpg",
+   "time": "08:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "080110-scenes-helmets-after1-wayland-helmet-group-chase-closeup.jpg",
+   "time": "08:01:10",
+   "kind": "image"
+  },
+  {
+   "file": "080110-scenes-helmets-after1-wayland-helmet-mirror-tt-side-closeup-back.jpg",
+   "time": "08:01:10",
+   "kind": "image"
+  },
+  {
+   "file": "080110-scenes-helmets-after1-wayland-helmet-mirror-tt-side-closeup-mirror.jpg",
+   "time": "08:01:10",
+   "kind": "image"
+  },
+  {
+   "file": "080110-scenes-helmets-after1-wayland-helmet-road-behind-closeup.jpg",
+   "time": "08:01:10",
+   "kind": "image"
+  },
+  {
+   "file": "080110-scenes-helmets-after1-wayland-helmet-tt-position-closeup.jpg",
+   "time": "08:01:10",
+   "kind": "image"
+  },
+  {
+   "file": "080306-web-web-world-unicorn-inspect.jpg",
+   "time": "08:03:06",
+   "kind": "image"
+  },
+  {
+   "file": "080306-web-web-world.jpg",
+   "time": "08:03:06",
+   "kind": "image"
+  },
+  {
+   "file": "090331-web-preview-fps-wp-s-web.jpg",
+   "time": "09:03:31",
+   "kind": "image"
+  },
+  {
+   "file": "090400-web-preview-fps-wp-z-web.jpg",
+   "time": "09:04:00",
+   "kind": "image"
+  },
+  {
+   "file": "090426-web-preview-fps-wp-s-O3-web.jpg",
+   "time": "09:04:26",
+   "kind": "image"
+  },
+  {
+   "file": "090452-web-preview-fps-wp-z-O3-web.jpg",
+   "time": "09:04:52",
+   "kind": "image"
+  },
+  {
+   "file": "090519-web-preview-fps-wp-s-web.jpg",
+   "time": "09:05:19",
+   "kind": "image"
+  },
+  {
+   "file": "090538-shot-wayland-helmet-mirror-road.jpg",
+   "time": "09:05:38",
+   "kind": "image"
+  },
+  {
+   "file": "090545-web-preview-fps-wp-z-web.jpg",
+   "time": "09:05:45",
+   "kind": "image"
+  },
+  {
+   "file": "090612-web-preview-fps-wp-s-O3-web.jpg",
+   "time": "09:06:12",
+   "kind": "image"
+  },
+  {
+   "file": "090640-web-preview-fps-wp-z-O3-web.jpg",
+   "time": "09:06:40",
+   "kind": "image"
+  },
+  {
+   "file": "090930-shot-wayland-helmet-mirror-road-side.jpg",
+   "time": "09:09:30",
+   "kind": "image"
+  },
+  {
+   "file": "090951-shot-helmet-mirror-road.jpg",
+   "time": "09:09:51",
+   "kind": "image"
+  },
+  {
+   "file": "090956-shot-wayland-helmet-mirror-light.jpg",
+   "time": "09:09:56",
+   "kind": "image"
+  },
+  {
+   "file": "091024-shot-wayland-helmet-mirror-light-side.jpg",
+   "time": "09:10:24",
+   "kind": "image"
+  },
+  {
+   "file": "091046-shot-helmet-mirror-road-side.jpg",
+   "time": "09:10:46",
+   "kind": "image"
+  },
+  {
+   "file": "091050-shot-wayland-helmet-mirror-aero-road.jpg",
+   "time": "09:10:50",
+   "kind": "image"
+  },
+  {
+   "file": "091118-shot-wayland-helmet-mirror-aero-road-side.jpg",
+   "time": "09:11:18",
+   "kind": "image"
+  },
+  {
+   "file": "091144-shot-wayland-helmet-mirror-tt.jpg",
+   "time": "09:11:44",
+   "kind": "image"
+  },
+  {
+   "file": "091146-shot-helmet-mirror-light.jpg",
+   "time": "09:11:46",
+   "kind": "image"
+  },
+  {
+   "file": "091212-shot-wayland-helmet-mirror-tt-side.jpg",
+   "time": "09:12:12",
+   "kind": "image"
+  },
+  {
+   "file": "091240-shot-wayland-helmet-mirror-cap.jpg",
+   "time": "09:12:40",
+   "kind": "image"
+  },
+  {
+   "file": "091249-shot-helmet-mirror-light-side.jpg",
+   "time": "09:12:49",
+   "kind": "image"
+  },
+  {
+   "file": "091251-shot-wayland-helmet-road-behind.jpg",
+   "time": "09:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "091302-shot-wayland-helmet-tt-position.jpg",
+   "time": "09:13:02",
+   "kind": "image"
+  },
+  {
+   "file": "091313-shot-wayland-helmet-group-chase.jpg",
+   "time": "09:13:13",
+   "kind": "image"
+  },
+  {
+   "file": "091320-scenes-helmets-after-wayland-helmet-mirror-aero-road-closeup-back.jpg",
+   "time": "09:13:20",
+   "kind": "image"
+  },
+  {
+   "file": "091320-scenes-helmets-after-wayland-helmet-mirror-aero-road-closeup-mirror.jpg",
+   "time": "09:13:20",
+   "kind": "image"
+  },
+  {
+   "file": "091320-scenes-helmets-after-wayland-helmet-mirror-light-closeup-back.jpg",
+   "time": "09:13:20",
+   "kind": "image"
+  },
+  {
+   "file": "091320-scenes-helmets-after-wayland-helmet-mirror-light-closeup-mirror.jpg",
+   "time": "09:13:20",
+   "kind": "image"
+  },
+  {
+   "file": "091320-scenes-helmets-after-wayland-helmet-mirror-road-closeup-back.jpg",
+   "time": "09:13:20",
+   "kind": "image"
+  },
+  {
+   "file": "091320-scenes-helmets-after-wayland-helmet-mirror-road-closeup-mirror.jpg",
+   "time": "09:13:20",
+   "kind": "image"
+  },
+  {
+   "file": "091320-scenes-helmets-after-wayland-helmet-mirror-tt-closeup-back.jpg",
+   "time": "09:13:20",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-aero-road-side-closeup-back.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-aero-road-side-closeup-mirror.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-cap-closeup-back.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-cap-closeup-mirror.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-light-side-closeup-back.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-light-side-closeup-mirror.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-road-side-closeup-back.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-road-side-closeup-mirror.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-tt-closeup-mirror.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-tt-side-closeup-back.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-mirror-tt-side-closeup-mirror.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091321-scenes-helmets-after-wayland-helmet-road-behind-closeup.jpg",
+   "time": "09:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-after-wayland-helmet-group-chase-closeup.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-after-wayland-helmet-tt-position-closeup.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-compare-wayland-helmet-compare-group-chase-closeup.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-compare-wayland-helmet-compare-group-chase.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-compare-wayland-helmet-compare-mirror-aero-road-closeup-back.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-compare-wayland-helmet-compare-mirror-aero-road-closeup-mirror.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-compare-wayland-helmet-compare-mirror-aero-road-side-closeup-back.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-compare-wayland-helmet-compare-mirror-aero-road-side-closeup-mirror.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-compare-wayland-helmet-compare-mirror-aero-road-side.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091322-scenes-helmets-compare-wayland-helmet-compare-mirror-aero-road.jpg",
+   "time": "09:13:22",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-cap-closeup-back.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-cap-closeup-mirror.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-cap.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-light-closeup-back.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-light-closeup-mirror.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-light-side-closeup-back.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-light-side-closeup-mirror.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-light-side.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-light.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-road-closeup-back.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091323-scenes-helmets-compare-wayland-helmet-compare-mirror-road-closeup-mirror.jpg",
+   "time": "09:13:23",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-road-side-closeup-back.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-road-side-closeup-mirror.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-road-side.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-road.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-tt-closeup-back.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-tt-closeup-mirror.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-tt-side-closeup-back.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-tt-side-closeup-mirror.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-tt-side.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-mirror-tt.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091324-scenes-helmets-compare-wayland-helmet-compare-road-behind-closeup.jpg",
+   "time": "09:13:24",
+   "kind": "image"
+  },
+  {
+   "file": "091325-scenes-helmets-compare-wayland-helmet-compare-road-behind.jpg",
+   "time": "09:13:25",
+   "kind": "image"
+  },
+  {
+   "file": "091325-scenes-helmets-compare-wayland-helmet-compare-tt-position-closeup.jpg",
+   "time": "09:13:25",
+   "kind": "image"
+  },
+  {
+   "file": "091325-scenes-helmets-compare-wayland-helmet-compare-tt-position.jpg",
+   "time": "09:13:25",
+   "kind": "image"
+  },
+  {
+   "file": "091359-shot-helmet-mirror-aero-road.jpg",
+   "time": "09:13:59",
+   "kind": "image"
+  },
+  {
+   "file": "091509-shot-helmet-mirror-aero-road-side.jpg",
+   "time": "09:15:09",
+   "kind": "image"
+  },
+  {
+   "file": "091618-shot-helmet-mirror-tt.jpg",
+   "time": "09:16:18",
+   "kind": "image"
+  },
+  {
+   "file": "091722-shot-helmet-mirror-tt-side.jpg",
+   "time": "09:17:22",
+   "kind": "image"
+  },
+  {
+   "file": "091826-shot-helmet-mirror-cap.jpg",
+   "time": "09:18:26",
+   "kind": "image"
+  },
+  {
+   "file": "091909-shot-helmet-road-behind.jpg",
+   "time": "09:19:09",
+   "kind": "image"
+  },
+  {
+   "file": "091947-shot-helmet-tt-position.jpg",
+   "time": "09:19:47",
+   "kind": "image"
+  },
+  {
+   "file": "092021-shot-helmet-group-chase.jpg",
+   "time": "09:20:21",
+   "kind": "image"
+  },
+  {
+   "file": "092026-scenes-helmets-before-x11-helmet-mirror-road-closeup-back.jpg",
+   "time": "09:20:26",
+   "kind": "image"
+  },
+  {
+   "file": "092026-scenes-helmets-before-x11-helmet-mirror-road-closeup-mirror.jpg",
+   "time": "09:20:26",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-aero-road-closeup-back.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-aero-road-closeup-mirror.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-aero-road-side-closeup-back.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-cap-closeup-back.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-light-closeup-back.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-light-closeup-mirror.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-light-side-closeup-back.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-light-side-closeup-mirror.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-road-side-closeup-back.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-road-side-closeup-mirror.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-tt-closeup-back.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092027-scenes-helmets-before-x11-helmet-mirror-tt-closeup-mirror.jpg",
+   "time": "09:20:27",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-after-x11-helmet-mirror-road-closeup-back.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-after-x11-helmet-mirror-road-closeup-mirror.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before-x11-helmet-group-chase-closeup.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before-x11-helmet-mirror-aero-road-side-closeup-mirror.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before-x11-helmet-mirror-tt-side-closeup-back.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before-x11-helmet-mirror-tt-side-closeup-mirror.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before-x11-helmet-road-behind-closeup.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before-x11-helmet-tt-position-closeup.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before2-x11-helmet-group-chase-closeup.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before2-x11-helmet-road-behind-closeup.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092028-scenes-helmets-before2-x11-helmet-tt-position-closeup.jpg",
+   "time": "09:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-aero-road-closeup-back.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-aero-road-closeup-mirror.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-cap-closeup-back.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-cap-closeup-mirror.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-light-closeup-back.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-light-closeup-mirror.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-light-side-closeup-back.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-light-side-closeup-mirror.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-road-side-closeup-back.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-road-side-closeup-mirror.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-tt-closeup-back.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092029-scenes-helmets-after-x11-helmet-mirror-tt-closeup-mirror.jpg",
+   "time": "09:20:29",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-after-x11-helmet-group-chase-closeup.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-after-x11-helmet-mirror-aero-road-side-closeup-back.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-after-x11-helmet-mirror-aero-road-side-closeup-mirror.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-after-x11-helmet-mirror-tt-side-closeup-back.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-after-x11-helmet-mirror-tt-side-closeup-mirror.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-after-x11-helmet-road-behind-closeup.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-after-x11-helmet-tt-position-closeup.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-compare-x11-helmet-compare-group-chase-closeup.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-compare-x11-helmet-compare-group-chase.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-compare-x11-helmet-compare-mirror-aero-road-closeup-back.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092030-scenes-helmets-compare-x11-helmet-compare-mirror-aero-road-closeup-mirror.jpg",
+   "time": "09:20:30",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-aero-road-side-closeup-back.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-aero-road-side-closeup-mirror.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-aero-road-side.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-aero-road.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-cap-closeup-back.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-cap-closeup-mirror.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-cap.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-light-closeup-back.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-light-closeup-mirror.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-light-side-closeup-back.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092031-scenes-helmets-compare-x11-helmet-compare-mirror-light.jpg",
+   "time": "09:20:31",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-light-side-closeup-mirror.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-light-side.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-road-closeup-back.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-road-closeup-mirror.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-road-side-closeup-back.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-road-side-closeup-mirror.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-road-side.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-road.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-tt-closeup-back.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-tt-closeup-mirror.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092032-scenes-helmets-compare-x11-helmet-compare-mirror-tt.jpg",
+   "time": "09:20:32",
+   "kind": "image"
+  },
+  {
+   "file": "092033-scenes-helmets-compare-x11-helmet-compare-mirror-tt-side-closeup-back.jpg",
+   "time": "09:20:33",
+   "kind": "image"
+  },
+  {
+   "file": "092033-scenes-helmets-compare-x11-helmet-compare-mirror-tt-side-closeup-mirror.jpg",
+   "time": "09:20:33",
+   "kind": "image"
+  },
+  {
+   "file": "092033-scenes-helmets-compare-x11-helmet-compare-mirror-tt-side.jpg",
+   "time": "09:20:33",
+   "kind": "image"
+  },
+  {
+   "file": "092033-scenes-helmets-compare-x11-helmet-compare-road-behind-closeup.jpg",
+   "time": "09:20:33",
+   "kind": "image"
+  },
+  {
+   "file": "092033-scenes-helmets-compare-x11-helmet-compare-road-behind.jpg",
+   "time": "09:20:33",
+   "kind": "image"
+  },
+  {
+   "file": "092033-scenes-helmets-compare-x11-helmet-compare-tt-position-closeup.jpg",
+   "time": "09:20:33",
+   "kind": "image"
+  },
+  {
+   "file": "092033-scenes-helmets-compare-x11-helmet-compare-tt-position.jpg",
+   "time": "09:20:33",
+   "kind": "image"
+  },
+  {
+   "file": "093050-vr-vr-sim-both-eyes.jpg",
+   "time": "09:30:50",
+   "kind": "image"
+  },
+  {
+   "file": "093544-vr-vr-sim-one-eye.jpg",
+   "time": "09:35:44",
+   "kind": "image"
+  },
+  {
+   "file": "093708-vr-vr-sim-chase-mirror.jpg",
+   "time": "09:37:08",
+   "kind": "image"
+  },
+  {
+   "file": "094154-vr-vr-sim-blackforest.jpg",
+   "time": "09:41:54",
+   "kind": "image"
+  },
+  {
+   "file": "094544-vr-vr-no-runtime.jpg",
+   "time": "09:45:44",
+   "kind": "image"
+  },
+  {
+   "file": "100036-web-preview-preview-credits.jpg",
+   "time": "10:00:36",
+   "kind": "image"
+  },
+  {
+   "file": "100036-web-preview-preview-hills.jpg",
+   "time": "10:00:36",
+   "kind": "image"
+  },
+  {
+   "file": "100036-web-preview-preview-start.jpg",
+   "time": "10:00:36",
+   "kind": "image"
+  },
+  {
+   "file": "100036-web-preview-preview-untrusted.jpg",
+   "time": "10:00:36",
+   "kind": "image"
+  },
+  {
+   "file": "100036-web-preview-preview-webgl2.jpg",
+   "time": "10:00:36",
+   "kind": "image"
+  },
+  {
+   "file": "100036-web-preview-preview-world-world-loading.jpg",
+   "time": "10:00:36",
+   "kind": "image"
+  },
+  {
+   "file": "100036-web-preview-preview-world-world.jpg",
+   "time": "10:00:36",
+   "kind": "image"
+  },
+  {
+   "file": "100036-web-preview-preview-world.jpg",
+   "time": "10:00:36",
+   "kind": "image"
+  },
+  {
+   "file": "102533-web-web-account-linked.jpg",
+   "time": "10:25:33",
+   "kind": "image"
+  },
+  {
+   "file": "102533-web-web-account-signed-in.jpg",
+   "time": "10:25:33",
+   "kind": "image"
+  },
+  {
+   "file": "103815-web-preview-preview-hills.jpg",
+   "time": "10:38:15",
+   "kind": "image"
+  },
+  {
+   "file": "103815-web-preview-preview-world-world-loading.jpg",
+   "time": "10:38:15",
+   "kind": "image"
+  },
+  {
+   "file": "103815-web-preview-preview-world-world.jpg",
+   "time": "10:38:15",
+   "kind": "image"
+  },
+  {
+   "file": "103815-web-preview-preview-world.jpg",
+   "time": "10:38:15",
+   "kind": "image"
+  },
+  {
+   "file": "103825-scenes-veg-before-wayland-veg-li-vaduz-vineyards.jpg",
+   "time": "10:38:25",
+   "kind": "image"
+  },
+  {
+   "file": "103836-scenes-veg-before-wayland-veg-li-vaduz-vineyards-autumn.jpg",
+   "time": "10:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "103848-scenes-veg-before-wayland-veg-li-vaduz-orchard.jpg",
+   "time": "10:38:48",
+   "kind": "image"
+  },
+  {
+   "file": "103859-scenes-veg-before-wayland-veg-li-triesenberg-forest.jpg",
+   "time": "10:38:59",
+   "kind": "image"
+  },
+  {
+   "file": "103910-scenes-veg-before-wayland-veg-li-malbun-treeline.jpg",
+   "time": "10:39:10",
+   "kind": "image"
+  },
+  {
+   "file": "103922-scenes-veg-before-wayland-veg-li-fields-summer.jpg",
+   "time": "10:39:22",
+   "kind": "image"
+  },
+  {
+   "file": "103933-scenes-veg-before-wayland-veg-li-fields-harvest.jpg",
+   "time": "10:39:33",
+   "kind": "image"
+  },
+  {
+   "file": "103949-scenes-veg-before-wayland-veg-tf-bananas.jpg",
+   "time": "10:39:49",
+   "kind": "image"
+  },
+  {
+   "file": "104004-scenes-veg-before-wayland-veg-tf-canary-pine.jpg",
+   "time": "10:40:04",
+   "kind": "image"
+  },
+  {
+   "file": "104020-scenes-veg-before-wayland-veg-tf-laurel-anaga.jpg",
+   "time": "10:40:20",
+   "kind": "image"
+  },
+  {
+   "file": "104035-scenes-veg-before-wayland-veg-tf-laurel-teno.jpg",
+   "time": "10:40:35",
+   "kind": "image"
+  },
+  {
+   "file": "104051-scenes-veg-before-wayland-veg-tf-palms.jpg",
+   "time": "10:40:51",
+   "kind": "image"
+  },
+  {
+   "file": "104107-scenes-veg-before-wayland-veg-tf-broom.jpg",
+   "time": "10:41:07",
+   "kind": "image"
+  },
+  {
+   "file": "104122-scenes-veg-before-wayland-veg-tf-succulents.jpg",
+   "time": "10:41:22",
+   "kind": "image"
+  },
+  {
+   "file": "104138-scenes-veg-before-x11-veg-li-vaduz-vineyards.jpg",
+   "time": "10:41:38",
+   "kind": "image"
+  },
+  {
+   "file": "104144-scenes-veg-after-wayland-veg-li-vaduz-vineyards.jpg",
+   "time": "10:41:44",
+   "kind": "image"
+  },
+  {
+   "file": "104156-scenes-veg-after-wayland-veg-li-vaduz-vineyards-autumn.jpg",
+   "time": "10:41:56",
+   "kind": "image"
+  },
+  {
+   "file": "104203-scenes-veg-before-x11-veg-li-vaduz-vineyards-autumn.jpg",
+   "time": "10:42:03",
+   "kind": "image"
+  },
+  {
+   "file": "104208-scenes-veg-after-wayland-veg-li-vaduz-orchard.jpg",
+   "time": "10:42:08",
+   "kind": "image"
+  },
+  {
+   "file": "104219-scenes-veg-after-wayland-veg-li-triesenberg-forest.jpg",
+   "time": "10:42:19",
+   "kind": "image"
+  },
+  {
+   "file": "104226-scenes-veg-before-x11-veg-li-vaduz-orchard.jpg",
+   "time": "10:42:26",
+   "kind": "image"
+  },
+  {
+   "file": "104231-scenes-veg-after-wayland-veg-li-malbun-treeline.jpg",
+   "time": "10:42:31",
+   "kind": "image"
+  },
+  {
+   "file": "104243-scenes-veg-after-wayland-veg-li-fields-summer.jpg",
+   "time": "10:42:43",
+   "kind": "image"
+  },
+  {
+   "file": "104253-scenes-veg-before-x11-veg-li-triesenberg-forest.jpg",
+   "time": "10:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "104255-scenes-veg-after-wayland-veg-li-fields-harvest.jpg",
+   "time": "10:42:55",
+   "kind": "image"
+  },
+  {
+   "file": "104312-scenes-veg-after-wayland-veg-tf-bananas.jpg",
+   "time": "10:43:12",
+   "kind": "image"
+  },
+  {
+   "file": "104322-scenes-veg-before-x11-veg-li-malbun-treeline.jpg",
+   "time": "10:43:22",
+   "kind": "image"
+  },
+  {
+   "file": "104331-scenes-veg-after-wayland-veg-tf-canary-pine.jpg",
+   "time": "10:43:31",
+   "kind": "image"
+  },
+  {
+   "file": "104346-scenes-veg-before-x11-veg-li-fields-summer.jpg",
+   "time": "10:43:46",
+   "kind": "image"
+  },
+  {
+   "file": "104347-scenes-veg-after-wayland-veg-tf-laurel-anaga.jpg",
+   "time": "10:43:47",
+   "kind": "image"
+  },
+  {
+   "file": "104404-scenes-veg-after-wayland-veg-tf-laurel-teno.jpg",
+   "time": "10:44:04",
+   "kind": "image"
+  },
+  {
+   "file": "104405-scenes-veg-before-x11-veg-li-fields-harvest.jpg",
+   "time": "10:44:05",
+   "kind": "image"
+  },
+  {
+   "file": "104420-scenes-veg-after-wayland-veg-tf-palms.jpg",
+   "time": "10:44:20",
+   "kind": "image"
+  },
+  {
+   "file": "104429-scenes-veg-before-x11-veg-tf-bananas.jpg",
+   "time": "10:44:29",
+   "kind": "image"
+  },
+  {
+   "file": "104437-scenes-veg-after-wayland-veg-tf-broom.jpg",
+   "time": "10:44:37",
+   "kind": "image"
+  },
+  {
+   "file": "104458-scenes-veg-before-x11-veg-tf-canary-pine.jpg",
+   "time": "10:44:58",
+   "kind": "image"
+  },
+  {
+   "file": "104531-scenes-veg-before-x11-veg-tf-laurel-anaga.jpg",
+   "time": "10:45:31",
+   "kind": "image"
+  },
+  {
+   "file": "104601-scenes-veg-before-x11-veg-tf-laurel-teno.jpg",
+   "time": "10:46:01",
+   "kind": "image"
+  },
+  {
+   "file": "104636-scenes-veg-before-x11-veg-tf-palms.jpg",
+   "time": "10:46:36",
+   "kind": "image"
+  },
+  {
+   "file": "104707-scenes-veg-before-x11-veg-tf-broom.jpg",
+   "time": "10:47:07",
+   "kind": "image"
+  },
+  {
+   "file": "104736-scenes-veg-before-x11-veg-tf-succulents.jpg",
+   "time": "10:47:36",
+   "kind": "image"
+  },
+  {
+   "file": "105346-account-account-signed-out.jpg",
+   "time": "10:53:46",
+   "kind": "image"
+  },
+  {
+   "file": "105407-account-account-signed-in.jpg",
+   "time": "10:54:07",
+   "kind": "image"
+  },
+  {
+   "file": "105427-account-account-code.jpg",
+   "time": "10:54:27",
+   "kind": "image"
+  },
+  {
+   "file": "105455-account-device-page.png",
+   "time": "10:54:55",
+   "kind": "image"
+  },
+  {
+   "file": "105751-vr-vr-sim-both-eyes.jpg",
+   "time": "10:57:51",
+   "kind": "image"
+  },
+  {
+   "file": "105823-vr-vr-sim-one-eye.jpg",
+   "time": "10:58:23",
+   "kind": "image"
+  },
+  {
+   "file": "105906-vr-vr-sim-chase-mirror.jpg",
+   "time": "10:59:06",
+   "kind": "image"
+  },
+  {
+   "file": "105938-vr-vr-sim-blackforest.jpg",
+   "time": "10:59:38",
+   "kind": "image"
+  },
+  {
+   "file": "110013-vr-vr-no-runtime.jpg",
+   "time": "11:00:13",
+   "kind": "image"
+  },
+  {
+   "file": "110250-scenes-veg2-after-wayland-veg-li-vaduz-vineyards.jpg",
+   "time": "11:02:50",
+   "kind": "image"
+  },
+  {
+   "file": "110302-scenes-veg2-after-wayland-veg-li-vaduz-vineyards-autumn.jpg",
+   "time": "11:03:02",
+   "kind": "image"
+  },
+  {
+   "file": "110313-scenes-veg2-after-wayland-veg-li-vaduz-orchard.jpg",
+   "time": "11:03:13",
+   "kind": "image"
+  },
+  {
+   "file": "110324-scenes-veg2-after-wayland-veg-li-triesenberg-forest.jpg",
+   "time": "11:03:24",
+   "kind": "image"
+  },
+  {
+   "file": "110336-scenes-veg2-after-wayland-veg-li-malbun-treeline.jpg",
+   "time": "11:03:36",
+   "kind": "image"
+  },
+  {
+   "file": "110347-scenes-veg2-after-wayland-veg-li-fields-summer.jpg",
+   "time": "11:03:47",
+   "kind": "image"
+  },
+  {
+   "file": "110359-scenes-veg2-after-wayland-veg-li-fields-harvest.jpg",
+   "time": "11:03:59",
+   "kind": "image"
+  },
+  {
+   "file": "110414-scenes-veg2-after-wayland-veg-tf-bananas.jpg",
+   "time": "11:04:14",
+   "kind": "image"
+  },
+  {
+   "file": "110431-scenes-veg2-after-wayland-veg-tf-canary-pine.jpg",
+   "time": "11:04:31",
+   "kind": "image"
+  },
+  {
+   "file": "110447-scenes-veg2-after-wayland-veg-tf-laurel-anaga.jpg",
+   "time": "11:04:47",
+   "kind": "image"
+  },
+  {
+   "file": "110503-scenes-veg2-after-wayland-veg-tf-laurel-teno.jpg",
+   "time": "11:05:03",
+   "kind": "image"
+  },
+  {
+   "file": "110520-scenes-veg2-after-wayland-veg-tf-palms.jpg",
+   "time": "11:05:20",
+   "kind": "image"
+  },
+  {
+   "file": "110536-scenes-veg2-after-wayland-veg-tf-broom.jpg",
+   "time": "11:05:36",
+   "kind": "image"
+  },
+  {
+   "file": "110553-scenes-veg2-after-wayland-veg-tf-succulents.jpg",
+   "time": "11:05:53",
+   "kind": "image"
+  },
+  {
+   "file": "110612-scenes-veg2-after-wayland-veg-bf-spruce-fir-meadows.jpg",
+   "time": "11:06:12",
+   "kind": "image"
+  },
+  {
+   "file": "110629-scenes-veg2-after-wayland-veg-bf-schauinsland-forest.jpg",
+   "time": "11:06:29",
+   "kind": "image"
+  },
+  {
+   "file": "110647-scenes-veg2-after-wayland-veg-bf-kaiserstuhl-vineyards.jpg",
+   "time": "11:06:47",
+   "kind": "image"
+  },
+  {
+   "file": "110704-scenes-veg2-after-wayland-veg-bf-ortenau-vineyards.jpg",
+   "time": "11:07:04",
+   "kind": "image"
+  },
+  {
+   "file": "110719-scenes-veg2-after-wayland-veg-bf-ortenau-orchards.jpg",
+   "time": "11:07:19",
+   "kind": "image"
+  },
+  {
+   "file": "110737-scenes-veg2-after-wayland-veg-bf-fields-summer.jpg",
+   "time": "11:07:37",
+   "kind": "image"
+  },
+  {
+   "file": "110753-scenes-veg2-after-wayland-veg-bf-fields-harvest.jpg",
+   "time": "11:07:53",
+   "kind": "image"
+  },
+  {
+   "file": "110810-scenes-veg2-after-wayland-veg-bf-fields-autumn.jpg",
+   "time": "11:08:10",
+   "kind": "image"
+  },
+  {
+   "file": "110824-scenes-veg2-after-x11-veg-li-vaduz-vineyards.jpg",
+   "time": "11:08:24",
+   "kind": "image"
+  },
+  {
+   "file": "110846-scenes-veg2-after-x11-veg-li-vaduz-vineyards-autumn.jpg",
+   "time": "11:08:46",
+   "kind": "image"
+  },
+  {
+   "file": "110909-scenes-veg2-after-x11-veg-li-vaduz-orchard.jpg",
+   "time": "11:09:09",
+   "kind": "image"
+  },
+  {
+   "file": "110936-scenes-veg2-after-x11-veg-li-triesenberg-forest.jpg",
+   "time": "11:09:36",
+   "kind": "image"
+  },
+  {
+   "file": "111008-scenes-veg2-after-x11-veg-li-malbun-treeline.jpg",
+   "time": "11:10:08",
+   "kind": "image"
+  },
+  {
+   "file": "111039-scenes-veg2-after-x11-veg-li-fields-summer.jpg",
+   "time": "11:10:39",
+   "kind": "image"
+  },
+  {
+   "file": "111105-scenes-veg2-after-x11-veg-li-fields-harvest.jpg",
+   "time": "11:11:05",
+   "kind": "image"
+  },
+  {
+   "file": "111134-scenes-veg2-after-x11-veg-tf-bananas.jpg",
+   "time": "11:11:34",
+   "kind": "image"
+  },
+  {
+   "file": "111210-scenes-veg2-after-x11-veg-tf-canary-pine.jpg",
+   "time": "11:12:10",
+   "kind": "image"
+  },
+  {
+   "file": "111246-scenes-veg2-after-x11-veg-tf-laurel-anaga.jpg",
+   "time": "11:12:46",
+   "kind": "image"
+  },
+  {
+   "file": "111318-scenes-veg2-after-x11-veg-tf-laurel-teno.jpg",
+   "time": "11:13:18",
+   "kind": "image"
+  },
+  {
+   "file": "111344-scenes-veg2-after-x11-veg-tf-palms.jpg",
+   "time": "11:13:44",
+   "kind": "image"
+  },
+  {
+   "file": "111408-scenes-veg2-after-x11-veg-tf-broom.jpg",
+   "time": "11:14:08",
+   "kind": "image"
+  },
+  {
+   "file": "111432-scenes-veg2-after-x11-veg-tf-succulents.jpg",
+   "time": "11:14:32",
+   "kind": "image"
+  },
+  {
+   "file": "111504-scenes-veg2-after-x11-veg-bf-spruce-fir-meadows.jpg",
+   "time": "11:15:04",
+   "kind": "image"
+  },
+  {
+   "file": "111540-scenes-veg2-after-x11-veg-bf-schauinsland-forest.jpg",
+   "time": "11:15:40",
+   "kind": "image"
+  },
+  {
+   "file": "111617-scenes-veg2-after-x11-veg-bf-kaiserstuhl-vineyards.jpg",
+   "time": "11:16:17",
+   "kind": "image"
+  },
+  {
+   "file": "111649-scenes-veg2-after-x11-veg-bf-ortenau-vineyards.jpg",
+   "time": "11:16:49",
+   "kind": "image"
+  },
+  {
+   "file": "111729-scenes-veg2-after-x11-veg-bf-ortenau-orchards.jpg",
+   "time": "11:17:29",
+   "kind": "image"
+  },
+  {
+   "file": "111812-scenes-veg2-after-x11-veg-bf-fields-summer.jpg",
+   "time": "11:18:12",
+   "kind": "image"
+  },
+  {
+   "file": "111849-scenes-veg2-after-x11-veg-bf-fields-harvest.jpg",
+   "time": "11:18:49",
+   "kind": "image"
+  },
+  {
+   "file": "111926-scenes-veg2-after-x11-veg-bf-fields-autumn.jpg",
+   "time": "11:19:26",
+   "kind": "image"
+  },
+  {
+   "file": "112001-scenes-veg2-before-wayland-veg-bf-spruce-fir-meadows.jpg",
+   "time": "11:20:01",
+   "kind": "image"
+  },
+  {
+   "file": "112018-scenes-veg2-before-wayland-veg-bf-schauinsland-forest.jpg",
+   "time": "11:20:18",
+   "kind": "image"
+  },
+  {
+   "file": "112035-scenes-veg2-before-wayland-veg-bf-kaiserstuhl-vineyards.jpg",
+   "time": "11:20:35",
+   "kind": "image"
+  },
+  {
+   "file": "112052-scenes-veg2-before-wayland-veg-bf-ortenau-vineyards.jpg",
+   "time": "11:20:52",
+   "kind": "image"
+  },
+  {
+   "file": "112109-scenes-veg2-before-wayland-veg-bf-ortenau-orchards.jpg",
+   "time": "11:21:09",
+   "kind": "image"
+  },
+  {
+   "file": "112128-scenes-veg2-before-wayland-veg-bf-fields-summer.jpg",
+   "time": "11:21:28",
+   "kind": "image"
+  },
+  {
+   "file": "112147-scenes-veg2-before-wayland-veg-bf-fields-harvest.jpg",
+   "time": "11:21:47",
+   "kind": "image"
+  },
+  {
+   "file": "112205-scenes-veg2-before-wayland-veg-bf-fields-autumn.jpg",
+   "time": "11:22:05",
+   "kind": "image"
+  },
+  {
+   "file": "112232-scenes-veg2-before-x11-veg-bf-spruce-fir-meadows.jpg",
+   "time": "11:22:32",
+   "kind": "image"
+  },
+  {
+   "file": "112318-scenes-veg2-before-x11-veg-bf-schauinsland-forest.jpg",
+   "time": "11:23:18",
+   "kind": "image"
+  },
+  {
+   "file": "112401-scenes-veg2-before-x11-veg-bf-kaiserstuhl-vineyards.jpg",
+   "time": "11:24:01",
+   "kind": "image"
+  },
+  {
+   "file": "112440-scenes-veg2-before-x11-veg-bf-ortenau-vineyards.jpg",
+   "time": "11:24:40",
+   "kind": "image"
+  },
+  {
+   "file": "112518-scenes-veg2-before-x11-veg-bf-ortenau-orchards.jpg",
+   "time": "11:25:18",
+   "kind": "image"
+  },
+  {
+   "file": "112543-scenes-veg2-before-x11-veg-bf-fields-summer.jpg",
+   "time": "11:25:43",
+   "kind": "image"
+  },
+  {
+   "file": "112608-scenes-veg2-before-x11-veg-bf-fields-harvest.jpg",
+   "time": "11:26:08",
+   "kind": "image"
+  },
+  {
+   "file": "112636-scenes-veg2-before-x11-veg-bf-fields-autumn.jpg",
+   "time": "11:26:36",
+   "kind": "image"
+  },
+  {
+   "file": "112648-vr-vr-sim-both-eyes.jpg",
+   "time": "11:26:48",
+   "kind": "image"
+  },
+  {
+   "file": "112708-vr-vr-sim-one-eye.jpg",
+   "time": "11:27:08",
+   "kind": "image"
+  },
+  {
+   "file": "112751-vr-vr-sim-chase-mirror.jpg",
+   "time": "11:27:51",
+   "kind": "image"
+  },
+  {
+   "file": "112827-vr-vr-sim-blackforest.jpg",
+   "time": "11:28:27",
+   "kind": "image"
+  },
+  {
+   "file": "112901-vr-vr-no-runtime.jpg",
+   "time": "11:29:01",
+   "kind": "image"
+  },
+  {
+   "file": "114108-web-preview-preview-hills.jpg",
+   "time": "11:41:08",
+   "kind": "image"
+  },
+  {
+   "file": "114108-web-preview-preview-untrusted.jpg",
+   "time": "11:41:08",
+   "kind": "image"
+  },
+  {
+   "file": "114108-web-preview-preview-webgl2.jpg",
+   "time": "11:41:08",
+   "kind": "image"
+  },
+  {
+   "file": "114108-web-preview-preview-world-world-loading.jpg",
+   "time": "11:41:08",
+   "kind": "image"
+  },
+  {
+   "file": "114108-web-preview-preview-world-world.jpg",
+   "time": "11:41:08",
+   "kind": "image"
+  },
+  {
+   "file": "114108-web-preview-preview-world.jpg",
+   "time": "11:41:08",
+   "kind": "image"
+  },
+  {
+   "file": "114846-scenes-veg3-after-wayland-veg-li-vaduz-vineyards.jpg",
+   "time": "11:48:46",
+   "kind": "image"
+  },
+  {
+   "file": "114857-scenes-veg3-after-wayland-veg-li-vaduz-vineyards-autumn.jpg",
+   "time": "11:48:57",
+   "kind": "image"
+  },
+  {
+   "file": "114909-scenes-veg3-after-wayland-veg-li-vaduz-orchard.jpg",
+   "time": "11:49:09",
+   "kind": "image"
+  },
+  {
+   "file": "114921-scenes-veg3-after-wayland-veg-li-triesenberg-forest.jpg",
+   "time": "11:49:21",
+   "kind": "image"
+  },
+  {
+   "file": "114932-scenes-veg3-after-wayland-veg-li-malbun-treeline.jpg",
+   "time": "11:49:32",
+   "kind": "image"
+  },
+  {
+   "file": "114943-scenes-veg3-after-wayland-veg-li-fields-summer.jpg",
+   "time": "11:49:43",
+   "kind": "image"
+  },
+  {
+   "file": "114955-scenes-veg3-after-wayland-veg-li-fields-harvest.jpg",
+   "time": "11:49:55",
+   "kind": "image"
+  },
+  {
+   "file": "115010-scenes-veg3-after-wayland-veg-tf-bananas.jpg",
+   "time": "11:50:10",
+   "kind": "image"
+  },
+  {
+   "file": "115027-scenes-veg3-after-wayland-veg-tf-canary-pine.jpg",
+   "time": "11:50:27",
+   "kind": "image"
+  },
+  {
+   "file": "115043-scenes-veg3-after-wayland-veg-tf-laurel-anaga.jpg",
+   "time": "11:50:43",
+   "kind": "image"
+  },
+  {
+   "file": "115059-scenes-veg3-after-wayland-veg-tf-laurel-teno.jpg",
+   "time": "11:50:59",
+   "kind": "image"
+  },
+  {
+   "file": "115115-scenes-veg3-after-wayland-veg-tf-palms.jpg",
+   "time": "11:51:15",
+   "kind": "image"
+  },
+  {
+   "file": "115131-scenes-veg3-after-wayland-veg-tf-broom.jpg",
+   "time": "11:51:31",
+   "kind": "image"
+  },
+  {
+   "file": "115146-scenes-veg3-after-wayland-veg-tf-succulents.jpg",
+   "time": "11:51:46",
+   "kind": "image"
+  },
+  {
+   "file": "115203-scenes-veg3-after-wayland-veg-bf-spruce-fir-meadows.jpg",
+   "time": "11:52:03",
+   "kind": "image"
+  },
+  {
+   "file": "115220-scenes-veg3-after-wayland-veg-bf-schauinsland-forest.jpg",
+   "time": "11:52:20",
+   "kind": "image"
+  },
+  {
+   "file": "115236-scenes-veg3-after-wayland-veg-bf-kaiserstuhl-vineyards.jpg",
+   "time": "11:52:36",
+   "kind": "image"
+  },
+  {
+   "file": "115252-scenes-veg3-after-wayland-veg-bf-ortenau-vineyards.jpg",
+   "time": "11:52:52",
+   "kind": "image"
+  },
+  {
+   "file": "115307-scenes-veg3-after-wayland-veg-bf-ortenau-orchards.jpg",
+   "time": "11:53:07",
+   "kind": "image"
+  },
+  {
+   "file": "115324-scenes-veg3-after-wayland-veg-bf-fields-summer.jpg",
+   "time": "11:53:24",
+   "kind": "image"
+  },
+  {
+   "file": "115340-scenes-veg3-after-wayland-veg-bf-fields-harvest.jpg",
+   "time": "11:53:40",
+   "kind": "image"
+  },
+  {
+   "file": "115356-scenes-veg3-after-wayland-veg-bf-fields-autumn.jpg",
+   "time": "11:53:56",
+   "kind": "image"
+  },
+  {
+   "file": "115411-scenes-veg3-after-x11-veg-li-vaduz-vineyards.jpg",
+   "time": "11:54:11",
+   "kind": "image"
+  },
+  {
+   "file": "115431-scenes-veg3-after-x11-veg-li-vaduz-vineyards-autumn.jpg",
+   "time": "11:54:31",
+   "kind": "image"
+  },
+  {
+   "file": "115452-scenes-veg3-after-x11-veg-li-vaduz-orchard.jpg",
+   "time": "11:54:52",
+   "kind": "image"
+  },
+  {
+   "file": "115514-scenes-veg3-after-x11-veg-li-triesenberg-forest.jpg",
+   "time": "11:55:14",
+   "kind": "image"
+  },
+  {
+   "file": "115535-scenes-veg3-after-x11-veg-li-malbun-treeline.jpg",
+   "time": "11:55:35",
+   "kind": "image"
+  },
+  {
+   "file": "115554-scenes-veg3-after-x11-veg-li-fields-summer.jpg",
+   "time": "11:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "115612-scenes-veg3-after-x11-veg-li-fields-harvest.jpg",
+   "time": "11:56:12",
+   "kind": "image"
+  },
+  {
+   "file": "115634-scenes-veg3-after-x11-veg-tf-bananas.jpg",
+   "time": "11:56:34",
+   "kind": "image"
+  },
+  {
+   "file": "115702-scenes-veg3-after-x11-veg-tf-canary-pine.jpg",
+   "time": "11:57:02",
+   "kind": "image"
+  },
+  {
+   "file": "115731-scenes-veg3-after-x11-veg-tf-laurel-anaga.jpg",
+   "time": "11:57:31",
+   "kind": "image"
+  },
+  {
+   "file": "115757-scenes-veg3-after-x11-veg-tf-laurel-teno.jpg",
+   "time": "11:57:57",
+   "kind": "image"
+  },
+  {
+   "file": "115824-scenes-veg3-after-x11-veg-tf-palms.jpg",
+   "time": "11:58:24",
+   "kind": "image"
+  },
+  {
+   "file": "115847-scenes-veg3-after-x11-veg-tf-broom.jpg",
+   "time": "11:58:47",
+   "kind": "image"
+  },
+  {
+   "file": "115911-scenes-veg3-after-x11-veg-tf-succulents.jpg",
+   "time": "11:59:11",
+   "kind": "image"
+  },
+  {
+   "file": "115942-scenes-veg3-after-x11-veg-bf-spruce-fir-meadows.jpg",
+   "time": "11:59:42",
+   "kind": "image"
+  },
+  {
+   "file": "120013-scenes-veg3-after-x11-veg-bf-schauinsland-forest.jpg",
+   "time": "12:00:13",
+   "kind": "image"
+  },
+  {
+   "file": "120042-scenes-veg3-after-x11-veg-bf-kaiserstuhl-vineyards.jpg",
+   "time": "12:00:42",
+   "kind": "image"
+  },
+  {
+   "file": "120109-scenes-veg3-after-x11-veg-bf-ortenau-vineyards.jpg",
+   "time": "12:01:09",
+   "kind": "image"
+  },
+  {
+   "file": "120136-scenes-veg3-after-x11-veg-bf-ortenau-orchards.jpg",
+   "time": "12:01:36",
+   "kind": "image"
+  },
+  {
+   "file": "120206-scenes-veg3-after-x11-veg-bf-fields-summer.jpg",
+   "time": "12:02:06",
+   "kind": "image"
+  },
+  {
+   "file": "120230-scenes-veg3-after-x11-veg-bf-fields-harvest.jpg",
+   "time": "12:02:30",
+   "kind": "image"
+  },
+  {
+   "file": "120259-scenes-veg3-after-x11-veg-bf-fields-autumn.jpg",
+   "time": "12:02:59",
+   "kind": "image"
+  },
+  {
+   "file": "120305-web-web-account-linked.jpg",
+   "time": "12:03:05",
+   "kind": "image"
+  },
+  {
+   "file": "120305-web-web-account-signed-in.jpg",
+   "time": "12:03:05",
+   "kind": "image"
+  },
+  {
+   "file": "120305-web-web-account-signed-out.jpg",
+   "time": "12:03:05",
+   "kind": "image"
+  },
+  {
+   "file": "120329-scenes-veg3-before-wayland-veg-li-triesenberg-forest.jpg",
+   "time": "12:03:29",
+   "kind": "image"
+  },
+  {
+   "file": "120343-scenes-veg3-before-x11-veg-li-triesenberg-forest.jpg",
+   "time": "12:03:43",
+   "kind": "image"
+  },
+  {
+   "file": "120459-vr-vr-sim-both-eyes.jpg",
+   "time": "12:04:59",
+   "kind": "image"
+  },
+  {
+   "file": "120504-account-account-signed-out.jpg",
+   "time": "12:05:04",
+   "kind": "image"
+  },
+  {
+   "file": "120521-vr-vr-sim-one-eye.jpg",
+   "time": "12:05:21",
+   "kind": "image"
+  },
+  {
+   "file": "120524-account-account-signed-in.jpg",
+   "time": "12:05:24",
+   "kind": "image"
+  },
+  {
+   "file": "120545-account-account-code.jpg",
+   "time": "12:05:45",
+   "kind": "image"
+  },
+  {
+   "file": "120601-vr-vr-sim-chase-mirror.jpg",
+   "time": "12:06:01",
+   "kind": "image"
+  },
+  {
+   "file": "120612-account-device-page.png",
+   "time": "12:06:12",
+   "kind": "image"
+  },
+  {
+   "file": "120635-vr-vr-sim-blackforest.jpg",
+   "time": "12:06:35",
+   "kind": "image"
+  },
+  {
+   "file": "120710-vr-vr-no-runtime.jpg",
+   "time": "12:07:10",
+   "kind": "image"
   }
  ],
- "images": 31,
- "videos": 3,
+ "images": 523,
+ "videos": 9,
  "sounds": 0,
  "builds": {
-  "runs": 16,
-  "seconds": 9771.1,
-  "cargo_s": 8.3,
-  "compiled": 4,
-  "wait_s": 7374.0,
+  "runs": 131,
+  "seconds": 170709.4,
+  "cargo_s": 6378.0,
+  "compiled": 2581,
+  "wait_s": 92699.0,
   "failed": [
    {
     "start": "2026-11-15T00:09:38+01:00",
@@ -247,33 +3535,183 @@
     "cargo_builds": 0,
     "compiled": 0,
     "wait_s": 1140
+   },
+   {
+    "start": "2026-11-15T06:15:55+01:00",
+    "seconds": 572.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-ab2216bf39859444d",
+    "branch": "worktree-agent-ab2216bf39859444d",
+    "command": "make test-web-readme README_FLAGS=\"--keep --reuse-target\"",
+    "exit": 2,
+    "log": "061555-marge-3409112.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 66
+   },
+   {
+    "start": "2026-11-15T06:46:52+01:00",
+    "seconds": 1734.5,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a3bffa51d30d0cfa2",
+    "branch": "worktree-agent-a3bffa51d30d0cfa2",
+    "command": "scripts/render-scenes.sh --out test-output/scenes/2026-11-15-064652 --only console-completion,console-completion-cycle,hud-gps-route",
+    "exit": 1,
+    "log": "064652-marge-3455729.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 1291
+   },
+   {
+    "start": "2026-11-15T07:57:49+01:00",
+    "seconds": 67.4,
+    "machine": "macos",
+    "os": "macos",
+    "checkout": "agent-a3b9cf0b40cbf0ccc",
+    "branch": "worktree-agent-a3b9cf0b40cbf0ccc",
+    "commit": "829500b",
+    "command": "bash scripts/vr-check.sh crates",
+    "exit": 101,
+    "log": "075749-macos-3557578.log",
+    "sync_s": 1.3,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-15T07:59:23+01:00",
+    "seconds": 70.2,
+    "machine": "macos",
+    "os": "macos",
+    "checkout": "agent-a3b9cf0b40cbf0ccc",
+    "branch": "worktree-agent-a3b9cf0b40cbf0ccc",
+    "commit": "829500b-dirty",
+    "command": "bash scripts/vr-check.sh crates",
+    "exit": 101,
+    "log": "075923-macos-3559476.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 49
+   },
+   {
+    "start": "2026-11-15T08:01:06+01:00",
+    "seconds": 12.2,
+    "machine": "macos",
+    "os": "macos",
+    "checkout": "agent-a3b9cf0b40cbf0ccc",
+    "branch": "worktree-agent-a3b9cf0b40cbf0ccc",
+    "commit": "829500b-dirty",
+    "command": "bash scripts/vr-check.sh crates",
+    "exit": 1,
+    "log": "080106-macos-3562224.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-15T09:20:51+01:00",
+    "seconds": 20.1,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "5e96eb2-dirty",
+    "command": "   set -e   D=/var/tmp/ocw   put() { install -m $1 \"$2\" \"$D/.$3.new\" && mv -f \"$D/.$3.new\" \"$D/$3\"; }   # Voice chat (spec §7) where clang 21 is installed (its bindings need it).   if command -v cl...",
+    "exit": 255,
+    "log": "092051-leela-3657912.log",
+    "sync_s": null,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-15T08:46:11+01:00",
+    "seconds": 3640.6,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a3b9cf0b40cbf0ccc",
+    "branch": "worktree-agent-a3b9cf0b40cbf0ccc",
+    "commit": "15f879a-dirty",
+    "command": "bash scripts/vr-check.sh full",
+    "exit": 1,
+    "log": "084611-marge-3616020.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 2080
+   },
+   {
+    "start": "2026-11-15T10:17:18+01:00",
+    "seconds": 20.1,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "5410232-dirty",
+    "command": "   set -e   D=/var/tmp/ocw   put() { install -m $1 \"$2\" \"$D/.$3.new\" && mv -f \"$D/.$3.new\" \"$D/$3\"; }   # Voice chat (spec §7) where clang 21 is installed (its bindings need it).   if command -v cl...",
+    "exit": 255,
+    "log": "101718-leela-3713165.log",
+    "sync_s": null,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
    }
   ],
   "machines": {
    "macos": {
-    "runs": 11,
-    "seconds": 2440.0,
-    "failed": 2,
-    "cargo_s": 8.3,
-    "compiled": 4,
-    "wait_s": 1450.0
+    "runs": 47,
+    "seconds": 16652.1,
+    "failed": 5,
+    "cargo_s": 518.9000000000001,
+    "compiled": 23,
+    "wait_s": 8240.0
    },
    "marge": {
-    "runs": 5,
-    "seconds": 7331.099999999999,
-    "failed": 1,
+    "runs": 70,
+    "seconds": 142663.0,
+    "failed": 4,
+    "cargo_s": 4221.099999999999,
+    "compiled": 2552,
+    "wait_s": 80746.0
+   },
+   "Win11Builder": {
+    "runs": 7,
+    "seconds": 8442.800000000001,
+    "failed": 0,
     "cargo_s": 0.0,
     "compiled": 0,
-    "wait_s": 5924.0
+    "wait_s": 3713.0
+   },
+   "leela": {
+    "runs": 7,
+    "seconds": 2951.5,
+    "failed": 2,
+    "cargo_s": 1638.0,
+    "compiled": 6,
+    "wait_s": 0.0
    }
   },
   "online": {
-   "leela": 0.019178082191780823,
+   "leela": 0.35678391959798994,
    "marge": 1.0,
-   "Win11Builder": 0.9972602739726028,
+   "Win11Builder": 0.9987437185929648,
    "macos": 1.0
   },
-  "samples": 365
+  "samples": 796
  },
  "prompts": [
   {
@@ -285,66 +3723,1141 @@
    "time": "00:17:39",
    "iso": "2026-11-15T00:17:39+01:00",
    "text": "make the trees and vegetation more realistic. get information about the (big) plants and crops that are in the area. analyse them and add them to the world. recreate the worlds with that. rebuilt and release, update spec."
+  },
+  {
+   "time": "06:11:34",
+   "iso": "2026-11-15T06:11:34+01:00",
+   "text": "why did user crash on deb?"
+  },
+  {
+   "time": "06:14:48",
+   "iso": "2026-11-15T06:14:48+01:00",
+   "text": "i've stopped the vms. check the worktrees and resume"
+  },
+  {
+   "time": "06:16:58",
+   "iso": "2026-11-15T06:16:58+01:00",
+   "text": "are such crashed and their root cause  already logged in the art project?"
+  },
+  {
+   "time": "06:18:39",
+   "iso": "2026-11-15T06:18:39+01:00",
+   "text": "yes, and record the definition in art projwct, too."
+  },
+  {
+   "time": "06:51:15",
+   "iso": "2026-11-15T06:51:15+01:00",
+   "text": "make the other world maps (tenerife and all black forests) also available for web usage"
+  },
+  {
+   "time": "07:10:09",
+   "iso": "2026-11-15T07:10:09+01:00",
+   "text": "are there any smaller buildjobs that could be run on mac/windows?"
+  },
+  {
+   "time": "07:24:42",
+   "iso": "2026-11-15T07:24:42+01:00",
+   "text": "do you see a second session on deb from the system user named \"user\""
+  },
+  {
+   "time": "07:25:36",
+   "iso": "2026-11-15T07:25:36+01:00",
+   "text": "art project: are finished build jobs and their status as well as finished features and merges logged?"
+  },
+  {
+   "time": "07:26:43",
+   "iso": "2026-11-15T07:26:43+01:00",
+   "text": "yes"
+  },
+  {
+   "time": "07:28:23",
+   "iso": "2026-11-15T07:28:23+01:00",
+   "text": "plan: prepare moving all activities from nils@deb to user@deb. let me know if you need my help with some steps or you can do everything by yourself."
+  },
+  {
+   "time": "07:50:45",
+   "iso": "2026-11-15T07:50:45+01:00",
+   "text": "postpone the move for now"
+  },
+  {
+   "time": "07:51:19",
+   "iso": "2026-11-15T07:51:19+01:00",
+   "text": "once the helmets are reworked, send images"
+  },
+  {
+   "time": "08:15:48",
+   "iso": "2026-11-15T08:15:48+01:00",
+   "text": "are the art diary video builds running?"
+  },
+  {
+   "time": "08:16:43",
+   "iso": "2026-11-15T08:16:43+01:00",
+   "text": "send me the videos here and to that with future videos as well"
+  },
+  {
+   "time": "11:30:56",
+   "iso": "2026-11-15T11:30:56+01:00",
+   "text": "use windows and mac build servers, too"
+  },
+  {
+   "time": "11:44:00",
+   "iso": "2026-11-15T11:44:00+01:00",
+   "text": "i've enabled leela. do one \"build all\" on leela."
+  },
+  {
+   "time": "11:50:40",
+   "iso": "2026-11-15T11:50:40+01:00",
+   "text": "The public view you created at \"https://newkit.github.io/OCW/\" does not work. IIRC we cannot host the make web-server on github, right? So i need to find an external ressource. Or do you have any idea how to get this running on github, maybe with github runners?"
+  },
+  {
+   "time": "11:51:37",
+   "iso": "2026-11-15T11:51:37+01:00",
+   "text": "design:"
+  },
+  {
+   "time": "11:52:49",
+   "iso": "2026-11-15T11:52:49+01:00",
+   "text": "i cannot get the browser version of OCW on this url you put in the README \"https://newkit.github.io/OCW/\". It's unclear to me, where the app is hosted."
+  },
+  {
+   "time": "12:17:59",
+   "iso": "2026-11-15T12:17:59+01:00",
+   "text": "the preview works now."
+  },
+  {
+   "time": "12:18:53",
+   "iso": "2026-11-15T12:18:53+01:00",
+   "text": "let's prepare the move to the user@deb session"
+  },
+  {
+   "time": "12:42:10",
+   "iso": "2026-11-15T12:42:10+01:00",
+   "text": "github is setup for user@deb. continue with move."
+  },
+  {
+   "time": "12:45:05",
+   "iso": "2026-11-15T12:45:05+01:00",
+   "text": "I've created a now home for the artproject. Use this repository https://github.com/newkit/OCW-ART for everything ART related."
+  },
+  {
+   "time": "12:45:29",
+   "iso": "2026-11-15T12:45:29+01:00",
+   "text": "Refinement, ... use it for everhing related to the art project."
+  },
+  {
+   "time": "12:46:05",
+   "iso": "2026-11-15T12:46:05+01:00",
+   "text": "also move the build-history to the new art project location."
+  },
+  {
+   "time": "12:48:40",
+   "iso": "2026-11-15T12:48:40+01:00",
+   "text": "git clone <e-mail>:newkit/OCW.git ~/src/OCW\n\nor would that collide with the building?"
+  },
+  {
+   "time": "12:55:13",
+   "iso": "2026-11-15T12:55:13+01:00",
+   "text": "once the the split is done, prepare moving it to user@deb"
+  },
+  {
+   "time": "12:56:10",
+   "iso": "2026-11-15T12:56:10+01:00",
+   "text": "locations will be  user@deb:~/src/OCW and OCW-ART"
+  },
+  {
+   "time": "12:57:05",
+   "iso": "2026-11-15T12:57:05+01:00",
+   "text": "done"
+  },
+  {
+   "time": "13:01:18",
+   "iso": "2026-11-15T13:01:18+01:00",
+   "text": "wait, i have the split of projects running in the other session. i need to wait till it finishes."
+  },
+  {
+   "time": "13:06:32",
+   "iso": "2026-11-15T13:06:32+01:00",
+   "text": "plan a new feature (SPECIFICATION.md): Rather than encoding all objects in code, use a standardizes open source 3D model format (make a proposal for which one and elaborate the pros and cons, e.g. external tools, connection to blender, license, efficiency, scope, etc). build a import/exporter/loader for the model files. plan for moving all (where feasible) current 3d objects into that format. use artwork/3dmodels to store the files."
+  },
+  {
+   "time": "13:10:05",
+   "iso": "2026-11-15T13:10:05+01:00",
+   "text": "plan a new feature (->spec): after having 3d models, we need an editor where objects can be viewed and edited. also the world files should be handled in that editor. plan for tools to edit the worlds as well as the 3d models. also plan to import/export gpx tracks into the world and edit it there, too. add support using available routing planners, like graphhoper, bikerouter, brouter or similar. check for technical and license feasability."
+  },
+  {
+   "time": "13:15:22",
+   "iso": "2026-11-15T13:15:22+01:00",
+   "text": "can you make the black forest and tenarife maps also available in the public web demo?"
   }
  ],
  "tokens": {
   "total": {
-   "input": 1908,
-   "cache_write": 4198229,
-   "cache_read": 254171539,
-   "output": 841430,
-   "total": 259213106,
-   "messages": 911
+   "input": 5659,
+   "cache_write": 28075693,
+   "cache_read": 1087600557,
+   "output": 1829716,
+   "total": 1117511625,
+   "messages": 2628
   },
   "features": {
    "Art project": {
-    "input": 136,
-    "cache_write": 436255,
-    "cache_read": 12660992,
-    "output": 18137,
-    "total": 13115520,
-    "messages": 50
+    "input": 454,
+    "cache_write": 1982352,
+    "cache_read": 51887176,
+    "output": 116089,
+    "total": 53986071,
+    "messages": 190
    },
    "Planning & spec": {
-    "input": 688,
-    "cache_write": 1249496,
-    "cache_read": 115788452,
-    "output": 440148,
-    "total": 117478784,
-    "messages": 333
+    "input": 1756,
+    "cache_write": 10238256,
+    "cache_read": 389913124,
+    "output": 652440,
+    "total": 400805576,
+    "messages": 833
    },
    "Worlds & terrain": {
-    "input": 20,
-    "cache_write": 15349,
-    "cache_read": 4127925,
-    "output": 5271,
-    "total": 4148565,
-    "messages": 6
+    "input": 94,
+    "cache_write": 52566,
+    "cache_read": 19027244,
+    "output": 18956,
+    "total": 19098860,
+    "messages": 36
    },
    "Other": {
-    "input": 958,
-    "cache_write": 1838922,
-    "cache_read": 98950609,
-    "output": 359326,
-    "total": 101149815,
-    "messages": 472
+    "input": 2712,
+    "cache_write": 11997855,
+    "cache_read": 474450685,
+    "output": 908429,
+    "total": 487359681,
+    "messages": 1276
    },
-   "UI & menus": {
+   "Build, release & infra": {
+    "input": 65,
+    "cache_write": 35994,
+    "cache_read": 22066193,
+    "output": 11813,
+    "total": 22114065,
+    "messages": 27
+   },
+   "Multiplayer & server": {
     "input": 26,
-    "cache_write": 586843,
-    "cache_read": 2525791,
-    "output": 1889,
-    "total": 3114549,
-    "messages": 10
+    "cache_write": 8275,
+    "cache_read": 7128124,
+    "output": 5090,
+    "total": 7141515,
+    "messages": 8
    },
    "Riders & bikes": {
-    "input": 80,
-    "cache_write": 71364,
-    "cache_read": 20117770,
-    "output": 16659,
-    "total": 20205873,
-    "messages": 40
+    "input": 440,
+    "cache_write": 1416562,
+    "cache_read": 108343906,
+    "output": 99915,
+    "total": 109860823,
+    "messages": 209
+   },
+   "UI & menus": {
+    "input": 112,
+    "cache_write": 2343833,
+    "cache_read": 14784105,
+    "output": 16984,
+    "total": 17145034,
+    "messages": 49
    }
   }
- }
+ },
+ "incidents": {
+  "auto": [
+   {
+    "time": "00:07:28",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "00:39:18",
+    "kind": "oom-kill",
+    "source": "journal",
+    "machine": "deb",
+    "text": "OOM killer stopped ocw-build-dashboard.service"
+   },
+   {
+    "time": "00:39:29",
+    "kind": "unit-restart",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-build-dashboard.service restarted (restart 1)"
+   },
+   {
+    "time": "00:39:47",
+    "kind": "oom-kill",
+    "source": "journal",
+    "machine": "deb",
+    "text": "OOM killer stopped tmux scope (a terminal session)"
+   },
+   {
+    "time": "00:40:47",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.2 GB)"
+   },
+   {
+    "time": "00:43:31",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "00:44:31",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "00:50:30",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.8 GB)"
+   },
+   {
+    "time": "01:00:38",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "01:05:49",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "01:51:15",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "02:01:23",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.2 GB)"
+   },
+   {
+    "time": "02:01:47",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "03:02:08",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "03:22:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "04:01:53",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "04:02:48",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "05:05:46",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "06:05:47",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "06:09:31",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "06:36:21",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.9 GB)"
+   },
+   {
+    "time": "07:08:01",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-af13162558b98b473/target (0.0 GB)"
+   },
+   {
+    "time": "07:08:01",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a2e65303b0aed2f1c/target (0.2 GB)"
+   },
+   {
+    "time": "07:08:01",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a7c12806972eb03b7/target (7.4 GB)"
+   },
+   {
+    "time": "07:10:37",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW/target/debug (18.7 GB)"
+   },
+   {
+    "time": "07:18:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a1c9a111de4bbfda1/target (20.2 GB)"
+   },
+   {
+    "time": "07:28:08",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a09cdbcff127205c5/target (25.1 GB)"
+   },
+   {
+    "time": "07:54:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab69e4b089e56849c/target (28.1 GB)"
+   },
+   {
+    "time": "07:54:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ab69e4b089e56849c/target (5.1 GB)"
+   },
+   {
+    "time": "07:54:20",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab2216bf39859444d/target (29.7 GB)"
+   },
+   {
+    "time": "07:57:51",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a3b9cf0b40cbf0ccc/target/debug (0.3 GB)"
+   },
+   {
+    "time": "07:59:56",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target/debug (54.0 GB)"
+   },
+   {
+    "time": "08:11:15",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-add2bafdd6a4b0c43/target/debug (4.6 GB)"
+   },
+   {
+    "time": "08:28:01",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "09:45:42",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aca12fe4f3f6386c9/target/debug (19.2 GB)"
+   },
+   {
+    "time": "10:17:18",
+    "kind": "runs-failed",
+    "source": "remote.sh",
+    "machine": "leela, macos, marge",
+    "text": "11 failed remote.sh runs (leela 2, macos 5, marge 4)"
+   },
+   {
+    "time": "10:17:59",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab18479c7c2ff5bd4/target (32.3 GB)"
+   },
+   {
+    "time": "10:18:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ab18479c7c2ff5bd4/target (4.6 GB)"
+   },
+   {
+    "time": "10:18:22",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a3bffa51d30d0cfa2/target (30.0 GB)"
+   },
+   {
+    "time": "10:18:29",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a3bffa51d30d0cfa2/target (9.3 GB)"
+   },
+   {
+    "time": "10:46:02",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "10:59:32",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a9236ac646995a021/target (22.5 GB)"
+   },
+   {
+    "time": "10:59:37",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a9236ac646995a021/target (1.4 GB)"
+   },
+   {
+    "time": "11:05:02",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "11:06:02",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "11:14:02",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "11:14:59",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-add2bafdd6a4b0c43/target (29.8 GB)"
+   },
+   {
+    "time": "11:15:05",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-add2bafdd6a4b0c43/target (5.4 GB)"
+   },
+   {
+    "time": "11:19:02",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "11:31:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW/target/debug (5.7 GB)"
+   },
+   {
+    "time": "12:10:33",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aca12fe4f3f6386c9/target (32.2 GB)"
+   },
+   {
+    "time": "12:10:43",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-aca12fe4f3f6386c9/target (7.8 GB)"
+   },
+   {
+    "time": "12:12:08",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (1.9 GB)"
+   },
+   {
+    "time": "12:14:02",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "12:15:02",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "12:43:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (ssh error)"
+   },
+   {
+    "time": "12:44:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "12:53:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "12:54:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "13:02:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "13:03:30",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a61e55158bce4740b/target (38.2 GB)"
+   },
+   {
+    "time": "13:03:42",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a61e55158bce4740b/target (6.8 GB)"
+   },
+   {
+    "time": "13:03:49",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a61e55158bce4740b/target (18.8 GB)"
+   },
+   {
+    "time": "13:06:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "13:07:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "13:11:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (timeout)"
+   },
+   {
+    "time": "13:13:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "13:14:03",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (ssh error)"
+   },
+   {
+    "time": "13:15:03",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   }
+  ],
+  "notes": "# Incidents – 2026-11-15\n\nRoot-cause notes by the coordinator (art/ART-PROJECT.md §2.6). The collected\nentries (journal, build log) are in `logs/build-log/incidents.jsonl` and in\nthe journal's \"Incidents\" section.\n\n## 00:39 – deb ran out of memory: the dashboard and the coordinator session were killed\n\n- **What happened:** the OOM killer stopped `ocw-build-dashboard.service`\n  (00:39:18) and the coordinator's Claude Code session, its tmux scope\n  (00:39:47), on deb. systemd restarted the dashboard 11 s later.\n- **Cause:** two QEMU VMs (\"windows\", \"macos\") held about 8 GB of deb's 15 GB\n  permanently. On top of that ran about 10 parallel agents in one Claude Code\n  process (6.8 GB peak), the re-renders of the diary videos (ffmpeg) and the\n  art collector. Swap was full (4 of 4 GB).\n- **Effect:** the session crashed and 8 running agents were interrupted.\n  Their worktrees were intact, and they were resumed at about 06:15. The\n  day-4 video rendering at that moment was left truncated and was rendered\n  again.\n- **Fix:** the user stopped the VMs, and the dashboard was restarted. From now\n  on at most about 5 agents run at a time, and renders don't run in parallel\n  with many agents. Renders on deb run one day at a time.\n- **Follow-up:** the dashboard unit got `Restart=on-failure` and\n  `MemoryHigh=768M` / `MemoryMax=1G` (`tools/build-dashboard/ocw-build-dashboard.service`).\n  It takes effect after `make dashboard-install`.\n\n## 01:05 – the art collector failed every hour: journals written without the users masked\n\n- **What happened:** `ocw-art-collect.service` failed every hour from 01:05 to\n  06:05. Its mask check found 16 unmasked build-machine user names in the\n  tracked journals and token files of days 1–4.\n- **Cause:** the music agent re-rendered days 1–4 from its agent worktree\n  against the main archive (00:24–00:39), and `render` rewrites the day's\n  journal. `diary.py` read the machine list from the worktree's\n  `config/machines.toml`, which a worktree doesn't have, so the users and\n  hosts were left out of the mask. Only the home directory, e-mail and IP\n  patterns applied.\n- **Effect:** the tracked text files in the main checkout held the build user\n  name as a word (not committed). The re-rendered day videos of that run\n  could show it in prompt bubbles; they were published at about 06:15 and\n  replaced at 06:43.\n  No hosts and no IP addresses were affected.\n- **Fix:** `check-masked --fix` with the main checkout's tool re-masked the\n  files, and the check passes again. `diary.py` now finds `config/machines.toml`\n  in the main checkout too, and refuses to mask without a machine list.\n  Days 1–4 and the diary were rendered again and re-published.\n- **Follow-up:** a regression test (`MachinesConfTest`). The collector's mask\n  check did its job; the incident log made the hourly failures visible.\n",
+  "noted": [
+   "00:39 – deb ran out of memory: the dashboard and the coordinator session were killed",
+   "01:05 – the art collector failed every hour: journals written without the users masked"
+  ]
+ },
+ "features": [
+  {
+   "version": "3.36",
+   "title": "Public preview of the browser app on GitHub Pages",
+   "commit": "9ea2fd0",
+   "sha": "9ea2fd0d444ca7ea131e09e8e68606830638c4e2",
+   "time": "2026-11-15T00:00:29+01:00",
+   "merge": false,
+   "subject": "Spec 3.36: public preview of the browser app on GitHub Pages (B8a, stage 1)"
+  },
+  {
+   "version": "3.37",
+   "title": "Art project music",
+   "commit": "9c2044d",
+   "sha": "9c2044dc26bea65d6284adc912818fc7623fb2b0",
+   "time": "2026-11-15T06:44:56+01:00",
+   "merge": true,
+   "subject": "Merge art project: hermetic collector tests, varied per-day music (art/music.py, five styles), incident log with root-cause notes, dashboard memory cap (spec 3.37, 3.38)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "3.38",
+   "title": "Art project incident log",
+   "commit": "9c2044d",
+   "sha": "9c2044dc26bea65d6284adc912818fc7623fb2b0",
+   "time": "2026-11-15T06:44:56+01:00",
+   "merge": true,
+   "subject": "Merge art project: hermetic collector tests, varied per-day music (art/music.py, five styles), incident log with root-cause notes, dashboard memory cap (spec 3.37, 3.38)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "3.39",
+   "title": "Phase 13 G5's browser part built",
+   "commit": "d9a9b05",
+   "sha": "d9a9b05278d865577c2dd56adb8b2623ed593493",
+   "time": "2026-11-15T07:03:11+01:00",
+   "merge": true,
+   "subject": "Merge Unicorn mode in the browser: god-mode glue shared in ocw-ui (flight, touch, inspection, HUD), Pointer Lock in the browser, test-web-unicorn (spec 3.39)",
+   "branch": "worktree-agent-ab69e4b089e56849c",
+   "check": null
+  },
+  {
+   "version": "3.40",
+   "title": "Browser app setup and its test browser",
+   "commit": "ed821d6",
+   "sha": "ed821d6c12432bbf1142dbd0fdfe989bc70cd036",
+   "time": "2026-11-15T07:52:25+01:00",
+   "merge": true,
+   "subject": "Merge browser setup fixes: web-serve stops without a build, make web-remote, WEB_BIND, cargo profile web-release, pinned Chromium 157 for the browser tests, make test-web-readme (spec 3.40)",
+   "branch": "worktree-agent-ab2216bf39859444d",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T06:25:48+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ab2216bf39859444d",
+    "command": "make test-web-readme README_FLAGS=\"--keep --reuse-target\"",
+    "log": "062548-marge-3423581.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.41",
+   "title": "Art project features log",
+   "commit": "b28542c",
+   "sha": "b28542c4fb5cf0f5e2656c1e9f8bb77a4e7b4dbc",
+   "time": "2026-11-15T07:52:42+01:00",
+   "merge": true,
+   "subject": "Merge art features log: Features and Agent jobs in the journal, agent-event, commit in the build log, deploys log, Today's features roll (spec 3.41)",
+   "branch": "worktree-agent-a43d6ec0bd80728f8",
+   "check": null
+  },
+  {
+   "version": "3.42",
+   "title": "Phase 7 built in part",
+   "commit": "c926016",
+   "sha": "c926016d8bcd9baaef50b1cca48dbaf7c1142d38",
+   "time": "2026-11-15T08:46:59+01:00",
+   "merge": true,
+   "subject": "Merge Phase 7: training history (rides, totals, bests, power curve, FIT import/export) and M9 key/button rebinding with accessibility options; HUD panel stays clear of the FPS column (spec 3.42)",
+   "branch": "worktree-agent-ab18479c7c2ff5bd4",
+   "check": null
+  },
+  {
+   "version": "3.43",
+   "title": "Console Tab completion and the GPS line restored",
+   "commit": "5e96eb2",
+   "sha": "5e96eb2a5998f21112d7311266accf5b756283cf",
+   "time": "2026-11-15T08:47:31+01:00",
+   "merge": true,
+   "subject": "Merge console Tab completion and the GPS line restored (route rides kept no geographic origin since fae1547), rider.gps and hud.gps in both apps, browser origin= option (spec 3.43)",
+   "branch": "worktree-agent-a3bffa51d30d0cfa2",
+   "check": null
+  },
+  {
+   "version": "3.44",
+   "title": "Cooler helmets",
+   "commit": "5410232",
+   "sha": "5410232831f4fb0f094703a32d93714b5e8fabaf",
+   "time": "2026-11-15T09:46:54+01:00",
+   "merge": true,
+   "subject": "Merge cooler helmets: sculpted road / lightweight / aero road shells with vents, two-tone, retention band and straps; TT teardrop with wrap visor; no clipping with hair, caps and glasses (spec 3.44)",
+   "branch": "worktree-agent-a9236ac646995a021",
+   "check": null
+  },
+  {
+   "version": "3.45",
+   "title": "Phase 10 B8a built",
+   "commit": "8ab9209",
+   "sha": "8ab92092ec18599353746ea6aff05a4bff106d50",
+   "time": "2026-11-15T10:42:46+01:00",
+   "merge": true,
+   "subject": "Merge B8a public preview on GitHub Pages: size-optimised preview build (wasm-opt, fat LTO), preview signing root, page config, start and credits pages, signed Liechtenstein release asset, Pages workflow, README link (spec 3.45)",
+   "branch": "worktree-agent-add2bafdd6a4b0c43",
+   "check": null
+  },
+  {
+   "version": "3.46",
+   "title": "Sign-in with Google and Strava built",
+   "commit": "e2b4bda",
+   "sha": "e2b4bdac1f5587ea41bb6523b0dd35d7566d33a4",
+   "time": "2026-11-15T12:18:36+01:00",
+   "merge": true,
+   "subject": "Merge sign-in with Google and Strava: ocw-auth, the ocw-accounts backend (OIDC-shaped endpoints, device flow, rotation, export/delete), game-server token check, Settings → Account in both apps; fictional test identities (spec 3.46)",
+   "branch": "worktree-agent-a61e55158bce4740b",
+   "check": null
+  },
+  {
+   "version": "3.47",
+   "title": "The remaining rider animations and Phase 12 K6, the organiser's options",
+   "commit": "594e8c1",
+   "sha": "594e8c1fc99c5ab86dcd4475e7988c8e0419384a",
+   "time": "2026-11-15T11:20:38+01:00",
+   "merge": true,
+   "subject": "Merge rider animations (foot down, cornering, U-turn look, finish throw, victory) and Phase 12 K6 organiser rules (aids, chaotic bots, time limit, service wait, DNF reasons) (spec 3.47)",
+   "branch": "worktree-agent-aca12fe4f3f6386c9",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T06:15:21+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-aca12fe4f3f6386c9",
+    "command": "cargo test -p ocw-client free_ride_u_turn_on_client_and_server 2>&1 | grep -E \"^test |panicked|left|right|^error\" | head",
+    "log": "061521-marge-3407677.log",
+    "how": "branch",
+    "suites": 1,
+    "passed": 1,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "3.48",
+   "title": "Two new phases planned",
+   "commit": "331a29f",
+   "sha": "331a29fd852bacbec86ca38dde25e1ea82ec42ba",
+   "time": "2026-11-15T13:14:38+01:00",
+   "merge": false,
+   "subject": "Plan Phase 15 (3D objects as glTF model files in artwork/3dmodels: format comparison, model contract, import/export/loader, migration M1-M6) and Phase 16 (OCW Studio: models, world patches, GPX routes, routing planners with licence check) (spec 3.48)"
+  },
+  {
+   "version": "3.49",
+   "title": "Phase 8 T8",
+   "commit": "259934b",
+   "sha": "259934bbf5e35be8ab892d62701d09b62dce2a20",
+   "time": "2026-11-15T13:15:45+01:00",
+   "merge": true,
+   "subject": "Merge realistic vegetation (Phase 8 T8): flora species, VEGE crops and plantations, planted trees in OBST, world-builder vegetation, flora/vegetation renderer (spec 3.49)",
+   "branch": "worktree-agent-aa822ba7b91d3a262",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-15T08:05:12+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-aa822ba7b91d3a262",
+    "command": "cargo test -q -p ocw-world 2>&1 | grep -v \"^test .* ok$\" | tail -40",
+    "log": "080512-marge-3570977.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  }
+ ],
+ "deploys": [
+  {
+   "start": "2026-11-15T08:45:23+01:00",
+   "end": "2026-11-15T09:20:51+01:00",
+   "machine": "marge",
+   "commit": "5e96eb2-dirty",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T09:20:51+01:00",
+   "end": "2026-11-15T09:21:11+01:00",
+   "machine": "leela",
+   "commit": "5e96eb2-dirty",
+   "exit": 255
+  },
+  {
+   "start": "2026-11-15T09:45:41+01:00",
+   "end": "2026-11-15T10:17:18+01:00",
+   "machine": "marge",
+   "commit": "5410232-dirty",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T10:17:18+01:00",
+   "end": "2026-11-15T10:17:38+01:00",
+   "machine": "leela",
+   "commit": "5410232-dirty",
+   "exit": 255
+  },
+  {
+   "start": "2026-11-15T10:37:29+01:00",
+   "end": "2026-11-15T10:57:13+01:00",
+   "machine": "marge",
+   "commit": "8ab9209-dirty",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T10:57:13+01:00",
+   "end": "2026-11-15T10:59:17+01:00",
+   "machine": "leela",
+   "commit": "8ab9209-dirty",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T11:58:57+01:00",
+   "end": "2026-11-15T12:08:03+01:00",
+   "machine": "marge",
+   "commit": "42b48df-dirty",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T12:08:03+01:00",
+   "end": "2026-11-15T12:10:16+01:00",
+   "machine": "leela",
+   "commit": "42b48df-dirty",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T12:56:34+01:00",
+   "end": "2026-11-15T12:59:04+01:00",
+   "machine": "marge",
+   "commit": "a88498c-dirty",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-15T12:59:04+01:00",
+   "end": "2026-11-15T13:03:11+01:00",
+   "machine": "leela",
+   "commit": "a88498c-dirty",
+   "exit": 0
+  }
+ ],
+ "releases": [
+  {
+   "tag": "web-preview-worlds",
+   "name": "Web preview worlds",
+   "time": "2026-11-15T08:03:58+01:00",
+   "prerelease": true
+  }
+ ],
+ "agent_jobs": [
+  {
+   "agent": "merge-9c",
+   "task": "art project: hermetic collector tests, varied per-day music (art/music.py, five styles), incident lo",
+   "branch": "merge-9c2044d",
+   "start": "2026-11-15T00:01:43+01:00",
+   "end": "2026-11-15T06:44:56+01:00",
+   "status": "merged",
+   "interruptions": 1,
+   "merged": "9c2044d",
+   "events": 5
+  },
+  {
+   "agent": "ab18479c",
+   "task": "ocw-ui menu test: unicorn rows on Controls -> Unicorn mode after the merge",
+   "branch": "worktree-agent-ab18479c7c2ff5bd4",
+   "start": "2026-11-15T00:01:44+01:00",
+   "end": "2026-11-15T08:47:38+01:00",
+   "status": "merged",
+   "interruptions": 1,
+   "merged": "c926016",
+   "events": 6
+  },
+  {
+   "agent": "a61e5515",
+   "task": "wave 2",
+   "branch": "worktree-agent-a61e55158bce4740b",
+   "start": "2026-11-15T00:39:00+01:00",
+   "end": "2026-11-15T12:18:36+01:00",
+   "status": "merged",
+   "interruptions": 1,
+   "merged": "e2b4bda",
+   "events": 4
+  },
+  {
+   "agent": "add2bafd",
+   "task": "wave 2",
+   "branch": "worktree-agent-add2bafdd6a4b0c43",
+   "start": "2026-11-15T00:39:00+01:00",
+   "end": "2026-11-15T10:42:46+01:00",
+   "status": "merged",
+   "interruptions": 1,
+   "merged": "8ab9209",
+   "events": 4
+  },
+  {
+   "agent": "aa822ba7",
+   "task": "wave 2",
+   "branch": "worktree-agent-aa822ba7b91d3a262",
+   "start": "2026-11-15T00:39:00+01:00",
+   "end": "2026-11-15T12:24:14+01:00",
+   "status": "reported",
+   "interruptions": 1,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a3b9cf0b",
+   "task": "wave 2",
+   "branch": "worktree-agent-a3b9cf0b40cbf0ccc",
+   "start": "2026-11-15T00:39:00+01:00",
+   "end": "2026-11-15T12:24:14+01:00",
+   "status": "reported",
+   "interruptions": 1,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "ab2216bf",
+   "task": "Browser app setup: web-serve guard, make web-remote, WEB_BIND, pinned Chromium, README walkthrough t",
+   "branch": "worktree-agent-ab2216bf39859444d",
+   "start": "2026-11-15T06:15:27+01:00",
+   "end": "2026-11-15T07:53:52+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "ed821d6",
+   "events": 3
+  },
+  {
+   "agent": "ab69e4b0",
+   "task": "Unicorn mode in the browser: god-mode glue shared in ocw-ui (flight, touch, inspection, HUD), Pointe",
+   "branch": "worktree-agent-ab69e4b089e56849c",
+   "start": "2026-11-15T06:15:32+01:00",
+   "end": "2026-11-15T07:05:00+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "d9a9b05",
+   "events": 4
+  },
+  {
+   "agent": "aca12fe4",
+   "task": "U-turn cue regression test; scene timings; version references 3.37",
+   "branch": "worktree-agent-aca12fe4f3f6386c9",
+   "start": "2026-11-15T06:15:42+01:00",
+   "end": "2026-11-15T11:20:38+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "594e8c1",
+   "events": 5
+  },
+  {
+   "agent": "a3bffa51",
+   "task": "WIP console Tab completion and GPS line",
+   "branch": "worktree-agent-a3bffa51d30d0cfa2",
+   "start": "2026-11-15T06:46:26+01:00",
+   "end": "2026-11-15T08:47:39+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "5e96eb2",
+   "events": 4
+  },
+  {
+   "agent": "a43d6ec0",
+   "task": "Art features log",
+   "branch": "worktree-agent-a43d6ec0bd80728f8",
+   "start": "2026-11-15T07:53:53+01:00",
+   "end": "2026-11-15T07:53:53+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "b28542c",
+   "events": 1
+  },
+  {
+   "agent": "a9236ac6",
+   "task": "Cooler helmets",
+   "branch": "worktree-agent-a9236ac646995a021",
+   "start": "2026-11-15T07:53:53+01:00",
+   "end": "2026-11-15T09:47:03+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": "5410232",
+   "events": 3
+  }
+ ]
 }
