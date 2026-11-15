@@ -21,3 +21,10 @@
 
 # Python bytecode
 __pycache__/
+
+# >>> lfs-days
+# The days whose pictures/videos are in Git LFS (ART-PROJECT §2.8), written by
+# `diary.py lfs-commit`: do not edit by hand.
+!/build-history/2026-11-11/*.mp4
+!/build-history/2026-11-11/*.png
+# <<< lfs-days
