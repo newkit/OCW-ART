@@ -47,6 +47,11 @@ def check_masked(fix: bool = False, secrets=None) -> list[str]:
                 text = masked
         for n, kind in private_findings(text, secrets):
             out.append(f"{f.relative_to(C.HIST)}:{n}: {kind}")
+    # The generated README (public on github.com).
+    readme = C.ART / "README.md"
+    if readme.is_file() and C.HIST == C.ART / "build-history":
+        for n, kind in private_findings(readme.read_text(errors="replace"), secrets):
+            out.append(f"README.md:{n}: {kind}")
     # The media's file names: public in Git LFS, the gallery and the day zips
     # (§2.8). Reported masked, so the value is never shown.
     for d in sorted(C.HIST.glob("????-??-??")):

@@ -35,6 +35,9 @@
                                 (build-history/.work/gallery/site/), upload
                                 its zips to the release and deploy it to
                                 GitHub Pages, deploy only, or preview it
+    diary.py readme             regenerate README.md (the visual overview:
+                                hero, evolution, one section per day) from
+                                docs/readme/, the day scripts and journals
     diary.py lfs-budget         the Git LFS total, the budget and the days
                                 left (§2.8)
     diary.py lfs-commit [--dry-run] [--trailer T] [DAY...]
@@ -85,7 +88,7 @@ import sys
 
 from . import core as C
 from . import features as F
-from . import gallery, lfs
+from . import gallery, lfs, readme
 from .agents import agent_backfill, agent_event
 from .archive import fetch, gather, stamp
 from .collect import collect, iso_now, write_status
@@ -132,6 +135,10 @@ def main():
         return
     if cmd == "gallery":
         gallery_command(args)
+        return
+    if cmd == "readme":
+        with art_lock("readme"):
+            readme.build()
         return
     if cmd in ("lfs-budget", "lfs-commit", "lfs-push"):
         lfs_command(cmd, args)

@@ -1,0 +1,54 @@
+# "How the game grew": the README's evolution strip (docs/ART-PROJECT.md
+# §5.3). Hand-picked pictures of the archive, in order; `diary.py readme`
+# shows each as a gallery thumbnail linking to it in the gallery.
+# day = the day folder, file = the picture's name there, caption = one line.
+
+[[pic]]
+day = "2026-11-11"
+file = "012829-shot1.png"
+caption = "Day 1, 01:28 – capsule riders on a green test field"
+
+[[pic]]
+day = "2026-11-11"
+file = "150218-lie-c.png"
+caption = "Day 1 – the first real world: a road in Liechtenstein"
+
+[[pic]]
+day = "2026-11-12"
+file = "122149-scenes-readme1-readme-climb-behind.png"
+caption = "Day 2 – the glow-up: riders with bodies, a peloton climbs"
+
+[[pic]]
+day = "2026-11-12"
+file = "220502-shot-wayland-bf-schauinsland-climb.png"
+caption = "Day 2 – the Black Forest: the Schauinsland climb"
+
+[[pic]]
+day = "2026-11-13"
+file = "213521-shot-wayland-showcase-tf-teide-iconic.jpg"
+caption = "Day 3 – Tenerife, the Teide found at last"
+
+[[pic]]
+day = "2026-11-14"
+file = "001241-video-wayland-god-plane-video.jpg"
+caption = "Day 4 – Unicorn mode: flying over Vaduz"
+
+[[pic]]
+day = "2026-11-14"
+file = "150250-shot-wayland-season-vaduz-autumn.jpg"
+caption = "Day 4 – the seasons: autumn above Vaduz"
+
+[[pic]]
+day = "2026-11-14"
+file = "101822-agent-scenes-s4-wl-1-weather-thunderstorm-tenerife.jpg"
+caption = "Day 4 – the weather: a thunderstorm on Tenerife"
+
+[[pic]]
+day = "2026-11-14"
+file = "061235-agent-web-web-world.jpg"
+caption = "Day 4 – the browser app: the same ride in Chromium"
+
+[[pic]]
+day = "2026-11-15"
+file = "104144-scenes-veg-after-wayland-veg-li-vaduz-vineyards.jpg"
+caption = "Day 5 – vegetation: vineyards above Vaduz"

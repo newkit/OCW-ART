@@ -1,43 +1,111 @@
-# OCW-ART – the OCW Build Diary
+<!-- The README is generated: `make readme` (diary.py readme) fills this
+     template (docs/readme/README.template.md) with the hero, the totals, the
+     evolution strip (docs/readme/evolution.toml) and one section per build
+     day from the day scripts and journals. Edit the template, not README.md. -->
+# OCW Build Diary
 
-The art project of [Open Cycling World](https://github.com/newkit/OCW) (OCW):
-it documents the whole build of OCW – every screenshot, video, sound, log,
-commit, merge and test – and turns each build day into a short video, joined
-into a growing diary video. The full brief and every rule are in
-[docs/ART-PROJECT.md](docs/ART-PROJECT.md).
+**The art project of [Open Cycling World](https://github.com/newkit/OCW).**
+OCW is built by a human and a crowd of AI agents, day and night.
+The OCW Build Diary keeps *everything* that was made on the way: every
+screenshot, video, sound, log, commit, merge and test. From it, each build
+day becomes a short video (title, a time-lapse of the whole day, the story in
+chapters, today's features, the numbers), and the days are joined into one
+growing diary video.
 
-**See it:**
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/w/150250-shot-wayland-season-vaduz-autumn.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
-- **Gallery:** <https://newkit.github.io/OCW-ART/> – every picture and a
-  poster frame of every video, day by day, with a lightbox.
-- **Videos and day archives:** the release
-  [`build-history`](https://github.com/newkit/OCW-ART/releases/tag/build-history)
-  (`ocw-build-diary.mp4`, `ocw-diary-day-NN-YYYY-MM-DD.mp4`,
-  `ocw-build-history-YYYY-MM-DD.zip`, `SHA256SUMS`, and the gallery's
-  `gallery-*.zip`).
+**▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
+**[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
+[Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
+[The brief and the rules](docs/ART-PROJECT.md)
 
-## Where the media live
+**5 build days** · **681** commits · **2073** pictures · **189** videos · **8.25 billion** tokens · the diary video: 280.2 MB
 
-| Where | What |
-|---|---|
-| `build-history/` on the dev machine | the archive: everything, full size (about 3 GB of media, growing by up to 1.4 GB per build day) |
-| Git LFS of this repository | the day folders' pictures and videos, one commit per day, within a 9 GiB budget of the free plan's 10 GiB ([§2.8](docs/ART-PROJECT.md#28-pictures-and-videos-in-git-lfs-decided-by-the-user-2026-11-15)) |
-| the release `build-history` | one zip per finished day (full size, text masked), the day videos, the diary, the gallery zips |
-| GitHub Pages | the gallery: thumbnails, web copies and poster frames, under 900 MB ([§6](docs/ART-PROJECT.md#6-the-gallery-decided-by-the-user-2026-11-15)) |
+## How the game grew
 
-Git tracks the masked text of the archive (`index.md`, `SHA256SUMS`, per day
-`journal.md`, `journal.json`, `tokens.json`, `incidents.md`); the media go
-only into LFS. Never in git or LFS: the day zips, the diary videos and the
-work files (`.work/`: renders, contact sheets, the gallery).
+<table><tr><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-11/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/012829-shot1.png.jpg" width="200" alt="Day 1, 01:28 – capsule riders on a green test field"></a><br><sub>Day 1, 01:28 – capsule riders on a green test field</sub></td><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-11/#93"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/150218-lie-c.png.jpg" width="200" alt="Day 1 – the first real world: a road in Liechtenstein"></a><br><sub>Day 1 – the first real world: a road in Liechtenstein</sub></td><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-12/#375"><img src="https://newkit.github.io/OCW-ART/days/2026-11-12/t/122149-scenes-readme1-readme-climb-behind.png.jpg" width="200" alt="Day 2 – the glow-up: riders with bodies, a peloton climbs"></a><br><sub>Day 2 – the glow-up: riders with bodies, a peloton climbs</sub></td><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-12/#386"><img src="https://newkit.github.io/OCW-ART/days/2026-11-12/t/220502-shot-wayland-bf-schauinsland-climb.png.jpg" width="200" alt="Day 2 – the Black Forest: the Schauinsland climb"></a><br><sub>Day 2 – the Black Forest: the Schauinsland climb</sub></td></tr></table>
+<table><tr><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-13/#464"><img src="https://newkit.github.io/OCW-ART/days/2026-11-13/t/213521-shot-wayland-showcase-tf-teide-iconic.jpg.jpg" width="200" alt="Day 3 – Tenerife, the Teide found at last"></a><br><sub>Day 3 – Tenerife, the Teide found at last</sub></td><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/001241-video-wayland-god-plane-video.jpg.jpg" width="200" alt="Day 4 – Unicorn mode: flying over Vaduz"></a><br><sub>Day 4 – Unicorn mode: flying over Vaduz</sub></td><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#364"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/150250-shot-wayland-season-vaduz-autumn.jpg.jpg" width="200" alt="Day 4 – the seasons: autumn above Vaduz"></a><br><sub>Day 4 – the seasons: autumn above Vaduz</sub></td><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#158"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/101822-agent-scenes-s4-wl-1-weather-thunderstorm-tenerife.jpg.jpg" width="200" alt="Day 4 – the weather: a thunderstorm on Tenerife"></a><br><sub>Day 4 – the weather: a thunderstorm on Tenerife</sub></td></tr></table>
+<table><tr><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#78"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/061235-agent-web-web-world.jpg.jpg" width="200" alt="Day 4 – the browser app: the same ride in Chromium"></a><br><sub>Day 4 – the browser app: the same ride in Chromium</sub></td><td align="center" valign="top" width="25%"><a href="https://newkit.github.io/OCW-ART/days/2026-11-15/#369"><img src="https://newkit.github.io/OCW-ART/days/2026-11-15/t/104144-scenes-veg-after-wayland-veg-li-vaduz-vineyards.jpg.jpg" width="200" alt="Day 5 – vegetation: vineyards above Vaduz"></a><br><sub>Day 5 – vegetation: vineyards above Vaduz</sub></td></tr></table>
 
-**Clone without the media** (most clones: the code, the day scripts, the
-journals) – this saves the free LFS bandwidth of 10 GiB a month:
+## The build days
 
-```bash
-GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:newkit/OCW-ART.git
-# or once per machine: git lfs install --skip-smudge
-git lfs pull --include "build-history/2026-11-14/*"   # later: one day's media
+### Day 5 · 2026-11-15 — (the day's story is written at the end of the day)
+
+<table><tr><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-15/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-15/t/000004-shot-wayland-k6-organiser-rules-menu.jpg.jpg" width="200" alt="shot wayland k6 organiser rules menu"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-15/#192"><img src="https://newkit.github.io/OCW-ART/days/2026-11-15/t/091249-shot-helmet-mirror-light-side.jpg.jpg" width="200" alt="shot helmet mirror light side"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-15/#373"><img src="https://newkit.github.io/OCW-ART/days/2026-11-15/t/104219-scenes-veg-after-wayland-veg-li-triesenberg-forest.jpg.jpg" width="200" alt="scenes veg after wayland veg li triesenberg forest"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-15/#555"><img src="https://newkit.github.io/OCW-ART/days/2026-11-15/t/143447-dashboard-deb-dashboard-deb-2026-11-15.png.jpg" width="200" alt="dashboard deb dashboard deb 2026 11 15"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-15/) · day zip and video: at the end of the day
+
+**110** commits · **32** merges · spec 3.36 → 3.56 · **546** pictures · **9** videos · **1.26 billion** tokens · music: house
+
+### Day 4 · 2026-11-14 — The weather, the seasons and the 404
+
+*In which Storm Lothar returns, the leaves turn, the browser learns to sing – and one URL leads nowhere.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-04-2026-11-14.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/150250-shot-wayland-season-vaduz-autumn.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-04-2026-11-14.mp4">day video</a> (134.4 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#10"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/022731-agent-scenes-2026-11-14-t7-orthophoto-ortho-malbun-after-wayland.jpg.jpg" width="200" alt="agent scenes 2026 11 14 t7 orthophoto ortho malbun after wayland"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#392"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/154228-shot-wayland-weather-physics-tailwind-vaduz.jpg.jpg" width="200" alt="shot wayland weather physics tailwind vaduz"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#498"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/205239-agent-web-web-webgl2.jpg.jpg" width="200" alt="agent web web webgl2"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-14/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-04-2026-11-14.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-14.zip) (1.3 GB)
+
+**160** commits · **49** merges · spec 2.66 → 3.35 · **535** pictures · **39** videos · **3.18 billion** tokens · music: chiptune
+
+### Day 3 · 2026-11-13 — The day of the missing volcano
+
+*In which, on Friday the 13th, a sun rises, a unicorn flies, and the Teide plays hide and seek for seven hours.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-03-2026-11-13.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-13/t/213521-shot-wayland-showcase-tf-teide-iconic.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-03-2026-11-13.mp4">day video</a> (70.2 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-13/#20"><img src="https://newkit.github.io/OCW-ART/days/2026-11-13/t/064224-shot-wayland-sky-golden-hour.jpg.jpg" width="200" alt="shot wayland sky golden hour"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-13/#388"><img src="https://newkit.github.io/OCW-ART/days/2026-11-13/t/160006-shot-wayland-teide5-a.jpg.jpg" width="200" alt="shot wayland teide5 a"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-13/#472"><img src="https://newkit.github.io/OCW-ART/days/2026-11-13/t/215856-agent-scenes-t5-after-road-vaduz-zebra.jpg.jpg" width="200" alt="agent scenes t5 after road vaduz zebra"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-13/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-03-2026-11-13.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-13.zip) (472.5 MB)
+
+**143** commits · **43** merges · spec 2.30 → 2.64 · **449** pictures · **29** videos · **1.97 billion** tokens · music: lofi
+
+### Day 2 · 2026-11-12 — The night shift, the glow-up and a peloton across three operating systems
+
+*In which the agents work through the night and the capsules finally get bodies.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-02-2026-11-12.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-12/t/122149-scenes-readme1-readme-climb-behind.png.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-02-2026-11-12.mp4">day video</a> (42.1 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-12/#16"><img src="https://newkit.github.io/OCW-ART/days/2026-11-12/t/003501-shot-wayland-ocw-m2-display.png.jpg" width="200" alt="shot wayland ocw m2 display"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-12/#132"><img src="https://newkit.github.io/OCW-ART/days/2026-11-12/t/084411-voice-hud.png.jpg" width="200" alt="voice hud"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-12/#381"><img src="https://newkit.github.io/OCW-ART/days/2026-11-12/t/194052-multiplayer-kiosk-still-25.png.jpg" width="200" alt="multiplayer kiosk still 25"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-12/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-02-2026-11-12.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-12.zip) (311.9 MB)
+
+**113** commits · **27** merges · spec 2.8 → 2.29 · **383** pictures · **63** videos · **873 million** tokens · music: funk
+
+### Day 1 · 2026-11-11 — From five capsules to the Principality of Liechtenstein
+
+*In which a spec is written at 00:38 and the riders are mostly capsules.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-01-2026-11-11.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/150218-lie-c.png.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-01-2026-11-11.mp4">day video</a> (33 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-11/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/012829-shot1.png.jpg" width="200" alt="shot1"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-11/#76"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/140719-cap.png.jpg" width="200" alt="cap"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-11/#186"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/233403-agent-bots-formation.png.jpg" width="200" alt="agent bots formation"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-11/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-01-2026-11-11.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-11.zip) (138.1 MB)
+
+**155** commits · **35** merges · spec 1.3 → 2.6 · **160** pictures · **49** videos · **971 million** tokens · music: synthwave
+
+## How it is made
+
+```mermaid
+flowchart LR
+  A["OCW test runs<br/>screenshots · videos · sounds"] --> C["hourly collector<br/>gather + journal (masked)"]
+  B["git log · spec · build log<br/>prompts · tokens · incidents"] --> C
+  C --> D["build-history/<br/>day folders"]
+  D --> E["day script<br/>days/DAY.toml"]
+  E --> F["render<br/>ffmpeg + synthesised music"]
+  F --> G["release build-history<br/>day video · diary · day zip"]
+  D --> H["gallery<br/>thumbnails · web copies"]
+  H --> I["GitHub Pages"]
+  D --> J["Git LFS<br/>pictures + videos"]
 ```
+
+1. **Collect** (every hour, a systemd timer): every picture, video, sound and
+   log of OCW's test runs is gathered into `build-history/DAY/`, with its
+   capture time; the journal adds commits, merges, spec versions, builds,
+   prompts, token usage, incidents and the day's features. All text is
+   masked (no hosts, users, home paths, e-mail or private addresses).
+2. **Write** the day's story: `days/DAY.toml` picks the chapters, shots, captions
+   and jokes from the journal and the contact sheets – facts only.
+3. **Render** the day video with ffmpeg: Ken Burns stills, clips, splits,
+   sticker notes, a time-lapse with a running clock and the commit log, the
+   features roll and the end card; music and sound effects are synthesised
+   by the tool (a style per day). Then the diary is rebuilt.
+4. **Publish**: the day zip and the videos go to the release, the gallery to
+   GitHub Pages, the pictures and videos into Git LFS, and this README is
+   regenerated.
 
 ## Layout
 
@@ -46,72 +114,83 @@ OCW-ART/
 ├── diary.py               # the command line (diary.py --help)
 ├── ocwart/                # the Python package: core, mask, archive, prompts, incidents,
 │                          # agents, features, journal, render, subtitles, music, sfx,
-│                          # publish, gallery, lfs, collect, cli
+│                          # publish, gallery, lfs, readme, collect, cli
 ├── bin/collect.sh         # the hourly collector (run by the systemd user timer)
 ├── systemd/               # ocw-art-collect.service / .timer
 ├── site/                  # the gallery's templates (page, CSS, lightbox script)
 ├── .github/workflows/     # gallery.yml: deploys the gallery to GitHub Pages
 ├── days/YYYY-MM-DD.toml   # the day scripts (story, shots, jokes)
 ├── assets/                # the OCW logo and Fira Mono (copies from OCW)
-├── docs/ART-PROJECT.md    # the specification
+├── docs/ART-PROJECT.md    # the specification; docs/readme/ this README's template
 ├── tests/                 # unit tests (hermetic: fixture archives and repositories)
 └── build-history/         # the archive (masked text tracked, media in LFS or local)
 ```
 
-## Setup
+## Where the media live
 
-Needs Python 3.11+ (`/usr/bin/python3` on Debian 13), ffmpeg with libass,
-git-lfs, `zip`, the Lato font and `gh` (logged in) for fetching and
-publishing. `make deps` checks them, installs ffmpeg, git-lfs and zip (apt
-or dnf; on macOS it prints the `brew` line) and runs `git lfs install`. No
-Rust build is involved.
+| Where | What |
+|---|---|
+| `build-history/` on the dev machine | the archive: everything, full size |
+| Git LFS of this repository | the day folders' pictures and videos, one commit per day, within a 9 GiB budget of the free plan's 10 GiB ([§2.8](docs/ART-PROJECT.md#28-pictures-and-videos-in-git-lfs-decided-by-the-user-2026-11-15)) |
+| the release [`build-history`](https://github.com/newkit/OCW-ART/releases/tag/build-history) | one zip per finished day (full size, text masked), the day videos, the diary, the gallery's zips |
+| [GitHub Pages](https://newkit.github.io/OCW-ART/) | the gallery: thumbnails, web copies and poster frames, under 900 MB ([§6](docs/ART-PROJECT.md#6-the-gallery-decided-by-the-user-2026-11-15)) |
 
-The tool reads OCW from an OCW checkout: by default `../OCW` next to this
-checkout. Point elsewhere with `OCW_REPO=/path/to/OCW` or with `ocw_repo` in a
-git-ignored `ocw-art.toml` (copy `ocw-art.example.toml`; it also holds the
-LFS settings `lfs_policy` and `lfs_budget_gib`). From OCW it reads the git
-log, `SPECIFICATION.md`, `test-output/` (and the agent worktrees'), and
-`config/machines.toml` through OCW's `scripts/remote.sh` for the mask list;
-without a machine list it refuses to mask. The collector's status goes to
-OCW's `test-output/build-log/DAY/art.json`, where OCW's build dashboard reads
-it.
+Git tracks the archive's masked text (`index.md`, `SHA256SUMS`, per day
+`journal.md`, `journal.json`, `tokens.json`, `incidents.md`); the media go
+only into LFS. Never in git or LFS: the day zips, the diary videos and the
+work files (`.work/`).
+
+**Clone without the media** (the code, the day scripts, the journals) – this
+saves the free LFS bandwidth of 10 GiB a month:
 
 ```bash
-git clone git@github.com:newkit/OCW.git OCW
-GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:newkit/OCW-ART.git OCW-ART
-cd OCW-ART && make deps && make help
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/newkit/OCW-ART.git
+# or once per machine: git lfs install --skip-smudge
+git lfs pull --include "build-history/2026-11-14/*"   # later: one day's media
 ```
 
-## Commands
+## Setup and commands
+
+Needs Python 3.11+, ffmpeg with libass, git-lfs, `zip`, the Lato font and
+`gh` (logged in). `make deps` checks them, installs ffmpeg, git-lfs and zip
+(apt or dnf; on macOS it prints the `brew` line) and runs `git lfs install`.
+The tool reads OCW from a checkout next to this one (`../OCW`; `OCW_REPO` or
+`ocw_repo` in a git-ignored `ocw-art.toml` point elsewhere).
 
 ```bash
-make fetch DAY=2026-11-13     # restore a day's archive from the release (OCW-ART, else OCW's)
+git clone https://github.com/newkit/OCW.git OCW
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/newkit/OCW-ART.git OCW-ART
+cd OCW-ART && make deps && make help
+
 make gather DAY=2026-11-13    # collect the day's media and logs, write the journal
 make sheets DAY=2026-11-13    # contact sheets for writing days/DAY.toml
 make render DAY=2026-11-13    # the day video
 make diary                    # the diary video
-make publish DAY=2026-11-13   # day zip + videos + SHA256SUMS → release, then the gallery
-make gallery                  # build the gallery locally (incremental); make gallery-preview
-make gallery-publish          # gallery zips → release, deploy to GitHub Pages
+make publish DAY=2026-11-13   # day zip + videos → release, the gallery, this README
+make gallery                  # the gallery locally (make gallery-preview)
+make readme                   # regenerate this README
 make lfs-check                # the LFS total, the budget, the days left
 make lfs-commit DAY=2026-11-13 && make lfs-push   # the day's media → Git LFS
-make check                    # tracked text and media names masked? (FIX=1 masks the text)
+make check                    # tracked text, README and media names masked?
 make test                     # unit tests
-make install-timer            # the hourly collector (systemd user timer, this checkout)
-make timer-status
+make install-timer            # the hourly collector (systemd user timer)
 ```
 
 The art project lived in OCW until 2026-11-15
 ([docs/ART-PROJECT.md §5.2](docs/ART-PROJECT.md#52-history-from-ocw-to-ocw-art-2026-11-15)).
 
-## Licence
+## Licences and credits
 
-The code (`diary.py`, `ocwart/`, `bin/`, `site/`, the tests, the Makefile, the
-units and the workflow) is dual-licensed under MIT OR Apache-2.0, like OCW
-([LICENSE-MIT](LICENSE-MIT), [LICENSE-APACHE](LICENSE-APACHE)). Fira Mono
-keeps its own licence (OFL 1.1, `assets/fonts/OFL.txt`).
-
-The generated media (the videos, the day archives, the gallery and the media
-in LFS) show OCW renders: map renders contain OpenStreetMap-derived data,
-**© OpenStreetMap contributors** (ODbL), and the attribution rules of OCW and
-of each asset apply (docs/ART-PROJECT.md §2, OCW's spec §4.6).
+- **Code** (`diary.py`, `ocwart/`, `bin/`, `site/`, the tests, the Makefile,
+  the units and the workflow): MIT OR Apache-2.0, like OCW
+  ([LICENSE-MIT](LICENSE-MIT), [LICENSE-APACHE](LICENSE-APACHE)).
+- **Fonts:** Fira Mono (SIL Open Font License 1.1, `assets/fonts/OFL.txt`;
+  © 2012-2015 The Mozilla Foundation and Telefonica S.A.); Lato (SIL OFL 1.1,
+  from the system).
+- **Map data:** the world renders contain OpenStreetMap-derived data,
+  **© [OpenStreetMap contributors](https://www.openstreetmap.org/copyright)**
+  (ODbL). The attribution rules of OCW and of each of its assets apply
+  (OCW's spec §4.6).
+- **Music and sound effects:** synthesised by the tool itself – no samples.
+- **The pictures and videos** are renders of Open Cycling World, made while
+  building it.

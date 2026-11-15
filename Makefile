@@ -7,7 +7,7 @@ PYTHON ?= $(firstword $(wildcard /usr/bin/python3.13 /usr/bin/python3.12 /usr/bi
 DIARY = $(PYTHON) diary.py
 
 .PHONY: help deps ocw-repo fetch gather journal sheets render diary publish publish-videos collect check test \
-	gallery gallery-preview gallery-publish gallery-deploy lfs-check lfs-budget lfs-commit lfs-push \
+	gallery gallery-preview gallery-publish gallery-deploy lfs-check lfs-budget lfs-commit lfs-push readme \
 	install-timer uninstall-timer timer-status
 .DEFAULT_GOAL := help
 
@@ -53,9 +53,13 @@ render: ## Render the day video(s) from days/*.toml
 diary: ## Join all day videos into the diary video
 	$(DIARY) diary
 
-publish: ## Upload day zips, videos and SHA256SUMS to the release, then refresh the gallery (GALLERY=0: not)
+publish: ## Upload day zips, videos and SHA256SUMS to the release, then the gallery (GALLERY=0: not) and README.md
 	$(DIARY) publish $(DAY)
 	$(if $(filter 0,$(GALLERY)),,$(DIARY) gallery publish --wait)
+	$(DIARY) readme
+
+readme: ## Regenerate README.md (hero, evolution strip, one section per build day) from docs/readme/ and the journals
+	$(DIARY) readme
 
 publish-videos: ## Upload only the videos and SHA256SUMS
 	$(DIARY) publish --videos
