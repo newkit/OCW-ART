@@ -1,0 +1,12 @@
+# The archive's pictures and videos are in Git LFS (docs/ART-PROJECT.md §2.8),
+# committed one day at a time by `diary.py lfs-commit` within the budget.
+# Only the day folders' own media: never the day zips, the diary videos
+# (build-history/diary/) or .work/ (contact sheets, gallery) - those stay on
+# the release and local.
+build-history/????-??-??/*.jpg filter=lfs diff=lfs merge=lfs -text
+build-history/????-??-??/*.jpeg filter=lfs diff=lfs merge=lfs -text
+build-history/????-??-??/*.png filter=lfs diff=lfs merge=lfs -text
+build-history/????-??-??/*.webp filter=lfs diff=lfs merge=lfs -text
+build-history/????-??-??/*.mp4 filter=lfs diff=lfs merge=lfs -text
+build-history/????-??-??/*.webm filter=lfs diff=lfs merge=lfs -text
+build-history/????-??-??/*.mkv filter=lfs diff=lfs merge=lfs -text

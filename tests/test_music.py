@@ -3,7 +3,7 @@ determinism, a different style per day, variation within a video, no
 clipping and a sane loudness. Nobody can listen here, so the tests (and
 `music.stats`) look at the waveform.
 
-    /usr/bin/python3 -m unittest discover -s . -p 'test_*.py'   (make test)
+    /usr/bin/python3 -m unittest discover -s tests -p 'test_*.py'   (make test)
 """
 
 from __future__ import annotations
@@ -15,9 +15,10 @@ import zlib
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
+REPO = HERE.parent
+sys.path.insert(0, str(REPO))
 
-import music as M  # noqa: E402
+from ocwart import music as M  # noqa: E402
 
 
 def timeline(chapters=6, chapter_s=7.0):
@@ -53,9 +54,9 @@ class DeterminismTest(unittest.TestCase):
 
     def test_same_samples_in_another_process(self):
         """No hash() randomisation (PYTHONHASHSEED) in the music."""
-        code = ("import sys, zlib; sys.path.insert(0, %r); import music as M; "
+        code = ("import sys, zlib; sys.path.insert(0, %r); from ocwart import music as M; "
                 "a = M.Music(120, 'G', seed=4).render(30, [(0, 'intro'), (5, 'drive'), (15, 'groove'), "
-                "(24, 'outro')]); print(zlib.crc32(bytes(memoryview(a).cast('B'))))" % str(HERE))
+                "(24, 'outro')]); print(zlib.crc32(bytes(memoryview(a).cast('B'))))" % str(REPO))
         outs = {subprocess.run([sys.executable, "-c", code], capture_output=True, text=True, check=True,
                                env={"PYTHONHASHSEED": str(h)}).stdout.strip() for h in (1, 2)}
         self.assertEqual(len(outs), 1)

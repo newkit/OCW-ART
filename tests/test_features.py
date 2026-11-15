@@ -1,9 +1,9 @@
 """Unit tests of the features log (features.py, ART-PROJECT §2.7) and its
-diary.py glue: spec-row parsing from fixture diffs, merge matching, the
+the journal glue: spec-row parsing from fixture diffs, merge matching, the
 check-run lookup on a fixture build log, agent-event appending and masking,
 the roll layout. No live git history, gh or journal.
 
-    /usr/bin/python3 -m unittest discover -s . -p 'test_*.py'   (make test)
+    /usr/bin/python3 -m unittest discover -s tests -p 'test_*.py'   (make test)
 """
 
 from __future__ import annotations
@@ -17,12 +17,13 @@ from pathlib import Path
 from unittest import mock
 
 HERE = Path(__file__).resolve().parent
+REPO = HERE.parent
 sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(REPO))
 
-import features as F  # noqa: E402
+from ocwart import agents, journal  # noqa: E402
+from ocwart import features as F  # noqa: E402
 from test_diary import Fixture  # noqa: E402
-
-import diary  # noqa: E402
 
 SPEC_LOG = """@@COMMIT\x1faaaa1111\x1faaaa111\x1f2026-11-15T00:00:10+01:00\x1fp0\x1fSpec 3.36: public preview
 diff --git a/SPECIFICATION.md b/SPECIFICATION.md
@@ -126,7 +127,7 @@ class CheckLookupTest(unittest.TestCase):
 
 
 class FeaturesForTest(Fixture):
-    """diary.features_for on the fixture: the check result read from the
+    """journal.features_for on the fixture: the check result read from the
     build log, deploys, no gh."""
 
     def test_feature_with_check_and_deploys(self):
@@ -148,9 +149,9 @@ class FeaturesForTest(Fixture):
             if args[0] == "log":
                 return "2026-11-15T06:15:00+01:00\n2026-11-15T06:44:00+01:00\n2026-11-15T07:03:00+01:00\n"
             return outs.get(args, "")
-        with mock.patch.object(diary, "git_out", side_effect=fake_git), \
-                mock.patch.object(diary, "branch_of", return_value="worktree-agent-ab69e4b089e56849c"):
-            got = diary.features_for(day)
+        with mock.patch.object(journal, "git_out", side_effect=fake_git), \
+                mock.patch.object(journal, "branch_of", return_value="worktree-agent-ab69e4b089e56849c"):
+            got = journal.features_for(day)
         f = {x["version"]: x for x in got["features"]}["3.39"]
         self.assertEqual(f["check"]["how"], "commit")
         self.assertEqual((f["check"]["suites"], f["check"]["passed"]), (3, 120))
@@ -161,20 +162,20 @@ class FeaturesForTest(Fixture):
 class AgentEventTest(Fixture):
     def test_append_and_mask(self):
         day = "2026-11-15"
-        diary.agent_event(day, "Fix /home/builder/src on buildhost.example.lan", "worktree-agent-ab69e4b089e56849c",
+        agents.agent_event(day, "Fix /home/builder/src on buildhost.example.lan", "worktree-agent-ab69e4b089e56849c",
                           "started", time_=f"{day}T01:00:00+01:00")
-        diary.agent_event(day, "Fix", "worktree-agent-ab69e4b089e56849c", "interrupted",
+        agents.agent_event(day, "Fix", "worktree-agent-ab69e4b089e56849c", "interrupted",
                           time_=f"{day}T00:39:47+01:00", note="OOM")
-        diary.agent_event(day, "Fix", "worktree-agent-ab69e4b089e56849c", "merged", commits="d9a9b05",
+        agents.agent_event(day, "Fix", "worktree-agent-ab69e4b089e56849c", "merged", commits="d9a9b05",
                           time_=f"{day}T07:03:00+01:00")
-        text = diary.agents_path(day).read_text()
+        text = agents.agents_path(day).read_text()
         self.assertNotIn("buildhost.example.lan", text)
         self.assertNotIn("/home/builder", text)
         lines = [json.loads(x) for x in text.splitlines()]
         self.assertEqual(len(lines), 3)
         self.assertEqual(lines[0]["agent_id_short"], "ab69e4b0")
         with self.assertRaises(SystemExit):
-            diary.agent_event(day, "x", "b", "exploded")
+            agents.agent_event(day, "x", "b", "exploded")
         jobs = F.agent_jobs(lines)
         self.assertEqual(len(jobs), 1)
         j = jobs[0]
@@ -184,7 +185,7 @@ class AgentEventTest(Fixture):
 
     def test_cli(self):
         env = {**os.environ, "OCW_TEST_OUTPUT": str(self.out), "OCW_ART_HISTORY": str(self.hist)}
-        r = subprocess.run([sys.executable, str(HERE / "diary.py"), "agent-event", "--task", "Roll", "--branch",
+        r = subprocess.run([sys.executable, str(REPO / "diary.py"), "agent-event", "--task", "Roll", "--branch",
                             "worktree-agent-a43d6ec0bd80728f8", "--event", "reported", "--commits", "abc1234",
                             "--time", "2026-11-15T09:00:00+01:00"], env=env, capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stderr)

@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
-# The art project's hourly collector (ART-PROJECT.md §5.1), run by the
+# The art project's hourly collector (docs/ART-PROJECT.md §5.1), run by the
 # systemd user timer ocw-art-collect.timer on the dev machine (make
-# install-timer) or by hand:
+# install-timer) or by hand (make collect):
 #
-#   ./collect.sh [--sheets|--no-sheets] [DAY...]
+#   bin/collect.sh [--sheets|--no-sheets] [--no-gallery] [--no-lfs] [DAY...]
 #
 # Default: yesterday and today (the last hour before midnight is not lost).
 # Per day `diary.py gather` + `journal` (idempotent: sources are
 # deduplicated by SHA-256, the build log is updated in place), then the mask
-# check of the tracked text files (`check-masked`), and in the 23:xx run the
-# contact sheets of today (`sheet`; --sheets / --no-sheets force it). No
-# render, no publish: the coordinator does those in a session.
+# check of the tracked text files (`check-masked`), the local gallery
+# (`gallery build`, incremental; not published), and in the 23:xx run the
+# contact sheets of today (`sheet`; --sheets / --no-sheets force it) and the
+# Git LFS commit of the finished days within the budget (`lfs-commit`,
+# §2.8). After the lock is released, a run that made an LFS commit pushes it
+# (`lfs-push`, which pushes only the collector's own build-history commits).
+# No render, no publish: the coordinator does those in a session.
 #
 # Runs never overlap: the script holds an flock on build-history/.lock
 # (the lock every diary.py command takes; OCW_ART_LOCK_HELD=1 tells the
@@ -27,7 +31,7 @@
 # build dashboard shows the latest status. Exit 0 = ok, 1 = failed,
 # 75 = locked by another run.
 set -uo pipefail
-repo=$(cd "$(dirname "$0")" && pwd)
+repo=$(cd "$(dirname "$0")/.." && pwd)
 cd "$repo" || exit 1
 
 # Python 3.11+ (tomllib): the system one, not the pyenv default (3.8).
@@ -46,6 +50,10 @@ if [ -z "$py" ]; then
 fi
 
 ocw=$("$py" diary.py ocw-repo) || exit 1
+if [ "${OCW_ART_LFS:-1}" != 0 ] && ! git lfs version >/dev/null 2>&1; then
+  # (the run still gathers; its status is "failed" with the same message)
+  echo "art-collect: git-lfs is not installed: install git-lfs (make deps)" >&2
+fi
 hist=${OCW_ART_HISTORY:-$repo/build-history}
 outdir=${OCW_TEST_OUTPUT:-$ocw/test-output}
 day=$(date +%F)
@@ -66,7 +74,7 @@ if ! flock -w "$wait_s" 9; then
   echo "art-collect: lock held by ${holder:-another run}; gave up after ${wait_s}s" | tee -a "$logf" >&2
   exit 75
 fi
-printf 'pid %s: collect.sh %s\n' "$$" "$*" > "$hist/.lock"
+printf 'pid %s: bin/collect.sh %s\n' "$$" "$*" > "$hist/.lock"
 export OCW_ART_LOCK_HELD=1
 
 {
@@ -78,4 +86,14 @@ export OCW_ART_LOCK_HELD=1
 } | tee -a "$logf"
 rc=${PIPESTATUS[0]}
 : > "$hist/.lock"
+exec 9>&-
+# The LFS push (ART-PROJECT §2.8) runs without the archive lock: it only
+# talks to git. It pushes only when this run made an LFS commit.
+if [ "$rc" = 0 ] && grep -q '"lfs_push": true' "$status_dir/art.json" 2>/dev/null; then
+  {
+    echo "=== $(date +%FT%T%:z) lfs-push"
+    "$py" diary.py lfs-push 2>&1
+    echo "=== $(date +%FT%T%:z) lfs-push exit $?"
+  } | tee -a "$logf"
+fi
 exit "$rc"

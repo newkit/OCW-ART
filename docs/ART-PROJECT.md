@@ -1,6 +1,6 @@
 # OCW Build Diary – Art Project Specification
 
-Version 1.9 – 15 November 2026
+Version 2.0 – 15 November 2026
 
 | Version | Change |
 |---|---|
@@ -14,6 +14,7 @@ Version 1.9 – 15 November 2026
 | 1.7 | Incident log (user 2026-11-15, §2.6): the hourly collector gathers OOM kills, failed and restarted units (journalctl), machines offline / online, full disks, janitor deletions and failed runs into `test-output/build-log/DAY/incidents.jsonl` (masked). The coordinator writes root-cause notes to `DAY/incidents.md` (tracked, masked). The journal merges both under "Incidents", and a day script can show an incident as a card (`incident = "HH:MM"`, §4). First entry: the 2026-11-15 00:39 OOM on deb |
 | 1.8 | Features and agent jobs (user 2026-11-15, §2.7): the journal lists the day's spec rows with the merge that landed each, its marge check (suites, passed, failed), deploys (`deploys.jsonl` from `deploy-test.sh`) and releases. Agent jobs come from the coordinator's `agents.jsonl` (`diary.py agent-event`, `agent-backfill`). The day video closes with a "Today's features" roll (`features_roll`, §4). `remote.sh` logs each run's commit |
 | 1.9 | **Own repository** (user 2026-11-15: "Use this repository for everything ART related", "also move the build-history to the new art project location"): the art project moved out of OCW into [newkit/OCW-ART](https://github.com/newkit/OCW-ART), with the history of OCW's `art/`. The former `art/` is its root; `scripts/art-collect.sh` is `collect.sh`; the `make art-*` targets are `make gather`, `render`, … in OCW-ART. The tool reads OCW from outside (`OCW_REPO`, else `ocw_repo` in `ocw-art.toml`, else `../OCW`): git log, `SPECIFICATION.md`, `test-output/`, `config/machines.toml` (§5). The archive is OCW-ART's `build-history/` (§2, §5.2: how it moves). New videos and day zips go to the release `build-history` of OCW-ART, where days 1–4 were copied; OCW's release keeps the README images. Logo and Fira Mono are copied into `assets/`. The status file stays in OCW's `test-output/build-log/DAY/art.json`, so the build dashboard is unchanged. The regional reference boards (`reference/`) serve OCW's world look and stay in OCW, now `docs/reference/` |
+| 2.0 | **Restructure, gallery, Git LFS** (user 2026-11-15: "looks a bit unstructured. Re-structure and cleanup"; "I miss seeing the actual photos and videos"; "add the fotos and videos into the free git LFS"; git-lfs "to the build dependencies where it fits"). Layout (§5): the code is the package `ocwart/` (the former 2,400-line `diary.py` split into `core`, `mask`, `archive`, `prompts`, `incidents`, `agents`, `journal`, `subtitles`, `sfx`, `render`, `publish`, `collect`, `cli`, plus `music`, `features` and the new `gallery`, `lfs`); `diary.py` stays the command; `collect.sh` is `bin/collect.sh` (the timer was reinstalled); tests in `tests/`, this document in `docs/`, the gallery's templates in `site/`. The check for the archive at its old place in OCW is gone (the move is done). **Gallery** (§6): a static site of every picture and video poster, day by day, on GitHub Pages of OCW-ART, built on the dev machine and deployed by a workflow from small gallery zips on the release, under a size budget (900 MB; the oldest days get smaller web copies first, then thumbnails only); `make publish` refreshes it. **Git LFS** (§2.8): the day folders' pictures and videos, one commit per day, within a 9 GiB budget of the free plan's 10 GiB, policy `all` or `pictures`; day zips, diary videos and `.work/` stay out. `make deps` installs ffmpeg and git-lfs; `check-masked` also checks the media file names |
 
 ## 1. The brief
 
@@ -72,10 +73,13 @@ selection happens only in the video.
   labelled `…-compare-….jpg`.
 - **Where:** `build-history/YYYY-MM-DD/` of the OCW-ART checkout on the dev
   machine (until 2026-11-15: `art/build-history/` of the OCW checkout, until
-  2026-11-14 `artwork/build-history/`; `diary.py` stops with a message while
-  the archive is still at the old place, §5.2). Media never go into git
-  (OCW spec §11.3; OCW's history was rewritten on 2026-11-12 to remove
-  them); its text files are tracked, masked (§2.5).
+  2026-11-14 `artwork/build-history/`). Its text files are tracked, masked
+  (§2.5). Since v2.0 the day folders' pictures and videos go into **Git LFS**
+  of OCW-ART, one commit per day, within a budget (§2.8). They never go into
+  plain git, and never into OCW (OCW spec §11.3; OCW's history was
+  rewritten on 2026-11-12 to remove them).
+- **Seen:** in the gallery on GitHub Pages, <https://newkit.github.io/OCW-ART/>
+  (§6): every picture and a poster frame of every video, day by day.
 - **Published:** one zip per day, `ocw-build-history-YYYY-MM-DD.zip`, on the GitHub
   release [`build-history`](https://github.com/newkit/OCW-ART/releases/tag/build-history) of OCW-ART,
   next to the videos. `diary.py fetch` (`make fetch DAY=…`) restores a day on
@@ -165,20 +169,23 @@ How much model work went into the build is part of the record too.
 - Most of the total is cache reads (the conversation re-read from the cache
   on every step); output tokens are about 0.2 % of it.
 
-### 2.5 Text in git, media not (decided by the user 2026-11-14)
+### 2.5 Text in git (decided by the user 2026-11-14)
 
-The archive's text record is versioned with the code; its media are not.
+The archive's text record is versioned with the code; its media are not in
+plain git (since v2.0 the day folders' pictures and videos are in Git LFS, §2.8).
 
 | In `build-history/` | Git |
 |---|---|
 | `index.md`, `SHA256SUMS` | **tracked** |
 | per day `journal.md`, `journal.json`, `tokens.json` | **tracked** |
-| media (jpg/png/mp4/wav/webm …), the day zips, `diary/*.mp4` | ignored (GitHub release `build-history`) |
+| the day folders' pictures and videos (jpg, jpeg, png, webp, mp4, webm, mkv) | **Git LFS**, per day within the budget (§2.8); the rest ignored |
+| other media (wav, gif …), the day zips, `diary/*.mp4` | ignored (GitHub release `build-history`) |
 | per day `logs/` (unmasked originals), `prompts.*` (published masked in the zip), `.txt` verdicts | ignored |
-| `.work/` (render and contact-sheet files), `.lock` | ignored |
+| `.work/` (render, contact-sheet and gallery files), `.lock` | ignored |
 
 - `.gitignore` ignores `/build-history/**` and re-includes exactly the
-  tracked files above.
+  tracked files above, plus the media of the days in Git LFS (the managed
+  `lfs-days` block, §2.8).
 - **Masked:** the tracked files are written masked by `diary.py`
   (`journal`, `tokens`, `publish`'s `SHA256SUMS`), with the same mask as the
   zip's text (§2.3). The mask replaces each build machine's host with the
@@ -190,8 +197,10 @@ The archive's text record is versioned with the code; its media are not.
   as a word of its own (`claude@host`, `"claude"`). It is not masked inside a
   path or a name such as `~/.claude/` or `claude.ai`.
 - **`diary.py check-masked`** (`make check`; the hourly collector runs
-  it too) fails if a tracked file still holds a private pattern. It prints
-  `file:line: kind`, never the value. `check-masked --fix` (`make check
+  it too) fails if a tracked file still holds a private pattern, or a media
+  file name of a day folder does (names go public through LFS, the gallery
+  and the zips; the binaries themselves are not checked). It prints
+  `file:line: kind` (a file name masked), never the value. `check-masked --fix` (`make check
   FIX=1`) masks the files in place, for files written before this rule
   (`index.md`, old journals). The untracked originals are left as they are.
 
@@ -280,6 +289,79 @@ What got built each day, and by which agent job, is part of the record.
 - Everything in these sections is masked like the journals (§2.5). The
   journal is tracked in git; `agents.jsonl` and `deploys.jsonl` stay in the
   git-ignored `test-output/`.
+
+### 2.8 Pictures and videos in Git LFS (decided by the user 2026-11-15)
+
+"Add the fotos and videos into the free git LFS": the day folders' media are
+versioned in OCW-ART through [Git LFS](https://git-lfs.com/), within the
+free GitHub plan's quota, which nothing may exceed:
+
+| Free plan | Quota | What counts |
+|---|---|---|
+| LFS storage | 10 GiB | every pushed object, each version once, also of files changed or deleted later |
+| LFS bandwidth | 10 GiB a month | every download of LFS objects: clones, fetches, CI checkouts |
+
+- **What:** `build-history/YYYY-MM-DD/*.{jpg,jpeg,png,webp,mp4,webm,mkv}`
+  (`.gitattributes`). Never in LFS or git: the day zips (they duplicate the
+  media; on the release), the diary videos `build-history/diary/*.mp4` (on
+  the release), `.work/` (contact sheets, renders, the gallery). A media
+  file whose name holds a private pattern (§2.5) is never committed.
+- **One commit per day:** `diary.py lfs-commit [DAY…]` (`make lfs-commit`)
+  commits a day's media in one commit, "Build history DAY: N pictures and M
+  videos in Git LFS (X MB)", together with the day's lines in the managed
+  `lfs-days` block of `.gitignore` (between `# >>> lfs-days` and
+  `# <<< lfs-days`; one `!/build-history/DAY/*.ext` per committed kind).
+  Without days it takes every finished day (before today) with new media,
+  oldest first. Late additions to a committed day get a small commit of
+  their own. It refuses to run without git-lfs ("install git-lfs (make
+  deps)"), off `main`, or during a merge or rebase. It checks that every
+  staged file is an LFS pointer, never a raw blob. `--dry-run` shows what it
+  would do.
+- **Budget guard:** `diary.py lfs-budget` (`make lfs-check`) sums the LFS
+  objects of the history (`git lfs ls-files --all`, each object once) and
+  the media about to be added, against the budget: **9 GiB** by default
+  (`lfs_budget_gib` in `ocw-art.toml` or `OCW_ART_LFS_BUDGET_GIB`; at most
+  the 10 GiB quota). It reports the total, the files, the rate (the average
+  media of a finished day) and the days left. `lfs-commit` adds whole days
+  while they fit. The first day that does not fit, and every later day,
+  stays local and ignored, with the warning "LFS budget reached".
+- **Policy** (`lfs_policy` in `ocw-art.toml` or `OCW_ART_LFS_POLICY`): `all`
+  (default: pictures and videos) or `pictures` (videos stay local and in
+  the day zips). One setting switches it; days already committed keep what
+  they have.
+- **When the budget is reached** (open, for the user to decide): the guard
+  stops adding (nothing new). The choices:
+  - `lfs_policy = "pictures"`: pictures are about a third of the bytes
+    (1.05 of 2.81 GiB on days 1–5);
+  - more storage: a paid data pack and a higher `lfs_budget_gib`;
+  - more disk on the dev machine: every committed file is kept twice there,
+    as the working copy and in `.git/lfs/objects/` (ext4 has no
+    copy-on-write).
+
+  Until then the collector warns.
+- **When:** the end-of-day step commits the day explicitly
+  (`make lfs-commit DAY=… && make lfs-push`). The hourly collector's 23:xx
+  run commits every finished day still pending (yesterday, after its last
+  gather), and `bin/collect.sh` then pushes, after the archive lock is
+  released. There is no push in the other hours.
+- **Push:** `diary.py lfs-push` (`make lfs-push`) pushes `main` (`git lfs
+  push`, then `git push`) only when every unpushed commit touches nothing
+  but `build-history/` and `.gitignore`, and not when `main` is behind;
+  anything else is pushed by hand. Then it checks that `git lfs ls-files`
+  lists as many files as there are committed media.
+- **Bandwidth:** the gallery workflow takes nothing from git (no checkout;
+  a checkout added there must keep `lfs: false`). It builds from the
+  release's gallery zips, and release downloads do not count against LFS
+  (§6). Clones that do not need the media skip them:
+  `GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:newkit/OCW-ART.git`, or
+  once per machine `git lfs install --skip-smudge`; then `git lfs pull
+  --include "build-history/2026-11-14/*"` fetches a single day. The
+  coordinator's move to its new user on deb copies the media by rsync and
+  clones with skip-smudge (OCW's `docs/MIGRATE-DEB-USER.md`).
+- **Requirements:** git-lfs (`make deps`: apt or dnf, a hint for brew, and
+  `git lfs install`). The collector and the LFS commands fail with "install
+  git-lfs (make deps)" without it; `OCW_ART_LFS=0` turns LFS off (tests,
+  machines without it).
 
 ## 3. The day video
 
@@ -379,7 +461,7 @@ day is the same as appending the new day to the previous diary.
 - **Levels:** the music is normalised to an RMS of about −19 dBFS, with peaks
   at most −2.5 dBFS (headroom for the effects). Chapters with game audio
   duck it. `music.stats` reports peak, RMS, brightness, zero-crossing rate
-  and onsets per second. The tests (`test_music.py`, in `make test`)
+  and onsets per second. The tests (`tests/test_music.py`, in `make test`)
   check determinism, that the days sound different, that nothing clips, the
   loudness, and the variation.
 - Tempo and key per day (`bpm`, `key`).
@@ -447,9 +529,50 @@ Writing guidelines:
 
 ## 5. Workflow
 
-Needs Python 3.11+ (`/usr/bin/python3` on Debian 13; the pyenv default 3.8 is too
-old), ffmpeg with libass, `zip`, and `gh` (logged in) for fetching/publishing.
-The tool runs on the dev machine (no Rust build involved).
+Needs Python 3.11+ (`/usr/bin/python3` on Debian 13; the pyenv default 3.8
+is too old), ffmpeg with libass, git-lfs, `zip`, the Lato font, and `gh`
+(logged in) for fetching and publishing. `make deps` checks them and
+installs ffmpeg, git-lfs and zip (apt on Debian, dnf on Fedora, a hint for
+`brew` on macOS), then runs `git lfs install`. Pillow is not needed: ffmpeg
+does every frame and every scaling. The tool runs on the dev machine; no
+Rust build is involved.
+
+**Layout** (since v2.0):
+
+```
+OCW-ART/
+├── README.md, Makefile, LICENSE-MIT, LICENSE-APACHE
+├── ocw-art.example.toml   # → ocw-art.toml (git-ignored): ocw_repo, lfs_policy, lfs_budget_gib
+├── .gitattributes         # the day folders' media → Git LFS (§2.8)
+├── .gitignore             # the build-history allow-list, with the managed lfs-days block
+├── diary.py               # the command line (every `diary.py …` command)
+├── ocwart/                # the Python package
+│   ├── cli.py             #   the commands
+│   ├── core.py            #   settings, paths, the lock, git/ffmpeg helpers
+│   ├── mask.py            #   masking, the tracked files, check-masked (§2.3, §2.5)
+│   ├── archive.py         #   fetch, gather, stamp (§2, §2.1)
+│   ├── prompts.py         #   prompts and token usage (§2.3, §2.4)
+│   ├── incidents.py       #   incidents (§2.6)
+│   ├── agents.py          #   agent jobs (§2.7)
+│   ├── features.py        #   the features log, pure (§2.7)
+│   ├── journal.py         #   the day's journal (§2)
+│   ├── render.py          #   contact sheets, the day and diary videos (§3)
+│   ├── subtitles.py       #   the ASS layer of the videos
+│   ├── music.py, sfx.py   #   the music and the effects (§3.2)
+│   ├── publish.py         #   day zips and videos → the release
+│   ├── gallery.py         #   the gallery (§6)
+│   ├── lfs.py             #   Git LFS, the budget (§2.8)
+│   └── collect.py         #   the hourly collector (§5.1)
+├── bin/collect.sh         # the collector's entry (the systemd unit runs it)
+├── systemd/               # ocw-art-collect.service / .timer
+├── site/                  # the gallery's templates: page.html, gallery.css, gallery.js
+├── .github/workflows/gallery.yml   # deploys the gallery to GitHub Pages
+├── days/YYYY-MM-DD.toml   # the day scripts (§4)
+├── assets/                # the OCW logo and Fira Mono (copies, assets/README.md)
+├── docs/ART-PROJECT.md    # this document
+├── tests/                 # unit tests (hermetic: fixture archives and repositories)
+└── build-history/         # the archive (§2): text tracked, media in LFS or local
+```
 
 **Two checkouts.** This repository ([newkit/OCW-ART](https://github.com/newkit/OCW-ART))
 holds the tool, the day scripts and the archive. OCW is read from its own
@@ -472,25 +595,40 @@ It writes into OCW only the collector's status and logs
 dashboard's "Art project" panel keeps working unchanged.
 
 ```bash
+make deps                     # ffmpeg, git-lfs, zip; git lfs install
 make gather DAY=2026-11-13    # collect everything of the day, stamp times, journal
 make sheets DAY=2026-11-13    # contact sheets: build-history/.work/DAY/sheets/
 # write days/2026-11-13.toml (story, shots, jokes)
 make render DAY=2026-11-13    # → build-history/diary/ocw-diary-day-NN-DAY.mp4
 make diary                    # → build-history/diary/ocw-build-diary.mp4
-make publish DAY=2026-11-13   # day zip + all videos → release build-history of OCW-ART
-make check                    # tracked text files masked? (FIX=1 masks them)
+make publish DAY=2026-11-13   # day zip + all videos → release build-history, then the gallery (§6)
+make gallery                  # the gallery, locally (make gallery-preview: http://127.0.0.1:8000/)
+make lfs-check                # the LFS total, the budget, the days left (§2.8)
+make lfs-commit DAY=2026-11-13 && make lfs-push   # the day's media → Git LFS
+make check                    # tracked text files and media names masked? (FIX=1 masks the text)
 git commit build-history/index.md build-history/SHA256SUMS \
     build-history/2026-11-13/{journal.md,journal.json,tokens.json}
-make test                     # unit tests of the tool and the collector
+make test                     # unit tests of the tool, the gallery, LFS and the collector
 ```
 
-or directly `diary.py gather|journal|sheet|render|diary|publish|all|collect|check-masked [DAY…]`.
+or directly `diary.py gather|journal|sheet|render|diary|publish|all|collect|gallery|lfs-budget|lfs-commit|lfs-push|check-masked [DAY…]`.
 
 **At the end of every build day** (or when asked): the hourly collector (§5.1)
-has already gathered the day and written its journal. The coordinator writes the
-day script, renders the day, rebuilds the diary, publishes, and commits the day's
-tracked text files (§2.5). During the day, keep every screenshot, video and sound
-in `test-output/` (the test harnesses already do), so the gather step finds them.
+has already gathered the day and written its journal. The coordinator:
+
+1. writes the day script and renders the day (`make render DAY=…`);
+2. rebuilds the diary (`make diary`);
+3. publishes (`make publish DAY=…`): the day zip, the videos and
+   `SHA256SUMS` go to the release, then the gallery is rebuilt, its changed
+   zips uploaded and GitHub Pages redeployed (`GALLERY=0` skips the
+   gallery; `make gallery-publish` does it alone);
+4. commits the day's media to Git LFS and pushes (`make lfs-commit DAY=…
+   && make lfs-push`; the collector's 23:xx run of the next day does it
+   otherwise);
+5. runs `make check` and commits the day's tracked text files (§2.5).
+
+During the day, keep every screenshot, video and sound in `test-output/`
+(the test harnesses already do), so the gather step finds them.
 
 ### 5.1 The hourly collector (decided by the user 2026-11-14)
 
@@ -498,26 +636,36 @@ Collecting no longer waits for a session. A systemd user timer on the dev machin
 (deb, the coordinator's machine with the OCW main checkout and the OCW-ART
 checkout) collects the day's data every hour.
 
-**Each hour** `collect.sh` runs `diary.py collect`, which does:
+**Each hour** `bin/collect.sh` runs `diary.py collect`, which does:
 
 1. **`gather` + `journal` for yesterday and today**, so the last hour before
    midnight is not lost. Other days can be given as arguments:
-   `collect.sh 2026-11-12`. `gather` is idempotent: sources are
+   `bin/collect.sh 2026-11-12`. `gather` is idempotent: sources are
    deduplicated by SHA-256, and the build log is updated in place. A day
    that fails is reported, and the other day is still collected. Each day's
    incidents are collected too (§2.6), and the status counts them.
-2. **The mask check** (`check-masked`, §2.5) over all tracked text files.
-   Any finding fails the run.
-3. **Contact sheets** (`sheet`) of today, only in the 23:xx run. They are
+2. **The mask check** (`check-masked`, §2.5) over all tracked text files
+   and the media names. Any finding fails the run.
+3. **The local gallery** (`gallery build`, §6): incremental, two ffmpeg
+   processes, not published. `--no-gallery` or `OCW_ART_GALLERY=0` skips it.
+4. **Contact sheets** (`sheet`) of today, only in the 23:xx run. They are
    heavier (ffmpeg); `--sheets` / `--no-sheets` force them on or off.
+5. **Git LFS** (§2.8): every run reports the LFS total and the days left;
+   the 23:xx run commits the finished days' media within the budget, one
+   commit per day (`--lfs` / `--no-lfs` force it on or off). After
+   `diary.py` has released the lock, `bin/collect.sh` pushes when that run
+   made a commit (`lfs-push`). "LFS budget reached" is a warning in the
+   status, not a failure. Without git-lfs the run still gathers, then fails
+   with "install git-lfs (make deps)" (`OCW_ART_LFS=0` turns LFS off).
 
-No Claude run, no render, no publish: the coordinator writes the day script,
-renders and publishes in a session.
+No Claude run, no render, no publish of videos or the gallery: the
+coordinator writes the day script, renders and publishes in a session.
 
 - **Lock:** runs never overlap. The script holds an `flock` on
   `build-history/.lock`. Every `diary.py` command takes the same lock,
-  including manual runs and `check-masked --fix`; plain `check-masked` reads
-  only and takes none. A manual run waits for the collector (it says whose
+  including manual runs, `check-masked --fix`, `gallery build|publish` and
+  `lfs-commit`; plain `check-masked`, `lfs-budget`, `lfs-push` and `gallery
+  serve` take none. A manual run waits for the collector (it says whose
   lock it waits for), and the collector waits up to 45 min
   (`OCW_ART_LOCK_WAIT`, seconds) for a manual run. If the lock is still held,
   the run gives up with status `locked` and exit 75, which is not a unit
@@ -531,13 +679,15 @@ renders and publishes in a session.
   (and receives the status): it is then the only source of `gather`, without
   the agent worktrees' `test-output/` (`OCW_ART_WORKTREES` names a worktrees
   folder, `""` none). `OCW_TRANSCRIPTS` replaces the Claude Code transcripts.
-  `make test` checks that a real archive at the default place and at the old
-  place in OCW stays untouched (it holds each archive's lock and compares
-  every file's size and mtime).
+  `OCW_ART_GALLERY=0` and `OCW_ART_LFS=0` skip the gallery and LFS steps.
+  `make test` checks that the real archive at the default place stays
+  untouched (it holds the archive's lock and compares every file's size and
+  mtime).
 - **Status file:** OCW's `test-output/build-log/DAY/art.json` holds the latest run
   of DAY: start, end, status (`running`, `ok`, `failed`, `locked`), new
-  files, media of today, the mask check, contact sheets yes/no, errors
-  (masked), and new files and media per day. `art-runs.jsonl` next to it
+  files, media of today, the mask check, contact sheets yes/no, the gallery,
+  LFS (`lfs`: policy, stored, pending, budget in GiB, days left; `lfs_push`),
+  errors and warnings (masked), and new files and media per day. `art-runs.jsonl` next to it
   has one line per run. The exit code is 0 for ok, 1 for failed and 75 for
   locked.
 - **Logs:** the output of every run is appended to OCW's `test-output/build-log/DAY/art.log`
@@ -550,7 +700,8 @@ renders and publishes in a session.
   time, status, new files, media of today, the mask check and errors. It is
   flagged **late** when no run has ended for 2.5 h.
 - **Units:** `systemd/ocw-art-collect.service` (oneshot, `nice`, idle I/O,
-  `TimeoutStartSec=75min`) and `ocw-art-collect.timer` (`OnCalendar=hourly`,
+  `TimeoutStartSec=150min`, which leaves room for the 23:xx LFS push;
+  `ExecStart=…/bin/collect.sh`) and `ocw-art-collect.timer` (`OnCalendar=hourly`,
   `Persistent=true`, so missed runs are made up after boot, and
   `RandomizedDelaySec=5min`). The contact sheets are part of the 23:xx run,
   so there is no separate sheets timer.
@@ -567,48 +718,128 @@ sudo loginctl enable-linger $USER   # once: user timers run without a login sess
 Install the timer from the **OCW-ART checkout on the dev machine**, never
 from a worktree: the units point to the checkout they were installed from.
 
-### 5.2 Moving to OCW-ART (2026-11-15)
+### 5.2 History: from OCW to OCW-ART (2026-11-15)
 
 Until 2026-11-15 the art project lived in OCW (`art/`, `scripts/art-collect.sh`,
-`make art-*`), with its archive in OCW's `art/build-history/` and the timer
-installed from OCW. The move, once, on the dev machine; the timer and the
-archive move together, so that the hourly collector never writes into a
-half-moved archive. `ART` is the OCW-ART checkout, `OCW` the OCW main checkout
-(on deb `~/data/git/OCW-ART` and `~/data/git/OCW`):
+`make art-*`), with its archive in OCW's `art/build-history/` (until
+2026-11-14 `artwork/build-history/`) and the timer installed from OCW. On
+2026-11-15 the timer was stopped, the archive moved on the same file system
+into OCW-ART's `build-history/`, OCW's `art/` was removed, and the timer was
+installed from OCW-ART. OCW's `make art-*` targets only print where they
+went. Days 1–4 (videos, zips, `SHA256SUMS`, `index.md`) were copied to
+OCW-ART's release with matching SHA-256; OCW's release still has them and
+the README's product images (`world-*.jpg`, `readme-*.png`), which stay.
+The restructure of v2.0 moved `collect.sh` to `bin/collect.sh`; the timer
+was reinstalled (`make install-timer`) and `make timer-status` shows
+`ExecStart=…/OCW-ART/bin/collect.sh`.
 
-```bash
-ART=~/data/git/OCW-ART OCW=~/data/git/OCW
-# 1. stop the timer (installed from OCW; the units are the same files either way)
-systemctl --user disable --now ocw-art-collect.timer
-systemctl --user stop ocw-art-collect.service
-flock "$OCW/art/build-history/.lock" true          # waits for a running diary.py to finish
-# 2. move the archive (same file system: instant). ART's build-history/ holds
-#    only tracked text, which the moved archive has in the same or a newer state.
-rm -rf "$ART/build-history" && mv "$OCW/art/build-history" "$ART/build-history"
-git -C "$ART" status --short build-history        # only journals the collector rewrote since
-#    then merge OCW's cleanup branch (removes art/ from OCW) and: rm -rf "$OCW/art"
-# 3. the timer from OCW-ART
-make -C "$ART" install-timer                      # units now point to $ART/collect.sh
-# 4. the first collector run (yesterday and today)
-make -C "$ART" collect
-# 5. the mask check, then commit the rewritten journals in OCW-ART
-make -C "$ART" check && make -C "$ART" timer-status
-```
+Another user (the coordinator's move to a new user on deb): clone OCW-ART
+next to OCW (`~/src/OCW-ART` next to `~/src/OCW`) with
+`GIT_LFS_SKIP_SMUDGE=1` (the media come by copy, not by download, §2.8),
+copy the git-ignored and LFS media of `build-history/` into it (OCW's
+`scripts/migrate-user.sh` and `docs/MIGRATE-DEB-USER.md` do it), then
+`make deps` and `make install-timer` there.
 
-- Before step 2 the tool refuses to work (`still in the OCW checkout`), and the
-  collector's status says so on the dashboard; that is the old place check.
-- After the move `make uninstall-timer` / `install-timer` are OCW-ART's;
-  OCW's `make art-*` targets only print where they went.
-- Publishing goes to OCW-ART's release `build-history`. Days 1–4 (videos, zips,
-  `SHA256SUMS`, `index.md`) were copied there from OCW's release with matching
-  SHA-256; OCW's release still has them and the README's product images
-  (`world-*.jpg`, `readme-*.png`), which stay.
-- Another user (the coordinator's move to a new user on deb): clone OCW-ART
-  next to OCW (`~/src/OCW-ART` next to `~/src/OCW`), copy the git-ignored
-  media of `build-history/` into it (OCW's `scripts/migrate-user.sh` and
-  `docs/MIGRATE-DEB-USER.md` do it), then `make install-timer` there.
+## 6. The gallery (decided by the user 2026-11-15)
 
-## 6. Future elements (ideas, not built yet)
+"I miss seeing the actual photos and videos": a static web site shows the
+whole archive, day by day, at **<https://newkit.github.io/OCW-ART/>**
+(GitHub Pages of OCW-ART).
+
+- **Start page:** one card per day, newest first: the hero picture (the day
+  script's `hero`, else the middle picture of the day), day number and date,
+  the day's title, the number of pictures, videos and commits, and links to
+  the day's gallery and video. At the top, the whole diary video and the
+  release.
+- **Day page:** a thumbnail grid of every picture and a poster frame of
+  every video (with a play mark and the clip's length), in time order, with
+  the time, the caption (the file name as words) and, for the shots the day
+  video uses, "In the video: chapter – note". Clicking opens the web copy
+  in a lightbox with previous / next (buttons, arrow keys, swipe), `Esc`,
+  and a deep link (`#N`). Every item links to its full-size source: the day
+  zip on the release (and the file name in it), for videos the day video.
+  Until the day is published (no zip, no day video yet) the links say so.
+  Without JavaScript every thumbnail still links to its web copy.
+- **Not on Pages:** the raw MP4s and full-size originals (they are in the
+  day zips and LFS), the audio.
+- **Text:** captions, titles and notes are masked (§2.5) and every page is
+  checked with the mask rules before the site is replaced; a file whose
+  name holds a private pattern is left out. The pictures themselves are
+  public already (day zips).
+- **Footer:** the art project's licence (code MIT OR Apache-2.0) and "©
+  OpenStreetMap contributors" (ODbL) for the map and world renders, as on
+  the release.
+
+### 6.1 Build
+
+`diary.py gallery build` (`make gallery`; `make gallery-preview` serves it on
+`http://127.0.0.1:8000/`) writes `build-history/.work/gallery/`:
+
+- `cache/DAY/t/` thumbnails (320 px wide, JPEG `-q:v 4`, about 10 KB),
+  `cache/DAY/w1280/` web copies (1280 px, `-q:v 3`, about 100 KB) and, when
+  the budget needs them, `cache/DAY/w960/` (960 px, `-q:v 6`, about 45 KB);
+  never scaled up. A video's poster is its frame at 40 % of its length.
+  `cache/manifest.json` keys every source on its size and mtime: a run only
+  makes what is new or changed (the first build of days 1–5, 2,239 items,
+  took 2 minutes; an unchanged rebuild 2 seconds). One ffmpeg run makes
+  both sizes; at most 4 ffmpeg processes at once (default 3, the collector
+  2), under `nice` and idle I/O. A file ffmpeg cannot read gets "no
+  preview" and is listed, the build goes on.
+- `site/`: the pages from `site/page.html`, `gallery.css`, `gallery.js` and
+  hard links to the cache. It is built in `site.new` and swapped in only
+  when the mask check and the size guard pass.
+- Tools: ffmpeg only (no Pillow, no other dependency).
+
+### 6.2 Hosting: Pages from the release, no media in git
+
+`diary.py gallery publish` (`make gallery-publish`; `make publish` runs it
+after the day's publish):
+
+1. builds the site;
+2. uploads to the release `build-history`: `gallery-pages.zip` (the pages,
+   CSS, JS, logo; small, every time) and one `gallery-YYYY-MM-DD.zip` per
+   day with its thumbnails and web copies, only when they changed (a digest
+   per day in `.work/gallery/published.json`) or are missing on the release;
+3. starts the workflow `.github/workflows/gallery.yml` (`gh workflow run`),
+   which downloads the `gallery-*.zip` assets, unpacks them and deploys them
+   with `actions/upload-pages-artifact` and `actions/deploy-pages`
+   (`--wait` follows it). `make gallery-deploy` only redeploys.
+
+Why this way: the media stay out of git completely (no `gh-pages` branch,
+whose objects every clone would fetch and whose force-pushed history would
+still grow on GitHub). The site is built where the media are (the dev
+machine), incrementally, including the current day before it has a day zip.
+A build on the runner from the day zips would download 2–3 GB per deploy
+(1.4 GB for day 4 alone) and make every thumbnail again. The workflow uses
+no checkout, so it costs no LFS bandwidth (§2.8). Pages is set to "GitHub
+Actions" as its source (`gh api -X POST repos/newkit/OCW-ART/pages -f
+build_type=workflow`, once).
+
+The hourly collector refreshes the local gallery but does not publish it:
+an hourly upload of the day's zip (50–70 MB) and a redeploy would cost more
+than it gives. The end-of-day publish refreshes it.
+
+### 6.3 The size budget
+
+Pages allows 1 GB per site. `--max-mb` (default 900, `MAX_MB=…`; at most 999)
+is the budget of the whole site. Days 1–5 take 243 MB (about 50–70 MB a day
+at full size), so the budget lasts about 10 more days at full size. Then:
+
+1. While the site fits, every day is **full** (thumbnails and 1280 px copies).
+2. When it does not, the oldest day steps down to **reduced** (960 px
+   copies, about half the bytes), then the next oldest, until it fits.
+3. When every day is reduced and it still does not fit, the oldest day steps
+   down to **thumbnails only** (the lightbox shows the thumbnail and links
+   to the day zip), then the next oldest. The newest day stays full the
+   longest.
+4. When even thumbnails only do not fit, the build stops with a message
+   (raise `--max-mb` up to 999, or thin the thumbnails out: a later decision).
+
+A stepped-down day says so on its page. The plan is computed fresh on every
+build from the real file sizes, so the tiers move as days are added. The
+workflow refuses to deploy a site of 1 GB or more.
+
+## 7. Future elements (ideas, not built yet)
 
 - A narrator voice (local TTS, e.g. Piper) reading the captions.
 - Per-commit "diff art": lines added/removed as a growing skyline.
