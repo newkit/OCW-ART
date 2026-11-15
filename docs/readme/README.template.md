@@ -33,15 +33,15 @@ growing diary video.
 
 ```mermaid
 flowchart LR
-  A["OCW test runs<br/>screenshots · videos · sounds"] --> C["hourly collector<br/>gather + journal (masked)"]
-  B["git log · spec · build log<br/>prompts · tokens · incidents"] --> C
-  C --> D["build-history/<br/>day folders"]
-  D --> E["day script<br/>days/DAY.toml"]
-  E --> F["render<br/>ffmpeg + synthesised music"]
-  F --> G["release build-history<br/>day video · diary · day zip"]
-  D --> H["gallery<br/>thumbnails · web copies"]
-  H --> I["GitHub Pages"]
-  D --> J["Git LFS<br/>pictures + videos"]
+  A[OCW test runs: screenshots, videos, sounds] --> C[hourly collector: gather and journal]
+  B[git log, spec, build log, prompts, tokens] --> C
+  C --> D[build-history day folders]
+  D --> E[day script]
+  E --> F[render: ffmpeg and synthesised music]
+  F --> G[release: day video, diary, day zip]
+  D --> H[gallery: thumbnails, web copies]
+  H --> I[GitHub Pages]
+  D --> J[Git LFS: pictures and videos]
 ```
 
 1. **Collect** (every hour, a systemd timer): every picture, video, sound and
