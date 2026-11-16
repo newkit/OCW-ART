@@ -154,15 +154,17 @@ def concat(parts: list[Path], out: Path):
            f"scale=out_range=tv,format=yuv420p,setsar=1,fps={FPS}", *ENC, out)
 
 
-def stills_of(day: str) -> list[dict]:
+def stills_of(day: str, skip=()) -> list[dict]:
     """The day's pictures for the time-lapse: in time order, without review
-    sheets and before/after crops, a video only without its own still."""
+    sheets and before/after crops, a video only without its own still, and
+    without the day script's `timelapse_skip` files (§4)."""
     media = media_of(day)
     names = {m["file"] for m in media}
+    skip = set(skip)
     out = []
     for m in media:
         f = m["file"]
-        if m["kind"] == "audio" or re.search(r"sheet|before|after|crop|cmp|-first", f):
+        if f in skip or m["kind"] == "audio" or re.search(r"sheet|before|after|crop|cmp|-first", f):
             continue
         stem = f.rsplit(".", 1)[0]
         if m["kind"] == "video" and ({f"{stem}.png", f"{stem}.jpg"} & names):
@@ -171,10 +173,10 @@ def stills_of(day: str) -> list[dict]:
     return out
 
 
-def timelapse(day: str, out: Path) -> tuple[float, list[tuple[float, float, dict]]]:
+def timelapse(day: str, out: Path, skip=()) -> tuple[float, list[tuple[float, float, dict]]]:
     """Every picture of the day, fast, in time order. Returns the duration
     and (start, end, picture) for the overlay."""
-    pics = stills_of(day)
+    pics = stills_of(day, skip)
     total = min(26.0, max(10.0, len(pics) * 0.11))
     per = total / max(1, len(pics))
     frames = max(2, round(per * FPS))
@@ -194,9 +196,9 @@ def timelapse(day: str, out: Path) -> tuple[float, list[tuple[float, float, dict
     return t, rows
 
 
-def mosaic(day: str, seconds: float, out: Path):
+def mosaic(day: str, seconds: float, out: Path, skip=()):
     """The end card's background: 24 of the day's pictures, dimmed."""
-    pics = stills_of(day)
+    pics = stills_of(day, skip)
     pick = [pics[round(i * (len(pics) - 1) / 23)] for i in range(24)]
     inputs, filt = [], []
     for k, m in enumerate(pick):
@@ -244,7 +246,7 @@ def render(day: str) -> Path:
 
     # 2. Time-lapse of the whole day.
     t2 = work / "01-timelapse.mp4"
-    tl_s, tl_rows = timelapse(day, t2)
+    tl_s, tl_rows = timelapse(day, t2, sc.get("timelapse_skip", []))
     segs.append((t2, tl_s, "drive"))
 
     # 3. Chapters.
@@ -284,7 +286,7 @@ def render(day: str) -> Path:
     # 4. End card.
     end_s = float(sc.get("end_seconds", 9))
     t4 = work / "99-end.mp4"
-    mosaic(day, end_s, t4)
+    mosaic(day, end_s, t4, sc.get("timelapse_skip", []))
     segs.append((t4, end_s, "outro"))
 
     # Timeline: segment i starts at start[i]; xfades overlap by XF.

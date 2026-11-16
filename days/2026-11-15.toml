@@ -1,0 +1,123 @@
+# OCW Build Diary – day 5 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-15/ (or paths in this checkout).
+# Pictures stand alone (spec §11.4 v3.25): a split only where a chapter compares two pictures.
+
+title = "Bananas, a second pair of eyes and a house move"
+tagline = "In which the hills grow vineyards and banana groves, riders learn to put a foot down – and the whole diary packs its bags."
+hero = "114846-scenes-veg3-after-wayland-veg-li-vaduz-vineyards.jpg"
+bpm = 122
+key = "A"
+outro = "39 spec versions in one day. Vineyards in Vaduz, bananas on Tenerife, a trust dialog for strangers' worlds – and an art project in its own house."
+teaser = "TO BE CONTINUED – the coordinator moves to a new user, and two eyes wait for a headset."
+# Early sign-in screenshots used a real cyclist's name as the test account (later "Ada Rider"):
+timelapse_skip = ["102533-web-web-account-signed-in.jpg", "102533-web-web-account-linked.jpg", "105407-account-account-signed-in.jpg"]
+
+[[chapter]]
+time = "00:01"
+title = "Put a foot down"
+caption = "Riders unclip at a stop, glance back in a U-turn and throw their arms up at the finish – looks only, no physics."
+shots = [
+  { file = "000125-video-wayland-a26-foot-down-video.mp4", seconds = 4.5, start = 1.0, note = "click. clack." },
+  { file = "001357-video-wayland-a26-victory-video.mp4", seconds = 4.5, start = 6.0, note = "no hands!" },
+]
+
+[[chapter]]
+time = "00:39"
+title = "Out of memory"
+caption = "Two VMs, ten agents, a video render and the collector at once: deb ran out of memory and the session went down."
+shots = [
+  { card = true, seconds = 4.5, incident = "00:39" },
+]
+
+[[chapter]]
+time = "09:20"
+title = "Cooler helmets"
+caption = "Sculpted shells with vents, a retention band and straps, two-tone paint – and a TT teardrop with a visor."
+prompt = "once the helmets are reworked, send images"
+shots = [
+  { file = "092032-scenes-helmets-compare-x11-helmet-compare-mirror-road.jpg", seconds = 4.9, note = "before | after" },
+  { file = "092033-scenes-helmets-compare-x11-helmet-compare-tt-position.jpg", seconds = 4.2, note = "aero, now with a tail" },
+]
+
+[[chapter]]
+time = "09:30"
+title = "A second pair of eyes"
+caption = "VR, step one, on a branch: two eye cameras and a HUD panel on the bars – tested with a simulated head, no headset yet."
+shots = [
+  { file = "093050-vr-vr-sim-both-eyes.jpg", seconds = 4.2, note = "left eye | right eye" },
+  { file = "094154-vr-vr-sim-blackforest.jpg", seconds = 3.9 },
+]
+
+[[chapter]]
+time = "10:00"
+title = "Ride in your browser"
+caption = "The public preview on GitHub Pages: pick a ride, press start. The first link led nowhere; by noon it worked."
+prompt = "The public view you created at \"https://newkit.github.io/OCW/\" does not work."
+shots = [
+  { file = "100036-web-preview-preview-start.jpg", seconds = 4.2, note = "no install" },
+  { file = "140608-web-preview-tenerife-preview-hills.jpg", seconds = 3.9, note = "Tenerife joins at 14:06" },
+]
+
+[[chapter]]
+time = "10:39"
+title = "Realistic vegetation"
+caption = "Species by region and altitude, measured crop maps: vineyards in Vaduz, bananas on Tenerife, firs in the Black Forest."
+prompt = "make the trees and vegetation more realistic. get information about the (big) plants and crops that are in the area. …"
+shots = [
+  { split = ["103949-scenes-veg-before-wayland-veg-tf-bananas.jpg", "115010-scenes-veg3-after-wayland-veg-tf-bananas.jpg"], seconds = 5.0, note = "pine trees | bananas" },
+  { file = "114846-scenes-veg3-after-wayland-veg-li-vaduz-vineyards.jpg", seconds = 4.5, note = "Vaduz wine" },
+  { file = "115220-scenes-veg3-after-wayland-veg-bf-schauinsland-forest.jpg", seconds = 3.9, note = "Schauinsland" },
+]
+
+[[chapter]]
+time = "12:05"
+title = "Sign in, if you like"
+caption = "Google and Strava sign-in through our own small accounts backend. Riding without an account still works."
+shots = [
+  { file = "120524-account-account-signed-in.jpg", seconds = 4.2, note = "hello, Ada" },
+]
+
+[[chapter]]
+time = "14:33"
+title = "The diary moves out"
+caption = "The art project gets its own repository, a gallery and Git LFS – this very video now lives in OCW-ART."
+prompt = "I've created a now home for the artproject. Use this repository https://github.com/newkit/OCW-ART for everything ART related."
+shots = [
+  { file = "143317-art-gallery-gallery-index.png", seconds = 4.5, note = "very meta" },
+]
+
+[[chapter]]
+time = "16:27"
+title = "The junction problem"
+caption = "Where roads meet, their strips just overlap. Investigated, measured in 14 scenes – and planned, not fixed yet."
+prompt = "i see junctions of roads sometimes not cleanly going into oneanother but having rather some bumps and quirks …"
+shots = [
+  { file = "163333-junctions-investigation-junction-adlerkreisel-drone.jpg", seconds = 4.5, note = "Adlerkreisel, Vaduz" },
+]
+
+[[chapter]]
+time = "17:08"
+title = "Lighter trees"
+caption = "The new plants filled the browser's memory. Near plants are built only near the camera now: Liechtenstein 3.1 → 0.43 GB."
+shots = [
+  { file = "164148-rss-after-tf.jpg", seconds = 4.2, note = "Tenerife rides again" },
+]
+
+[[chapter]]
+time = "17:29"
+title = "Trust this key?"
+caption = "Worlds signed by someone's own key ask first: check the fingerprint, then trust it, load it once or cancel."
+prompt = "implement showing a dialog that requires trusting the key (show fingerprint)."
+shots = [
+  { file = "173638-trust-trust-dialog-wayland.jpg", seconds = 4.5, note = "check it in person" },
+]
+
+[[chapter]]
+time = "20:24"
+title = "Join a ride"
+caption = "Ride → Join takes a host's link, Ride → Host a ride starts a server in the app – and the KICKR is found from the menu."
+prompt = "in the menu under Ride make an entry join where the user can enter a URL of a server/game/ride he would like to join."
+shots = [
+  { file = "202418-shot-wayland-menu-join.jpg", seconds = 4.2, note = "Tuesday Ride" },
+  { file = "214525-devices-menu-wayland-4-connected.png", seconds = 4.2, note = "a real trainer, connected" },
+]

@@ -637,3 +637,20 @@ class DefaultArchiveUntouchedTest(Fixture):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class StillsSkipTest(unittest.TestCase):
+    """The day script's `timelapse_skip` keeps pictures out of the time-lapse
+    and the end card's mosaic (ART-PROJECT §4); the other filters stay."""
+
+    def test_skip(self):
+        from ocwart import render
+        media = [{"file": f, "kind": k} for f, k in [
+            ("100000-a.jpg", "image"), ("100100-account-signed-in.jpg", "image"),
+            ("100200-sheet-1.jpg", "image"), ("100300-clip.mp4", "video"),
+            ("100300-clip.jpg", "image"), ("100400-b.png", "image")]]
+        with mock.patch.object(render, "media_of", return_value=media):
+            self.assertEqual([m["file"] for m in render.stills_of(DAY)],
+                             ["100000-a.jpg", "100100-account-signed-in.jpg", "100300-clip.jpg", "100400-b.png"])
+            self.assertEqual([m["file"] for m in render.stills_of(DAY, ["100100-account-signed-in.jpg"])],
+                             ["100000-a.jpg", "100300-clip.jpg", "100400-b.png"])
