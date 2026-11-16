@@ -64,6 +64,19 @@ class SpecRowTest(unittest.TestCase):
         self.assertEqual(F.row_title(END["3.38"]), "Art project incident log")
         self.assertEqual(F.row_title(END["3.36"]), "Phase 10 public preview of the browser app on GitHub Pages")
         self.assertTrue(F.row_title("x" * 200).endswith("…"))
+        # Decision rows show what was decided, not only who decided (user, 2026-11-16).
+        self.assertEqual(F.row_title(
+            "Decision by the user (2026-11-15): Phase 10 Q8 – the **dynamic mode is on by default** on every platform"),
+            "Decided: Phase 10 Q8 – the dynamic mode is on by default on every platform")
+        self.assertEqual(F.row_title(
+            "Decisions from the build dashboard (2026-11-15): Phase 9 Q12 – every ride starts at the real local date; Phase 16 Q1 – own app"),
+            "Decided: Phase 9 Q12 – every ride starts at the real local date")
+        self.assertEqual(F.row_title(
+            "Decision from the build dashboard (2026-11-15): Phase 10 Q7 (Black Forest in the public preview) closed – the preview stays"),
+            "Decided: Phase 10 Q7 – closed")
+        self.assertEqual(F.row_title(
+            "Decision from the build dashboard (2026-11-15): Phase 14 Q2 – **WebXR first** (the browser app), the native app later"),
+            "Decided: Phase 14 Q2 – WebXR first, the native app later")
 
     def test_spec_rows_of_a_file(self):
         text = "Version 3.39\n\n| Version | Change |\n|---|---|\n| 3.39 | new |\n| 3.38 | older |\n"

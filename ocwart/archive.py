@@ -70,7 +70,19 @@ def sources() -> list[Path]:
     return [p for p in out if p.is_dir()]
 
 
+def withheld() -> set[str]:
+    """`DAY/name` of the media withheld from the archive (ART-PROJECT §2.5):
+    `build-history/withheld.txt`, one per line, `#` starts a comment. They
+    are never gathered again; the files themselves wait, local only, in
+    `build-history/.withheld/DAY/`."""
+    p = C.HIST / "withheld.txt"
+    if not p.exists():
+        return set()
+    return {ln.split("#", 1)[0].strip() for ln in p.read_text().splitlines()} - {""}
+
+
 def gather(day: str):
+    held = withheld()
     dest = C.HIST / day
     dest.mkdir(parents=True, exist_ok=True)
     (dest / "logs").mkdir(exist_ok=True)
@@ -112,6 +124,9 @@ def gather(day: str):
             stem = re.sub(r"(^|[-/])(nogit|[0-9a-f]{7}(-dirty)?)-", r"\1", stem)
             stem = re.sub(r"agent-[0-9a-f]{17}", "agent", stem)
             name = f"{hms}-{slug(stem)[:90] or 'file'}{ext}"
+            if f"{day}/{name}" in held:
+                known[h] = name
+                continue
             target = (dest / "logs" if ext in LOGS else dest) / name
             n = 2
             while target.exists():

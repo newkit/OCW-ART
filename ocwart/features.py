@@ -54,8 +54,22 @@ def row_title(text: str, n: int = 90) -> str:
     for _ in range(3):  # nested parentheses
         t = re.sub(r"\([^()]*\)", "", t)
     t = t.replace("**", "").replace("`", "")
-    t = re.split(r":\s| – | — |;\s|\.\s", t, maxsplit=1)[0]
-    t = " ".join(t.split()).strip(" ,.")
+    t = re.sub(r"\s+([,.;:])", r"\1", " ".join(t.split()))
+    # "Decision(s) by the user / from the build dashboard: Phase 10 Q8 – the
+    # dynamic mode is on by default; …" says only who decided: show what
+    # was decided instead (the question and the first clause of its answer).
+    m = re.match(r"(?i)decisions?\s+(?:by the user|from the (?:build )?dashboard)\s*:\s*(.+)", t)
+    if m:
+        rest = m.group(1)
+        q = re.match(r"((?:Phase \d+ |§[\d.]+ )?Q\d+)\s*(?:–|—|-|:)?\s*(.*)", rest)
+        if q:
+            what = re.split(r":\s| — |;\s|\.\s| – ", q.group(2), maxsplit=1)[0].strip(" ,.")
+            t = f"Decided: {q.group(1)} – {what}" if what else f"Decided: {q.group(1)}"
+        else:
+            t = "Decided: " + re.split(r":\s| – | — |;\s|\.\s", rest, maxsplit=1)[0]
+    else:
+        t = re.split(r":\s| – | — |;\s|\.\s", t, maxsplit=1)[0]
+    t = t.strip(" ,.")
     return t if len(t) <= n else t[: n - 1].rstrip() + "…"
 
 

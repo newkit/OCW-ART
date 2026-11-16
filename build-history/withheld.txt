@@ -1,0 +1,9 @@
+# Media withheld from the archive (docs/ART-PROJECT.md §2.5): never gathered,
+# never in the day zip, the gallery or Git LFS. The files wait, local only, in
+# build-history/.withheld/DAY/. One DAY/name per line.
+
+# Early sign-in tests used a real cyclist's name as the fake account
+# (replaced by fictional names at 10:56, OCW beb5a4e):
+2026-11-15/102533-web-web-account-signed-in.jpg
+2026-11-15/102533-web-web-account-linked.jpg
+2026-11-15/105407-account-account-signed-in.jpg

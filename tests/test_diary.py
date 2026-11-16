@@ -654,3 +654,21 @@ class StillsSkipTest(unittest.TestCase):
                              ["100000-a.jpg", "100100-account-signed-in.jpg", "100300-clip.jpg", "100400-b.png"])
             self.assertEqual([m["file"] for m in render.stills_of(DAY, ["100100-account-signed-in.jpg"])],
                              ["100000-a.jpg", "100300-clip.jpg", "100400-b.png"])
+
+
+class WithheldTest(Fixture):
+    """Media listed in build-history/withheld.txt are never gathered (ART-PROJECT §2.5)."""
+
+    def test_withheld_media_are_not_gathered(self):
+        src = self.out / DAY
+        src.mkdir()
+        (src / "120000-account-signed-in.png").write_bytes(b"real name")
+        (src / "120100-ok.png").write_bytes(b"fictional name")
+        (self.hist / "withheld.txt").write_text(
+            "# a test account with a real person's name\n"
+            f"{DAY}/120000-account-signed-in.png  # withheld\n")
+        with mock.patch.object(archive, "stamp"):
+            archive.gather(DAY)
+            archive.gather(DAY)  # a second run brings nothing back either
+        names = sorted(f.name for f in (self.hist / DAY).iterdir() if f.is_file())
+        self.assertEqual(names, ["120100-ok.png"])
