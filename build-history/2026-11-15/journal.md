@@ -1,6 +1,6 @@
 # OCW build diary – day 5, 2026-11-15
 
-144 commits (37 merges), +48682 / −33437 lines, 734 images, 9 videos, 0 sounds.
+149 commits (39 merges), +50694 / −33657 lines, 731 images, 9 videos, 0 sounds.
 
 ## Commits
 
@@ -150,17 +150,22 @@
 | 20:16 | `3b92d6b` | Ride -> Join and Ride -> Host a ride: join links, runtime join/leave, in-process hosting (spec 3.73) |
 | 20:25 | `7977102` | Join and hosting pages: the link field shows its start, the join link wraps in the page text |
 | 20:42 | `d8eaaca` (merge) | Merge Ride -> Join and Ride -> Host a ride: join links (ocw://, https://, pasted command), the Join page with text entry, runtime switch to a shared ride and back, the hosting wizard with an in-app server on 0.0.0.0:47800, join link with copy, Events page (spec 3.73) |
+| 21:46 | `375518a` | Devices page: scan, choose, connect and remember trainers from the menu (spec §3.2.1 Devices, v3.73) |
+| 21:49 | `39117c5` (merge) | Merge origin/main (Ride -> Join / Host a ride) into the Devices page branch |
+| 22:05 | `1f09968` (merge) | Merge the Devices page: scan with live results, choose, connect, remember in devices.toml only after connecting, the trainer replaces the virtual one, forget; the same page in the browser (spec 3.74) |
+| 22:59 | `8c84efe` | version-bump: do not fail when the last manifest found is not a workspace crate |
+| 22:59 | `c27c2a1` | Release 0.2.2 |
 
 ## Builds and build servers
 
-243 build/test runs on the build machines, 59.4 h in total, 18 failed; 1320 server samples; cargo compiled 2926 crates in 2.8 h, 27.7 h waiting for build slots.
+248 build/test runs on the build machines, 60.2 h in total, 18 failed; 1431 server samples; cargo compiled 3660 crates in 3.4 h, 27.7 h waiting for build slots.
 
 | Machine | Runs | Hours | Cargo h | Crates | Waited h | Failed | Online |
 |---|---|---|---|---|---|---|---|
-| Win11Builder | 7 | 2.3 | 0.0 | 0 | 1.0 | 0 | 100% |
-| leela | 7 | 0.8 | 0.5 | 6 | 0.0 | 2 | 31% |
-| macos | 52 | 4.8 | 0.1 | 23 | 2.3 | 5 | 100% |
-| marge | 177 | 51.4 | 2.2 | 2897 | 24.3 | 11 | 100% |
+| Win11Builder | 8 | 2.7 | 0.3 | 309 | 1.0 | 0 | 100% |
+| leela | 7 | 0.8 | 0.5 | 6 | 0.0 | 2 | 29% |
+| macos | 53 | 5.0 | 0.3 | 148 | 2.3 | 5 | 100% |
+| marge | 180 | 51.7 | 2.3 | 3197 | 24.3 | 11 | 100% |
 
 Failed runs:
 
@@ -193,19 +198,19 @@ Longest runs:
 
 ## Token usage
 
-1.65 B tokens in 4,415 model messages (output 3.3 M, cache reads 1.61 B, cache writes 37.3 M, uncached input 10 k). Full breakdown: [tokens.json](tokens.json).
+1.66 B tokens in 4,471 model messages (output 3.4 M, cache reads 1.62 B, cache writes 37.3 M, uncached input 10 k). Full breakdown: [tokens.json](tokens.json).
 
 | Feature | Tokens | Output | Messages |
 |---|---|---|---|
-| Other | 701.1 M | 1.7 M | 2,162 |
+| Other | 704.9 M | 1.7 M | 2,161 |
 | Planning & spec | 403.5 M | 654 k | 839 |
 | Worlds & terrain | 114.9 M | 257 k | 315 |
 | Riders & bikes | 110.9 M | 103 k | 213 |
 | Art project | 101.6 M | 169 k | 300 |
 | UI & menus | 92.4 M | 225 k | 272 |
 | Multiplayer & server | 77.2 M | 192 k | 227 |
-| Build, release & infra | 34.7 M | 28 k | 55 |
-| Audio & voice | 12.5 M | 15 k | 26 |
+| Build, release & infra | 39.9 M | 53 k | 107 |
+| Audio & voice | 15.8 M | 17 k | 31 |
 | Sky, time & weather | 2.1 M | 7 k | 6 |
 
 | Task | Feature | Tokens | Output |
@@ -223,7 +228,7 @@ Longest runs:
 | agent: Fix web memory blow-up from vegetation | Other | 52.7 M | 154 k |
 | agent: Art: hourly collector, move history | Other | 48.6 M | 155 k |
 | coordination: send me the videos here and to that with future videos as well | Other | 43.6 M | 23 k |
-| agent: Fix Bluetooth trainer scan and selection | Other | 31.8 M | 121 k |
+| agent: Fix Bluetooth trainer scan and selection | Other | 34.2 M | 125 k |
 | coordination: create/update README for the art project showing a nice overview (visually) over… | Art project | 31.2 M | 26 k |
 | agent: Fix web app black screen on iOS Safari | Other | 29.8 M | 133 k |
 | agent: Research vegetation and data sources | Other | 24.9 M | 109 k |
@@ -241,19 +246,19 @@ Longest runs:
 | coordination: make the other world maps (tenerife and all black forests) also available for we… | Worlds & terrain | 12.8 M | 7 k |
 | coordination: ERG answer: pause the step until you’re riding again, so you don’t miss part of … | Other | 11.9 M | 15 k |
 | coordination: add info to all running user tasks to build dashboard | UI & menus | 10.8 M | 18 k |
+| coordination: how to start server in voice mode? | Audio & voice | 9.9 M | 6 k |
 | coordination: i've enabled leela. do one "build all" on leela. | Build, release & infra | 8.1 M | 5 k |
 | coordination: yes, and record the definition in art projwct, too. | Other | 8.0 M | 5 k |
 | coordination: how to build ocw-devices | Build, release & infra | 7.1 M | 4 k |
 | coordination: add the usage of the kickr device to /var/tmp/ocw/ocw-desktop.args and fix the s… | UI & menus | 6.9 M | 7 k |
 | coordination: how do i connect the desktop app to a server in the internet? tellme and documen… | Art project | 6.6 M | 6 k |
-| coordination: how to start server in voice mode? | Audio & voice | 6.6 M | 4 k |
 | coordination: i cannot connect to a seperate hosted server. help me debugging. I started the s… | UI & menus | 6.1 M | 6 k |
 | coordination: bug: on mobile (iphone 15 with IOS 26.x.y) the web app does not work. I see the … | Audio & voice | 5.9 M | 11 k |
 | coordination: i've stopped the vms. check the worktrees and resume | Other | 5.7 M | 3 k |
 
 ## Prompts
 
-91 prompts (full text: [prompts.md](prompts.md)).
+92 prompts (full text: [prompts.md](prompts.md)).
 
 | Time | Prompt |
 |---|---|
@@ -288,7 +293,6 @@ Longest runs:
 | 12:55 | once the the split is done, prepare moving it to user@deb |
 | 12:56 | locations will be  user@deb:~/src/OCW and OCW-ART |
 | 12:57 | done |
-| 13:01 | wait, i have the split of projects running in the other session. i need to wait till it finishes. |
 | 13:06 | plan a new feature (SPECIFICATION.md): Rather than encoding all objects in code, use a standardizes open source 3D model format (make a prop |
 | 13:10 | plan a new feature (->spec): after having 3d models, we need an editor where objects can be viewed and edited. also the world files should b |
 | 13:15 | can you make the black forest and tenarife maps also available in the public web demo? |
@@ -298,7 +302,6 @@ Longest runs:
 | 13:26 | where are those files located:   * `ocw-build-diary.mp4` * `ocw-diary-day-01-2026-11-11.mp4` * `ocw-diary-day-02-2026-11-12.mp4` * `ocw-diar |
 | 13:27 | add the size information the the published routes in the web preview, too, so the user can decide which to test and what load time to expect |
 | 13:29 | okay, delete the build history and related files from OCW.git |
-| 13:31 | since the split is finished now, check that there is now OCW and OCW-ART. prepare moving them one by one. |
 | 13:39 | i miss seeing the actual photos and videos for the art project, where are they stored again? |
 | 13:40 | but are those files tracked in git? |
 | 13:41 | yes, create that thumbnail overview page. build a reusable script for that. i noticed the ART-Project looks a bit unstructured. Re-structure |
@@ -348,10 +351,13 @@ Longest runs:
 | 20:30 | dtermin device id on windows |
 | 20:31 | how to build ocw-devices |
 | 21:03 | how to start server in voice mode? |
+| 22:35 | okay, now let's move to user@deb |
+| 22:43 | continue the cutover: step 6.3 of docs/MIGRATE-DEB-USER.md |
+| 22:56 | can you bump the version  build all plattforms and upload a release? |
 
 ## Features
 
-38 spec versions added, 19 landed by a merge; 17 deploys, 1 releases.
+39 spec versions added, 20 landed by a merge; 18 deploys, 2 releases.
 
 | Spec | Feature | Landed | Check (marge) |
 |---|---|---|---|
@@ -359,40 +365,41 @@ Longest runs:
 | 3.37 | Art project music | 06:44 `9c2044d` (merge) | – |
 | 3.38 | Art project incident log | 06:44 `9c2044d` (merge) | – |
 | 3.39 | Phase 13 G5's browser part built | 07:03 `d9a9b05` (merge) | – |
-| 3.40 | Browser app setup and its test browser | 07:52 `ed821d6` (merge) | ok at 06:25 (branch) |
+| 3.40 | Browser app setup and its test browser | 07:52 `ed821d6` (merge) | – |
 | 3.41 | Art project features log | 07:52 `b28542c` (merge) | – |
 | 3.42 | Phase 7 built in part | 08:46 `c926016` (merge) | – |
 | 3.43 | Console Tab completion and the GPS line restored | 08:47 `5e96eb2` (merge) | – |
 | 3.44 | Cooler helmets | 09:46 `5410232` (merge) | – |
 | 3.45 | Phase 10 B8a built | 10:42 `8ab9209` (merge) | – |
 | 3.46 | Sign-in with Google and Strava built | 12:18 `e2b4bda` (merge) | – |
-| 3.47 | The remaining rider animations and Phase 12 K6, the organiser's options | 11:20 `594e8c1` (merge) | ok at 06:15, 1 suites, 1 passed, 0 failed (branch) |
+| 3.47 | The remaining rider animations and Phase 12 K6, the organiser's options | 11:20 `594e8c1` (merge) | – |
 | 3.48 | Two new phases planned | 13:14 `331a29f` | – |
-| 3.49 | Phase 8 T8 | 13:15 `259934b` (merge) | ok at 08:05 (branch) |
+| 3.49 | Phase 8 T8 | 13:15 `259934b` (merge) | – |
 | 3.50 | The art project has its own repository | 13:30 `b521838` (merge) | ok at 13:30 (commit) |
 | 3.51 | Public web preview | 13:45 `019f2ac` | – |
 | 3.52 | Phase 11 Q9 decided | 13:56 `320c32d` | – |
 | 3.53 | Phase 15 Q1 | 14:10 `9df5de0` | – |
 | 3.54 | The coordinator and the Claude tasks on the build dashboard | 14:35 `fc9f929` (merge) | ok at 15:11, 19 suites, 954 passed, 0 failed (main after merge) |
 | 3.55 | Phase 9 S9 planned | 14:51 `47f1860` | – |
-| 3.56 | Decision from the build dashboard | 14:55 `c1c241b` | – |
-| 3.57 | Decision from the build dashboard | 15:13 `ee15425` | – |
-| 3.58 | Decision by the user | 15:13 `ee15425` | – |
-| 3.59 | Decisions from the build dashboard | 15:13 `dae0586` | – |
-| 3.60 | Decision from the build dashboard | 15:14 `4e0ffcd` | – |
-| 3.61 | Decision from the build dashboard | 15:22 `8b874e8` | – |
-| 3.62 | Decision by the user | 15:26 `a03f748` | – |
-| 3.63 | Decision by the user | 15:32 `2a968e2` | – |
+| 3.56 | Decided: Phase 10 Q7 – closed | 14:55 `c1c241b` | – |
+| 3.57 | Decided: Phase 12 Q8 – the riding aids are allowed by default in all races for now | 15:13 `ee15425` | – |
+| 3.58 | Decided: Phase 12 Q4 – a workout's ERG step pauses while the rider is down after a crash… | 15:13 `ee15425` | – |
+| 3.59 | Decided: Phase 9 Q12 – every ride starts at the real local date and time of the world's p… | 15:13 `dae0586` | – |
+| 3.60 | Decided: Phase 14 Q2 – WebXR first, the native Android OpenXR app later | 15:14 `4e0ffcd` | – |
+| 3.61 | Decided: Phase 9 Q11 – choosing a season jumps the date to the season's representative da… | 15:22 `8b874e8` | – |
+| 3.62 | Decided: Phase 16 Q2 – world edits as patches on the sources plus "Fix in OSM" | 15:26 `a03f748` | – |
+| 3.63 | Decided: Phase 16 Q3 – BRouter is the first external route planner | 15:32 `2a968e2` | – |
 | 3.64 | Rider status signs planned | 15:36 `ef4c9d0` | – |
 | 3.65 | Render distance planned | 15:40 `aa3ba7f` | – |
-| 3.66 | Decision by the user | 15:45 `92c94ba` | – |
-| 3.67 | Decision by the user | 15:47 `26aaeac` | – |
+| 3.66 | Decided: Phase 10 Q8 – the render distance's dynamic mode is on by default on every platf… | 15:45 `92c94ba` | – |
+| 3.67 | Decided: Phase 10 Q9 – the render distance's target frame rate is the display's refresh o… | 15:47 `26aaeac` | – |
 | 3.68 | The browser app on Safari and iPhones | 16:11 `fb06017` (merge) | exit 1 at 16:34 (commit) |
 | 3.69 | Smooth junctions investigated and planned | 16:55 `4cf45cf` (merge) | ok at 16:55, 1 suites, 1 passed, 0 failed (commit) |
-| 3.70 | T8 memory regression fixed | 17:08 `16e4ff1` (merge) | ok at 16:32, 1 suites, 5 passed, 0 failed (branch) |
-| 3.71 | The trust dialog for user keys built | 17:36 `3c946f3` (merge) | ok at 17:24, 11 suites, 876 passed, 0 failed (branch) |
+| 3.70 | T8 memory regression fixed | 17:08 `16e4ff1` (merge) | – |
+| 3.71 | The trust dialog for user keys built | 17:36 `3c946f3` (merge) | – |
 | 3.72 | The kiosk starts a game server | 19:14 `82a05d6` | – |
 | 3.73 | Ride → Join and Ride → Host a ride | 20:42 `d8eaaca` (merge) | ok at 20:40, 5 suites, 528 passed, 0 failed (commit) |
+| 3.74 | Settings → Trainer → Devices built | 22:05 `1f09968` (merge) | – |
 
 Deploys:
 
@@ -413,9 +420,11 @@ Deploys:
 - 19:58 marge: `476e2fa` (ok)
 - 19:58 marge: `476e2fa` (ok)
 - 20:53 marge: `d8eaaca` (ok)
+- 22:06 marge: `1f09968` (ok)
 
 Releases:
 
+- 23:32 v0.2.2 (pre-release)
 - 08:03 web-preview-worlds (pre-release)
 
 ## Agent jobs
@@ -443,33 +452,24 @@ Releases:
 | aedfc4cef970ce697 | world-tr | 15:27 | 17:53 | merged |  | `ee3efc2` |
 | a175685ff5bb69e3e | junction | 15:45 | 16:56 | merged |  | `4ffda1e` |
 | a125e69b5981e0797 | ride-joi | 19:26 | 20:42 | merged |  | `7977102` |
-| aeaa126364911a5b6 | ble-sele | 20:29 |  | started |  |  |
+| aeaa126364911a5b6 | ble-sele | 20:29 | 22:06 | merged |  | `39117c5` |
 
 ## Incidents
 
-109 collected (janitor-delete 56, machine-offline 22, machine-online 21, oom-kill 2, runs-failed 1, unit-failed 6, unit-restart 1), 2 with root-cause notes ([incidents.md](incidents.md)).
+101 collected (janitor-delete 57, machine-offline 22, machine-online 21, runs-failed 1), 2 with root-cause notes ([incidents.md](incidents.md)).
 
 | Time | Kind | Machine | What |
 |---|---|---|---|
 | 00:07 | machine-offline | leela | leela unreachable (timeout) |
-| 00:39 | oom-kill | deb | OOM killer stopped ocw-build-dashboard.service |
-| 00:39 | unit-restart | deb | ocw-build-dashboard.service restarted (restart 1) |
-| 00:39 | oom-kill | deb | OOM killer stopped tmux scope (a terminal session) |
 | 00:40 | janitor-delete | marge | janitor delete OCW/target (0.2 GB) |
 | 00:43 | machine-offline | Win11Builder | Win11Builder unreachable (timeout) |
 | 00:44 | machine-online | Win11Builder | Win11Builder back online |
 | 00:50 | janitor-delete | marge | janitor delete OCW/target (0.8 GB) |
 | 01:00 | janitor-delete | marge | janitor delete OCW/target (0.0 GB) |
-| 01:05 | unit-failed | deb | ocw-art-collect.service failed (exit-code) |
 | 01:51 | janitor-delete | marge | janitor delete OCW/target (0.0 GB) |
 | 02:01 | janitor-delete | marge | janitor delete OCW/target (0.2 GB) |
-| 02:01 | unit-failed | deb | ocw-art-collect.service failed (exit-code) |
-| 03:02 | unit-failed | deb | ocw-art-collect.service failed (exit-code) |
 | 03:22 | janitor-delete | marge | janitor delete OCW/target (0.0 GB) |
-| 04:01 | unit-failed | deb | ocw-art-collect.service failed (exit-code) |
 | 04:02 | janitor-delete | marge | janitor delete OCW/target (0.0 GB) |
-| 05:05 | unit-failed | deb | ocw-art-collect.service failed (exit-code) |
-| 06:05 | unit-failed | deb | ocw-art-collect.service failed (exit-code) |
 | 06:09 | machine-online | leela | leela back online |
 | 06:36 | janitor-delete | marge | janitor delete OCW/target (0.9 GB) |
 | 07:08 | janitor-delete | marge | janitor delete OCW-worktree-agent-af13162558b98b473/target (0.0 GB) |
@@ -511,6 +511,15 @@ Releases:
 | 12:54 | machine-online | leela | leela back online |
 | 13:02 | janitor-delete | marge | janitor delete OCW/target (0.0 GB) |
 | 13:03 | janitor-delete | marge | janitor delete OCW-worktree-agent-a61e55158bce4740b/target (38.2 GB) |
+| 13:03 | janitor-delete | Win11Builder | janitor delete OCW-worktree-agent-a61e55158bce4740b/target (6.8 GB) |
+| 13:03 | janitor-delete | macos | janitor delete OCW-worktree-agent-a61e55158bce4740b/target (18.8 GB) |
+| 13:06 | machine-offline | leela | leela unreachable (timeout) |
+| 13:07 | machine-online | leela | leela back online |
+| 13:11 | machine-offline | leela | leela unreachable (timeout) |
+| 13:13 | machine-online | leela | leela back online |
+| 13:14 | machine-offline | leela | leela unreachable (ssh error) |
+| 13:15 | machine-online | leela | leela back online |
+| 13:30 | machine-offline | leela | leela unreachable (timeout) |
 
 ### Root-cause notes
 
@@ -913,8 +922,6 @@ the journal's "Incidents" section.
 | 10:00:36 | [100036-web-preview-preview-world-world-loading.jpg](100036-web-preview-preview-world-world-loading.jpg) |
 | 10:00:36 | [100036-web-preview-preview-world-world.jpg](100036-web-preview-preview-world-world.jpg) |
 | 10:00:36 | [100036-web-preview-preview-world.jpg](100036-web-preview-preview-world.jpg) |
-| 10:25:33 | [102533-web-web-account-linked.jpg](102533-web-web-account-linked.jpg) |
-| 10:25:33 | [102533-web-web-account-signed-in.jpg](102533-web-web-account-signed-in.jpg) |
 | 10:38:15 | [103815-web-preview-preview-hills.jpg](103815-web-preview-preview-hills.jpg) |
 | 10:38:15 | [103815-web-preview-preview-world-world-loading.jpg](103815-web-preview-preview-world-world-loading.jpg) |
 | 10:38:15 | [103815-web-preview-preview-world-world.jpg](103815-web-preview-preview-world-world.jpg) |
@@ -961,7 +968,6 @@ the journal's "Incidents" section.
 | 10:47:07 | [104707-scenes-veg-before-x11-veg-tf-broom.jpg](104707-scenes-veg-before-x11-veg-tf-broom.jpg) |
 | 10:47:36 | [104736-scenes-veg-before-x11-veg-tf-succulents.jpg](104736-scenes-veg-before-x11-veg-tf-succulents.jpg) |
 | 10:53:46 | [105346-account-account-signed-out.jpg](105346-account-account-signed-out.jpg) |
-| 10:54:07 | [105407-account-account-signed-in.jpg](105407-account-account-signed-in.jpg) |
 | 10:54:27 | [105427-account-account-code.jpg](105427-account-account-code.jpg) |
 | 10:54:55 | [105455-account-device-page.png](105455-account-device-page.png) |
 | 10:57:51 | [105751-vr-vr-sim-both-eyes.jpg](105751-vr-vr-sim-both-eyes.jpg) |

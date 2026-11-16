@@ -1153,11 +1153,51 @@
    "subject": "Merge Ride -> Join and Ride -> Host a ride: join links (ocw://, https://, pasted command), the Join page with text entry, runtime switch to a shared ride and back, the hosting wizard with an in-app server on 0.0.0.0:47800, join link with copy, Events page (spec 3.73)",
    "added": 0,
    "removed": 0
+  },
+  {
+   "sha": "375518a",
+   "time": "21:46:20",
+   "merge": false,
+   "subject": "Devices page: scan, choose, connect and remember trainers from the menu (spec §3.2.1 Devices, v3.73)",
+   "added": 1986,
+   "removed": 194
+  },
+  {
+   "sha": "39117c5",
+   "time": "21:49:26",
+   "merge": true,
+   "subject": "Merge origin/main (Ride -> Join / Host a ride) into the Devices page branch",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "1f09968",
+   "time": "22:05:57",
+   "merge": true,
+   "subject": "Merge the Devices page: scan with live results, choose, connect, remember in devices.toml only after connecting, the trainer replaces the virtual one, forget; the same page in the browser (spec 3.74)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "8c84efe",
+   "time": "22:59:23",
+   "merge": false,
+   "subject": "version-bump: do not fail when the last manifest found is not a workspace crate",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "c27c2a1",
+   "time": "22:59:27",
+   "merge": false,
+   "subject": "Release 0.2.2",
+   "added": 25,
+   "removed": 25
   }
  ],
- "merges": 37,
- "lines_added": 48682,
- "lines_removed": 33437,
+ "merges": 39,
+ "lines_added": 50694,
+ "lines_removed": 33657,
  "spec_versions": [
   "3.36",
   "3.37",
@@ -1219,7 +1259,8 @@
   "3.71",
   "3.72",
   "3.73",
-  "3.73"
+  "3.73",
+  "3.74"
  ],
  "tests": null,
  "media": [
@@ -2959,16 +3000,6 @@
    "kind": "image"
   },
   {
-   "file": "102533-web-web-account-linked.jpg",
-   "time": "10:25:33",
-   "kind": "image"
-  },
-  {
-   "file": "102533-web-web-account-signed-in.jpg",
-   "time": "10:25:33",
-   "kind": "image"
-  },
-  {
    "file": "103815-web-preview-preview-hills.jpg",
    "time": "10:38:15",
    "kind": "image"
@@ -3196,11 +3227,6 @@
   {
    "file": "105346-account-account-signed-out.jpg",
    "time": "10:53:46",
-   "kind": "image"
-  },
-  {
-   "file": "105407-account-account-signed-in.jpg",
-   "time": "10:54:07",
    "kind": "image"
   },
   {
@@ -4939,14 +4965,14 @@
    "kind": "image"
   }
  ],
- "images": 734,
+ "images": 731,
  "videos": 9,
  "sounds": 0,
  "builds": {
-  "runs": 243,
-  "seconds": 213674.1,
-  "cargo_s": 10238.8,
-  "compiled": 2926,
+  "runs": 248,
+  "seconds": 216810.3,
+  "cargo_s": 12278.8,
+  "compiled": 3660,
   "wait_s": 99584.0,
   "failed": [
    {
@@ -5253,27 +5279,27 @@
   ],
   "machines": {
    "macos": {
-    "runs": 52,
-    "seconds": 17354.899999999998,
+    "runs": 53,
+    "seconds": 17847.6,
     "failed": 5,
-    "cargo_s": 518.9000000000001,
-    "compiled": 23,
+    "cargo_s": 941.9000000000001,
+    "compiled": 148,
     "wait_s": 8240.0
    },
    "marge": {
-    "runs": 177,
-    "seconds": 184924.9,
+    "runs": 180,
+    "seconds": 186299.69999999998,
     "failed": 11,
-    "cargo_s": 8081.900000000001,
-    "compiled": 2897,
+    "cargo_s": 8444.900000000001,
+    "compiled": 3197,
     "wait_s": 87631.0
    },
    "Win11Builder": {
-    "runs": 7,
-    "seconds": 8442.800000000001,
+    "runs": 8,
+    "seconds": 9711.500000000002,
     "failed": 0,
-    "cargo_s": 0.0,
-    "compiled": 0,
+    "cargo_s": 1254.0,
+    "compiled": 309,
     "wait_s": 3713.0
    },
    "leela": {
@@ -5286,12 +5312,12 @@
    }
   },
   "online": {
-   "leela": 0.3106060606060606,
+   "leela": 0.286512928022362,
    "marge": 1.0,
-   "Win11Builder": 0.9992424242424243,
+   "Win11Builder": 0.9993011879804332,
    "macos": 1.0
   },
-  "samples": 1320
+  "samples": 1431
  },
  "prompts": [
   {
@@ -5450,11 +5476,6 @@
    "text": "done"
   },
   {
-   "time": "13:01:18",
-   "iso": "2026-11-15T13:01:18+01:00",
-   "text": "wait, i have the split of projects running in the other session. i need to wait till it finishes."
-  },
-  {
    "time": "13:06:32",
    "iso": "2026-11-15T13:06:32+01:00",
    "text": "plan a new feature (SPECIFICATION.md): Rather than encoding all objects in code, use a standardizes open source 3D model format (make a proposal for which one and elaborate the pros and cons, e.g. external tools, connection to blender, license, efficiency, scope, etc). build a import/exporter/loader for the model files. plan for moving all (where feasible) current 3d objects into that format. use artwork/3dmodels to store the files."
@@ -5498,11 +5519,6 @@
    "time": "13:29:16",
    "iso": "2026-11-15T13:29:16+01:00",
    "text": "okay, delete the build history and related files from OCW.git"
-  },
-  {
-   "time": "13:31:51",
-   "iso": "2026-11-15T13:31:51+01:00",
-   "text": "since the split is finished now, check that there is now OCW and OCW-ART. prepare moving them one by one."
   },
   {
    "time": "13:39:18",
@@ -5748,16 +5764,31 @@
    "time": "21:03:59",
    "iso": "2026-11-15T21:03:59+01:00",
    "text": "how to start server in voice mode?"
+  },
+  {
+   "time": "22:35:45",
+   "iso": "2026-11-15T22:35:45+01:00",
+   "text": "okay, now let's move to user@deb"
+  },
+  {
+   "time": "22:43:07",
+   "iso": "2026-11-15T22:43:07+01:00",
+   "text": "continue the cutover: step 6.3 of docs/MIGRATE-DEB-USER.md"
+  },
+  {
+   "time": "22:56:41",
+   "iso": "2026-11-15T22:56:41+01:00",
+   "text": "can you bump the version  build all plattforms and upload a release?"
   }
  ],
  "tokens": {
   "total": {
-   "input": 9513,
-   "cache_write": 37295431,
-   "cache_read": 1610214301,
-   "output": 3336575,
-   "total": 1650855820,
-   "messages": 4415
+   "input": 9641,
+   "cache_write": 37338889,
+   "cache_read": 1622429935,
+   "output": 3352181,
+   "total": 1663130646,
+   "messages": 4471
   },
   "features": {
    "Art project": {
@@ -5785,20 +5816,20 @@
     "messages": 315
    },
    "Other": {
-    "input": 4582,
-    "cache_write": 18270181,
-    "cache_read": 681184315,
-    "output": 1687022,
-    "total": 701146100,
-    "messages": 2162
+    "input": 4584,
+    "cache_write": 18217845,
+    "cache_read": 684972698,
+    "output": 1675707,
+    "total": 704870834,
+    "messages": 2161
    },
    "Build, release & infra": {
-    "input": 137,
-    "cache_write": 69195,
-    "cache_read": 34557185,
-    "output": 27674,
-    "total": 34654191,
-    "messages": 55
+    "input": 249,
+    "cache_write": 160947,
+    "cache_read": 39669094,
+    "output": 53090,
+    "total": 39883380,
+    "messages": 107
    },
    "Multiplayer & server": {
     "input": 488,
@@ -5833,12 +5864,12 @@
     "messages": 6
    },
    "Audio & voice": {
-    "input": 68,
-    "cache_write": 31230,
-    "cache_read": 12431213,
-    "output": 15234,
-    "total": 12477745,
-    "messages": 26
+    "input": 82,
+    "cache_write": 35272,
+    "cache_read": 15746555,
+    "output": 16739,
+    "total": 15798648,
+    "messages": 31
    }
   }
  },
@@ -5850,27 +5881,6 @@
     "source": "dashboard",
     "machine": "leela",
     "text": "leela unreachable (timeout)"
-   },
-   {
-    "time": "00:39:18",
-    "kind": "oom-kill",
-    "source": "journal",
-    "machine": "deb",
-    "text": "OOM killer stopped ocw-build-dashboard.service"
-   },
-   {
-    "time": "00:39:29",
-    "kind": "unit-restart",
-    "source": "journal",
-    "machine": "deb",
-    "text": "ocw-build-dashboard.service restarted (restart 1)"
-   },
-   {
-    "time": "00:39:47",
-    "kind": "oom-kill",
-    "source": "journal",
-    "machine": "deb",
-    "text": "OOM killer stopped tmux scope (a terminal session)"
    },
    {
     "time": "00:40:47",
@@ -5908,13 +5918,6 @@
     "text": "janitor delete OCW/target (0.0 GB)"
    },
    {
-    "time": "01:05:49",
-    "kind": "unit-failed",
-    "source": "journal",
-    "machine": "deb",
-    "text": "ocw-art-collect.service failed (exit-code)"
-   },
-   {
     "time": "01:51:15",
     "kind": "janitor-delete",
     "source": "janitor",
@@ -5929,20 +5932,6 @@
     "text": "janitor delete OCW/target (0.2 GB)"
    },
    {
-    "time": "02:01:47",
-    "kind": "unit-failed",
-    "source": "journal",
-    "machine": "deb",
-    "text": "ocw-art-collect.service failed (exit-code)"
-   },
-   {
-    "time": "03:02:08",
-    "kind": "unit-failed",
-    "source": "journal",
-    "machine": "deb",
-    "text": "ocw-art-collect.service failed (exit-code)"
-   },
-   {
     "time": "03:22:19",
     "kind": "janitor-delete",
     "source": "janitor",
@@ -5950,32 +5939,11 @@
     "text": "janitor delete OCW/target (0.0 GB)"
    },
    {
-    "time": "04:01:53",
-    "kind": "unit-failed",
-    "source": "journal",
-    "machine": "deb",
-    "text": "ocw-art-collect.service failed (exit-code)"
-   },
-   {
     "time": "04:02:48",
     "kind": "janitor-delete",
     "source": "janitor",
     "machine": "marge",
     "text": "janitor delete OCW/target (0.0 GB)"
-   },
-   {
-    "time": "05:05:46",
-    "kind": "unit-failed",
-    "source": "journal",
-    "machine": "deb",
-    "text": "ocw-art-collect.service failed (exit-code)"
-   },
-   {
-    "time": "06:05:47",
-    "kind": "unit-failed",
-    "source": "journal",
-    "machine": "deb",
-    "text": "ocw-art-collect.service failed (exit-code)"
    },
    {
     "time": "06:09:31",
@@ -6606,6 +6574,13 @@
     "source": "remote.sh",
     "machine": "leela, macos, marge",
     "text": "18 failed remote.sh runs (leela 2, macos 5, marge 11)"
+   },
+   {
+    "time": "22:07:00",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aeaa126364911a5b6/target (40.2 GB)"
    }
   ],
   "notes": "# Incidents – 2026-11-15\n\nRoot-cause notes by the coordinator (docs/ART-PROJECT.md §2.6). The collected\nentries (journal, build log) are in `logs/build-log/incidents.jsonl` and in\nthe journal's \"Incidents\" section.\n\n## 00:39 – deb ran out of memory: the dashboard and the coordinator session were killed\n\n- **What happened:** the OOM killer stopped `ocw-build-dashboard.service`\n  (00:39:18) and the coordinator's Claude Code session, its tmux scope\n  (00:39:47), on deb. systemd restarted the dashboard 11 s later.\n- **Cause:** two QEMU VMs (\"windows\", \"macos\") held about 8 GB of deb's 15 GB\n  permanently. On top of that ran about 10 parallel agents in one Claude Code\n  process (6.8 GB peak), the re-renders of the diary videos (ffmpeg) and the\n  art collector. Swap was full (4 of 4 GB).\n- **Effect:** the session crashed and 8 running agents were interrupted.\n  Their worktrees were intact, and they were resumed at about 06:15. The\n  day-4 video rendering at that moment was left truncated and was rendered\n  again.\n- **Fix:** the user stopped the VMs, and the dashboard was restarted. From now\n  on at most about 5 agents run at a time, and renders don't run in parallel\n  with many agents. Renders on deb run one day at a time.\n- **Follow-up:** the dashboard unit got `Restart=on-failure` and\n  `MemoryHigh=768M` / `MemoryMax=1G` (`tools/build-dashboard/ocw-build-dashboard.service`).\n  It takes effect after `make dashboard-install`.\n\n## 01:05 – the art collector failed every hour: journals written without the users masked\n\n- **What happened:** `ocw-art-collect.service` failed every hour from 01:05 to\n  06:05. Its mask check found 16 unmasked build-machine user names in the\n  tracked journals and token files of days 1–4.\n- **Cause:** the music agent re-rendered days 1–4 from its agent worktree\n  against the main archive (00:24–00:39), and `render` rewrites the day's\n  journal. `diary.py` read the machine list from the worktree's\n  `config/machines.toml`, which a worktree doesn't have, so the users and\n  hosts were left out of the mask. Only the home directory, e-mail and IP\n  patterns applied.\n- **Effect:** the tracked text files in the main checkout held the build user\n  name as a word (not committed). The re-rendered day videos of that run\n  could show it in prompt bubbles; they were published at about 06:15 and\n  replaced at 06:43.\n  No hosts and no IP addresses were affected.\n- **Fix:** `check-masked --fix` with the main checkout's tool re-masked the\n  files, and the check passes again. `diary.py` now finds `config/machines.toml`\n  in the main checkout too, and refuses to mask without a machine list.\n  Days 1–4 and the diary were rendered again and re-published.\n- **Follow-up:** a regression test (`MachinesConfTest`). The collector's mask\n  check did its job; the incident log made the hourly failures visible.\n",
@@ -6654,7 +6629,7 @@
    "time": "2026-11-15T07:03:11+01:00",
    "merge": true,
    "subject": "Merge Unicorn mode in the browser: god-mode glue shared in ocw-ui (flight, touch, inspection, HUD), Pointer Lock in the browser, test-web-unicorn (spec 3.39)",
-   "branch": "worktree-agent-ab69e4b089e56849c",
+   "branch": null,
    "check": null
   },
   {
@@ -6665,20 +6640,8 @@
    "time": "2026-11-15T07:52:25+01:00",
    "merge": true,
    "subject": "Merge browser setup fixes: web-serve stops without a build, make web-remote, WEB_BIND, cargo profile web-release, pinned Chromium 157 for the browser tests, make test-web-readme (spec 3.40)",
-   "branch": "worktree-agent-ab2216bf39859444d",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-15T06:25:48+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-ab2216bf39859444d",
-    "command": "make test-web-readme README_FLAGS=\"--keep --reuse-target\"",
-    "log": "062548-marge-3423581.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.41",
@@ -6688,7 +6651,7 @@
    "time": "2026-11-15T07:52:42+01:00",
    "merge": true,
    "subject": "Merge art features log: Features and Agent jobs in the journal, agent-event, commit in the build log, deploys log, Today's features roll (spec 3.41)",
-   "branch": "worktree-agent-a43d6ec0bd80728f8",
+   "branch": null,
    "check": null
   },
   {
@@ -6699,7 +6662,7 @@
    "time": "2026-11-15T08:46:59+01:00",
    "merge": true,
    "subject": "Merge Phase 7: training history (rides, totals, bests, power curve, FIT import/export) and M9 key/button rebinding with accessibility options; HUD panel stays clear of the FPS column (spec 3.42)",
-   "branch": "worktree-agent-ab18479c7c2ff5bd4",
+   "branch": null,
    "check": null
   },
   {
@@ -6710,7 +6673,7 @@
    "time": "2026-11-15T08:47:31+01:00",
    "merge": true,
    "subject": "Merge console Tab completion and the GPS line restored (route rides kept no geographic origin since fae1547), rider.gps and hud.gps in both apps, browser origin= option (spec 3.43)",
-   "branch": "worktree-agent-a3bffa51d30d0cfa2",
+   "branch": null,
    "check": null
   },
   {
@@ -6721,7 +6684,7 @@
    "time": "2026-11-15T09:46:54+01:00",
    "merge": true,
    "subject": "Merge cooler helmets: sculpted road / lightweight / aero road shells with vents, two-tone, retention band and straps; TT teardrop with wrap visor; no clipping with hair, caps and glasses (spec 3.44)",
-   "branch": "worktree-agent-a9236ac646995a021",
+   "branch": null,
    "check": null
   },
   {
@@ -6732,7 +6695,7 @@
    "time": "2026-11-15T10:42:46+01:00",
    "merge": true,
    "subject": "Merge B8a public preview on GitHub Pages: size-optimised preview build (wasm-opt, fat LTO), preview signing root, page config, start and credits pages, signed Liechtenstein release asset, Pages workflow, README link (spec 3.45)",
-   "branch": "worktree-agent-add2bafdd6a4b0c43",
+   "branch": null,
    "check": null
   },
   {
@@ -6743,7 +6706,7 @@
    "time": "2026-11-15T12:18:36+01:00",
    "merge": true,
    "subject": "Merge sign-in with Google and Strava: ocw-auth, the ocw-accounts backend (OIDC-shaped endpoints, device flow, rotation, export/delete), game-server token check, Settings → Account in both apps; fictional test identities (spec 3.46)",
-   "branch": "worktree-agent-a61e55158bce4740b",
+   "branch": null,
    "check": null
   },
   {
@@ -6754,20 +6717,8 @@
    "time": "2026-11-15T11:20:38+01:00",
    "merge": true,
    "subject": "Merge rider animations (foot down, cornering, U-turn look, finish throw, victory) and Phase 12 K6 organiser rules (aids, chaotic bots, time limit, service wait, DNF reasons) (spec 3.47)",
-   "branch": "worktree-agent-aca12fe4f3f6386c9",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-15T06:15:21+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-aca12fe4f3f6386c9",
-    "command": "cargo test -p ocw-client free_ride_u_turn_on_client_and_server 2>&1 | grep -E \"^test |panicked|left|right|^error\" | head",
-    "log": "061521-marge-3407677.log",
-    "how": "branch",
-    "suites": 1,
-    "passed": 1,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.48",
@@ -6786,20 +6737,8 @@
    "time": "2026-11-15T13:15:45+01:00",
    "merge": true,
    "subject": "Merge realistic vegetation (Phase 8 T8): flora species, VEGE crops and plantations, planted trees in OBST, world-builder vegetation, flora/vegetation renderer (spec 3.49)",
-   "branch": "worktree-agent-aa822ba7b91d3a262",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-15T08:05:12+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-aa822ba7b91d3a262",
-    "command": "cargo test -q -p ocw-world 2>&1 | grep -v \"^test .* ok$\" | tail -40",
-    "log": "080512-marge-3570977.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.50",
@@ -6859,7 +6798,7 @@
    "time": "2026-11-15T14:35:55+01:00",
    "merge": true,
    "subject": "Merge deb monitoring and Claude tasks into the build dashboard: Coordinator (deb) card – memory, swap, top processes, PSI, disks, big dirs, OOM history, alerts, 24 h history (deb.jsonl) – and the Claude tasks section with the cutover check (spec 3.54)",
-   "branch": "worktree-agent-a2c89e06798607f0d",
+   "branch": null,
    "check": {
     "machine": "marge",
     "time": "2026-11-15T15:11:04+01:00",
@@ -6885,7 +6824,7 @@
   },
   {
    "version": "3.56",
-   "title": "Decision from the build dashboard",
+   "title": "Decided: Phase 10 Q7 – closed",
    "commit": "c1c241b",
    "sha": "c1c241b5c1bcab70fbb6c20b9bbf9c8c3763ed62",
    "time": "2026-11-15T14:55:11+01:00",
@@ -6894,7 +6833,7 @@
   },
   {
    "version": "3.57",
-   "title": "Decision from the build dashboard",
+   "title": "Decided: Phase 12 Q8 – the riding aids are allowed by default in all races for now",
    "commit": "ee15425",
    "sha": "ee154252ba504220d01e2495f696279e4a4137b6",
    "time": "2026-11-15T15:13:32+01:00",
@@ -6903,7 +6842,7 @@
   },
   {
    "version": "3.58",
-   "title": "Decision by the user",
+   "title": "Decided: Phase 12 Q4 – a workout's ERG step pauses while the rider is down after a crash…",
    "commit": "ee15425",
    "sha": "ee154252ba504220d01e2495f696279e4a4137b6",
    "time": "2026-11-15T15:13:32+01:00",
@@ -6912,7 +6851,7 @@
   },
   {
    "version": "3.59",
-   "title": "Decisions from the build dashboard",
+   "title": "Decided: Phase 9 Q12 – every ride starts at the real local date and time of the world's p…",
    "commit": "dae0586",
    "sha": "dae0586524e5b2bde542832df0201deeda08e6da",
    "time": "2026-11-15T15:13:49+01:00",
@@ -6921,7 +6860,7 @@
   },
   {
    "version": "3.60",
-   "title": "Decision from the build dashboard",
+   "title": "Decided: Phase 14 Q2 – WebXR first, the native Android OpenXR app later",
    "commit": "4e0ffcd",
    "sha": "4e0ffcdc64f20dbf51f39c301b2ee05527e9772c",
    "time": "2026-11-15T15:14:01+01:00",
@@ -6930,7 +6869,7 @@
   },
   {
    "version": "3.61",
-   "title": "Decision from the build dashboard",
+   "title": "Decided: Phase 9 Q11 – choosing a season jumps the date to the season's representative da…",
    "commit": "8b874e8",
    "sha": "8b874e82ae8e03d26ece022d41e53add93572fb2",
    "time": "2026-11-15T15:22:14+01:00",
@@ -6939,7 +6878,7 @@
   },
   {
    "version": "3.62",
-   "title": "Decision by the user",
+   "title": "Decided: Phase 16 Q2 – world edits as patches on the sources plus \"Fix in OSM\"",
    "commit": "a03f748",
    "sha": "a03f7488d47e579d40b9f67ca4ab88730cd8f67a",
    "time": "2026-11-15T15:26:21+01:00",
@@ -6948,7 +6887,7 @@
   },
   {
    "version": "3.63",
-   "title": "Decision by the user",
+   "title": "Decided: Phase 16 Q3 – BRouter is the first external route planner",
    "commit": "2a968e2",
    "sha": "2a968e2ac53efd962390996b2afe66126b2f8d3d",
    "time": "2026-11-15T15:32:34+01:00",
@@ -6975,7 +6914,7 @@
   },
   {
    "version": "3.66",
-   "title": "Decision by the user",
+   "title": "Decided: Phase 10 Q8 – the render distance's dynamic mode is on by default on every platf…",
    "commit": "92c94ba",
    "sha": "92c94ba0eae428a9c1524cae7704baae2531f6d5",
    "time": "2026-11-15T15:45:29+01:00",
@@ -6984,7 +6923,7 @@
   },
   {
    "version": "3.67",
-   "title": "Decision by the user",
+   "title": "Decided: Phase 10 Q9 – the render distance's target frame rate is the display's refresh o…",
    "commit": "26aaeac",
    "sha": "26aaeacc1934858a8f34b66bf19fd64dd7f9a249",
    "time": "2026-11-15T15:47:33+01:00",
@@ -6999,7 +6938,7 @@
    "time": "2026-11-15T16:11:06+01:00",
    "merge": true,
    "subject": "Merge the browser app on Safari and iPhones: WebGL 2 for Safari and iOS, a WebGPU watchdog with automatic fallback, renderer errors reported instead of quitting, mobile canvas and start-page fixes, test-web-gpu and test-web-webkit (spec 3.68)",
-   "branch": "worktree-agent-a3a97602a1f43e378",
+   "branch": null,
    "check": {
     "machine": "marge",
     "time": "2026-11-15T16:34:20+01:00",
@@ -7022,7 +6961,7 @@
    "time": "2026-11-15T16:55:57+01:00",
    "merge": true,
    "subject": "Merge the junction investigation: findings, design J1-J3 for smooth junctions (spec §4.8.8, Q1-Q5), 14 junction-* scenes, the junction_seams analysis test (spec 3.69)",
-   "branch": "worktree-agent-a175685ff5bb69e3e",
+   "branch": null,
    "check": {
     "machine": "marge",
     "time": "2026-11-15T16:55:57+01:00",
@@ -7045,20 +6984,8 @@
    "time": "2026-11-15T17:08:08+01:00",
    "merge": true,
    "subject": "Merge the vegetation memory fix: near plants as recipes built only near the camera, the tile stream never restarts pending tiles; browser Liechtenstein 3.1 GB -> 0.43 GB, Tenerife rides; memory budgets as tests, test-web fails above 1.5 GB (spec 3.70)",
-   "branch": "worktree-agent-ac555517fcdeb939b",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-15T16:32:24+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-ac555517fcdeb939b",
-    "command": "cargo test --release -p ocw-render --lib -- vegetation tile_builds 2>&1 | grep -E \"^test |test result|panicked\" ; cargo ",
-    "log": "163224-marge-147400.log",
-    "how": "branch",
-    "suites": 1,
-    "passed": 5,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.71",
@@ -7068,20 +6995,8 @@
    "time": "2026-11-15T17:36:56+01:00",
    "merge": true,
    "subject": "Merge the trust dialog for user-signed worlds: user keys (world-builder keys init-user), fingerprints, a trust store per user, the dialog in both apps (Trust / Load once / Cancel), trusted keys in Settings, world trust commands, shared rides check each client (spec 3.71)",
-   "branch": "worktree-agent-aedfc4cef970ce697",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-15T17:24:57+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-aedfc4cef970ce697",
-    "command": "cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)\" -A12 | head -80; echo CLIPPY-DON",
-    "log": "172457-marge-210632.log",
-    "how": "branch",
-    "suites": 11,
-    "passed": 876,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.72",
@@ -7100,7 +7015,7 @@
    "time": "2026-11-15T20:42:04+01:00",
    "merge": true,
    "subject": "Merge Ride -> Join and Ride -> Host a ride: join links (ocw://, https://, pasted command), the Join page with text entry, runtime switch to a shared ride and back, the hosting wizard with an in-app server on 0.0.0.0:47800, join link with copy, Events page (spec 3.73)",
-   "branch": "worktree-agent-a125e69b5981e0797",
+   "branch": null,
    "check": {
     "machine": "marge",
     "time": "2026-11-15T20:40:00+01:00",
@@ -7114,6 +7029,17 @@
     "failed": 0,
     "failed_suites": 0
    }
+  },
+  {
+   "version": "3.74",
+   "title": "Settings → Trainer → Devices built",
+   "commit": "1f09968",
+   "sha": "1f09968ca1effe1b0e43b9a543c0c79f3e2a3d69",
+   "time": "2026-11-15T22:05:57+01:00",
+   "merge": true,
+   "subject": "Merge the Devices page: scan with live results, choose, connect, remember in devices.toml only after connecting, the trainer replaces the virtual one, forget; the same page in the browser (spec 3.74)",
+   "branch": null,
+   "check": null
   }
  ],
  "deploys": [
@@ -7235,9 +7161,22 @@
    "machine": "marge",
    "commit": "d8eaaca",
    "exit": 0
+  },
+  {
+   "start": "2026-11-15T22:06:08+01:00",
+   "end": "2026-11-15T22:06:43+01:00",
+   "machine": "marge",
+   "commit": "1f09968",
+   "exit": 0
   }
  ],
  "releases": [
+  {
+   "tag": "v0.2.2",
+   "name": "Open Cycling World 0.2.2 (development build)",
+   "time": "2026-11-15T23:32:01+01:00",
+   "prerelease": true
+  },
   {
    "tag": "web-preview-worlds",
    "name": "Web preview worlds",
@@ -7460,11 +7399,11 @@
    "task": "aeaa126364911a5b6",
    "branch": "ble-select",
    "start": "2026-11-15T20:29:27+01:00",
-   "end": null,
-   "status": "started",
+   "end": "2026-11-15T22:06:43+01:00",
+   "status": "merged",
    "interruptions": 0,
-   "merged": null,
-   "events": 1
+   "merged": "39117c5",
+   "events": 2
   }
  ]
 }

@@ -5885,7 +5885,7 @@
    "time": "2026-11-14T00:11:16+01:00",
    "merge": true,
    "subject": "Merge build dashboard machine controls: enable/disable machines for building, slots per machine; remote.sh refuses disabled machines (deploys still allowed) (spec 2.66)",
-   "branch": "worktree-agent-ab34882405374445d",
+   "branch": null,
    "check": null
   },
   {
@@ -6031,17 +6031,17 @@
    "time": "2026-11-14T00:24:07+01:00",
    "merge": true,
    "subject": "Merge god mode refined: plane-like flight, + / − by typed character, no saddle cloth, bird-like wingbeat (spec 2.67)",
-   "branch": "worktree-agent-a3b317fb1393f6d1f",
+   "branch": null,
    "check": {
     "machine": "marge",
-    "time": "2026-11-14T00:07:53+01:00",
+    "time": "2026-11-14T00:40:39+01:00",
     "exit": 0,
-    "branch": "worktree-agent-a3b317fb1393f6d1f",
-    "command": "cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)\" -A12 | head -120; echo CLIPPY_EX",
-    "log": "000753-marge-1159290.log",
-    "how": "branch",
-    "suites": 7,
-    "passed": 678,
+    "branch": "main",
+    "command": "cargo fmt --all --check 2>&1 | head -20; cargo clippy -p ocw-desktop -p ocw-render --all-targets -- -D warnings 2>&1 | t",
+    "log": "004039-marge-1211920.log",
+    "how": "main after merge",
+    "suites": 5,
+    "passed": 548,
     "failed": 0,
     "failed_suites": 0
    }
@@ -6162,7 +6162,7 @@
    "time": "2026-11-14T01:42:37+01:00",
    "merge": true,
    "subject": "Merge Windows sync fix: new checkouts get the whole tree, manifest bound to its checkout, safety net for missing files (spec 2.95)",
-   "branch": "worktree-agent-ac264ba6885768656",
+   "branch": null,
    "check": null
   },
   {
@@ -6173,20 +6173,8 @@
    "time": "2026-11-14T01:43:14+01:00",
    "merge": true,
    "subject": "Merge voice echo bot: Echo rider, delayed spatial playback of your voice, Settings → Audio → Voice, voice.echo console, LiveKit echo participant (spec 2.96)",
-   "branch": "worktree-agent-a281a46a07f822117",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T01:27:23+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a281a46a07f822117",
-    "command": "cargo fmt --all --check && echo FMT-OK; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -cE \"^(warning",
-    "log": "012723-marge-1263896.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "2.97",
@@ -6196,20 +6184,8 @@
    "time": "2026-11-14T01:58:40+01:00",
    "merge": true,
    "subject": "Merge Phase 10 B1: the browser app – shared ocw-client crate, apps/web on WebGPU, frame-driven local server, make web / web-serve / test-web (spec 2.97)",
-   "branch": "worktree-agent-a79d5b738f6b3a776",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T01:16:43+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a79d5b738f6b3a776",
-    "command": "cargo test --workspace --no-fail-fast 2>&1 | grep -E \"^test result|FAILED|panicked|error(\\[|:)\" | head -80; echo EXIT ${",
-    "log": "011643-marge-1252384.log",
-    "how": "branch",
-    "suites": 46,
-    "passed": 1298,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "2.98",
@@ -6219,19 +6195,19 @@
    "time": "2026-11-14T03:24:37+01:00",
    "merge": true,
    "subject": "Merge Phase 12 K1+K2: rider collisions, soft bumps, crashes with Avian ragdoll falls, autodrive avoidance (spec 2.98)",
-   "branch": "worktree-agent-a507bcaff0a2af98c",
+   "branch": null,
    "check": {
     "machine": "marge",
-    "time": "2026-11-14T02:50:43+01:00",
+    "time": "2026-11-14T03:24:45+01:00",
     "exit": 0,
-    "branch": "worktree-agent-a507bcaff0a2af98c",
-    "command": "cargo fmt --all -- --check 2>&1 | head -5; echo FMT_DONE; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | g",
-    "log": "025043-marge-1347749.log",
-    "how": "branch",
-    "suites": 7,
-    "passed": 438,
-    "failed": 2,
-    "failed_suites": 1
+    "branch": "main",
+    "command": "export CC=clang-21 CXX=clang++-21; cargo fmt --all --check && cargo clippy --workspace --all-targets -- -D warnings && c",
+    "log": "032445-marge-1378980.log",
+    "how": "main after merge",
+    "suites": 28,
+    "passed": 1378,
+    "failed": 0,
+    "failed_suites": 0
    }
   },
   {
@@ -6251,20 +6227,8 @@
    "time": "2026-11-14T05:24:01+01:00",
    "merge": true,
    "subject": "Merge Phase 4 W1+W2: the 3D workshop – bikes on the stand and the wall, part hotspots and picker, 76-part catalogue in hearts, local wallet, server-credited hearts, BikeChange (spec 3.00)",
-   "branch": "worktree-agent-a09cdbcff127205c5",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T04:48:47+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a09cdbcff127205c5",
-    "command": "make test-web-build 2>&1 | tail -6",
-    "log": "044847-marge-1464786.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.01",
@@ -6283,20 +6247,8 @@
    "time": "2026-11-14T06:40:22+01:00",
    "merge": true,
    "subject": "Merge Phase 10 B3: browser multiplayer over WebTransport (web-transport-quinn on our quinn endpoint), anonymous browser riders (spec 3.02)",
-   "branch": "worktree-agent-af34d3cf80ac1115d",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T05:51:42+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-af34d3cf80ac1115d",
-    "command": "make test-web-multiplayer 2>&1 | grep -v \"^\\s*Compiling\" | tail -120",
-    "log": "055142-marge-1528983.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.03",
@@ -6306,20 +6258,8 @@
    "time": "2026-11-14T06:47:06+01:00",
    "merge": true,
    "subject": "Merge Phase 4 W3: parts physics within the caps, Profile / Equal / Open race modes, others see fitted parts (spec 3.03)",
-   "branch": "worktree-agent-ab886c17ece2bab7f",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T06:19:11+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-ab886c17ece2bab7f",
-    "command": "cargo test --workspace 2>&1 | grep -E \"^error|panicked|test result: FAILED|FAILED|failures:|^    [a-z_:]+$\" | head -60; ",
-    "log": "061911-marge-1561483.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.04",
@@ -6356,20 +6296,8 @@
    "time": "2026-11-14T08:26:52+01:00",
    "merge": true,
    "subject": "Merge Phase 4 W4: the character corner – mirror editor, free character, kit for hearts with speed-dependent benefits, try on the bike (spec 3.07)",
-   "branch": "worktree-agent-a99613c9983b557e5",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T08:18:35+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a99613c9983b557e5",
-    "command": "cargo fmt --all --check >/dev/null && echo FMT-OK; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E ",
-    "log": "081835-marge-1691406.log",
-    "how": "branch",
-    "suites": 5,
-    "passed": 547,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.08",
@@ -6379,20 +6307,8 @@
    "time": "2026-11-14T09:23:10+01:00",
    "merge": true,
    "subject": "Merge Phase 9 S2: the night sky without stars – moon (ELP), planets, Milky Way, moonlight, street lamps (LITR), light pollution, bike lights follow the fitted part (spec 3.08)",
-   "branch": "worktree-agent-a5ed5b3cc41ad3235",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T09:17:40+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a5ed5b3cc41ad3235",
-    "command": "cargo test --workspace 2>&1 | grep -cE \"FAILED|panicked\"; cargo test --workspace 2>&1 | grep -E \"^test result\" | wc -l",
-    "log": "091740-marge-1761943.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.09",
@@ -6402,20 +6318,8 @@
    "time": "2026-11-14T09:47:44+01:00",
    "merge": true,
    "subject": "Merge Phase 10 B4: devices in the browser – Web Bluetooth GattLink on the shared BLE protocol, reconnecting supervisor, SIM from the build in force (spec 3.09)",
-   "branch": "worktree-agent-a91fc84c3afffd6c8",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T09:45:12+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a91fc84c3afffd6c8",
-    "command": "cargo fmt --all -- --check && echo FMT_OK; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E \"^(error",
-    "log": "094512-marge-1794242.log",
-    "how": "branch",
-    "suites": 5,
-    "passed": 686,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.10",
@@ -6425,20 +6329,8 @@
    "time": "2026-11-14T10:26:11+01:00",
    "merge": true,
    "subject": "Merge Phase 8 T7: orthophoto corridor (ORTC), on by default in every world package; packages rebuilt with ORTC and LITR (spec 3.10)",
-   "branch": "worktree-agent-a28ab4794ac3d1ad8",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T02:27:43+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a28ab4794ac3d1ad8",
-    "command": "make test-wasm 2>&1 | tail -3",
-    "log": "022743-marge-1323831.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.11",
@@ -6448,20 +6340,8 @@
    "time": "2026-11-14T11:10:29+01:00",
    "merge": true,
    "subject": "Merge Phase 9 S4: weather simulation and rendering – ocw-weather crate, session weather on the server, clouds, rain/snow/hail, fog, wet roads, snow cover, wind, lightning and thunder, weather sounds (spec 3.11)",
-   "branch": "worktree-agent-afd928e4c40170f8d",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T10:22:09+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-afd928e4c40170f8d",
-    "command": "cargo test -p ocw-desktop -p ocw-client 2>&1 | grep -E \"^test result|FAILED|panicked\" | head -20; echo DESK=${PIPESTATUS",
-    "log": "102209-marge-1839545.log",
-    "how": "branch",
-    "suites": 3,
-    "passed": 421,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.12",
@@ -6471,20 +6351,8 @@
    "time": "2026-11-14T11:38:41+01:00",
    "merge": true,
    "subject": "Merge Phase 8 T6: rider and bike materials (carbon, spun metal, tyres, fabrics), jersey designer and kit colours (spec 3.12)",
-   "branch": "worktree-agent-acb661a2884cd61db",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T10:42:34+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-acb661a2884cd61db",
-    "command": "cargo test --workspace --no-fail-fast 2>&1 | grep -E \"^test result|FAILED|panicked|^error|left:|right:|-->\" | grep -v \"t",
-    "log": "104234-marge-1862311.log",
-    "how": "branch",
-    "suites": 2,
-    "passed": 283,
-    "failed": 3,
-    "failed_suites": 2
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.13",
@@ -6494,20 +6362,8 @@
    "time": "2026-11-14T12:28:56+01:00",
    "merge": true,
    "subject": "Merge Phase 9 S5: the weather machine – World → Weather with presets grid, custom editor, transitions, random weather; event weather set by organisers (spec 3.13)",
-   "branch": "worktree-agent-a68e0bb1639fc2950",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T12:03:22+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a68e0bb1639fc2950",
-    "command": "cargo clippy --workspace --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)|-->\" -A 6 | head -60; echo CLIPPY",
-    "log": "120322-marge-1961566.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.14",
@@ -6517,20 +6373,8 @@
    "time": "2026-11-14T12:34:56+01:00",
    "merge": true,
    "subject": "Merge Phase 12 K3: world objects – OBST section, wild-mode collisions with trees, fences, walls, railings and tunnel walls, road barriers hidden by default (spec 3.14)",
-   "branch": "worktree-agent-a14e20b4135819064",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T11:38:06+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a14e20b4135819064",
-    "command": "cargo test --release -p ocw-sim a_hundred -- --nocapture 2>&1 | grep -E \"ms per tick|test result|panicked\"; K3_WORLDS=\"l",
-    "log": "113806-marge-1929541.log",
-    "how": "branch",
-    "suites": 1,
-    "passed": 2,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.15",
@@ -6540,20 +6384,8 @@
    "time": "2026-11-14T13:17:44+01:00",
    "merge": true,
    "subject": "Merge polish bundle: groupset fits its crankset/cassette/chain, console over the workshop, near-black carbon, hip number plates, brushed vs spun metal, warm varied lit windows, kerbs in wild mode, round sidewalk corners (spec 3.15)",
-   "branch": "worktree-agent-ab2900937eba3f076",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T13:14:54+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-ab2900937eba3f076",
-    "command": "cargo fmt --all -- --check && echo FMT_OK; cargo clippy -q -p ocw-desktop -p ocw-sim --all-targets -- -D warnings && ech",
-    "log": "131454-marge-2053169.log",
-    "how": "branch",
-    "suites": 3,
-    "passed": 258,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.16",
@@ -6563,20 +6395,8 @@
    "time": "2026-11-14T13:55:49+01:00",
    "merge": true,
    "subject": "Merge Phase 9 S7: real weather – MeteoSwiss, DWD, MET Norway, Open-Meteo via the game server, ERA5 history (ride a day), Real weather page with attribution (spec 3.16)",
-   "branch": "worktree-agent-a4505c166634b08e1",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T13:34:53+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a4505c166634b08e1",
-    "command": "cargo test -p ocw-desktop -- every_menu_page_fits weather 2>&1 | grep -E \"panicked|vh|left|right|test result|^error|FAIL",
-    "log": "133453-marge-2077263.log",
-    "how": "branch",
-    "suites": 1,
-    "passed": 14,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.17",
@@ -6586,20 +6406,8 @@
    "time": "2026-11-14T14:51:29+01:00",
    "merge": true,
    "subject": "Merge Phase 12 K4 + K5 and Phase 4 W6 repairs: damage model, damage indicator and visible damage, persistent part conditions, repairs in hearts; crash notice on its own box (spec 3.17)",
-   "branch": "worktree-agent-a40de89137e6a33b2",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T14:30:21+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a40de89137e6a33b2",
-    "command": "cargo clippy --workspace --all-targets --message-format short -- -D warnings 2>&1 | grep -E \"^(error|warning)|^[a-z/_-]+",
-    "log": "143021-marge-2154056.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.18",
@@ -6609,20 +6417,8 @@
    "time": "2026-11-14T15:22:40+01:00",
    "merge": true,
    "subject": "Merge Phase 9 S8: seasons – phenology by degree days and altitude, deciduous trees and larches through the year, crop calendar, climatological snow line, real snow depth (spec 3.18)",
-   "branch": "worktree-agent-acb5596ed5a267ba2",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T14:22:53+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-acb5596ed5a267ba2",
-    "command": "cargo clippy -p ocw-render -p ocw-sky -p ocw-world --all-targets -- -D warnings 2>&1 | grep -E \"^(error|warning)|-->|^ *",
-    "log": "142253-marge-2145184.log",
-    "how": "branch",
-    "suites": 3,
-    "passed": 8,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.19",
@@ -6632,20 +6428,8 @@
    "time": "2026-11-14T15:44:57+01:00",
    "merge": true,
    "subject": "Merge Phase 9 S6: weather physics – headwind along the direction of travel, air density, wet-road rolling resistance and grip, crosswind drafting, tunnel shelter, trainer wind (FTMS / Wahoo) and folded gradient, HUD wind (spec 3.19)",
-   "branch": "worktree-agent-a2709c32cf67f8741",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T15:41:17+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a2709c32cf67f8741",
-    "command": "cargo test -p ocw-desktop 2>&1 | grep -E \"FAILED|panicked|^test result|left:|right:\" | head -30",
-    "log": "154117-marge-2254130.log",
-    "how": "branch",
-    "suites": 1,
-    "passed": 354,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.20",
@@ -6655,20 +6439,8 @@
    "time": "2026-11-14T16:36:25+01:00",
    "merge": true,
    "subject": "Merge Phase 8 T3: forest type and density from the Copernicus HRL (Dominant Leaf Type, Tree Cover Density 2018) – section FRST, measured leaf type, density-driven tree placement and far canopy (spec 3.20)",
-   "branch": "worktree-agent-a43ce31b19d29fdb9",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T15:58:28+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a43ce31b19d29fdb9",
-    "command": "cargo test --workspace 2>&1 | grep -E \"test result|FAILED|panicked|^error|failures:\" | sort | uniq -c | sort -rn | head ",
-    "log": "155828-marge-2283672.log",
-    "how": "branch",
-    "suites": 31,
-    "passed": 1857,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.21",
@@ -6701,20 +6473,8 @@
    "time": "2026-11-14T18:46:27+01:00",
    "merge": true,
    "subject": "Merge Phase 12 / 13 leftovers: wet-road grip in crashes and skids (Slide), chase camera shake and wider orbit, last-moment warning and proximity arrow as graphics, guided camera paths (G5), rider list page; deterministic frame-server test (spec 3.22)",
-   "branch": "worktree-agent-ab5b62071e8425803",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T18:34:59+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-ab5b62071e8425803",
-    "command": "CC=clang-21 CXX=clang++-21 cargo clippy --workspace --all-targets --features ocw-desktop/voice -- -D warnings 2>&1 | gre",
-    "log": "183459-marge-2515407.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.23",
@@ -6724,20 +6484,8 @@
    "time": "2026-11-14T18:35:38+01:00",
    "merge": true,
    "subject": "Merge Phase 4 leftovers: bench catalogue (4D) with the + hook, fitted lights drive the ride's bike lights, trainer SIM per race mode test, idle pose at the mirror, kit colours for shorts / socks / shoes / gloves (spec 3.23)",
-   "branch": "worktree-agent-a4765f0e41cbf0099",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T18:31:17+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a4765f0e41cbf0099",
-    "command": "source ~/.cargo/env 2>/dev/null; for i in 1 2 3 4 5; do cargo test -q -p ocw-server --lib frame_server_matches 2>&1 | gr",
-    "log": "183117-marge-2509083.log",
-    "how": "branch",
-    "suites": 5,
-    "passed": 3,
-    "failed": 2,
-    "failed_suites": 2
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.24",
@@ -6767,20 +6515,8 @@
    "time": "2026-11-14T21:30:30+01:00",
    "merge": true,
    "subject": "Merge Phase 8 T4 open items: straight-skeleton roofs on any footprint, dormers and roof windows, style-driven balconies, building:part (BPRT), min_height fix (spec 3.26)",
-   "branch": "worktree-agent-a13befb3a595ea7b4",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T20:32:25+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-a13befb3a595ea7b4",
-    "command": "OCW_PACKAGE=$PWD/data/pilot/liechtenstein.ocwpkg cargo test -q --release -p ocw-world --lib list_building_parts -- --ign",
-    "log": "203225-marge-2700578.log",
-    "how": "branch",
-    "suites": 0,
-    "passed": 0,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.27",
@@ -6790,20 +6526,8 @@
    "time": "2026-11-14T22:06:26+01:00",
    "merge": true,
    "subject": "Merge Phase 10 B7 (WebGL 2 part): a second web build for WebGL 2 chosen at page load, adapter-checked workarounds (simple sky, texture-array fallback, abrupt LOD ranges, one cascade), quality presets Low / Medium / High / Auto as display.quality for both apps, gpu and quality commands (spec 3.27)",
-   "branch": "worktree-agent-ab219a368de806d4e",
-   "check": {
-    "machine": "marge",
-    "time": "2026-11-14T21:50:03+01:00",
-    "exit": 0,
-    "branch": "worktree-agent-ab219a368de806d4e",
-    "command": "cargo fmt --all --check >/dev/null 2>&1 && echo fmt-ok || echo fmt-DIFF; cargo test -p ocw-ui 2>&1 | grep -E \"test resul",
-    "log": "215003-marge-2799008.log",
-    "how": "branch",
-    "suites": 2,
-    "passed": 13,
-    "failed": 0,
-    "failed_suites": 0
-   }
+   "branch": null,
+   "check": null
   },
   {
    "version": "3.28",
@@ -6849,7 +6573,7 @@
    "time": "2026-11-14T23:28:58+01:00",
    "merge": true,
    "subject": "Merge build infrastructure docs: README Build infrastructure chapter (remote builds, dashboard, cleanup, kiosks, profiling, harness, releases, world builds), spec §11.2 / §11.2.1 / §11.3 (spec 3.32); make help lists targets with digits",
-   "branch": "worktree-agent-a7da6b9f9f4a8ccf0",
+   "branch": null,
    "check": null
   },
   {

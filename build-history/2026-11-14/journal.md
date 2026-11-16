@@ -356,7 +356,7 @@ Longest runs:
 | 2.79 | Decision from the build dashboard | 00:22 `5c520a8` | – |
 | 2.80 | Decision from the build dashboard | 00:22 `bb98a02` | – |
 | 2.81 | Decision from the build dashboard | 00:23 `8de74cc` | – |
-| 2.82 | God mode as built to 2.67 | 00:24 `b40b1a9` (merge) | ok at 00:07, 7 suites, 678 passed, 0 failed (branch) |
+| 2.82 | God mode as built to 2.67 | 00:24 `b40b1a9` (merge) | ok at 00:40, 5 suites, 548 passed, 0 failed (main after merge) |
 | 2.83 | Decision from the build dashboard | 00:24 `fd87152` | – |
 | 2.84 | Decision from the build dashboard | 00:25 `0fcf78f` | – |
 | 2.85 | Decision from the build dashboard | 00:25 `1adf7a8` | – |
@@ -370,38 +370,38 @@ Longest runs:
 | 2.93 | Decision from the build dashboard | 00:31 `19a2d24` | – |
 | 2.94 | Decisions from the build dashboard | 00:47 `78acea9` | – |
 | 2.95 | Build infrastructure | 01:42 `b74653a` (merge) | – |
-| 2.96 | Voice echo test | 01:43 `55429b2` (merge) | ok at 01:27 (branch) |
-| 2.97 | Phase 10 B1 built | 01:58 `483417b` (merge) | ok at 01:16, 46 suites, 1298 passed, 0 failed (branch) |
-| 2.98 | Phase 12 K1 + K2 built | 03:24 `fe448c1` (merge) | ok at 02:50, 7 suites, 438 passed, 2 failed (branch) |
+| 2.96 | Voice echo test | 01:43 `55429b2` (merge) | – |
+| 2.97 | Phase 10 B1 built | 01:58 `483417b` (merge) | – |
+| 2.98 | Phase 12 K1 + K2 built | 03:24 `fe448c1` (merge) | ok at 03:24, 28 suites, 1378 passed, 0 failed (main after merge) |
 | 2.99 | Phase 10 B2 built | 05:04 `fa2723f` | – |
-| 3.00 | Phase 4 W1 + W2 built | 05:24 `4766822` (merge) | ok at 04:48 (branch) |
+| 3.00 | Phase 4 W1 + W2 built | 05:24 `4766822` (merge) | – |
 | 3.01 | Build dashboard defined as a whole | 06:39 `05b8bc8` | – |
-| 3.02 | Phase 10 B3 built | 06:40 `e55d1a8` (merge) | ok at 05:51 (branch) |
-| 3.03 | Phase 4 W3 built | 06:47 `235a725` (merge) | ok at 06:19 (branch) |
+| 3.02 | Phase 10 B3 built | 06:40 `e55d1a8` (merge) | – |
+| 3.03 | Phase 4 W3 built | 06:47 `235a725` (merge) | – |
 | 3.04 | Kit gives a slight benefit | 06:52 `739bf9f` | – |
 | 3.05 | Aero effects depend on speed | 06:59 `fc990eb` | – |
 | 3.06 | Decision from the build dashboard | 07:06 `17b34c9` | – |
-| 3.07 | Phase 4 W4 built | 08:26 `d3f5168` (merge) | ok at 08:18, 5 suites, 547 passed, 0 failed (branch) |
-| 3.08 | Phase 9 S2 built | 09:23 `44c4fd8` (merge) | ok at 09:17 (branch) |
-| 3.09 | Phase 10 B4 built | 09:47 `a7d82cb` (merge) | ok at 09:45, 5 suites, 686 passed, 0 failed (branch) |
-| 3.10 | Phase 8 T7 | 10:26 `2625e71` (merge) | ok at 02:27 (branch) |
-| 3.11 | Phase 9 S4 built | 11:10 `85e4ed0` (merge) | ok at 10:22, 3 suites, 421 passed, 0 failed (branch) |
-| 3.12 | Phase 8 T6 built | 11:38 `9c12aac` (merge) | ok at 10:42, 2 suites, 283 passed, 3 failed (branch) |
-| 3.13 | Phase 9 S5 built | 12:28 `0b17e07` (merge) | ok at 12:03 (branch) |
-| 3.14 | Phase 12 K3 built | 12:34 `1d8fadb` (merge) | ok at 11:38, 1 suites, 2 passed, 0 failed (branch) |
-| 3.15 | Open items of Phase 4 W2 / 4M, Phase 8 T5 / T6 and Phase 9 9I-S2 done | 13:17 `0d62f45` (merge) | ok at 13:14, 3 suites, 258 passed, 0 failed (branch) |
-| 3.16 | Phase 9 S7 built | 13:55 `c699d17` (merge) | ok at 13:34, 1 suites, 14 passed, 0 failed (branch) |
-| 3.17 | Phase 12 K4 + K5 built and Phase 4 W6 | 14:51 `e107920` (merge) | ok at 14:30 (branch) |
-| 3.18 | Phase 9 S8 built | 15:22 `68340e6` (merge) | ok at 14:22, 3 suites, 8 passed, 0 failed (branch) |
-| 3.19 | Phase 9 S6 built | 15:44 `baa2ba7` (merge) | ok at 15:41, 1 suites, 354 passed, 0 failed (branch) |
-| 3.20 | Phase 8 T3 complete | 16:36 `eb17602` (merge) | ok at 15:58, 31 suites, 1857 passed, 0 failed (branch) |
+| 3.07 | Phase 4 W4 built | 08:26 `d3f5168` (merge) | – |
+| 3.08 | Phase 9 S2 built | 09:23 `44c4fd8` (merge) | – |
+| 3.09 | Phase 10 B4 built | 09:47 `a7d82cb` (merge) | – |
+| 3.10 | Phase 8 T7 | 10:26 `2625e71` (merge) | – |
+| 3.11 | Phase 9 S4 built | 11:10 `85e4ed0` (merge) | – |
+| 3.12 | Phase 8 T6 built | 11:38 `9c12aac` (merge) | – |
+| 3.13 | Phase 9 S5 built | 12:28 `0b17e07` (merge) | – |
+| 3.14 | Phase 12 K3 built | 12:34 `1d8fadb` (merge) | – |
+| 3.15 | Open items of Phase 4 W2 / 4M, Phase 8 T5 / T6 and Phase 9 9I-S2 done | 13:17 `0d62f45` (merge) | – |
+| 3.16 | Phase 9 S7 built | 13:55 `c699d17` (merge) | – |
+| 3.17 | Phase 12 K4 + K5 built and Phase 4 W6 | 14:51 `e107920` (merge) | – |
+| 3.18 | Phase 9 S8 built | 15:22 `68340e6` (merge) | – |
+| 3.19 | Phase 9 S6 built | 15:44 `baa2ba7` (merge) | – |
+| 3.20 | Phase 8 T3 complete | 16:36 `eb17602` (merge) | – |
 | 3.21 | Phase 10 B5 built | 17:10 `284441f` (merge) | ok at 17:42 (main after merge) |
-| 3.22 | Phase 12 / 13 leftovers built | 18:46 `abe1abd` (merge) | ok at 18:34 (branch) |
-| 3.23 | Phase 4 leftovers built | 18:35 `74151f9` (merge) | ok at 18:31, 5 suites, 3 passed, 2 failed (branch) |
+| 3.22 | Phase 12 / 13 leftovers built | 18:46 `abe1abd` (merge) | – |
+| 3.23 | Phase 4 leftovers built | 18:35 `74151f9` (merge) | – |
 | 3.24 | Phase 10 B6 built | 20:11 `b3cdc56` (merge) | – |
 | 3.25 | Test pictures stand alone | 20:18 `bfddece` | – |
-| 3.26 | Phase 8 T4 open items built | 21:30 `f250b61` (merge) | ok at 20:32 (branch) |
-| 3.27 | Phase 10 B7's WebGL 2 part built | 22:06 `e57f2e2` (merge) | ok at 21:50, 2 suites, 13 passed, 0 failed (branch) |
+| 3.26 | Phase 8 T4 open items built | 21:30 `f250b61` (merge) | – |
+| 3.27 | Phase 10 B7's WebGL 2 part built | 22:06 `e57f2e2` (merge) | – |
 | 3.28 | Documentation catch-up | 22:18 `1d57b7a` | – |
 | 3.29 | VR headset corrected by the user | 22:26 `99dd6f9` | – |
 | 3.30 | Decision from the build dashboard | 22:27 `b6e5662` | – |
