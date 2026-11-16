@@ -202,7 +202,7 @@ def agent_jobs(events: list[dict]) -> list[dict]:
 
 # ------------------------------------------------------------------ the roll
 
-def roll_pages(features: list[dict], per_page: int = 6, width: int = 62) -> list[list[str]]:
+def roll_pages(features: list[dict], per_page: int = 6, width: int = 84) -> list[list[str]]:
     """The "Today's features" roll: pages of `per_page` lines, each
     "3.39  Title" cut to `width` characters; merged rows only, in order."""
     lines = []
