@@ -672,3 +672,19 @@ class WithheldTest(Fixture):
             archive.gather(DAY)  # a second run brings nothing back either
         names = sorted(f.name for f in (self.hist / DAY).iterdir() if f.is_file())
         self.assertEqual(names, ["120100-ok.png"])
+
+
+class EndStatsTest(unittest.TestCase):
+    """The day video's end card numbers (ART-PROJECT §2.2): compile time in
+    minutes next to the build runs and hours (user 2026-11-16)."""
+
+    def test_compile_minutes(self):
+        from ocwart import render
+        j = {"commits": [1, 2, 3], "merges": 1, "lines_added": 10, "images": 4, "videos": 1,
+             "tests": 0, "builds": {"runs": 5, "seconds": 7200, "cargo_s": 12240}}
+        stats = render.end_stats(j, {})
+        self.assertIn((5, "BUILD RUNS"), stats)
+        self.assertIn((2, "BUILD HOURS"), stats)
+        self.assertIn((204, "COMPILE MINUTES"), stats)
+        j["builds"]["cargo_s"] = 0
+        self.assertNotIn("COMPILE MINUTES", [label for _, label in render.end_stats(j, {})])

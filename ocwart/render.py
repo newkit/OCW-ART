@@ -220,6 +220,31 @@ def mosaic(day: str, seconds: float, out: Path, skip=()):
 # ------------------------------------------------------------------ render
 
 
+def end_stats(j: dict, sc: dict) -> list[tuple[int, str]]:
+    """The end card's numbers of the day: (value, label), in order."""
+    stats = [
+        (j["commits"].__len__(), "COMMITS"),
+        (j["merges"], "MERGES"),
+        (j["lines_added"], "LINES WRITTEN"),
+        (j["images"] + j["videos"], "PICTURES & VIDEOS"),
+    ]
+    if sc.get("tests") or j["tests"]:
+        stats.append((int(sc.get("tests") or j["tests"]), "TESTS PASSING"))
+    if j.get("prompts"):
+        stats.append((len(j["prompts"]), "PROMPTS"))
+    if (j.get("tokens") or {}).get("total", {}).get("total"):
+        stats.append((round(j["tokens"]["total"]["total"] / 1e6), "MILLION TOKENS"))
+    b = j.get("builds") or {}
+    if b.get("runs"):
+        stats.append((b["runs"], "BUILD RUNS"))
+        stats.append((round(b["seconds"] / 3600), "BUILD HOURS"))
+    if b.get("cargo_s"):
+        # The compile time (cargo) of the day's runs (user 2026-11-16: "record
+        # also compile time"), in minutes: a day compiles a few hours.
+        stats.append((round(b["cargo_s"] / 60), "COMPILE MINUTES"))
+    return stats
+
+
 def load_script(day: str) -> dict:
     p = DAYS / f"{day}.toml"
     if not p.exists():
@@ -402,22 +427,7 @@ def render(day: str) -> Path:
 
     # End card: count-up stats.
     es = starts[-1]
-    stats = [
-        (j["commits"].__len__(), "COMMITS"),
-        (j["merges"], "MERGES"),
-        (j["lines_added"], "LINES WRITTEN"),
-        (j["images"] + j["videos"], "PICTURES & VIDEOS"),
-    ]
-    if sc.get("tests") or j["tests"]:
-        stats.append((int(sc.get("tests") or j["tests"]), "TESTS PASSING"))
-    if j.get("prompts"):
-        stats.append((len(j["prompts"]), "PROMPTS"))
-    if (j.get("tokens") or {}).get("total", {}).get("total"):
-        stats.append((round(j["tokens"]["total"]["total"] / 1e6), "MILLION TOKENS"))
-    b = j.get("builds") or {}
-    if b.get("runs"):
-        stats.append((b["runs"], "BUILD RUNS"))
-        stats.append((round(b["seconds"] / 3600), "BUILD HOURS"))
+    stats = end_stats(j, sc)
     # One row for up to five numbers, else two rows with smaller numbers.
     rows = [stats] if len(stats) <= 5 else [stats[: (len(stats) + 1) // 2],
                                             stats[(len(stats) + 1) // 2 :]]
