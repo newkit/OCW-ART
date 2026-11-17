@@ -78,10 +78,12 @@ title = "Smile for the drone"
 caption = "A photographer joins every ride; where nobody can stand, a drone flies in. Flash, click. By night the others see it too."
 prompt = "whenever there is a photo taken for strava, make an real photographer person appear in the game …"
 shots = [
-  { file = "164745-photographer-drone-photos-photo-2.jpg", seconds = 3.9, note = "drone shot" },
-  { file = "165551-photographer-st-photos-photo-1.jpg", seconds = 3.9 },
-  { file = "233410-photographer-shared-wayland-b-chase-chase-13-other-flash.jpg", seconds = 3.5, note = "flash!" },
+  { file = "165551-photographer-st-photos-photo-1.jpg", seconds = 3.9, note = "a ride photo" },
   { file = "233410-photographer-shared-wayland-b-chase-chase-14-other-flash.jpg", seconds = 4.5, focus = [0.417, 0.41, 2.6], note = "the pilot, at the roadside" },
+  # The drone filmed by the game itself on 17 November (build-history/2026-11-17, OCW spec §2.11):
+  { file = "../2026-11-17/042852-drone-videos-2026-11-17-drone-outside.mp4", seconds = 6.0, start = 0.5, speed = 2, note = "lift-off" },
+  { file = "../2026-11-17/042852-drone-videos-2026-11-17-drone-outside.mp4", seconds = 4.0, start = 14.0, note = "following" },
+  { file = "../2026-11-17/043047-drone-videos-2026-11-17-drone-pov.mp4", seconds = 6.2, start = 26.5, note = "drone cam … flash!" },
 ]
 
 [[chapter]]
