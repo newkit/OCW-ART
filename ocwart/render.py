@@ -103,16 +103,25 @@ def seeded(name: str) -> random.Random:
     return random.Random(int(hashlib.md5(name.encode()).hexdigest()[:8], 16))
 
 
-def kenburns(src: Path, seconds: float, out: Path, day: str):
-    """A still with a slow zoom and drift (direction from the file name)."""
+def kenburns(src: Path, seconds: float, out: Path, day: str, focus=None):
+    """A still with a slow zoom and drift (direction from the file name).
+    `focus` = [x, y, zoom] (x, y as fractions of the picture): a push in
+    towards that point, ending at `zoom` – for a small thing in a big
+    screenshot (the day script's `focus`, §4)."""
     still = norm_still(src, day)
     n = max(1, round(seconds * FPS))
     r = seeded(src.name)
-    z0, z1 = (1.0, 1.14) if r.random() < 0.6 else (1.14, 1.0)
-    dx, dy = r.choice([-1, 1]) * r.uniform(0.2, 0.5), r.uniform(-0.3, 0.3)
-    z = f"{z0}+({z1 - z0})*on/{n}"
-    x = f"(iw-iw/zoom)/2*(1+{dx:.3f}*(on/{n}-0.5)*2)"
-    y = f"(ih-ih/zoom)/2*(1+{dy:.3f}*(on/{n}-0.5)*2)"
+    if focus:
+        fx, fy, fz = (float(v) for v in focus)
+        z = f"{fz * 0.8:.3f}+({fz * 0.2:.3f})*on/{n}"
+        x = f"max(0,min(iw-iw/zoom,iw*{fx:.4f}-iw/zoom/2))"
+        y = f"max(0,min(ih-ih/zoom,ih*{fy:.4f}-ih/zoom/2))"
+    else:
+        z0, z1 = (1.0, 1.14) if r.random() < 0.6 else (1.14, 1.0)
+        dx, dy = r.choice([-1, 1]) * r.uniform(0.2, 0.5), r.uniform(-0.3, 0.3)
+        z = f"{z0}+({z1 - z0})*on/{n}"
+        x = f"(iw-iw/zoom)/2*(1+{dx:.3f}*(on/{n}-0.5)*2)"
+        y = f"(ih-ih/zoom)/2*(1+{dy:.3f}*(on/{n}-0.5)*2)"
     ffmpeg("-i", still, "-filter_complex",
            f"[0:v]scale=3840:2160,zoompan=z='{z}':x='{x}':y='{y}':d={n}:s={W}x{H}:fps={FPS},"
            f"setsar=1,format=yuv420p[v]",
@@ -294,7 +303,7 @@ def render(day: str) -> Path:
                 if src.suffix.lower() in VIDEO:
                     clip(src, float(shot.get("start", 0)), secs, float(shot.get("speed", 1)), out)
                 else:
-                    kenburns(src, secs, out, day)
+                    kenburns(src, secs, out, day, shot.get("focus"))
             parts.append(out)
             shots.append((secs, shot))
         seg = work / f"ch{ci:02d}.mp4"

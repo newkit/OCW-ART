@@ -2,7 +2,9 @@
 samples, no licences, deterministic from the seed.
 
 Every day has its own style (a band, a mode, a groove, a set of chord
-progressions): `chiptune`, `synthwave`, `funk`, `house`, `lofi`. A day script
+progressions): `chiptune`, `synthwave`, `funk`, `house`, `lofi`, `darkchip`
+(8-bit, but cool: dark modes, mid-register rounded voices, a drum style
+per chapter in turn; day 6 after "less squeaky and less happy"). A day script
 can name one (`style`, `mode`); by default the day number picks it. Within a
 video the music follows the sections – intro (title), drive (time-lapse),
 one groove per chapter, outro (end card) – and varies: a progression per
@@ -34,7 +36,7 @@ MODES = {
     "major": [0, 2, 4, 5, 7, 9, 11], "ionian": [0, 2, 4, 5, 7, 9, 11],
     "dorian": [0, 2, 3, 5, 7, 9, 10], "mixolydian": [0, 2, 4, 5, 7, 9, 10],
     "minor": [0, 2, 3, 5, 7, 8, 10], "aeolian": [0, 2, 3, 5, 7, 8, 10],
-    "lydian": [0, 2, 4, 6, 7, 9, 11],
+    "lydian": [0, 2, 4, 6, 7, 9, 11], "phrygian": [0, 1, 3, 5, 7, 8, 10],
 }
 
 # Bass patterns: (16th step, length in steps, chord tone 0/1/2, octave).
@@ -53,12 +55,15 @@ BASS = {
     "offroll": [(2, 2, 0, 0), (6, 2, 0, 0), (10, 2, 0, 0), (13, 1, 0, 1), (14, 2, 2, 0)],
     "lazy": [(0, 6, 0, 0), (7, 1, 2, 0), (10, 4, 0, 0)],
     "walk": [(0, 4, 0, 0), (4, 4, 1, 0), (8, 4, 2, 0), (12, 4, 1, 0)],
+    "dub": [(0, 6, 0, 0), (7, 1, 0, 0), (10, 3, 0, 0), (14, 2, 2, 0)],
+    "stepper": [(0, 3, 0, 0), (4, 2, 0, 0), (8, 3, 0, 0), (11, 1, 2, 0), (12, 3, 0, 0)],
 }
 
 # Arpeggio orders over [c0, c1, c2, c0+12, c1+12, c2+12].
 ARPS = {"up": [0, 1, 2, 3, 4, 5], "updown": [0, 1, 2, 3, 4, 5, 4, 3, 2, 1],
         "broken": [0, 2, 1, 3, 2, 4, 3, 5], "octave": [0, 3, 1, 4, 2, 5], "down": [5, 4, 3, 2, 1, 0],
-        "pedal": [0, 3, 0, 4, 0, 5, 0, 4]}
+        "pedal": [0, 3, 0, 4, 0, 5, 0, 4],
+        "low": [0, 2, 1, 2]}
 
 # Drum patterns, 16 steps per voice: x hit, X accent, g ghost, . rest.
 # k kick, s snare/clap, h closed hat, o open hat, r rim / shaker.
@@ -80,6 +85,18 @@ DRUMS = {
     "lofihalf": {"k": "x.........x..x..", "s": "........x.......", "h": "x...x...x...x...",
                  "r": "..g...g...g...g."},
     "sparse": {"k": "x.......x......."},
+    # darkchip: one style per chapter in turn (user 2026-11-17: "different drums styles").
+    # m is a rim click.
+    "halfstep": {"k": "x.........x.....", "s": "........X.......", "h": "x...x.g.x...x.g.",
+                 "m": "......g.......g."},
+    "fouropen": {"k": "x...x...x...x...", "s": "....x.......x...", "h": "x...x...x...x...",
+                 "o": "..x...x...x...x."},
+    "twostep": {"k": "x.....x...x..x..", "s": "....X.....g.X...", "h": "x.xgx.x.xgx.x.xg"},
+    "halfbreak": {"k": "x.....x.........", "s": "........X.....g.", "h": "x.x.x.x.x.x.x.x.",
+                  "m": "...m..........m.".replace("m", "g")},
+    "kickrim": {"k": "x.......x..x....", "m": "....x.......x..."},
+    "chipbreak": {"k": "x.....x...x.....", "s": "....X..g.g..X..g", "h": "x.x.x.x.x.x.x.x.",
+                  "m": "..........x....."},
     "pulse": {"k": "x...x...x...x..."},
 }
 
@@ -103,6 +120,20 @@ STYLES = {
         "pad": {"wave": "saw", "gain": 0.12, "lp": 0.04},
         "kit": "chip", "drive": "drive", "grooves": ["four", "halftime", "break", "motorik"],
         "fills": ["fill", "build", "stop", "fill"],
+    },
+    "darkchip": {
+        "mode": "dorian", "swing": 0.0,
+        "progs": [[0, 6, 3, 0], [0, 0, 6, 3], [0, 2, 6, 3], [3, 6, 0, 0]], "bridge": [2, 3, 4, 6],
+        "cadence": [3, 6, 0, 0], "sevenths": False, "lift": [0],
+        "bass": {"wave": "chipbass", "gain": 0.2, "patterns": ["dub", "rootfifth", "stepper", "lazy"]},
+        "harm": {"kind": "arp", "wave": "tri", "gain": 0.05, "rate": 4, "octave": 0,
+                 "patterns": ["low", "pedal", "broken"], "echo": 0.35},
+        "lead": {"wave": "softpulse", "gain": 0.085, "octave": 0, "density": 0.28, "p16": 0.04,
+                 "legato": 0.95, "vibrato": 0.004},
+        "pad": {"wave": "saw", "gain": 0.09, "lp": 0.022},
+        "kit": "darkchip", "drive": "chipbreak", "grooves": ["halfstep", "fouropen", "twostep", "halfbreak"],
+        "cycle": True, "breakdown_drums": "kickrim",
+        "fills": ["fill", "fill", "build", "fill", "stop"],
     },
     "synthwave": {
         "mode": "minor", "swing": 0.0,
@@ -169,6 +200,8 @@ KITS = {  # kick (f start, f end, decay s), snare (noise decay, tone Hz, tone ga
     "funk": {"kick": (110, 50, 0.14), "snare": (0.12, 210.0, 0.4), "hat": 0.02, "bright": 0.9, "lp": 1.0},
     "house": {"kick": (130, 42, 0.30), "snare": (0.10, 0.0, 0.0), "hat": 0.022, "bright": 0.85,
               "lp": 1.0, "clap": True},
+    "darkchip": {"kick": (125, 40, 0.24), "snare": (0.13, 185.0, 0.35), "hat": 0.014, "bright": 0.55,
+                 "lp": 0.55},
     "lofi": {"kick": (95, 45, 0.20), "snare": (0.16, 190.0, 0.3), "hat": 0.03, "bright": 0.45,
              "lp": 0.35},
 }
@@ -267,6 +300,23 @@ class Music:
         elif wave == "pulse":
             e = _env(n, 30, 1500)
             t = [(0.6 if (i * inc) % 1 < 0.25 else -0.4) * e[i] for i in range(n)]
+        elif wave == "softpulse":  # a rounded 25 % pulse: soft attack, low-passed, mid register
+            e = _env(n, 900, 3000)
+            if vib:
+                ph, raw = 0.0, []
+                for i in range(n):
+                    ph += inc * (1 + vib * math.sin(2 * math.pi * 4.6 * i / R) * min(1.0, i / (0.4 * R)))
+                    raw.append(0.6 if ph % 1 < 0.25 else -0.2)
+            else:
+                raw = [0.6 if (i * inc) % 1 < 0.25 else -0.2 for i in range(n)]
+            lp = _lowpass(_lowpass(raw, 0.09), 0.18)
+            t = [(lp[i] * 1.6 + 0.25 * math.sin(w * i)) * e[i] for i in range(n)]
+        elif wave == "chipbass":  # a solid bass: square and triangle low-passed over a sine sub
+            e = _env(n, 120, 1200)
+            raw = [(0.5 if (i * inc) % 1 < 0.5 else -0.5) + (2 * abs((i * inc) % 1 - 0.5) - 0.5)
+                   for i in range(n)]
+            lp = _lowpass(raw, 0.05)
+            t = [(lp[i] * 1.2 + 0.6 * math.sin(w * i)) * e[i] for i in range(n)]
         elif wave == "pulse50":
             e = _env(n, 80, 2000)
             t = [(0.5 if (i * inc) % 1 < 0.5 else -0.5) * e[i] * (0.75 + 0.25 * math.exp(-i / (0.3 * R)))
@@ -394,6 +444,10 @@ class Music:
                 prev = x
             if kit["lp"] < 1.0:
                 d = _lowpass(d, 0.6)
+        elif kind == "m":  # rim click: a short knock and a bit of noise
+            n = round(0.06 * R)
+            d = [(0.6 * math.sin(2 * math.pi * 820 * i / R) + 0.3 * rng.uniform(-1, 1))
+                 * math.exp(-i / (0.008 * R)) * 0.5 for i in range(n)]
         elif kind.startswith("t"):  # tom: t0 high … t3 low
             f = (220, 175, 140, 110)[int(kind[1])]
             n = round(0.35 * R)
@@ -525,6 +579,7 @@ class Music:
             cands = [c for c in range(1, G - 1) if lift_from is None or c != lift_from - 1]
             breakdown = R.choice(cands) if cands else None
         motif = self.motif(R)
+        groove0 = R.randrange(len(st["grooves"]))
         plans, prev_prog = {}, None
         for c, i in enumerate(groove_ids):
             choices = [p for p in range(len(st["progs"])) if p != prev_prog]
@@ -539,7 +594,9 @@ class Music:
             for op in ops:
                 call = self.vary(call, op, lr)
             plans[i] = {
-                "prog": prog, "drums": R.choice(st["grooves"]), "bass": R.choice(st["bass"]["patterns"]),
+                "prog": prog,
+                "drums": (st["grooves"][(c + groove0) % len(st["grooves"])] if st.get("cycle")
+                          else R.choice(st["grooves"])), "bass": R.choice(st["bass"]["patterns"]),
                 "harm": R.choice(st["harm"]["patterns"]), "lead": c % 2 == 0 or R.random() < 0.45,
                 "fill": R.choice(st["fills"]), "shift": lift if lift_from is not None and c >= lift_from else 0,
                 "breakdown": c == breakdown, "call": call, "answer": self.answer(call), "chapter": c,
@@ -589,7 +646,8 @@ class Music:
                 gain = max(0.55, 1.0 - 0.12 * k)
             else:
                 if p["breakdown"] and k < max(1, seg_len - 1):
-                    drums, bass, pad_g, harm_g = ("sparse" if k else None), None, 1.6, 0.7
+                    sparse = self.st.get("breakdown_drums", "sparse")
+                    drums, bass, pad_g, harm_g = (sparse if k else None), None, 1.6, 0.7
                 if last:
                     fill = p["fill"]
                     riser = fill in ("build", "stop")

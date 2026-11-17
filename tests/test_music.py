@@ -182,3 +182,21 @@ class VariationTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class DarkchipTest(unittest.TestCase):
+    """Day 6's redo (user 2026-11-17: "less squeeky and less happy … different drums styles")."""
+    SEGS = [(0, "intro"), (6, "drive"), (20, "groove"), (28, "groove"), (36, "groove"), (44, "groove"),
+            (52, "groove"), (60, "outro")]
+
+    def test_darker_than_chiptune(self):
+        dark = M.stats(M.Music(140, "D", seed=6, style="darkchip").render(68, self.SEGS))
+        chip = M.stats(M.Music(140, "D", seed=6, style="chiptune", mode="minor").render(68, self.SEGS))
+        self.assertLess(dark["brightness"], chip["brightness"] * 0.7, (dark, chip))
+        self.assertLess(dark["zcr"], chip["zcr"], (dark, chip))
+
+    def test_a_drum_style_per_chapter_in_turn(self):
+        m = M.Music(140, "D", seed=6, style="darkchip")
+        specs = m.plan(68, self.SEGS)
+        grooves = [s[1] for s in specs if s[-1] == "groove" and s[1]]
+        self.assertGreaterEqual(len(set(grooves) & set(M.STYLES["darkchip"]["grooves"])), 3, grooves)

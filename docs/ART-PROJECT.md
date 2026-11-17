@@ -1,6 +1,6 @@
 # OCW Build Diary – Art Project Specification
 
-Version 2.4 – 17 November 2026
+Version 2.5 – 17 November 2026
 
 | Version | Change |
 |---|---|
@@ -19,6 +19,7 @@ Version 2.4 – 17 November 2026
 | 2.2 | **Withheld media** (§2.5, user 2026-11-16): `build-history/withheld.txt` keeps listed pictures out of gather, journal, day zip, gallery and Git LFS; day 5's three sign-in screenshots with a real cyclist's name are withheld and removed from the published gallery. **Decision titles** (§2.7): decision rows show what was decided, not "Decision by the user" |
 | 2.3 | **Compile time on the end card** (§2.2, user 2026-11-16: "record also compile time"): COMPILE MINUTES – cargo's time of the day's build runs – next to BUILD RUNS and BUILD HOURS; the journal already lists it per machine |
 | 2.4 | **Day 6 fixes** (2026-11-17): the transcripts also come from the project folder of the directory holding the OCW checkout (on deb since the move: `~/src`, where the coordinator runs; day 6 had 22 of its 63 prompts without it, §2.3); private words in the git-ignored `ocw-art.toml` (`mask_users`: the coordinator's former user, `mask_names`: a real person's name in a prompt) are masked too, and the day-5 journal's former user was masked (§2.5); `timelapse_skip` takes shell patterns and a plain card its own `text` (§4); the collector's unit sets `TMPDIR=%h/tmp` (§5.1) |
+| 2.5 | **`darkchip`, a cooler 8-bit style** (user 2026-11-17 on day 6: "less squeeky and less happy. make something cooler with different drums styles"): dorian or phrygian, a rounded low-passed pulse lead in the middle register, slow triangle arpeggios, a solid square/triangle bass with a sine sub, a darker soft kit with a rim click, and a drum style per chapter in turn (half-time, four-on-the-floor with an open hat, 2-step, half-time break; kick and rim in the breakdown) with tom fills into the chapters (§3.2). A still can push in on a detail (`focus = [x, y, zoom]`, §4) |
 
 ## 1. The brief
 
@@ -451,12 +452,13 @@ day is the same as appending the new day to the previous diary.
   | `funk` | dorian | filter-wah bass (syncopated 16ths, octave slaps), plucked clavinet stabs, FM lead, organ, ghost notes | swung 16ths |
   | `lofi` | major with 7th chords | FM electric-piano chords, round sine bass (lazy, walking), soft triangle lead, dusty kit, vinyl crackle | boom-bap and half-time, swung |
   | `chiptune` | major | square bass, pulse arpeggio, pulse lead, saw pad, chip kit (the band every day had until v1.6) | four-on-the-floor, half-time, breaks |
+  | `darkchip` | dorian (or phrygian, minor) | rounded 25 % pulse lead in the middle register, slow triangle arpeggio with an echo, square/triangle bass over a sine sub, dark low-passed saw pad, soft kit with a rim click | a drum style per chapter in turn: half-time, four-on-the-floor with an open hat, 2-step, half-time break; a break under the time-lapse; kick and rim in the breakdown; tom fills |
   | `house` | mixolydian with 7ths | sine sub bass on the off-beats, piano stabs, plucked lead, organ, clap, open hats, shaker | four-on-the-floor |
 
   By default the day number picks the style. Days 1–5 are synthwave, funk,
   lofi, chiptune and house, then the cycle starts again. A day script can
   choose one (`style`) and a mode (`mode`: `major`, `minor`, `dorian`,
-  `mixolydian`, `lydian`; §4).
+  `mixolydian`, `lydian`, `phrygian`; §4).
 - **Sections follow the video:** *intro* under the title, *drive* under the
   time-lapse, one *groove* per chapter, *outro* under the end card. A bar
   belongs to the segment that holds its middle.
@@ -511,7 +513,8 @@ hero = "HHMMSS-label.png"          # title background
 bpm = 108                          # music tempo (optional)
 key = "C"                          # music key, the tonic (optional)
 style = "funk"                     # music style (optional; default from the day
-                                   # number): synthwave, funk, lofi, chiptune, house
+                                   # number): synthwave, funk, lofi, chiptune, house,
+                                   # darkchip (not in the automatic cycle)
 mode = "dorian"                    # music mode (optional; default the style's):
                                    # major, minor, dorian, mixolydian, lydian
 tests = 903                        # tests passing at the end of the day (optional;
@@ -536,6 +539,8 @@ sound = "HHMMSS-audio.wav"         # optional: the day's sound file, music ducks
 sound_gain = 1.0                   # optional
 shots = [
   { file = "HHMMSS-x.png", seconds = 4.2, note = "sticker text" },     # still: Ken Burns
+  { file = "HHMMSS-x.png", seconds = 4.2, focus = [0.42, 0.41, 2.5] }, # push in on a detail
+                                                                       # (x, y as fractions, end zoom)
   { file = "HHMMSS-y.mp4", seconds = 4.0, start = 2.0, speed = 2 },    # clip, 2× time-lapse
   { split = ["before.png", "after.png"], seconds = 4.9 },              # before | after
   { card = true, seconds = 2.0 },                                      # plain violet card;
