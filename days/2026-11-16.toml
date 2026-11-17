@@ -5,10 +5,10 @@
 title = "Moving day, a photographer and a headset at midnight"
 tagline = "In which the coordinator moves house, a photographer with a drone joins every ride, voices get their own server – and a headset waits on a Windows desk."
 hero = "212337-shot-wayland-status-group-mixed.jpg"
-bpm = 144
-key = "A"
-style = "chiptune"                 # 8-bit synth, like day 5 (user 2026-11-16: "cooler 8 bit synti music")
-mode = "minor"
+bpm = 140                          # half-time and broken drums: it feels slower
+key = "D"
+style = "darkchip"                 # 8-bit but cool (user 2026-11-17: "less squeeky and less happy …
+mode = "dorian"                    # … make something cooler with different drums styles")
 tests = 2583                       # marge's check of Voice V2's merge, 20:21: 71 suites, 0 failed
 outro = "64 spec versions in one day, 3.75 to 4.38. A studio, a photographer with a drone, voices with their own server – and riders in VR goggles."
 teaser = "TO BE CONTINUED – the headset gets its runtime, and the riders get their character editor."
@@ -80,7 +80,8 @@ prompt = "whenever there is a photo taken for strava, make an real photographer 
 shots = [
   { file = "164745-photographer-drone-photos-photo-2.jpg", seconds = 3.9, note = "drone shot" },
   { file = "165551-photographer-st-photos-photo-1.jpg", seconds = 3.9 },
-  { file = "233410-photographer-shared-wayland-b-chase-chase-13-other-flash.jpg", seconds = 3.9, note = "flash!" },
+  { file = "233410-photographer-shared-wayland-b-chase-chase-13-other-flash.jpg", seconds = 3.5, note = "flash!" },
+  { file = "233410-photographer-shared-wayland-b-chase-chase-14-other-flash.jpg", seconds = 4.5, focus = [0.417, 0.41, 2.6], note = "the pilot, at the roadside" },
 ]
 
 [[chapter]]
@@ -142,8 +143,8 @@ shots = [
 [[chapter]]
 time = "23:42"
 title = "A headset at midnight"
-caption = "Weela, the new Windows VR machine, gets the Quest. After midnight the VR build ran there; the runtime didn't answer yet."
+caption = "Weela, the new Windows VR machine, gets the Quest. At 00:52 the game ran in the headset for the first time."
 prompt = "okay, headset connected and meta link installed"
 shots = [
-  { card = true, seconds = 4.5, text = "VR X1 merged with main at 00:16, built on Weela in 19 min, six runs by 00:51. Day 7 has the rest." },
+  { card = true, seconds = 4.5, text = "Past midnight, on 17 November: a working VR session – Meta runtime 1.208.0, Quest, 72 Hz. It crashed only on exit." },
 ]
