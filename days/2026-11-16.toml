@@ -1,0 +1,149 @@
+# OCW Build Diary – day 6 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-16/ (or paths in this checkout).
+# Pictures stand alone (spec §11.4 v3.25): a split only where a chapter compares two pictures.
+
+title = "Moving day, a photographer and a headset at midnight"
+tagline = "In which the coordinator moves house, a photographer with a drone joins every ride, voices get their own server – and a headset waits on a Windows desk."
+hero = "212337-shot-wayland-status-group-mixed.jpg"
+bpm = 144
+key = "A"
+style = "chiptune"                 # 8-bit synth, like day 5 (user 2026-11-16: "cooler 8 bit synti music")
+mode = "minor"
+tests = 2583                       # marge's check of Voice V2's merge, 20:21: 71 suites, 0 failed
+outro = "64 spec versions in one day, 3.75 to 4.38. A studio, a photographer with a drone, voices with their own server – and riders in VR goggles."
+teaser = "TO BE CONTINUED – the headset gets its runtime, and the riders get their character editor."
+# The fog fix's 243 direction-calibration frames (23:57, near-identical sky
+# samples) would fill the last seconds of the time-lapse:
+timelapse_skip = ["*-fog-fix-*-direction-calibration-*", "*-fog-fix-*-calib-*"]
+
+[[chapter]]
+time = "07:06"
+title = "Moving day"
+caption = "The coordinator moves to a new user on deb, checkouts and media copied over. Marge's kiosk gets release 0.2.2."
+prompt = "continue with step 6.5"
+shots = [
+  { card = true, seconds = 4.5, text = "New user, same deb. Step 6.5 of the move – and the first deploy from the new home: release 0.2.2." },
+]
+
+[[chapter]]
+time = "09:09"
+title = "A steady road, a steady load"
+caption = "A constant 10 %, yet the KICKR's resistance wobbled. Now the wind is smoothed over 15 s, the drag re-sent only from 2 %."
+prompt = "bug: i noticed a difference between the resistance felt on the wahoo trainer to the inclination of the road. …"
+shots = [
+  { card = true, seconds = 4.5, text = "Spec 3.82: a steady road gives a steady load. The legs noticed first." },
+]
+
+[[chapter]]
+time = "09:26"
+title = "The dashboard grows up"
+caption = "Build dashboard 1.1 to 1.4.1 before lunch: a favicon, a Restart button, a machines.toml watcher – and version numbers."
+prompt = "add a restart button into the build dashboard. also a watcher for the machines.toml config file …"
+shots = [
+  { card = true, seconds = 4.5, text = "1.1 favicon · 1.2 Restart + machines.toml watcher · 1.3 temp files off /tmp · 1.4 versioned · 1.4.1 the worktrees stay open" },
+]
+
+[[chapter]]
+time = "12:11"
+title = "Plans, and 31 answers"
+caption = "Planned: character editor, touch steering, model files (15H), voice for all (§7.1). 31 decisions landed in the spec."
+prompt = "planning voice feature: i want all required binaries and libraries to be part of ocw-desktop …"
+shots = [
+  { card = true, seconds = 4.5, text = "Seven body shapes, unique names, every alphabet. Tap left, tap right. Voice room: Everybody." },
+]
+
+[[chapter]]
+time = "13:18"
+title = "OCW Studio opens"
+caption = "The editor gets its shell: the world as the game draws it, a map, undo – then world patches and a route planner."
+prompt = "okay, start with the world edior."
+shots = [
+  { file = "131800-shot-wayland-studio-e1.jpg", seconds = 4.5, note = "Liechtenstein, editable" },
+  { file = "182119-shot-wayland-routes-workspace.jpg", seconds = 4.2, note = "Vaduz – Malbun, 15 via-points" },
+]
+
+[[chapter]]
+time = "15:37"
+title = "Steer with a finger"
+caption = "Touch steering in both apps: tap or hold the left or right half, two fingers move the camera."
+prompt = "planning: when running on a touch capable device … control the steering (left/right) by tapping on the screen"
+shots = [
+  { file = "153751-shot-ocw-touch-desktop.jpg", seconds = 3.9 },
+  { file = "170448-web-web-touch-hints.jpg", seconds = 3.9, note = "phones welcome" },
+]
+
+[[chapter]]
+time = "16:47"
+title = "Smile for the drone"
+caption = "A photographer joins every ride; where nobody can stand, a drone flies in. Flash, click. By night the others see it too."
+prompt = "whenever there is a photo taken for strava, make an real photographer person appear in the game …"
+shots = [
+  { file = "164745-photographer-drone-photos-photo-2.jpg", seconds = 3.9, note = "drone shot" },
+  { file = "165551-photographer-st-photos-photo-1.jpg", seconds = 3.9 },
+  { file = "233410-photographer-shared-wayland-b-chase-chase-13-other-flash.jpg", seconds = 3.9, note = "flash!" },
+]
+
+[[chapter]]
+time = "17:58"
+title = "Smooth junctions"
+caption = "Stage J1: where a side road meets the main road, it now blends in, and riders ride the surface that is drawn."
+shots = [
+  { split = ["142940-shot-wayland-junction-bergstrasse-drone.jpg", "175825-junctions-j1-after-wayland-junction-bergstrasse-drone.jpg"], seconds = 5.0, note = "before | after" },
+]
+
+[[chapter]]
+time = "18:10"
+title = "How far can you see?"
+caption = "Render distance as a slider. At short range distant hills used to stand as a blue wall – now they fade into the sky."
+shots = [
+  { file = "181037-scenes-view-distance-view-distance-2km.jpg", seconds = 3.9, note = "2 km" },
+  { split = ["224258-fog-fix-2026-11-16-pairs-tf-high-2km-before.png", "224258-fog-fix-2026-11-16-pairs-tf-high-2km-after.png"], seconds = 5.0, note = "wall | haze" },
+]
+
+[[chapter]]
+time = "18:34"
+title = "Pick a day"
+caption = "World → Time gets a calendar: sunrise, sunset, leaves and snow line for any day – jump a season with one key."
+shots = [
+  { file = "185550-scenes-menu-time-calendar.jpg", seconds = 4.5, note = "beech in autumn colours" },
+]
+
+[[chapter]]
+time = "18:44"
+title = "Voices, built in"
+caption = "The app brings its own LiveKit server: Host a ride starts it, opens the ports, and the kiosk talks too."
+prompt = "Q-V1 (a) bundle now"
+shots = [
+  { file = "201002-host-voice-hosting.jpg", seconds = 4.2, note = "hosting, with voice" },
+  { card = true, seconds = 3.5, text = "V1 18:44 · V2 Host a ride 20:20 · voice on the kiosk 23:26. Everybody joins muted." },
+]
+
+[[chapter]]
+time = "19:05"
+title = "Wardrobe malfunction"
+caption = "The bib shorts showed through the jersey. Fixed – and the jersey got three back pockets."
+prompt = "there is a graphic bug where the bib (bike trouser) is visible through the jersey. fix that."
+shots = [
+  { file = "202514-bib-jersey-2026-11-16-compare-bib-close-back-riding-before-after.jpg", seconds = 4.9, note = "before | after" },
+  { file = "202514-bib-jersey-2026-11-16-after-bib-pockets-close.jpg", seconds = 3.9, note = "room for a banana" },
+]
+
+[[chapter]]
+time = "21:22"
+title = "Signs of life"
+caption = "An X mouth when muted, headphones when they can't hear you, the phone from the back pocket – and VR goggles."
+prompt = "spec add on character: when a user uses VR goggles, show him as wearing goggles, too."
+shots = [
+  { file = "212250-video-wayland-status-phone-grab.mp4", seconds = 4.5, start = 1.0, note = "one sec, texting" },
+  { file = "212307-shot-wayland-status-mouth-muted.jpg", seconds = 3.5 },
+  { file = "212315-shot-wayland-status-vr-headset.jpg", seconds = 3.9, note = "in VR" },
+]
+
+[[chapter]]
+time = "23:42"
+title = "A headset at midnight"
+caption = "Weela, the new Windows VR machine, gets the Quest. After midnight the VR build ran there; the runtime didn't answer yet."
+prompt = "okay, headset connected and meta link installed"
+shots = [
+  { card = true, seconds = 4.5, text = "VR X1 merged with main at 00:16, built on Weela in 19 min, six runs by 00:51. Day 7 has the rest." },
+]

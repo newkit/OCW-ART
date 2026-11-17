@@ -12,14 +12,14 @@ day becomes a short video (title, a time-lapse of the whole day, the story in
 chapters, today's features, the numbers), and the days are joined into one
 growing diary video.
 
-<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-15/w/114846-scenes-veg3-after-wayland-veg-li-vaduz-vineyards.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/w/212337-shot-wayland-status-group-mixed.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
 **▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
 **[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**6 build days** · **720** commits · **2258** pictures · **189** videos · **8.66 billion** tokens · the diary video: 341.3 MB
+**7 build days** · **851** commits · **2932** pictures · **190** videos · **10.52 billion** tokens · the diary video: 399.3 MB
 
 ## How the game grew
 
@@ -29,11 +29,23 @@ growing diary video.
 
 ## The build days
 
-### Day 6 · 2026-11-16 — (the day's story is written at the end of the day)
+### Day 7 · 2026-11-17 — (the day's story is written at the end of the day)
 
-[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-16/) · day zip and video: at the end of the day
+<table><tr><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/005405-shot-wayland-char-shape-anorexia-a-mirror.jpg.jpg" width="200" alt="shot wayland char shape anorexia a mirror"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#3"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/010235-shot-wayland-char-shape-normal-b-mirror.jpg.jpg" width="200" alt="shot wayland char shape normal b mirror"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#5"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/010256-shot-wayland-char-age-70plus.jpg.jpg" width="200" alt="shot wayland char age 70plus"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#7"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/010316-shot-wayland-char-beard-full.jpg.jpg" width="200" alt="shot wayland char beard full"></a></td></tr></table>
 
-**0** commits · **0** merges · **0** pictures · **0** videos · music: synthwave
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-17/) · day zip and video: at the end of the day
+
+**2** commits · **0** merges · spec 4.39 → 4.40 · **7** pictures · **0** videos · **122 million** tokens · music: funk
+
+### Day 6 · 2026-11-16 — Moving day, a photographer and a headset at midnight
+
+*In which the coordinator moves house, a photographer with a drone joins every ride, voices get their own server – and a headset waits on a Windows desk.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-06-2026-11-16.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/t/212337-shot-wayland-status-group-mixed.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-06-2026-11-16.mp4">day video</a> (58 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-16/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/t/131800-shot-wayland-studio-e1.jpg.jpg" width="200" alt="shot wayland studio e1"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-16/#208"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/t/181037-scenes-view-distance-view-distance-2km.jpg.jpg" width="200" alt="scenes view distance view distance 2km"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-16/#251"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/t/212307-shot-wayland-status-mouth-muted.jpg.jpg" width="200" alt="shot wayland status mouth muted"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-16/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-06-2026-11-16.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-16.zip) (462.4 MB)
+
+**129** commits · **30** merges · spec 3.75 → 4.38 · **667** pictures · **1** videos · **1.74 billion** tokens · music: chiptune
 
 ### Day 5 · 2026-11-15 — Bananas, a second pair of eyes and a house move
 
@@ -43,7 +55,7 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-15/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-05-2026-11-15.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-15.zip) (502.8 MB)
 
-**149** commits · **39** merges · spec 3.36 → 3.74 · **731** pictures · **9** videos · **1.66 billion** tokens · music: house
+**149** commits · **39** merges · spec 3.36 → 3.74 · **731** pictures · **9** videos · **1.66 billion** tokens · music: chiptune
 
 ### Day 4 · 2026-11-14 — The weather, the seasons and the 404
 
