@@ -1,6 +1,6 @@
 # OCW Build Diary – Art Project Specification
 
-Version 2.3 – 16 November 2026
+Version 2.4 – 17 November 2026
 
 | Version | Change |
 |---|---|
@@ -18,6 +18,7 @@ Version 2.3 – 16 November 2026
 | 2.1 | `timelapse_skip` in the day script (§4): pictures left out of the time-lapse and the end card's mosaic – first used on day 5 for three early sign-in screenshots that showed a real cyclist's name as the test account |
 | 2.2 | **Withheld media** (§2.5, user 2026-11-16): `build-history/withheld.txt` keeps listed pictures out of gather, journal, day zip, gallery and Git LFS; day 5's three sign-in screenshots with a real cyclist's name are withheld and removed from the published gallery. **Decision titles** (§2.7): decision rows show what was decided, not "Decision by the user" |
 | 2.3 | **Compile time on the end card** (§2.2, user 2026-11-16: "record also compile time"): COMPILE MINUTES – cargo's time of the day's build runs – next to BUILD RUNS and BUILD HOURS; the journal already lists it per machine |
+| 2.4 | **Day 6 fixes** (2026-11-17): the transcripts also come from the project folder of the directory holding the OCW checkout (on deb since the move: `~/src`, where the coordinator runs; day 6 had 22 of its 63 prompts without it, §2.3); private words in the git-ignored `ocw-art.toml` (`mask_users`: the coordinator's former user, `mask_names`: a real person's name in a prompt) are masked too, and the day-5 journal's former user was masked (§2.5); `timelapse_skip` takes shell patterns and a plain card its own `text` (§4); the collector's unit sets `TMPDIR=%h/tmp` (§5.1) |
 
 ## 1. The brief
 
@@ -140,7 +141,9 @@ The user's prompts to Claude Code (the conversation that builds OCW) are part
 of the story.
 
 - **Source:** the Claude Code session transcripts of the project
-  (`~/.claude/projects/*OCW*/*.jsonl`, `OCW_TRANSCRIPTS` overrides the root): the
+  (`~/.claude/projects/*OCW*/*.jsonl`, and the project of the directory that
+  holds the OCW checkout, on deb `-home-claude-src` since the move;
+  `OCW_TRANSCRIPTS` overrides the root): the
   user's own messages, including those sent while Claude was working; not the
   agents' messages, tool output or notifications; slash commands as `/name args`.
 - **Kept as:** `DAY/prompts.jsonl` (time, ISO 8601, text) and `DAY/prompts.md`;
@@ -198,7 +201,10 @@ plain git (since v2.0 the day folders' pictures and videos are in Git LFS, §2.8
   machine's name and its user with `user`. The host and user list comes from
   `config/machines.toml`, read through `scripts/remote.sh … field`; its
   values are never printed. The mask also replaces any home directory
-  (`/home/NAME`, `/Users/NAME`, `C:\Users\NAME`) with `~`, e-mail addresses
+  (`/home/NAME`, `/Users/NAME`, `C:\Users\NAME`) with `~`, the private
+  words of the git-ignored `ocw-art.toml` (`mask_users` → `user`, e.g. the
+  coordinator's former user on deb; `mask_names` → `<name>`, a real person's
+  name that reached a prompt), e-mail addresses
   with `<e-mail>` and private IP addresses with `<ip>`. A user name is masked
   as a word of its own (`claude@host`, `"claude"`). It is not masked inside a
   path or a name such as `~/.claude/` or `claude.ai`.
@@ -518,7 +524,8 @@ features_roll = true               # the closing "Today's features" roll (§2.7;
                                    # default true, false turns it off)
 timelapse_skip = ["HHMMSS-x.jpg"]  # optional: pictures left out of the time-lapse
                                    # and the end card's mosaic (e.g. a screenshot
-                                   # showing a real person's name)
+                                   # showing a real person's name); shell
+                                   # patterns too ("*-calibration-*")
 
 [[chapter]]
 time = "15:02"                     # when it happened (shown in gold)
@@ -531,7 +538,8 @@ shots = [
   { file = "HHMMSS-x.png", seconds = 4.2, note = "sticker text" },     # still: Ken Burns
   { file = "HHMMSS-y.mp4", seconds = 4.0, start = 2.0, speed = 2 },    # clip, 2× time-lapse
   { split = ["before.png", "after.png"], seconds = 4.9 },              # before | after
-  { card = true, seconds = 2.0 },                                      # plain violet card
+  { card = true, seconds = 2.0 },                                      # plain violet card;
+                                                                       # optional text = "…" (centred)
   { card = true, seconds = 4.0, incident = "00:39" },                  # an incident (§2.6);
                                                                        # optional text = "…"
 ]
@@ -732,7 +740,8 @@ coordinator writes the day script, renders and publishes in a session.
   `TimeoutStartSec=150min`, which leaves room for the 23:xx LFS push;
   `ExecStart=…/bin/collect.sh`) and `ocw-art-collect.timer` (`OnCalendar=hourly`,
   `Persistent=true`, so missed runs are made up after boot, and
-  `RandomizedDelaySec=5min`). The contact sheets are part of the 23:xx run,
+  `RandomizedDelaySec=5min`). The service sets `TMPDIR=%h/tmp` (deb's
+  `/tmp` is RAM). The contact sheets are part of the 23:xx run,
   so there is no separate sheets timer.
 
 ```bash

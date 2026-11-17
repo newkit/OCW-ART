@@ -11,3 +11,9 @@ ocw_repo = "../OCW"
 # free plan's 10 GiB).
 # lfs_policy = "all"
 # lfs_budget_gib = 9.0
+
+# More private words for the mask (docs/ART-PROJECT.md §2.5; never printed):
+# user names that are no build machine's (masked as "user") and real people's
+# names that reached a prompt or a commit (masked as "<name>").
+# mask_users = ["oldname"]
+# mask_names = ["First Last"]

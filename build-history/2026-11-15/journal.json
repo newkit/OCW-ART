@@ -758,7 +758,7 @@
    "sha": "a88498c",
    "time": "12:21:48",
    "merge": false,
-   "subject": "Coordinator move nils@deb -> user@deb: checklist (docs/MIGRATE-DEB-USER.md) and root copy script (scripts/migrate-user.sh, dry run by default)",
+   "subject": "Coordinator move user@deb -> user@deb: checklist (docs/MIGRATE-DEB-USER.md) and root copy script (scripts/migrate-user.sh, dry run by default)",
    "added": 188,
    "removed": 0
   },
@@ -5378,7 +5378,7 @@
   {
    "time": "07:28:23",
    "iso": "2026-11-15T07:28:23+01:00",
-   "text": "plan: prepare moving all activities from nils@deb to user@deb. let me know if you need my help with some steps or you can do everything by yourself."
+   "text": "plan: prepare moving all activities from user@deb to user@deb. let me know if you need my help with some steps or you can do everything by yourself."
   },
   {
    "time": "07:50:45",

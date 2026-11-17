@@ -21,6 +21,18 @@ from .mask import _secrets, mask, write_tracked
 # addresses and keys masked, into DAY/prompts.jsonl and DAY/prompts.md.
 
 TRANSCRIPTS = os.environ.get("OCW_TRANSCRIPTS", str(Path.home() / ".claude" / "projects"))
+
+
+def transcript_files(root: Path) -> list[Path]:
+    """The main sessions' transcripts: projects named *OCW* (the checkout, its
+    worktrees, the old user's checkout), plus the folder holding the OCW
+    checkout (on deb since 2026-11-16 the coordinator runs in ~/src, project
+    `-home-claude-src`, next to OCW and OCW-ART)."""
+    dirs = set(root.glob("*OCW*"))
+    parent = root / re.sub(r"[^A-Za-z0-9]", "-", str(C.ROOT.resolve().parent))
+    if parent.is_dir():
+        dirs.add(parent)
+    return sorted(f for d in dirs for f in d.glob("*.jsonl"))
 REMINDER_RE = re.compile(r"<system-reminder>.*?</system-reminder>", re.S)
 def prompt_text(raw: str) -> str | None:
     """The user's words from a transcript message, or None for anything that
@@ -40,7 +52,7 @@ def prompt_text(raw: str) -> str | None:
 
 def prompts_of(day: str) -> list[dict]:
     seen, out = set(), []
-    files = [f for f in Path(TRANSCRIPTS).glob("*OCW*/*.jsonl")]
+    files = transcript_files(Path(TRANSCRIPTS))
     for f in files:
         for line in f.read_text(errors="replace").splitlines():
             if '"user"' not in line and "queued_command" not in line:
@@ -141,7 +153,7 @@ def tokens_of(day: str) -> dict:
     seen = set()
     total, per_task, per_feature, per_model = {}, {}, {}, {}
     sources = []
-    for f in root.glob("*OCW*/*.jsonl"):
+    for f in transcript_files(root):
         sources.append((f, None))
         for a in (f.parent / f.stem / "subagents").glob("agent-*.jsonl"):
             meta = a.with_suffix(".meta.json")

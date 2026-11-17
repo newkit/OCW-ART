@@ -100,7 +100,7 @@
 | 12:16 | `bbed3f1` | Spec: Phase 8 heading and §4.6 point to T8 |
 | 12:16 | `866a5a2` (merge) | Merge main into vegetation (spec version 3.48) |
 | 12:18 | `e2b4bda` (merge) | Merge sign-in with Google and Strava: ocw-auth, the ocw-accounts backend (OIDC-shaped endpoints, device flow, rotation, export/delete), game-server token check, Settings → Account in both apps; fictional test identities (spec 3.46) |
-| 12:21 | `a88498c` | Coordinator move nils@deb -> user@deb: checklist (docs/MIGRATE-DEB-USER.md) and root copy script (scripts/migrate-user.sh, dry run by default) |
+| 12:21 | `a88498c` | Coordinator move user@deb -> user@deb: checklist (docs/MIGRATE-DEB-USER.md) and root copy script (scripts/migrate-user.sh, dry run by default) |
 | 13:01 | `cf8eb83` | The art project moves to its own repository, newkit/OCW-ART (spec 3.50) |
 | 13:14 | `331a29f` | Plan Phase 15 (3D objects as glTF model files in artwork/3dmodels: format comparison, model contract, import/export/loader, migration M1-M6) and Phase 16 (OCW Studio: models, world patches, GPX routes, routing planners with licence check) (spec 3.48) |
 | 13:15 | `259934b` (merge) | Merge realistic vegetation (Phase 8 T8): flora species, VEGE crops and plantations, planted trees in OBST, world-builder vegetation, flora/vegetation renderer (spec 3.49) |
@@ -273,7 +273,7 @@ Longest runs:
 | 07:24 | do you see a second session on deb from the system user named "user" |
 | 07:25 | art project: are finished build jobs and their status as well as finished features and merges logged? |
 | 07:26 | yes |
-| 07:28 | plan: prepare moving all activities from nils@deb to user@deb. let me know if you need my help with some steps or you can do everything by y |
+| 07:28 | plan: prepare moving all activities from user@deb to user@deb. let me know if you need my help with some steps or you can do everything by y |
 | 07:50 | postpone the move for now |
 | 07:51 | once the helmets are reworked, send images |
 | 08:15 | are the art diary video builds running? |

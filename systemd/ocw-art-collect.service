@@ -11,6 +11,10 @@ WorkingDirectory=@REPO@
 ExecStart=@REPO@/bin/collect.sh
 # git, ffmpeg, flock, gh; not the pyenv shims (the script picks /usr/bin/python3).
 Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+# deb: /tmp is a tmpfs (RAM, then swap) – temp files (ffmpeg, mktemp, Python's
+# tempfile) go to disk, like the build dashboard's unit (OCW's CLAUDE.md).
+Environment=TMPDIR=%h/tmp
+ExecStartPre=/bin/mkdir -p %h/tmp
 # Up to 45 min waiting for a manual diary.py run (the lock), then the run itself.
 Environment=OCW_ART_LOCK_WAIT=2700
 # (+ an LFS push of up to ~1.4 GB after the 23:xx run.)

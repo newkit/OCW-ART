@@ -4,6 +4,7 @@ shots, time-lapse, chapters, features roll, end card."""
 from __future__ import annotations
 
 import datetime as dt
+import fnmatch
 import hashlib
 import random
 import re
@@ -157,14 +158,15 @@ def concat(parts: list[Path], out: Path):
 def stills_of(day: str, skip=()) -> list[dict]:
     """The day's pictures for the time-lapse: in time order, without review
     sheets and before/after crops, a video only without its own still, and
-    without the day script's `timelapse_skip` files (§4)."""
+    without the day script's `timelapse_skip` files (§4; a name or a
+    shell pattern such as "*-direction-calibration-*")."""
     media = media_of(day)
     names = {m["file"] for m in media}
     skip = set(skip)
     out = []
     for m in media:
         f = m["file"]
-        if f in skip or m["kind"] == "audio" or re.search(r"sheet|before|after|crop|cmp|-first", f):
+        if f in skip or any(fnmatch.fnmatchcase(f, s) for s in skip) or m["kind"] == "audio" or re.search(r"sheet|before|after|crop|cmp|-first", f):
             continue
         stem = f.rsplit(".", 1)[0]
         if m["kind"] == "video" and ({f"{stem}.png", f"{stem}.jpg"} & names):
@@ -397,6 +399,9 @@ def render(day: str) -> Path:
                 sub.add(tt + 0.2, tt + secs - 0.15, "Kicker",
                         f"{{\\pos(960,380)\\fad(150,150)}}INCIDENT · {esc(str(shot['incident']))}")
                 sub.typed(tt + 0.5, tt + secs - 0.15, "Outro", esc(inc_txt), pre="{\\pos(960,560)\\fad(0,150)}")
+            elif shot.get("card") and shot.get("text"):  # a plain card with its own text, centred
+                sub.typed(tt + 0.3, tt + secs - 0.15, "Outro", esc(mask(str(shot["text"]))),
+                          pre="{\\pos(960,520)\\fad(0,150)}")
             if shot.get("note"):
                 sub.add(tt + 0.5, tt + secs - 0.15, "Note",
                         f"{{\\pos(1860,70)\\frz{seeded(shot['note']).uniform(-5, 5):.1f}"

@@ -186,13 +186,26 @@ class MachinesConfTest(Fixture):
 
     def test_refuses_to_mask_without_a_machine_list(self):
         with mock.patch.object(mask, "machines_conf", return_value=None), mock.patch.object(mask, "_SECRETS", None), \
-                mock.patch.dict(os.environ):
+                mock.patch.object(core, "CONFIG", self.tmp / "none.toml"), mock.patch.dict(os.environ):
             os.environ.pop("OCW_ART_NO_MACHINES", None)
             with self.assertRaises(SystemExit) as e:
                 mask._secrets()
             self.assertIn("machines.toml", str(e.exception))
             os.environ["OCW_ART_NO_MACHINES"] = "1"
             self.assertEqual([r for _, r in mask._secrets()], ["~"])
+
+    def test_private_words_from_the_config(self):
+        """mask_users and mask_names of ocw-art.toml: a former user name as a
+        word, a real person's name in any case (a prompt on 2026-11-16)."""
+        conf = self.tmp / "ocw-art.toml"
+        conf.write_text('mask_users = ["olduser"]\nmask_names = ["Ada Realname"]\n')
+        with mock.patch.object(mask, "machines_conf", return_value=None), mock.patch.object(mask, "_SECRETS", None), \
+                mock.patch.object(core, "CONFIG", conf), mock.patch.dict(os.environ, {"OCW_ART_NO_MACHINES": "1"}):
+            secrets = mask._secrets()
+            self.assertEqual(mask.mask("which are olduser files? ADA REALNAME rode", secrets),
+                             "which are user files? <name> rode")
+            self.assertEqual(mask.mask("~/olduser-notes", secrets), "~/olduser-notes")
+            self.assertEqual([k for _, k in mask.private_findings("Ada Realname", secrets)], ["a real person's name"])
 
 
 class CheckMaskedTest(Fixture):

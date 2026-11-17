@@ -4,6 +4,7 @@ directories, e-mail and private IP addresses; the tracked text files and check-m
 from __future__ import annotations
 
 import os
+import tomllib
 import re
 from pathlib import Path
 
@@ -118,12 +119,32 @@ def _secrets() -> list[tuple[str, str]]:
             if len(v) >= 3:
                 out.append((v, name if k == "host" else "user"))
     out.append((str(Path.home()), "~"))
+    out += _private_words()
     # A value that is part of a replacement (a host named like its machine)
     # is public and would never mask away.
     reps = {r for _, r in out}
     out = [(v, r) for v, r in out if not any(v in r_ for r_ in reps)]
     _SECRETS = sorted(set(out), key=lambda kv: -len(kv[0]))
     return _SECRETS
+
+
+NAME_REP = "<name>"
+
+
+def _private_words() -> list[tuple[str, str]]:
+    """More private words from the git-ignored ocw-art.toml (never printed):
+    `mask_users`, user names that are no build machine's (e.g. the
+    coordinator's former user on deb), masked as "user"; `mask_names`, real
+    people's names that reached a prompt or a commit, masked as "<name>"
+    (test data uses only made-up names, §2.5)."""
+    if not C.CONFIG.is_file():
+        return []
+    try:
+        conf = tomllib.loads(C.CONFIG.read_text())
+    except tomllib.TOMLDecodeError as e:
+        raise SystemExit(f"{C.CONFIG.name}: {e}") from None
+    return ([(u, "user") for u in conf.get("mask_users", []) if len(u) >= 3]
+            + [(n, NAME_REP) for n in conf.get("mask_names", []) if len(n) >= 3])
 
 
 # Any home directory (Linux, macOS, Windows; also JSON-escaped backslashes).
@@ -143,12 +164,14 @@ def _mask_steps(secrets):
     directories first (a user name is part of both), then the users, then
     the generic patterns."""
     hosts = [("build-machine host", lambda t, v=v, r=r: t.replace(v, r))
-             for v, r in secrets if r not in ("user", "~")]
+             for v, r in secrets if r not in ("user", "~", NAME_REP)]
+    names = [("a real person's name", lambda t, v=v: re.sub(re.escape(v), NAME_REP, t, flags=re.I))
+             for v, r in secrets if r == NAME_REP]
     homes = [("home directory", lambda t, v=v: t.replace(v, "~")) for v, r in secrets if r == "~"]
     homes.append(("home directory", lambda t: HOME_RE.sub("~", t)))
     users = [("build-machine user", lambda t, rx=_user_re(v): rx.sub("user", t))
              for v, r in secrets if r == "user"]
-    return [*hosts, *homes, *users,
+    return [*hosts, *homes, *users, *names,
             ("e-mail address", lambda t: EMAIL_RE.sub("<e-mail>", t)),
             ("private IP address", lambda t: PRIVATE_IP_RE.sub("<ip>", t))]
 
