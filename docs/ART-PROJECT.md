@@ -19,6 +19,7 @@ Version 2.6 – 18 November 2026
 | 2.2 | **Withheld media** (§2.5, user 2026-11-16): `build-history/withheld.txt` keeps listed pictures out of gather, journal, day zip, gallery and Git LFS; day 5's three sign-in screenshots with a real cyclist's name are withheld and removed from the published gallery. **Decision titles** (§2.7): decision rows show what was decided, not "Decision by the user" |
 | 2.3 | **Compile time on the end card** (§2.2, user 2026-11-16: "record also compile time"): COMPILE MINUTES – cargo's time of the day's build runs – next to BUILD RUNS and BUILD HOURS; the journal already lists it per machine |
 | 2.4 | **Day 6 fixes** (2026-11-17): the transcripts also come from the project folder of the directory holding the OCW checkout (on deb since the move: `~/src`, where the coordinator runs; day 6 had 22 of its 63 prompts without it, §2.3); private words in the git-ignored `ocw-art.toml` (`mask_users`: the coordinator's former user, `mask_names`: a real person's name in a prompt) are masked too, and the day-5 journal's former user was masked (§2.5); `timelapse_skip` takes shell patterns and a plain card its own `text` (§4); the collector's unit sets `TMPDIR=%h/tmp` (§5.1) |
+| 2.7 | **CO2 footprint of the tokens (planned, not built)** (user 2026-11-18: "estimate also the co2 footprint for the token usage and log that and show it in the video"; §2.4.1): an estimate with a range from the token counts of §2.4 × energy per token kind (output, input, cache writes, cache reads) × data-centre overhead × grid carbon intensity, cited factors in `co2.toml`; logged in `tokens.json` and the journal, shown on the end card with a plain comparison; open Q1 (which figures), Q2 (also the build machines?), Q3 (which comparison) |
 | 2.6 | **`melodic-deep-house`** (user 2026-11-18 for day 7: "use music style: melodic deep house"): minor with 7th and 9th chords (e.g. F minor), 120–124 bpm, a four-on-the-floor kit with soft off-beat open hats, the clap (or a rim) on 2 and 4 and shaker ghosts, a warm sine-sub bass with a little low-passed saw, lush detuned pads whose filter opens over every 4-bar phrase, a mellow plucked arpeggio and an FM lead, both with a dotted-8th delay; build-ups into the chapters, a kick-less breakdown, no key lift (§3.2). Withheld on day 7 (§2.5): a whole-desktop capture of Weela and the build dashboard's battery screenshots, which show a user name |
 | 2.5 | **`darkchip`, a cooler 8-bit style** (user 2026-11-17 on day 6: "less squeeky and less happy. make something cooler with different drums styles"): dorian or phrygian, a rounded low-passed pulse lead in the middle register, slow triangle arpeggios, a solid square/triangle bass with a sine sub, a darker soft kit with a rim click, and a drum style per chapter in turn (half-time, four-on-the-floor with an open hat, 2-step, half-time break; kick and rim in the breakdown) with tom fills into the chapters (§3.2). A still can push in on a detail (`focus = [x, y, zoom]`, §4) |
 
@@ -178,6 +179,55 @@ How much model work went into the build is part of the record too.
   MILLION TOKENS. `diary.py tokens DAY` (run by `journal`).
 - Most of the total is cache reads (the conversation re-read from the cache
   on every step); output tokens are about 0.2 % of it.
+
+#### 2.4.1 The CO2 footprint of the tokens (planned, user 2026-11-18; not built)
+
+The user (2026-11-18): "estimate also the CO2 footprint for the token usage and
+log that and show it in the video".
+
+- **What is estimated:** the greenhouse-gas emissions (kg CO2e) of the model
+  work counted in §2.4 – per day, per task and feature, and in total. It is an
+  **estimate with a range**, never shown as an exact number: the provider does
+  not publish energy per token, so the result comes from published estimates
+  and assumptions, all of them written down.
+- **The model (proposal):** energy = Σ tokens of each kind × energy per million
+  tokens of that kind, per model; × the data centre's overhead (PUE); ×
+  the grid's carbon intensity (g CO2e per kWh) = CO2e.
+  - The token kinds of §2.4 cost very differently: output tokens (generated
+    one by one) far more than uncached input (processed in parallel), cache
+    writes about like input, **cache reads much less** (most of our total
+    is cache reads, so this factor decides most of the result).
+  - Each factor gets a **low / central / high** value with its source
+    (published measurements and estimates of inference energy per token or
+    per prompt for large models, e.g. papers and reports on LLM inference
+    energy, the providers' own disclosures where they exist; PUE and grid
+    intensity from the data-centre regions' public figures). The values are
+    researched and cited when this is built, kept in a small config file
+    (`co2.toml`, with the sources as comments), and the journal says which
+    version of the factors a day used, so later better figures can recompute
+    old days.
+- **Logged:** `DAY/tokens.json` gains the estimate (central, low, high; per
+  model, per task and feature, and the factors' version); the journal's
+  *Token usage* section shows it next to the tokens; `diary.py tokens DAY`
+  computes it; the README's totals line and the day's README section show
+  the day's and the project's total.
+- **In the video:** the end card shows it next to MILLION TOKENS, e.g. "≈ 12 kg
+  CO2e (5–30)" and a plain comparison (e.g. "≈ 80 km by car" or "≈ N hours
+  of a laptop", with the comparison's source); the diary video's end card
+  the running total.
+- **Tests:** the arithmetic per token kind and model, the range, a day without
+  transcripts, the recompute with new factors, the end card's text.
+- **Open questions:**
+  - **Q1 (open) – Which figures:** which published sources to use for energy
+    per token and for the data centres (to be researched and proposed with
+    citations before building), and whether to show only the range or a
+    central value with it.
+  - **Q2 (open) – Only the tokens, or the build too:** also estimate the
+    electricity of the build machines and the coordinator (compile hours of
+    §2.2 × each machine's typical power, the local grid's intensity), shown
+    separately?
+  - **Q3 (open) – The comparison:** car kilometres, laptop hours, kettle
+    boils, or none?
 
 ### 2.5 Text in git (decided by the user 2026-11-14)
 
