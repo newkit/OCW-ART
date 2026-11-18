@@ -1,0 +1,149 @@
+# OCW Build Diary – day 7 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-17/ (or paths in this checkout).
+# Pictures stand alone (spec §11.4 v3.25): a split only where a chapter compares two pictures.
+# Withheld (build-history/withheld.txt): a whole-desktop capture of Weela and
+# the build dashboard's battery screenshots (a user name readable).
+
+title = "Faces, hands and a headset on a weak charger"
+tagline = "In which the riders get faces, skin tones and real hands, the bike stand puts a price on speed, voices learn their range – and Weela rides VR until its battery gives up."
+hero = "144129-shot-wayland-hands-arms-up.jpg"
+bpm = 122
+key = "F"
+style = "melodic-deep-house"       # the user, 2026-11-18: "use music style: melodic deep house"
+mode = "minor"
+tests = 2797                       # marge's check of the OCW Studio logo's merge, 23:11: 71 suites, 0 failed
+outro = "29 spec versions in one day, 4.39 to 4.68. Faces, skin tones, hands that hold the bar the right way up – and a model viewer at midnight."
+# The thumbnail fixes' 300-odd 256 px part thumbnails and the icons' small
+# sizes (16–512 px) would flicker through the time-lapse:
+timelapse_skip = ["*-2026-11-17-thumbs-*", "*-icon-*-[0-9][0-9].png", "*-icon-*-[0-9][0-9][0-9].png",
+                  "*-studio-logo-2026-11-17-ocw-*.png"]
+teaser = "TO BE CONTINUED – a navigation map in the HUD, cracks in the road, and Weela on a stronger charger."
+
+[[chapter]]
+time = "00:47"
+title = "Who do you want to be?"
+caption = "The character editor grows: names in every script, seven body shapes on three bodies, an age, 21 haircuts, beards."
+prompt = "fix character editor: the character should be shown in screen and the accessories and changes should be visually and selectable."
+shots = [
+  { file = "021733-shot-wayland-char-editor-tiles-hair.jpg", seconds = 4.2, note = "two braids, please" },
+  { file = "021805-shot-wayland-char-face-front.jpg", seconds = 3.9, note = "and a face" },
+]
+
+[[chapter]]
+time = "02:10"
+title = "Small hours"
+caption = "The photographer's drone gets its own camera, the old fog is the default again, and the calendar learns Select."
+prompt = "if no video if the drone flying (pov and from putside) was recorded, create one"
+shots = [
+  { file = "034703-drone-videos-2026-11-17-drone-outside.mp4", seconds = 5.0, start = 6.0, speed = 2, note = "follow cam" },
+  { file = "034832-calendar-select-desktop-menu-time-calendar-select.jpg", seconds = 3.9, focus = [0.6, 0.72, 1.8], note = "Select, at last" },
+  { card = true, seconds = 3.5, text = "02:22 – the legacy fog is the default again. The new one stays, as sky.fog new." },
+]
+
+[[chapter]]
+time = "04:43"
+title = "What's it worth?"
+caption = "Bike stand: every wheel, part and paint a small rendering, with its speed gain in % – flat and on a 6 % climb."
+prompt = "bike tuning on bike stand: make smaller renderings of all selectable items. put an info on how many % gain it gives."
+shots = [
+  { split = ["024214-shot-wayland-bike-stand-tiles-wheels.jpg", "030912-shot-wayland-bike-stand-tiles-wheels.jpg"], seconds = 5.0, note = "grey boxes | pictures" },
+  { file = "031005-shot-wayland-bike-stand-tiles-paint.jpg", seconds = 3.9, note = "paint: ±0 %, sadly" },
+]
+
+[[chapter]]
+time = "08:24"
+title = "A bike computer in VR"
+caption = "In the headset the HUD moves onto a bike computer on the bar. Weela, the Windows VR machine, becomes a kiosk."
+prompt = "VR: the HUD is pretty central, thats disturbing. put all the information in to a bike navi"
+shots = [
+  { file = "015323-vr-weela-2026-11-17-left-eye-down-day.jpg", seconds = 4.2, note = "the left eye, looking down" },
+  { file = "101102-vr-kiosk-weela-2026-11-17-03-left-eye-console-screenshot.jpg", seconds = 4.2, focus = [0.58, 0.9, 1.6], note = "500 W, as always" },
+]
+
+[[chapter]]
+time = "08:56"
+title = "Can you hear me now?"
+caption = "Voices by range: everyone joins muted, the server only sends what you can hear – and by evening: silent beyond 10 m."
+shots = [
+  { file = "094337-web-web-audio-livekit-livekit-range-far.jpg", seconds = 4.2, note = "too far to chat" },
+  { card = true, seconds = 3.8, text = "Block works both ways. A volume per rider, 0–200 %. Selected riders are heard at any distance." },
+]
+
+[[chapter]]
+time = "13:17"
+title = "Sixteen skin tones"
+caption = "A real face close-up, every choice a picture – and 16 skin tones, from very pale to very dark."
+prompt = "add skin tone selector to character editor"
+shots = [
+  { file = "064808-shot-wayland-char2-face-70plus-obese-b.jpg", seconds = 4.2, note = "age: 70+" },
+  { file = "132811-shot-wayland-char2-tiles-skin.jpg", seconds = 4.2 },
+]
+
+[[chapter]]
+time = "14:26"
+title = "Hands!"
+caption = "The rider gets real hands: a palm, a thumb, four fingers. The helmet comes off for the haircut and hangs on a hook."
+prompt = "give the rider real hands"
+shots = [
+  { file = "143911-shot-wayland-hands-road-hoods-mitts.jpg", seconds = 3.9, note = "five fingers" },
+  { file = "144129-shot-wayland-hands-arms-up.jpg", seconds = 3.9, note = "race won" },
+  { file = "144233-shot-wayland-bare-mirror-helmet-hook.jpg", seconds = 3.9, note = "helmet on the hook" },
+]
+
+[[chapter]]
+time = "15:55"
+title = "No more flying fields"
+caption = "The drone video caught green slabs floating over Tenerife's terraces. Now fields, trees and lamps sit on the ground."
+shots = [
+  { file = "034703-drone-videos-2026-11-17-drone-outside.mp4", seconds = 3.0, start = 29.0, note = "a field, hovering" },
+  { split = ["162107-stands-on-terrain-2026-11-17-before-masca-km79-x11.jpg", "162107-stands-on-terrain-2026-11-17-after-masca-km79-x11.jpg"], seconds = 5.0, note = "before | after" },
+]
+
+[[chapter]]
+time = "18:38"
+title = "Framed"
+caption = "Four spec versions to frame a thumbnail: on the part, whole, tight – and the drivetrain without its wheels."
+shots = [
+  { file = "194527-fix-drivetrain-thumbs-2026-11-17-compare-fix-stand-tiles-groupset.jpg", seconds = 4.9, note = "chainrings, not a wheel" },
+]
+
+[[chapter]]
+time = "20:46"
+title = "Logos"
+caption = "The Windows apps wear the unicorn. And OCW Studio gets a logo of its own: a gold pencil drawing the rainbow."
+prompt = "create a logo for the studio app and put it to artwork/logos. use it for studio binaries on all platforms"
+shots = [
+  { file = "204246-windows-icon-2026-11-17-ocw-desktop-256.png", seconds = 3.5, note = "ocw-desktop.exe" },
+  { file = "220520-studio-logo-2026-11-17-studio-logo-compare.png", seconds = 4.5, note = "the unicorn's sibling" },
+]
+
+[[chapter]]
+time = "21:05"
+title = "The right way up"
+caption = "The user spotted it: the hands held the bar upside down. Now palms down on the hoods, the thumb inside."
+prompt = "graphical cosmetic: the hand position on the handlebar looks wrong (upside down)."
+shots = [
+  { split = ["143911-shot-wayland-hands-road-hoods-mitts.jpg", "214119-shot-wayland-fix-grip-hoods-right.jpg"], seconds = 5.0, note = "14:39 | 21:41" },
+]
+
+[[chapter]]
+time = "21:24"
+title = "Strava yes, battery no"
+caption = "Strava takes the game's rides as Virtual Rides with GPS track and map. Weela's charger is too weak for VR."
+prompt = "weela is running out of battery because the power supply does not supply enough energy."
+shots = [
+  { card = true, seconds = 3.8, text = "21:21 – the GPS track shows on Strava. The trick: pick a map. The original FIT file works too." },
+  { file = "232724-vr-check-5min-computer-left-eye.jpg", seconds = 3.9, note = "23:27, five-minute check" },
+  { file = "235507-vr-fallback-check-mirror-video.mp4", seconds = 4.5, start = 4.0, note = "still riding" },
+  { card = true, seconds = 3.5, text = "23:46 – the build dashboard is asked to show Weela's and the Quest's battery." },
+]
+
+[[chapter]]
+time = "22:08"
+title = "The night shift"
+caption = "At night: stones, leaves and dust by the road, cracks and potholes, a model viewer in the studio."
+prompt = "graphic enhancement: add some dirt, dust, stones, rockes, parts of plants/vegetation"
+shots = [
+  { file = "222815-ground-detail-blackforest-forest-road-rider-on-wayland.jpg", seconds = 4.2, note = "Black Forest verge" },
+  { file = "235345-models-e3-helmet-tryon-fat.jpg", seconds = 4.2, note = "try it on" },
+]

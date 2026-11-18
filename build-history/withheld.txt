@@ -7,3 +7,12 @@
 2026-11-15/102533-web-web-account-signed-in.jpg
 2026-11-15/102533-web-web-account-linked.jpg
 2026-11-15/105407-account-account-signed-in.jpg
+
+# Day 7: a whole-desktop capture of Weela (the VR machine) with a terminal
+# showing the build user's home path; the build dashboard's battery screenshots
+# show the coordinator's user name ("… by <user>") on leela's card:
+2026-11-17/085758-vr-kiosk-weela-2026-11-17-03-monitor-riding.png
+2026-11-17/235835-2026-11-17-dashboard-battery-live-1400.png
+2026-11-17/235901-2026-11-17-dashboard-battery-live-420.png
+2026-11-17/235928-2026-11-17-dashboard-battery-fixture-mains-discharging-1400.png
+2026-11-17/235954-2026-11-17-dashboard-battery-fixture-mains-discharging-420.png

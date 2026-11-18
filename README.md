@@ -15,14 +15,14 @@ day becomes a short video (title, a time-lapse of the whole day, the story in
 chapters, today's features, the numbers), and the days are joined into one
 growing diary video.
 
-<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/w/212337-shot-wayland-status-group-mixed.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/w/144129-shot-wayland-hands-arms-up.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
 **▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
 **[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**8 build days** · **971** commits · **4512** pictures · **202** videos · **12.98 billion** tokens · the diary video: 405.6 MB
+**8 build days** · **973** commits · **4675** pictures · **206** videos · **13.03 billion** tokens · the diary video: 482.8 MB
 
 ## How the game grew
 
@@ -34,19 +34,19 @@ growing diary video.
 
 ### Day 8 · 2026-11-18 — (the day's story is written at the end of the day)
 
-<table><tr><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/000010-2026-11-17-dashboard-battery-fixture-unreachable-1400.png.jpg" width="200" alt="2026 11 17 dashboard battery fixture unreachable 1400"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#182"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/012002-road-damage-2026-11-18-after-x11-damage-li-minor-close.jpg.jpg" width="200" alt="road damage 2026 11 18 after x11 damage li minor close"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#364"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/032053-shot-wayland-level-bf-minor-horrible-rider.jpg.jpg" width="200" alt="shot wayland level bf minor horrible rider"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#547"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/062654-places-navi-v6-navi-vaduz-day-z7.jpg.jpg" width="200" alt="places navi v6 navi vaduz day z7"></a></td></tr></table>
-
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-18/) · day zip and video: at the end of the day
 
-**44** commits · **18** merges · spec 4.67 → 4.77 · **543** pictures · **4** videos · **516 million** tokens · music: lofi
+**46** commits · **18** merges · spec 4.67 → 4.78 · **711** pictures · **8** videos · **566 million** tokens · music: lofi
 
-### Day 7 · 2026-11-17 — (the day's story is written at the end of the day)
+### Day 7 · 2026-11-17 — Faces, hands and a headset on a weak charger
 
-<table><tr><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/005405-shot-wayland-char-shape-anorexia-a-mirror.jpg.jpg" width="200" alt="shot wayland char shape anorexia a mirror"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#355"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/132800-shot-wayland-char2-face-60s-ample-round.jpg.jpg" width="200" alt="shot wayland char2 face 60s ample round"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#702"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/180804-fix-ground-thumbs-2026-11-17-thumbs-before-tt-wheels-wheel-disc-tt.png.jpg" width="200" alt="fix ground thumbs 2026 11 17 thumbs before tt wheels wheel disc tt"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#1052"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/235954-2026-11-17-dashboard-battery-fixture-mains-discharging-420.png.jpg" width="200" alt="2026 11 17 dashboard battery fixture mains discharging 420"></a></td></tr></table>
+*In which the riders get faces, skin tones and real hands, the bike stand puts a price on speed, voices learn their range – and Weela rides VR until its battery gives up.*
 
-[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-17/) · day zip and video: at the end of the day
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-07-2026-11-17.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/144129-shot-wayland-hands-arms-up.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-07-2026-11-17.mp4">day video</a> (77.2 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#186"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/021733-shot-wayland-char-editor-tiles-hair.jpg.jpg" width="200" alt="shot wayland char editor tiles hair"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#368"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/143911-shot-wayland-hands-road-hoods-mitts.jpg.jpg" width="200" alt="shot wayland hands road hoods mitts"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-17/#943"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/t/222815-ground-detail-blackforest-forest-road-rider-on-wayland.jpg.jpg" width="200" alt="ground detail blackforest forest road rider on wayland"></a></td></tr></table>
 
-**78** commits · **23** merges · spec 4.39 → 4.68 · **1044** pictures · **8** videos · **2.07 billion** tokens · music: funk
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-17/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-07-2026-11-17.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-17.zip) (336.3 MB)
+
+**78** commits · **23** merges · spec 4.39 → 4.68 · **1039** pictures · **8** videos · **2.07 billion** tokens · music: melodic-deep-house
 
 ### Day 6 · 2026-11-16 — Moving day, a photographer and a headset at midnight
 
