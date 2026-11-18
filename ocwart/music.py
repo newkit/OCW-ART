@@ -4,7 +4,10 @@ samples, no licences, deterministic from the seed.
 Every day has its own style (a band, a mode, a groove, a set of chord
 progressions): `chiptune`, `synthwave`, `funk`, `house`, `lofi`, `darkchip`
 (8-bit, but cool: dark modes, mid-register rounded voices, a drum style
-per chapter in turn; day 6 after "less squeaky and less happy"). A day script
+per chapter in turn; day 6 after "less squeaky and less happy"),
+`melodic-deep-house` (minor 7th and 9th chords, a warm sub bass, a soft
+four-on-the-floor kit, a plucked arpeggio and lead with a dotted-8th delay,
+filter sweeps over each phrase; day 7). A day script
 can name one (`style`, `mode`); by default the day number picks it. Within a
 video the music follows the sections – intro (title), drive (time-lapse),
 one groove per chapter, outro (end card) – and varies: a progression per
@@ -57,6 +60,9 @@ BASS = {
     "walk": [(0, 4, 0, 0), (4, 4, 1, 0), (8, 4, 2, 0), (12, 4, 1, 0)],
     "dub": [(0, 6, 0, 0), (7, 1, 0, 0), (10, 3, 0, 0), (14, 2, 2, 0)],
     "stepper": [(0, 3, 0, 0), (4, 2, 0, 0), (8, 3, 0, 0), (11, 1, 2, 0), (12, 3, 0, 0)],
+    # melodic deep house: round, syncopated, mostly the root
+    "deepsync": [(0, 3, 0, 0), (3, 2, 0, 0), (7, 1, 0, 1), (10, 2, 0, 0), (14, 2, 2, 0)],
+    "deeproll": [(0, 2, 0, 0), (3, 1, 0, 0), (6, 2, 0, 0), (8, 2, 0, 0), (11, 2, 2, 0), (14, 1, 0, 1)],
 }
 
 # Arpeggio orders over [c0, c1, c2, c0+12, c1+12, c2+12].
@@ -97,6 +103,17 @@ DRUMS = {
     "kickrim": {"k": "x.......x..x....", "m": "....x.......x..."},
     "chipbreak": {"k": "x.....x...x.....", "s": "....X..g.g..X..g", "h": "x.x.x.x.x.x.x.x.",
                   "m": "..........x....."},
+    # melodic deep house: four on the floor, soft off-beat open hats, the
+    # clap on 2 and 4, rim and shaker ghosts; a half-time breather.
+    "deep": {"k": "x...x...x...x...", "s": "....x.......x...", "o": "..x...x...x...x.",
+             "r": ".g.g.g.g.g.g.g.g"},
+    "deep2": {"k": "x...x...x...x...", "s": "....x.......x...", "o": "..x...x...x...x.",
+              "h": "g.g.g.g.g.g.g.g.", "m": "...g......g....g"},
+    "deeprim": {"k": "x...x...x...x...", "m": "....x..g....x...", "o": "..x...x...x...x.",
+                "r": "gggggggggggggggg"},
+    "deephalf": {"k": "x.........x.....", "s": "........x.......", "o": "..x...x...x...x.",
+                 "r": ".g.g.g.g.g.g.g.g"},
+    "deepbreak": {"o": "..g...g...g...g.", "r": ".g.g.g.g.g.g.g.g"},
     "pulse": {"k": "x...x...x...x..."},
 }
 
@@ -134,6 +151,20 @@ STYLES = {
         "kit": "darkchip", "drive": "chipbreak", "grooves": ["halfstep", "fouropen", "twostep", "halfbreak"],
         "cycle": True, "breakdown_drums": "kickrim",
         "fills": ["fill", "fill", "build", "fill", "stop"],
+    },
+    "melodic-deep-house": {
+        "mode": "minor", "swing": 0.04,
+        "progs": [[0, 5, 2, 6], [0, 3, 5, 4], [0, 0, 3, 3], [5, 6, 0, 3]], "bridge": [3, 4, 5, 6],
+        "cadence": [5, 6, 0, 0], "sevenths": True, "ninths": True, "lift": [0],
+        "bass": {"wave": "deepbass", "gain": 0.26, "patterns": ["deepsync", "offbeat", "deeproll", "rootfifth"]},
+        "harm": {"kind": "arp", "wave": "softpluck", "gain": 0.07, "rate": 2, "octave": 12,
+                 "patterns": ["up", "broken", "pedal", "updown"], "echo": 0.42},
+        "lead": {"wave": "fm", "gain": 0.06, "octave": 12, "density": 0.3, "p16": 0.08,
+                 "legato": 0.8, "vibrato": 0.0, "echo": 0.32},
+        "pad": {"wave": "supersaw", "gain": 0.15, "lp": 0.03},
+        "kit": "deephouse", "drive": "deep", "grooves": ["deep", "deep2", "deeprim", "deephalf"],
+        "breakdown_drums": "deepbreak", "sweep": True,
+        "fills": ["build", "build", "stop", "build"],
     },
     "synthwave": {
         "mode": "minor", "swing": 0.0,
@@ -204,6 +235,8 @@ KITS = {  # kick (f start, f end, decay s), snare (noise decay, tone Hz, tone ga
                  "lp": 0.55},
     "lofi": {"kick": (95, 45, 0.20), "snare": (0.16, 190.0, 0.3), "hat": 0.03, "bright": 0.45,
              "lp": 0.35},
+    "deephouse": {"kick": (105, 44, 0.30), "snare": (0.09, 0.0, 0.0), "hat": 0.016, "bright": 0.6,
+                  "lp": 0.7, "clap": True},
 }
 
 VEL = {"x": 1.0, "X": 1.25, "g": 0.35, "o": 1.0}
@@ -281,7 +314,7 @@ class Music:
         return 12 * (d // 7) + self.scale[d % 7]
 
     def chord(self, degree: int, shift: int) -> tuple:
-        n = 4 if self.st["sevenths"] else 3
+        n = 5 if self.st.get("ninths") else 4 if self.st["sevenths"] else 3
         base = self.root + shift
         return tuple(base + self.deg(degree + 2 * j) for j in range(n))
 
@@ -361,6 +394,23 @@ class Music:
                 t.append(v)
             e = _env(n, 5, 600)
             t = [t[i] * e[i] * 0.9 for i in range(n)]
+        elif wave == "deepbass":  # warm: a sine sub with a little low-passed saw, a soft attack
+            e = _env(n, 180, 1500)
+            saw = _lowpass([2 * ((i * inc) % 1) - 1 for i in range(n)], 0.03)
+            t = [(0.9 * math.sin(w * i) + 0.12 * math.sin(2 * w * i) + 0.45 * saw[i])
+                 * (0.75 + 0.25 * math.exp(-i / (0.25 * R))) * e[i] for i in range(n)]
+        elif wave == "softpluck":  # a mellow pluck: Karplus-Strong, damped and low-passed, a sine body
+            p = max(2, round(R / f))
+            rng = random.Random(stable("softpluck", semi))
+            buf = [rng.uniform(-1, 1) for _ in range(p)]
+            raw = []
+            for i in range(n):
+                v = buf[i % p]
+                buf[i % p] = 0.496 * (v + buf[(i + 1) % p])
+                raw.append(v)
+            raw = _lowpass(raw, 0.3)
+            e = _env(n, 30, 900)
+            t = [(raw[i] * 1.2 + 0.3 * math.sin(w * i) * math.exp(-i / (0.35 * R))) * e[i] for i in range(n)]
         elif wave == "pluckbass":  # saw with a closing filter (a wah)
             raw = [2 * ((i * inc) % 1) - 1 for i in range(n)]
             out, y = [], 0.0
@@ -653,6 +703,8 @@ class Music:
                     riser = fill in ("build", "stop")
                     cut = 8 if fill == "stop" else 16
                 gain = (0.94, 0.97, 1.0, 1.03)[phrase]  # a phrase swells
+                if self.st.get("sweep"):  # the pad's filter opens over each 4-bar phrase
+                    alpha = round(self.st["pad"]["lp"] * (0.55, 0.75, 1.0, 1.3)[phrase], 4)
             if p["lead"] and kind != "outro" or (kind == "outro" and k < 3):
                 if kind == "drive":
                     use = (k // 4) % 2 == 1  # the motif is stated in the second phrase
@@ -723,6 +775,8 @@ class Music:
                             note(s, ln, H["wave"], semi + H["octave"], H["gain"] * harm_g / len(chord) * 2.2)
         for s, ln, semi in lead:
             note(s, ln, st["lead"]["wave"], semi, st["lead"]["gain"], st["lead"]["vibrato"])
+            if st["lead"].get("echo") and s + 3 < 16:  # a dotted-8th delay
+                note(s + 3, ln, st["lead"]["wave"], semi, st["lead"]["gain"] * st["lead"]["echo"])
         if cut_n is not None:  # a stop: everything breaks off at the half bar
             fade = 400
             for i in range(cut_n, len(ton)):

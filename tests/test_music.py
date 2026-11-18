@@ -200,3 +200,53 @@ class DarkchipTest(unittest.TestCase):
         specs = m.plan(68, self.SEGS)
         grooves = [s[1] for s in specs if s[-1] == "groove" and s[1]]
         self.assertGreaterEqual(len(set(grooves) & set(M.STYLES["darkchip"]["grooves"])), 3, grooves)
+
+
+def beat_bpm(samples, lo=90, hi=150, rate=M.RATE) -> float:
+    """The tempo of the low end: the 10 ms envelope of the low-passed track,
+    its autocorrelation's strongest lag between `lo` and `hi` bpm."""
+    low = M._lowpass(M._lowpass(samples, 0.02), 0.02)
+    w = rate // 100
+    env = [sum(abs(x) for x in low[i:i + w]) for i in range(0, len(low) - w, w)]
+    d = [max(0.0, env[i] - env[i - 1]) for i in range(1, len(env))]  # onsets
+    best, lag_best = -1.0, 0
+    for lag in range(round(6000 / hi), round(6000 / lo) + 1):
+        c = sum(d[i] * d[i - lag] for i in range(lag, len(d)))
+        if c > best:
+            best, lag_best = c, lag
+    return 6000 / lag_best
+
+
+class MelodicDeepHouseTest(unittest.TestCase):
+    """Day 7 (user 2026-11-18: "use music style: melodic deep house")."""
+    SEGS = [(0, "intro"), (6, "drive"), (20, "groove"), (28, "groove"), (36, "groove"), (44, "groove"),
+            (52, "groove"), (60, "outro")]
+
+    def test_minor_ninth_chords(self):
+        m = M.Music(122, "F", seed=7, style="melodic-deep-house")
+        self.assertEqual(m.mode_name, "minor")
+        root = m.chord(0, 0)
+        self.assertEqual([s - root[0] for s in root], [0, 3, 7, 10, 14])  # Fm9
+
+    def test_four_on_the_floor_with_off_beat_hats_and_claps_on_2_and_4(self):
+        for g in M.STYLES["melodic-deep-house"]["grooves"][:3]:
+            pat = M.DRUMS[g]
+            self.assertEqual(pat["k"], "x...x...x...x...", g)
+            self.assertEqual(pat["o"], "..x...x...x...x.", g)
+            back = pat.get("s") or pat.get("m")
+            self.assertTrue(back[4] != "." and back[12] != ".", g)
+
+    def test_warm_tempo_and_loudness(self):
+        segs = [(0, "groove"), (16, "groove")]
+        deep = M.Music(122, "F", seed=7, style="melodic-deep-house").render(32, segs)
+        house = M.Music(122, "F", seed=7, style="house").render(32, segs)
+        sd, sh = M.stats(deep), M.stats(house)
+        self.assertLess(sd["brightness"], sh["brightness"] * 0.8, (sd, sh))  # warmer, rounder
+        self.assertLess(sd["peak_db"], -2.4)
+        self.assertAlmostEqual(sd["rms_db"], -19, delta=1.5)
+        self.assertAlmostEqual(beat_bpm(deep), 122, delta=3)
+
+    def test_the_filter_opens_over_a_phrase(self):
+        m = M.Music(122, "F", seed=7, style="melodic-deep-house")
+        alphas = [s[13] for s in m.plan(68, self.SEGS) if s[-1] == "groove"]
+        self.assertGreater(len(set(alphas)), 2, alphas)
