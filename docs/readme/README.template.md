@@ -4,7 +4,10 @@
      day from the day scripts and journals. Edit the template, not README.md. -->
 # OCW Build Diary
 
-**The art project of [Open Cycling World](https://github.com/newkit/OCW).**
+**🚴 The art project of [Open Cycling World](https://github.com/newkit/OCW)** – the open-source indoor
+cycling game ([▶ try it in your browser](https://newkit.github.io/OCW/) ·
+[downloads](https://github.com/newkit/OCW/releases) ·
+[repository](https://github.com/newkit/OCW)).
 OCW is built by a human and a crowd of AI agents, day and night.
 The OCW Build Diary keeps *everything* that was made on the way: every
 screenshot, video, sound, log, commit, merge and test. From it, each build
