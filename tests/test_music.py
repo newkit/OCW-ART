@@ -250,3 +250,39 @@ class MelodicDeepHouseTest(unittest.TestCase):
         m = M.Music(122, "F", seed=7, style="melodic-deep-house")
         alphas = [s[13] for s in m.plan(68, self.SEGS) if s[-1] == "groove"]
         self.assertGreater(len(set(alphas)), 2, alphas)
+
+
+class LiquidDnbTest(unittest.TestCase):
+    """Day 8 (2026-11-18): liquid drum & bass, a style unlike days 6 and 7."""
+    SEGS = [(0, "intro"), (6, "drive"), (20, "groove"), (28, "groove"), (36, "groove"), (44, "groove"),
+            (52, "groove"), (60, "outro")]
+
+    def test_dorian_ninth_chords(self):
+        m = M.Music(172, "G", seed=8, style="liquid-dnb")
+        self.assertEqual(m.mode_name, "dorian")
+        root = m.chord(0, 0)
+        self.assertEqual([s - root[0] for s in root], [0, 3, 7, 10, 14])  # Gm9
+        four = m.chord(3, 0)
+        self.assertEqual([s - four[0] for s in four], [0, 4, 7, 10, 14])  # C9: dorian's major IV
+
+    def test_two_step_with_the_snare_on_2_and_4(self):
+        for g in M.STYLES["liquid-dnb"]["grooves"][:3]:
+            pat = M.DRUMS[g]
+            self.assertEqual(pat["k"][0], "x", g)
+            self.assertEqual(pat["k"][10], "x", g)
+            self.assertEqual(pat["k"][4] + pat["k"][12], "..", g)  # no four on the floor
+            self.assertEqual(pat["s"][4] + pat["s"][12], "XX", g)
+
+    def test_a_drum_style_per_chapter(self):
+        m = M.Music(172, "G", seed=8, style="liquid-dnb")
+        grooves = [s[1] for s in m.plan(68, self.SEGS) if s[-1] == "groove" and s[1]]
+        self.assertGreaterEqual(len(set(grooves) & set(M.STYLES["liquid-dnb"]["grooves"])), 3, grooves)
+
+    def test_fast_and_loud_enough(self):
+        segs = [(0, "groove"), (16, "groove")]
+        dnb = M.Music(172, "G", seed=8, style="liquid-dnb").render(32, segs)
+        deep = M.Music(122, "G", seed=8, style="melodic-deep-house").render(32, segs)
+        sd, sh = M.stats(dnb), M.stats(deep)
+        self.assertGreater(sd["onsets_per_s"], sh["onsets_per_s"], (sd, sh))  # busier drums
+        self.assertLess(sd["peak_db"], -2.4)
+        self.assertAlmostEqual(sd["rms_db"], -19, delta=1.5)

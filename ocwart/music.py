@@ -7,7 +7,10 @@ progressions): `chiptune`, `synthwave`, `funk`, `house`, `lofi`, `darkchip`
 per chapter in turn; day 6 after "less squeaky and less happy"),
 `melodic-deep-house` (minor 7th and 9th chords, a warm sub bass, a soft
 four-on-the-floor kit, a plucked arpeggio and lead with a dotted-8th delay,
-filter sweeps over each phrase; day 7). A day script
+filter sweeps over each phrase; day 7), `liquid-dnb` (liquid drum & bass,
+about 172 bpm: dorian 9th chords on FM Rhodes, a reese bass over a sine sub,
+the two-step breakbeat with ghost snares, a drum style per chapter; day 8).
+A day script
 can name one (`style`, `mode`); by default the day number picks it. Within a
 video the music follows the sections – intro (title), drive (time-lapse),
 one groove per chapter, outro (end card) – and varies: a progression per
@@ -63,6 +66,10 @@ BASS = {
     # melodic deep house: round, syncopated, mostly the root
     "deepsync": [(0, 3, 0, 0), (3, 2, 0, 0), (7, 1, 0, 1), (10, 2, 0, 0), (14, 2, 2, 0)],
     "deeproll": [(0, 2, 0, 0), (3, 1, 0, 0), (6, 2, 0, 0), (8, 2, 0, 0), (11, 2, 2, 0), (14, 1, 0, 1)],
+    # liquid drum & bass: long rolling sub notes under the two-step kick (steps 0 and 10)
+    "subhold": [(0, 10, 0, 0), (10, 6, 0, 0)],
+    "subroll": [(0, 6, 0, 0), (7, 3, 2, 0), (10, 6, 0, 0)],
+    "subwalk": [(0, 8, 0, 0), (10, 3, 0, 0), (13, 3, 1, 0)],
 }
 
 # Arpeggio orders over [c0, c1, c2, c0+12, c1+12, c2+12].
@@ -115,12 +122,23 @@ DRUMS = {
                  "r": ".g.g.g.g.g.g.g.g"},
     "deepbreak": {"o": "..g...g...g...g.", "r": ".g.g.g.g.g.g.g.g"},
     "pulse": {"k": "x...x...x...x..."},
+    # liquid drum & bass (172 bpm): the two-step – kick on 1 and the "and" of 3,
+    # the snare on 2 and 4 – with ghost snares and shuffled 16th hats; a
+    # ride-like open hat; a half-time breather; hats and rim in the breakdown.
+    "dnb": {"k": "x.........x.....", "s": "....X.......X...", "h": "x.xgx.xgx.xgx.xg"},
+    "dnb2": {"k": "x.........x..x..", "s": "....X..g....X..g", "h": "xgxgxgxgxgxgxgxg"},
+    "dnbride": {"k": "x.....x...x.....", "s": "....X.......X...", "h": "x.......x.......",
+                "o": "..x...x...x...x."},
+    "dnbhalf": {"k": "x.........x.....", "s": "........X.......", "h": "x.x.x.x.x.x.x.x.",
+                "r": ".g.g.g.g.g.g.g.g"},
+    "dnbbreak": {"h": "x.g.x.g.x.g.x.g.", "m": "....x.......x..."},
 }
 
 # Stab rhythms (chord hits): x hit; length of a hit in steps follows.
 STABS = {
     "clav": ("....x..x...x.x..", 1), "clav2": ("..x..x.x..x...x.", 1),
     "offpiano": ("..x...x...x...x.", 2), "piano2": ("x..x..x...x..x..", 2),
+    "rhodes": ("x.....x.........", 6), "rhodes2": ("x.........x.....", 6), "rhodes3": ("x..x......x.....", 3),
     "keys": ("x.........x.....", 10), "keys2": ("x.....x.....x...", 6), "keys3": ("x.......x.......", 8),
 }
 
@@ -165,6 +183,20 @@ STYLES = {
         "kit": "deephouse", "drive": "deep", "grooves": ["deep", "deep2", "deeprim", "deephalf"],
         "breakdown_drums": "deepbreak", "sweep": True,
         "fills": ["build", "build", "stop", "build"],
+    },
+    "liquid-dnb": {
+        "mode": "dorian", "swing": 0.0,
+        "progs": [[0, 3, 0, 3], [0, 2, 3, 6], [3, 2, 0, 0], [6, 3, 0, 4]], "bridge": [2, 3, 4, 6],
+        "cadence": [3, 6, 0, 0], "sevenths": True, "ninths": True, "lift": [0],
+        "bass": {"wave": "reese", "gain": 0.24, "patterns": ["subhold", "subroll", "subwalk"]},
+        "harm": {"kind": "stab", "wave": "fm", "gain": 0.06, "octave": 0,
+                 "patterns": ["rhodes", "rhodes2", "rhodes3"]},
+        "lead": {"wave": "fm", "gain": 0.055, "octave": 12, "density": 0.22, "p16": 0.1,
+                 "legato": 0.9, "vibrato": 0.0, "echo": 0.3},
+        "pad": {"wave": "supersaw", "gain": 0.13, "lp": 0.025},
+        "kit": "liquid", "drive": "dnb2", "grooves": ["dnb", "dnb2", "dnbride", "dnbhalf"],
+        "cycle": True, "breakdown_drums": "dnbbreak", "sweep": True,
+        "fills": ["build", "fill", "stop", "build"],
     },
     "synthwave": {
         "mode": "minor", "swing": 0.0,
@@ -237,6 +269,8 @@ KITS = {  # kick (f start, f end, decay s), snare (noise decay, tone Hz, tone ga
              "lp": 0.35},
     "deephouse": {"kick": (105, 44, 0.30), "snare": (0.09, 0.0, 0.0), "hat": 0.016, "bright": 0.6,
                   "lp": 0.7, "clap": True},
+    "liquid": {"kick": (115, 44, 0.16), "snare": (0.15, 195.0, 0.5), "hat": 0.012, "bright": 0.9,
+               "lp": 1.0},
 }
 
 VEL = {"x": 1.0, "X": 1.25, "g": 0.35, "o": 1.0}
@@ -399,6 +433,10 @@ class Music:
             saw = _lowpass([2 * ((i * inc) % 1) - 1 for i in range(n)], 0.03)
             t = [(0.9 * math.sin(w * i) + 0.12 * math.sin(2 * w * i) + 0.45 * saw[i])
                  * (0.75 + 0.25 * math.exp(-i / (0.25 * R))) * e[i] for i in range(n)]
+        elif wave == "reese":  # two detuned saws, low-passed, over a sine sub; a slow swell
+            e = _env(n, 600, 1500)
+            saw = _lowpass([((i * inc * 0.996) % 1) + ((i * inc * 1.004) % 1) - 1 for i in range(n)], 0.025)
+            t = [(0.85 * math.sin(w * i) + 0.6 * saw[i]) * e[i] for i in range(n)]
         elif wave == "softpluck":  # a mellow pluck: Karplus-Strong, damped and low-passed, a sine body
             p = max(2, round(R / f))
             rng = random.Random(stable("softpluck", semi))
