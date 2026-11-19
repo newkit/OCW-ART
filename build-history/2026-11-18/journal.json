@@ -1,0 +1,6844 @@
+{
+ "day": "2026-11-18",
+ "number": 8,
+ "commits": [
+  {
+   "sha": "392669c",
+   "time": "00:01:22",
+   "merge": false,
+   "subject": "Build dashboard 1.7.0: battery of laptops and the Meta Quest on the machine cards",
+   "added": 1156,
+   "removed": 3
+  },
+  {
+   "sha": "8e3f79c",
+   "time": "00:04:19",
+   "merge": false,
+   "subject": "Road damage: format, clippy, the remaining RoadStrip literals",
+   "added": 21,
+   "removed": 11
+  },
+  {
+   "sha": "5b98228",
+   "time": "00:09:11",
+   "merge": false,
+   "subject": "Config secrets in a separate secrets.toml; Connect to a server = address field + recent servers; no start choice in the browser; 'cannot hear you' only by choice; who hears me and whom I hear are two separate voice settings (decisions from the build dashboard, 2026-11-18; §3.2.4 Q2/Q5/Q6, §7.1.7 Q12/Q16; spec 4.70)",
+   "added": 7,
+   "removed": 6
+  },
+  {
+   "sha": "52152c7",
+   "time": "00:09:30",
+   "merge": true,
+   "subject": "Merge the build dashboard's battery readings: Weela's laptop battery (draining on mains warned), the Quest's battery and Link state from the runtime's log and cache (dashboard 1.7.0)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "439f253",
+   "time": "00:25:47",
+   "merge": false,
+   "subject": "The HUD has a navigation map in the lower right corner, styled like a bike computer (spec 4.68, §3.2 Navigation map)",
+   "added": 4602,
+   "removed": 384
+  },
+  {
+   "sha": "97a9e22",
+   "time": "00:26:26",
+   "merge": true,
+   "subject": "Merge origin/main into merge/studio-logo",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "092bb0e",
+   "time": "00:27:43",
+   "merge": false,
+   "subject": "Keep the remembered devices in ~/.config/ocw/devices.toml and install an example strava.toml there on kiosk deploys (spec 4.70)",
+   "added": 57,
+   "removed": 0
+  },
+  {
+   "sha": "1caf480",
+   "time": "00:27:51",
+   "merge": false,
+   "subject": "Release 0.2.3",
+   "added": 28,
+   "removed": 28
+  },
+  {
+   "sha": "489d971",
+   "time": "00:31:24",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-a01e442248925aa9a",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a2fa503",
+   "time": "00:36:37",
+   "merge": false,
+   "subject": "CLAUDE.md: the kiosk app is stopped and has no autostart; never re-enable it unless the user asks",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "8491d33",
+   "time": "01:07:23",
+   "merge": false,
+   "subject": "OCW Studio's Models workspace shows every model file: browser, viewer, stats, the validator's findings and the try-on; ocw-assets model import / export / diff and the extended validator (spec 4.66, §14 Phase 16 16B / E3, Phase 15 M2 15J)",
+   "added": 6468,
+   "removed": 228
+  },
+  {
+   "sha": "ef95087",
+   "time": "01:07:45",
+   "merge": false,
+   "subject": "Near-field ground detail beside the roads: stones, gravel, rocks, dirt patches, tufts, stalks, ferns, shrubs, leaves, needles, cones, twigs (spec 4.71, §4.6.2)",
+   "added": 2439,
+   "removed": 2
+  },
+  {
+   "sha": "01dac42",
+   "time": "01:08:42",
+   "merge": true,
+   "subject": "Merge OCW Studio's Models workspace (E3) and the model tools (M2): browser, viewer with light presets, LOD, gizmos, try-on, the extended validator, model diff / import / export (spec 4.71)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "3be1452",
+   "time": "01:17:59",
+   "merge": false,
+   "subject": "CLAUDE.md: never record a build machine's whole desktop for test media; only the app's window",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "a4b6861",
+   "time": "01:23:27",
+   "merge": false,
+   "subject": "road.damage: draw every road in one OSM smoothness (screenshots of each level); spec 4.71 draft",
+   "added": 133,
+   "removed": 6
+  },
+  {
+   "sha": "de42d4b",
+   "time": "01:26:45",
+   "merge": false,
+   "subject": "Road damage: skip what the pixel footprint fades, wheel tracks once, shorter reach",
+   "added": 21,
+   "removed": 12
+  },
+  {
+   "sha": "fc20600",
+   "time": "01:30:47",
+   "merge": false,
+   "subject": "README: new in-game pictures of today's main (HUD, riders, workshop, browser)",
+   "added": 110,
+   "removed": 11
+  },
+  {
+   "sha": "267ad66",
+   "time": "01:31:40",
+   "merge": true,
+   "subject": "Merge the README's new in-game pictures of 2026-11-17 (hero, worlds, workshop, bike stand, browser)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "e2684ca",
+   "time": "01:47:14",
+   "merge": false,
+   "subject": "Navigation map: the fps cost measured on marge (map on 38.6 fps, off 38.5 fps; spec §3.2)",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "eab6c7b",
+   "time": "02:34:33",
+   "merge": false,
+   "subject": "Road damage: larger, more frequent potholes on bad roads; stones in the surface's tone; stronger cracks",
+   "added": 12,
+   "removed": 12
+  },
+  {
+   "sha": "ff38918",
+   "time": "02:39:15",
+   "merge": true,
+   "subject": "Merge origin/main into merge/models-e3",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "9bb45b6",
+   "time": "02:40:34",
+   "merge": true,
+   "subject": "Merge the near-field ground detail: stones, gravel, dirt, moss, leaves, twigs and small plants beside the road, by region, season and snow (spec 4.72)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "229287e",
+   "time": "02:43:34",
+   "merge": false,
+   "subject": "Spec 4.71: smoothness shares per world, fps on marge",
+   "added": 3,
+   "removed": 3
+  },
+  {
+   "sha": "29dd08b",
+   "time": "02:57:18",
+   "merge": false,
+   "subject": "Release scripts: scripts/release-linux.sh (AppImage + tarball with ocw-studio) and scripts/release-web.sh (browser zip with README), used for v0.2.3",
+   "added": 165,
+   "removed": 0
+  },
+  {
+   "sha": "5ff8dc4",
+   "time": "02:59:21",
+   "merge": true,
+   "subject": "Merge the release scripts used for 0.2.3 (scripts/release-linux.sh, scripts/release-web.sh)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a111f5d",
+   "time": "03:15:23",
+   "merge": false,
+   "subject": "Place names in the world packages and on the studio's 2D map: smaller places hidden when crowded (spec 4.66, §4.7, §14 Phase 16 16A)",
+   "added": 2070,
+   "removed": 4
+  },
+  {
+   "sha": "78fa791",
+   "time": "03:25:35",
+   "merge": true,
+   "subject": "Merge origin/main into merge/ground-detail",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "2516418",
+   "time": "03:28:00",
+   "merge": false,
+   "subject": "ocw-weather: compare the Open-Meteo visibility within 0.1 m (MSVC parses 34419.996, so the Windows test failed)",
+   "added": 2,
+   "removed": 1
+  },
+  {
+   "sha": "c1d7a41",
+   "time": "03:28:31",
+   "merge": true,
+   "subject": "Merge the HUD navigation map: a bike-computer style map in the lower right, heading-up, route in magenta, next-turn banner, auto zoom, night palette; the shared ocw-map crate (spec 4.73)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "3393004",
+   "time": "03:59:35",
+   "merge": false,
+   "subject": "A photo just saved shows for 3 seconds in the HUD; photos and screenshots go to the Pictures folder's OCW, in the browser to a folder chosen once or as OCW-… downloads (spec 4.73, §3.2 Photo preview, §2.11 Q3)",
+   "added": 2179,
+   "removed": 135
+  },
+  {
+   "sha": "2fdc8de",
+   "time": "04:01:30",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-a01e442248925aa9a",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b9846ba",
+   "time": "04:11:05",
+   "merge": false,
+   "subject": "Simple Strava upload for every rider, no API app: Upload to Strava (in your browser) and Marked as uploaded on a ride's page (spec 4.71, §2.8.1 Simple upload)",
+   "added": 1609,
+   "removed": 122
+  },
+  {
+   "sha": "1311863",
+   "time": "04:25:00",
+   "merge": true,
+   "subject": "Merge the 3-second photo preview in the HUD and the photos folder Pictures/OCW (desktop and browser; spec 4.74, §2.11 Q3)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ca55633",
+   "time": "04:32:21",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-a01c5b7f390a5e38e",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "19a2ab8",
+   "time": "04:59:20",
+   "merge": true,
+   "subject": "Merge cracks, potholes and loose stones on the roads, set by OSM smoothness (surface, tracktype; RCND package section, world-builder condition; spec 4.75)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "f9e733f",
+   "time": "05:00:06",
+   "merge": true,
+   "subject": "Merge origin/main (photo preview, Pictures/OCW photos folder) into strava-simple-upload; the Strava upload copies the ride's photos from the photos folder through their sidecars; Strava row renumbered 4.76",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "35b8b0b",
+   "time": "05:02:39",
+   "merge": false,
+   "subject": "ocw-map: the test package's road strip gets the new condition field (merge of road damage)",
+   "added": 1,
+   "removed": 0
+  },
+  {
+   "sha": "e0c8eae",
+   "time": "05:24:57",
+   "merge": true,
+   "subject": "Merge origin/main; place names on the HUD navigation map: PLCE places fill the labels hook, chosen by zoom and decluttered with layout_labels (spec 4.74, §3.2 Navigation map)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "c568f57",
+   "time": "05:33:34",
+   "merge": true,
+   "subject": "Merge the simple Strava upload in the browser for every rider (no API app, no subscription): ride page row, file manager + strava.com/upload/select, Marked as uploaded; S records without strava.toml (spec 4.76)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "c1685a8",
+   "time": "06:20:00",
+   "merge": false,
+   "subject": "Navigation map names: a long name beside the rider goes above the arrow, boxes move into the map, the text node uses the layout's box (no clipped names); regression test (spec 4.74)",
+   "added": 63,
+   "removed": 23
+  },
+  {
+   "sha": "9d2c2c1",
+   "time": "06:20:16",
+   "merge": false,
+   "subject": "cargo fmt (navigation map names)",
+   "added": 5,
+   "removed": 4
+  },
+  {
+   "sha": "3fece53",
+   "time": "06:27:32",
+   "merge": false,
+   "subject": "Navigation map names over the route and the riders' dots, on a translucent pill in the map's ground colour (day and night); stacking regression test (spec 4.74)",
+   "added": 110,
+   "removed": 43
+  },
+  {
+   "sha": "d97076a",
+   "time": "06:28:27",
+   "merge": true,
+   "subject": "Merge place names: PLCE package section, world-builder places, decluttered labels on the studio map and on the HUD navi map (spec 4.77)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "c05846c",
+   "time": "06:28:41",
+   "merge": false,
+   "subject": "ocw-world: the places test's comment names spec 4.77 (renumbered at merge)",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "ff5e128",
+   "time": "06:54:01",
+   "merge": false,
+   "subject": "README: link the OCW Build Diary (the art project) at the top – the diary video, the day galleries, the repository",
+   "added": 7,
+   "removed": 0
+  },
+  {
+   "sha": "a31b7d5",
+   "time": "07:08:02",
+   "merge": false,
+   "subject": "Standalone VR starts with WebXR on the Quest 1: V8 WebXR basic first, measure in the headset, then decide between V3 and native (Phase 14 Q5 decided; plan 14I; spec 4.78)",
+   "added": 24,
+   "removed": 2
+  },
+  {
+   "sha": "04a94fb",
+   "time": "09:32:35",
+   "merge": false,
+   "subject": "Frame time p50 / p95 in the render-rate log and measure-fps.sh; feature-fps-cost.sh measures single render features on a quiet machine",
+   "added": 175,
+   "removed": 5
+  },
+  {
+   "sha": "c8fcfb5",
+   "time": "10:34:43",
+   "merge": false,
+   "subject": "Every Strava (S … S) recording is written to the user's home directory: FIT and photos in a subfolder of ~/Pictures/OCW named by ISO date and location (the user; §2.8.1, Q7 superseded; spec 4.79)",
+   "added": 5,
+   "removed": 2
+  },
+  {
+   "sha": "cdc7736",
+   "time": "10:37:29",
+   "merge": false,
+   "subject": "Strava recordings go to ~/Activities/OCW, user-configurable (activities.folder in the settings file, Menu → Settings); other photos stay in ~/Pictures/OCW (the user; §2.8.1; spec 4.80)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "c2c6abe",
+   "time": "10:41:18",
+   "merge": false,
+   "subject": "Bike forks raked forward: the blades run down the steering axis and bend forward to the axle (spec §14 Phase 15, bug fix)",
+   "added": 255,
+   "removed": 25
+  },
+  {
+   "sha": "1dfd88d",
+   "time": "10:42:36",
+   "merge": false,
+   "subject": "Plan for ANT+ heart-rate straps: second device backend over an ANT USB stick, desktop first; planning only, open questions (spec 4.79)",
+   "added": 157,
+   "removed": 4
+  },
+  {
+   "sha": "05860eb",
+   "time": "10:43:27",
+   "merge": true,
+   "subject": "Merge the plan for ANT+ heart-rate straps (§3.4.1, Phase 17; planning, open questions; spec 4.81)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "87bf557",
+   "time": "11:00:10",
+   "merge": false,
+   "subject": "Spec 4.79 / 15K: the fork raked forward (bug fix note); rustfmt of the fork tests",
+   "added": 38,
+   "removed": 8
+  },
+  {
+   "sha": "dfc65f6",
+   "time": "11:12:32",
+   "merge": false,
+   "subject": "Every S recording is written to its own folder in ~/Activities/OCW (FIT and photos, YYYY-MM-DD <place>), in both apps; the simple upload opens that folder (§2.8.1; spec 4.81)",
+   "added": 2124,
+   "removed": 169
+  },
+  {
+   "sha": "153e3dd",
+   "time": "11:15:06",
+   "merge": false,
+   "subject": "One folder for everything OCW saves: ~/Activities/OCW; the photos folder ~/Pictures/OCW and photos.folder go away (the user; §2.8.1, §2.11; spec 4.82)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "bafcfe5",
+   "time": "11:15:46",
+   "merge": true,
+   "subject": "Merge origin/main (spec 4.82: one folder for everything)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "62052ca",
+   "time": "11:30:37",
+   "merge": true,
+   "subject": "Merge the bike forks raked forward: blades curve forward to the axle, the MTB fork ahead of the steering axis; all six bikes re-exported (spec 4.83, 15K)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "eeef7f1",
+   "time": "11:32:15",
+   "merge": false,
+   "subject": "One folder for everything: screenshots and loose photos go to a per-day folder in ~/Activities/OCW; the photos folder and photos.folder are gone (§2.8.1, spec 4.82 built as 4.83)",
+   "added": 220,
+   "removed": 375
+  },
+  {
+   "sha": "b68adc4",
+   "time": "11:39:53",
+   "merge": false,
+   "subject": "CI: install the Linux packages without recommends (126 MB → a fraction) and give each apt attempt its own 5 min limit, so a slow mirror is retried instead of timing out the step",
+   "added": 8,
+   "removed": 3
+  },
+  {
+   "sha": "2f76e3f",
+   "time": "11:49:09",
+   "merge": false,
+   "subject": "test-activities-folder.sh: pictures at game times (X11 software rendering lags the wall clock)",
+   "added": 13,
+   "removed": 8
+  },
+  {
+   "sha": "5657002",
+   "time": "12:03:33",
+   "merge": true,
+   "subject": "Merge origin/main into merge/fork",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ee694b8",
+   "time": "12:23:11",
+   "merge": true,
+   "subject": "Merge one folder for everything: S recordings (FIT + photos) in ~/Activities/OCW/<date place>, loose photos per day, activities.folder in settings and Menu, the photos folder removed; S in the browser too (spec 4.84)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "9dbe804",
+   "time": "12:41:25",
+   "merge": false,
+   "subject": "README: where OCW keeps its files on Linux, Windows and macOS (config, data, activities folders, the overrides, the browser)",
+   "added": 38,
+   "removed": 2
+  },
+  {
+   "sha": "1e659ad",
+   "time": "12:42:20",
+   "merge": false,
+   "subject": "Strava recording without Strava set up: S always records, the recording waits locally and is uploaded once credentials are provided (the user; §2.8.1)",
+   "added": 3,
+   "removed": 1
+  },
+  {
+   "sha": "ef0fa38",
+   "time": "12:47:17",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into merge/activities",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "f3faffd",
+   "time": "13:30:18",
+   "merge": false,
+   "subject": "Strava recordings made without Strava set up wait and are uploaded once the credentials come; ask before more than three (spec §2.8.1, 4.86)",
+   "added": 1996,
+   "removed": 133
+  },
+  {
+   "sha": "e5bf0eb",
+   "time": "13:34:01",
+   "merge": false,
+   "subject": "CLAUDE.md: Weela takes general building tasks too; watch its battery (user 2026-11-18)",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "6b716af",
+   "time": "14:13:44",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into strava-pending",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "8c44d49",
+   "time": "14:14:39",
+   "merge": true,
+   "subject": "Merge Strava recordings without set-up: waiting locally, uploaded when credentials appear (also while running), ask before more than 3; ride-page states (spec 4.86)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "4fa23fa",
+   "time": "14:15:42",
+   "merge": false,
+   "subject": "Release 0.2.4",
+   "added": 29,
+   "removed": 29
+  },
+  {
+   "sha": "6165503",
+   "time": "18:41:29",
+   "merge": false,
+   "subject": "Ground detail, road damage and the HUD navigation map cost under 0.2 ms a frame each at 1080p High on marge's GPU – measured on a quiet machine, nothing to cut (spec 4.87)",
+   "added": 17,
+   "removed": 6
+  },
+  {
+   "sha": "5023175",
+   "time": "18:42:24",
+   "merge": true,
+   "subject": "Merge the frame-rate cost of ground detail, road damage and the navi map, measured on a quiet marge: each under 0.2 ms at 1080p High; --log-fps p50/p95, scripts/feature-fps-cost.sh (spec 4.87)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "14b7572",
+   "time": "21:23:24",
+   "merge": false,
+   "subject": "CLAUDE.md: leela builds again with a battery guard (stop below 20 %, start above 80 %; user 2026-11-18)",
+   "added": 3,
+   "removed": 3
+  },
+  {
+   "sha": "d981459",
+   "time": "21:32:41",
+   "merge": false,
+   "subject": "Build dashboard 1.8.0: battery guard – leela stops building below 20 % and builds again above 80 %",
+   "added": 629,
+   "removed": 25
+  },
+  {
+   "sha": "d6c7640",
+   "time": "21:33:28",
+   "merge": true,
+   "subject": "Merge the build dashboard's battery guard per machine (leela: stop below 20 %, start above 80 %; dashboard 1.8.0)",
+   "added": 0,
+   "removed": 0
+  }
+ ],
+ "merges": 28,
+ "lines_added": 27013,
+ "lines_removed": 1847,
+ "spec_versions": [
+  "4.70",
+  "4.68",
+  "4.70",
+  "4.66",
+  "4.71",
+  "4.71",
+  "4.71",
+  "4.72",
+  "4.71",
+  "4.66",
+  "4.73",
+  "4.73",
+  "4.71",
+  "4.74",
+  "4.75",
+  "4.74",
+  "4.76",
+  "4.74",
+  "4.74",
+  "4.77",
+  "4.77",
+  "4.78",
+  "4.79",
+  "4.80",
+  "4.79",
+  "4.81",
+  "4.79",
+  "4.81",
+  "4.82",
+  "4.82",
+  "4.83",
+  "4.82",
+  "4.84",
+  "4.86",
+  "4.87",
+  "4.87"
+ ],
+ "tests": null,
+ "media": [
+  {
+   "file": "001547-scenes-navi-wayland-navi-li-free-day.jpg",
+   "time": "00:15:47",
+   "kind": "image"
+  },
+  {
+   "file": "001602-scenes-navi-wayland-navi-li-route-night.jpg",
+   "time": "00:16:02",
+   "kind": "image"
+  },
+  {
+   "file": "001616-scenes-navi-wayland-navi-li-route-day-720p.jpg",
+   "time": "00:16:16",
+   "kind": "image"
+  },
+  {
+   "file": "001635-scenes-navi-wayland-navi-bf-free-day.jpg",
+   "time": "00:16:35",
+   "kind": "image"
+  },
+  {
+   "file": "001653-scenes-navi-wayland-navi-bf-route-night.jpg",
+   "time": "00:16:53",
+   "kind": "image"
+  },
+  {
+   "file": "001709-scenes-navi-wayland-navi-tf-free-day.jpg",
+   "time": "00:17:09",
+   "kind": "image"
+  },
+  {
+   "file": "001726-scenes-navi-wayland-navi-tf-route-night.jpg",
+   "time": "00:17:26",
+   "kind": "image"
+  },
+  {
+   "file": "001801-shot-navi-li-free-day.jpg",
+   "time": "00:18:01",
+   "kind": "image"
+  },
+  {
+   "file": "001826-shot-navi-li-route-night.jpg",
+   "time": "00:18:26",
+   "kind": "image"
+  },
+  {
+   "file": "001909-shot-navi-bf-route-night.jpg",
+   "time": "00:19:09",
+   "kind": "image"
+  },
+  {
+   "file": "001942-shot-navi-tf-free-day.jpg",
+   "time": "00:19:42",
+   "kind": "image"
+  },
+  {
+   "file": "003917-shot-liechtenstein-meadow-road-rider-off-x11.jpg",
+   "time": "00:39:17",
+   "kind": "image"
+  },
+  {
+   "file": "003936-shot-wayland-liechtenstein-meadow-road-rider-off-wayland.jpg",
+   "time": "00:39:36",
+   "kind": "image"
+  },
+  {
+   "file": "004019-shot-liechtenstein-meadow-road-rider-on-x11.jpg",
+   "time": "00:40:19",
+   "kind": "image"
+  },
+  {
+   "file": "004037-shot-wayland-liechtenstein-meadow-road-rider-on-wayland.jpg",
+   "time": "00:40:37",
+   "kind": "image"
+  },
+  {
+   "file": "004114-shot-liechtenstein-meadow-road-orbit-off-x11.jpg",
+   "time": "00:41:14",
+   "kind": "image"
+  },
+  {
+   "file": "004133-shot-wayland-liechtenstein-meadow-road-orbit-off-wayland.jpg",
+   "time": "00:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "004213-shot-liechtenstein-meadow-road-orbit-on-x11.jpg",
+   "time": "00:42:13",
+   "kind": "image"
+  },
+  {
+   "file": "004232-shot-wayland-liechtenstein-meadow-road-orbit-on-wayland.jpg",
+   "time": "00:42:32",
+   "kind": "image"
+  },
+  {
+   "file": "004319-shot-blackforest-autumn-rider-off-x11.jpg",
+   "time": "00:43:19",
+   "kind": "image"
+  },
+  {
+   "file": "004340-shot-wayland-blackforest-autumn-rider-off-wayland.jpg",
+   "time": "00:43:40",
+   "kind": "image"
+  },
+  {
+   "file": "004414-shot-blackforest-autumn-rider-on-x11.jpg",
+   "time": "00:44:14",
+   "kind": "image"
+  },
+  {
+   "file": "004434-shot-wayland-blackforest-autumn-rider-on-wayland.jpg",
+   "time": "00:44:34",
+   "kind": "image"
+  },
+  {
+   "file": "004514-shot-blackforest-autumn-orbit-off-x11.jpg",
+   "time": "00:45:14",
+   "kind": "image"
+  },
+  {
+   "file": "004535-shot-wayland-blackforest-autumn-orbit-off-wayland.jpg",
+   "time": "00:45:35",
+   "kind": "image"
+  },
+  {
+   "file": "004621-shot-blackforest-autumn-orbit-on-x11.jpg",
+   "time": "00:46:21",
+   "kind": "image"
+  },
+  {
+   "file": "004642-shot-wayland-blackforest-autumn-orbit-on-wayland.jpg",
+   "time": "00:46:42",
+   "kind": "image"
+  },
+  {
+   "file": "005148-road-damage-2026-11-18-after-damage-li-main-rider.jpg",
+   "time": "00:51:48",
+   "kind": "image"
+  },
+  {
+   "file": "005201-road-damage-2026-11-18-after-damage-li-main-close.jpg",
+   "time": "00:52:01",
+   "kind": "image"
+  },
+  {
+   "file": "005215-road-damage-2026-11-18-after-damage-li-minor-rider.jpg",
+   "time": "00:52:15",
+   "kind": "image"
+  },
+  {
+   "file": "005227-road-damage-2026-11-18-after-damage-li-minor-close.jpg",
+   "time": "00:52:27",
+   "kind": "image"
+  },
+  {
+   "file": "005240-road-damage-2026-11-18-after-damage-li-minor-wet-rider.jpg",
+   "time": "00:52:40",
+   "kind": "image"
+  },
+  {
+   "file": "005253-road-damage-2026-11-18-after-damage-li-minor-wet-close.jpg",
+   "time": "00:52:53",
+   "kind": "image"
+  },
+  {
+   "file": "005306-road-damage-2026-11-18-after-damage-li-track-rider.jpg",
+   "time": "00:53:06",
+   "kind": "image"
+  },
+  {
+   "file": "005319-road-damage-2026-11-18-after-damage-li-track-close.jpg",
+   "time": "00:53:19",
+   "kind": "image"
+  },
+  {
+   "file": "005332-road-damage-2026-11-18-after-damage-li-smooth-excellent-close.jpg",
+   "time": "00:53:32",
+   "kind": "image"
+  },
+  {
+   "file": "005345-road-damage-2026-11-18-after-damage-li-smooth-good-close.jpg",
+   "time": "00:53:45",
+   "kind": "image"
+  },
+  {
+   "file": "005358-road-damage-2026-11-18-after-damage-li-smooth-intermediate-close.jpg",
+   "time": "00:53:58",
+   "kind": "image"
+  },
+  {
+   "file": "005411-road-damage-2026-11-18-after-damage-li-smooth-bad-close.jpg",
+   "time": "00:54:11",
+   "kind": "image"
+  },
+  {
+   "file": "005425-road-damage-2026-11-18-after-damage-li-smooth-very-bad-close.jpg",
+   "time": "00:54:25",
+   "kind": "image"
+  },
+  {
+   "file": "005438-road-damage-2026-11-18-after-damage-li-smooth-horrible-close.jpg",
+   "time": "00:54:38",
+   "kind": "image"
+  },
+  {
+   "file": "005451-road-damage-2026-11-18-after-damage-li-smooth-very-horrible-close.jpg",
+   "time": "00:54:51",
+   "kind": "image"
+  },
+  {
+   "file": "005505-road-damage-2026-11-18-after-damage-li-junction-rider.jpg",
+   "time": "00:55:05",
+   "kind": "image"
+  },
+  {
+   "file": "005518-road-damage-2026-11-18-after-damage-li-junction-close.jpg",
+   "time": "00:55:18",
+   "kind": "image"
+  },
+  {
+   "file": "005535-road-damage-2026-11-18-after-damage-bf-main-rider.jpg",
+   "time": "00:55:35",
+   "kind": "image"
+  },
+  {
+   "file": "005552-road-damage-2026-11-18-after-damage-bf-main-close.jpg",
+   "time": "00:55:52",
+   "kind": "image"
+  },
+  {
+   "file": "005609-road-damage-2026-11-18-after-damage-bf-minor-rider.jpg",
+   "time": "00:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "005627-road-damage-2026-11-18-after-damage-bf-minor-close.jpg",
+   "time": "00:56:27",
+   "kind": "image"
+  },
+  {
+   "file": "005643-road-damage-2026-11-18-after-damage-bf-minor-wet-rider.jpg",
+   "time": "00:56:43",
+   "kind": "image"
+  },
+  {
+   "file": "005659-road-damage-2026-11-18-after-damage-bf-minor-wet-close.jpg",
+   "time": "00:56:59",
+   "kind": "image"
+  },
+  {
+   "file": "005715-road-damage-2026-11-18-after-damage-bf-track-rider.jpg",
+   "time": "00:57:15",
+   "kind": "image"
+  },
+  {
+   "file": "005733-road-damage-2026-11-18-after-damage-bf-track-close.jpg",
+   "time": "00:57:33",
+   "kind": "image"
+  },
+  {
+   "file": "005750-road-damage-2026-11-18-after-damage-bf-smooth-excellent-close.jpg",
+   "time": "00:57:50",
+   "kind": "image"
+  },
+  {
+   "file": "005807-road-damage-2026-11-18-after-damage-bf-smooth-good-close.jpg",
+   "time": "00:58:07",
+   "kind": "image"
+  },
+  {
+   "file": "005825-road-damage-2026-11-18-after-damage-bf-smooth-intermediate-close.jpg",
+   "time": "00:58:25",
+   "kind": "image"
+  },
+  {
+   "file": "005842-road-damage-2026-11-18-after-damage-bf-smooth-bad-close.jpg",
+   "time": "00:58:42",
+   "kind": "image"
+  },
+  {
+   "file": "005859-road-damage-2026-11-18-after-damage-bf-smooth-very-bad-close.jpg",
+   "time": "00:58:59",
+   "kind": "image"
+  },
+  {
+   "file": "005916-road-damage-2026-11-18-after-damage-bf-smooth-horrible-close.jpg",
+   "time": "00:59:16",
+   "kind": "image"
+  },
+  {
+   "file": "005934-road-damage-2026-11-18-after-damage-bf-smooth-very-horrible-close.jpg",
+   "time": "00:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "005951-road-damage-2026-11-18-after-damage-bf-smooth-impassable-close.jpg",
+   "time": "00:59:51",
+   "kind": "image"
+  },
+  {
+   "file": "010008-road-damage-2026-11-18-after-damage-bf-junction-rider.jpg",
+   "time": "01:00:08",
+   "kind": "image"
+  },
+  {
+   "file": "010026-road-damage-2026-11-18-after-damage-bf-junction-close.jpg",
+   "time": "01:00:26",
+   "kind": "image"
+  },
+  {
+   "file": "010042-road-damage-2026-11-18-after-damage-tf-main-rider.jpg",
+   "time": "01:00:42",
+   "kind": "image"
+  },
+  {
+   "file": "010059-road-damage-2026-11-18-after-damage-tf-main-close.jpg",
+   "time": "01:00:59",
+   "kind": "image"
+  },
+  {
+   "file": "010114-road-damage-2026-11-18-after-damage-tf-minor-rider.jpg",
+   "time": "01:01:14",
+   "kind": "image"
+  },
+  {
+   "file": "010130-road-damage-2026-11-18-after-damage-tf-minor-close.jpg",
+   "time": "01:01:30",
+   "kind": "image"
+  },
+  {
+   "file": "010146-road-damage-2026-11-18-after-damage-tf-minor-wet-rider.jpg",
+   "time": "01:01:46",
+   "kind": "image"
+  },
+  {
+   "file": "010202-road-damage-2026-11-18-after-damage-tf-minor-wet-close.jpg",
+   "time": "01:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "010218-road-damage-2026-11-18-after-damage-tf-track-rider.jpg",
+   "time": "01:02:18",
+   "kind": "image"
+  },
+  {
+   "file": "010234-road-damage-2026-11-18-after-damage-tf-track-close.jpg",
+   "time": "01:02:34",
+   "kind": "image"
+  },
+  {
+   "file": "010249-road-damage-2026-11-18-after-damage-tf-smooth-excellent-close.jpg",
+   "time": "01:02:49",
+   "kind": "image"
+  },
+  {
+   "file": "010304-road-damage-2026-11-18-after-damage-tf-smooth-good-close.jpg",
+   "time": "01:03:04",
+   "kind": "image"
+  },
+  {
+   "file": "010319-road-damage-2026-11-18-after-damage-tf-smooth-intermediate-close.jpg",
+   "time": "01:03:19",
+   "kind": "image"
+  },
+  {
+   "file": "010334-road-damage-2026-11-18-after-damage-tf-smooth-bad-close.jpg",
+   "time": "01:03:34",
+   "kind": "image"
+  },
+  {
+   "file": "010350-road-damage-2026-11-18-after-damage-tf-smooth-very-bad-close.jpg",
+   "time": "01:03:50",
+   "kind": "image"
+  },
+  {
+   "file": "010404-models-e3-rider.jpg",
+   "time": "01:04:04",
+   "kind": "image"
+  },
+  {
+   "file": "010406-road-damage-2026-11-18-after-damage-tf-smooth-horrible-close.jpg",
+   "time": "01:04:06",
+   "kind": "image"
+  },
+  {
+   "file": "010416-models-e3-bike.jpg",
+   "time": "01:04:16",
+   "kind": "image"
+  },
+  {
+   "file": "010420-road-damage-2026-11-18-after-damage-tf-smooth-very-horrible-close.jpg",
+   "time": "01:04:20",
+   "kind": "image"
+  },
+  {
+   "file": "010427-models-e3-wireframe.jpg",
+   "time": "01:04:27",
+   "kind": "image"
+  },
+  {
+   "file": "010435-road-damage-2026-11-18-after-damage-tf-smooth-impassable-close.jpg",
+   "time": "01:04:35",
+   "kind": "image"
+  },
+  {
+   "file": "010438-models-e3-normals-highlight.jpg",
+   "time": "01:04:38",
+   "kind": "image"
+  },
+  {
+   "file": "010450-models-e3-lod-auto-far.jpg",
+   "time": "01:04:50",
+   "kind": "image"
+  },
+  {
+   "file": "010450-road-damage-2026-11-18-after-damage-tf-junction-rider.jpg",
+   "time": "01:04:50",
+   "kind": "image"
+  },
+  {
+   "file": "010501-models-e3-lod-near.jpg",
+   "time": "01:05:01",
+   "kind": "image"
+  },
+  {
+   "file": "010504-road-damage-2026-11-18-after-damage-tf-junction-close.jpg",
+   "time": "01:05:04",
+   "kind": "image"
+  },
+  {
+   "file": "010513-models-e3-lod1-chosen.jpg",
+   "time": "01:05:13",
+   "kind": "image"
+  },
+  {
+   "file": "010517-road-damage-2026-11-18-before-damage-li-main-rider.jpg",
+   "time": "01:05:17",
+   "kind": "image"
+  },
+  {
+   "file": "010524-models-e3-lod-tree-lod1.jpg",
+   "time": "01:05:24",
+   "kind": "image"
+  },
+  {
+   "file": "010530-road-damage-2026-11-18-before-damage-li-main-close.jpg",
+   "time": "01:05:30",
+   "kind": "image"
+  },
+  {
+   "file": "010535-models-e3-helmet-tryon-fat.jpg",
+   "time": "01:05:35",
+   "kind": "image"
+  },
+  {
+   "file": "010542-road-damage-2026-11-18-before-damage-li-minor-rider.jpg",
+   "time": "01:05:42",
+   "kind": "image"
+  },
+  {
+   "file": "010547-models-e3-helmet-tryon-slim.jpg",
+   "time": "01:05:47",
+   "kind": "image"
+  },
+  {
+   "file": "010554-road-damage-2026-11-18-before-damage-li-minor-close.jpg",
+   "time": "01:05:54",
+   "kind": "image"
+  },
+  {
+   "file": "010558-models-e3-ride-drops.jpg",
+   "time": "01:05:58",
+   "kind": "image"
+  },
+  {
+   "file": "010607-road-damage-2026-11-18-before-damage-li-minor-wet-rider.jpg",
+   "time": "01:06:07",
+   "kind": "image"
+  },
+  {
+   "file": "010609-models-e3-plant-scene-autumn.jpg",
+   "time": "01:06:09",
+   "kind": "image"
+  },
+  {
+   "file": "010619-road-damage-2026-11-18-before-damage-li-minor-wet-close.jpg",
+   "time": "01:06:19",
+   "kind": "image"
+  },
+  {
+   "file": "010621-models-e3-plant-scene-winter.jpg",
+   "time": "01:06:21",
+   "kind": "image"
+  },
+  {
+   "file": "010631-road-damage-2026-11-18-before-damage-li-track-rider.jpg",
+   "time": "01:06:31",
+   "kind": "image"
+  },
+  {
+   "file": "010632-models-e3-prop.jpg",
+   "time": "01:06:32",
+   "kind": "image"
+  },
+  {
+   "file": "010643-road-damage-2026-11-18-before-damage-li-track-close.jpg",
+   "time": "01:06:43",
+   "kind": "image"
+  },
+  {
+   "file": "010644-models-e3-validator-panel.jpg",
+   "time": "01:06:44",
+   "kind": "image"
+  },
+  {
+   "file": "010655-models-e3-night.jpg",
+   "time": "01:06:55",
+   "kind": "image"
+  },
+  {
+   "file": "010656-road-damage-2026-11-18-before-damage-li-smooth-excellent-close.jpg",
+   "time": "01:06:56",
+   "kind": "image"
+  },
+  {
+   "file": "010708-road-damage-2026-11-18-before-damage-li-smooth-good-close.jpg",
+   "time": "01:07:08",
+   "kind": "image"
+  },
+  {
+   "file": "010720-road-damage-2026-11-18-before-damage-li-smooth-intermediate-close.jpg",
+   "time": "01:07:20",
+   "kind": "image"
+  },
+  {
+   "file": "010733-road-damage-2026-11-18-before-damage-li-smooth-bad-close.jpg",
+   "time": "01:07:33",
+   "kind": "image"
+  },
+  {
+   "file": "010745-road-damage-2026-11-18-before-damage-li-smooth-very-bad-close.jpg",
+   "time": "01:07:45",
+   "kind": "image"
+  },
+  {
+   "file": "010758-road-damage-2026-11-18-before-damage-li-smooth-horrible-close.jpg",
+   "time": "01:07:58",
+   "kind": "image"
+  },
+  {
+   "file": "010811-road-damage-2026-11-18-before-damage-li-smooth-very-horrible-close.jpg",
+   "time": "01:08:11",
+   "kind": "image"
+  },
+  {
+   "file": "010823-road-damage-2026-11-18-before-damage-li-junction-rider.jpg",
+   "time": "01:08:23",
+   "kind": "image"
+  },
+  {
+   "file": "010836-road-damage-2026-11-18-before-damage-li-junction-close.jpg",
+   "time": "01:08:36",
+   "kind": "image"
+  },
+  {
+   "file": "010848-scenes-navi-wayland-navi-li-free-day.jpg",
+   "time": "01:08:48",
+   "kind": "image"
+  },
+  {
+   "file": "010854-road-damage-2026-11-18-before-damage-bf-main-rider.jpg",
+   "time": "01:08:54",
+   "kind": "image"
+  },
+  {
+   "file": "010902-scenes-navi-wayland-navi-li-route-night.jpg",
+   "time": "01:09:02",
+   "kind": "image"
+  },
+  {
+   "file": "010912-road-damage-2026-11-18-before-damage-bf-main-close.jpg",
+   "time": "01:09:12",
+   "kind": "image"
+  },
+  {
+   "file": "010916-scenes-navi-wayland-navi-li-route-day-720p.jpg",
+   "time": "01:09:16",
+   "kind": "image"
+  },
+  {
+   "file": "010931-road-damage-2026-11-18-before-damage-bf-minor-rider.jpg",
+   "time": "01:09:31",
+   "kind": "image"
+  },
+  {
+   "file": "010933-scenes-navi-wayland-navi-bf-free-day.jpg",
+   "time": "01:09:33",
+   "kind": "image"
+  },
+  {
+   "file": "010950-road-damage-2026-11-18-before-damage-bf-minor-close.jpg",
+   "time": "01:09:50",
+   "kind": "image"
+  },
+  {
+   "file": "010950-scenes-navi-wayland-navi-bf-route-night.jpg",
+   "time": "01:09:50",
+   "kind": "image"
+  },
+  {
+   "file": "011006-scenes-navi-wayland-navi-tf-free-day.jpg",
+   "time": "01:10:06",
+   "kind": "image"
+  },
+  {
+   "file": "011009-road-damage-2026-11-18-before-damage-bf-minor-wet-rider.jpg",
+   "time": "01:10:09",
+   "kind": "image"
+  },
+  {
+   "file": "011022-scenes-navi-wayland-navi-tf-route-night.jpg",
+   "time": "01:10:22",
+   "kind": "image"
+  },
+  {
+   "file": "011028-road-damage-2026-11-18-before-damage-bf-minor-wet-close.jpg",
+   "time": "01:10:28",
+   "kind": "image"
+  },
+  {
+   "file": "011047-road-damage-2026-11-18-before-damage-bf-track-rider.jpg",
+   "time": "01:10:47",
+   "kind": "image"
+  },
+  {
+   "file": "011105-scenes-navi-wayland-navi-fps-on.jpg",
+   "time": "01:11:05",
+   "kind": "image"
+  },
+  {
+   "file": "011106-road-damage-2026-11-18-before-damage-bf-track-close.jpg",
+   "time": "01:11:06",
+   "kind": "image"
+  },
+  {
+   "file": "011126-road-damage-2026-11-18-before-damage-bf-smooth-excellent-close.jpg",
+   "time": "01:11:26",
+   "kind": "image"
+  },
+  {
+   "file": "011146-road-damage-2026-11-18-before-damage-bf-smooth-good-close.jpg",
+   "time": "01:11:46",
+   "kind": "image"
+  },
+  {
+   "file": "011148-scenes-navi-wayland-navi-fps-off.jpg",
+   "time": "01:11:48",
+   "kind": "image"
+  },
+  {
+   "file": "011206-road-damage-2026-11-18-before-damage-bf-smooth-intermediate-close.jpg",
+   "time": "01:12:06",
+   "kind": "image"
+  },
+  {
+   "file": "011208-scenes-navi-x11-navi-li-free-day.jpg",
+   "time": "01:12:08",
+   "kind": "image"
+  },
+  {
+   "file": "011227-road-damage-2026-11-18-before-damage-bf-smooth-bad-close.jpg",
+   "time": "01:12:27",
+   "kind": "image"
+  },
+  {
+   "file": "011242-scenes-navi-x11-navi-li-route-night.jpg",
+   "time": "01:12:42",
+   "kind": "image"
+  },
+  {
+   "file": "011247-road-damage-2026-11-18-before-damage-bf-smooth-very-bad-close.jpg",
+   "time": "01:12:47",
+   "kind": "image"
+  },
+  {
+   "file": "011306-road-damage-2026-11-18-before-damage-bf-smooth-horrible-close.jpg",
+   "time": "01:13:06",
+   "kind": "image"
+  },
+  {
+   "file": "011315-scenes-navi-x11-navi-bf-route-night.jpg",
+   "time": "01:13:15",
+   "kind": "image"
+  },
+  {
+   "file": "011327-road-damage-2026-11-18-before-damage-bf-smooth-very-horrible-close.jpg",
+   "time": "01:13:27",
+   "kind": "image"
+  },
+  {
+   "file": "011348-road-damage-2026-11-18-before-damage-bf-smooth-impassable-close.jpg",
+   "time": "01:13:48",
+   "kind": "image"
+  },
+  {
+   "file": "011354-scenes-navi-x11-navi-tf-free-day.jpg",
+   "time": "01:13:54",
+   "kind": "image"
+  },
+  {
+   "file": "011409-road-damage-2026-11-18-before-damage-bf-junction-rider.jpg",
+   "time": "01:14:09",
+   "kind": "image"
+  },
+  {
+   "file": "011430-road-damage-2026-11-18-before-damage-bf-junction-close.jpg",
+   "time": "01:14:30",
+   "kind": "image"
+  },
+  {
+   "file": "011446-road-damage-2026-11-18-before-damage-tf-main-rider.jpg",
+   "time": "01:14:46",
+   "kind": "image"
+  },
+  {
+   "file": "011453-scenes-navi-x11-navi-fps-on.jpg",
+   "time": "01:14:53",
+   "kind": "image"
+  },
+  {
+   "file": "011501-road-damage-2026-11-18-before-damage-tf-main-close.jpg",
+   "time": "01:15:01",
+   "kind": "image"
+  },
+  {
+   "file": "011517-road-damage-2026-11-18-before-damage-tf-minor-rider.jpg",
+   "time": "01:15:17",
+   "kind": "image"
+  },
+  {
+   "file": "011532-road-damage-2026-11-18-before-damage-tf-minor-close.jpg",
+   "time": "01:15:32",
+   "kind": "image"
+  },
+  {
+   "file": "011548-road-damage-2026-11-18-before-damage-tf-minor-wet-rider.jpg",
+   "time": "01:15:48",
+   "kind": "image"
+  },
+  {
+   "file": "011554-scenes-navi-x11-navi-fps-off.jpg",
+   "time": "01:15:54",
+   "kind": "image"
+  },
+  {
+   "file": "011603-road-damage-2026-11-18-before-damage-tf-minor-wet-close.jpg",
+   "time": "01:16:03",
+   "kind": "image"
+  },
+  {
+   "file": "011618-road-damage-2026-11-18-before-damage-tf-track-rider.jpg",
+   "time": "01:16:18",
+   "kind": "image"
+  },
+  {
+   "file": "011634-road-damage-2026-11-18-before-damage-tf-track-close.jpg",
+   "time": "01:16:34",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-desktop-128.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-desktop-16.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-desktop-24.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-desktop-256.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-desktop-32.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-desktop-48.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-desktop-64.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-studio-128.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-studio-16.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-studio-24.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-studio-256.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-studio-32.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-studio-48.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011646-release-0.2.3-windows-icon-ocw-studio-64.png",
+   "time": "01:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "011649-road-damage-2026-11-18-before-damage-tf-smooth-excellent-close.jpg",
+   "time": "01:16:49",
+   "kind": "image"
+  },
+  {
+   "file": "011705-road-damage-2026-11-18-before-damage-tf-smooth-good-close.jpg",
+   "time": "01:17:05",
+   "kind": "image"
+  },
+  {
+   "file": "011720-road-damage-2026-11-18-before-damage-tf-smooth-intermediate-close.jpg",
+   "time": "01:17:20",
+   "kind": "image"
+  },
+  {
+   "file": "011736-road-damage-2026-11-18-before-damage-tf-smooth-bad-close.jpg",
+   "time": "01:17:36",
+   "kind": "image"
+  },
+  {
+   "file": "011752-road-damage-2026-11-18-before-damage-tf-smooth-very-bad-close.jpg",
+   "time": "01:17:52",
+   "kind": "image"
+  },
+  {
+   "file": "011807-road-damage-2026-11-18-before-damage-tf-smooth-horrible-close.jpg",
+   "time": "01:18:07",
+   "kind": "image"
+  },
+  {
+   "file": "011823-road-damage-2026-11-18-before-damage-tf-smooth-very-horrible-close.jpg",
+   "time": "01:18:23",
+   "kind": "image"
+  },
+  {
+   "file": "011839-road-damage-2026-11-18-before-damage-tf-smooth-impassable-close.jpg",
+   "time": "01:18:39",
+   "kind": "image"
+  },
+  {
+   "file": "011854-road-damage-2026-11-18-before-damage-tf-junction-rider.jpg",
+   "time": "01:18:54",
+   "kind": "image"
+  },
+  {
+   "file": "011910-road-damage-2026-11-18-before-damage-tf-junction-close.jpg",
+   "time": "01:19:10",
+   "kind": "image"
+  },
+  {
+   "file": "011932-road-damage-2026-11-18-after-x11-damage-li-minor-rider.jpg",
+   "time": "01:19:32",
+   "kind": "image"
+  },
+  {
+   "file": "012002-road-damage-2026-11-18-after-x11-damage-li-minor-close.jpg",
+   "time": "01:20:02",
+   "kind": "image"
+  },
+  {
+   "file": "012028-road-damage-2026-11-18-after-x11-damage-li-minor-wet-rider.jpg",
+   "time": "01:20:28",
+   "kind": "image"
+  },
+  {
+   "file": "012051-road-damage-2026-11-18-after-x11-damage-li-minor-wet-close.jpg",
+   "time": "01:20:51",
+   "kind": "image"
+  },
+  {
+   "file": "012116-road-damage-2026-11-18-before-x11-damage-li-minor-rider.jpg",
+   "time": "01:21:16",
+   "kind": "image"
+  },
+  {
+   "file": "012142-road-damage-2026-11-18-before-x11-damage-li-minor-close.jpg",
+   "time": "01:21:42",
+   "kind": "image"
+  },
+  {
+   "file": "012203-road-damage-2026-11-18-before-x11-damage-li-minor-wet-rider.jpg",
+   "time": "01:22:03",
+   "kind": "image"
+  },
+  {
+   "file": "012224-road-damage-2026-11-18-before-x11-damage-li-minor-wet-close.jpg",
+   "time": "01:22:24",
+   "kind": "image"
+  },
+  {
+   "file": "013749-web-navi-li-day-webgpu-web-world-first-loading.jpg",
+   "time": "01:37:49",
+   "kind": "image"
+  },
+  {
+   "file": "013749-web-navi-li-day-webgpu-web-world-teleport.jpg",
+   "time": "01:37:49",
+   "kind": "image"
+  },
+  {
+   "file": "013749-web-navi-li-day-webgpu-web-world.jpg",
+   "time": "01:37:49",
+   "kind": "image"
+  },
+  {
+   "file": "013833-web-navi-li-night-webgpu-web-world-first-loading.jpg",
+   "time": "01:38:33",
+   "kind": "image"
+  },
+  {
+   "file": "013833-web-navi-li-night-webgpu-web-world-teleport.jpg",
+   "time": "01:38:33",
+   "kind": "image"
+  },
+  {
+   "file": "013833-web-navi-li-night-webgpu-web-world.jpg",
+   "time": "01:38:33",
+   "kind": "image"
+  },
+  {
+   "file": "013917-web-navi-li-day-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "01:39:17",
+   "kind": "image"
+  },
+  {
+   "file": "013917-web-navi-li-day-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "01:39:17",
+   "kind": "image"
+  },
+  {
+   "file": "013917-web-navi-li-day-webgl2-web-world-webgl2.jpg",
+   "time": "01:39:17",
+   "kind": "image"
+  },
+  {
+   "file": "014001-web-navi-li-night-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "01:40:01",
+   "kind": "image"
+  },
+  {
+   "file": "014001-web-navi-li-night-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "01:40:01",
+   "kind": "image"
+  },
+  {
+   "file": "014001-web-navi-li-night-webgl2-web-world-webgl2.jpg",
+   "time": "01:40:01",
+   "kind": "image"
+  },
+  {
+   "file": "014655-places-liechtenstein-1-whole.jpg",
+   "time": "01:46:55",
+   "kind": "image"
+  },
+  {
+   "file": "014736-shot-ocw.jpg",
+   "time": "01:47:36",
+   "kind": "image"
+  },
+  {
+   "file": "014745-shot-wayland-ocw-wayland.jpg",
+   "time": "01:47:45",
+   "kind": "image"
+  },
+  {
+   "file": "015141-places-liechtenstein-2-vaduz-12m.jpg",
+   "time": "01:51:41",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-calendar-select.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-calendar.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-console.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-downloads-ocw-2026-11-18-01-55-05.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-downloads-ocw-2026-11-18-01-55-08.webm",
+   "time": "01:53:48",
+   "kind": "video"
+  },
+  {
+   "file": "015348-web-web-gamepad.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-gps.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-hud.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-join.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-menu.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-ride.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-riders.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-settings.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-touch-hints.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-touch-hold.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-unicorn-flight.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-unicorn-inspect.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-unicorn-menu.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web-weather.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015348-web-web.jpg",
+   "time": "01:53:48",
+   "kind": "image"
+  },
+  {
+   "file": "015531-places-liechtenstein-3-vaduz-3m.jpg",
+   "time": "01:55:31",
+   "kind": "image"
+  },
+  {
+   "file": "015637-places-tenerife-1-whole.jpg",
+   "time": "01:56:37",
+   "kind": "image"
+  },
+  {
+   "file": "015744-places-tenerife-2-north-east-35m.jpg",
+   "time": "01:57:44",
+   "kind": "image"
+  },
+  {
+   "file": "015850-places-tenerife-3-puerto-6m.jpg",
+   "time": "01:58:50",
+   "kind": "image"
+  },
+  {
+   "file": "015928-road-damage-2026-11-18-compare-damage-bf-junction-close.jpg",
+   "time": "01:59:28",
+   "kind": "image"
+  },
+  {
+   "file": "015929-road-damage-2026-11-18-compare-damage-bf-junction-rider.jpg",
+   "time": "01:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "015929-road-damage-2026-11-18-compare-damage-bf-main-close.jpg",
+   "time": "01:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "015929-road-damage-2026-11-18-compare-damage-bf-main-rider.jpg",
+   "time": "01:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "015929-road-damage-2026-11-18-compare-damage-bf-minor-close.jpg",
+   "time": "01:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "015929-road-damage-2026-11-18-compare-damage-bf-minor-rider.jpg",
+   "time": "01:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "015929-road-damage-2026-11-18-compare-damage-bf-minor-wet-close.jpg",
+   "time": "01:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "015929-road-damage-2026-11-18-compare-damage-bf-minor-wet-rider.jpg",
+   "time": "01:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "015929-road-damage-2026-11-18-compare-damage-bf-smooth-bad-close.jpg",
+   "time": "01:59:29",
+   "kind": "image"
+  },
+  {
+   "file": "015930-road-damage-2026-11-18-compare-damage-bf-smooth-excellent-close.jpg",
+   "time": "01:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "015930-road-damage-2026-11-18-compare-damage-bf-smooth-good-close.jpg",
+   "time": "01:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "015930-road-damage-2026-11-18-compare-damage-bf-smooth-horrible-close.jpg",
+   "time": "01:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "015930-road-damage-2026-11-18-compare-damage-bf-smooth-impassable-close.jpg",
+   "time": "01:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "015930-road-damage-2026-11-18-compare-damage-bf-smooth-intermediate-close.jpg",
+   "time": "01:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "015930-road-damage-2026-11-18-compare-damage-bf-smooth-very-bad-close.jpg",
+   "time": "01:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "015930-road-damage-2026-11-18-compare-damage-bf-smooth-very-horrible-close.jpg",
+   "time": "01:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "015930-road-damage-2026-11-18-compare-damage-bf-track-close.jpg",
+   "time": "01:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "015931-road-damage-2026-11-18-compare-damage-bf-track-rider.jpg",
+   "time": "01:59:31",
+   "kind": "image"
+  },
+  {
+   "file": "015931-road-damage-2026-11-18-compare-damage-li-junction-close.jpg",
+   "time": "01:59:31",
+   "kind": "image"
+  },
+  {
+   "file": "015931-road-damage-2026-11-18-compare-damage-li-junction-rider.jpg",
+   "time": "01:59:31",
+   "kind": "image"
+  },
+  {
+   "file": "015931-road-damage-2026-11-18-compare-damage-li-main-close.jpg",
+   "time": "01:59:31",
+   "kind": "image"
+  },
+  {
+   "file": "015931-road-damage-2026-11-18-compare-damage-li-main-rider.jpg",
+   "time": "01:59:31",
+   "kind": "image"
+  },
+  {
+   "file": "015931-road-damage-2026-11-18-compare-damage-li-minor-close.jpg",
+   "time": "01:59:31",
+   "kind": "image"
+  },
+  {
+   "file": "015931-road-damage-2026-11-18-compare-damage-li-minor-rider.jpg",
+   "time": "01:59:31",
+   "kind": "image"
+  },
+  {
+   "file": "015931-road-damage-2026-11-18-compare-damage-li-minor-wet-close.jpg",
+   "time": "01:59:31",
+   "kind": "image"
+  },
+  {
+   "file": "015932-road-damage-2026-11-18-compare-damage-li-minor-wet-rider.jpg",
+   "time": "01:59:32",
+   "kind": "image"
+  },
+  {
+   "file": "015932-road-damage-2026-11-18-compare-damage-li-smooth-bad-close.jpg",
+   "time": "01:59:32",
+   "kind": "image"
+  },
+  {
+   "file": "015932-road-damage-2026-11-18-compare-damage-li-smooth-excellent-close.jpg",
+   "time": "01:59:32",
+   "kind": "image"
+  },
+  {
+   "file": "015932-road-damage-2026-11-18-compare-damage-li-smooth-good-close.jpg",
+   "time": "01:59:32",
+   "kind": "image"
+  },
+  {
+   "file": "015932-road-damage-2026-11-18-compare-damage-li-smooth-horrible-close.jpg",
+   "time": "01:59:32",
+   "kind": "image"
+  },
+  {
+   "file": "015932-road-damage-2026-11-18-compare-damage-li-smooth-intermediate-close.jpg",
+   "time": "01:59:32",
+   "kind": "image"
+  },
+  {
+   "file": "015932-road-damage-2026-11-18-compare-damage-li-smooth-very-bad-close.jpg",
+   "time": "01:59:32",
+   "kind": "image"
+  },
+  {
+   "file": "015933-road-damage-2026-11-18-compare-damage-li-smooth-very-horrible-close.jpg",
+   "time": "01:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "015933-road-damage-2026-11-18-compare-damage-li-track-close.jpg",
+   "time": "01:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "015933-road-damage-2026-11-18-compare-damage-li-track-rider.jpg",
+   "time": "01:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "015933-road-damage-2026-11-18-compare-damage-tf-junction-close.jpg",
+   "time": "01:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "015933-road-damage-2026-11-18-compare-damage-tf-junction-rider.jpg",
+   "time": "01:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "015933-road-damage-2026-11-18-compare-damage-tf-main-close.jpg",
+   "time": "01:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "015933-road-damage-2026-11-18-compare-damage-tf-main-rider.jpg",
+   "time": "01:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "015933-road-damage-2026-11-18-compare-damage-tf-minor-close.jpg",
+   "time": "01:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "015934-road-damage-2026-11-18-compare-damage-tf-minor-rider.jpg",
+   "time": "01:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "015934-road-damage-2026-11-18-compare-damage-tf-minor-wet-close.jpg",
+   "time": "01:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "015934-road-damage-2026-11-18-compare-damage-tf-minor-wet-rider.jpg",
+   "time": "01:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "015934-road-damage-2026-11-18-compare-damage-tf-smooth-bad-close.jpg",
+   "time": "01:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "015934-road-damage-2026-11-18-compare-damage-tf-smooth-excellent-close.jpg",
+   "time": "01:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "015934-road-damage-2026-11-18-compare-damage-tf-smooth-good-close.jpg",
+   "time": "01:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "015934-road-damage-2026-11-18-compare-damage-tf-smooth-horrible-close.jpg",
+   "time": "01:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "015934-road-damage-2026-11-18-compare-damage-tf-smooth-impassable-close.jpg",
+   "time": "01:59:34",
+   "kind": "image"
+  },
+  {
+   "file": "015935-road-damage-2026-11-18-compare-damage-tf-smooth-intermediate-close.jpg",
+   "time": "01:59:35",
+   "kind": "image"
+  },
+  {
+   "file": "015935-road-damage-2026-11-18-compare-damage-tf-smooth-very-bad-close.jpg",
+   "time": "01:59:35",
+   "kind": "image"
+  },
+  {
+   "file": "015935-road-damage-2026-11-18-compare-damage-tf-smooth-very-horrible-close.jpg",
+   "time": "01:59:35",
+   "kind": "image"
+  },
+  {
+   "file": "015935-road-damage-2026-11-18-compare-damage-tf-track-close.jpg",
+   "time": "01:59:35",
+   "kind": "image"
+  },
+  {
+   "file": "015935-road-damage-2026-11-18-compare-damage-tf-track-rider.jpg",
+   "time": "01:59:35",
+   "kind": "image"
+  },
+  {
+   "file": "020909-photo-preview-photos-wayland-OCW-2026-11-18-02-09-09.jpg",
+   "time": "02:09:09",
+   "kind": "image"
+  },
+  {
+   "file": "020911-photo-preview-photos-wayland-OCW-2026-11-18-02-09-11.jpg",
+   "time": "02:09:11",
+   "kind": "image"
+  },
+  {
+   "file": "020912-photo-preview-screenshot-preview-wayland.jpg",
+   "time": "02:09:12",
+   "kind": "image"
+  },
+  {
+   "file": "020943-photo-preview-screenshot-preview-off-x11.jpg",
+   "time": "02:09:43",
+   "kind": "image"
+  },
+  {
+   "file": "021043-photo-preview-photos-video-OCW-2026-11-18-02-09-51.jpg",
+   "time": "02:10:43",
+   "kind": "image"
+  },
+  {
+   "file": "021202-photo-preview-screenshot-preview-x11.jpg",
+   "time": "02:12:02",
+   "kind": "image"
+  },
+  {
+   "file": "021207-photo-preview-screenshot-preview-x11.mp4",
+   "time": "02:12:07",
+   "kind": "video"
+  },
+  {
+   "file": "021244-photo-preview-photographer-chase-chase-01-preview.jpg",
+   "time": "02:12:44",
+   "kind": "image"
+  },
+  {
+   "file": "021449-photo-preview-photographer-chase-chase-02-photographer.jpg",
+   "time": "02:14:49",
+   "kind": "image"
+  },
+  {
+   "file": "021452-photo-preview-photographer-chase-chase-03-photographer.jpg",
+   "time": "02:14:52",
+   "kind": "image"
+  },
+  {
+   "file": "021455-photo-preview-photographer-chase-chase-04-preview.jpg",
+   "time": "02:14:55",
+   "kind": "image"
+  },
+  {
+   "file": "021657-photo-preview-photographer-end.jpg",
+   "time": "02:16:57",
+   "kind": "image"
+  },
+  {
+   "file": "021658-photo-preview-photographer-photos-OCW-2026-11-18-01-12-37-photo-1.jpg",
+   "time": "02:16:58",
+   "kind": "image"
+  },
+  {
+   "file": "021658-photo-preview-photographer-photos-OCW-2026-11-18-01-12-37-photo-2.jpg",
+   "time": "02:16:58",
+   "kind": "image"
+  },
+  {
+   "file": "022005-road-damage-2026-11-18-levels-level-bf-minor-off-top.jpg",
+   "time": "02:20:05",
+   "kind": "image"
+  },
+  {
+   "file": "022022-road-damage-2026-11-18-levels-level-bf-minor-excellent-top.jpg",
+   "time": "02:20:22",
+   "kind": "image"
+  },
+  {
+   "file": "022040-road-damage-2026-11-18-levels-level-bf-minor-good-top.jpg",
+   "time": "02:20:40",
+   "kind": "image"
+  },
+  {
+   "file": "022057-road-damage-2026-11-18-levels-level-bf-minor-good-rider.jpg",
+   "time": "02:20:57",
+   "kind": "image"
+  },
+  {
+   "file": "022115-road-damage-2026-11-18-levels-level-bf-minor-intermediate-top.jpg",
+   "time": "02:21:15",
+   "kind": "image"
+  },
+  {
+   "file": "022132-road-damage-2026-11-18-levels-level-bf-minor-intermediate-rider.jpg",
+   "time": "02:21:32",
+   "kind": "image"
+  },
+  {
+   "file": "022150-road-damage-2026-11-18-levels-level-bf-minor-bad-top.jpg",
+   "time": "02:21:50",
+   "kind": "image"
+  },
+  {
+   "file": "022207-road-damage-2026-11-18-levels-level-bf-minor-bad-rider.jpg",
+   "time": "02:22:07",
+   "kind": "image"
+  },
+  {
+   "file": "022220-release-0.2.3-linux-tar-x11.jpg",
+   "time": "02:22:20",
+   "kind": "image"
+  },
+  {
+   "file": "022224-road-damage-2026-11-18-levels-level-bf-minor-very-bad-top.jpg",
+   "time": "02:22:24",
+   "kind": "image"
+  },
+  {
+   "file": "022233-release-0.2.3-linux-tar-wayland.jpg",
+   "time": "02:22:33",
+   "kind": "image"
+  },
+  {
+   "file": "022240-road-damage-2026-11-18-levels-level-bf-minor-very-bad-rider.jpg",
+   "time": "02:22:40",
+   "kind": "image"
+  },
+  {
+   "file": "022247-release-0.2.3-linux-studio-wayland.jpg",
+   "time": "02:22:47",
+   "kind": "image"
+  },
+  {
+   "file": "022256-road-damage-2026-11-18-levels-level-bf-minor-horrible-top.jpg",
+   "time": "02:22:56",
+   "kind": "image"
+  },
+  {
+   "file": "022311-road-damage-2026-11-18-levels-level-bf-minor-horrible-rider.jpg",
+   "time": "02:23:11",
+   "kind": "image"
+  },
+  {
+   "file": "022325-release-0.2.3-linux-appimage-x11.jpg",
+   "time": "02:23:25",
+   "kind": "image"
+  },
+  {
+   "file": "022328-road-damage-2026-11-18-levels-level-bf-minor-bad-wet.jpg",
+   "time": "02:23:28",
+   "kind": "image"
+  },
+  {
+   "file": "022345-road-damage-2026-11-18-levels-level-bf-minor-horrible-wet.jpg",
+   "time": "02:23:45",
+   "kind": "image"
+  },
+  {
+   "file": "022350-release-0.2.3-linux-appimage-wayland.jpg",
+   "time": "02:23:50",
+   "kind": "image"
+  },
+  {
+   "file": "022358-road-damage-2026-11-18-levels-level-li-minor-off-top.jpg",
+   "time": "02:23:58",
+   "kind": "image"
+  },
+  {
+   "file": "022410-road-damage-2026-11-18-levels-level-li-minor-excellent-top.jpg",
+   "time": "02:24:10",
+   "kind": "image"
+  },
+  {
+   "file": "022423-road-damage-2026-11-18-levels-level-li-minor-good-top.jpg",
+   "time": "02:24:23",
+   "kind": "image"
+  },
+  {
+   "file": "022435-road-damage-2026-11-18-levels-level-li-minor-good-rider.jpg",
+   "time": "02:24:35",
+   "kind": "image"
+  },
+  {
+   "file": "022448-road-damage-2026-11-18-levels-level-li-minor-intermediate-top.jpg",
+   "time": "02:24:48",
+   "kind": "image"
+  },
+  {
+   "file": "022502-road-damage-2026-11-18-levels-level-li-minor-intermediate-rider.jpg",
+   "time": "02:25:02",
+   "kind": "image"
+  },
+  {
+   "file": "022515-road-damage-2026-11-18-levels-level-li-minor-bad-top.jpg",
+   "time": "02:25:15",
+   "kind": "image"
+  },
+  {
+   "file": "022528-road-damage-2026-11-18-levels-level-li-minor-bad-rider.jpg",
+   "time": "02:25:28",
+   "kind": "image"
+  },
+  {
+   "file": "022542-road-damage-2026-11-18-levels-level-li-minor-very-bad-top.jpg",
+   "time": "02:25:42",
+   "kind": "image"
+  },
+  {
+   "file": "022555-road-damage-2026-11-18-levels-level-li-minor-very-bad-rider.jpg",
+   "time": "02:25:55",
+   "kind": "image"
+  },
+  {
+   "file": "022609-road-damage-2026-11-18-levels-level-li-minor-horrible-top.jpg",
+   "time": "02:26:09",
+   "kind": "image"
+  },
+  {
+   "file": "022622-road-damage-2026-11-18-levels-level-li-minor-horrible-rider.jpg",
+   "time": "02:26:22",
+   "kind": "image"
+  },
+  {
+   "file": "022635-road-damage-2026-11-18-levels-level-li-minor-bad-wet.jpg",
+   "time": "02:26:35",
+   "kind": "image"
+  },
+  {
+   "file": "022649-road-damage-2026-11-18-levels-level-li-minor-horrible-wet.jpg",
+   "time": "02:26:49",
+   "kind": "image"
+  },
+  {
+   "file": "022705-road-damage-2026-11-18-levels-level-tf-minor-bad-top.jpg",
+   "time": "02:27:05",
+   "kind": "image"
+  },
+  {
+   "file": "022721-road-damage-2026-11-18-levels-level-tf-minor-bad-rider.jpg",
+   "time": "02:27:21",
+   "kind": "image"
+  },
+  {
+   "file": "022737-road-damage-2026-11-18-levels-level-tf-minor-horrible-top.jpg",
+   "time": "02:27:37",
+   "kind": "image"
+  },
+  {
+   "file": "022753-road-damage-2026-11-18-levels-level-tf-minor-horrible-rider.jpg",
+   "time": "02:27:53",
+   "kind": "image"
+  },
+  {
+   "file": "022809-road-damage-2026-11-18-levels-level-tf-minor-bad-wet.jpg",
+   "time": "02:28:09",
+   "kind": "image"
+  },
+  {
+   "file": "022825-road-damage-2026-11-18-levels-level-tf-minor-horrible-wet.jpg",
+   "time": "02:28:25",
+   "kind": "image"
+  },
+  {
+   "file": "022839-road-damage-2026-11-18-levels-level-li-main-bad-top.jpg",
+   "time": "02:28:39",
+   "kind": "image"
+  },
+  {
+   "file": "022852-road-damage-2026-11-18-levels-level-li-main-bad-rider.jpg",
+   "time": "02:28:52",
+   "kind": "image"
+  },
+  {
+   "file": "022906-road-damage-2026-11-18-levels-level-li-main-horrible-top.jpg",
+   "time": "02:29:06",
+   "kind": "image"
+  },
+  {
+   "file": "022919-road-damage-2026-11-18-levels-level-li-main-horrible-rider.jpg",
+   "time": "02:29:19",
+   "kind": "image"
+  },
+  {
+   "file": "022933-road-damage-2026-11-18-levels-level-li-main-bad-wet.jpg",
+   "time": "02:29:33",
+   "kind": "image"
+  },
+  {
+   "file": "022946-road-damage-2026-11-18-levels-level-li-main-horrible-wet.jpg",
+   "time": "02:29:46",
+   "kind": "image"
+  },
+  {
+   "file": "022959-road-damage-2026-11-18-levels-level-li-track-bad-top.jpg",
+   "time": "02:29:59",
+   "kind": "image"
+  },
+  {
+   "file": "023012-road-damage-2026-11-18-levels-level-li-track-bad-rider.jpg",
+   "time": "02:30:12",
+   "kind": "image"
+  },
+  {
+   "file": "023026-road-damage-2026-11-18-levels-level-li-track-horrible-top.jpg",
+   "time": "02:30:26",
+   "kind": "image"
+  },
+  {
+   "file": "023039-road-damage-2026-11-18-levels-level-li-track-horrible-rider.jpg",
+   "time": "02:30:39",
+   "kind": "image"
+  },
+  {
+   "file": "023052-road-damage-2026-11-18-levels-level-li-track-bad-wet.jpg",
+   "time": "02:30:52",
+   "kind": "image"
+  },
+  {
+   "file": "023106-road-damage-2026-11-18-levels-level-li-track-horrible-wet.jpg",
+   "time": "02:31:06",
+   "kind": "image"
+  },
+  {
+   "file": "024449-release-0.2.3-web-webgpu-web-world-first-loading.jpg",
+   "time": "02:44:49",
+   "kind": "image"
+  },
+  {
+   "file": "024449-release-0.2.3-web-webgpu-web-world.jpg",
+   "time": "02:44:49",
+   "kind": "image"
+  },
+  {
+   "file": "024520-release-0.2.3-web-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "02:45:20",
+   "kind": "image"
+  },
+  {
+   "file": "024520-release-0.2.3-web-webgl2-web-world-webgl2.jpg",
+   "time": "02:45:20",
+   "kind": "image"
+  },
+  {
+   "file": "024554-release-0.2.3-web-unsigned-web-world-first-loading.jpg",
+   "time": "02:45:54",
+   "kind": "image"
+  },
+  {
+   "file": "024554-release-0.2.3-web-unsigned-web-world.jpg",
+   "time": "02:45:54",
+   "kind": "image"
+  },
+  {
+   "file": "031741-shot-wayland-level-bf-minor-off-top.jpg",
+   "time": "03:17:41",
+   "kind": "image"
+  },
+  {
+   "file": "031759-shot-wayland-level-bf-minor-excellent-top.jpg",
+   "time": "03:17:59",
+   "kind": "image"
+  },
+  {
+   "file": "031816-shot-wayland-level-bf-minor-good-top.jpg",
+   "time": "03:18:16",
+   "kind": "image"
+  },
+  {
+   "file": "031833-shot-wayland-level-bf-minor-good-rider.jpg",
+   "time": "03:18:33",
+   "kind": "image"
+  },
+  {
+   "file": "031851-shot-wayland-level-bf-minor-intermediate-top.jpg",
+   "time": "03:18:51",
+   "kind": "image"
+  },
+  {
+   "file": "031909-shot-wayland-level-bf-minor-intermediate-rider.jpg",
+   "time": "03:19:09",
+   "kind": "image"
+  },
+  {
+   "file": "031925-shot-wayland-level-bf-minor-bad-top.jpg",
+   "time": "03:19:25",
+   "kind": "image"
+  },
+  {
+   "file": "031943-shot-wayland-level-bf-minor-bad-rider.jpg",
+   "time": "03:19:43",
+   "kind": "image"
+  },
+  {
+   "file": "032000-shot-wayland-level-bf-minor-very-bad-top.jpg",
+   "time": "03:20:00",
+   "kind": "image"
+  },
+  {
+   "file": "032018-shot-wayland-level-bf-minor-very-bad-rider.jpg",
+   "time": "03:20:18",
+   "kind": "image"
+  },
+  {
+   "file": "032035-shot-wayland-level-bf-minor-horrible-top.jpg",
+   "time": "03:20:35",
+   "kind": "image"
+  },
+  {
+   "file": "032053-shot-wayland-level-bf-minor-horrible-rider.jpg",
+   "time": "03:20:53",
+   "kind": "image"
+  },
+  {
+   "file": "032110-shot-wayland-level-bf-minor-bad-wet.jpg",
+   "time": "03:21:10",
+   "kind": "image"
+  },
+  {
+   "file": "032127-shot-wayland-level-bf-minor-horrible-wet.jpg",
+   "time": "03:21:27",
+   "kind": "image"
+  },
+  {
+   "file": "032140-shot-wayland-level-li-minor-off-top.jpg",
+   "time": "03:21:40",
+   "kind": "image"
+  },
+  {
+   "file": "032153-shot-wayland-level-li-minor-excellent-top.jpg",
+   "time": "03:21:53",
+   "kind": "image"
+  },
+  {
+   "file": "032206-shot-wayland-level-li-minor-good-top.jpg",
+   "time": "03:22:06",
+   "kind": "image"
+  },
+  {
+   "file": "032219-shot-wayland-level-li-minor-good-rider.jpg",
+   "time": "03:22:19",
+   "kind": "image"
+  },
+  {
+   "file": "032232-shot-wayland-level-li-minor-intermediate-top.jpg",
+   "time": "03:22:32",
+   "kind": "image"
+  },
+  {
+   "file": "032245-shot-wayland-level-li-minor-intermediate-rider.jpg",
+   "time": "03:22:45",
+   "kind": "image"
+  },
+  {
+   "file": "032258-shot-wayland-level-li-minor-bad-top.jpg",
+   "time": "03:22:58",
+   "kind": "image"
+  },
+  {
+   "file": "032311-shot-wayland-level-li-minor-bad-rider.jpg",
+   "time": "03:23:11",
+   "kind": "image"
+  },
+  {
+   "file": "032324-shot-wayland-level-li-minor-very-bad-top.jpg",
+   "time": "03:23:24",
+   "kind": "image"
+  },
+  {
+   "file": "032336-shot-wayland-level-li-minor-very-bad-rider.jpg",
+   "time": "03:23:36",
+   "kind": "image"
+  },
+  {
+   "file": "032349-shot-wayland-level-li-minor-horrible-top.jpg",
+   "time": "03:23:49",
+   "kind": "image"
+  },
+  {
+   "file": "032403-shot-wayland-level-li-minor-horrible-rider.jpg",
+   "time": "03:24:03",
+   "kind": "image"
+  },
+  {
+   "file": "032416-shot-wayland-level-li-minor-bad-wet.jpg",
+   "time": "03:24:16",
+   "kind": "image"
+  },
+  {
+   "file": "032429-shot-wayland-level-li-minor-horrible-wet.jpg",
+   "time": "03:24:29",
+   "kind": "image"
+  },
+  {
+   "file": "032445-shot-wayland-level-tf-minor-bad-top.jpg",
+   "time": "03:24:45",
+   "kind": "image"
+  },
+  {
+   "file": "032502-shot-wayland-level-tf-minor-bad-rider.jpg",
+   "time": "03:25:02",
+   "kind": "image"
+  },
+  {
+   "file": "032518-shot-wayland-level-tf-minor-horrible-top.jpg",
+   "time": "03:25:18",
+   "kind": "image"
+  },
+  {
+   "file": "032534-shot-wayland-level-tf-minor-horrible-rider.jpg",
+   "time": "03:25:34",
+   "kind": "image"
+  },
+  {
+   "file": "032550-shot-wayland-level-tf-minor-bad-wet.jpg",
+   "time": "03:25:50",
+   "kind": "image"
+  },
+  {
+   "file": "032606-shot-wayland-level-tf-minor-horrible-wet.jpg",
+   "time": "03:26:06",
+   "kind": "image"
+  },
+  {
+   "file": "032620-shot-wayland-level-li-main-bad-top.jpg",
+   "time": "03:26:20",
+   "kind": "image"
+  },
+  {
+   "file": "032633-shot-wayland-level-li-main-bad-rider.jpg",
+   "time": "03:26:33",
+   "kind": "image"
+  },
+  {
+   "file": "032647-shot-wayland-level-li-main-horrible-top.jpg",
+   "time": "03:26:47",
+   "kind": "image"
+  },
+  {
+   "file": "032700-shot-wayland-level-li-main-horrible-rider.jpg",
+   "time": "03:27:00",
+   "kind": "image"
+  },
+  {
+   "file": "032713-shot-wayland-level-li-main-bad-wet.jpg",
+   "time": "03:27:13",
+   "kind": "image"
+  },
+  {
+   "file": "032727-shot-wayland-level-li-main-horrible-wet.jpg",
+   "time": "03:27:27",
+   "kind": "image"
+  },
+  {
+   "file": "032740-shot-wayland-level-li-track-bad-top.jpg",
+   "time": "03:27:40",
+   "kind": "image"
+  },
+  {
+   "file": "032753-shot-wayland-level-li-track-bad-rider.jpg",
+   "time": "03:27:53",
+   "kind": "image"
+  },
+  {
+   "file": "032807-shot-wayland-level-li-track-horrible-top.jpg",
+   "time": "03:28:07",
+   "kind": "image"
+  },
+  {
+   "file": "032820-shot-wayland-level-li-track-horrible-rider.jpg",
+   "time": "03:28:20",
+   "kind": "image"
+  },
+  {
+   "file": "032834-shot-wayland-level-li-track-bad-wet.jpg",
+   "time": "03:28:34",
+   "kind": "image"
+  },
+  {
+   "file": "032847-shot-wayland-level-li-track-horrible-wet.jpg",
+   "time": "03:28:47",
+   "kind": "image"
+  },
+  {
+   "file": "033205-shot-ocw.jpg",
+   "time": "03:32:05",
+   "kind": "image"
+  },
+  {
+   "file": "033857-shot-wayland-ocw-wayland.jpg",
+   "time": "03:38:57",
+   "kind": "image"
+  },
+  {
+   "file": "034238-photo-preview-web-web-photo-preview.jpg",
+   "time": "03:42:38",
+   "kind": "image"
+  },
+  {
+   "file": "035516-photo-preview-runs-x11-Pictures-OCW-OCW-2026-11-18-03-55-13.jpg",
+   "time": "03:55:16",
+   "kind": "image"
+  },
+  {
+   "file": "035519-photo-preview-runs-x11-Pictures-OCW-OCW-2026-11-18-03-55-17.jpg",
+   "time": "03:55:19",
+   "kind": "image"
+  },
+  {
+   "file": "035519-photo-preview-runs-x11-hud-chase-01-preview.jpg",
+   "time": "03:55:19",
+   "kind": "image"
+  },
+  {
+   "file": "035521-photo-preview-runs-x11-hud-chase-02-preview.jpg",
+   "time": "03:55:21",
+   "kind": "image"
+  },
+  {
+   "file": "035530-photo-preview-runs-x11-end.jpg",
+   "time": "03:55:30",
+   "kind": "image"
+  },
+  {
+   "file": "035537-photo-preview-runs-wayland-Pictures-OCW-OCW-2026-11-18-03-55-37.jpg",
+   "time": "03:55:37",
+   "kind": "image"
+  },
+  {
+   "file": "035538-photo-preview-runs-wayland-hud-chase-01-preview.jpg",
+   "time": "03:55:38",
+   "kind": "image"
+  },
+  {
+   "file": "035539-photo-preview-runs-wayland-Pictures-OCW-OCW-2026-11-18-03-55-39.jpg",
+   "time": "03:55:39",
+   "kind": "image"
+  },
+  {
+   "file": "035539-photo-preview-runs-wayland-hud-chase-02-preview.jpg",
+   "time": "03:55:39",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-calendar-select.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-calendar.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-console.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-downloads-ocw-2026-11-18-03-57-27.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-downloads-ocw-2026-11-18-03-57-31.webm",
+   "time": "03:56:09",
+   "kind": "video"
+  },
+  {
+   "file": "035609-web-web-gamepad.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-gps.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-hud.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-join.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-menu.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-ride.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-riders.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-settings.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-touch-hints.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-touch-hold.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-unicorn-flight.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-unicorn-inspect.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-unicorn-menu.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web-weather.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035609-web-web.jpg",
+   "time": "03:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "035614-photo-preview-runs-wayland-end.jpg",
+   "time": "03:56:14",
+   "kind": "image"
+  },
+  {
+   "file": "035644-photo-preview-runs-off-Pictures-OCW-OCW-2026-11-18-03-56-40.jpg",
+   "time": "03:56:44",
+   "kind": "image"
+  },
+  {
+   "file": "035644-photo-preview-runs-off-end.jpg",
+   "time": "03:56:44",
+   "kind": "image"
+  },
+  {
+   "file": "035729-photo-preview-runs-video-Pictures-OCW-OCW-2026-11-18-03-56-50.jpg",
+   "time": "03:57:29",
+   "kind": "image"
+  },
+  {
+   "file": "035825-photo-preview-runs-video-preview-x11.jpg",
+   "time": "03:58:25",
+   "kind": "image"
+  },
+  {
+   "file": "035831-photo-preview-runs-video-preview-x11.mp4",
+   "time": "03:58:31",
+   "kind": "video"
+  },
+  {
+   "file": "035841-road-damage-2026-11-18-web-web-world-cached-loading.jpg",
+   "time": "03:58:41",
+   "kind": "image"
+  },
+  {
+   "file": "035841-road-damage-2026-11-18-web-web-world-cached.jpg",
+   "time": "03:58:41",
+   "kind": "image"
+  },
+  {
+   "file": "035841-road-damage-2026-11-18-web-web-world-first-loading.jpg",
+   "time": "03:58:41",
+   "kind": "image"
+  },
+  {
+   "file": "035841-road-damage-2026-11-18-web-web-world-teleport.jpg",
+   "time": "03:58:41",
+   "kind": "image"
+  },
+  {
+   "file": "035841-road-damage-2026-11-18-web-web-world.jpg",
+   "time": "03:58:41",
+   "kind": "image"
+  },
+  {
+   "file": "035936-road-damage-2026-11-18-web-web-world-webgl2-cached-loading.jpg",
+   "time": "03:59:36",
+   "kind": "image"
+  },
+  {
+   "file": "035936-road-damage-2026-11-18-web-web-world-webgl2-cached.jpg",
+   "time": "03:59:36",
+   "kind": "image"
+  },
+  {
+   "file": "035936-road-damage-2026-11-18-web-web-world-webgl2-first-loading.jpg",
+   "time": "03:59:36",
+   "kind": "image"
+  },
+  {
+   "file": "035936-road-damage-2026-11-18-web-web-world-webgl2-teleport.jpg",
+   "time": "03:59:36",
+   "kind": "image"
+  },
+  {
+   "file": "035936-road-damage-2026-11-18-web-web-world-webgl2.jpg",
+   "time": "03:59:36",
+   "kind": "image"
+  },
+  {
+   "file": "040000-strava-manual-2026-11-18-shot-ride-page-shot.jpg",
+   "time": "04:00:00",
+   "kind": "image"
+  },
+  {
+   "file": "040057-strava-manual-2026-11-18-shot-wayland-ride-page-shot-wayland.jpg",
+   "time": "04:00:57",
+   "kind": "image"
+  },
+  {
+   "file": "040503-strava-manual-2026-11-18-shot-ride-page-shot.jpg",
+   "time": "04:05:03",
+   "kind": "image"
+  },
+  {
+   "file": "040605-strava-manual-2026-11-18-shot-wayland-ride-page-shot-wayland.jpg",
+   "time": "04:06:05",
+   "kind": "image"
+  },
+  {
+   "file": "041332-strava-manual-2026-11-18-shot-ride-page-shot.jpg",
+   "time": "04:13:32",
+   "kind": "image"
+  },
+  {
+   "file": "041722-strava-manual-2026-11-18-shot-ride-page-shot.jpg",
+   "time": "04:17:22",
+   "kind": "image"
+  },
+  {
+   "file": "042239-strava-manual-2026-11-18-shot-ride-page-shot.jpg",
+   "time": "04:22:39",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-calendar-select.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-calendar.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-console.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-gamepad.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-gps.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-hud.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-join.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-menu.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-ride.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-riders.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-settings.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-strava-row.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-strava-steps.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-touch-hints.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-touch-hold.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-unicorn-flight.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-unicorn-inspect.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-unicorn-menu.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web-weather.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "042948-web-web.jpg",
+   "time": "04:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "044139-places-navi-vaduz-day.jpg",
+   "time": "04:41:39",
+   "kind": "image"
+  },
+  {
+   "file": "044229-places-navi-vaduz-night.jpg",
+   "time": "04:42:29",
+   "kind": "image"
+  },
+  {
+   "file": "044338-shot-ocw.jpg",
+   "time": "04:43:38",
+   "kind": "image"
+  },
+  {
+   "file": "044348-shot-wayland-ocw-wayland.jpg",
+   "time": "04:43:48",
+   "kind": "image"
+  },
+  {
+   "file": "044356-places-navi-freiburg-day.jpg",
+   "time": "04:43:56",
+   "kind": "image"
+  },
+  {
+   "file": "044527-places-navi-freiburg-night.jpg",
+   "time": "04:45:27",
+   "kind": "image"
+  },
+  {
+   "file": "044645-places-navi-puerto-de-la-cruz-day.jpg",
+   "time": "04:46:45",
+   "kind": "image"
+  },
+  {
+   "file": "044801-places-navi-puerto-de-la-cruz-night.jpg",
+   "time": "04:48:01",
+   "kind": "image"
+  },
+  {
+   "file": "045147-places-navi-v2-navi-vaduz-day-z7.jpg",
+   "time": "04:51:47",
+   "kind": "image"
+  },
+  {
+   "file": "045234-places-navi-v2-navi-vaduz-day-z4.jpg",
+   "time": "04:52:34",
+   "kind": "image"
+  },
+  {
+   "file": "045325-places-navi-v2-navi-vaduz-night-z4.jpg",
+   "time": "04:53:25",
+   "kind": "image"
+  },
+  {
+   "file": "045451-places-navi-v2-navi-freiburg-day-z7.jpg",
+   "time": "04:54:51",
+   "kind": "image"
+  },
+  {
+   "file": "045621-places-navi-v2-navi-freiburg-day-z4.jpg",
+   "time": "04:56:21",
+   "kind": "image"
+  },
+  {
+   "file": "045745-places-navi-v2-navi-freiburg-night-z4.jpg",
+   "time": "04:57:45",
+   "kind": "image"
+  },
+  {
+   "file": "045855-places-navi-v2-navi-puerto-de-la-cruz-day-z7.jpg",
+   "time": "04:58:55",
+   "kind": "image"
+  },
+  {
+   "file": "050004-places-navi-v2-navi-puerto-de-la-cruz-day-z4.jpg",
+   "time": "05:00:04",
+   "kind": "image"
+  },
+  {
+   "file": "050117-places-navi-v2-navi-puerto-de-la-cruz-night-z4.jpg",
+   "time": "05:01:17",
+   "kind": "image"
+  },
+  {
+   "file": "051033-shot-ocw.jpg",
+   "time": "05:10:33",
+   "kind": "image"
+  },
+  {
+   "file": "051044-shot-wayland-ocw-wayland.jpg",
+   "time": "05:10:44",
+   "kind": "image"
+  },
+  {
+   "file": "051429-marge-archive-shot-ocw.jpg",
+   "time": "05:14:29",
+   "kind": "image"
+  },
+  {
+   "file": "051439-marge-archive-shot-wayland-ocw-wayland.jpg",
+   "time": "05:14:39",
+   "kind": "image"
+  },
+  {
+   "file": "051513-marge-archive-shot-navi-vaduz-day-z7.jpg",
+   "time": "05:15:13",
+   "kind": "image"
+  },
+  {
+   "file": "051546-marge-archive-shot-navi-vaduz-day-z4.jpg",
+   "time": "05:15:46",
+   "kind": "image"
+  },
+  {
+   "file": "051618-marge-archive-shot-navi-vaduz-night-z4.jpg",
+   "time": "05:16:18",
+   "kind": "image"
+  },
+  {
+   "file": "051740-marge-archive-shot-navi-freiburg-day-z7.jpg",
+   "time": "05:17:40",
+   "kind": "image"
+  },
+  {
+   "file": "051906-marge-archive-shot-navi-freiburg-day-z4.jpg",
+   "time": "05:19:06",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-calendar-select.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-calendar.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-console.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-gamepad.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-gps.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-hud.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-join.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-menu.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-photo-preview.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-ride.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-riders.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-settings.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-strava-row.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-strava-steps.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-touch-hints.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-touch-hold.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-unicorn-flight.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-unicorn-inspect.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-unicorn-menu.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web-weather.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "051927-web-web.jpg",
+   "time": "05:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "052036-marge-archive-shot-navi-freiburg-night-z4.jpg",
+   "time": "05:20:36",
+   "kind": "image"
+  },
+  {
+   "file": "052152-marge-archive-shot-navi-puerto-de-la-cruz-day-z7.jpg",
+   "time": "05:21:52",
+   "kind": "image"
+  },
+  {
+   "file": "052309-marge-archive-shot-navi-puerto-de-la-cruz-day-z4.jpg",
+   "time": "05:23:09",
+   "kind": "image"
+  },
+  {
+   "file": "052420-marge-archive-shot-navi-puerto-de-la-cruz-night-z4.jpg",
+   "time": "05:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "054019-places-navi-v4-navi-vaduz-day-z7.jpg",
+   "time": "05:40:19",
+   "kind": "image"
+  },
+  {
+   "file": "054134-places-navi-v4-navi-vaduz-day-z4.jpg",
+   "time": "05:41:34",
+   "kind": "image"
+  },
+  {
+   "file": "054250-places-navi-v4-navi-vaduz-night-z4.jpg",
+   "time": "05:42:50",
+   "kind": "image"
+  },
+  {
+   "file": "054442-places-navi-v4-navi-freiburg-day-z7.jpg",
+   "time": "05:44:42",
+   "kind": "image"
+  },
+  {
+   "file": "054633-places-navi-v4-navi-freiburg-day-z4.jpg",
+   "time": "05:46:33",
+   "kind": "image"
+  },
+  {
+   "file": "054818-places-navi-v4-navi-freiburg-night-z4.jpg",
+   "time": "05:48:18",
+   "kind": "image"
+  },
+  {
+   "file": "055003-places-navi-v4-navi-puerto-de-la-cruz-day-z7.jpg",
+   "time": "05:50:03",
+   "kind": "image"
+  },
+  {
+   "file": "055151-places-navi-v4-navi-puerto-de-la-cruz-day-z4.jpg",
+   "time": "05:51:51",
+   "kind": "image"
+  },
+  {
+   "file": "055338-places-navi-v4-navi-puerto-de-la-cruz-night-z4.jpg",
+   "time": "05:53:38",
+   "kind": "image"
+  },
+  {
+   "file": "060510-places-navi-v5-navi-vaduz-day-z7.jpg",
+   "time": "06:05:10",
+   "kind": "image"
+  },
+  {
+   "file": "060617-places-navi-v5-navi-vaduz-day-z4.jpg",
+   "time": "06:06:17",
+   "kind": "image"
+  },
+  {
+   "file": "060724-places-navi-v5-navi-vaduz-night-z4.jpg",
+   "time": "06:07:24",
+   "kind": "image"
+  },
+  {
+   "file": "060907-places-navi-v5-navi-freiburg-day-z7.jpg",
+   "time": "06:09:07",
+   "kind": "image"
+  },
+  {
+   "file": "061052-places-navi-v5-navi-freiburg-day-z4.jpg",
+   "time": "06:10:52",
+   "kind": "image"
+  },
+  {
+   "file": "061235-places-navi-v5-navi-freiburg-night-z4.jpg",
+   "time": "06:12:35",
+   "kind": "image"
+  },
+  {
+   "file": "061414-places-navi-v5-navi-puerto-de-la-cruz-day-z7.jpg",
+   "time": "06:14:14",
+   "kind": "image"
+  },
+  {
+   "file": "061554-places-navi-v5-navi-puerto-de-la-cruz-day-z4-after-90s.jpg",
+   "time": "06:15:54",
+   "kind": "image"
+  },
+  {
+   "file": "061733-places-navi-v5-navi-puerto-de-la-cruz-night-z4-after-90s.jpg",
+   "time": "06:17:33",
+   "kind": "image"
+  },
+  {
+   "file": "061951-places-navi-v5-navi-puerto-de-la-cruz-day-z4.jpg",
+   "time": "06:19:51",
+   "kind": "image"
+  },
+  {
+   "file": "061951-places-navi-v5-navi-puerto-de-la-cruz-night-z4.jpg",
+   "time": "06:19:51",
+   "kind": "image"
+  },
+  {
+   "file": "062457-places-navi-v6-navi-puerto-de-la-cruz-day-z4.jpg",
+   "time": "06:24:57",
+   "kind": "image"
+  },
+  {
+   "file": "062547-places-navi-v6-navi-puerto-de-la-cruz-night-z4.jpg",
+   "time": "06:25:47",
+   "kind": "image"
+  },
+  {
+   "file": "062654-places-navi-v6-navi-vaduz-day-z7.jpg",
+   "time": "06:26:54",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-after.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-flat.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-unsupported.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-copy.png",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-down.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-left.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-right.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-000.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-001.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-002.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-003.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-004.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-005.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-006.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-007.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-008.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-009.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-010.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-011.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-012.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-013.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-014.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-015.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-016.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-017.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-018.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-019.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-020.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-021.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-022.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-023.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-024.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-025.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-026.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-027.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-028.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-029.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-030.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-031.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-032.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-033.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-034.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-035.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-036.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-037.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-038.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-039.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-040.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-041.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-042.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-043.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-044.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-045.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-046.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep-047.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-sweep.mp4",
+   "time": "07:38:22",
+   "kind": "video"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-turned.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "073822-web-xr-web-xr-xr-view.jpg",
+   "time": "07:38:22",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-after.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-flat.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-unsupported.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-copy.png",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-down.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-left.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-right.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-000.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-001.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-002.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-003.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-004.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-005.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-006.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-007.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-008.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-009.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-010.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-011.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-012.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-013.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-014.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-015.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-016.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-017.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-018.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-019.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-020.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-021.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-022.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-023.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-024.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-025.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-026.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-027.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-028.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-029.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-030.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-031.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-032.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-033.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-034.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-035.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-036.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-037.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-038.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-039.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-040.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-041.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-042.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-043.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-044.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-045.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-046.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep-047.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-sweep.mp4",
+   "time": "08:08:13",
+   "kind": "video"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-turned.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080813-web-xr-web-xr-xr-view.jpg",
+   "time": "08:08:13",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-calendar-select.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-calendar.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-console.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-downloads-OCW-2026-11-18-08-10-03.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-downloads-ocw-2026-11-18-08-10-12.webm",
+   "time": "08:08:52",
+   "kind": "video"
+  },
+  {
+   "file": "080852-web-web-gamepad.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-gps.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-hud.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-join.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-menu.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-photo-preview.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-ride.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-riders.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-settings.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-strava-row.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-strava-steps.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-touch-hints.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-touch-hold.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-unicorn-flight.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-unicorn-inspect.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-unicorn-menu.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web-weather.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "080852-web-web.jpg",
+   "time": "08:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-calendar-select.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-calendar.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-console.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-downloads-OCW-2026-11-18-08-11-40.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-downloads-ocw-2026-11-18-08-11-49.webm",
+   "time": "08:10:30",
+   "kind": "video"
+  },
+  {
+   "file": "081030-web-web-webgl2-gamepad.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-gps.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-hud.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-join.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-menu.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-photo-preview.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-ride.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-riders.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-settings.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-strava-row.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-strava-steps.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-touch-hints.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-touch-hold.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-unicorn-flight.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-unicorn-inspect.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-unicorn-menu.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2-weather.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081030-web-web-webgl2.jpg",
+   "time": "08:10:30",
+   "kind": "image"
+  },
+  {
+   "file": "081205-web-web-compare-webgl2-graphics.jpg",
+   "time": "08:12:05",
+   "kind": "image"
+  },
+  {
+   "file": "081205-web-web-compare-webgl2-low.jpg",
+   "time": "08:12:05",
+   "kind": "image"
+  },
+  {
+   "file": "081205-web-web-compare-webgpu-high.jpg",
+   "time": "08:12:05",
+   "kind": "image"
+  },
+  {
+   "file": "081205-web-web-compare.jpg",
+   "time": "08:12:05",
+   "kind": "image"
+  },
+  {
+   "file": "081251-web-web-gpu-device-webgl2.jpg",
+   "time": "08:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "081251-web-web-gpu-forced-webgpu.jpg",
+   "time": "08:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "081251-web-web-gpu-iphone-safari.jpg",
+   "time": "08:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "081251-web-web-gpu-noframe-webgl2.jpg",
+   "time": "08:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "081251-web-web-gpu-uncaptured-webgl2.jpg",
+   "time": "08:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "081251-web-web-gpu-webgpu.jpg",
+   "time": "08:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "103643-shot-before-road-aero-x11-studio.jpg",
+   "time": "10:36:43",
+   "kind": "image"
+  },
+  {
+   "file": "103711-shot-before-road-aero-x11-stand.jpg",
+   "time": "10:37:11",
+   "kind": "image"
+  },
+  {
+   "file": "103727-shot-before-road-aero-x11-ride.jpg",
+   "time": "10:37:27",
+   "kind": "image"
+  },
+  {
+   "file": "103745-shot-before-road-climbing-x11-studio.jpg",
+   "time": "10:37:45",
+   "kind": "image"
+  },
+  {
+   "file": "103811-shot-before-road-climbing-x11-stand.jpg",
+   "time": "10:38:11",
+   "kind": "image"
+  },
+  {
+   "file": "103827-shot-before-road-climbing-x11-ride.jpg",
+   "time": "10:38:27",
+   "kind": "image"
+  },
+  {
+   "file": "103839-shot-before-road-endurance-x11-studio.jpg",
+   "time": "10:38:39",
+   "kind": "image"
+  },
+  {
+   "file": "103900-shot-before-road-endurance-x11-stand.jpg",
+   "time": "10:39:00",
+   "kind": "image"
+  },
+  {
+   "file": "103923-shot-before-road-endurance-x11-ride.jpg",
+   "time": "10:39:23",
+   "kind": "image"
+  },
+  {
+   "file": "103940-shot-before-gravel-x11-studio.jpg",
+   "time": "10:39:40",
+   "kind": "image"
+  },
+  {
+   "file": "104008-shot-before-gravel-x11-stand.jpg",
+   "time": "10:40:08",
+   "kind": "image"
+  },
+  {
+   "file": "104151-fork-rake-after-after-road-aero-x11-studio.jpg",
+   "time": "10:41:51",
+   "kind": "image"
+  },
+  {
+   "file": "104152-fork-rake-after-after-road-aero-x11-fork.jpg",
+   "time": "10:41:52",
+   "kind": "image"
+  },
+  {
+   "file": "104225-fork-rake-after-after-road-aero-x11-stand.jpg",
+   "time": "10:42:25",
+   "kind": "image"
+  },
+  {
+   "file": "104254-fork-rake-after-after-road-aero-x11-ride.jpg",
+   "time": "10:42:54",
+   "kind": "image"
+  },
+  {
+   "file": "104309-fork-rake-after-after-road-climbing-x11-studio.jpg",
+   "time": "10:43:09",
+   "kind": "image"
+  },
+  {
+   "file": "104311-fork-rake-after-after-road-climbing-x11-fork.jpg",
+   "time": "10:43:11",
+   "kind": "image"
+  },
+  {
+   "file": "104335-fork-rake-after-after-road-climbing-x11-stand.jpg",
+   "time": "10:43:35",
+   "kind": "image"
+  },
+  {
+   "file": "104413-fork-rake-after-after-road-climbing-x11-ride.jpg",
+   "time": "10:44:13",
+   "kind": "image"
+  },
+  {
+   "file": "104429-fork-rake-after-after-road-endurance-x11-studio.jpg",
+   "time": "10:44:29",
+   "kind": "image"
+  },
+  {
+   "file": "104431-fork-rake-after-after-road-endurance-x11-fork.jpg",
+   "time": "10:44:31",
+   "kind": "image"
+  },
+  {
+   "file": "104504-fork-rake-after-after-road-endurance-x11-stand.jpg",
+   "time": "10:45:04",
+   "kind": "image"
+  },
+  {
+   "file": "104537-fork-rake-after-after-road-endurance-x11-ride.jpg",
+   "time": "10:45:37",
+   "kind": "image"
+  },
+  {
+   "file": "104550-fork-rake-after-after-gravel-x11-studio.jpg",
+   "time": "10:45:50",
+   "kind": "image"
+  },
+  {
+   "file": "104552-fork-rake-after-after-gravel-x11-fork.jpg",
+   "time": "10:45:52",
+   "kind": "image"
+  },
+  {
+   "file": "104627-fork-rake-after-after-gravel-x11-stand.jpg",
+   "time": "10:46:27",
+   "kind": "image"
+  },
+  {
+   "file": "104648-fork-rake-after-after-gravel-x11-ride.jpg",
+   "time": "10:46:48",
+   "kind": "image"
+  },
+  {
+   "file": "104700-fork-rake-after-after-tt-x11-studio.jpg",
+   "time": "10:47:00",
+   "kind": "image"
+  },
+  {
+   "file": "104703-fork-rake-after-after-tt-x11-fork.jpg",
+   "time": "10:47:03",
+   "kind": "image"
+  },
+  {
+   "file": "104735-fork-rake-after-after-tt-x11-stand.jpg",
+   "time": "10:47:35",
+   "kind": "image"
+  },
+  {
+   "file": "104803-fork-rake-after-after-tt-x11-ride.jpg",
+   "time": "10:48:03",
+   "kind": "image"
+  },
+  {
+   "file": "104817-fork-rake-after-after-mtb-hardtail-x11-studio.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104818-fork-rake-after-after-mtb-hardtail-x11-fork.jpg",
+   "time": "10:48:18",
+   "kind": "image"
+  },
+  {
+   "file": "104837-fork-rake-after-after-mtb-hardtail-x11-stand.jpg",
+   "time": "10:48:37",
+   "kind": "image"
+  },
+  {
+   "file": "104904-fork-rake-after-after-mtb-hardtail-x11-ride.jpg",
+   "time": "10:49:04",
+   "kind": "image"
+  },
+  {
+   "file": "104918-fork-rake-after-after-road-aero-wayland-fork.jpg",
+   "time": "10:49:18",
+   "kind": "image"
+  },
+  {
+   "file": "104918-fork-rake-after-after-road-aero-wayland-studio.jpg",
+   "time": "10:49:18",
+   "kind": "image"
+  },
+  {
+   "file": "104932-fork-rake-after-after-road-aero-wayland-stand.jpg",
+   "time": "10:49:32",
+   "kind": "image"
+  },
+  {
+   "file": "104943-fork-rake-before-before-road-aero-x11-fork.jpg",
+   "time": "10:49:43",
+   "kind": "image"
+  },
+  {
+   "file": "104943-fork-rake-before-before-road-aero-x11-studio.jpg",
+   "time": "10:49:43",
+   "kind": "image"
+  },
+  {
+   "file": "104946-fork-rake-after-after-road-aero-wayland-ride.jpg",
+   "time": "10:49:46",
+   "kind": "image"
+  },
+  {
+   "file": "104957-fork-rake-after-after-road-climbing-wayland-fork.jpg",
+   "time": "10:49:57",
+   "kind": "image"
+  },
+  {
+   "file": "104957-fork-rake-after-after-road-climbing-wayland-studio.jpg",
+   "time": "10:49:57",
+   "kind": "image"
+  },
+  {
+   "file": "104958-fork-rake-before-before-road-aero-x11-stand.jpg",
+   "time": "10:49:58",
+   "kind": "image"
+  },
+  {
+   "file": "105010-fork-rake-after-after-road-climbing-wayland-stand.jpg",
+   "time": "10:50:10",
+   "kind": "image"
+  },
+  {
+   "file": "105022-fork-rake-before-before-road-aero-x11-ride.jpg",
+   "time": "10:50:22",
+   "kind": "image"
+  },
+  {
+   "file": "105024-fork-rake-after-after-road-climbing-wayland-ride.jpg",
+   "time": "10:50:24",
+   "kind": "image"
+  },
+  {
+   "file": "105034-fork-rake-before-before-road-climbing-x11-studio.jpg",
+   "time": "10:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "105035-fork-rake-after-after-road-endurance-wayland-studio.jpg",
+   "time": "10:50:35",
+   "kind": "image"
+  },
+  {
+   "file": "105035-fork-rake-before-before-road-climbing-x11-fork.jpg",
+   "time": "10:50:35",
+   "kind": "image"
+  },
+  {
+   "file": "105036-fork-rake-after-after-road-endurance-wayland-fork.jpg",
+   "time": "10:50:36",
+   "kind": "image"
+  },
+  {
+   "file": "105049-fork-rake-after-after-road-endurance-wayland-stand.jpg",
+   "time": "10:50:49",
+   "kind": "image"
+  },
+  {
+   "file": "105050-fork-rake-before-before-road-climbing-x11-stand.jpg",
+   "time": "10:50:50",
+   "kind": "image"
+  },
+  {
+   "file": "105102-fork-rake-after-after-road-endurance-wayland-ride.jpg",
+   "time": "10:51:02",
+   "kind": "image"
+  },
+  {
+   "file": "105113-fork-rake-before-before-road-climbing-x11-ride.jpg",
+   "time": "10:51:13",
+   "kind": "image"
+  },
+  {
+   "file": "105114-fork-rake-after-after-gravel-wayland-fork.jpg",
+   "time": "10:51:14",
+   "kind": "image"
+  },
+  {
+   "file": "105114-fork-rake-after-after-gravel-wayland-studio.jpg",
+   "time": "10:51:14",
+   "kind": "image"
+  },
+  {
+   "file": "105125-fork-rake-before-before-road-endurance-x11-studio.jpg",
+   "time": "10:51:25",
+   "kind": "image"
+  },
+  {
+   "file": "105126-fork-rake-before-before-road-endurance-x11-fork.jpg",
+   "time": "10:51:26",
+   "kind": "image"
+  },
+  {
+   "file": "105127-fork-rake-after-after-gravel-wayland-stand.jpg",
+   "time": "10:51:27",
+   "kind": "image"
+  },
+  {
+   "file": "105141-fork-rake-after-after-gravel-wayland-ride.jpg",
+   "time": "10:51:41",
+   "kind": "image"
+  },
+  {
+   "file": "105141-fork-rake-before-before-road-endurance-x11-stand.jpg",
+   "time": "10:51:41",
+   "kind": "image"
+  },
+  {
+   "file": "105152-fork-rake-after-after-tt-wayland-studio.jpg",
+   "time": "10:51:52",
+   "kind": "image"
+  },
+  {
+   "file": "105153-fork-rake-after-after-tt-wayland-fork.jpg",
+   "time": "10:51:53",
+   "kind": "image"
+  },
+  {
+   "file": "105204-fork-rake-before-before-road-endurance-x11-ride.jpg",
+   "time": "10:52:04",
+   "kind": "image"
+  },
+  {
+   "file": "105206-fork-rake-after-after-tt-wayland-stand.jpg",
+   "time": "10:52:06",
+   "kind": "image"
+  },
+  {
+   "file": "105216-fork-rake-before-before-gravel-x11-studio.jpg",
+   "time": "10:52:16",
+   "kind": "image"
+  },
+  {
+   "file": "105217-fork-rake-before-before-gravel-x11-fork.jpg",
+   "time": "10:52:17",
+   "kind": "image"
+  },
+  {
+   "file": "105219-fork-rake-after-after-tt-wayland-ride.jpg",
+   "time": "10:52:19",
+   "kind": "image"
+  },
+  {
+   "file": "105230-fork-rake-after-after-mtb-hardtail-wayland-studio.jpg",
+   "time": "10:52:30",
+   "kind": "image"
+  },
+  {
+   "file": "105231-fork-rake-after-after-mtb-hardtail-wayland-fork.jpg",
+   "time": "10:52:31",
+   "kind": "image"
+  },
+  {
+   "file": "105231-fork-rake-before-before-gravel-x11-stand.jpg",
+   "time": "10:52:31",
+   "kind": "image"
+  },
+  {
+   "file": "105244-fork-rake-after-after-mtb-hardtail-wayland-stand.jpg",
+   "time": "10:52:44",
+   "kind": "image"
+  },
+  {
+   "file": "105254-fork-rake-before-before-gravel-x11-ride.jpg",
+   "time": "10:52:54",
+   "kind": "image"
+  },
+  {
+   "file": "105257-fork-rake-after-after-mtb-hardtail-wayland-ride.jpg",
+   "time": "10:52:57",
+   "kind": "image"
+  },
+  {
+   "file": "105306-fork-rake-before-before-tt-x11-studio.jpg",
+   "time": "10:53:06",
+   "kind": "image"
+  },
+  {
+   "file": "105307-fork-rake-before-before-tt-x11-fork.jpg",
+   "time": "10:53:07",
+   "kind": "image"
+  },
+  {
+   "file": "105337-fork-rake-before-before-tt-x11-stand.jpg",
+   "time": "10:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "105358-fork-rake-before-before-tt-x11-ride.jpg",
+   "time": "10:53:58",
+   "kind": "image"
+  },
+  {
+   "file": "105411-fork-rake-before-before-mtb-hardtail-x11-studio.jpg",
+   "time": "10:54:11",
+   "kind": "image"
+  },
+  {
+   "file": "105412-fork-rake-before-before-mtb-hardtail-x11-fork.jpg",
+   "time": "10:54:12",
+   "kind": "image"
+  },
+  {
+   "file": "105458-fork-rake-before-before-mtb-hardtail-x11-stand.jpg",
+   "time": "10:54:58",
+   "kind": "image"
+  },
+  {
+   "file": "105520-fork-rake-before-before-mtb-hardtail-x11-ride.jpg",
+   "time": "10:55:20",
+   "kind": "image"
+  },
+  {
+   "file": "105532-fork-rake-before-before-road-aero-wayland-studio.jpg",
+   "time": "10:55:32",
+   "kind": "image"
+  },
+  {
+   "file": "105533-fork-rake-before-before-road-aero-wayland-fork.jpg",
+   "time": "10:55:33",
+   "kind": "image"
+  },
+  {
+   "file": "105546-fork-rake-before-before-road-aero-wayland-stand.jpg",
+   "time": "10:55:46",
+   "kind": "image"
+  },
+  {
+   "file": "105559-fork-rake-before-before-road-aero-wayland-ride.jpg",
+   "time": "10:55:59",
+   "kind": "image"
+  },
+  {
+   "file": "105610-fork-rake-before-before-road-climbing-wayland-studio.jpg",
+   "time": "10:56:10",
+   "kind": "image"
+  },
+  {
+   "file": "105611-fork-rake-before-before-road-climbing-wayland-fork.jpg",
+   "time": "10:56:11",
+   "kind": "image"
+  },
+  {
+   "file": "105624-fork-rake-before-before-road-climbing-wayland-stand.jpg",
+   "time": "10:56:24",
+   "kind": "image"
+  },
+  {
+   "file": "105637-fork-rake-before-before-road-climbing-wayland-ride.jpg",
+   "time": "10:56:37",
+   "kind": "image"
+  },
+  {
+   "file": "105648-fork-rake-before-before-road-endurance-wayland-fork.jpg",
+   "time": "10:56:48",
+   "kind": "image"
+  },
+  {
+   "file": "105648-fork-rake-before-before-road-endurance-wayland-studio.jpg",
+   "time": "10:56:48",
+   "kind": "image"
+  },
+  {
+   "file": "105702-fork-rake-before-before-road-endurance-wayland-stand.jpg",
+   "time": "10:57:02",
+   "kind": "image"
+  },
+  {
+   "file": "105715-fork-rake-before-before-road-endurance-wayland-ride.jpg",
+   "time": "10:57:15",
+   "kind": "image"
+  },
+  {
+   "file": "105727-fork-rake-before-before-gravel-wayland-fork.jpg",
+   "time": "10:57:27",
+   "kind": "image"
+  },
+  {
+   "file": "105727-fork-rake-before-before-gravel-wayland-studio.jpg",
+   "time": "10:57:27",
+   "kind": "image"
+  },
+  {
+   "file": "105741-fork-rake-before-before-gravel-wayland-stand.jpg",
+   "time": "10:57:41",
+   "kind": "image"
+  },
+  {
+   "file": "105755-fork-rake-before-before-gravel-wayland-ride.jpg",
+   "time": "10:57:55",
+   "kind": "image"
+  },
+  {
+   "file": "105806-fork-rake-before-before-tt-wayland-studio.jpg",
+   "time": "10:58:06",
+   "kind": "image"
+  },
+  {
+   "file": "105807-fork-rake-before-before-tt-wayland-fork.jpg",
+   "time": "10:58:07",
+   "kind": "image"
+  },
+  {
+   "file": "105820-fork-rake-before-before-tt-wayland-stand.jpg",
+   "time": "10:58:20",
+   "kind": "image"
+  },
+  {
+   "file": "105834-fork-rake-before-before-tt-wayland-ride.jpg",
+   "time": "10:58:34",
+   "kind": "image"
+  },
+  {
+   "file": "105846-fork-rake-before-before-mtb-hardtail-wayland-fork.jpg",
+   "time": "10:58:46",
+   "kind": "image"
+  },
+  {
+   "file": "105846-fork-rake-before-before-mtb-hardtail-wayland-studio.jpg",
+   "time": "10:58:46",
+   "kind": "image"
+  },
+  {
+   "file": "105900-fork-rake-before-before-mtb-hardtail-wayland-stand.jpg",
+   "time": "10:59:00",
+   "kind": "image"
+  },
+  {
+   "file": "105914-fork-rake-before-before-mtb-hardtail-wayland-ride.jpg",
+   "time": "10:59:14",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-gravel-wayland-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-gravel-x11-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-road-aero-wayland-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-road-aero-x11-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-road-climbing-wayland-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-road-climbing-x11-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-road-endurance-wayland-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-road-endurance-x11-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105945-fork-rake-compare-compare-tt-x11-fork.jpg",
+   "time": "10:59:45",
+   "kind": "image"
+  },
+  {
+   "file": "105946-fork-rake-compare-compare-mtb-hardtail-wayland-fork.jpg",
+   "time": "10:59:46",
+   "kind": "image"
+  },
+  {
+   "file": "105946-fork-rake-compare-compare-mtb-hardtail-x11-fork.jpg",
+   "time": "10:59:46",
+   "kind": "image"
+  },
+  {
+   "file": "105946-fork-rake-compare-compare-tt-wayland-fork.jpg",
+   "time": "10:59:46",
+   "kind": "image"
+  },
+  {
+   "file": "112825-shot-ocw.jpg",
+   "time": "11:28:25",
+   "kind": "image"
+  },
+  {
+   "file": "112835-shot-wayland-ocw-wayland.jpg",
+   "time": "11:28:35",
+   "kind": "image"
+  },
+  {
+   "file": "114337-activities-folder-stop-x11.jpg",
+   "time": "11:43:37",
+   "kind": "image"
+  },
+  {
+   "file": "114505-activities-folder-upload-x11.jpg",
+   "time": "11:45:05",
+   "kind": "image"
+  },
+  {
+   "file": "114627-activities-folder-stop-wayland.jpg",
+   "time": "11:46:27",
+   "kind": "image"
+  },
+  {
+   "file": "114750-activities-folder-upload-wayland.jpg",
+   "time": "11:47:50",
+   "kind": "image"
+  },
+  {
+   "file": "114824-shot-ocw.jpg",
+   "time": "11:48:24",
+   "kind": "image"
+  },
+  {
+   "file": "114834-shot-wayland-ocw-wayland.jpg",
+   "time": "11:48:34",
+   "kind": "image"
+  },
+  {
+   "file": "120718-activities-folder-stop-x11.jpg",
+   "time": "12:07:18",
+   "kind": "image"
+  },
+  {
+   "file": "121015-activities-folder-stop-x11-end.jpg",
+   "time": "12:10:15",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-calendar-select.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-calendar.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-console.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-gamepad.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-gps.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-hud.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-join.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-menu.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-photo-preview.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-ride.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-riders.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-settings.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-strava-recording-downloaded.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-strava-recording-saved-to-folder.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-strava-recording.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-strava-row.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-strava-steps.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-touch-hints.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-touch-hold.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-unicorn-flight.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-unicorn-inspect.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-unicorn-menu.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web-weather.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121129-web-web.jpg",
+   "time": "12:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "121500-activities-folder-upload-x11.jpg",
+   "time": "12:15:00",
+   "kind": "image"
+  },
+  {
+   "file": "121729-activities-folder-upload-x11-end.jpg",
+   "time": "12:17:29",
+   "kind": "image"
+  },
+  {
+   "file": "121859-activities-folder-stop-wayland.jpg",
+   "time": "12:18:59",
+   "kind": "image"
+  },
+  {
+   "file": "121936-activities-folder-stop-wayland-end.jpg",
+   "time": "12:19:36",
+   "kind": "image"
+  },
+  {
+   "file": "122057-activities-folder-upload-wayland.jpg",
+   "time": "12:20:57",
+   "kind": "image"
+  },
+  {
+   "file": "122129-activities-folder-upload-wayland-end.jpg",
+   "time": "12:21:29",
+   "kind": "image"
+  },
+  {
+   "file": "131720-strava-pending-stop-x11.jpg",
+   "time": "13:17:20",
+   "kind": "image"
+  },
+  {
+   "file": "131742-strava-pending-waiting-x11.jpg",
+   "time": "13:17:42",
+   "kind": "image"
+  },
+  {
+   "file": "132024-strava-pending-waiting-x11-end.jpg",
+   "time": "13:20:24",
+   "kind": "image"
+  },
+  {
+   "file": "132222-strava-pending-question-x11.jpg",
+   "time": "13:22:22",
+   "kind": "image"
+  },
+  {
+   "file": "132233-strava-pending-uploaded-x11.jpg",
+   "time": "13:22:33",
+   "kind": "image"
+  },
+  {
+   "file": "132252-strava-pending-on-strava-x11.jpg",
+   "time": "13:22:52",
+   "kind": "image"
+  },
+  {
+   "file": "132535-strava-pending-uploaded-x11-end.jpg",
+   "time": "13:25:35",
+   "kind": "image"
+  },
+  {
+   "file": "132617-strava-pending-stop-wayland.jpg",
+   "time": "13:26:17",
+   "kind": "image"
+  },
+  {
+   "file": "132626-strava-pending-waiting-wayland.jpg",
+   "time": "13:26:26",
+   "kind": "image"
+  },
+  {
+   "file": "132713-strava-pending-waiting-wayland-end.jpg",
+   "time": "13:27:13",
+   "kind": "image"
+  },
+  {
+   "file": "132747-strava-pending-question-wayland.jpg",
+   "time": "13:27:47",
+   "kind": "image"
+  },
+  {
+   "file": "132752-strava-pending-uploaded-wayland.jpg",
+   "time": "13:27:52",
+   "kind": "image"
+  },
+  {
+   "file": "132800-strava-pending-on-strava-wayland.jpg",
+   "time": "13:28:00",
+   "kind": "image"
+  },
+  {
+   "file": "132847-strava-pending-uploaded-wayland-end.jpg",
+   "time": "13:28:47",
+   "kind": "image"
+  },
+  {
+   "file": "134644-shot-ocw.jpg",
+   "time": "13:46:44",
+   "kind": "image"
+  },
+  {
+   "file": "134653-shot-wayland-ocw-wayland.jpg",
+   "time": "13:46:53",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-calendar-select.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-calendar.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-console.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-downloads-OCW-2026-11-18-13-59-14.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-downloads-ocw-2026-11-18-13-59-35.webm",
+   "time": "13:58:02",
+   "kind": "video"
+  },
+  {
+   "file": "135802-web-web-gamepad.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-gps.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-hud.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-join.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-menu.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-photo-preview.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-ride.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-riders.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-settings.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-strava-recording-downloaded.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-strava-recording-saved-to-folder.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-strava-recording.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-strava-row.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-strava-steps.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-touch-hints.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-touch-hold.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-unicorn-flight.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-unicorn-inspect.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-unicorn-menu.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web-weather.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "135802-web-web.jpg",
+   "time": "13:58:02",
+   "kind": "image"
+  },
+  {
+   "file": "140153-strava-pending-stop-x11.jpg",
+   "time": "14:01:53",
+   "kind": "image"
+  },
+  {
+   "file": "140215-strava-pending-waiting-x11.jpg",
+   "time": "14:02:15",
+   "kind": "image"
+  },
+  {
+   "file": "140459-strava-pending-waiting-x11-end.jpg",
+   "time": "14:04:59",
+   "kind": "image"
+  },
+  {
+   "file": "140655-strava-pending-question-x11.jpg",
+   "time": "14:06:55",
+   "kind": "image"
+  },
+  {
+   "file": "140707-strava-pending-uploaded-x11.jpg",
+   "time": "14:07:07",
+   "kind": "image"
+  },
+  {
+   "file": "140725-strava-pending-on-strava-x11.jpg",
+   "time": "14:07:25",
+   "kind": "image"
+  },
+  {
+   "file": "141009-strava-pending-uploaded-x11-end.jpg",
+   "time": "14:10:09",
+   "kind": "image"
+  },
+  {
+   "file": "141051-strava-pending-stop-wayland.jpg",
+   "time": "14:10:51",
+   "kind": "image"
+  },
+  {
+   "file": "141100-strava-pending-waiting-wayland.jpg",
+   "time": "14:11:00",
+   "kind": "image"
+  },
+  {
+   "file": "141147-strava-pending-waiting-wayland-end.jpg",
+   "time": "14:11:47",
+   "kind": "image"
+  },
+  {
+   "file": "141221-strava-pending-question-wayland.jpg",
+   "time": "14:12:21",
+   "kind": "image"
+  },
+  {
+   "file": "141226-strava-pending-uploaded-wayland.jpg",
+   "time": "14:12:26",
+   "kind": "image"
+  },
+  {
+   "file": "141234-strava-pending-on-strava-wayland.jpg",
+   "time": "14:12:34",
+   "kind": "image"
+  },
+  {
+   "file": "141321-strava-pending-uploaded-wayland-end.jpg",
+   "time": "14:13:21",
+   "kind": "image"
+  },
+  {
+   "file": "143428-release-0.2.4-web-webgpu-web-world-cached-loading.jpg",
+   "time": "14:34:28",
+   "kind": "image"
+  },
+  {
+   "file": "143428-release-0.2.4-web-webgpu-web-world-cached.jpg",
+   "time": "14:34:28",
+   "kind": "image"
+  },
+  {
+   "file": "143428-release-0.2.4-web-webgpu-web-world-first-loading.jpg",
+   "time": "14:34:28",
+   "kind": "image"
+  },
+  {
+   "file": "143428-release-0.2.4-web-webgpu-web-world.jpg",
+   "time": "14:34:28",
+   "kind": "image"
+  },
+  {
+   "file": "143431-release-0.2.4-appimage-x11.jpg",
+   "time": "14:34:31",
+   "kind": "image"
+  },
+  {
+   "file": "143458-release-0.2.4-appimage-wayland.jpg",
+   "time": "14:34:58",
+   "kind": "image"
+  },
+  {
+   "file": "143502-release-0.2.4-web-webgl2-web-world-webgl2-cached-loading.jpg",
+   "time": "14:35:02",
+   "kind": "image"
+  },
+  {
+   "file": "143502-release-0.2.4-web-webgl2-web-world-webgl2-cached.jpg",
+   "time": "14:35:02",
+   "kind": "image"
+  },
+  {
+   "file": "143502-release-0.2.4-web-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "14:35:02",
+   "kind": "image"
+  },
+  {
+   "file": "143502-release-0.2.4-web-webgl2-web-world-webgl2.jpg",
+   "time": "14:35:02",
+   "kind": "image"
+  },
+  {
+   "file": "143522-release-0.2.4-tarball-x11.jpg",
+   "time": "14:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "143548-release-0.2.4-tarball-wayland.jpg",
+   "time": "14:35:48",
+   "kind": "image"
+  },
+  {
+   "file": "143604-release-0.2.4-studio-wayland.jpg",
+   "time": "14:36:04",
+   "kind": "image"
+  },
+  {
+   "file": "143621-release-0.2.4-studio-x11.jpg",
+   "time": "14:36:21",
+   "kind": "image"
+  },
+  {
+   "file": "183549-feature-fps-cost-shots-blackforest-mummelsee-km7-all-on.jpg",
+   "time": "18:35:49",
+   "kind": "image"
+  },
+  {
+   "file": "183608-feature-fps-cost-shots-tenerife-masca-km9-all-on.jpg",
+   "time": "18:36:08",
+   "kind": "image"
+  },
+  {
+   "file": "183626-feature-fps-cost-shots-liechtenstein-vaduz-free-all-on.jpg",
+   "time": "18:36:26",
+   "kind": "image"
+  },
+  {
+   "file": "183645-feature-fps-cost-shots-tenerife-puerto-teide-km4-horrible-all-on.jpg",
+   "time": "18:36:45",
+   "kind": "image"
+  },
+  {
+   "file": "213227-dashboard-battery-guard-battery-guard-cards.png",
+   "time": "21:32:27",
+   "kind": "image"
+  }
+ ],
+ "images": 942,
+ "videos": 9,
+ "sounds": 0,
+ "builds": {
+  "runs": 138,
+  "seconds": 173144.8,
+  "cargo_s": 26733.5,
+  "compiled": 23477,
+  "wait_s": 75402.0,
+  "failed": [
+   {
+    "start": "2026-11-18T00:23:35+01:00",
+    "seconds": 1353.8,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-a57dfc7b2ec3683fd",
+    "branch": "worktree-agent-a57dfc7b2ec3683fd",
+    "commit": "9137c1f-dirty",
+    "command": "cargo clippy -p ocw-world -p ocw-worldgen -p ocw-worldstore -p ocw-sim -p ocw-render -p ocw-studio -p world-builder -p ocw-server --all-targets -- -D warnings 2>&1 | Select-String -Pattern \"^(warni...",
+    "exit": 101,
+    "log": "002335-Win11Builder-279631.log",
+    "sync_s": 9.4,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 948
+   },
+   {
+    "start": "2026-11-18T01:20:29+01:00",
+    "seconds": 648.1,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-a01c5b7f390a5e38e",
+    "branch": "worktree-agent-a01c5b7f390a5e38e",
+    "commit": "1caf480-dirty",
+    "command": "cargo clippy -p ocw-desktop --all-targets -- -D warnings 2>&1 | Select-String -Pattern \"^(error|warning)|-->|could not compile|Finished\" | Select-Object -First 80; echo WIN_DONE",
+    "exit": 101,
+    "log": "012029-Win11Builder-391231.log",
+    "sync_s": 8.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T02:41:03+01:00",
+    "seconds": 2651.3,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "merge-gd",
+    "branch": "merge/ground-detail",
+    "commit": "9bb45b6",
+    "command": "cargo fmt --all -- --check; if ($LASTEXITCODE) { \"FMT-FAILED\"; exit 1 }; cargo clippy --workspace --all-targets -- -D warnings 2>&1 | Select-String -Pattern \"^error|^warning: unused|Finished\" | Sel...",
+    "exit": 1,
+    "log": "024103-Win11Builder-527840.log",
+    "sync_s": 10.9,
+    "cargo_s": 761.0,
+    "cargo_builds": 1,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T03:26:50+01:00",
+    "seconds": 29.9,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "78fa791-dirty",
+    "command": "cargo fmt -p ocw-weather -- --check; if ($LASTEXITCODE) { \"FMT-FAILED\" }; cargo test -q -p ocw-weather --test real_weather 2>&1 | Select-String \"test result|FAILED|panicked\"",
+    "exit": 101,
+    "log": "032650-Win11Builder-622986.log",
+    "sync_s": 6.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T03:27:23+01:00",
+    "seconds": 8.6,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "78fa791-dirty",
+    "command": "cargo test -q -p ocw-weather --test real_weather 2>&1 | Select-String -Context 0,4 \"panicked\"; cargo fmt -p ocw-weather -- --check 2>&1 | Select-Object -First 20",
+    "exit": 255,
+    "log": "032723-Win11Builder-623741.log",
+    "sync_s": 5.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T04:59:27+01:00",
+    "seconds": 168.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "merge-rd",
+    "branch": "merge/road-damage",
+    "commit": "19a2ab8",
+    "command": "set -e; make check; make test-smoke; echo ALL-CHECKS-OK",
+    "exit": 2,
+    "log": "045927-marge-769364.log",
+    "sync_s": 0.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 666,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T05:02:36+01:00",
+    "seconds": 8.8,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-a57dfc7b2ec3683fd",
+    "branch": "worktree-agent-a57dfc7b2ec3683fd",
+    "commit": "a111f5d-dirty",
+    "command": "cargo clippy -p ocw-map -p ocw-world -p ocw-worldgen -p ocw-render -p ocw-studio -p world-builder --all-targets -- -D warnings 2>&1 | Select-String -Pattern \"^(warning|error)|Finished\" -Context 0,8...",
+    "exit": 1,
+    "log": "050236-Win11Builder-776178.log",
+    "sync_s": 7.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T05:33:41+01:00",
+    "seconds": 1806.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "merge-ss2",
+    "branch": "merge/strava-simple2",
+    "commit": "c568f57",
+    "command": "set -e; make check; make test-smoke; echo ALL-CHECKS-OK",
+    "exit": 2,
+    "log": "053341-marge-832153.log",
+    "sync_s": 0.7,
+    "cargo_s": 1280.0,
+    "cargo_builds": 6,
+    "compiled": 1931,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T10:32:30+01:00",
+    "seconds": 252.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a3a217ad67fa320ad",
+    "branch": "worktree-agent-a3a217ad67fa320ad",
+    "commit": "a31b7d5-dirty",
+    "command": "cargo test -q -p ocw-assets --lib forks_are_raked_forward 2>&1 | tail -15 && cargo run -q -p ocw-assets -- model export-all && cargo run -q -p ocw-assets -- model export-all --check && git status -...",
+    "exit": 128,
+    "log": "103230-marge-1296067.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T10:53:23+01:00",
+    "seconds": 141.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a3a217ad67fa320ad",
+    "branch": "worktree-agent-a3a217ad67fa320ad",
+    "commit": "c2c6abe-dirty",
+    "command": "set -e; cargo fmt --all -- --check; echo FMT_OK; cargo clippy -q --workspace --all-targets -- -D warnings; echo CLIPPY_OK; cargo test -q --workspace 2>&1 | grep -E \"test result|FAILED|panicked|^err...",
+    "exit": 1,
+    "log": "105323-marge-1324830.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 138
+   },
+   {
+    "start": "2026-11-18T13:07:29+01:00",
+    "seconds": 4.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a32984c5dc658f4b1",
+    "branch": "strava-pending",
+    "commit": "ef0fa38-dirty",
+    "command": "cargo fmt --all && out=test-output/2026-11-18/strava-pending && scripts/test-strava-pending.sh $out x11 > $out-x11.txt 2>&1; echo X11 $?; scripts/test-strava-pending.sh $out wayland > $out-wayland....",
+    "exit": 1,
+    "log": "130729-marge-1550257.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T13:07:33+01:00",
+    "seconds": 709.1,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-a32984c5dc658f4b1",
+    "branch": "strava-pending",
+    "commit": "ef0fa38-dirty",
+    "command": "cargo clippy -p ocw-desktop --all-targets -- -D warnings 2>&1 | Select-String -Pattern \"^(error|warning)|-->|Finished\" | Select-Object -First 40; \"EXIT $LASTEXITCODE\"",
+    "exit": 101,
+    "log": "130733-Win11Builder-1550424.log",
+    "sync_s": 8.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T14:16:51+01:00",
+    "seconds": 754.0,
+    "machine": "macos",
+    "os": "macos",
+    "checkout": "agent-aad4cbe977d80ba4d",
+    "branch": "HEAD",
+    "commit": "4fa23fa",
+    "command": "OCW_SHA=4fa23fa OCW_FEATURES=ocw-desktop/voice scripts/build-macos-app.sh && OCW_SHA=4fa23fa OCW_FEATURES=ocw-desktop/voice OCW_APP=studio scripts/build-macos-app.sh && ls -l target/macos",
+    "exit": 101,
+    "log": "141651-macos-1658147.log",
+    "sync_s": 4.3,
+    "cargo_s": 671.0,
+    "cargo_builds": 1,
+    "compiled": 648,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T18:34:10+01:00",
+    "seconds": 1.2,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-ac5f29b36c9ad1f2e",
+    "branch": "worktree-agent-ac5f29b36c9ad1f2e",
+    "commit": "04a94fb",
+    "command": "OCW_TEST_OUTPUT=off test-output/feature-fps-cost/shots.sh",
+    "exit": 127,
+    "log": "183410-marge-2016774.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-18T18:39:10+01:00",
+    "seconds": 132.0,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-ac5f29b36c9ad1f2e",
+    "branch": "worktree-agent-ac5f29b36c9ad1f2e",
+    "commit": "04a94fb-dirty",
+    "command": "cargo fmt --all --check && cargo clippy -q -p ocw-render -p ocw-desktop --all-targets -- -D warnings && cargo test -q -p ocw-render --lib frame_rate 2>&1 | tail -2 && shellcheck scripts/feature-fps...",
+    "exit": 127,
+    "log": "183910-marge-2023063.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   }
+  ],
+  "machines": {
+   "macos": {
+    "runs": 25,
+    "seconds": 12117.600000000002,
+    "failed": 1,
+    "cargo_s": 2059.0,
+    "compiled": 1487,
+    "wait_s": 3984.0
+   },
+   "Win11Builder": {
+    "runs": 26,
+    "seconds": 23874.7,
+    "failed": 7,
+    "cargo_s": 6175.200000000001,
+    "compiled": 1450,
+    "wait_s": 10961.0
+   },
+   "marge": {
+    "runs": 87,
+    "seconds": 137152.49999999997,
+    "failed": 7,
+    "cargo_s": 18499.3,
+    "compiled": 20540,
+    "wait_s": 60457.0
+   }
+  },
+  "online": {
+   "leela": 0.12161223071577484,
+   "marge": 1.0,
+   "Weela": 0.6351633078526755,
+   "Win11Builder": 0.9986101459346769,
+   "macos": 1.0
+  },
+  "samples": 1439
+ },
+ "prompts": [
+  {
+   "time": "00:07:07",
+   "iso": "2026-11-18T00:07:07+01:00",
+   "text": "is there a way to upload strave rides without a subscription?"
+  },
+  {
+   "time": "00:23:11",
+   "iso": "2026-11-18T00:23:11+01:00",
+   "text": "is the sun already visible in the game?"
+  },
+  {
+   "time": "00:26:04",
+   "iso": "2026-11-18T00:26:04+01:00",
+   "text": "bump version and push a release for  all plattforms including browser"
+  },
+  {
+   "time": "00:31:54",
+   "iso": "2026-11-18T00:31:54+01:00",
+   "text": "how much effort (time/tokens) for building the standalond Oculus rift ap?"
+  },
+  {
+   "time": "00:32:40",
+   "iso": "2026-11-18T00:32:40+01:00",
+   "text": "can you implement the simple strava upload for users without subscription?"
+  },
+  {
+   "time": "00:35:53",
+   "iso": "2026-11-18T00:35:53+01:00",
+   "text": "can you stop and disable the kiosk app? dont make it startup per default"
+  },
+  {
+   "time": "06:52:34",
+   "iso": "2026-11-18T06:52:34+01:00",
+   "text": "link the art project in the ocw readme and vice versa"
+  },
+  {
+   "time": "06:54:34",
+   "iso": "2026-11-18T06:54:34+01:00",
+   "text": "is 3d acceleration used when the hw has it?"
+  },
+  {
+   "time": "07:07:01",
+   "iso": "2026-11-18T07:07:01+01:00",
+   "text": "plan for this: start with V8 WebXR basic (about 1–2 days). After the first headset run, measure the frame rate on the Quest 1. Then decide whether V3 makes it smooth enough, or whether the native route is worth it. Say the word and I'll plan it with you; nothing in Phase 14 is started yet"
+  },
+  {
+   "time": "07:08:43",
+   "iso": "2026-11-18T07:08:43+01:00",
+   "text": "how q5 is decided?"
+  },
+  {
+   "time": "09:24:59",
+   "iso": "2026-11-18T09:24:59+01:00",
+   "text": "collect all day 7 media and create the day video. use music style: melodic deep house"
+  },
+  {
+   "time": "10:24:43",
+   "iso": "2026-11-18T10:24:43+01:00",
+   "text": "turn around the bike fork (check images), it should point forwarrd, not backwards as of now"
+  },
+  {
+   "time": "10:31:45",
+   "iso": "2026-11-18T10:31:45+01:00",
+   "text": "plan for ANT+ heart rate sensor support"
+  },
+  {
+   "time": "10:34:04",
+   "iso": "2026-11-18T10:34:04+01:00",
+   "text": "Spec that the activity and photos for a Strava (s...s) recording should always be written to the users home dir (do we have a dir there already? then put it there in a subfolder (iso date and location)."
+  },
+  {
+   "time": "10:37:12",
+   "iso": "2026-11-18T10:37:12+01:00",
+   "text": "instead of \"~/Pictures/OCW\" put it to \"~/Activities/OCW\". Make it user configurable in config file and UI Menu -> Settings."
+  },
+  {
+   "time": "11:14:48",
+   "iso": "2026-11-18T11:14:48+01:00",
+   "text": "Remove the photo folder and just use the activities folder and put everything there."
+  },
+  {
+   "time": "11:27:51",
+   "iso": "2026-11-18T11:27:51+01:00",
+   "text": "add to specification: for the art project: estimate also the co2 footprint for the token usage and log that and show it in the video"
+  },
+  {
+   "time": "11:38:54",
+   "iso": "2026-11-18T11:38:54+01:00",
+   "text": "fix the failing gh runner job"
+  },
+  {
+   "time": "12:40:45",
+   "iso": "2026-11-18T12:40:45+01:00",
+   "text": "where is the config stored on windows? document for all platforms in readme."
+  },
+  {
+   "time": "12:41:49",
+   "iso": "2026-11-18T12:41:49+01:00",
+   "text": "spec update and implement: allow strava recording even if strava not set up. just save the recording locally and do the upload when credetials provided."
+  },
+  {
+   "time": "12:43:57",
+   "iso": "2026-11-18T12:43:57+01:00",
+   "text": "once thats done and merged, bump version and release all platforms."
+  },
+  {
+   "time": "13:33:34",
+   "iso": "2026-11-18T13:33:34+01:00",
+   "text": "use weela for building tasks, too. keep an eye on the battery consumption."
+  },
+  {
+   "time": "21:21:52",
+   "iso": "2026-11-18T21:21:52+01:00",
+   "text": "add the battery watcher for leela. stop building on leela when battery <20% and only start when >80%"
+  }
+ ],
+ "tokens": {
+  "total": {
+   "input": 6156,
+   "cache_write": 25826498,
+   "cache_read": 855940656,
+   "output": 1490727,
+   "total": 883264037,
+   "messages": 2779
+  },
+  "features": {
+   "Other": {
+    "input": 2486,
+    "cache_write": 13635664,
+    "cache_read": 327164720,
+    "output": 690284,
+    "total": 341493154,
+    "messages": 1118
+   },
+   "Sky, time & weather": {
+    "input": 12,
+    "cache_write": 6236,
+    "cache_read": 935001,
+    "output": 1034,
+    "total": 942283,
+    "messages": 4
+   },
+   "Build, release & infra": {
+    "input": 1116,
+    "cache_write": 2576671,
+    "cache_read": 125725018,
+    "output": 199291,
+    "total": 128502096,
+    "messages": 473
+   },
+   "Art project": {
+    "input": 122,
+    "cache_write": 673881,
+    "cache_read": 21728271,
+    "output": 31975,
+    "total": 22434249,
+    "messages": 54
+   },
+   "UI & menus": {
+    "input": 1370,
+    "cache_write": 824046,
+    "cache_read": 236582926,
+    "output": 309271,
+    "total": 237717613,
+    "messages": 637
+   },
+   "Worlds & terrain": {
+    "input": 414,
+    "cache_write": 4185611,
+    "cache_read": 65667129,
+    "output": 106201,
+    "total": 69959355,
+    "messages": 185
+   },
+   "Riders & bikes": {
+    "input": 358,
+    "cache_write": 689096,
+    "cache_read": 31519345,
+    "output": 72962,
+    "total": 32281761,
+    "messages": 175
+   },
+   "Planning & spec": {
+    "input": 278,
+    "cache_write": 3235293,
+    "cache_read": 46618246,
+    "output": 79709,
+    "total": 49933526,
+    "messages": 133
+   }
+  }
+ },
+ "incidents": {
+  "auto": [
+   {
+    "time": "00:00:35",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (no route to host)"
+   },
+   {
+    "time": "00:09:36",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "disk C: on Win11Builder at 90 %"
+   },
+   {
+    "time": "00:27:29",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a03e9957572339d7f/target (29.1 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a09cdbcff127205c5/target (6.0 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a18d20449774f2675/target (2.1 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a3b9cf0b40cbf0ccc/target (4.8 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a4e6bc385ccdf40f0/target (3.3 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a507bcaff0a2af98c/target (6.2 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a5378106956080801/target (1.8 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a54266deef98aa31a/target (2.8 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a8a0d2c6eeb4556d9/target (5.5 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a99613c9983b557e5/target (2.0 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-ab886c17ece2bab7f/target (2.3 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-ac264ba6885768656/target (5.5 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-acafa3212c0c9925a/target (2.0 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-acf229e1ec2f3ec92/target (5.2 GB)"
+   },
+   {
+    "time": "00:32:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-ad17650ac131c55d2/target (4.1 GB)"
+   },
+   {
+    "time": "00:33:19",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela unreachable (no route to host)"
+   },
+   {
+    "time": "00:34:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW/target (39.8 GB)"
+   },
+   {
+    "time": "00:38:19",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela back online"
+   },
+   {
+    "time": "02:40:20",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a64cacd30a467fa11/target (29.1 GB)"
+   },
+   {
+    "time": "02:59:06",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-release-0.2.3/target (13.7 GB)"
+   },
+   {
+    "time": "03:26:31",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a95d14905b4271774/target (36.7 GB)"
+   },
+   {
+    "time": "04:24:10",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ad1a26650524c097b/target (34.1 GB)"
+   },
+   {
+    "time": "04:58:43",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aa66d7f8e51beba78/target (30.3 GB)"
+   },
+   {
+    "time": "05:33:17",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a01e442248925aa9a/target (42.6 GB)"
+   },
+   {
+    "time": "06:06:06",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a01c5b7f390a5e38e/target (47.2 GB)"
+   },
+   {
+    "time": "06:53:49",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a57dfc7b2ec3683fd/target (62.8 GB)"
+   },
+   {
+    "time": "11:31:29",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "macos",
+    "text": "disk home on macos at 90 %"
+   },
+   {
+    "time": "11:34:50",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW/target (0.9 GB)"
+   },
+   {
+    "time": "11:44:59",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW/target (2.6 GB)"
+   },
+   {
+    "time": "12:04:32",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a3a217ad67fa320ad/target (30.9 GB)"
+   },
+   {
+    "time": "12:48:21",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a367743c92249633c/target (42.2 GB)"
+   },
+   {
+    "time": "14:15:38",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-strava-pending/target (36.1 GB)"
+   },
+   {
+    "time": "15:20:32",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela unreachable (no route to host)"
+   },
+   {
+    "time": "15:22:32",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "15:24:32",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (no route to host)"
+   },
+   {
+    "time": "15:33:32",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "15:37:32",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela unreachable (no route to host)"
+   },
+   {
+    "time": "16:19:33",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "16:20:33",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "18:39:10",
+    "kind": "runs-failed",
+    "source": "remote.sh",
+    "machine": "Win11Builder, macos, marge",
+    "text": "15 failed remote.sh runs (Win11Builder 7, macos 1, marge 7)"
+   },
+   {
+    "time": "19:02:38",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ac5f29b36c9ad1f2e/target (10.3 GB)"
+   },
+   {
+    "time": "19:51:29",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW/target (0.2 GB)"
+   },
+   {
+    "time": "20:11:46",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW/target (0.0 GB)"
+   },
+   {
+    "time": "21:03:36",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "21:04:36",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "21:11:36",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "leela",
+    "text": "leela back online"
+   },
+   {
+    "time": "22:55:31",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a03e9957572339d7f/target (6.1 GB)"
+   },
+   {
+    "time": "23:05:39",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW/target (0.1 GB)"
+   },
+   {
+    "time": "23:15:48",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW/target (0.4 GB)"
+   }
+  ],
+  "notes": "",
+  "noted": []
+ },
+ "features": [
+  {
+   "version": "4.67",
+   "title": "The hands hold the bar the right way up",
+   "commit": "97a9e22",
+   "sha": "97a9e22e40611c462516301f7d8598326a13aa27",
+   "time": "2026-11-18T00:26:26+01:00",
+   "merge": true,
+   "subject": "Merge origin/main into merge/studio-logo",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "4.69",
+   "title": "Ride photos are saved in the user's photos folder, subfolder OCW",
+   "commit": "97a9e22",
+   "sha": "97a9e22e40611c462516301f7d8598326a13aa27",
+   "time": "2026-11-18T00:26:26+01:00",
+   "merge": true,
+   "subject": "Merge origin/main into merge/studio-logo",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "4.70",
+   "title": "Config secrets in a separate secrets.toml",
+   "commit": "97a9e22",
+   "sha": "97a9e22e40611c462516301f7d8598326a13aa27",
+   "time": "2026-11-18T00:26:26+01:00",
+   "merge": true,
+   "subject": "Merge origin/main into merge/studio-logo",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "4.71",
+   "title": "OCW Studio's Models workspace shows every model file",
+   "commit": "01dac42",
+   "sha": "01dac4258055af551c632c3d0c3078e555edca3d",
+   "time": "2026-11-18T01:08:42+01:00",
+   "merge": true,
+   "subject": "Merge OCW Studio's Models workspace (E3) and the model tools (M2): browser, viewer with light presets, LOD, gizmos, try-on, the extended validator, model diff / import / export (spec 4.71)",
+   "branch": "worktree-agent-a64cacd30a467fa11",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T01:08:49+01:00",
+    "exit": 0,
+    "branch": "merge/models-e3",
+    "command": "set -e; make check; cargo run -q -p ocw-assets -- model export-all --check; echo ALL-CHECKS-OK",
+    "log": "010849-marge-365090.log",
+    "how": "commit",
+    "suites": 72,
+    "passed": 2832,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.72",
+   "title": "Near-field ground detail",
+   "commit": "9bb45b6",
+   "sha": "9bb45b641b32c5133b68a1bce00ddb183a3f772c",
+   "time": "2026-11-18T02:40:34+01:00",
+   "merge": true,
+   "subject": "Merge the near-field ground detail: stones, gravel, dirt, moss, leaves, twigs and small plants beside the road, by region, season and snow (spec 4.72)",
+   "branch": "worktree-agent-a95d14905b4271774",
+   "check": null
+  },
+  {
+   "version": "4.73",
+   "title": "The HUD has a navigation map in the lower right corner, styled like a bike computer",
+   "commit": "c1d7a41",
+   "sha": "c1d7a41675fe51d33d08b0570530ca1e51e4bfac",
+   "time": "2026-11-18T03:28:31+01:00",
+   "merge": true,
+   "subject": "Merge the HUD navigation map: a bike-computer style map in the lower right, heading-up, route in magenta, next-turn banner, auto zoom, night palette; the shared ocw-map crate (spec 4.73)",
+   "branch": "worktree-agent-ad1a26650524c097b",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T03:28:39+01:00",
+    "exit": 0,
+    "branch": "merge/navi-map",
+    "command": "set -e; make check; make test-smoke; echo ALL-CHECKS-OK",
+    "log": "032839-marge-625950.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 2866,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.74",
+   "title": "A photo just saved shows for 3 seconds in the HUD",
+   "commit": "1311863",
+   "sha": "13118633838473ca789d44b739e7d4afc358ad4c",
+   "time": "2026-11-18T04:25:00+01:00",
+   "merge": true,
+   "subject": "Merge the 3-second photo preview in the HUD and the photos folder Pictures/OCW (desktop and browser; spec 4.74, §2.11 Q3)",
+   "branch": "worktree-agent-aa66d7f8e51beba78",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T04:25:06+01:00",
+    "exit": 0,
+    "branch": "merge/photo-preview",
+    "command": "set -e; make check; make test-smoke; echo ALL-CHECKS-OK",
+    "log": "042506-marge-716629.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 2878,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.75",
+   "title": "Cracks, potholes and loose stones on the roads, by OSM smoothness",
+   "commit": "19a2ab8",
+   "sha": "19a2ab868bf02a748c649c68403bf56274c87f71",
+   "time": "2026-11-18T04:59:20+01:00",
+   "merge": true,
+   "subject": "Merge cracks, potholes and loose stones on the roads, set by OSM smoothness (surface, tracktype; RCND package section, world-builder condition; spec 4.75)",
+   "branch": "worktree-agent-a01e442248925aa9a",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T04:59:27+01:00",
+    "exit": 2,
+    "branch": "merge/road-damage",
+    "command": "set -e; make check; make test-smoke; echo ALL-CHECKS-OK",
+    "log": "045927-marge-769364.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.76",
+   "title": "Simple Strava upload for every rider, no API app",
+   "commit": "c568f57",
+   "sha": "c568f5731972668e663ae217034bdd9f76ff44f2",
+   "time": "2026-11-18T05:33:34+01:00",
+   "merge": true,
+   "subject": "Merge the simple Strava upload in the browser for every rider (no API app, no subscription): ride page row, file manager + strava.com/upload/select, Marked as uploaded; S records without strava.toml (spec 4.76)",
+   "branch": "worktree-agent-a01c5b7f390a5e38e",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T06:04:26+01:00",
+    "exit": 0,
+    "branch": "merge/strava-simple2",
+    "command": "make test-smoke > /tmp/ss-smoke.out 2>&1; rc=$?; tail -3 /tmp/ss-smoke.out; echo \"SMOKE-RC=$rc\"",
+    "log": "060426-marge-867593.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.77",
+   "title": "Place names in the world packages, on the studio's 2D map and on the HUD's navigation map",
+   "commit": "d97076a",
+   "sha": "d97076a61f81149ea2c7d68d86bc6c4cc55843c3",
+   "time": "2026-11-18T06:28:27+01:00",
+   "merge": true,
+   "subject": "Merge place names: PLCE package section, world-builder places, decluttered labels on the studio map and on the HUD navi map (spec 4.77)",
+   "branch": "worktree-agent-a57dfc7b2ec3683fd",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T06:28:34+01:00",
+    "exit": 0,
+    "branch": "merge/places",
+    "command": "set -e; make check; make test-smoke; echo ALL-CHECKS-OK",
+    "log": "062834-marge-917163.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 2925,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.78",
+   "title": "Standalone VR starts with WebXR on the Quest 1",
+   "commit": "a31b7d5",
+   "sha": "a31b7d57f7d824cdaf91d168fd8cbf6e60f923df",
+   "time": "2026-11-18T07:08:02+01:00",
+   "merge": false,
+   "subject": "Standalone VR starts with WebXR on the Quest 1: V8 WebXR basic first, measure in the headset, then decide between V3 and native (Phase 14 Q5 decided; plan 14I; spec 4.78)"
+  },
+  {
+   "version": "4.79",
+   "title": "Every Strava recording is written to the user's home directory",
+   "commit": "c8fcfb5",
+   "sha": "c8fcfb589b4496bb5630b65a871d0802dfbf78a8",
+   "time": "2026-11-18T10:34:43+01:00",
+   "merge": false,
+   "subject": "Every Strava (S … S) recording is written to the user's home directory: FIT and photos in a subfolder of ~/Pictures/OCW named by ISO date and location (the user; §2.8.1, Q7 superseded; spec 4.79)"
+  },
+  {
+   "version": "4.80",
+   "title": "Strava recordings go to ~/Activities/OCW, a folder the user sets in the settings file and…",
+   "commit": "cdc7736",
+   "sha": "cdc77360753509ab42bef7af5e3405f7eeae1948",
+   "time": "2026-11-18T10:37:29+01:00",
+   "merge": false,
+   "subject": "Strava recordings go to ~/Activities/OCW, user-configurable (activities.folder in the settings file, Menu → Settings); other photos stay in ~/Pictures/OCW (the user; §2.8.1; spec 4.80)"
+  },
+  {
+   "version": "4.81",
+   "title": "Plan for ANT+ heart-rate straps",
+   "commit": "05860eb",
+   "sha": "05860eb53b41f0375459ac7789835ce38c77c4de",
+   "time": "2026-11-18T10:43:27+01:00",
+   "merge": true,
+   "subject": "Merge the plan for ANT+ heart-rate straps (§3.4.1, Phase 17; planning, open questions; spec 4.81)",
+   "branch": "worktree-agent-aa3aa462e9eead314",
+   "check": null
+  },
+  {
+   "version": "4.82",
+   "title": "One folder for everything",
+   "commit": "153e3dd",
+   "sha": "153e3dd90c5f0d3ac5e47fcfbd98a24a463cd66b",
+   "time": "2026-11-18T11:15:06+01:00",
+   "merge": false,
+   "subject": "One folder for everything OCW saves: ~/Activities/OCW; the photos folder ~/Pictures/OCW and photos.folder go away (the user; §2.8.1, §2.11; spec 4.82)"
+  },
+  {
+   "version": "4.83",
+   "title": "Bike forks raked forward",
+   "commit": "62052ca",
+   "sha": "62052ca399c4f431021a92a7e1482b13f4c0259f",
+   "time": "2026-11-18T11:30:37+01:00",
+   "merge": true,
+   "subject": "Merge the bike forks raked forward: blades curve forward to the axle, the MTB fork ahead of the steering axis; all six bikes re-exported (spec 4.83, 15K)",
+   "branch": "worktree-agent-a3a217ad67fa320ad",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T11:30:45+01:00",
+    "exit": 0,
+    "branch": "merge/fork",
+    "command": "set -e; make check; cargo run -q -p ocw-assets -- model export-all --check; make test-smoke; echo ALL-CHECKS-OK",
+    "log": "113045-marge-1387043.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 2927,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.84",
+   "title": "Strava recording without Strava set up",
+   "commit": "ef0fa38",
+   "sha": "ef0fa38ed2a8fc9939c9d7257ad90ce7cc205874",
+   "time": "2026-11-18T12:47:17+01:00",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into merge/activities",
+   "branch": "worktree-agent-a32984c5dc658f4b1",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T13:00:55+01:00",
+    "exit": 0,
+    "branch": "strava-pending",
+    "command": "cargo fmt --all && cargo test -p ocw-desktop -p ocw-client -p ocw-ui --message-format short 2>&1 | grep -E \"^(error|warn",
+    "log": "130055-marge-1531270.log",
+    "how": "commit",
+    "suites": 5,
+    "passed": 683,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.85",
+   "title": "One folder for everything, built",
+   "commit": "ef0fa38",
+   "sha": "ef0fa38ed2a8fc9939c9d7257ad90ce7cc205874",
+   "time": "2026-11-18T12:47:17+01:00",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into merge/activities",
+   "branch": "worktree-agent-a32984c5dc658f4b1",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T13:00:55+01:00",
+    "exit": 0,
+    "branch": "strava-pending",
+    "command": "cargo fmt --all && cargo test -p ocw-desktop -p ocw-client -p ocw-ui --message-format short 2>&1 | grep -E \"^(error|warn",
+    "log": "130055-marge-1531270.log",
+    "how": "commit",
+    "suites": 5,
+    "passed": 683,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "4.86",
+   "title": "Strava recordings made without Strava set up wait and are uploaded once the credentials c…",
+   "commit": "8c44d49",
+   "sha": "8c44d49993536714ca2127f566f026e97da879da",
+   "time": "2026-11-18T14:14:39+01:00",
+   "merge": true,
+   "subject": "Merge Strava recordings without set-up: waiting locally, uploaded when credentials appear (also while running), ask before more than 3; ride-page states (spec 4.86)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "4.87",
+   "title": "Ground detail, road damage and the HUD navigation map cost under 0.2 ms a frame each at 1…",
+   "commit": "5023175",
+   "sha": "5023175191d2e21f2b36566d63aec949e6512a53",
+   "time": "2026-11-18T18:42:24+01:00",
+   "merge": true,
+   "subject": "Merge the frame-rate cost of ground detail, road damage and the navi map, measured on a quiet marge: each under 0.2 ms at 1080p High; --log-fps p50/p95, scripts/feature-fps-cost.sh (spec 4.87)",
+   "branch": "worktree-agent-ac5f29b36c9ad1f2e",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-18T18:42:44+01:00",
+    "exit": 0,
+    "branch": "merge/fps",
+    "command": "set -e; make check; echo ALL-CHECKS-OK",
+    "log": "184244-marge-2028078.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 2948,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  }
+ ],
+ "deploys": [],
+ "releases": [
+  {
+   "tag": "v0.2.4",
+   "name": "Open Cycling World 0.2.4 (development build)",
+   "time": "2026-11-18T15:00:38+01:00",
+   "prerelease": true
+  },
+  {
+   "tag": "v0.2.3",
+   "name": "Open Cycling World 0.2.3 (development build)",
+   "time": "2026-11-18T02:56:35+01:00",
+   "prerelease": true
+  }
+ ],
+ "agent_jobs": [
+  {
+   "agent": "a578ee7f",
+   "task": "Dashboard: battery of Weela and the Quest",
+   "branch": "worktree-agent-a578ee7f03cf44cd7",
+   "start": "2026-11-18T00:09:58+01:00",
+   "end": "2026-11-18T00:09:58+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "a03e9957",
+   "task": "OCW Studio logo and app icons on all platforms",
+   "branch": "worktree-agent-a03e9957572339d7f",
+   "start": "2026-11-18T00:26:40+01:00",
+   "end": "2026-11-18T00:26:40+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "a087f238",
+   "task": "Release 0.2.3: all platforms and the browser",
+   "branch": "worktree-agent-a087f2386ed695353",
+   "start": "2026-11-18T00:28:30+01:00",
+   "end": "2026-11-18T02:59:27+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a01c5b7f",
+   "task": "Strava: simple upload in the browser, no API app",
+   "branch": "worktree-agent-a01c5b7f390a5e38e",
+   "start": "2026-11-18T00:33:06+01:00",
+   "end": "2026-11-18T06:05:18+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a64cacd3",
+   "task": "Studio Models workspace viewer (E3) + model tools (M2)",
+   "branch": "worktree-agent-a64cacd30a467fa11",
+   "start": "2026-11-18T01:08:29+01:00",
+   "end": "2026-11-18T02:39:28+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a95d1490",
+   "task": "Ground detail: dirt, stones, plant debris",
+   "branch": "ground-detail",
+   "start": "2026-11-18T01:18:42+01:00",
+   "end": "2026-11-18T03:25:41+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a716a1c9",
+   "task": "VR: fallback, no autostart, ffmpeg",
+   "branch": "agent/vr-x1",
+   "start": "2026-11-18T01:18:43+01:00",
+   "end": "2026-11-18T01:18:43+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "a98ff53f",
+   "task": "README: new in-game pictures",
+   "branch": "readme-pictures-2026-11-17",
+   "start": "2026-11-18T01:31:52+01:00",
+   "end": "2026-11-18T01:31:52+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "ad1a2665",
+   "task": "HUD navi map (lower right), like a bike computer",
+   "branch": "agent/navi-map",
+   "start": "2026-11-18T01:57:06+01:00",
+   "end": "2026-11-18T04:23:25+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a57dfc7b",
+   "task": "Place names in packages and the studio map",
+   "branch": "worktree-agent-a57dfc7b2ec3683fd",
+   "start": "2026-11-18T03:16:08+01:00",
+   "end": "2026-11-18T06:53:01+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "aa66d7f8",
+   "task": "HUD: show a new photo for 3 s; photos in Pictures/OCW",
+   "branch": "agent/photo-preview",
+   "start": "2026-11-18T04:05:27+01:00",
+   "end": "2026-11-18T04:57:55+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a01e4422",
+   "task": "Road cracks and potholes from OSM smoothness",
+   "branch": "worktree-agent-a01e442248925aa9a",
+   "start": "2026-11-18T04:09:49+01:00",
+   "end": "2026-11-18T05:32:28+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "afa9d0fc",
+   "task": "WebXR on the Quest 1: W0 platform check, W1 spike",
+   "branch": "worktree-agent-afa9d0fc3a2e03d98",
+   "start": "2026-11-18T07:08:35+01:00",
+   "end": "2026-11-18T08:15:24+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "ac5f29b3",
+   "task": "Frame-rate cost on a quiet marge: ground detail, road damage, navi map",
+   "branch": "worktree-agent-ac5f29b36c9ad1f2e",
+   "start": "2026-11-18T09:11:32+01:00",
+   "end": "2026-11-18T19:01:20+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "ae27345c",
+   "task": "Art: day 7 video, melodic deep house",
+   "branch": "worktree-agent-ae27345c4985cb4c8",
+   "start": "2026-11-18T09:25:33+01:00",
+   "end": "2026-11-18T09:49:29+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a3a217ad",
+   "task": "Bike fork pointing forward",
+   "branch": "worktree-agent-a3a217ad67fa320ad",
+   "start": "2026-11-18T10:25:07+01:00",
+   "end": "2026-11-18T12:03:40+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "aa3aa462",
+   "task": "Plan: ANT+ heart rate support",
+   "branch": "worktree-agent-aa3aa462e9eead314",
+   "start": "2026-11-18T10:32:17+01:00",
+   "end": "2026-11-18T10:43:35+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a367743c",
+   "task": "S recordings to ~/Pictures/OCW/<date place>",
+   "branch": "worktree-agent-a367743c92249633c",
+   "start": "2026-11-18T10:35:16+01:00",
+   "end": "2026-11-18T12:47:30+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a32984c5",
+   "task": "Strava: record without set-up, upload when credentials appear",
+   "branch": "strava-pending",
+   "start": "2026-11-18T12:42:52+01:00",
+   "end": "2026-11-18T14:14:46+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "aad4cbe9",
+   "task": "Release 0.2.4: all platforms and the browser",
+   "branch": "worktree-agent-aad4cbe977d80ba4d",
+   "start": "2026-11-18T14:16:11+01:00",
+   "end": "2026-11-18T15:01:48+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "ad48f3db",
+   "task": "Dashboard: battery guard per machine (leela 20/80)",
+   "branch": "worktree-agent-ad48f3db6639f56d7",
+   "start": "2026-11-18T21:23:08+01:00",
+   "end": "2026-11-18T21:34:03+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  }
+ ]
+}

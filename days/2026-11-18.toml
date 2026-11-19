@@ -1,0 +1,130 @@
+# OCW Build Diary – day 8 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-18/ (or paths in this checkout).
+# Pictures stand alone (spec §11.4 v3.25): a split only where a chapter compares two pictures.
+# Withheld (build-history/withheld.txt): the build dashboard's two battery
+# screenshots of 00:00 (the coordinator's user name readable on leela's card).
+
+title = "A map in the corner, cracks in the road"
+tagline = "In which the HUD gets a bike computer that names its towns, the roads crack as badly as OpenStreetMap says, the forks finally point forward – and every ride lands in one folder, ready for Strava, set up or not."
+hero = "001616-scenes-navi-wayland-navi-li-route-day-720p.jpg"
+bpm = 172
+key = "G"
+style = "liquid-dnb"               # day 6 darkchip, day 7 melodic deep house: something new and fast for a day on the road
+mode = "dorian"
+tests = 2948                       # marge's check of the frame-rate merge, 18:42: 74 suites, 0 failed
+outro = "20 spec versions in one day, 4.67 to 4.87. Two releases, a map that names its towns, and roads exactly as bad as OpenStreetMap says."
+# The release's icon sizes, the WebXR sweep frames and the browser test's
+# six identical menu tours would flicker through the time-lapse:
+timelapse_skip = ["*-icon-*", "*-xr-sweep-*", "*-xr-copy*", "*-web-web-*"]
+teaser = "TO BE CONTINUED – lights on every bike at night, peaks on the navi map, and 75 open questions in plain words."
+
+[[chapter]]
+time = "00:25"
+title = "A bike computer, bottom right"
+caption = "The HUD gets a navigation map in the lower right, styled like a bike computer: heading up, the route in magenta."
+shots = [
+  { file = "001616-scenes-navi-wayland-navi-li-route-day-720p.jpg", seconds = 4.2, focus = [0.85, 0.62, 1.7], note = "Vaduz – Malbun" },
+  { file = "001726-scenes-navi-wayland-navi-tf-route-night.jpg", seconds = 3.9, focus = [0.88, 0.85, 1.6], note = "and a night palette" },
+]
+
+[[chapter]]
+time = "01:07"
+title = "The model shop"
+caption = "OCW Studio's Models workspace: every model file, a viewer with light presets, LOD, a validator – and a try-on."
+shots = [
+  { file = "010404-models-e3-rider.jpg", seconds = 3.9, note = "5,566 triangles of rider" },
+  { file = "010535-models-e3-helmet-tryon-fat.jpg", seconds = 3.9, note = "does it fit?" },
+]
+
+[[chapter]]
+time = "01:07"
+title = "Things by the roadside"
+caption = "Near-field ground detail: stones, gravel, dirt, leaves, twigs and tufts beside the road – by region, season and snow."
+shots = [
+  { split = ["004319-shot-blackforest-autumn-rider-off-x11.jpg", "004414-shot-blackforest-autumn-rider-on-x11.jpg"], seconds = 5.0, note = "off | on" },
+]
+
+[[chapter]]
+time = "01:23"
+title = "Very horrible"
+caption = "Cracks, potholes and loose stones, set by OpenStreetMap's smoothness tag – which really has a value very_horrible."
+shots = [
+  { file = "005451-road-damage-2026-11-18-after-damage-li-smooth-very-horrible-close.jpg", seconds = 4.2, note = "smoothness=very_horrible" },
+  { file = "032847-shot-wayland-level-li-track-horrible-wet.jpg", seconds = 3.9, note = "and wet" },
+  { card = true, seconds = 3.5, text = "02:56 – Release 0.2.3: Linux, Windows, macOS and the browser. OCW Studio wears its new logo." },
+]
+
+[[chapter]]
+time = "03:15"
+title = "Vaduz, labelled"
+caption = "Place names go into the world packages: on the studio's 2D map, then on the HUD's navi map – decluttered, never clipped."
+shots = [
+  { file = "015850-places-tenerife-3-puerto-6m.jpg", seconds = 3.9, focus = [0.9, 0.5, 1.8], note = "Puerto de la Cruz" },
+  { file = "062654-places-navi-v6-navi-vaduz-day-z7.jpg", seconds = 4.2, focus = [0.9, 0.82, 2.0], note = "Städtle, 25 m" },
+]
+
+[[chapter]]
+time = "03:59"
+title = "Say cheese"
+caption = "A photo just taken shows in the HUD for three seconds – also the ride photographer's, from the roadside."
+shots = [
+  { file = "021455-photo-preview-photographer-chase-chase-04-preview.jpg", seconds = 4.2, focus = [0.88, 0.2, 1.8], note = "the photographer's shot" },
+]
+
+[[chapter]]
+time = "04:11"
+title = "Strava, the free way"
+caption = "No API app, no subscription: the ride page opens strava.com's upload page and the ride's folder. Marked as uploaded."
+prompt = "is there a way to upload strave rides without a subscription?"
+shots = [
+  { file = "040605-strava-manual-2026-11-18-shot-wayland-ride-page-shot-wayland.jpg", seconds = 4.5, focus = [0.62, 0.3, 1.5], note = "drag, drop, done" },
+]
+
+[[chapter]]
+time = "07:08"
+title = "Enter VR"
+caption = "Decided: standalone VR starts with WebXR in the Quest 1's browser. The spike puts an Enter VR button on the page."
+prompt = "plan for this: start with V8 WebXR basic (about 1–2 days). After the first headset run, measure the frame rate on the Quest 1."
+shots = [
+  { file = "080813-web-xr-web-xr-after.jpg", seconds = 3.9, note = "one button" },
+  { file = "080813-web-xr-web-xr-xr-left.jpg", seconds = 3.9, note = "the left eye, emulated" },
+]
+
+[[chapter]]
+time = "10:24"
+title = "Forks forward"
+caption = "The forks pointed backwards. Now the blades bend forward to the axle – all six bikes re-exported."
+prompt = "turn around the bike fork (check images), it should point forwarrd, not backwards as of now"
+shots = [
+  { file = "105945-fork-rake-compare-compare-road-climbing-x11-fork.jpg", seconds = 5.0, note = "before | after" },
+]
+
+[[chapter]]
+time = "11:14"
+title = "One folder for everything"
+caption = "Rides, FIT files, photos and screenshots: all in ~/Activities/OCW, one folder per ride, set in Menu → Settings."
+prompt = "Remove the photo folder and just use the activities folder and put everything there."
+shots = [
+  { file = "121500-activities-folder-upload-x11.jpg", seconds = 4.5, focus = [0.5, 0.08, 1.6], note = "Activities/OCW/2026-11-18 …" },
+  { card = true, seconds = 3.5, text = "11:39 – CI fixed: the Linux packages without recommends, 126 MB down to a fraction." },
+]
+
+[[chapter]]
+time = "12:41"
+title = "Ride now, upload later"
+caption = "S records even without Strava set up. The rides wait in the folder and go up once the credentials come – asking first."
+prompt = "spec update and implement: allow strava recording even if strava not set up. just save the recording locally and do the upload when credetials provided."
+shots = [
+  { file = "140655-strava-pending-question-x11.jpg", seconds = 4.5, focus = [0.82, 0.42, 1.5], note = "4 rides waiting" },
+  { card = true, seconds = 3.5, text = "14:15 – Release 0.2.4, all platforms and the browser." },
+  { file = "183645-feature-fps-cost-shots-tenerife-puerto-teide-km4-horrible-all-on.jpg", seconds = 3.9, note = "all on: < 0.2 ms each" },
+]
+
+[[chapter]]
+time = "21:21"
+title = "Battery guard"
+caption = "leela stops building below 20 % and starts again above 80 %. Weela, on a weak charger, is watched at 40 %."
+prompt = "add the battery watcher for leela. stop building on leela when battery <20% and only start when >80%"
+shots = [
+  { file = "213227-dashboard-battery-guard-battery-guard-cards.png", seconds = 4.5, focus = [0.25, 0.55, 1.6], note = "17 %: off it goes" },
+]

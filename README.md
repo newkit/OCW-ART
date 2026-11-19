@@ -15,14 +15,14 @@ day becomes a short video (title, a time-lapse of the whole day, the story in
 chapters, today's features, the numbers), and the days are joined into one
 growing diary video.
 
-<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-17/w/144129-shot-wayland-hands-arms-up.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/w/001616-scenes-navi-wayland-navi-li-route-day-720p.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
 **▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
 **[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**8 build days** · **973** commits · **4675** pictures · **206** videos · **13.03 billion** tokens · the diary video: 482.8 MB
+**9 build days** · **1012** commits · **4906** pictures · **207** videos · **13.49 billion** tokens · the diary video: 546.9 MB
 
 ## How the game grew
 
@@ -32,11 +32,21 @@ growing diary video.
 
 ## The build days
 
-### Day 8 · 2026-11-18 — (the day's story is written at the end of the day)
+### Day 9 · 2026-11-19 — (the day's story is written at the end of the day)
 
-[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-18/) · day zip and video: at the end of the day
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-19/) · day zip and video: at the end of the day
 
-**46** commits · **18** merges · spec 4.67 → 4.78 · **711** pictures · **8** videos · **566 million** tokens · music: lofi
+**10** commits · **1** merges · spec 4.88 → 4.96 · **0** pictures · **0** videos · **135 million** tokens · music: chiptune
+
+### Day 8 · 2026-11-18 — A map in the corner, cracks in the road
+
+*In which the HUD gets a bike computer that names its towns, the roads crack as badly as OpenStreetMap says, the forks finally point forward – and every ride lands in one folder, ready for Strava, set up or not.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-08-2026-11-18.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/001616-scenes-navi-wayland-navi-li-route-day-720p.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-08-2026-11-18.mp4">day video</a> (64.1 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#7"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/001726-scenes-navi-wayland-navi-tf-route-night.jpg.jpg" width="200" alt="scenes navi wayland navi tf route night"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#448"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/040605-strava-manual-2026-11-18-shot-wayland-ride-page-shot-wayland.jpg.jpg" width="200" alt="strava manual 2026 11 18 shot wayland ride page shot wayland"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#951"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/213227-dashboard-battery-guard-battery-guard-cards.png.jpg" width="200" alt="dashboard battery guard battery guard cards"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-18/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-08-2026-11-18.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-18.zip) (236.4 MB)
+
+**75** commits · **28** merges · spec 4.67 → 4.87 · **942** pictures · **9** videos · **883 million** tokens · music: liquid-dnb
 
 ### Day 7 · 2026-11-17 — Faces, hands and a headset on a weak charger
 

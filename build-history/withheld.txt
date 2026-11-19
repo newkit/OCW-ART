@@ -16,3 +16,8 @@
 2026-11-17/235901-2026-11-17-dashboard-battery-live-420.png
 2026-11-17/235928-2026-11-17-dashboard-battery-fixture-mains-discharging-1400.png
 2026-11-17/235954-2026-11-17-dashboard-battery-fixture-mains-discharging-420.png
+
+# Day 8: the build dashboard's battery screenshots of 00:00 (made for day 7's
+# dashboard 1.7.0) show the coordinator's user name ("… by <user>") on leela's card:
+2026-11-18/000010-2026-11-17-dashboard-battery-fixture-unreachable-1400.png
+2026-11-18/000037-2026-11-17-dashboard-battery-fixture-unreachable-420.png
