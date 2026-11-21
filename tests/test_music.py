@@ -339,3 +339,37 @@ class AmbientTest(unittest.TestCase):
         self.assertLess(amb["onsets_per_s"], lofi["onsets_per_s"])
         self.assertLess(amb["brightness"], lofi["brightness"])
         self.assertLess(amb["peak_db"], -2.4)
+
+
+class TranceTest(unittest.TestCase):
+    """Day 11 (2026-11-21): uplifting trance, a style unlike days 6–10."""
+    SEGS = [(0, "intro"), (6, "drive"), (20, "groove"), (28, "groove"), (36, "groove"), (44, "groove"),
+            (52, "outro")]
+
+    def test_four_on_the_floor_with_the_open_hat_off_the_beat(self):
+        for g in M.STYLES["trance"]["grooves"][:3]:
+            pat = M.DRUMS[g]
+            self.assertEqual(pat["k"][0] + pat["k"][4] + pat["k"][8] + pat["k"][12], "xxxx", g)
+            self.assertEqual(pat["o"][2::4], "xxxx", g)
+
+    def test_rolling_bass_never_on_the_beat(self):
+        for name in M.STYLES["trance"]["bass"]["patterns"]:
+            steps = [n[0] for n in M.BASS[name]]
+            self.assertEqual(len(steps), 12, name)
+            self.assertFalse([s for s in steps if s % 4 == 0], name)
+
+    def test_aeolian_i_vi_iii_vii(self):
+        m = M.Music(138, "A", seed=11, style="trance")
+        self.assertEqual(m.mode_name, "minor")
+        self.assertIn([0, 5, 2, 6], M.STYLES["trance"]["progs"])
+        self.assertEqual(m.chord(5, 0)[0] - m.root, 8)  # F over A: the VI
+
+    def test_a_drum_style_per_chapter(self):
+        m = M.Music(138, "A", seed=11, style="trance")
+        grooves = [s[1] for s in m.plan(60, self.SEGS) if s[-1] == "groove" and s[1]]
+        self.assertGreaterEqual(len(set(grooves) & set(M.STYLES["trance"]["grooves"])), 3, grooves)
+
+    def test_loud_enough_without_clipping(self):
+        s = M.stats(M.Music(138, "A", seed=11, style="trance").render(24, [(0, "groove"), (12, "groove")]))
+        self.assertLess(s["peak_db"], -2.4)
+        self.assertAlmostEqual(s["rms_db"], -19, delta=1.5)

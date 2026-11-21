@@ -14,7 +14,11 @@ the two-step breakbeat with ghost snares, a drum style per chapter; day 8),
 syncopated 16ths, the broken electro beat with the clap on 2 and 4, a
 sequenced saw arpeggio and a robotic pulse lead; day 9) and `ambient`
 (no drums at all: a slow lydian pad, a sine drone, a music-box arpeggio and
-a few bell notes; a quiet bed for a day without a build, day 10).
+a few bell notes; a quiet bed for a day without a build, day 10) and
+`trance` (uplifting trance, about 138 bpm: aeolian i–VI–III–VII, a rolling
+off-beat bass in 16ths, a gated supersaw pad, a plucked 16th arpeggio with an
+echo, a soaring saw lead, a punchy four-on-the-floor kit with the open hat
+on every off-beat; day 11).
 A day script
 can name one (`style`, `mode`); by default the day number picks it. Within a
 video the music follows the sections – intro (title), drive (time-lapse),
@@ -83,6 +87,10 @@ BASS = {
     # ambient: a drone, the root held through the bar, sometimes the fifth
     "drone": [(0, 16, 0, 0)],
     "drone5": [(0, 8, 0, 0), (8, 8, 2, 0)],
+    # trance: the rolling bass – three 16ths after every kick, never on the beat
+    "rolling": [(s, 1, 0, 0) for s in range(16) if s % 4],
+    "rolling5": [(s, 1, 0 if s < 12 else 2, 0) for s in range(16) if s % 4],
+    "rollingoct": [(s, 1, 0, 1 if s % 4 == 2 else 0) for s in range(16) if s % 4],
 }
 
 # Arpeggio orders over [c0, c1, c2, c0+12, c1+12, c2+12].
@@ -157,6 +165,17 @@ DRUMS = {
     "electrohalf": {"k": "x.........x..x..", "s": "........X.......", "h": "xgxgxgxgxgxgxgxg",
                     "o": "......x.......x."},
     "electrobreak": {"h": "xgxgxgxgxgxgxgxg", "m": "..x....x.x....x."},
+    # trance (138 bpm): four on the floor, the open hat on every off-beat,
+    # the clap on 2 and 4, 16th hats; a ride-driven variant, a half-time lift
+    # and a breakdown of hats alone.
+    "trance": {"k": "x...x...x...x...", "s": "....x.......x...", "o": "..x...x...x...x.",
+               "h": "gxg.gxg.gxg.gxg."},
+    "trance2": {"k": "x...x...x...x...", "s": "....X.......X...", "o": "..x...x...x...x.",
+                "h": "xgxgxgxgxgxgxgxg"},
+    "trancerim": {"k": "x...x...x...x...", "s": "....x.......x...", "o": "..x...x...x...x.",
+                  "m": ".g....g..g....g.", "r": "gggggggggggggggg"},
+    "trancehalf": {"k": "x.......x.......", "s": "........X.......", "o": "..x...x...x...x."},
+    "trancebreak": {"o": "..g...g...g...g.", "h": "g.g.g.g.g.g.g.g."},
 }
 
 # Stab rhythms (chord hits): x hit; length of a hit in steps follows.
@@ -250,6 +269,20 @@ STYLES = {
         "kit": "lofi", "drive": None, "grooves": [None], "sweep": True,
         "fills": [None],
     },
+    "trance": {
+        "mode": "minor", "swing": 0.0,
+        "progs": [[0, 5, 2, 6], [5, 6, 0, 0], [0, 3, 5, 6], [5, 3, 0, 4]], "bridge": [3, 4, 5, 6],
+        "cadence": [5, 6, 0, 0], "sevenths": False, "lift": [2],
+        "bass": {"wave": "sawbass", "gain": 0.17, "patterns": ["rolling", "rolling5", "rollingoct"]},
+        "harm": {"kind": "arp", "wave": "pluck", "gain": 0.06, "rate": 1, "octave": 12,
+                 "patterns": ["up", "broken", "octave", "updown"], "echo": 0.4},
+        "lead": {"wave": "saw", "gain": 0.065, "octave": 12, "density": 0.34, "p16": 0.06,
+                 "legato": 1.0, "vibrato": 0.006, "echo": 0.3},
+        "pad": {"wave": "supersaw", "gain": 0.18, "lp": 0.05},
+        "kit": "trance", "drive": "trance2", "grooves": ["trance", "trance2", "trancerim", "trancehalf"],
+        "cycle": True, "breakdown_drums": "trancebreak", "sweep": True,
+        "fills": ["build", "build", "fill", "stop"],
+    },
     "synthwave": {
         "mode": "minor", "swing": 0.0,
         "progs": [[0, 5, 2, 6], [0, 3, 5, 4], [5, 6, 0, 0], [0, 6, 5, 6]], "bridge": [3, 4, 5, 6],
@@ -325,6 +358,8 @@ KITS = {  # kick (f start, f end, decay s), snare (noise decay, tone Hz, tone ga
                "lp": 1.0},
     "electro": {"kick": (150, 40, 0.42), "snare": (0.10, 0.0, 0.0), "hat": 0.008, "bright": 1.0,
                 "lp": 1.0, "clap": True},
+    "trance": {"kick": (145, 46, 0.22), "snare": (0.11, 0.0, 0.0), "hat": 0.012, "bright": 1.0,
+               "lp": 1.0, "clap": True},
 }
 
 VEL = {"x": 1.0, "X": 1.25, "g": 0.35, "o": 1.0}

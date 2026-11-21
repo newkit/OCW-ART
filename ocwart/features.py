@@ -68,7 +68,14 @@ def row_title(text: str, n: int = 90) -> str:
         else:
             t = "Decided: " + re.split(r":\s| – | — |;\s|\.\s", rest, maxsplit=1)[0]
     else:
-        t = re.split(r":\s| – | — |;\s|\.\s", t, maxsplit=1)[0]
+        # "Built: other riders' crashes … are heard …" names only the state:
+        # show what was built.
+        b = re.match(r"(?i)built\s*:\s*(.+)", t)
+        if b:
+            what = re.split(r":\s| – | — |;\s|\.\s", b.group(1), maxsplit=1)[0].strip(" ,.")
+            t = "Built: " + what[:1].lower() + what[1:]
+        else:
+            t = re.split(r":\s| – | — |;\s|\.\s", t, maxsplit=1)[0]
     t = t.strip(" ,.")
     return t if len(t) <= n else t[: n - 1].rstrip() + "…"
 

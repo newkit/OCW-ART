@@ -62,6 +62,9 @@ class SpecRowTest(unittest.TestCase):
     def test_titles(self):
         self.assertEqual(F.row_title(END["3.39"]), "Phase 13 G5's browser part built")
         self.assertEqual(F.row_title(END["3.38"]), "Art project incident log")
+        self.assertEqual(F.row_title("**Built: a Voice switch in Host a ride and the headphones – the lists "
+                                     "never leave the server** (7.1.7 Q15)"),
+                         "Built: a Voice switch in Host a ride and the headphones")
         self.assertEqual(F.row_title(END["3.36"]), "Phase 10 public preview of the browser app on GitHub Pages")
         self.assertTrue(F.row_title("x" * 200).endswith("…"))
         # Decision rows show what was decided, not only who decided (user, 2026-11-16).
