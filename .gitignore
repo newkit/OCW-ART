@@ -55,4 +55,6 @@ __pycache__/
 !/build-history/2026-11-19/*.mp4
 !/build-history/2026-11-19/*.png
 !/build-history/2026-11-19/*.webm
+!/build-history/2026-11-20/*.jpg
+!/build-history/2026-11-20/*.mp4
 # <<< lfs-days
