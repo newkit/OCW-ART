@@ -1,0 +1,1661 @@
+{
+ "day": "2026-11-21",
+ "number": 11,
+ "commits": [
+  {
+   "sha": "23d0e6b",
+   "time": "09:06:52",
+   "merge": false,
+   "subject": "Side roads keep their class gradient after the junction blend where they can: grade and vertical-curvature limits applied again with the junction surfaces fixed, steep intervals linted by cause (spec 4.8.8 J2b, 4.8.1, 4.8.3, 5.18)",
+   "added": 964,
+   "removed": 47
+  },
+  {
+   "sha": "cee8e94",
+   "time": "09:07:04",
+   "merge": true,
+   "subject": "Merge origin/main into the J2b branch (spec 5.18 on top of 5.17)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "8657770",
+   "time": "09:08:55",
+   "merge": false,
+   "subject": "Hosting and voice answers: NAT-PMP / PCP only when riders report routers without UPnP, a Voice switch in Host a ride, mute status per viewer as one yes / no, one shared list of selected riders (spec 7.1.7 Q13, Q15, Q17, Q19; 5.18)",
+   "added": 7,
+   "removed": 10
+  },
+  {
+   "sha": "e1884b9",
+   "time": "09:44:05",
+   "merge": false,
+   "subject": "A Voice switch in Host a ride and the headphones worked out per viewer by the server: the lists of whom a rider muted never leave the server (spec 7.1.7 Q15, Q17; 5.19)",
+   "added": 840,
+   "removed": 96
+  },
+  {
+   "sha": "9e58cdd",
+   "time": "09:45:17",
+   "merge": true,
+   "subject": "Merge side roads keeping their class gradient after the junction blend (J2b), the gradient lint by cause (spec 4.8.8, 5.19; new open question 4.8.8 Q6; rebuilt packages not installed)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b9eeb5a",
+   "time": "09:53:48",
+   "merge": false,
+   "subject": "Delete / Page Down choose the junction's exit, ← / → only steer, Page Up / Down no longer change the power; Input mapping page with capture and swap, saved in ocw.toml (spec 3.2.5, 5.18)",
+   "added": 1287,
+   "removed": 413
+  },
+  {
+   "sha": "9ef0451",
+   "time": "10:09:09",
+   "merge": false,
+   "subject": "Headphones module also for wasm; neutral Host a ride summary note; headphones scenes seen from the front (spec 7.1.7 Q15, Q17)",
+   "added": 11,
+   "removed": 3
+  },
+  {
+   "sha": "33f76cf",
+   "time": "10:39:10",
+   "merge": true,
+   "subject": "Merge a Voice switch in Host a ride and the headphones worked out per viewer on the server, the mute lists never sent (spec 7.1.7 Q15, Q17; 5.20)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "29e46a5",
+   "time": "10:52:24",
+   "merge": false,
+   "subject": "Input mapping scenes: later shots, so slow X11 runs reach the page (spec 3.2.5)",
+   "added": 3,
+   "removed": 3
+  },
+  {
+   "sha": "c42099f",
+   "time": "10:53:25",
+   "merge": true,
+   "subject": "Merge Delete / Page Down for the junction's exits (←/→ only steer, Page Up/Down no longer change power) and the Input mapping page with remapping saved in ocw.toml (spec 3.2.5, 5.21)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "774fa01",
+   "time": "11:53:53",
+   "merge": false,
+   "subject": "Spatial crash sounds and the client predicting bumps with other riders (spec 14 Phase 12, 5.22)",
+   "added": 869,
+   "removed": 45
+  },
+  {
+   "sha": "e03d7ae",
+   "time": "12:06:05",
+   "merge": false,
+   "subject": "ocw-audio: the air-absorption check of the spatial cue test matches the law (35 m vs 5 m: about a third)",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "54fed58",
+   "time": "12:18:02",
+   "merge": true,
+   "subject": "Merge spatial crash sounds of other riders and the client predicting bumps with other riders (spec Phase 12, 5.22)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "4ae9436",
+   "time": "13:54:33",
+   "merge": false,
+   "subject": "Browser memory per resident tile: Tenerife 2.1 GB -> 0.7 GB, Black Forest north 2.0 GB -> 0.9 GB of wasm memory, picture unchanged (spec Phase 10 B2, 5.23)",
+   "added": 1398,
+   "removed": 182
+  },
+  {
+   "sha": "554982a",
+   "time": "14:10:19",
+   "merge": false,
+   "subject": "Heap counter test: no race between the live bytes and their peak (spec Phase 10 B2)",
+   "added": 1,
+   "removed": 1
+  }
+ ],
+ "merges": 5,
+ "lines_added": 5381,
+ "lines_removed": 801,
+ "spec_versions": [
+  "4.8",
+  "5.18",
+  "7.1",
+  "7.1",
+  "4.8",
+  "3.2",
+  "7.1",
+  "7.1",
+  "3.2",
+  "3.2"
+ ],
+ "tests": null,
+ "media": [
+  {
+   "file": "100017-shot-wayland-menu-input-mapping.jpg",
+   "time": "10:00:17",
+   "kind": "image"
+  },
+  {
+   "file": "100028-shot-wayland-menu-input-mapping-junctions.jpg",
+   "time": "10:00:28",
+   "kind": "image"
+  },
+  {
+   "file": "100039-shot-wayland-menu-input-mapping-capture.jpg",
+   "time": "10:00:39",
+   "kind": "image"
+  },
+  {
+   "file": "100045-shot-wayland-freeride-junction-keys.jpg",
+   "time": "10:00:45",
+   "kind": "image"
+  },
+  {
+   "file": "100059-shot-wayland-menu-host-options-voice.jpg",
+   "time": "10:00:59",
+   "kind": "image"
+  },
+  {
+   "file": "100119-shot-wayland-menu-host-options-voice-off.jpg",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100640-shot-wayland-menu-host-summary-voice-off.jpg",
+   "time": "10:06:40",
+   "kind": "image"
+  },
+  {
+   "file": "100702-shot-wayland-status-headphones-per-viewer.jpg",
+   "time": "10:07:02",
+   "kind": "image"
+  },
+  {
+   "file": "100712-shot-ocw.jpg",
+   "time": "10:07:12",
+   "kind": "image"
+  },
+  {
+   "file": "100721-shot-wayland-ocw-wayland.jpg",
+   "time": "10:07:21",
+   "kind": "image"
+  },
+  {
+   "file": "100836-shot-wayland-menu-host-summary-voice-off.jpg",
+   "time": "10:08:36",
+   "kind": "image"
+  },
+  {
+   "file": "100847-shot-wayland-status-headphones-per-viewer.jpg",
+   "time": "10:08:47",
+   "kind": "image"
+  },
+  {
+   "file": "100857-shot-wayland-status-headphones-per-viewer-b.jpg",
+   "time": "10:08:57",
+   "kind": "image"
+  },
+  {
+   "file": "100951-shot-menu-input-mapping.jpg",
+   "time": "10:09:51",
+   "kind": "image"
+  },
+  {
+   "file": "101017-shot-menu-input-mapping-junctions.jpg",
+   "time": "10:10:17",
+   "kind": "image"
+  },
+  {
+   "file": "101035-shot-menu-input-mapping-capture.jpg",
+   "time": "10:10:35",
+   "kind": "image"
+  },
+  {
+   "file": "101106-shot-freeride-junction-keys.jpg",
+   "time": "10:11:06",
+   "kind": "image"
+  },
+  {
+   "file": "101130-shot-menu-host-options-voice.jpg",
+   "time": "10:11:30",
+   "kind": "image"
+  },
+  {
+   "file": "101148-shot-menu-host-options-voice-off.jpg",
+   "time": "10:11:48",
+   "kind": "image"
+  },
+  {
+   "file": "101215-shot-menu-host-summary-voice-off.jpg",
+   "time": "10:12:15",
+   "kind": "image"
+  },
+  {
+   "file": "101238-shot-menu-hosting-voice-off.jpg",
+   "time": "10:12:38",
+   "kind": "image"
+  },
+  {
+   "file": "101515-shot-status-headphones-per-viewer.jpg",
+   "time": "10:15:15",
+   "kind": "image"
+  },
+  {
+   "file": "102049-shot-status-headphones-per-viewer-b.jpg",
+   "time": "10:20:49",
+   "kind": "image"
+  },
+  {
+   "file": "102100-shot-ocw.jpg",
+   "time": "10:21:00",
+   "kind": "image"
+  },
+  {
+   "file": "102110-shot-wayland-ocw-wayland.jpg",
+   "time": "10:21:10",
+   "kind": "image"
+  },
+  {
+   "file": "102218-shot-menu-host-options-voice.jpg",
+   "time": "10:22:18",
+   "kind": "image"
+  },
+  {
+   "file": "102321-shot-menu-host-options-voice-off.jpg",
+   "time": "10:23:21",
+   "kind": "image"
+  },
+  {
+   "file": "102423-shot-menu-host-summary-voice-off.jpg",
+   "time": "10:24:23",
+   "kind": "image"
+  },
+  {
+   "file": "102424-shot-ocw.jpg",
+   "time": "10:24:24",
+   "kind": "image"
+  },
+  {
+   "file": "102434-shot-wayland-ocw-wayland.jpg",
+   "time": "10:24:34",
+   "kind": "image"
+  },
+  {
+   "file": "102533-shot-menu-hosting-voice-off.jpg",
+   "time": "10:25:33",
+   "kind": "image"
+  },
+  {
+   "file": "102729-shot-menu-host-options-voice.jpg",
+   "time": "10:27:29",
+   "kind": "image"
+  },
+  {
+   "file": "102902-shot-menu-host-options-voice-off.jpg",
+   "time": "10:29:02",
+   "kind": "image"
+  },
+  {
+   "file": "103040-shot-menu-host-summary-voice-off.jpg",
+   "time": "10:30:40",
+   "kind": "image"
+  },
+  {
+   "file": "103152-shot-menu-hosting-voice-off.jpg",
+   "time": "10:31:52",
+   "kind": "image"
+  },
+  {
+   "file": "103337-shot-menu-host-options-voice.jpg",
+   "time": "10:33:37",
+   "kind": "image"
+  },
+  {
+   "file": "103505-shot-menu-host-options-voice-off.jpg",
+   "time": "10:35:05",
+   "kind": "image"
+  },
+  {
+   "file": "103640-shot-menu-host-summary-voice-off.jpg",
+   "time": "10:36:40",
+   "kind": "image"
+  },
+  {
+   "file": "103748-shot-menu-hosting-voice-off.jpg",
+   "time": "10:37:48",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-calendar-select.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-calendar.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-console.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-damage-crash.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-damage-fresh.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-devices-collapsed.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-devices-expanded.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-gamepad.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-gps.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-history-delete.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-history-ride-file.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-history-ride-map.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-hud.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-input-mapping-capture.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-input-mapping-junctions.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-input-mapping-swapped.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-input-mapping.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-join.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-menu.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-photo-preview.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-ride.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-riders.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-settings.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-strava-recording-downloaded.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-strava-recording-saved-to-folder.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-strava-recording.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-strava-row.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-strava-steps.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-touch-hints.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-touch-hold.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-unicorn-flight.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-unicorn-inspect.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-unicorn-menu.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-weather.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web-workout-map.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "103952-web-web.jpg",
+   "time": "10:39:52",
+   "kind": "image"
+  },
+  {
+   "file": "104607-web-web-world-first-loading.jpg",
+   "time": "10:46:07",
+   "kind": "image"
+  },
+  {
+   "file": "104607-web-web-world-junction-keys.jpg",
+   "time": "10:46:07",
+   "kind": "image"
+  },
+  {
+   "file": "104607-web-web-world.jpg",
+   "time": "10:46:07",
+   "kind": "image"
+  },
+  {
+   "file": "104716-shot-menu-input-mapping.jpg",
+   "time": "10:47:16",
+   "kind": "image"
+  },
+  {
+   "file": "104753-shot-menu-input-mapping-junctions.jpg",
+   "time": "10:47:53",
+   "kind": "image"
+  },
+  {
+   "file": "104827-shot-menu-input-mapping-capture.jpg",
+   "time": "10:48:27",
+   "kind": "image"
+  },
+  {
+   "file": "104909-shot-menu-input-mapping.jpg",
+   "time": "10:49:09",
+   "kind": "image"
+  },
+  {
+   "file": "104929-shot-menu-input-mapping-junctions.jpg",
+   "time": "10:49:29",
+   "kind": "image"
+  },
+  {
+   "file": "104950-shot-menu-input-mapping-capture.jpg",
+   "time": "10:49:50",
+   "kind": "image"
+  },
+  {
+   "file": "105038-shot-menu-input-mapping.jpg",
+   "time": "10:50:38",
+   "kind": "image"
+  },
+  {
+   "file": "105120-shot-menu-input-mapping-junctions.jpg",
+   "time": "10:51:20",
+   "kind": "image"
+  },
+  {
+   "file": "105207-shot-menu-input-mapping-capture.jpg",
+   "time": "10:52:07",
+   "kind": "image"
+  },
+  {
+   "file": "115936-video-wayland-collision-bump-video.jpg",
+   "time": "11:59:36",
+   "kind": "image"
+  },
+  {
+   "file": "115936-video-wayland-collision-bump-video.mp4",
+   "time": "11:59:36",
+   "kind": "video"
+  },
+  {
+   "file": "120525-video-wayland-k12-group-bump-video.jpg",
+   "time": "12:05:25",
+   "kind": "image"
+  },
+  {
+   "file": "120525-video-wayland-k12-group-bump-video.mp4",
+   "time": "12:05:25",
+   "kind": "video"
+  },
+  {
+   "file": "133129-web-memory-before-liechtenstein-webgpu-web-world-first-loading.jpg",
+   "time": "13:31:29",
+   "kind": "image"
+  },
+  {
+   "file": "133129-web-memory-before-liechtenstein-webgpu-web-world-teleport.jpg",
+   "time": "13:31:29",
+   "kind": "image"
+  },
+  {
+   "file": "133129-web-memory-before-liechtenstein-webgpu-web-world.jpg",
+   "time": "13:31:29",
+   "kind": "image"
+  },
+  {
+   "file": "133219-web-memory-before-tenerife-webgpu-web-world-first-loading.jpg",
+   "time": "13:32:19",
+   "kind": "image"
+  },
+  {
+   "file": "133219-web-memory-before-tenerife-webgpu-web-world-teleport.jpg",
+   "time": "13:32:19",
+   "kind": "image"
+  },
+  {
+   "file": "133219-web-memory-before-tenerife-webgpu-web-world.jpg",
+   "time": "13:32:19",
+   "kind": "image"
+  },
+  {
+   "file": "133311-web-memory-before-black-forest-north-webgpu-web-world-first-loading.jpg",
+   "time": "13:33:11",
+   "kind": "image"
+  },
+  {
+   "file": "133311-web-memory-before-black-forest-north-webgpu-web-world-teleport.jpg",
+   "time": "13:33:11",
+   "kind": "image"
+  },
+  {
+   "file": "133311-web-memory-before-black-forest-north-webgpu-web-world.jpg",
+   "time": "13:33:11",
+   "kind": "image"
+  },
+  {
+   "file": "133403-web-memory-before-liechtenstein-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "13:34:03",
+   "kind": "image"
+  },
+  {
+   "file": "133403-web-memory-before-liechtenstein-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "13:34:03",
+   "kind": "image"
+  },
+  {
+   "file": "133403-web-memory-before-liechtenstein-webgl2-web-world-webgl2.jpg",
+   "time": "13:34:03",
+   "kind": "image"
+  },
+  {
+   "file": "133455-web-memory-before-tenerife-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "13:34:55",
+   "kind": "image"
+  },
+  {
+   "file": "133455-web-memory-before-tenerife-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "13:34:55",
+   "kind": "image"
+  },
+  {
+   "file": "133455-web-memory-before-tenerife-webgl2-web-world-webgl2.jpg",
+   "time": "13:34:55",
+   "kind": "image"
+  },
+  {
+   "file": "133549-web-memory-before-black-forest-north-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "13:35:49",
+   "kind": "image"
+  },
+  {
+   "file": "133549-web-memory-before-black-forest-north-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "13:35:49",
+   "kind": "image"
+  },
+  {
+   "file": "133549-web-memory-before-black-forest-north-webgl2-web-world-webgl2.jpg",
+   "time": "13:35:49",
+   "kind": "image"
+  },
+  {
+   "file": "134631-web-memory-after-liechtenstein-webgpu-web-world-first-loading.jpg",
+   "time": "13:46:31",
+   "kind": "image"
+  },
+  {
+   "file": "134631-web-memory-after-liechtenstein-webgpu-web-world-teleport.jpg",
+   "time": "13:46:31",
+   "kind": "image"
+  },
+  {
+   "file": "134631-web-memory-after-liechtenstein-webgpu-web-world.jpg",
+   "time": "13:46:31",
+   "kind": "image"
+  },
+  {
+   "file": "134721-web-memory-after-tenerife-webgpu-web-world-first-loading.jpg",
+   "time": "13:47:21",
+   "kind": "image"
+  },
+  {
+   "file": "134721-web-memory-after-tenerife-webgpu-web-world-teleport.jpg",
+   "time": "13:47:21",
+   "kind": "image"
+  },
+  {
+   "file": "134721-web-memory-after-tenerife-webgpu-web-world.jpg",
+   "time": "13:47:21",
+   "kind": "image"
+  },
+  {
+   "file": "134812-web-memory-after-black-forest-north-webgpu-web-world-first-loading.jpg",
+   "time": "13:48:12",
+   "kind": "image"
+  },
+  {
+   "file": "134812-web-memory-after-black-forest-north-webgpu-web-world-teleport.jpg",
+   "time": "13:48:12",
+   "kind": "image"
+  },
+  {
+   "file": "134812-web-memory-after-black-forest-north-webgpu-web-world.jpg",
+   "time": "13:48:12",
+   "kind": "image"
+  },
+  {
+   "file": "134903-web-memory-after-liechtenstein-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "13:49:03",
+   "kind": "image"
+  },
+  {
+   "file": "134903-web-memory-after-liechtenstein-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "13:49:03",
+   "kind": "image"
+  },
+  {
+   "file": "134903-web-memory-after-liechtenstein-webgl2-web-world-webgl2.jpg",
+   "time": "13:49:03",
+   "kind": "image"
+  },
+  {
+   "file": "134956-web-memory-after-tenerife-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "13:49:56",
+   "kind": "image"
+  },
+  {
+   "file": "134956-web-memory-after-tenerife-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "13:49:56",
+   "kind": "image"
+  },
+  {
+   "file": "134956-web-memory-after-tenerife-webgl2-web-world-webgl2.jpg",
+   "time": "13:49:56",
+   "kind": "image"
+  },
+  {
+   "file": "135049-web-memory-after-black-forest-north-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "13:50:49",
+   "kind": "image"
+  },
+  {
+   "file": "135049-web-memory-after-black-forest-north-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "13:50:49",
+   "kind": "image"
+  },
+  {
+   "file": "135049-web-memory-after-black-forest-north-webgl2-web-world-webgl2.jpg",
+   "time": "13:50:49",
+   "kind": "image"
+  },
+  {
+   "file": "135215-web-memory-compare-black-forest-north-webgl2-before-after.jpg",
+   "time": "13:52:15",
+   "kind": "image"
+  },
+  {
+   "file": "135215-web-memory-compare-black-forest-north-webgpu-before-after.jpg",
+   "time": "13:52:15",
+   "kind": "image"
+  },
+  {
+   "file": "135215-web-memory-compare-liechtenstein-webgl2-before-after.jpg",
+   "time": "13:52:15",
+   "kind": "image"
+  },
+  {
+   "file": "135215-web-memory-compare-liechtenstein-webgpu-before-after.jpg",
+   "time": "13:52:15",
+   "kind": "image"
+  },
+  {
+   "file": "135215-web-memory-compare-tenerife-webgl2-before-after.jpg",
+   "time": "13:52:15",
+   "kind": "image"
+  },
+  {
+   "file": "135215-web-memory-compare-tenerife-webgpu-before-after.jpg",
+   "time": "13:52:15",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-calendar-select.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-calendar.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-console.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-damage-crash.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-damage-fresh.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-devices-collapsed.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-devices-expanded.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-downloads-OCW-2026-11-21-14-24-54.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-downloads-ocw-2026-11-21-14-25-21.webm",
+   "time": "14:23:26",
+   "kind": "video"
+  },
+  {
+   "file": "142326-web-web-gamepad.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-gps.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-history-delete.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-history-ride-file.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-history-ride-map.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-hud.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-input-mapping-capture.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-input-mapping-junctions.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-input-mapping-swapped.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-input-mapping.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-join.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-menu.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-photo-preview.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-ride.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-riders.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-settings.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-strava-recording-downloaded.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-strava-recording-saved-to-folder.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-strava-recording.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-strava-row.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-strava-steps.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-touch-hints.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-touch-hold.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-unicorn-flight.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-unicorn-inspect.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-unicorn-menu.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-weather.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web-workout-map.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "142326-web-web.jpg",
+   "time": "14:23:26",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-hints.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-hold.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-landscape-hints.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-landscape-hold.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-landscape-riding.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-landscape-stopped.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-landscape.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-riding.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-start.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone-stopped.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-iphone.png",
+   "time": "14:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "143004-web-web-webkit-mac.png",
+   "time": "14:30:04",
+   "kind": "image"
+  }
+ ],
+ "images": 180,
+ "videos": 3,
+ "sounds": 0,
+ "builds": {
+  "runs": 64,
+  "seconds": 34649.2,
+  "cargo_s": 4490.9,
+  "compiled": 878,
+  "wait_s": 1906.0,
+  "failed": [],
+  "machines": {
+   "marge": {
+    "runs": 51,
+    "seconds": 23757.300000000007,
+    "failed": 0,
+    "cargo_s": 3056.9,
+    "compiled": 841,
+    "wait_s": 466.0
+   },
+   "leela": {
+    "runs": 9,
+    "seconds": 1685.6000000000001,
+    "failed": 0,
+    "cargo_s": 258.0,
+    "compiled": 15,
+    "wait_s": 138.0
+   },
+   "Win11Builder": {
+    "runs": 4,
+    "seconds": 9206.300000000001,
+    "failed": 0,
+    "cargo_s": 1176.0,
+    "compiled": 22,
+    "wait_s": 1302.0
+   }
+  },
+  "online": {
+   "leela": 1.0,
+   "marge": 1.0,
+   "Weela": 0.0,
+   "Win11Builder": 0.9993055555555556,
+   "macos": 1.0
+  },
+  "samples": 1440
+ },
+ "prompts": [
+  {
+   "time": "08:23:40",
+   "iso": "2026-11-21T08:23:40+01:00",
+   "text": "The cursor keys are double used, for steering and also for selecting which road to ride. Use del key to switch leftwards through the option, use page down to switch rightwards.\n\nAdd a Input mapping entry in the settings menu, where the user can map remap controls. show the selecting mapping for keyboard and gamepad. allow remapping by selwcting the entry. safe the mapping in the local config file."
+  },
+  {
+   "time": "09:04:08",
+   "iso": "2026-11-21T09:04:08+01:00",
+   "text": "when you have tokens. create the next videos. for yesterday, where there where no tokens, create a video about the fact that there where no tokens. use the logo of the claud cli (ascii crab?) turning their pocket inside out, showing that there were no tokens left."
+  },
+  {
+   "time": "09:08:36",
+   "iso": "2026-11-21T09:08:36+01:00",
+   "text": "Answers to open questeions follow here: **7.1.7 Open questions (for the user)**\n\n- **7.1.7 Q13 â€“ NAT-PMP / PCP besides UPnP:** when a rider hosts a ride at home (Host a ride), riders on the internet can reach that computer only if the home router forwards the game's ports to it. The app asks the router to do so automatically with UPnP, the most common way (built in V2). Some routers â€“ Apple AirPort, some OpenWrt set-ups â€“ do not speak UPnP but NAT-PMP or its successor PCP. Supporting them takes another library (crab_nat, MIT) plus one more to find the router's address, and a background runtime. Answer: (a) add it only when riders report routers without UPnP, then as a second try after UPnP finds no router; \n\n\n- **7.1.7 Q15 â€“ A Voice switch in Host a ride:** the planning (v4.01) gave Host a ride two options, Voice and Open router ports. Only the router switch was built (V2): voice chat is always on in a hosted ride and is off only when the voice server program is missing or does not start. So a host who does not want voice chat at all cannot turn it off in the app (the headless server can, with --voice off). Options: (a) no switch, as built; (b) a Voice row on the Options page of Host a ride (host.voice, on by default). Answer: b\n\n\n\n- **7.1.7 Q17 â€“ Who has muted whom, per viewer from the server:** a rider sees headphones on another rider when that rider cannot hear them, e.g. because they muted them (status signs, v4.34). To draw this, the server today sends every client every rider's list of whom they muted (up to 64 riders), although each client only needs its own case. A modified app could read those lists and learn who muted whom â€“ private information. Options: (a) as now, every list to everybody; (b) the server works out for each viewer whether each rider cannot hear that viewer and sends only one yes / no per rider. Asked 2026-11-16. Answer: b.\n\n\n\n\n- **7.1.7 Q19 â€“ One list of Selected riders or two (follow-up of Q8):** voice has two settings that use a hand-picked list of riders: Voice room: Selected riders (I hear only these riders) and Who hears me: Selected riders (only these riders hear me). Built (v4.51): one shared list â€“ the riders picked in Choose riders are both the ones I hear and the ones who hear me. So someone who wants to listen to a friend without being heard by them, or the other way round, cannot do so. An: (a) one list, as built; (b) two lists â€“ whom I hear, who hears me â€“ each with its own Choose riders. Asked 2026-11-17. Answer: one list: who i can hear, can hear me, too"
+  }
+ ],
+ "tokens": {
+  "total": {
+   "input": 2282,
+   "cache_write": 5687625,
+   "cache_read": 314587806,
+   "output": 622831,
+   "total": 320900544,
+   "messages": 1072
+  },
+  "features": {
+   "UI & menus": {
+    "input": 0,
+    "cache_write": 0,
+    "cache_read": 0,
+    "output": 0,
+    "total": 0,
+    "messages": 1
+   },
+   "Art project": {
+    "input": 280,
+    "cache_write": 832727,
+    "cache_read": 32995947,
+    "output": 110086,
+    "total": 33939040,
+    "messages": 139
+   },
+   "Audio & voice": {
+    "input": 892,
+    "cache_write": 2962667,
+    "cache_read": 128256394,
+    "output": 202091,
+    "total": 131422044,
+    "messages": 385
+   },
+   "Planning & spec": {
+    "input": 564,
+    "cache_write": 437281,
+    "cache_read": 82501129,
+    "output": 159098,
+    "total": 83098072,
+    "messages": 279
+   },
+   "Build, release & infra": {
+    "input": 56,
+    "cache_write": 755420,
+    "cache_read": 9097300,
+    "output": 9692,
+    "total": 9862468,
+    "messages": 26
+   },
+   "Other": {
+    "input": 490,
+    "cache_write": 699530,
+    "cache_read": 61737036,
+    "output": 141864,
+    "total": 62578920,
+    "messages": 242
+   }
+  }
+ },
+ "incidents": {
+  "auto": [
+   {
+    "time": "00:00:11",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela unreachable (no route to host)"
+   },
+   {
+    "time": "00:00:11",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "disk C: on Win11Builder at 92 %"
+   },
+   {
+    "time": "09:05:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-phone/target (31.4 GB)"
+   },
+   {
+    "time": "09:05:08",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ace384c5ecb630278/target (39.6 GB)"
+   },
+   {
+    "time": "09:05:11",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab9dfed42b5483ead/target (30.9 GB)"
+   },
+   {
+    "time": "09:05:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-ab9dfed42b5483ead/target (13.8 GB)"
+   },
+   {
+    "time": "09:12:39",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ab9dfed42b5483ead/target (12.4 GB)"
+   },
+   {
+    "time": "09:45:40",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a22862f8e310614ff/target (30.3 GB)"
+   },
+   {
+    "time": "09:45:42",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a22862f8e310614ff/target (1.9 GB)"
+   },
+   {
+    "time": "10:05:57",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "10:28:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a5d32401a371b9b03/target (8.2 GB)"
+   },
+   {
+    "time": "10:28:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-aa7255b2dbab91239/target (3.0 GB)"
+   },
+   {
+    "time": "11:03:57",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "11:28:47",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-voice/target (33.9 GB)"
+   },
+   {
+    "time": "11:28:51",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a649c02685a063272/target (36.6 GB)"
+   },
+   {
+    "time": "11:28:54",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aebb34f8957e5db45/target (44.0 GB)"
+   },
+   {
+    "time": "11:28:56",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-aebb34f8957e5db45/target (6.2 GB)"
+   },
+   {
+    "time": "12:05:45",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "12:18:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a391bd88145028b9d/target (31.5 GB)"
+   },
+   {
+    "time": "12:26:10",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a649c02685a063272/target (8.9 GB)"
+   },
+   {
+    "time": "13:05:45",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "14:04:47",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "15:00:59",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "15:01:18",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-aebb34f8957e5db45/target (8.0 GB)"
+   },
+   {
+    "time": "15:13:42",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a3d60721476281995/target (37.0 GB)"
+   },
+   {
+    "time": "15:13:44",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a3d60721476281995/target (12.7 GB)"
+   },
+   {
+    "time": "16:03:45",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "17:05:45",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "18:05:46",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "19:03:45",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "20:01:45",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "21:04:17",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (ssh error)"
+   },
+   {
+    "time": "21:04:46",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "21:05:17",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "22:04:45",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "23:02:01",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   }
+  ],
+  "notes": "",
+  "noted": []
+ },
+ "features": [
+  {
+   "version": "5.18",
+   "title": "Hosting and voice answers",
+   "commit": "8657770",
+   "sha": "865777071a082277297ecbe5a98462da75752152",
+   "time": "2026-11-21T09:08:55+01:00",
+   "merge": false,
+   "subject": "Hosting and voice answers: NAT-PMP / PCP only when riders report routers without UPnP, a Voice switch in Host a ride, mute status per viewer as one yes / no, one shared list of selected riders (spec 7.1.7 Q13, Q15, Q17, Q19; 5.18)"
+  },
+  {
+   "version": "5.19",
+   "title": "Side roads keep their class gradient after the junction blend where they can",
+   "commit": "9e58cdd",
+   "sha": "9e58cdd9de23e5be28bf8755a7cd173e636b0e21",
+   "time": "2026-11-21T09:45:17+01:00",
+   "merge": true,
+   "subject": "Merge side roads keeping their class gradient after the junction blend (J2b), the gradient lint by cause (spec 4.8.8, 5.19; new open question 4.8.8 Q6; rebuilt packages not installed)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-21T09:07:09+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a22862f8e310614ff",
+    "command": "make check > /tmp/j2b-check.log 2>&1; echo \"check $?\"; tail -5 /tmp/j2b-check.log; make test-web-build > /tmp/j2b-web.lo",
+    "log": "090709-marge-4045344.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.20",
+   "title": "Built: a Voice switch in Host a ride and the headphones worked out per viewer by the serv…",
+   "commit": "33f76cf",
+   "sha": "33f76cfbaee1b777235b001371c0cd3663670f83",
+   "time": "2026-11-21T10:39:10+01:00",
+   "merge": true,
+   "subject": "Merge a Voice switch in Host a ride and the headphones worked out per viewer on the server, the mute lists never sent (spec 7.1.7 Q15, Q17; 5.20)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-21T10:09:15+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a649c02685a063272",
+    "command": "source ~/.cargo/env 2>/dev/null; make check > /tmp/a649-check.log 2>&1; echo CHECK-RC=$?; grep -E \"^error|FAILED|panicke",
+    "log": "100915-marge-55283.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.21",
+   "title": "Delete / Page Down choose the junction's exit to the left / right, ← / → only steer, Page…",
+   "commit": "c42099f",
+   "sha": "c42099fae49bae343975a81909b5dfd77cc7a397",
+   "time": "2026-11-21T10:53:25+01:00",
+   "merge": true,
+   "subject": "Merge Delete / Page Down for the junction's exits (←/→ only steer, Page Up/Down no longer change power) and the Input mapping page with remapping saved in ocw.toml (spec 3.2.5, 5.21)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-21T11:52:20+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a391bd88145028b9d",
+    "command": "cargo test -p ocw-client bumps_with_other -- --nocapture 2>&1 | grep -E \"DBG|group bump|blind along|panicked|test result",
+    "log": "115220-marge-230782.log",
+    "how": "commit",
+    "suites": 1,
+    "passed": 1,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.22",
+   "title": "Built: other riders' crashes and bumps are heard from where they happen, and the client p…",
+   "commit": "54fed58",
+   "sha": "54fed582d71d4c374ced756b87f90bf4491bae38",
+   "time": "2026-11-21T12:18:02+01:00",
+   "merge": true,
+   "subject": "Merge spatial crash sounds of other riders and the client predicting bumps with other riders (spec Phase 12, 5.22)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-21T13:21:56+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a3d60721476281995",
+    "command": "D=$HOME/src/OCW/data; OCW_PACKAGES=$D/tenerife/tenerife.ocwpkg cargo test --release -p ocw-web world_memory_report -- --",
+    "log": "132156-marge-397135.log",
+    "how": "commit",
+    "suites": 1,
+    "passed": 1,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.23",
+   "title": "The browser app's memory on the big worlds cut to a third",
+   "commit": "4ae9436",
+   "sha": "4ae94362df67604b560930b4de4493a9a8ec7d6f",
+   "time": "2026-11-21T13:54:33+01:00",
+   "merge": false,
+   "subject": "Browser memory per resident tile: Tenerife 2.1 GB -> 0.7 GB, Black Forest north 2.0 GB -> 0.9 GB of wasm memory, picture unchanged (spec Phase 10 B2, 5.23)"
+  }
+ ],
+ "deploys": [
+  {
+   "start": "2026-11-21T11:30:07+01:00",
+   "end": "2026-11-21T11:31:28+01:00",
+   "machine": "marge",
+   "commit": "c42099f",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-21T11:31:28+01:00",
+   "end": "2026-11-21T11:32:28+01:00",
+   "machine": "leela",
+   "commit": "c42099f",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-21T15:14:37+01:00",
+   "end": "2026-11-21T15:16:16+01:00",
+   "machine": "marge",
+   "commit": "554982a",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-21T15:16:16+01:00",
+   "end": "2026-11-21T15:17:28+01:00",
+   "machine": "leela",
+   "commit": "554982a",
+   "exit": 0
+  }
+ ],
+ "releases": [],
+ "agent_jobs": [
+  {
+   "agent": "ace384c5",
+   "task": "Phone-sized HUD for the browser",
+   "branch": "worktree-agent-ace384c5ecb630278",
+   "start": "2026-11-21T09:06:04+01:00",
+   "end": "2026-11-21T09:06:04+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "a53e7da9",
+   "task": "Day videos 2026-11-19 and 2026-11-20",
+   "branch": "worktree-agent-a53e7da965fe687d8",
+   "start": "2026-11-21T09:08:29+01:00",
+   "end": "2026-11-21T09:49:25+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "aebb34f8",
+   "task": "Junction exit keys and input mapping",
+   "branch": "worktree-agent-aebb34f8957e5db45",
+   "start": "2026-11-21T09:08:30+01:00",
+   "end": "2026-11-21T11:29:41+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a649c026",
+   "task": "Voice switch (Q15) and per-viewer mute (Q17)",
+   "branch": "worktree-agent-a649c02685a063272",
+   "start": "2026-11-21T09:09:15+01:00",
+   "end": "2026-11-21T11:29:37+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a22862f8",
+   "task": "J2 follow-up: grade limits, rebuild",
+   "branch": "j2b-grade-limits",
+   "start": "2026-11-21T09:45:03+01:00",
+   "end": "2026-11-21T09:46:54+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a391bd88",
+   "task": "Phase 12: crash sounds, bump prediction",
+   "branch": "worktree-agent-a391bd88145028b9d",
+   "start": "2026-11-21T11:36:57+01:00",
+   "end": "2026-11-21T12:19:02+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a3d60721",
+   "task": "Phase 10 B2: browser tile memory",
+   "branch": "worktree-agent-a3d60721476281995",
+   "start": "2026-11-21T13:07:13+01:00",
+   "end": "2026-11-21T15:14:26+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  }
+ ]
+}

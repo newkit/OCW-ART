@@ -21,3 +21,7 @@
 # dashboard 1.7.0) show the coordinator's user name ("… by <user>") on leela's card:
 2026-11-18/000010-2026-11-17-dashboard-battery-fixture-unreachable-1400.png
 2026-11-18/000037-2026-11-17-dashboard-battery-fixture-unreachable-420.png
+
+# Day 11: the Host a ride join link shows the build machine's address in the
+# home network (ocw://192.168.…), the private IP the text mask hides:
+2026-11-21/100651-shot-wayland-menu-hosting-voice-off.jpg

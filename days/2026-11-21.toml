@@ -1,0 +1,96 @@
+# OCW Build Diary – day 11 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-21/ (or ../DAY/ for another day).
+# The weekly token limit reset at 9:00 (day 10 had none); spec rows 5.17–5.23.
+# Withheld: 100651-shot-wayland-menu-hosting-voice-off.jpg – Host a ride's
+# join link shows the build machine's private network address (192.168.…).
+# The rest of the day's 183 pictures and videos were checked: no desktop
+# captures, no user names, home paths or addresses, only made-up riders.
+
+title = "The tokens come back"
+tagline = "In which the limit resets at nine, four agents start at once, the cursor keys stop doing two jobs, the host gets a Voice switch, crashes are heard from where they happen, and the browser sheds two thirds of its memory."
+hero = "100702-shot-wayland-status-headphones-per-viewer.jpg"
+bpm = 138
+key = "A"
+style = "trance"                   # day 6 darkchip, 7 melodic deep house, 8 liquid dnb, 9 electro, 10 ambient: uplifting trance for the comeback
+mode = "minor"
+outro = "320.9 million tokens, the morning after none. The crab has its pockets back."
+# The browser test sweeps (the same menu tour twice), the memory runs'
+# loading screens and the X11 twins of the Wayland shots would flicker
+# through the time-lapse:
+timelapse_skip = ["*web-web-*", "*-first-loading*", "*-compare-*", "*-teleport*"]
+
+[[chapter]]
+time = "09:00"
+title = "Resets Nov 21, 9:00"
+caption = "The weekly limit lifts at nine. Six minutes later the first commit; by 9:09 four agents are at work."
+shots = [
+  { file = "../2026-11-20/120000-no-tokens-crab-pockets-3-moth.jpg", seconds = 3.6, note = "yesterday" },
+  { card = true, seconds = 3.4, text = "09:00 – tokens: 0 → plenty." },
+]
+
+[[chapter]]
+time = "09:06"
+title = "Pocket-sized"
+caption = "The phone layout reaches main and the live web page: a compact HUD, power buttons, Devices folded away on iOS."
+shots = [
+  { file = "143004-web-web-webkit-iphone-landscape-hold.png", seconds = 4.4, focus = [0.72, 0.2, 1.5], note = "stop, −, +" },
+  { file = "143004-web-web-webkit-iphone-riding.png", seconds = 3.9, note = "upright too" },
+]
+
+[[chapter]]
+time = "09:45"
+title = "Within their gradient"
+caption = "After the junction blend, side roads keep their class gradient again – where the next junction leaves room."
+shots = [
+  { split = ["../2026-11-19/185632-junctions-j2b-v1855-j2-wayland.jpg", "../2026-11-19/185701-junctions-j2b-v1855-j2b-wayland.jpg"], seconds = 4.9, note = "J2 | J2b" },
+  { card = true, seconds = 4.2, text = "Steep stretches that could keep the limit – Tenerife: 2,996 → 382. The rest is question 4.8.8 Q6." },
+]
+
+[[chapter]]
+time = "09:49"
+title = "Previously on the diary"
+caption = "The diary catches up: day 9 to electro, and day 10 – no tokens at all – as a crab turning out its pockets."
+prompt = "use the logo of the claud cli (ascii crab?) turning their pocket inside out, showing that there were no tokens left."
+shots = [
+  { file = "../2026-11-19/041435-shot-wayland-group-night-front-wayland.jpg", seconds = 3.6, focus = [0.52, 0.5, 1.4], note = "day 9" },
+  { file = "../2026-11-20/120000-no-tokens-crab-pockets-2-pockets.jpg", seconds = 3.8, note = "day 10" },
+]
+
+[[chapter]]
+time = "10:39"
+title = "Voice: off"
+caption = "Host a ride gets a Voice switch. Who muted whom stays on the server: each viewer only learns who can't hear them."
+prompt = "Q15 – A Voice switch in Host a ride … Answer: b. Q17 – Who has muted whom, per viewer from the server … Answer: b."
+shots = [
+  { file = "100119-shot-wayland-menu-host-options-voice-off.jpg", seconds = 4.2, focus = [0.22, 0.4, 1.4], note = "host.voice = off" },
+  { file = "100857-shot-wayland-status-headphones-per-viewer-b.jpg", seconds = 4.2, focus = [0.41, 0.52, 2.4], note = "can't hear you" },
+]
+
+[[chapter]]
+time = "10:53"
+title = "One key, one job"
+caption = "Delete and Page Down pick the junction's exit, ← → only steer; Input mapping remaps any action, kept in ocw.toml."
+prompt = "The cursor keys are double used, for steering and also for selecting which road to ride. Use del key to switch leftwards"
+shots = [
+  { file = "100039-shot-wayland-menu-input-mapping-capture.jpg", seconds = 4.2, focus = [0.22, 0.4, 1.4], note = "press a key" },
+  { file = "103952-web-web-input-mapping-swapped.jpg", seconds = 4.0, focus = [0.42, 0.5, 1.3], note = "a swap, never a double" },
+  { file = "104607-web-web-world-junction-keys.jpg", seconds = 4.2, focus = [0.5, 0.82, 1.8], note = "Del/Q < exit > PgDn/E" },
+]
+
+[[chapter]]
+time = "12:18"
+title = "Heard from where it happens"
+caption = "Other riders' crashes now sound from where they happen, and each client predicts its own bumps with the server's code."
+shots = [
+  { file = "120525-video-wayland-k12-group-bump-video.mp4", seconds = 6.0, note = "shoulder to shoulder" },
+  { card = true, seconds = 3.8, text = "Sideways error against the server in a bump: 4.9 cm → 0.6 cm." },
+]
+
+[[chapter]]
+time = "13:54"
+title = "A third of the memory"
+caption = "The browser app stops copying the world: the big worlds need a third of the memory, the picture unchanged."
+shots = [
+  { file = "135215-web-memory-compare-tenerife-webgpu-before-after.jpg", seconds = 4.6, note = "before | after" },
+  { card = true, seconds = 4.4, text = "Peak memory – Tenerife: 2,129 → 684 MB. Black Forest north (WebGL 2): 2,550 → 1,026 MB." },
+]

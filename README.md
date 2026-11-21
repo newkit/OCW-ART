@@ -15,14 +15,14 @@ day becomes a short video (title, a time-lapse of the whole day, the story in
 chapters, today's features, the numbers), and the days are joined into one
 growing diary video.
 
-<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-20/w/120000-no-tokens-crab-pockets-0-terminal.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-21/w/100702-shot-wayland-status-headphones-per-viewer.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
 **▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
 **[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**11 build days** · **1101** commits · **6290** pictures · **223** videos · **15.06 billion** tokens · the diary video: 616.5 MB
+**12 build days** · **1112** commits · **6470** pictures · **226** videos · **15.26 billion** tokens · the diary video: 644.5 MB
 
 ## How the game grew
 
@@ -32,11 +32,21 @@ growing diary video.
 
 ## The build days
 
-### Day 11 · 2026-11-21 — (the day's story is written at the end of the day)
+### Day 12 · 2026-11-22 — (the day's story is written at the end of the day)
 
-[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-21/) · day zip and video: at the end of the day
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-22/) · day zip and video: at the end of the day
 
-**4** commits · **2** merges · spec 5.18 → 5.19 · **0** pictures · **0** videos · **116 million** tokens · music: synthwave
+**0** commits · **0** merges · **0** pictures · **0** videos · music: funk
+
+### Day 11 · 2026-11-21 — The tokens come back
+
+*In which the limit resets at nine, four agents start at once, the cursor keys stop doing two jobs, the host gets a Voice switch, crashes are heard from where they happen, and the browser sheds two thirds of its memory.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-11-2026-11-21.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-21/t/100702-shot-wayland-status-headphones-per-viewer.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-11-2026-11-21.mp4">day video</a> (28 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-21/#175"><img src="https://newkit.github.io/OCW-ART/days/2026-11-21/t/143004-web-web-webkit-iphone-landscape-hold.png.jpg" width="200" alt="web web webkit iphone landscape hold"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-21/#3"><img src="https://newkit.github.io/OCW-ART/days/2026-11-21/t/100039-shot-wayland-menu-input-mapping-capture.jpg.jpg" width="200" alt="shot wayland menu input mapping capture"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-21/#133"><img src="https://newkit.github.io/OCW-ART/days/2026-11-21/t/135215-web-memory-compare-tenerife-webgpu-before-after.jpg.jpg" width="200" alt="web memory compare tenerife webgpu before after"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-21/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-11-2026-11-21.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-21.zip) (56.3 MB)
+
+**15** commits · **5** merges · spec 5.18 → 5.23 · **180** pictures · **3** videos · **321 million** tokens · music: trance
 
 ### Day 10 · 2026-11-20 — No tokens left
 
