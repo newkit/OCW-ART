@@ -1,0 +1,145 @@
+# OCW Build Diary – day 9 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-19/ (or paths in this checkout).
+# Pictures stand alone (spec §11.4 v3.25): a split only where a chapter compares two pictures.
+# Withheld: nothing – the day's 1,380 pictures were checked (no desktop
+# captures, no user names or addresses, only made-up riders).
+
+title = "Lights on, legs on"
+tagline = "In which the riders' legs finally join their bodies, every bike gets a light at night, the maps name the peaks, helmets, lamps and the unicorn move into model files, and the browser learns to ride on a phone."
+hero = "041435-shot-wayland-group-night-front-wayland.jpg"
+bpm = 126
+key = "E"
+style = "electro"                  # day 6 darkchip, day 7 melodic deep house, day 8 liquid dnb: 808 electro for the busiest day yet
+mode = "phrygian"
+tests = 3107                       # marge's check of the phone-layout merge, 18:54: 74 suites, 0 failed
+outro = "30 spec versions in one day, 4.88 to 5.17, and 1.59 billion tokens. Somebody was counting."
+# The browser test sweeps (the same menu tour in every run), the
+# photographer's chase frames and the X11 / 1080p twins of the Wayland
+# shots would flicker through the time-lapse:
+timelapse_skip = ["*-web-*", "*q5-shared*", "*-chase-*", "*-hidden-*", "*-1080*", "*-x11*", "*x11-*", "*-720p-x3*"]
+teaser = "NEXT TIME: nothing at all. A crab checks its pockets."
+
+[[chapter]]
+time = "04:36"
+title = "Legs, attached"
+caption = "Each thigh now closes in a dome round the hip, the hips as wide as the body shape. The gap is gone."
+prompt = "there is a graphic bug: the legs of the rider are not connected to the body"
+shots = [
+  { file = "052300-hips-crops-braids-before-after-hips.jpg", seconds = 4.5, note = "before | after" },
+  { file = "053949-hips-crops-hips-normal-a-side-riding-before-after-wayland.jpg", seconds = 4.2, note = "mind the gap" },
+  { file = "053859-shot-wayland-hips-anorexia-mirror.jpg", seconds = 4.0, focus = [0.5, 0.5, 1.4], note = "now called Super skinny" },
+]
+
+[[chapter]]
+time = "07:43"
+title = "Ride locally as Ada"
+caption = "One local file, ocw.toml: every start asks – a server, or a local ride as a rider of your own in Training mode."
+shots = [
+  { file = "073124-local-config-start-wayland.jpg", seconds = 4.0, focus = [0.33, 0.45, 1.5], note = "your last choice, preselected" },
+  { file = "073139-local-config-riders-wayland.jpg", seconds = 3.8, focus = [0.33, 0.45, 1.5], note = "kept in ocw.toml" },
+]
+
+[[chapter]]
+time = "07:43"
+title = "Peaks and passes"
+caption = "Named peaks, passes and viewpoints go into the world packages: on the studio's map, the navi map – and the photographer's eye."
+shots = [
+  { file = "053236-peaks-2026-11-19-studio-li-malbun.jpg", seconds = 4.2, focus = [0.84, 0.55, 1.8], note = "Augstenberg, 2359 m" },
+  { file = "052910-peaks-2026-11-19-navi-tf-col-del-teide-day.jpg", seconds = 3.9, note = "Tenerife, up the Teide road" },
+]
+
+[[chapter]]
+time = "08:08"
+title = "A bike that looks like a bike"
+caption = "With damage on, the rider's health and the bike's condition always stay in the HUD – with a new side-view bike icon."
+prompt = "when damage is on (make sure there is the according setting in the settings section) always show the health and bike condition in HUD"
+shots = [
+  { file = "042332-damage-widget-crops-compare-crash-720p-wayland-x3.png", seconds = 4.5, note = "old icon, new icon" },
+  { file = "042253-shot-k5-damage-widget-crash-1080.jpg", seconds = 3.8, focus = [0.3, 0.17, 2.0], note = "rear puncture" },
+]
+
+[[chapter]]
+time = "08:08"
+title = "Lights for every rider"
+caption = "From dusk to dawn every bike shows a white front light and a small red rear light. The full light set is the upgrade."
+prompt = "re-add the white front light for every rider when riding at night. also add a small red rearlight."
+shots = [
+  { file = "040605-shot-wayland-group-night-behind-wayland.jpg", seconds = 4.2, focus = [0.5, 0.55, 1.8], note = "red behind" },
+  { file = "041435-shot-wayland-group-night-front-wayland.jpg", seconds = 4.2, focus = [0.52, 0.5, 1.6], note = "white in front" },
+]
+
+[[chapter]]
+time = "08:14"
+title = "Everything in its place"
+caption = "The workout panel moves under the bike computer, the map keeps the lower right; the d-pad zooms it."
+shots = [
+  { file = "073913-shot-wayland-navi-workout-720p-150.jpg", seconds = 4.5, note = "step 1/8: easy spin" },
+]
+
+[[chapter]]
+time = "09:17"
+title = "Only S … S"
+caption = "Only a recording started and stopped with S goes to Strava – automatically, or by hand. A plain ride stays at home."
+shots = [
+  { file = "075138-strava-q6-ride-without-s-x11.jpg", seconds = 4.5, focus = [0.4, 0.72, 1.6], note = "no S, no Strava" },
+]
+
+[[chapter]]
+time = "11:22"
+title = "Leaves on the road"
+caption = "Ground detail gets a switch, spreads to 14 m with a few bits on the road, darkens when wet – and more autumn leaves."
+shots = [
+  { file = "045759-ground-detail-answers-wet-road-wayland.jpg", seconds = 3.9, note = "wet" },
+  { file = "045838-ground-detail-answers-blackforest-autumn-road-wayland.jpg", seconds = 4.2, note = "Black Forest, autumn" },
+  { file = "055507-ground-detail-answers-road-bits-wayland.jpg", seconds = 3.8, note = "a few bits on the road" },
+]
+
+[[chapter]]
+time = "12:42"
+title = "Everything is a file"
+caption = "Helmets, lamps, bollards, the workshop and the winged unicorn: drawn from model files now, not from code."
+shots = [
+  { file = "125237-props-files-compare-lamps-night-wayland-before-after.jpg", seconds = 4.2, note = "code | file" },
+  { file = "130408-shot-wayland-m3-helmet-group.jpg", seconds = 3.9, note = "wear/helmet-*.glb" },
+  { file = "154246-shot-wayland-workshop-overview.jpg", seconds = 3.9, note = "20 workshop pieces" },
+  { file = "163508-phase15-m4-studio-studio-unicorn-winged.jpg", seconds = 4.2, focus = [0.72, 0.53, 1.6], note = "unicorn-winged.glb" },
+  { card = true, seconds = 4.0, text = "14:17 – Blender 5.2.4 LTS on marge: every model file out and back in. 114 of 189 came back unchanged." },
+]
+
+[[chapter]]
+time = "15:43"
+title = "How long will it take?"
+caption = "OCW Studio's Routes: the expected riding time at a chosen power, one part of a track file, the surfaces as measured."
+shots = [
+  { file = "130016-e2-estimate-x11.jpg", seconds = 4.5, focus = [0.82, 0.5, 1.5], note = "the route, planned" },
+]
+
+[[chapter]]
+time = "16:18"
+title = "Training history"
+caption = "A ride's page gets its laps, its climbs and its map – and a way to delete it. The browser keeps its FIT files too."
+shots = [
+  { file = "151410-shot-wayland-menu-history-ride-map.jpg", seconds = 4.2, focus = [0.47, 0.48, 1.5], note = "21.4 km, 1180 m up" },
+  { file = "151417-shot-wayland-menu-history-laps.jpg", seconds = 3.9, focus = [0.5, 0.5, 1.4], note = "3 laps, 2 climbs" },
+]
+
+[[chapter]]
+time = "17:12"
+title = "Smooth junctions"
+caption = "The world builder reconciles the road profiles with the junctions: no kinks across, the terrain settled under them."
+shots = [
+  { file = "125117-shot-wayland-junction-landstrasse-split-drone.jpg", seconds = 3.9, note = "Landstrasse" },
+  { file = "152641-shot-wayland-junction-vorarlberger-drone.jpg", seconds = 3.9, note = "no seams" },
+]
+
+[[chapter]]
+time = "17:12"
+title = "Riding on a phone"
+caption = "The browser app on an iPhone: touch steering, safe areas, wake lock, full screen – and a HUD that fits the screen."
+prompt = "update the web app live page with a working touch version"
+shots = [
+  { file = "164528-touch-ts4-web-webkit-iphone-landscape-hints.png", seconds = 4.0, note = "tap or hold to steer" },
+  { file = "184951-phone-layout-after-web-webkit-iphone-landscape-riding.png", seconds = 4.2, note = "compact HUD" },
+  { file = "184951-phone-layout-after-web-webkit-iphone-riding.png", seconds = 3.9, note = "upright too" },
+  { card = true, seconds = 3.8, text = "The live web page: its build broke at 13:32 when the models moved, and ran again at 13:55." },
+]
