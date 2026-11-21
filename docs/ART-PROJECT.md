@@ -1,6 +1,6 @@
 # OCW Build Diary – Art Project Specification
 
-Version 2.8 – 19 November 2026
+Version 2.9 – 21 November 2026
 
 | Version | Change |
 |---|---|
@@ -23,6 +23,7 @@ Version 2.8 – 19 November 2026
 | 2.6 | **`melodic-deep-house`** (user 2026-11-18 for day 7: "use music style: melodic deep house"): minor with 7th and 9th chords (e.g. F minor), 120–124 bpm, a four-on-the-floor kit with soft off-beat open hats, the clap (or a rim) on 2 and 4 and shaker ghosts, a warm sine-sub bass with a little low-passed saw, lush detuned pads whose filter opens over every 4-bar phrase, a mellow plucked arpeggio and an FM lead, both with a dotted-8th delay; build-ups into the chapters, a kick-less breakdown, no key lift (§3.2). Withheld on day 7 (§2.5): a whole-desktop capture of Weela and the build dashboard's battery screenshots, which show a user name |
 | 2.7 | **CO2 footprint of the tokens (planned, not built)** (user 2026-11-18: "estimate also the co2 footprint for the token usage and log that and show it in the video"; §2.4.1): an estimate with a range from the token counts of §2.4 × energy per token kind (output, input, cache writes, cache reads) × data-centre overhead × grid carbon intensity, cited factors in `co2.toml`; logged in `tokens.json` and the journal, shown on the end card with a plain comparison; open Q1 (which figures), Q2 (also the build machines?), Q3 (which comparison) |
 | 2.8 | **`liquid-dnb`** (day 8, 2026-11-19; the end-of-day video's style is picked to differ from the days before: day 6 darkchip, day 7 melodic deep house): liquid drum & bass, dorian with 7th and 9th chords (e.g. G dorian), 170–174 bpm, the two-step breakbeat (kick on 1 and the "and" of 3, the snare on 2 and 4) with ghost snares and shuffled 16th hats, a drum style per chapter in turn (two-step, rolling, ride, half-time; hats and rim in the breakdown), a reese bass (two detuned low-passed saws) over a sine sub in long rolling notes, FM-Rhodes chords, an airy detuned pad whose filter opens over each phrase, a sparse FM lead with a dotted-8th delay (§3.2). Withheld on day 8 (§2.5): the build dashboard's two battery screenshots of 00:00, which show the coordinator's user name |
+| 2.9 | **`electro`** (day 9, 2026-11-19, the busiest day yet; a style unlike days 6–8): 808 electro-funk, phrygian (e.g. E phrygian, the bII chord), 124–128 bpm, the broken 808 beat (kick on 1, the "a" of 2 and the "and" of 3, never four on the floor; the clap on 2 and 4; 16th hats, a rim like a cowbell), a drum style per chapter in turn, a booming 808 bass (a sine dropping into its pitch, a little drive) in syncopated 16ths, a sequenced saw arpeggio, a pulse lead with a delay (§3.2). Nothing withheld on day 9 (1,380 pictures checked). **A day without tokens** (day 10, 2026-11-20: the weekly token limit was reached the evening before; no commits, no prompts, no pictures; §4.1): `diary.py crab DAY` draws the diary's own pictures – an ASCII crab in the terminal's orange turning its trouser pockets inside out, a moth and dust flying out, the token counter running down to 0 – as a clip and stills in the day folder; **`ambient`**, a quiet bed without drums (lydian 7th/9th chords, a sine drone, a music-box arpeggio and lead, a slow pad); the day script can drop the time-lapse (`timelapse = false`) and set the end card's numbers (`stats`); a day with a day script but no commits keeps its day number (§4) |
 
 ## 1. The brief
 
@@ -506,6 +507,8 @@ day is the same as appending the new day to the previous diary.
   | `chiptune` | major | square bass, pulse arpeggio, pulse lead, saw pad, chip kit (the band every day had until v1.6) | four-on-the-floor, half-time, breaks |
   | `darkchip` | dorian (or phrygian, minor) | rounded 25 % pulse lead in the middle register, slow triangle arpeggio with an echo, square/triangle bass over a sine sub, dark low-passed saw pad, soft kit with a rim click | a drum style per chapter in turn: half-time, four-on-the-floor with an open hat, 2-step, half-time break; a break under the time-lapse; kick and rim in the breakdown; tom fills |
   | `melodic-deep-house` | minor with 7th and 9th chords | warm sine-sub bass (syncopated, mostly the root), lush low-passed detuned pad whose filter opens over each 4-bar phrase, mellow plucked arpeggio and FM lead with a dotted-8th delay, soft clap, rim, shaker | four-on-the-floor with off-beat open hats and the clap on 2 and 4, a half-time breather; build-ups into the chapters, a kick-less breakdown |
+  | `electro` | phrygian (the bII chord) | booming 808 bass (a sine dropping into its pitch, a little drive) in syncopated 16ths with octave jumps, sequenced saw arpeggio with an echo, pulse lead with a delay, low-passed saw pad, an 808 kit with a long kick, clap and a cowbell-like rim | 124–128 bpm broken electro beat (kick on 1, the "a" of 2, the "and" of 3; clap on 2 and 4), a drum style per chapter in turn: electro, broken, cowbell, half-time; hats and rim in the breakdown |
+  | `ambient` | lydian with 7th and 9th chords | slow sine pad whose filter opens over each phrase, a sine drone (root, sometimes the fifth), music-box arpeggio and sparse music-box lead with an echo; **no drums** – no fills, crashes or risers | none: a quiet bed (day 10, the day without tokens) |
   | `liquid-dnb` | dorian with 7th and 9th chords | reese bass (two detuned low-passed saws) over a sine sub in long rolling notes, FM-Rhodes chords, airy detuned pad whose filter opens over each phrase, sparse FM lead with a dotted-8th delay, a crisp kit with ghost snares | 170–174 bpm two-step breakbeat (kick on 1 and the "and" of 3, snare on 2 and 4), a drum style per chapter in turn: two-step, rolling, ride, half-time; hats and rim in the breakdown |
   | `house` | mixolydian with 7ths | sine sub bass on the off-beats, piano stabs, plucked lead, organ, clap, open hats, shaker | four-on-the-floor |
 
@@ -568,8 +571,8 @@ bpm = 108                          # music tempo (optional)
 key = "C"                          # music key, the tonic (optional)
 style = "funk"                     # music style (optional; default from the day
                                    # number): synthwave, funk, lofi, chiptune, house,
-                                   # darkchip, melodic-deep-house, liquid-dnb
-                                   # (not in the automatic cycle)
+                                   # darkchip, melodic-deep-house, liquid-dnb,
+                                   # electro, ambient (not in the automatic cycle)
 mode = "dorian"                    # music mode (optional; default the style's):
                                    # major, minor, dorian, mixolydian, lydian
 tests = 903                        # tests passing at the end of the day (optional;
@@ -584,6 +587,11 @@ timelapse_skip = ["HHMMSS-x.jpg"]  # optional: pictures left out of the time-lap
                                    # and the end card's mosaic (e.g. a screenshot
                                    # showing a real person's name); shell
                                    # patterns too ("*-calibration-*")
+timelapse = false                  # optional: no time-lapse (default true; a day
+                                   # without a build, §4.1)
+stats = [[0, "COMMITS"], [1440, "DASHBOARD SAMPLES"]]
+                                   # optional: the end card's numbers instead of
+                                   # the journal's (§4.1)
 
 [[chapter]]
 time = "15:02"                     # when it happened (shown in gold)
@@ -621,6 +629,34 @@ Writing guidelines:
   look funny (a rider inside a tree is content).
 - Facts must be true: times, numbers and names come from the journal.
 
+### 4.1 A day without tokens (2026-11-20)
+
+A build day can pass without a build: on 2026-11-20 the account's weekly
+token limit had been reached the evening before ("You've hit your weekly
+limit · resets Nov 21, 9am"), so there were no commits, prompts, tokens or
+pictures. Such a day still gets its journal, its README entry and its video
+(a day without media keeps its journal and README entry):
+
+- **The note:** the coordinator writes the day's `incidents.md` (§2.6), which
+  the journal shows under "Incidents".
+- **The pictures:** `diary.py crab DAY` draws the diary's own – an ASCII crab
+  in the terminal's orange on a dark terminal, in the spirit of the Claude
+  Code CLI's mascot (drawn for the diary, not copied), turning its trouser
+  pockets inside out while the token counter runs down from the day before's
+  tokens to 0; a moth and some dust fly out, the crab shrugs and falls
+  asleep; "2026-11-20 – no tokens left · weekly limit · resets Nov 21, 9:00".
+  A 22 s clip (`120000-no-tokens-crab-pockets.mp4`), the terminal alone as
+  the title's background and three stills, in the day folder (so the
+  gallery, the day zip and Git LFS have them). Everything is text: each
+  ASCII frame is a Fira Mono block of the videos' ASS layer, one block per
+  colour so the monospace layers line up, drawn by ffmpeg (`crab.py`).
+- **The video:** a short day script – no time-lapse (`timelapse = false`),
+  no features roll, the clip as the one chapter, the end card's numbers
+  from `stats` (0 commits, prompts, tokens and build runs; the dashboard's
+  1,440 samples), the quiet `ambient` style. About 35 s.
+- **The day number:** a day with a day script but no commits counts in the journal's
+  day number, so 2026-11-20 is day 10 and the next build day day 11.
+
 ## 5. Workflow
 
 Needs Python 3.11+ (`/usr/bin/python3` on Debian 13; the pyenv default 3.8
@@ -651,6 +687,7 @@ OCW-ART/
 │   ├── features.py        #   the features log, pure (§2.7)
 │   ├── journal.py         #   the day's journal (§2)
 │   ├── render.py          #   contact sheets, the day and diary videos (§3)
+│   ├── crab.py            #   a day without tokens: the ASCII crab (§4.1)
 │   ├── subtitles.py       #   the ASS layer of the videos
 │   ├── music.py, sfx.py   #   the music and the effects (§3.2)
 │   ├── publish.py         #   day zips and videos → the release
@@ -706,7 +743,7 @@ git commit build-history/index.md build-history/SHA256SUMS \
 make test                     # unit tests of the tool, the gallery, LFS and the collector
 ```
 
-or directly `diary.py gather|journal|sheet|render|diary|publish|all|collect|gallery|lfs-budget|lfs-commit|lfs-push|check-masked [DAY…]`.
+or directly `diary.py gather|journal|sheet|render|diary|publish|all|collect|crab|gallery|lfs-budget|lfs-commit|lfs-push|check-masked [DAY…]`.
 
 **At the end of every build day** (or when asked): the hourly collector (§5.1)
 has already gathered the day and written its journal. The coordinator:

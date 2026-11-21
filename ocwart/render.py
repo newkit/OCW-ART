@@ -232,7 +232,11 @@ def mosaic(day: str, seconds: float, out: Path, skip=()):
 
 
 def end_stats(j: dict, sc: dict) -> list[tuple[int, str]]:
-    """The end card's numbers of the day: (value, label), in order."""
+    """The end card's numbers of the day: (value, label), in order. The day
+    script's `stats` ([[value, "LABEL"], …], §4) replaces them, e.g. on a
+    day without a build."""
+    if sc.get("stats"):
+        return [(int(v), str(label)) for v, label in sc["stats"]]
     stats = [
         (j["commits"].__len__(), "COMMITS"),
         (j["merges"], "MERGES"),
@@ -280,10 +284,14 @@ def render(day: str) -> Path:
     kenburns(media_path(day, sc["hero"]), title_s, t1, day)
     segs.append((t1, title_s, "intro"))
 
-    # 2. Time-lapse of the whole day.
-    t2 = work / "01-timelapse.mp4"
-    tl_s, tl_rows = timelapse(day, t2, sc.get("timelapse_skip", []))
-    segs.append((t2, tl_s, "drive"))
+    # 2. Time-lapse of the whole day (`timelapse = false`: none, e.g. a day
+    # without a build, whose only pictures are the diary's own, §4).
+    tl_s, tl_rows = 0.0, []
+    if sc.get("timelapse", True):
+        t2 = work / "01-timelapse.mp4"
+        tl_s, tl_rows = timelapse(day, t2, sc.get("timelapse_skip", []))
+        segs.append((t2, tl_s, "drive"))
+    ch0 = len(segs)  # the first chapter's segment
 
     # 3. Chapters.
     chapters = sc.get("chapter", [])
@@ -349,8 +357,9 @@ def render(day: str) -> Path:
     # Time-lapse: clock, counters and the commit ticker.
     t0 = starts[1]
     commits = j["commits"]
-    sub.add(t0 + 0.2, t0 + tl_s - 0.2, "Kicker",
-            "{\\an9\\pos(1860,40)\\fad(200,200)}THE DAY IN " + f"{round(tl_s)}" + " SECONDS")
+    if tl_rows:
+        sub.add(t0 + 0.2, t0 + tl_s - 0.2, "Kicker",
+                "{\\an9\\pos(1860,40)\\fad(200,200)}THE DAY IN " + f"{round(tl_s)}" + " SECONDS")
     for k, (a, b, m) in enumerate(tl_rows):
         hhmm = m["time"][:5]
         done = [c for c in commits if c["time"] <= m["time"]]
@@ -388,8 +397,8 @@ def render(day: str) -> Path:
     sfx_events = [(0.25, "bell")]
     duck = []
     for ci, ch in enumerate(chapters):
-        cs = starts[2 + ci]
-        cd = segs[2 + ci][1]
+        cs = starts[ch0 + ci]
+        cd = segs[ch0 + ci][1]
         sub.add(cs + 0.25, cs + min(cd, 3.6), "ChTime",
                 f"{{\\move(-300,700,80,700,0,260)\\fad(0,250)}}{esc(ch.get('time', ''))}")
         sub.add(cs + 0.35, cs + min(cd, 3.6), "ChTitle",
@@ -425,7 +434,8 @@ def render(day: str) -> Path:
         if ch.get("sound"):
             duck.append((cs, cs + cd, 0.35))
         sfx_events.append((cs - XF / 2, "whoosh"))
-    sfx_events.append((starts[1] - XF / 2, "whoosh"))
+    if tl_rows:
+        sfx_events.append((starts[1] - XF / 2, "whoosh"))
     sfx_events.append((starts[-1] - XF / 2, "whoosh"))
 
     # The features roll: a kicker, then one page of lines after the other.
@@ -518,9 +528,9 @@ def render(day: str) -> Path:
     for ci, ch in enumerate(chapters):
         if ch.get("sound"):
             src = media_path(day, ch["sound"])
-            cd = segs[2 + ci][1]
+            cd = segs[ch0 + ci][1]
             inputs += ["-i", src]
-            ms = round(starts[2 + ci] * 1000)
+            ms = round(starts[ch0 + ci] * 1000)
             amix.append(f"[{k}:a]aresample={RATE},atrim=0:{cd:.2f},afade=t=in:d=0.3,"
                         f"afade=t=out:st={max(0, cd - 0.6):.2f}:d=0.6,"
                         f"volume={float(ch.get('sound_gain', 1.0))},adelay={ms}|{ms}[s{ci}]")

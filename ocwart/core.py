@@ -199,8 +199,13 @@ def all_days() -> list[str]:
 
 def day_number(day: str) -> int:
     """The day's number in the build (1 = the first day with commits); a day
-    without commits yet (just after midnight) counts as the next one."""
-    return sum(1 for d in all_days() if d < day) + 1
+    without commits yet (just after midnight) counts as the next one. A day
+    the diary tells without commits (a day script, e.g. 2026-11-20, when the
+    weekly token limit was reached) counts too, so the days after it keep
+    their own numbers."""
+    first = min(all_days(), default=day)
+    told = {d for d in days_with_scripts() if first <= d}
+    return len({d for d in set(all_days()) | told if d < day}) + 1
 
 
 # Text files of the archive that are tracked in git (ART-PROJECT §2): always

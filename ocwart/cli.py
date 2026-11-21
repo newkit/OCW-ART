@@ -21,6 +21,11 @@
                                 newkit/OCW-ART (--videos: only the videos
                                 and SHA256SUMS)
     diary.py all     [DAY...]   gather + journal + render + diary
+    diary.py crab    DAY        a day without tokens (§4.1): the ASCII crab
+                                turning its pockets out, a clip and three
+                                stills into build-history/DAY/ for the day
+                                script (the counter runs down from the day
+                                before's tokens)
     diary.py collect [--sheets|--no-sheets] [--no-gallery] [--lfs|--no-lfs] [DAY...]
                                 the hourly collector (bin/collect.sh):
                                 gather + journal of yesterday and today,
@@ -93,6 +98,7 @@ from .agents import agent_backfill, agent_event
 from .archive import fetch, gather, stamp
 from .collect import collect, iso_now, write_status
 from .core import all_days, art_lock, check_ocw, days_with_scripts, log
+from .crab import render_crab
 from .journal import journal
 from .mask import check_masked, tracked_files
 from .prompts import prompts, tokens
@@ -221,6 +227,16 @@ def lfs_command(cmd, args):
         raise SystemExit("lfs-commit: the budget is reached; " + lfs.budget_advice())
 
 
+def crab(day: str):
+    """The no-token day's animation; the counter starts at the day before's tokens."""
+    before = (dt.date.fromisoformat(day) - dt.timedelta(days=1)).isoformat()
+    try:
+        total = json.loads((C.HIST / before / "tokens.json").read_text())["total"]["total"]
+    except (OSError, KeyError, ValueError):
+        total = 0
+    render_crab(day, int(total))
+
+
 def run_command(cmd: str, days: list[str], flags: set[str] = frozenset()):
     if cmd == "diary":
         diary()
@@ -247,7 +263,7 @@ def run_command(cmd: str, days: list[str], flags: set[str] = frozenset()):
         return
     fn = {"fetch": fetch, "gather": gather, "journal": journal, "sheet": sheet,
           "render": render, "stamp": stamp, "prompts": prompts,
-          "tokens": tokens, "agent-backfill": agent_backfill}.get(cmd)
+          "tokens": tokens, "agent-backfill": agent_backfill, "crab": crab}.get(cmd)
     if cmd == "publish":
         publish(days)
     elif fn:

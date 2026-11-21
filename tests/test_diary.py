@@ -152,7 +152,8 @@ class MaskTest(Fixture):
                   "features": {"Other": {"total": 10, "output": 4, "messages": 1}}, "models": {}}
         with mock.patch.object(journal, "commits_of", return_value=commits), \
                 mock.patch.object(prompts, "tokens_of", return_value=tokens), \
-                mock.patch.object(core, "all_days", return_value=["2026-11-11", DAY]):
+                mock.patch.object(core, "all_days", return_value=["2026-11-11", DAY]), \
+                mock.patch.object(core, "days_with_scripts", return_value=[]):
             j = journal.journal(DAY)
         self.assertEqual(j["number"], 2)
         for name in mask.TRACKED_DAY[:3]:  # (incidents.md is written by the coordinator)
@@ -163,9 +164,20 @@ class MaskTest(Fixture):
         self.assertEqual(mask.check_masked(), [])
 
     def test_day_number_without_commits_yet(self):
-        with mock.patch.object(core, "all_days", return_value=["2026-11-11", "2026-11-12"]):
+        with mock.patch.object(core, "all_days", return_value=["2026-11-11", "2026-11-12"]), \
+                mock.patch.object(core, "days_with_scripts", return_value=[]):
             self.assertEqual(core.day_number("2026-11-12"), 2)
             self.assertEqual(core.day_number("2026-11-13"), 3)
+
+    def test_day_number_counts_a_told_day_without_commits(self):
+        """2026-11-20: no commits (the weekly token limit), but a day script –
+        it is day 10, and the next day with commits is day 11."""
+        days = ["2026-11-18", "2026-11-19", "2026-11-21"]
+        with mock.patch.object(core, "all_days", return_value=days), \
+                mock.patch.object(core, "days_with_scripts", return_value=["2026-11-19", "2026-11-20"]):
+            self.assertEqual(core.day_number("2026-11-19"), 2)
+            self.assertEqual(core.day_number("2026-11-20"), 3)
+            self.assertEqual(core.day_number("2026-11-21"), 4)
 
 
 class MachinesConfTest(Fixture):
