@@ -1,0 +1,28 @@
+# OCW Build Diary – day 10 (docs/ART-PROJECT.md §4 and §4.1).
+# A day without a build: the account's weekly token limit was reached on the
+# evening of 2026-11-19 ("You've hit your weekly limit · resets Nov 21, 9am").
+# No commits, no prompts, no tokens, no pictures of the game. The day's only
+# pictures are the diary's own: `diary.py crab 2026-11-20` (made on
+# 2026-11-21) – an ASCII crab in the terminal's orange turning its pockets out.
+
+title = "No tokens left"
+tagline = "In which nothing is built at all: the weekly limit is reached, and a crab turns out its pockets to prove it."
+hero = "120000-no-tokens-crab-pockets-0-terminal.jpg"
+bpm = 66
+key = "D"
+style = "ambient"                  # day 6 darkchip, 7 melodic deep house, 8 liquid dnb, 9 electro: no drums today
+mode = "lydian"
+title_seconds = 5.0
+end_seconds = 8.0
+timelapse = false                  # nothing to lapse
+features_roll = false              # no features
+outro = "Resets Nov 21, 9:00. The dashboard kept watching anyway."
+teaser = "NEXT TIME: the tokens are back."
+stats = [[0, "COMMITS"], [0, "PROMPTS"], [0, "TOKENS"], [0, "BUILD RUNS"], [1440, "DASHBOARD SAMPLES"]]
+
+[[chapter]]
+time = "all day"
+title = "Pockets, inside out"
+shots = [
+  { file = "120000-no-tokens-crab-pockets.mp4", seconds = 22.0 },
+]

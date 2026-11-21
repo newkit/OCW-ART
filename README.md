@@ -15,14 +15,14 @@ day becomes a short video (title, a time-lapse of the whole day, the story in
 chapters, today's features, the numbers), and the days are joined into one
 growing diary video.
 
-<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/w/001616-scenes-navi-wayland-navi-li-route-day-720p.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-20/w/120000-no-tokens-crab-pockets-0-terminal.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
 **▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
 **[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**9 build days** · **1012** commits · **4906** pictures · **207** videos · **13.49 billion** tokens · the diary video: 546.9 MB
+**11 build days** · **1101** commits · **6290** pictures · **223** videos · **15.06 billion** tokens · the diary video: 616.5 MB
 
 ## How the game grew
 
@@ -32,11 +32,31 @@ growing diary video.
 
 ## The build days
 
-### Day 9 · 2026-11-19 — (the day's story is written at the end of the day)
+### Day 11 · 2026-11-21 — (the day's story is written at the end of the day)
 
-[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-19/) · day zip and video: at the end of the day
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-21/) · day zip and video: at the end of the day
 
-**10** commits · **1** merges · spec 4.88 → 4.96 · **0** pictures · **0** videos · **135 million** tokens · music: chiptune
+**4** commits · **2** merges · spec 5.18 → 5.19 · **0** pictures · **0** videos · **116 million** tokens · music: synthwave
+
+### Day 10 · 2026-11-20 — No tokens left
+
+*In which nothing is built at all: the weekly limit is reached, and a crab turns out its pockets to prove it.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-10-2026-11-20.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-20/t/120000-no-tokens-crab-pockets-0-terminal.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-10-2026-11-20.mp4">day video</a> (4.2 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-20/#3"><img src="https://newkit.github.io/OCW-ART/days/2026-11-20/t/120000-no-tokens-crab-pockets-2-pockets.jpg.jpg" width="200" alt="no tokens crab pockets 2 pockets"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-20/#4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-20/t/120000-no-tokens-crab-pockets-3-moth.jpg.jpg" width="200" alt="no tokens crab pockets 3 moth"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-20/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-10-2026-11-20.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-20.zip) (4.1 MB)
+
+**0** commits · **0** merges · **4** pictures · **1** videos · music: ambient
+
+### Day 9 · 2026-11-19 — Lights on, legs on
+
+*In which the riders' legs finally join their bodies, every bike gets a light at night, the maps name the peaks, helmets, lamps and the unicorn move into model files, and the browser learns to ride on a phone.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-09-2026-11-19.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-19/t/041435-shot-wayland-group-night-front-wayland.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-09-2026-11-19.mp4">day video</a> (65.4 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-19/#253"><img src="https://newkit.github.io/OCW-ART/days/2026-11-19/t/052300-hips-crops-braids-before-after-hips.jpg.jpg" width="200" alt="hips crops braids before after hips"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-19/#636"><img src="https://newkit.github.io/OCW-ART/days/2026-11-19/t/075138-strava-q6-ride-without-s-x11.jpg.jpg" width="200" alt="strava q6 ride without s x11"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-19/#1300"><img src="https://newkit.github.io/OCW-ART/days/2026-11-19/t/164528-touch-ts4-web-webkit-iphone-landscape-hints.png.jpg" width="200" alt="touch ts4 web webkit iphone landscape hints"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-19/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-09-2026-11-19.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-19.zip) (793.8 MB)
+
+**95** commits · **33** merges · spec 4.88 → 5.17 · **1380** pictures · **15** videos · **1.59 billion** tokens · music: electro
 
 ### Day 8 · 2026-11-18 — A map in the corner, cracks in the road
 

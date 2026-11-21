@@ -1,0 +1,102 @@
+{
+ "day": "2026-11-20",
+ "number": 10,
+ "commits": [],
+ "merges": 0,
+ "lines_added": 0,
+ "lines_removed": 0,
+ "spec_versions": [],
+ "tests": null,
+ "media": [
+  {
+   "file": "120000-no-tokens-crab-pockets-0-terminal.jpg",
+   "time": "12:00:00",
+   "kind": "image"
+  },
+  {
+   "file": "120000-no-tokens-crab-pockets-1-limit.jpg",
+   "time": "12:00:00",
+   "kind": "image"
+  },
+  {
+   "file": "120000-no-tokens-crab-pockets-2-pockets.jpg",
+   "time": "12:00:00",
+   "kind": "image"
+  },
+  {
+   "file": "120000-no-tokens-crab-pockets-3-moth.jpg",
+   "time": "12:00:00",
+   "kind": "image"
+  },
+  {
+   "file": "120000-no-tokens-crab-pockets.mp4",
+   "time": "12:00:00",
+   "kind": "video"
+  }
+ ],
+ "images": 4,
+ "videos": 1,
+ "sounds": 0,
+ "builds": {
+  "runs": 0,
+  "seconds": 0,
+  "cargo_s": 0,
+  "compiled": 0,
+  "wait_s": 0,
+  "failed": [],
+  "machines": {},
+  "online": {
+   "leela": 1.0,
+   "marge": 1.0,
+   "Weela": 0.0,
+   "Win11Builder": 0.9986111111111111,
+   "macos": 1.0
+  },
+  "samples": 1440
+ },
+ "prompts": [],
+ "tokens": {
+  "total": {},
+  "features": {}
+ },
+ "incidents": {
+  "auto": [
+   {
+    "time": "00:00:01",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela unreachable (no route to host)"
+   },
+   {
+    "time": "00:00:01",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "disk C: on Win11Builder at 91 %"
+   },
+   {
+    "time": "21:04:10",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "21:06:10",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   }
+  ],
+  "notes": "# Incidents – 2026-11-20\n\nRoot-cause notes by the coordinator (docs/ART-PROJECT.md §2.6). The collected\nentries (journal, build log) are in `logs/build-log/incidents.jsonl` and in\nthe journal's \"Incidents\" section.\n\n## 00:00 – No tokens all day: the weekly limit was reached\n\n- **What happened:** nothing was built on 2026-11-20. On the evening of\n  2026-11-19 the coordinator's agents stopped with \"You've hit your weekly\n  limit · resets Nov 21, 9am\", and the coordinator could not start new\n  ones. The day has no commits, no merges, no build runs, no prompts, no\n  tokens and no pictures of the game.\n- **Cause:** the account's weekly token limit. 2026-11-19 alone used\n  1.59 billion tokens (5,055 model messages, 21 agent jobs); most of them\n  were cache reads.\n- **Effect:** a day without a build. Two jobs of 19 November stayed open:\n  the phone-sized HUD (reported) and the J2 follow-up (grade limits,\n  rebuild; started 18:11). The build machines idled; the dashboard kept\n  sampling them every minute (1,440 samples).\n- **Fix:** wait for the reset on 2026-11-21 at 09:00.\n- **Follow-up:** the diary tells the day anyway (a day without media still\n  gets its journal and README entry): an ASCII crab turning its pockets out\n  (`diary.py crab`, ART-PROJECT §4.1) over a quiet ambient bed. Its clip\n  and three stills are the day folder's only pictures.\n",
+  "noted": [
+   "00:00 – No tokens all day: the weekly limit was reached"
+  ]
+ },
+ "features": [],
+ "deploys": [],
+ "releases": [],
+ "agent_jobs": []
+}
