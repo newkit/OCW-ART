@@ -286,3 +286,56 @@ class LiquidDnbTest(unittest.TestCase):
         self.assertGreater(sd["onsets_per_s"], sh["onsets_per_s"], (sd, sh))  # busier drums
         self.assertLess(sd["peak_db"], -2.4)
         self.assertAlmostEqual(sd["rms_db"], -19, delta=1.5)
+
+
+class ElectroTest(unittest.TestCase):
+    """Day 9 (2026-11-19): 808 electro, a style unlike days 6–8."""
+    SEGS = [(0, "intro"), (6, "drive"), (20, "groove"), (28, "groove"), (36, "groove"), (44, "groove"),
+            (52, "outro")]
+
+    def test_phrygian_with_the_flat_second(self):
+        m = M.Music(126, "E", seed=9, style="electro")
+        self.assertEqual(m.mode_name, "phrygian")
+        two = m.chord(1, 0)
+        self.assertEqual(two[0] - m.root, 1)  # F over E: the phrygian bII
+        self.assertEqual([s - two[0] for s in two], [0, 4, 7])
+
+    def test_broken_beat_with_the_clap_on_2_and_4(self):
+        for g in M.STYLES["electro"]["grooves"][:3]:
+            pat = M.DRUMS[g]
+            self.assertEqual(pat["k"][0], "x", g)
+            self.assertNotEqual(pat["k"][4] + pat["k"][8] + pat["k"][12], "xxx", g)  # not four on the floor
+            self.assertEqual(pat["s"][4] + pat["s"][12], "XX", g)
+
+    def test_a_drum_style_per_chapter(self):
+        m = M.Music(126, "E", seed=9, style="electro")
+        grooves = [s[1] for s in m.plan(60, self.SEGS) if s[-1] == "groove" and s[1]]
+        self.assertGreaterEqual(len(set(grooves) & set(M.STYLES["electro"]["grooves"])), 3, grooves)
+
+    def test_loud_enough_without_clipping(self):
+        s = M.stats(M.Music(126, "E", seed=9, style="electro").render(24, [(0, "groove"), (12, "groove")]))
+        self.assertLess(s["peak_db"], -2.4)
+        self.assertAlmostEqual(s["rms_db"], -19, delta=1.5)
+
+
+class AmbientTest(unittest.TestCase):
+    """Day 10 (2026-11-20, no tokens): a quiet bed without drums."""
+
+    def test_no_drums_fills_crashes_or_risers(self):
+        m = M.Music(66, "D", seed=10, style="ambient")
+        segs = [(0, "intro"), (5, "groove"), (20, "outro")]
+        for spec in m.plan(28, segs):
+            bar = m.bar(spec)
+            self.assertTrue(bar)
+        drums_before = len(m._drums)
+        m.render(28, segs)
+        self.assertEqual(len(m._drums), drums_before)  # not a single drum sound was made
+        self.assertEqual(drums_before, 0)
+
+    def test_quiet_and_sparse(self):
+        segs = [(0, "groove"), (16, "groove")]
+        amb = M.stats(M.Music(66, "D", seed=10, style="ambient").render(32, segs))
+        lofi = M.stats(M.Music(66, "D", seed=10, style="lofi").render(32, segs))
+        self.assertLess(amb["onsets_per_s"], lofi["onsets_per_s"])
+        self.assertLess(amb["brightness"], lofi["brightness"])
+        self.assertLess(amb["peak_db"], -2.4)

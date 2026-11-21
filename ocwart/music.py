@@ -9,7 +9,12 @@ per chapter in turn; day 6 after "less squeaky and less happy"),
 four-on-the-floor kit, a plucked arpeggio and lead with a dotted-8th delay,
 filter sweeps over each phrase; day 7), `liquid-dnb` (liquid drum & bass,
 about 172 bpm: dorian 9th chords on FM Rhodes, a reese bass over a sine sub,
-the two-step breakbeat with ghost snares, a drum style per chapter; day 8).
+the two-step breakbeat with ghost snares, a drum style per chapter; day 8),
+`electro` (808 electro-funk, about 126 bpm: phrygian, a booming 808 bass in
+syncopated 16ths, the broken electro beat with the clap on 2 and 4, a
+sequenced saw arpeggio and a robotic pulse lead; day 9) and `ambient`
+(no drums at all: a slow lydian pad, a sine drone, a music-box arpeggio and
+a few bell notes; a quiet bed for a day without a build, day 10).
 A day script
 can name one (`style`, `mode`); by default the day number picks it. Within a
 video the music follows the sections – intro (title), drive (time-lapse),
@@ -70,6 +75,14 @@ BASS = {
     "subhold": [(0, 10, 0, 0), (10, 6, 0, 0)],
     "subroll": [(0, 6, 0, 0), (7, 3, 2, 0), (10, 6, 0, 0)],
     "subwalk": [(0, 8, 0, 0), (10, 3, 0, 0), (13, 3, 1, 0)],
+    # electro: an 808 boom in syncopated 16ths, octave jumps
+    "electro": [(0, 3, 0, 0), (3, 1, 0, 1), (6, 2, 0, 0), (10, 2, 0, 0), (11, 1, 0, 1), (14, 2, 2, 0)],
+    "electro2": [(0, 2, 0, 0), (2, 1, 0, 1), (4, 2, 0, 0), (7, 1, 2, 0), (10, 3, 0, 0), (13, 1, 0, 1),
+                 (14, 2, 1, 0)],
+    "electro3": [(0, 6, 0, 0), (7, 1, 0, 1), (8, 2, 0, 0), (11, 2, 0, 0), (14, 1, 2, 0), (15, 1, 0, 1)],
+    # ambient: a drone, the root held through the bar, sometimes the fifth
+    "drone": [(0, 16, 0, 0)],
+    "drone5": [(0, 8, 0, 0), (8, 8, 2, 0)],
 }
 
 # Arpeggio orders over [c0, c1, c2, c0+12, c1+12, c2+12].
@@ -132,6 +145,18 @@ DRUMS = {
     "dnbhalf": {"k": "x.........x.....", "s": "........X.......", "h": "x.x.x.x.x.x.x.x.",
                 "r": ".g.g.g.g.g.g.g.g"},
     "dnbbreak": {"h": "x.g.x.g.x.g.x.g.", "m": "....x.......x..."},
+    # electro (126 bpm): the broken 808 beat – kick on 1, the "a" of 2 and
+    # the "and" of 3, never four on the floor – the clap on 2 and 4, 16th
+    # hats, a rim like a cowbell; a half-time robot walk; hats and rim in
+    # the breakdown.
+    "electro": {"k": "x......x..x.....", "s": "....X.......X...", "h": "xgxgxgxgxgxgxgxg"},
+    "electro2": {"k": "x.....x..x..x...", "s": "....X.......X..g", "h": "x.xxx.xxx.xxx.xx",
+                 "m": "..........x....."},
+    "electrobell": {"k": "x......x..x...x.", "s": "....X.......X...", "h": "x.x.x.x.x.x.x.x.",
+                    "m": "..x....x.x....x."},
+    "electrohalf": {"k": "x.........x..x..", "s": "........X.......", "h": "xgxgxgxgxgxgxgxg",
+                    "o": "......x.......x."},
+    "electrobreak": {"h": "xgxgxgxgxgxgxgxg", "m": "..x....x.x....x."},
 }
 
 # Stab rhythms (chord hits): x hit; length of a hit in steps follows.
@@ -197,6 +222,33 @@ STYLES = {
         "kit": "liquid", "drive": "dnb2", "grooves": ["dnb", "dnb2", "dnbride", "dnbhalf"],
         "cycle": True, "breakdown_drums": "dnbbreak", "sweep": True,
         "fills": ["build", "fill", "stop", "build"],
+    },
+    "electro": {
+        "mode": "phrygian", "swing": 0.03,
+        "progs": [[0, 0, 1, 0], [0, 6, 5, 6], [0, 3, 1, 0], [5, 6, 0, 0]], "bridge": [3, 4, 5, 1],
+        "cadence": [1, 6, 0, 0], "sevenths": False, "lift": [2],
+        "bass": {"wave": "boom", "gain": 0.26, "patterns": ["electro", "electro2", "electro3"]},
+        "harm": {"kind": "arp", "wave": "saw", "gain": 0.045, "rate": 1, "octave": 12,
+                 "patterns": ["octave", "broken", "pedal", "up"], "echo": 0.3},
+        "lead": {"wave": "pulse", "gain": 0.06, "octave": 12, "density": 0.4, "p16": 0.3,
+                 "legato": 0.6, "vibrato": 0.0, "echo": 0.25},
+        "pad": {"wave": "saw", "gain": 0.08, "lp": 0.03},
+        "kit": "electro", "drive": "electro2", "grooves": ["electro", "electro2", "electrobell", "electrohalf"],
+        "cycle": True, "breakdown_drums": "electrobreak", "sweep": True,
+        "fills": ["fill", "build", "stop", "fill"],
+    },
+    "ambient": {
+        "mode": "lydian", "swing": 0.0, "drums": False,
+        "progs": [[0, 0, 4, 4], [0, 1, 0, 4], [5, 4, 0, 0], [0, 6, 4, 1]], "bridge": [3, 4, 5, 1],
+        "cadence": [1, 4, 0, 0], "sevenths": True, "ninths": True, "lift": [0],
+        "bass": {"wave": "sine", "gain": 0.14, "patterns": ["drone", "drone5"]},
+        "harm": {"kind": "arp", "wave": "musicbox", "gain": 0.05, "rate": 4, "octave": 12,
+                 "patterns": ["up", "pedal", "broken", "updown"], "echo": 0.45},
+        "lead": {"wave": "musicbox", "gain": 0.06, "octave": 24, "density": 0.14, "p16": 0.0,
+                 "legato": 1.0, "vibrato": 0.0, "echo": 0.4},
+        "pad": {"wave": "sinepad", "gain": 0.22, "lp": 0.02},
+        "kit": "lofi", "drive": None, "grooves": [None], "sweep": True,
+        "fills": [None],
     },
     "synthwave": {
         "mode": "minor", "swing": 0.0,
@@ -271,6 +323,8 @@ KITS = {  # kick (f start, f end, decay s), snare (noise decay, tone Hz, tone ga
                   "lp": 0.7, "clap": True},
     "liquid": {"kick": (115, 44, 0.16), "snare": (0.15, 195.0, 0.5), "hat": 0.012, "bright": 0.9,
                "lp": 1.0},
+    "electro": {"kick": (150, 40, 0.42), "snare": (0.10, 0.0, 0.0), "hat": 0.008, "bright": 1.0,
+                "lp": 1.0, "clap": True},
 }
 
 VEL = {"x": 1.0, "X": 1.25, "g": 0.35, "o": 1.0}
@@ -433,6 +487,17 @@ class Music:
             saw = _lowpass([2 * ((i * inc) % 1) - 1 for i in range(n)], 0.03)
             t = [(0.9 * math.sin(w * i) + 0.12 * math.sin(2 * w * i) + 0.45 * saw[i])
                  * (0.75 + 0.25 * math.exp(-i / (0.25 * R))) * e[i] for i in range(n)]
+        elif wave == "boom":  # an 808 bass: a sine that drops into its pitch, a long decay, a little drive
+            e = _env(n, 30, 900)
+            ph, t = 0.0, []
+            for i in range(n):
+                ph += w * (1 + 1.5 * math.exp(-i / (0.012 * R)))
+                x = math.sin(ph) * (0.6 + 0.4 * math.exp(-i / (0.5 * R)))
+                t.append(math.tanh(1.8 * x) * e[i])
+        elif wave == "musicbox":  # a music box / celesta: a sine with a bright, fast-fading partial
+            e = _env(n, 15, 4000)
+            t = [(math.sin(w * i) + 0.35 * math.sin(4 * w * i) * math.exp(-i / (0.08 * R)))
+                 * math.exp(-i / (0.9 * R)) * e[i] for i in range(n)]
         elif wave == "reese":  # two detuned saws, low-passed, over a sine sub; a slow swell
             e = _env(n, 600, 1500)
             saw = _lowpass([((i * inc * 0.996) % 1) + ((i * inc * 1.004) % 1) - 1 for i in range(n)], 0.025)
@@ -820,6 +885,8 @@ class Music:
             for i in range(cut_n, len(ton)):
                 ton[i] *= max(0.0, 1 - (i - cut_n) / fade)
         out = ton
+        if not st.get("drums", True):  # a style without drums (ambient): no beat, fill, crash or riser
+            drums = fill = crash = riser = None
         pat = DRUMS.get(drums) if drums else None
         if pat or fill:
             pat = pat or DRUMS["four"]
