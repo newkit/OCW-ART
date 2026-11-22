@@ -373,3 +373,41 @@ class TranceTest(unittest.TestCase):
         s = M.stats(M.Music(138, "A", seed=11, style="trance").render(24, [(0, "groove"), (12, "groove")]))
         self.assertLess(s["peak_db"], -2.4)
         self.assertAlmostEqual(s["rms_db"], -19, delta=1.5)
+
+
+class DubTest(unittest.TestCase):
+    """Day 12 (2026-11-22): roots dub, a style unlike days 6–11."""
+    SEGS = [(0, "intro"), (6, "drive"), (20, "groove"), (32, "groove"), (44, "groove"), (56, "groove"),
+            (68, "outro")]
+
+    def test_the_one_drop_leaves_the_downbeat_empty(self):
+        pat = M.DRUMS["onedrop"]
+        self.assertEqual(pat["k"].index("x"), 8)
+        self.assertEqual(pat["m"].strip(".").upper(), "X")
+        self.assertEqual(pat["m"].upper().index("X"), 8)
+        self.assertNotIn("s", pat)
+
+    def test_skank_on_two_and_four_with_an_echo(self):
+        st = M.STYLES["dub"]
+        self.assertEqual(st["harm"]["kind"], "stab")
+        self.assertGreater(st["harm"]["echo"], 0)
+        self.assertEqual(M.STABS["skank"][0], "....x.......x...")
+
+    def test_the_bass_rests_on_the_one_in_the_drop(self):
+        self.assertNotIn(0, [n[0] for n in M.BASS["onedrop"]])
+
+    def test_dorian_i_iv(self):
+        m = M.Music(74, "D", seed=12, style="dub")
+        self.assertEqual(m.mode_name, "dorian")
+        self.assertIn([0, 3, 0, 3], M.STYLES["dub"]["progs"])
+        self.assertEqual(m.chord(3, 0)[1] - m.chord(3, 0)[0], 4)  # G major over D: the IV
+
+    def test_a_drum_style_per_chapter(self):
+        m = M.Music(74, "D", seed=12, style="dub")
+        grooves = [s[1] for s in m.plan(80, self.SEGS) if s[-1] == "groove" and s[1]]
+        self.assertGreaterEqual(len(set(grooves) & set(M.STYLES["dub"]["grooves"])), 3, grooves)
+
+    def test_loud_enough_without_clipping(self):
+        s = M.stats(M.Music(74, "D", seed=12, style="dub").render(26, [(0, "groove"), (13, "groove")]))
+        self.assertLess(s["peak_db"], -2.4)
+        self.assertAlmostEqual(s["rms_db"], -19, delta=1.5)

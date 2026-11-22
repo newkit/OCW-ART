@@ -65,6 +65,12 @@ class SpecRowTest(unittest.TestCase):
         self.assertEqual(F.row_title("**Built: a Voice switch in Host a ride and the headphones – the lists "
                                      "never leave the server** (7.1.7 Q15)"),
                          "Built: a Voice switch in Host a ride and the headphones")
+        self.assertEqual(F.row_title("**Fixed: the browser app restarting on an iPhone – a lost WebGL context "
+                                     "now stops the app** (14 Phase 10 B7): …"),
+                         "Fixed: the browser app restarting on an iPhone")
+        self.assertEqual(F.row_title("**Voice: \"nobody hears you\" on the HUD when My voice is turned on; "
+                                     "headphones** (7.1.7 Q22): …"),
+                         "Voice: \"nobody hears you\" on the HUD when My voice is turned on")
         self.assertEqual(F.row_title(END["3.36"]), "Phase 10 public preview of the browser app on GitHub Pages")
         self.assertTrue(F.row_title("x" * 200).endswith("…"))
         # Decision rows show what was decided, not only who decided (user, 2026-11-16).

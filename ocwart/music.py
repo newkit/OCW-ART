@@ -18,7 +18,11 @@ a few bell notes; a quiet bed for a day without a build, day 10) and
 `trance` (uplifting trance, about 138 bpm: aeolian i–VI–III–VII, a rolling
 off-beat bass in 16ths, a gated supersaw pad, a plucked 16th arpeggio with an
 echo, a soaring saw lead, a punchy four-on-the-floor kit with the open hat
-on every off-beat; day 11).
+on every off-beat; day 11) and `dub` (roots dub, about 74 bpm: dorian
+i–IV, the one-drop beat – kick and rim together on the third beat, nothing
+on the one –, a round melodic sub bass that rests on the downbeat, the
+guitar skank on 2 and 4 with a spring-like echo, a sustained organ, a reedy
+melodica lead with a long delay, dub stops; day 12).
 A day script
 can name one (`style`, `mode`); by default the day number picks it. Within a
 video the music follows the sections – intro (title), drive (time-lapse),
@@ -91,6 +95,11 @@ BASS = {
     "rolling": [(s, 1, 0, 0) for s in range(16) if s % 4],
     "rolling5": [(s, 1, 0 if s < 12 else 2, 0) for s in range(16) if s % 4],
     "rollingoct": [(s, 1, 0, 1 if s % 4 == 2 else 0) for s in range(16) if s % 4],
+    # dub: a round, melodic sub line that leaves the downbeat to the drop
+    "onedrop": [(2, 3, 0, 0), (6, 2, 0, 0), (8, 2, 2, 0), (11, 1, 1, 0), (12, 4, 0, 0)],
+    "rockers": [(0, 2, 0, 0), (3, 1, 0, 0), (4, 2, 2, 0), (7, 1, 0, 1), (8, 3, 0, 0), (12, 2, 1, 0),
+                (14, 2, 2, 0)],
+    "dubwalk": [(2, 2, 0, 0), (4, 2, 1, 0), (6, 2, 2, 0), (8, 4, 0, 1), (12, 2, 2, 0), (14, 2, 1, 0)],
 }
 
 # Arpeggio orders over [c0, c1, c2, c0+12, c1+12, c2+12].
@@ -176,6 +185,17 @@ DRUMS = {
                   "m": ".g....g..g....g.", "r": "gggggggggggggggg"},
     "trancehalf": {"k": "x.......x.......", "s": "........X.......", "o": "..x...x...x...x."},
     "trancebreak": {"o": "..g...g...g...g.", "h": "g.g.g.g.g.g.g.g."},
+    # dub (74 bpm, swung 16ths): the one drop – kick and rim on the third
+    # beat, nothing on the one –, rockers (the kick on 1 and 3), steppers
+    # (four on the floor), a half-drop with the open hat; in the breakdown
+    # only the rim and the hats.
+    "onedrop": {"k": "........x.......", "m": "........X.......", "h": "x.xgx.xgx.xgx.xg"},
+    "rockers": {"k": "x.......x.......", "s": "........x.......", "h": "x.x.x.x.x.x.x.x.",
+                "o": "..............x."},
+    "steppers": {"k": "x...x...x...x...", "m": "........x.......", "h": "xgxgxgxgxgxgxgxg"},
+    "dubhalf": {"k": "........x.....g.", "s": "........X.......", "o": "......x.........",
+                "r": "g.g.g.g.g.g.g.g."},
+    "dubbreak": {"m": "........x.......", "h": "x...x...x...x..."},
 }
 
 # Stab rhythms (chord hits): x hit; length of a hit in steps follows.
@@ -184,6 +204,8 @@ STABS = {
     "offpiano": ("..x...x...x...x.", 2), "piano2": ("x..x..x...x..x..", 2),
     "rhodes": ("x.....x.........", 6), "rhodes2": ("x.........x.....", 6), "rhodes3": ("x..x......x.....", 3),
     "keys": ("x.........x.....", 10), "keys2": ("x.....x.....x...", 6), "keys3": ("x.......x.......", 8),
+    # dub: the skank – short chops on 2 and 4, a double chop, the off-beats
+    "skank": ("....x.......x...", 1), "skank2": ("....x.x.....x.x.", 1), "skank8": ("..x...x...x...x.", 1),
 }
 
 STYLES = {
@@ -283,6 +305,20 @@ STYLES = {
         "cycle": True, "breakdown_drums": "trancebreak", "sweep": True,
         "fills": ["build", "build", "fill", "stop"],
     },
+    "dub": {
+        "mode": "dorian", "swing": 0.1,
+        "progs": [[0, 3, 0, 3], [0, 0, 6, 6], [0, 3, 6, 0], [2, 3, 0, 0]], "bridge": [2, 3, 4, 6],
+        "cadence": [3, 6, 0, 0], "sevenths": False, "lift": [2],
+        "bass": {"wave": "deepbass", "gain": 0.3, "patterns": ["onedrop", "rockers", "dubwalk"]},
+        "harm": {"kind": "stab", "wave": "pluck", "gain": 0.08, "octave": 12,
+                 "patterns": ["skank", "skank2", "skank8"], "echo": 0.45},
+        "lead": {"wave": "softpulse", "gain": 0.07, "octave": 12, "density": 0.26, "p16": 0.05,
+                 "legato": 0.9, "vibrato": 0.005, "echo": 0.42},
+        "pad": {"wave": "organ", "gain": 0.06, "lp": 0.05},
+        "kit": "dub", "drive": "steppers", "grooves": ["onedrop", "rockers", "steppers", "dubhalf"],
+        "cycle": True, "breakdown_drums": "dubbreak", "sweep": True,
+        "fills": ["stop", "fill", "stop", "build"],
+    },
     "synthwave": {
         "mode": "minor", "swing": 0.0,
         "progs": [[0, 5, 2, 6], [0, 3, 5, 4], [5, 6, 0, 0], [0, 6, 5, 6]], "bridge": [3, 4, 5, 6],
@@ -360,6 +396,8 @@ KITS = {  # kick (f start, f end, decay s), snare (noise decay, tone Hz, tone ga
                 "lp": 1.0, "clap": True},
     "trance": {"kick": (145, 46, 0.22), "snare": (0.11, 0.0, 0.0), "hat": 0.012, "bright": 1.0,
                "lp": 1.0, "clap": True},
+    "dub": {"kick": (95, 40, 0.30), "snare": (0.08, 330.0, 0.6), "hat": 0.018, "bright": 0.75,
+            "lp": 0.8},
 }
 
 VEL = {"x": 1.0, "X": 1.25, "g": 0.35, "o": 1.0}
@@ -911,6 +949,9 @@ class Music:
                     if c == "x":
                         for semi in chord:
                             note(s, ln, H["wave"], semi + H["octave"], H["gain"] * harm_g / len(chord) * 2.2)
+                            if H.get("echo"):  # the skank's echo, a dotted 8th later (dub)
+                                note(s + 3, ln, H["wave"], semi + H["octave"],
+                                     H["gain"] * harm_g / len(chord) * 2.2 * H["echo"])
         for s, ln, semi in lead:
             note(s, ln, st["lead"]["wave"], semi, st["lead"]["gain"], st["lead"]["vibrato"])
             if st["lead"].get("echo") and s + 3 < 16:  # a dotted-8th delay

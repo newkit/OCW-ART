@@ -68,14 +68,19 @@ def row_title(text: str, n: int = 90) -> str:
         else:
             t = "Decided: " + re.split(r":\s| – | — |;\s|\.\s", rest, maxsplit=1)[0]
     else:
-        # "Built: other riders' crashes … are heard …" names only the state:
-        # show what was built.
-        b = re.match(r"(?i)built\s*:\s*(.+)", t)
+        # "Built: other riders' crashes … are heard …" / "Fixed: the browser
+        # app restarting …" name only the state: show what was built or fixed.
+        b = re.match(r"(?i)(built|fixed)\s*:\s*(.+)", t)
         if b:
-            what = re.split(r":\s| – | — |;\s|\.\s", b.group(1), maxsplit=1)[0].strip(" ,.")
-            t = "Built: " + what[:1].lower() + what[1:]
+            what = re.split(r":\s| – | — |;\s|\.\s", b.group(2), maxsplit=1)[0].strip(" ,.")
+            t = b.group(1).capitalize() + ": " + what[:1].lower() + what[1:]
         else:
-            t = re.split(r":\s| – | — |;\s|\.\s", t, maxsplit=1)[0]
+            parts = re.split(r"(:\s| – | — |;\s|\.\s)", t, maxsplit=2)
+            t = parts[0]
+            # "Voice: “nobody hears you” on the HUD …": a one-word topic
+            # alone says nothing; add the clause after it.
+            if " " not in t.strip() and len(parts) > 2 and parts[1].startswith(":"):
+                t = t.strip() + ": " + parts[2].strip(" ,.")
     t = t.strip(" ,.")
     return t if len(t) <= n else t[: n - 1].rstrip() + "…"
 
