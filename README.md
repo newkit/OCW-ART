@@ -15,14 +15,14 @@ day becomes a short video (title, a time-lapse of the whole day, the story in
 chapters, today's features, the numbers), and the days are joined into one
 growing diary video.
 
-<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-21/w/100702-shot-wayland-status-headphones-per-viewer.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/w/104431-q24-lips-lips-speaking.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
 **▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
 **[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**12 build days** · **1112** commits · **6470** pictures · **226** videos · **15.26 billion** tokens · the diary video: 644.5 MB
+**13 build days** · **1158** commits · **6847** pictures · **236** videos · **16.02 billion** tokens · the diary video: 699 MB
 
 ## How the game grew
 
@@ -32,11 +32,21 @@ growing diary video.
 
 ## The build days
 
-### Day 12 · 2026-11-22 — (the day's story is written at the end of the day)
+### Day 13 · 2026-11-23 — (the day's story is written at the end of the day)
 
-[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-22/) · day zip and video: at the end of the day
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-23/) · day zip and video: at the end of the day
 
-**0** commits · **0** merges · **0** pictures · **0** videos · music: funk
+**0** commits · **0** merges · **0** pictures · **0** videos · music: lofi
+
+### Day 12 · 2026-11-22 — Smooth, with bumps
+
+*In which the riders move their lips, wet leaves bring them down, potholes kick the trainer, side roads leave from the kerb, the lamp posts step off the road, an iPhone stops restarting, the riders glide again – and 0.2.5 goes out.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-12-2026-11-22.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/t/104431-q24-lips-lips-speaking.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-12-2026-11-22.mp4">day video</a> (54.5 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-22/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/t/094245-shot-wayland-menu-voice-rows.jpg.jpg" width="200" alt="shot wayland menu voice rows"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-22/#120"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/t/150149-junctions-j3-after-wayland-junction-mini-drone.jpg.jpg" width="200" alt="junctions j3 after wayland junction mini drone"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-22/#366"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/t/201502-windows-icon-0.2.5-ocw-desktop-256.png.jpg" width="200" alt="windows icon 0.2.5 ocw desktop 256"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-22/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-12-2026-11-22.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-22.zip) (335.8 MB)
+
+**46** commits · **12** merges · spec 5.24 → 5.40 · **377** pictures · **10** videos · **761 million** tokens · music: dub
 
 ### Day 11 · 2026-11-21 — The tokens come back
 

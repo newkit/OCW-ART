@@ -1,0 +1,142 @@
+# OCW Build Diary – day 12 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-22/ (or ../DAY/ for another day).
+# Spec rows 5.24–5.40; release 0.2.5 published at 20:27.
+# Withheld: nothing – the day's 387 pictures and videos were checked (no
+# desktop captures, no user names, home paths or addresses; Join a ride shows
+# the documentation address 192.0.2.10, not the home network; OCW Studio's
+# paths read "~"; only made-up riders and bots).
+
+title = "Smooth, with bumps"
+tagline = "In which the riders move their lips, wet leaves bring them down, potholes kick the trainer, side roads leave from the kerb, the lamp posts step off the road, an iPhone stops restarting, the riders glide again – and 0.2.5 goes out."
+hero = "104431-q24-lips-lips-speaking.jpg"
+bpm = 74
+key = "D"
+style = "dub"                      # day 6 darkchip, 7 melodic deep house, 8 liquid dnb, 9 electro, 10 ambient, 11 trance: roots dub for a day of smooth roads and smooth riders
+mode = "dorian"
+outro = "Smooth junctions, smooth riders, bumpy roads – on purpose. 761 million tokens."
+# The browser test sweeps (the same menu tour three times), the phone
+# memory runs, the X11 twins of the junction scenes, the icon sizes and
+# the loading screens would flicker through the time-lapse:
+timelapse_skip = ["*web-web-*", "*web-ios-*", "*-x11-*", "*windows-icon-*", "*-loading*", "*-frames*"]
+
+[[chapter]]
+time = "00:09"
+title = "Previously on the diary"
+caption = "Shortly after midnight day 11 goes out: the tokens come back, to trance."
+shots = [
+  { file = "../2026-11-21/100702-shot-wayland-status-headphones-per-viewer.jpg", seconds = 3.8, focus = [0.45, 0.55, 1.4], note = "day 11" },
+  { card = true, seconds = 3.2, text = "00:32 – day 11 published: 95 seconds, 8 chapters, 138 bpm." },
+]
+
+[[chapter]]
+time = "09:13"
+title = "My voice, I hear"
+caption = "The Voice page gets two rows: My voice (off, everybody, selected) and I hear (everybody, selected, nobody)."
+prompt = "q16 build proposal"
+shots = [
+  { file = "094245-shot-wayland-menu-voice-rows.jpg", seconds = 4.0, focus = [0.5, 0.4, 1.3], note = "every ride starts off" },
+  { file = "094442-shot-wayland-menu-voice-rows-on-selected-nobody.jpg", seconds = 4.0, focus = [0.5, 0.4, 1.3], note = "I hear: nobody" },
+]
+
+[[chapter]]
+time = "09:39"
+title = "Lips that move"
+caption = "While a rider is heard, the lower lip opens in short eased pulses – never under the X of a muted rider."
+prompt = "Phase 4 Q24 – The mouth while speaking … (a) the lips open a little in a short pulse while a rider is heard speaking – only on the near model, never while muted. Answer: a."
+shots = [
+  { file = "104431-q24-lips-lips-speaking.mp4", seconds = 5.0, note = "talking" },
+  { file = "104431-q24-lips-lips-muted.jpg", seconds = 3.6, note = "muted: the X stays" },
+]
+
+[[chapter]]
+time = "12:57"
+title = "Nine answers, five prompts"
+caption = "Sixteen minutes of answers: where Input mapping lives, leaves, side roads, voice and potholes – then four agents start."
+prompt = "3.2.5 Q1 – Where the Input mapping entry sits … (a) keep it so … Answer: a."
+shots = [
+  { file = "110623-web-web-input-mapping.jpg", seconds = 4.0, focus = [0.22, 0.4, 1.4], note = "stays under Controls" },
+  { card = true, seconds = 4.2, text = "12:57 – 13:13: 9 open questions answered. By 13:13 five agents are at work." },
+]
+
+[[chapter]]
+time = "14:10"
+title = "Nobody hears you"
+caption = "Turn your voice on with nobody listening and the HUD says so; muted, blocked or at 0 %, a rider wears headphones."
+prompt = "Q18 – Block, a rider's volume and the headphones … Answer: Both (muted, blocked, 0%) should be whown to the other rider by showing headphones."
+shots = [
+  { file = "135841-voice-notice-2026-11-22-nobody-hears-you.jpg", seconds = 4.2, focus = [0.1, 0.89, 2.6], note = "nobody hears you" },
+  { file = "134636-shot-wayland-status-headphones-mute-and-zero-volume.jpg", seconds = 4.0, focus = [0.42, 0.6, 1.8], note = "muted + 0 %" },
+]
+
+[[chapter]]
+time = "14:29"
+title = "Wet leaves"
+caption = "Wet leaves cost a little speed and sway the bike; with damage on, a fast corner on them ends on the ground."
+prompt = "4.6.2 Q6 – Wet leaves on the road and the ride … Answer: b, and c only with damage on and never in group rides."
+shots = [
+  { file = "141048-wet-leaves-bf-wet-leaves-slide-wayland.mp4", seconds = 6.0, start = 3.5, note = "Schauinslandstraße, 73 km/h" },
+  { card = true, seconds = 3.8, text = "200 W on a soaked road under a full cover of leaves: 33.8 → 32.8 km/h." },
+]
+
+[[chapter]]
+time = "15:34"
+title = "Potholes you can feel"
+caption = "Potholes and cracks kick the trainer, shake the camera and sound; bad roads roll up to 50 % heavier."
+prompt = "Phase 8 Q12 – Potholes in the ride feel … (c) both. Q14 – Untagged main roads: (b) draw untagged roads cleaner and plainer."
+shots = [
+  { file = "141537-2026-11-22-road-feel-video-wayland-feel-ride-blackforest-bad.mp4", seconds = 6.0, note = "Black Forest, a bad road" },
+  { card = true, seconds = 3.8, text = "Roads without a smoothness tag – 77 % in Liechtenstein, 98 % on Tenerife – are drawn cleaner now." },
+]
+
+[[chapter]]
+time = "15:51"
+title = "J3: from the edge"
+caption = "Side roads leave from the main road's edge at their own grade; close junctions share a patch, mini-roundabouts a disc."
+prompt = "4.8.8 Q6 – Side roads with too little room between the main road's surface and the next junction … Answer: d, built with J3."
+shots = [
+  { split = ["145829-junctions-j3-before-wayland-junction-mini-drone.jpg", "150149-junctions-j3-after-wayland-junction-mini-drone.jpg"], seconds = 4.9, note = "J2b | J3" },
+  { split = ["145807-junctions-j3-before-wayland-junction-dual-drone.jpg", "150126-junctions-j3-after-wayland-junction-dual-drone.jpg"], seconds = 4.7, note = "one patch" },
+  { card = true, seconds = 3.8, text = "Forks without a surface, Liechtenstein: 65 → 0. The kinks stay – new question 4.8.8 Q7." },
+]
+
+[[chapter]]
+time = "15:55"
+title = "It keeps restarting"
+caption = "A lost WebGL context made the app eat memory till iOS killed the tab. Now it stops, loads once; phones keep fewer tiles."
+prompt = "Browser version seems to be broken, keeps restarting on my IOS. Test and fix."
+shots = [
+  { file = "164430-web-ios-after-liechtenstein-landscape-died-once.png", seconds = 4.4, focus = [0.5, 0.18, 1.5], note = "riding on with less detail" },
+  { card = true, seconds = 3.8, text = "After a lost context: 224 MB → 3.9 GB of memory in 80 s. Now it stays flat." },
+]
+
+[[chapter]]
+time = "15:57"
+title = "Not in the road"
+caption = "One rule for every world: a street lamp stands beside the road – moved to the kerb, along the road, or left out."
+prompt = "one rule for the world (save it in the according spec sections): do not put lights/latern poles in the road, only at the side."
+shots = [
+  { split = ["164045-lamp-rule-vaduz-street-day-before-wayland.jpg", "165059-lamp-rule-vaduz-street-day-after-wayland.jpg"], seconds = 4.8, note = "Vaduz" },
+  { split = ["165142-lamp-rule-liechtenstein-junction-day-before-wayland.jpg", "165157-lamp-rule-liechtenstein-junction-day-after-wayland.jpg"], seconds = 4.6, note = "to the kerb" },
+  { card = true, seconds = 4.2, text = "Lamps in a road – Liechtenstein 404, Tenerife 3,150, Black Forest north 2,281 – now 0." },
+]
+
+[[chapter]]
+time = "16:07"
+title = "Smooth again"
+caption = "The jumping lived in the videos: at 25 fps snapshots were read a tick late. Timed by the server's tick, riders glide."
+prompt = "I noticed that the rider does not move smooth anymore, its laggy/jumpy. investigate and fix."
+shots = [
+  { file = "164818-motion-before-loop-bunch.mp4", seconds = 4.4, note = "before" },
+  { file = "164819-motion-after-loop-bunch.mp4", seconds = 4.4, note = "after" },
+  { card = true, seconds = 3.6, text = "Corrections of the own rider at 25 fps: 597 → 10 a minute." },
+]
+
+[[chapter]]
+time = "20:27"
+title = "0.2.5"
+caption = "Release 0.2.5 goes up on GitHub: the desktop app, OCW Studio and the browser build, each started and ridden first."
+prompt = "bump version and build a new release, upload to GH"
+shots = [
+  { file = "201502-windows-icon-0.2.5-ocw-desktop-256.png", seconds = 3.2, note = "the icon, 256 px" },
+  { file = "201547-release-0.2.5-appimage-wayland.jpg", seconds = 4.2, note = "the AppImage, Vaduz at night" },
+]

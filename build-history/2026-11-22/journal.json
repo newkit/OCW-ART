@@ -1,0 +1,3347 @@
+{
+ "day": "2026-11-22",
+ "number": 12,
+ "commits": [
+  {
+   "sha": "a075e44",
+   "time": "09:13:11",
+   "merge": false,
+   "subject": "The Voice page gets two rows, My voice and I hear; voice off becomes both rows off (spec 7.1.7 Q16 layout decided)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "d5deb0b",
+   "time": "09:32:22",
+   "merge": false,
+   "subject": "Built: the Voice page has two separate rows, My voice and I hear; the old voice off is both rows off (spec 7.1.7 Q16)",
+   "added": 891,
+   "removed": 347
+  },
+  {
+   "sha": "2688a68",
+   "time": "09:39:40",
+   "merge": false,
+   "subject": "The lips move while a rider is heard speaking: a short pulse on the near model, never while muted (spec Phase 4 Q24 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "b70c42c",
+   "time": "09:42:46",
+   "merge": false,
+   "subject": "Desktop voice test: voice.status shows My voice and I hear (spec 7.1.7 Q16)",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "e5eac6f",
+   "time": "09:43:33",
+   "merge": false,
+   "subject": "Voice page: the Participants row shows the call's state short (spec 7.1.7 Q16)",
+   "added": 19,
+   "removed": 5
+  },
+  {
+   "sha": "667c7c4",
+   "time": "09:46:59",
+   "merge": false,
+   "subject": "Voice scenes: the menu opens early, shots at 8 s (slow X11 software rendering)",
+   "added": 5,
+   "removed": 5
+  },
+  {
+   "sha": "8d024a1",
+   "time": "10:10:30",
+   "merge": true,
+   "subject": "Merge the Voice page with My voice and I hear rows, I hear nobody, old settings migrated (spec 7.1.7 Q16, 7.1.12; 5.26)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "6493daa",
+   "time": "11:11:00",
+   "merge": false,
+   "subject": "The lips move while a rider is heard speaking: short eased pulses of the lower lip on the near model, never under the X mouth (spec Phase 4 Q24 (a), 5.27)",
+   "added": 711,
+   "removed": 44
+  },
+  {
+   "sha": "04ffd3f",
+   "time": "11:11:43",
+   "merge": true,
+   "subject": "Merge the lips moving while a rider is heard speaking, never while muted, near model only (spec Phase 4 Q24, 5.27)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "46d0aa1",
+   "time": "12:43:36",
+   "merge": false,
+   "subject": "Release 0.2.5",
+   "added": 32,
+   "removed": 31
+  },
+  {
+   "sha": "30fff7e",
+   "time": "12:57:58",
+   "merge": false,
+   "subject": "Input mapping stays a row of Settings → Controls (spec 3.2.5 Q1 (a))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "cdd8818",
+   "time": "12:58:45",
+   "merge": false,
+   "subject": "Wet leaves cost a little speed and add a wobble at speed; with damage on (never in group rides) a corner on wet leaves can end in a slide (spec 4.6.2 Q6 (b), (c))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "0619b50",
+   "time": "13:03:10",
+   "merge": false,
+   "subject": "Side roads with too little room at junctions: mouth at the main road's edge, blend from the side road's grade, sloped corner – built with J3 (spec 4.8.8 Q6 (d))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "5a433ea",
+   "time": "13:08:52",
+   "merge": false,
+   "subject": "Voice answers: spatial off keeps the range, a notice when the voice is on but nobody hears it, muted / blocked / 0 % all show headphones (spec 7.1.7 Q21, Q22, Q18)",
+   "added": 6,
+   "removed": 11
+  },
+  {
+   "sha": "f8f2c50",
+   "time": "13:13:26",
+   "merge": false,
+   "subject": "Road damage in the ride: bumps and more rolling resistance on bad surfaces; untagged roads drawn cleaner; damage amounts stay (spec Phase 8 Q12 (c), Q13 (b), Q14 (b))",
+   "added": 6,
+   "removed": 11
+  },
+  {
+   "sha": "3b318f2",
+   "time": "13:31:14",
+   "merge": false,
+   "subject": "Voice: \"nobody hears you\" when My voice is turned on and nobody can hear it; Mute for me, 0 % volume and Block show headphones to that rider (spec 7.1.7 Q22 (b), Q18)",
+   "added": 576,
+   "removed": 90
+  },
+  {
+   "sha": "bca116c",
+   "time": "13:59:14",
+   "merge": false,
+   "subject": "scripts/shot-voice-notice.sh: Wayland screenshot of the \"nobody hears you\" voice notice (spec 7.1.7 Q22 (b))",
+   "added": 43,
+   "removed": 0
+  },
+  {
+   "sha": "da1c2d3",
+   "time": "14:04:44",
+   "merge": false,
+   "subject": "J3 work in progress: side roads leave the main road's edge at their own grade with sloped corners (4.8.8 Q6 (d)), clusters, forks below 15 degrees, star-shaped outlines",
+   "added": 1705,
+   "removed": 162
+  },
+  {
+   "sha": "191ef32",
+   "time": "14:10:54",
+   "merge": true,
+   "subject": "Merge the nobody-hears-you notice and headphones for muted, blocked and 0 % volume (spec 7.1.7 Q22, Q18; 5.33)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "e6b7662",
+   "time": "14:12:16",
+   "merge": false,
+   "subject": "Built: wet leaves on the road cost a little speed and wobble the bike at speed; with damage on, outside group rides, a fast corner on them can end in a slide (spec 4.6.2 Q6 (b), (c))",
+   "added": 1664,
+   "removed": 65
+  },
+  {
+   "sha": "e8684fd",
+   "time": "14:13:31",
+   "merge": false,
+   "subject": "J3: clusters share one patch, forks below 15 degrees, mini-roundabout discs (section JMRB), fixed point for cluster side arms; star-shape fix dropped (poor surfaces)",
+   "added": 424,
+   "removed": 50
+  },
+  {
+   "sha": "bfa1039",
+   "time": "14:16:18",
+   "merge": false,
+   "subject": "Road damage in the ride: bumps (trainer kick, camera shake, sound, a little speed) and up to 50 % more rolling resistance on bad surfaces, server-authoritative from the drawn damage; untagged roads drawn cleaner (spec Phase 8 Q12 (c), Q14 (b))",
+   "added": 1733,
+   "removed": 42
+  },
+  {
+   "sha": "251a1c5",
+   "time": "14:16:46",
+   "merge": true,
+   "subject": "Merge origin/main; road damage in the ride renumbered to spec 5.34",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b1ba946",
+   "time": "14:18:37",
+   "merge": false,
+   "subject": "J3: formatting, cluster and mini-roundabout summary in world-builder junctions, scenes and render script for the J3 before/after",
+   "added": 214,
+   "removed": 45
+  },
+  {
+   "sha": "27b86ec",
+   "time": "14:23:30",
+   "merge": false,
+   "subject": "road_feel: a named type for the located strip (clippy type_complexity)",
+   "added": 41,
+   "removed": 9
+  },
+  {
+   "sha": "cfa9219",
+   "time": "14:29:29",
+   "merge": true,
+   "subject": "Merge wet leaves on the road: a little speed cost and sway, a slide with damage on outside group rides (spec 4.6.2 Q6, 5.34)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "11c0d13",
+   "time": "14:30:22",
+   "merge": false,
+   "subject": "Road damage's rolling resistance adds to the weather's factor (and wet leaves'), never multiplies it",
+   "added": 20,
+   "removed": 4
+  },
+  {
+   "sha": "183780f",
+   "time": "14:43:11",
+   "merge": false,
+   "subject": "Built: smooth junctions J3 with 4.8.8 Q6 (d) – side roads leave the main road's edge at their own grade with sloped corners, clusters, forks below 15 degrees, mini-roundabout discs; packages, lint tables, open question Q7 on kinks (spec 5.31)",
+   "added": 110,
+   "removed": 15
+  },
+  {
+   "sha": "1c7ac68",
+   "time": "14:44:20",
+   "merge": false,
+   "subject": "road_bumps: rustfmt",
+   "added": 5,
+   "removed": 2
+  },
+  {
+   "sha": "36c17cb",
+   "time": "15:21:33",
+   "merge": false,
+   "subject": "J3: wheel contact on the T junction as the world builder shapes it (the crease at the main road's edge: 12 mm beside the centre), scene names in the J3 render script",
+   "added": 36,
+   "removed": 6
+  },
+  {
+   "sha": "69556f2",
+   "time": "15:21:45",
+   "merge": true,
+   "subject": "Merge origin/main (wet leaves); road damage in the ride renumbered to spec 5.35, both on the shared rolling-resistance hook",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "555f03c",
+   "time": "15:23:20",
+   "merge": false,
+   "subject": "J3: formatting",
+   "added": 4,
+   "removed": 1
+  },
+  {
+   "sha": "3388780",
+   "time": "15:34:22",
+   "merge": true,
+   "subject": "Merge road damage in the ride (bumps, trainer kick, shake, sound, more rolling resistance) and untagged roads drawn cleaner (spec Phase 8 Q12, Q14; 5.35)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "c941bfe",
+   "time": "15:36:17",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-a326c373840a77e9b",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "fc97900",
+   "time": "15:36:40",
+   "merge": false,
+   "subject": "J3 packages: the road condition from OSM (world-builder condition, section RCND) before the junctions",
+   "added": 7,
+   "removed": 2
+  },
+  {
+   "sha": "3de92e0",
+   "time": "15:45:54",
+   "merge": false,
+   "subject": "J3 packages with the OSM road condition (RCND): sizes, times, hashes (spec 5.36)",
+   "added": 7,
+   "removed": 5
+  },
+  {
+   "sha": "7325f56",
+   "time": "15:51:28",
+   "merge": true,
+   "subject": "Merge junctions J3 and 4.8.8 Q6 (d): side roads from the main road's edge at their own grade, clusters, forks, mini-roundabout discs, section JMRB, JNCT layout 2 (spec 4.8.8, 5.36; new open question 4.8.8 Q7; rebuilt packages not installed)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "103ca25",
+   "time": "15:57:52",
+   "merge": false,
+   "subject": "Street lamps never stand in a road, only beside it (spec: Street lamps rule, 15H)",
+   "added": 4,
+   "removed": 2
+  },
+  {
+   "sha": "e88fbd9",
+   "time": "16:25:34",
+   "merge": false,
+   "subject": "Street lamps never stand in a road: feet beside every carriageway and junction surface, moved along the road or to the kerb, else left out; lint lamp.foot.* (spec 5.38, world look Street lamps rule, 15H)",
+   "added": 1363,
+   "removed": 70
+  },
+  {
+   "sha": "4684142",
+   "time": "16:57:10",
+   "merge": false,
+   "subject": "Browser app on iPhones: a lost WebGL context stops the app and loads the ride once, a killed ride rides on with less memory then stops with the reason, phones keep 3 x 3 tiles (spec 14 Phase 10 B7, B2, 5.37)",
+   "added": 920,
+   "removed": 10
+  },
+  {
+   "sha": "f24a862",
+   "time": "16:57:50",
+   "merge": false,
+   "subject": "lamp-rule-shots: drop the Tenerife junction scene (the free-ride start lands on a track away from the lamp)",
+   "added": 0,
+   "removed": 1
+  },
+  {
+   "sha": "dc549a0",
+   "time": "17:11:59",
+   "merge": true,
+   "subject": "Merge street lamps only beside the road: no pole foot in any carriageway or junction surface, moved to the kerb or along the road or left out, with a lint (spec 5.38)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ebb51df",
+   "time": "17:28:20",
+   "merge": false,
+   "subject": "iPhone restarts: the WebGPU fallback is loop-proof by its URL alone, so it keeps falling back once per ride and remembering the failure (test-web-gpu's same-tab cases; spec 5.37)",
+   "added": 7,
+   "removed": 8
+  },
+  {
+   "sha": "8ed1061",
+   "time": "17:53:50",
+   "merge": true,
+   "subject": "Merge the fix for the browser app restarting on an iPhone: a lost WebGL context stops the app, no fallback reload loop, a killed tab rides on with less memory once, phones keep fewer tiles (spec Phase 10 B7, 5.39)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a2fc2b0",
+   "time": "17:59:11",
+   "merge": false,
+   "subject": "Riders move smoothly at 25 fps: a snapshot read a frame late is extrapolated and timed by its server tick (spec 6.3 Fixed v5.38)",
+   "added": 353,
+   "removed": 4
+  },
+  {
+   "sha": "d02da08",
+   "time": "17:59:51",
+   "merge": true,
+   "subject": "Merge smooth rider motion when snapshots are read a tick late (low frame rates, 25 fps capture videos): snapshots timed by their server tick (spec 6.3, 5.40)",
+   "added": 0,
+   "removed": 0
+  }
+ ],
+ "merges": 12,
+ "lines_added": 10926,
+ "lines_removed": 1075,
+ "spec_versions": [
+  "7.1",
+  "7.1",
+  "7.1",
+  "7.1",
+  "7.1",
+  "3.2",
+  "4.6",
+  "4.8",
+  "7.1",
+  "7.1",
+  "7.1",
+  "7.1",
+  "4.6",
+  "5.34",
+  "4.6",
+  "5.31",
+  "5.35",
+  "5.36",
+  "4.8",
+  "5.38",
+  "5.38",
+  "5.37",
+  "6.3",
+  "6.3"
+ ],
+ "tests": null,
+ "media": [
+  {
+   "file": "094245-shot-wayland-menu-voice-rows.jpg",
+   "time": "09:42:45",
+   "kind": "image"
+  },
+  {
+   "file": "094252-shot-wayland-menu-voice-rows-on-selected-nobody.jpg",
+   "time": "09:42:52",
+   "kind": "image"
+  },
+  {
+   "file": "094258-shot-wayland-hud-voice-line.jpg",
+   "time": "09:42:58",
+   "kind": "image"
+  },
+  {
+   "file": "094356-shot-menu-voice-rows.jpg",
+   "time": "09:43:56",
+   "kind": "image"
+  },
+  {
+   "file": "094411-shot-menu-voice-rows-on-selected-nobody.jpg",
+   "time": "09:44:11",
+   "kind": "image"
+  },
+  {
+   "file": "094425-shot-hud-voice-line.jpg",
+   "time": "09:44:25",
+   "kind": "image"
+  },
+  {
+   "file": "094435-shot-wayland-menu-voice-rows.jpg",
+   "time": "09:44:35",
+   "kind": "image"
+  },
+  {
+   "file": "094442-shot-wayland-menu-voice-rows-on-selected-nobody.jpg",
+   "time": "09:44:42",
+   "kind": "image"
+  },
+  {
+   "file": "094448-shot-wayland-hud-voice-line.jpg",
+   "time": "09:44:48",
+   "kind": "image"
+  },
+  {
+   "file": "094722-shot-menu-voice-rows.jpg",
+   "time": "09:47:22",
+   "kind": "image"
+  },
+  {
+   "file": "094739-shot-menu-voice-rows-on-selected-nobody.jpg",
+   "time": "09:47:39",
+   "kind": "image"
+  },
+  {
+   "file": "094756-shot-hud-voice-line.jpg",
+   "time": "09:47:56",
+   "kind": "image"
+  },
+  {
+   "file": "095446-q16-voice-rows-browser-hud-voice-line.jpg",
+   "time": "09:54:46",
+   "kind": "image"
+  },
+  {
+   "file": "095446-q16-voice-rows-browser-voice-page-on-selected-nobody.jpg",
+   "time": "09:54:46",
+   "kind": "image"
+  },
+  {
+   "file": "095446-q16-voice-rows-browser-voice-page.jpg",
+   "time": "09:54:46",
+   "kind": "image"
+  },
+  {
+   "file": "104431-q24-lips-lips-muted.jpg",
+   "time": "10:44:31",
+   "kind": "image"
+  },
+  {
+   "file": "104431-q24-lips-lips-muted.mp4",
+   "time": "10:44:31",
+   "kind": "video"
+  },
+  {
+   "file": "104431-q24-lips-lips-speaking-mouth-frames.png",
+   "time": "10:44:31",
+   "kind": "image"
+  },
+  {
+   "file": "104431-q24-lips-lips-speaking.jpg",
+   "time": "10:44:31",
+   "kind": "image"
+  },
+  {
+   "file": "104431-q24-lips-lips-speaking.mp4",
+   "time": "10:44:31",
+   "kind": "video"
+  },
+  {
+   "file": "105052-shot-ocw.jpg",
+   "time": "10:50:52",
+   "kind": "image"
+  },
+  {
+   "file": "105101-shot-wayland-ocw-wayland.jpg",
+   "time": "10:51:01",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-calendar-select.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-calendar.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-console.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-damage-crash.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-damage-fresh.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-devices-collapsed.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-devices-expanded.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-downloads-OCW-2026-11-22-11-07-51.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-downloads-ocw-2026-11-22-11-08-18.webm",
+   "time": "11:06:23",
+   "kind": "video"
+  },
+  {
+   "file": "110623-web-web-gamepad.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-gps.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-history-delete.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-history-ride-file.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-history-ride-map.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-hud.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-input-mapping-capture.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-input-mapping-junctions.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-input-mapping-swapped.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-input-mapping.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-join.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-menu.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-photo-preview.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-ride.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-riders.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-settings.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-strava-recording-downloaded.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-strava-recording-saved-to-folder.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-strava-recording.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-strava-row.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-strava-steps.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-touch-hints.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-touch-hold.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-unicorn-flight.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-unicorn-inspect.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-unicorn-menu.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-weather.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web-workout-map.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "110623-web-web.jpg",
+   "time": "11:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "133824-shot-wayland-status-headphones-zero-volume.jpg",
+   "time": "13:38:24",
+   "kind": "image"
+  },
+  {
+   "file": "134636-shot-wayland-status-headphones-mute-and-zero-volume.jpg",
+   "time": "13:46:36",
+   "kind": "image"
+  },
+  {
+   "file": "135841-voice-notice-2026-11-22-nobody-hears-you.jpg",
+   "time": "13:58:41",
+   "kind": "image"
+  },
+  {
+   "file": "141043-wet-leaves-bf-wet-leaves-slide-wayland.jpg",
+   "time": "14:10:43",
+   "kind": "image"
+  },
+  {
+   "file": "141047-2026-11-22-road-feel-shot-wayland-feel-after-vaduz-residential.jpg",
+   "time": "14:10:47",
+   "kind": "image"
+  },
+  {
+   "file": "141048-wet-leaves-bf-wet-leaves-slide-wayland.mp4",
+   "time": "14:10:48",
+   "kind": "video"
+  },
+  {
+   "file": "141057-2026-11-22-road-feel-shot-wayland-feel-after-vaduz-secondary.jpg",
+   "time": "14:10:57",
+   "kind": "image"
+  },
+  {
+   "file": "141108-2026-11-22-road-feel-shot-wayland-feel-after-vaduz-primary.jpg",
+   "time": "14:11:08",
+   "kind": "image"
+  },
+  {
+   "file": "141122-2026-11-22-road-feel-shot-wayland-feel-after-blackforest-primary.jpg",
+   "time": "14:11:22",
+   "kind": "image"
+  },
+  {
+   "file": "141135-2026-11-22-road-feel-shot-wayland-feel-after-blackforest-residential.jpg",
+   "time": "14:11:35",
+   "kind": "image"
+  },
+  {
+   "file": "141135-wet-leaves-bf-wet-leaves-wobble-wayland.jpg",
+   "time": "14:11:35",
+   "kind": "image"
+  },
+  {
+   "file": "141140-wet-leaves-bf-wet-leaves-wobble-wayland.mp4",
+   "time": "14:11:40",
+   "kind": "video"
+  },
+  {
+   "file": "141147-2026-11-22-road-feel-shot-wayland-feel-after-tenerife-primary.jpg",
+   "time": "14:11:47",
+   "kind": "image"
+  },
+  {
+   "file": "141200-2026-11-22-road-feel-shot-wayland-feel-after-tenerife-residential.jpg",
+   "time": "14:12:00",
+   "kind": "image"
+  },
+  {
+   "file": "141210-2026-11-22-road-feel-shot-wayland-feel-after-vaduz-tagged-bad.jpg",
+   "time": "14:12:10",
+   "kind": "image"
+  },
+  {
+   "file": "141244-2026-11-22-road-feel-shot-wayland-feel-before-vaduz-residential.jpg",
+   "time": "14:12:44",
+   "kind": "image"
+  },
+  {
+   "file": "141254-2026-11-22-road-feel-shot-wayland-feel-before-vaduz-secondary.jpg",
+   "time": "14:12:54",
+   "kind": "image"
+  },
+  {
+   "file": "141304-2026-11-22-road-feel-shot-wayland-feel-before-vaduz-primary.jpg",
+   "time": "14:13:04",
+   "kind": "image"
+  },
+  {
+   "file": "141317-2026-11-22-road-feel-shot-wayland-feel-before-blackforest-primary.jpg",
+   "time": "14:13:17",
+   "kind": "image"
+  },
+  {
+   "file": "141329-2026-11-22-road-feel-shot-wayland-feel-before-blackforest-residential.jpg",
+   "time": "14:13:29",
+   "kind": "image"
+  },
+  {
+   "file": "141341-2026-11-22-road-feel-shot-wayland-feel-before-tenerife-primary.jpg",
+   "time": "14:13:41",
+   "kind": "image"
+  },
+  {
+   "file": "141353-2026-11-22-road-feel-shot-wayland-feel-before-tenerife-residential.jpg",
+   "time": "14:13:53",
+   "kind": "image"
+  },
+  {
+   "file": "141404-2026-11-22-road-feel-shot-wayland-feel-before-vaduz-tagged-bad.jpg",
+   "time": "14:14:04",
+   "kind": "image"
+  },
+  {
+   "file": "141416-2026-11-22-road-feel-shot-wayland-feel-before-blackforest-tagged-bad.jpg",
+   "time": "14:14:16",
+   "kind": "image"
+  },
+  {
+   "file": "141429-2026-11-22-road-feel-shot-wayland-feel-after-blackforest-tagged-bad.jpg",
+   "time": "14:14:29",
+   "kind": "image"
+  },
+  {
+   "file": "141537-2026-11-22-road-feel-video-wayland-feel-ride-blackforest-bad-1280.mp4",
+   "time": "14:15:37",
+   "kind": "video"
+  },
+  {
+   "file": "141537-2026-11-22-road-feel-video-wayland-feel-ride-blackforest-bad.jpg",
+   "time": "14:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "141537-2026-11-22-road-feel-video-wayland-feel-ride-blackforest-bad.mp4",
+   "time": "14:15:37",
+   "kind": "video"
+  },
+  {
+   "file": "145532-junctions-j3-before-wayland-junction-bergstrasse-rider.jpg",
+   "time": "14:55:32",
+   "kind": "image"
+  },
+  {
+   "file": "145542-junctions-j3-before-wayland-junction-bergstrasse-drone.jpg",
+   "time": "14:55:42",
+   "kind": "image"
+  },
+  {
+   "file": "145553-junctions-j3-before-wayland-junction-adlerkreisel-rider.jpg",
+   "time": "14:55:53",
+   "kind": "image"
+  },
+  {
+   "file": "145603-junctions-j3-before-wayland-junction-adlerkreisel-drone.jpg",
+   "time": "14:56:03",
+   "kind": "image"
+  },
+  {
+   "file": "145617-junctions-j3-before-wayland-junction-kaltenbronner-rider.jpg",
+   "time": "14:56:17",
+   "kind": "image"
+  },
+  {
+   "file": "145630-junctions-j3-before-wayland-junction-kaltenbronner-drone.jpg",
+   "time": "14:56:30",
+   "kind": "image"
+  },
+  {
+   "file": "145643-junctions-j3-before-wayland-junction-medianias-rider.jpg",
+   "time": "14:56:43",
+   "kind": "image"
+  },
+  {
+   "file": "145657-junctions-j3-before-wayland-junction-medianias-drone.jpg",
+   "time": "14:56:57",
+   "kind": "image"
+  },
+  {
+   "file": "145710-junctions-j3-before-wayland-junction-bf-narrow-rider.jpg",
+   "time": "14:57:10",
+   "kind": "image"
+  },
+  {
+   "file": "145723-junctions-j3-before-wayland-junction-bf-narrow-drone.jpg",
+   "time": "14:57:23",
+   "kind": "image"
+  },
+  {
+   "file": "145735-junctions-j3-before-wayland-junction-fork-rider.jpg",
+   "time": "14:57:35",
+   "kind": "image"
+  },
+  {
+   "file": "145746-junctions-j3-before-wayland-junction-fork-drone.jpg",
+   "time": "14:57:46",
+   "kind": "image"
+  },
+  {
+   "file": "145756-junctions-j3-before-wayland-junction-dual-rider.jpg",
+   "time": "14:57:56",
+   "kind": "image"
+  },
+  {
+   "file": "145807-junctions-j3-before-wayland-junction-dual-drone.jpg",
+   "time": "14:58:07",
+   "kind": "image"
+  },
+  {
+   "file": "145818-junctions-j3-before-wayland-junction-mini-rider.jpg",
+   "time": "14:58:18",
+   "kind": "image"
+  },
+  {
+   "file": "145829-junctions-j3-before-wayland-junction-mini-drone.jpg",
+   "time": "14:58:29",
+   "kind": "image"
+  },
+  {
+   "file": "145841-junctions-j3-after-wayland-junction-bergstrasse-rider.jpg",
+   "time": "14:58:41",
+   "kind": "image"
+  },
+  {
+   "file": "145853-junctions-j3-after-wayland-junction-bergstrasse-drone.jpg",
+   "time": "14:58:53",
+   "kind": "image"
+  },
+  {
+   "file": "145904-junctions-j3-after-wayland-junction-adlerkreisel-rider.jpg",
+   "time": "14:59:04",
+   "kind": "image"
+  },
+  {
+   "file": "145916-junctions-j3-after-wayland-junction-adlerkreisel-drone.jpg",
+   "time": "14:59:16",
+   "kind": "image"
+  },
+  {
+   "file": "145930-junctions-j3-after-wayland-junction-kaltenbronner-rider.jpg",
+   "time": "14:59:30",
+   "kind": "image"
+  },
+  {
+   "file": "145944-junctions-j3-after-wayland-junction-kaltenbronner-drone.jpg",
+   "time": "14:59:44",
+   "kind": "image"
+  },
+  {
+   "file": "145958-junctions-j3-after-wayland-junction-medianias-rider.jpg",
+   "time": "14:59:58",
+   "kind": "image"
+  },
+  {
+   "file": "150012-junctions-j3-after-wayland-junction-medianias-drone.jpg",
+   "time": "15:00:12",
+   "kind": "image"
+  },
+  {
+   "file": "150026-junctions-j3-after-wayland-junction-bf-narrow-rider.jpg",
+   "time": "15:00:26",
+   "kind": "image"
+  },
+  {
+   "file": "150040-junctions-j3-after-wayland-junction-bf-narrow-drone.jpg",
+   "time": "15:00:40",
+   "kind": "image"
+  },
+  {
+   "file": "150051-junctions-j3-after-wayland-junction-fork-rider.jpg",
+   "time": "15:00:51",
+   "kind": "image"
+  },
+  {
+   "file": "150103-junctions-j3-after-wayland-junction-fork-drone.jpg",
+   "time": "15:01:03",
+   "kind": "image"
+  },
+  {
+   "file": "150114-junctions-j3-after-wayland-junction-dual-rider.jpg",
+   "time": "15:01:14",
+   "kind": "image"
+  },
+  {
+   "file": "150126-junctions-j3-after-wayland-junction-dual-drone.jpg",
+   "time": "15:01:26",
+   "kind": "image"
+  },
+  {
+   "file": "150137-junctions-j3-after-wayland-junction-mini-rider.jpg",
+   "time": "15:01:37",
+   "kind": "image"
+  },
+  {
+   "file": "150149-junctions-j3-after-wayland-junction-mini-drone.jpg",
+   "time": "15:01:49",
+   "kind": "image"
+  },
+  {
+   "file": "150211-junctions-j3-before-x11-junction-bergstrasse-rider.jpg",
+   "time": "15:02:11",
+   "kind": "image"
+  },
+  {
+   "file": "150253-junctions-j3-before-x11-junction-bergstrasse-drone.jpg",
+   "time": "15:02:53",
+   "kind": "image"
+  },
+  {
+   "file": "150327-junctions-j3-before-x11-junction-adlerkreisel-rider.jpg",
+   "time": "15:03:27",
+   "kind": "image"
+  },
+  {
+   "file": "150355-junctions-j3-before-x11-junction-adlerkreisel-drone.jpg",
+   "time": "15:03:55",
+   "kind": "image"
+  },
+  {
+   "file": "150432-junctions-j3-before-x11-junction-kaltenbronner-rider.jpg",
+   "time": "15:04:32",
+   "kind": "image"
+  },
+  {
+   "file": "150519-junctions-j3-before-x11-junction-kaltenbronner-drone.jpg",
+   "time": "15:05:19",
+   "kind": "image"
+  },
+  {
+   "file": "150548-junctions-j3-before-x11-junction-medianias-rider.jpg",
+   "time": "15:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "150614-junctions-j3-before-x11-junction-medianias-drone.jpg",
+   "time": "15:06:14",
+   "kind": "image"
+  },
+  {
+   "file": "150649-junctions-j3-before-x11-junction-bf-narrow-rider.jpg",
+   "time": "15:06:49",
+   "kind": "image"
+  },
+  {
+   "file": "150718-junctions-j3-before-x11-junction-bf-narrow-drone.jpg",
+   "time": "15:07:18",
+   "kind": "image"
+  },
+  {
+   "file": "150736-junctions-j3-before-x11-junction-fork-rider.jpg",
+   "time": "15:07:36",
+   "kind": "image"
+  },
+  {
+   "file": "150758-junctions-j3-before-x11-junction-fork-drone.jpg",
+   "time": "15:07:58",
+   "kind": "image"
+  },
+  {
+   "file": "150816-junctions-j3-before-x11-junction-dual-rider.jpg",
+   "time": "15:08:16",
+   "kind": "image"
+  },
+  {
+   "file": "150840-junctions-j3-before-x11-junction-dual-drone.jpg",
+   "time": "15:08:40",
+   "kind": "image"
+  },
+  {
+   "file": "150905-junctions-j3-before-x11-junction-mini-rider.jpg",
+   "time": "15:09:05",
+   "kind": "image"
+  },
+  {
+   "file": "150932-junctions-j3-before-x11-junction-mini-drone.jpg",
+   "time": "15:09:32",
+   "kind": "image"
+  },
+  {
+   "file": "150955-junctions-j3-after-x11-junction-bergstrasse-rider.jpg",
+   "time": "15:09:55",
+   "kind": "image"
+  },
+  {
+   "file": "151032-junctions-j3-after-x11-junction-bergstrasse-drone.jpg",
+   "time": "15:10:32",
+   "kind": "image"
+  },
+  {
+   "file": "151102-junctions-j3-after-x11-junction-adlerkreisel-rider.jpg",
+   "time": "15:11:02",
+   "kind": "image"
+  },
+  {
+   "file": "151120-junctions-j3-after-x11-junction-adlerkreisel-drone.jpg",
+   "time": "15:11:20",
+   "kind": "image"
+  },
+  {
+   "file": "151146-junctions-j3-after-x11-junction-kaltenbronner-rider.jpg",
+   "time": "15:11:46",
+   "kind": "image"
+  },
+  {
+   "file": "151214-junctions-j3-after-x11-junction-kaltenbronner-drone.jpg",
+   "time": "15:12:14",
+   "kind": "image"
+  },
+  {
+   "file": "151238-junctions-j3-after-x11-junction-medianias-rider.jpg",
+   "time": "15:12:38",
+   "kind": "image"
+  },
+  {
+   "file": "151300-junctions-j3-after-x11-junction-medianias-drone.jpg",
+   "time": "15:13:00",
+   "kind": "image"
+  },
+  {
+   "file": "151557-junctions-j3-after-x11-junction-bf-narrow-rider.jpg",
+   "time": "15:15:57",
+   "kind": "image"
+  },
+  {
+   "file": "151634-junctions-j3-after-x11-junction-bf-narrow-drone.jpg",
+   "time": "15:16:34",
+   "kind": "image"
+  },
+  {
+   "file": "151907-junctions-j3-after-x11-junction-fork-rider.jpg",
+   "time": "15:19:07",
+   "kind": "image"
+  },
+  {
+   "file": "152106-junctions-j3-after-x11-junction-fork-drone.jpg",
+   "time": "15:21:06",
+   "kind": "image"
+  },
+  {
+   "file": "152122-junctions-j3-after-x11-junction-dual-rider.jpg",
+   "time": "15:21:22",
+   "kind": "image"
+  },
+  {
+   "file": "152138-junctions-j3-after-x11-junction-dual-drone.jpg",
+   "time": "15:21:38",
+   "kind": "image"
+  },
+  {
+   "file": "152155-junctions-j3-after-x11-junction-mini-rider.jpg",
+   "time": "15:21:55",
+   "kind": "image"
+  },
+  {
+   "file": "152214-junctions-j3-after-x11-junction-mini-drone.jpg",
+   "time": "15:22:14",
+   "kind": "image"
+  },
+  {
+   "file": "155001-shot-ocw.jpg",
+   "time": "15:50:01",
+   "kind": "image"
+  },
+  {
+   "file": "155010-shot-wayland-ocw-wayland.jpg",
+   "time": "15:50:10",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-hills-1min.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-hills-2min.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-hills-start.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-liechtenstein-1min.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-liechtenstein-2min.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-liechtenstein-3min.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-liechtenstein-4min.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-liechtenstein-end.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "160921-web-ios-baseline-liechtenstein-start.png",
+   "time": "16:09:21",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-black-forest-north-landscape-1min.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-black-forest-north-landscape-2min.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-black-forest-north-landscape-3min.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-black-forest-north-landscape-4min.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-black-forest-north-landscape-end.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-black-forest-north-landscape-start.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-tenerife-1min.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-tenerife-2min.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-tenerife-3min.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-tenerife-4min.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-tenerife-end.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "161333-web-ios-baseline-tenerife-start.png",
+   "time": "16:13:33",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-hills-1min.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-hills-2min.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-hills-end.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-hills-start.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-liechtenstein-1min.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-liechtenstein-2min.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-liechtenstein-3min.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-liechtenstein-end.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162420-web-ios-live-live-liechtenstein-start.png",
+   "time": "16:24:20",
+   "kind": "image"
+  },
+  {
+   "file": "162745-web-ios-live-live-tenerife-1min.png",
+   "time": "16:27:45",
+   "kind": "image"
+  },
+  {
+   "file": "162745-web-ios-live-live-tenerife-2min.png",
+   "time": "16:27:45",
+   "kind": "image"
+  },
+  {
+   "file": "162745-web-ios-live-live-tenerife-3min.png",
+   "time": "16:27:45",
+   "kind": "image"
+  },
+  {
+   "file": "162745-web-ios-live-live-tenerife-end.png",
+   "time": "16:27:45",
+   "kind": "image"
+  },
+  {
+   "file": "162745-web-ios-live-live-tenerife-start.png",
+   "time": "16:27:45",
+   "kind": "image"
+  },
+  {
+   "file": "164045-lamp-rule-vaduz-street-day-before-wayland.jpg",
+   "time": "16:40:45",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-1min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-2min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-3min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-4min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-5min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-context-lost-again.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-context-reloaded.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-end.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-hills-start.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-liechtenstein-landscape-1min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-liechtenstein-landscape-2min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-liechtenstein-landscape-3min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-liechtenstein-landscape-4min.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-liechtenstein-landscape-died-once.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-liechtenstein-landscape-died-twice.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-liechtenstein-landscape-end.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164430-web-ios-after-liechtenstein-landscape-start.png",
+   "time": "16:44:30",
+   "kind": "image"
+  },
+  {
+   "file": "164817-motion-after-loop-bunch.jpg",
+   "time": "16:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "164818-motion-before-loop-bunch.jpg",
+   "time": "16:48:18",
+   "kind": "image"
+  },
+  {
+   "file": "164818-motion-before-loop-bunch.mp4",
+   "time": "16:48:18",
+   "kind": "video"
+  },
+  {
+   "file": "164819-motion-after-loop-bunch.mp4",
+   "time": "16:48:19",
+   "kind": "video"
+  },
+  {
+   "file": "164928-motion-before-after-frames-100-109.jpg",
+   "time": "16:49:28",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-1min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-2min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-3min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-4min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-5min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-context-lost-again.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-context-reloaded.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-end.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-black-forest-north-landscape-start.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-tenerife-1min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-tenerife-2min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-tenerife-3min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-tenerife-4min.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-tenerife-end.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165034-web-ios-after-tenerife-start.png",
+   "time": "16:50:34",
+   "kind": "image"
+  },
+  {
+   "file": "165059-lamp-rule-vaduz-street-day-after-wayland.jpg",
+   "time": "16:50:59",
+   "kind": "image"
+  },
+  {
+   "file": "165113-lamp-rule-vaduz-street-night-before-wayland.jpg",
+   "time": "16:51:13",
+   "kind": "image"
+  },
+  {
+   "file": "165128-lamp-rule-vaduz-street-night-after-wayland.jpg",
+   "time": "16:51:28",
+   "kind": "image"
+  },
+  {
+   "file": "165142-lamp-rule-liechtenstein-junction-day-before-wayland.jpg",
+   "time": "16:51:42",
+   "kind": "image"
+  },
+  {
+   "file": "165157-lamp-rule-liechtenstein-junction-day-after-wayland.jpg",
+   "time": "16:51:57",
+   "kind": "image"
+  },
+  {
+   "file": "165211-lamp-rule-liechtenstein-junction-night-before-wayland.jpg",
+   "time": "16:52:11",
+   "kind": "image"
+  },
+  {
+   "file": "165226-lamp-rule-liechtenstein-junction-night-after-wayland.jpg",
+   "time": "16:52:26",
+   "kind": "image"
+  },
+  {
+   "file": "165250-lamp-rule-blackforest-village-day-before-wayland.jpg",
+   "time": "16:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "165314-lamp-rule-blackforest-village-day-after-wayland.jpg",
+   "time": "16:53:14",
+   "kind": "image"
+  },
+  {
+   "file": "165338-lamp-rule-blackforest-village-night-before-wayland.jpg",
+   "time": "16:53:38",
+   "kind": "image"
+  },
+  {
+   "file": "165402-lamp-rule-blackforest-village-night-after-wayland.jpg",
+   "time": "16:54:02",
+   "kind": "image"
+  },
+  {
+   "file": "165426-lamp-rule-tenerife-town-day-before-wayland.jpg",
+   "time": "16:54:26",
+   "kind": "image"
+  },
+  {
+   "file": "165450-lamp-rule-tenerife-town-day-after-wayland.jpg",
+   "time": "16:54:50",
+   "kind": "image"
+  },
+  {
+   "file": "165513-lamp-rule-tenerife-town-night-before-wayland.jpg",
+   "time": "16:55:13",
+   "kind": "image"
+  },
+  {
+   "file": "165538-lamp-rule-tenerife-town-night-after-wayland.jpg",
+   "time": "16:55:38",
+   "kind": "image"
+  },
+  {
+   "file": "165601-lamp-rule-tenerife-junction-day-before-wayland.jpg",
+   "time": "16:56:01",
+   "kind": "image"
+  },
+  {
+   "file": "165623-lamp-rule-tenerife-junction-day-after-wayland.jpg",
+   "time": "16:56:23",
+   "kind": "image"
+  },
+  {
+   "file": "165644-lamp-rule-tenerife-junction-night-before-wayland.jpg",
+   "time": "16:56:44",
+   "kind": "image"
+  },
+  {
+   "file": "165707-lamp-rule-tenerife-junction-night-after-wayland.jpg",
+   "time": "16:57:07",
+   "kind": "image"
+  },
+  {
+   "file": "171042-shot-ocw.jpg",
+   "time": "17:10:42",
+   "kind": "image"
+  },
+  {
+   "file": "171052-shot-wayland-ocw-wayland.jpg",
+   "time": "17:10:52",
+   "kind": "image"
+  },
+  {
+   "file": "171857-web-web-gpu-forced-webgpu.jpg",
+   "time": "17:18:57",
+   "kind": "image"
+  },
+  {
+   "file": "171857-web-web-gpu-iphone-safari.jpg",
+   "time": "17:18:57",
+   "kind": "image"
+  },
+  {
+   "file": "171857-web-web-gpu-uncaptured-webgl2.jpg",
+   "time": "17:18:57",
+   "kind": "image"
+  },
+  {
+   "file": "171857-web-web-gpu-webgpu.jpg",
+   "time": "17:18:57",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-calendar-select.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-calendar.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-console.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-damage-crash.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-damage-fresh.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-devices-collapsed.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-devices-expanded.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-gamepad.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-gps.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-history-delete.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-history-ride-file.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-history-ride-map.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-hud.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-input-mapping-capture.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-input-mapping-junctions.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-input-mapping-swapped.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-input-mapping.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-join.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-menu.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-photo-preview.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-ride.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-riders.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-settings.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-strava-recording-downloaded.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-strava-recording-saved-to-folder.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-strava-recording.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-strava-row.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-strava-steps.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-touch-hints.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-touch-hold.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-unicorn-flight.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-unicorn-inspect.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-unicorn-menu.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-weather.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web-workout-map.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "172814-web-web.jpg",
+   "time": "17:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-hints.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-hold.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-landscape-hints.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-landscape-hold.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-landscape-riding.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-landscape-stopped.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-landscape.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-riding.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-start.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone-stopped.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-iphone.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "173639-web-web-webkit-mac.png",
+   "time": "17:36:39",
+   "kind": "image"
+  },
+  {
+   "file": "174238-shot-ocw.jpg",
+   "time": "17:42:38",
+   "kind": "image"
+  },
+  {
+   "file": "174248-shot-wayland-ocw-wayland.jpg",
+   "time": "17:42:48",
+   "kind": "image"
+  },
+  {
+   "file": "174452-web-web-gpu-device-webgl2.jpg",
+   "time": "17:44:52",
+   "kind": "image"
+  },
+  {
+   "file": "174452-web-web-gpu-forced-webgpu.jpg",
+   "time": "17:44:52",
+   "kind": "image"
+  },
+  {
+   "file": "174452-web-web-gpu-iphone-safari.jpg",
+   "time": "17:44:52",
+   "kind": "image"
+  },
+  {
+   "file": "174452-web-web-gpu-noframe-webgl2.jpg",
+   "time": "17:44:52",
+   "kind": "image"
+  },
+  {
+   "file": "174452-web-web-gpu-uncaptured-webgl2.jpg",
+   "time": "17:44:52",
+   "kind": "image"
+  },
+  {
+   "file": "174452-web-web-gpu-webgpu.jpg",
+   "time": "17:44:52",
+   "kind": "image"
+  },
+  {
+   "file": "174624-web-ios-final-hills-1min.png",
+   "time": "17:46:24",
+   "kind": "image"
+  },
+  {
+   "file": "174624-web-ios-final-hills-2min.png",
+   "time": "17:46:24",
+   "kind": "image"
+  },
+  {
+   "file": "174624-web-ios-final-hills-3min.png",
+   "time": "17:46:24",
+   "kind": "image"
+  },
+  {
+   "file": "174624-web-ios-final-hills-context-lost-again.png",
+   "time": "17:46:24",
+   "kind": "image"
+  },
+  {
+   "file": "174624-web-ios-final-hills-context-reloaded.png",
+   "time": "17:46:24",
+   "kind": "image"
+  },
+  {
+   "file": "174624-web-ios-final-hills-end.png",
+   "time": "17:46:24",
+   "kind": "image"
+  },
+  {
+   "file": "174624-web-ios-final-hills-start.png",
+   "time": "17:46:24",
+   "kind": "image"
+  },
+  {
+   "file": "175018-web-ios-final-liechtenstein-1min.png",
+   "time": "17:50:18",
+   "kind": "image"
+  },
+  {
+   "file": "175018-web-ios-final-liechtenstein-2min.png",
+   "time": "17:50:18",
+   "kind": "image"
+  },
+  {
+   "file": "175018-web-ios-final-liechtenstein-died-once.png",
+   "time": "17:50:18",
+   "kind": "image"
+  },
+  {
+   "file": "175018-web-ios-final-liechtenstein-died-twice.png",
+   "time": "17:50:18",
+   "kind": "image"
+  },
+  {
+   "file": "175018-web-ios-final-liechtenstein-end.png",
+   "time": "17:50:18",
+   "kind": "image"
+  },
+  {
+   "file": "175018-web-ios-final-liechtenstein-start.png",
+   "time": "17:50:18",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-calendar-select.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-calendar.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-console.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-damage-crash.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-damage-fresh.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-devices-collapsed.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-devices-expanded.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-downloads-OCW-2026-11-22-17-57-32.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-downloads-ocw-2026-11-22-17-58-02.webm",
+   "time": "17:55:58",
+   "kind": "video"
+  },
+  {
+   "file": "175558-web-web-gamepad.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-gps.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-history-delete.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-history-ride-file.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-history-ride-map.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-hud.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-input-mapping-capture.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-input-mapping-junctions.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-input-mapping-swapped.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-input-mapping.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-join.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-menu.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-photo-preview.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-ride.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-riders.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-settings.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-strava-recording-downloaded.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-strava-recording-saved-to-folder.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-strava-recording.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-strava-row.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-strava-steps.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-touch-hints.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-touch-hold.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-unicorn-flight.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-unicorn-inspect.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-unicorn-menu.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-weather.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web-workout-map.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "175558-web-web.jpg",
+   "time": "17:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "201501-windows-icon-0.2.5-ocw-desktop-128.png",
+   "time": "20:15:01",
+   "kind": "image"
+  },
+  {
+   "file": "201501-windows-icon-0.2.5-ocw-desktop-16.png",
+   "time": "20:15:01",
+   "kind": "image"
+  },
+  {
+   "file": "201501-windows-icon-0.2.5-ocw-desktop-24.png",
+   "time": "20:15:01",
+   "kind": "image"
+  },
+  {
+   "file": "201501-windows-icon-0.2.5-ocw-desktop-32.png",
+   "time": "20:15:01",
+   "kind": "image"
+  },
+  {
+   "file": "201501-windows-icon-0.2.5-ocw-desktop-48.png",
+   "time": "20:15:01",
+   "kind": "image"
+  },
+  {
+   "file": "201501-windows-icon-0.2.5-ocw-desktop-64.png",
+   "time": "20:15:01",
+   "kind": "image"
+  },
+  {
+   "file": "201502-windows-icon-0.2.5-ocw-desktop-256.png",
+   "time": "20:15:02",
+   "kind": "image"
+  },
+  {
+   "file": "201503-windows-icon-0.2.5-ocw-studio-128.png",
+   "time": "20:15:03",
+   "kind": "image"
+  },
+  {
+   "file": "201503-windows-icon-0.2.5-ocw-studio-16.png",
+   "time": "20:15:03",
+   "kind": "image"
+  },
+  {
+   "file": "201503-windows-icon-0.2.5-ocw-studio-24.png",
+   "time": "20:15:03",
+   "kind": "image"
+  },
+  {
+   "file": "201503-windows-icon-0.2.5-ocw-studio-256.png",
+   "time": "20:15:03",
+   "kind": "image"
+  },
+  {
+   "file": "201503-windows-icon-0.2.5-ocw-studio-32.png",
+   "time": "20:15:03",
+   "kind": "image"
+  },
+  {
+   "file": "201503-windows-icon-0.2.5-ocw-studio-48.png",
+   "time": "20:15:03",
+   "kind": "image"
+  },
+  {
+   "file": "201503-windows-icon-0.2.5-ocw-studio-64.png",
+   "time": "20:15:03",
+   "kind": "image"
+  },
+  {
+   "file": "201520-release-0.2.5-appimage-x11.jpg",
+   "time": "20:15:20",
+   "kind": "image"
+  },
+  {
+   "file": "201547-release-0.2.5-appimage-wayland.jpg",
+   "time": "20:15:47",
+   "kind": "image"
+  },
+  {
+   "file": "201610-release-0.2.5-tarball-x11.jpg",
+   "time": "20:16:10",
+   "kind": "image"
+  },
+  {
+   "file": "201636-release-0.2.5-tarball-wayland.jpg",
+   "time": "20:16:36",
+   "kind": "image"
+  },
+  {
+   "file": "201652-release-0.2.5-studio-wayland.jpg",
+   "time": "20:16:52",
+   "kind": "image"
+  },
+  {
+   "file": "201709-release-0.2.5-studio-x11.jpg",
+   "time": "20:17:09",
+   "kind": "image"
+  },
+  {
+   "file": "201722-release-0.2.5-web-webgpu-web-world-cached-loading.jpg",
+   "time": "20:17:22",
+   "kind": "image"
+  },
+  {
+   "file": "201722-release-0.2.5-web-webgpu-web-world-cached.jpg",
+   "time": "20:17:22",
+   "kind": "image"
+  },
+  {
+   "file": "201722-release-0.2.5-web-webgpu-web-world-first-loading.jpg",
+   "time": "20:17:22",
+   "kind": "image"
+  },
+  {
+   "file": "201722-release-0.2.5-web-webgpu-web-world.jpg",
+   "time": "20:17:22",
+   "kind": "image"
+  },
+  {
+   "file": "201750-release-0.2.5-web-webgl2-web-world-webgl2-cached-loading.jpg",
+   "time": "20:17:50",
+   "kind": "image"
+  },
+  {
+   "file": "201750-release-0.2.5-web-webgl2-web-world-webgl2-cached.jpg",
+   "time": "20:17:50",
+   "kind": "image"
+  },
+  {
+   "file": "201750-release-0.2.5-web-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "20:17:50",
+   "kind": "image"
+  },
+  {
+   "file": "201750-release-0.2.5-web-webgl2-web-world-webgl2.jpg",
+   "time": "20:17:50",
+   "kind": "image"
+  }
+ ],
+ "images": 377,
+ "videos": 10,
+ "sounds": 0,
+ "builds": {
+  "runs": 137,
+  "seconds": 75435.9,
+  "cargo_s": 11687.0,
+  "compiled": 7618,
+  "wait_s": 10564.0,
+  "failed": [
+   {
+    "start": "2026-11-22T09:46:25+01:00",
+    "seconds": 359.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a3bc704eeaa8ea44c",
+    "branch": "worktree-agent-a3bc704eeaa8ea44c",
+    "commit": "2688a68-dirty",
+    "command": "cargo fmt --all && cargo run -q -p ocw-assets --release -- model export-all 2>&1 | tail -5 && cargo test -q -p ocw-assets 2>&1 | tail -30 && git status --short",
+    "exit": 128,
+    "log": "094625-marge-2412709.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 256
+   },
+   {
+    "start": "2026-11-22T13:17:08+01:00",
+    "seconds": 64.8,
+    "machine": "macos",
+    "os": "macos",
+    "checkout": "agent-a3aeb030bfa96a3ea",
+    "branch": "worktree-agent-a3aeb030bfa96a3ea",
+    "commit": "cdd8818-dirty",
+    "command": "cargo test -p ocw-world leaves && cargo test -p ocw-sim leaves && cargo test -p ocw-sky season 2>&1 | tail -3",
+    "exit": 101,
+    "log": "131708-macos-2804545.log",
+    "sync_s": 4.3,
+    "cargo_s": 58.5,
+    "cargo_builds": 2,
+    "compiled": 78,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-22T13:22:49+01:00",
+    "seconds": 1.5,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a326c373840a77e9b",
+    "branch": "worktree-agent-a326c373840a77e9b",
+    "commit": "0619b50-dirty",
+    "command": "OCW_J3_OUT=$HOME/src/OCW/data/j3-build/iter scripts/j3-build.sh pilot/liechtenstein 2>&1",
+    "exit": 127,
+    "log": "132249-marge-2815068.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-22T13:59:43+01:00",
+    "seconds": 3.8,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-addcd5dd97528cec7",
+    "branch": "worktree-agent-addcd5dd97528cec7",
+    "commit": "f8f2c50-dirty",
+    "command": "cargo run -q --release -p ocw-world --example feel_spots -- ~/ocw-feel-data/liechtenstein.ocwpkg -2430,2220 | grep tagged; cargo run -q --release -p world-builder -- condition --world ~/src/OCW/dat...",
+    "exit": 1,
+    "log": "135943-leela-2875036.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-22T14:16:53+01:00",
+    "seconds": 373.2,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-addcd5dd97528cec7",
+    "branch": "worktree-agent-addcd5dd97528cec7",
+    "commit": "251a1c5",
+    "command": "cargo clippy -p ocw-desktop --all-targets -- -D warnings 2>&1 | Select-Object -Last 25",
+    "exit": 101,
+    "log": "141653-Win11Builder-2937292.log",
+    "sync_s": 22.1,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 12,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-22T14:37:41+01:00",
+    "seconds": 901.7,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a326c373840a77e9b",
+    "branch": "worktree-agent-a326c373840a77e9b",
+    "commit": "b1ba946-dirty",
+    "command": "scripts/j3-scenes.sh adlerkreisel,bergstrasse,kaltenbronner,medianias,bf-narrow,fork,dual,mini",
+    "exit": 2,
+    "log": "143741-marge-2971119.log",
+    "sync_s": 0.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 60
+   },
+   {
+    "start": "2026-11-22T16:08:59+01:00",
+    "seconds": 0.9,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a35a158ad167e5cc0",
+    "branch": "worktree-agent-a35a158ad167e5cc0",
+    "commit": "7325f56-dirty",
+    "command": "bash ~/tmp/ocw-ios-a35a/base.sh",
+    "exit": 127,
+    "log": "160859-marge-3190933.log",
+    "sync_s": 0.5,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   }
+  ],
+  "machines": {
+   "marge": {
+    "runs": 88,
+    "seconds": 60978.09999999999,
+    "failed": 4,
+    "cargo_s": 8389.2,
+    "compiled": 6672,
+    "wait_s": 9028.0
+   },
+   "leela": {
+    "runs": 26,
+    "seconds": 6586.7,
+    "failed": 1,
+    "cargo_s": 0.0,
+    "compiled": 0,
+    "wait_s": 853.0
+   },
+   "Win11Builder": {
+    "runs": 9,
+    "seconds": 7030.900000000001,
+    "failed": 1,
+    "cargo_s": 2856.2999999999997,
+    "compiled": 808,
+    "wait_s": 683.0
+   },
+   "macos": {
+    "runs": 14,
+    "seconds": 840.1999999999999,
+    "failed": 1,
+    "cargo_s": 441.5,
+    "compiled": 138,
+    "wait_s": 0.0
+   }
+  },
+  "online": {
+   "leela": 1.0,
+   "marge": 1.0,
+   "Weela": 0.0,
+   "Win11Builder": 0.9979166666666667,
+   "macos": 1.0
+  },
+  "samples": 1440
+ },
+ "prompts": [
+  {
+   "time": "09:08:23",
+   "iso": "2026-11-22T09:08:23+01:00",
+   "text": "give me a summary of the7.1.16 layout and q16"
+  },
+  {
+   "time": "09:08:48",
+   "iso": "2026-11-22T09:08:48+01:00",
+   "text": "Is the day 11 video already created?"
+  },
+  {
+   "time": "09:13:02",
+   "iso": "2026-11-22T09:13:02+01:00",
+   "text": "q16 build proposal"
+  },
+  {
+   "time": "09:39:29",
+   "iso": "2026-11-22T09:39:29+01:00",
+   "text": "answer:  **Phase 4 Q24 â€“ The mouth while speaking (follow-up of the face):** since v4.47 riders have faces with lips. The voice chat already knows when a rider is speaking (a speaking cue is shown), but nothing moves the mouth. Options: (a) the lips open a little in a short pulse while a rider is heard speaking â€“ only on the near model, never while muted (the X over the mouth); (b) leave the mouth still. Not built without an answer. Answer: a."
+  },
+  {
+   "time": "09:40:04",
+   "iso": "2026-11-22T09:40:04+01:00",
+   "text": "update open question section"
+  },
+  {
+   "time": "12:41:34",
+   "iso": "2026-11-22T12:41:34+01:00",
+   "text": "bump version and build a new release, upload to GH"
+  },
+  {
+   "time": "12:55:38",
+   "iso": "2026-11-22T12:55:38+01:00",
+   "text": "is the git history of OCW clean from all (unneeded) images/binaries now?"
+  },
+  {
+   "time": "12:57:49",
+   "iso": "2026-11-22T12:57:49+01:00",
+   "text": "Answer open question:\n**3.2.5 Input mapping, and the junction's exits on Delete / Page Down (2026-11-21; built v5.21)**\n\n- **3.2.5 Q1 – Where the Input mapping entry sits:** the user asked for \"an Input mapping entry in the settings menu\". The Settings page already has seven items (Account, Controls, Trainer, Audio, Display, Voice, Back) – the ten-foot maximum of 3.2.1 – so an eighth item cannot be added without moving another. Built: the page is the second row of Settings → Controls and the Settings item reads Controls, input mapping, so it is found from the Settings page in two steps. Options: (a) keep it so; (b) give Input mapping its own Settings item and move Voice into Audio (as an Audio → Voice chat sub page); (c) give it its own item and move Account to the Ride or Navi page. Answer: a."
+  },
+  {
+   "time": "12:58:36",
+   "iso": "2026-11-22T12:58:36+01:00",
+   "text": "Answer:\n\n\n**4.6.2 Near-field ground detail (planned and built 2026-11-17, v4.72)**\n\n- **4.6.2 Q6 – Wet leaves on the road and the ride:** the user said wet leaves are slippery. Today nothing on the road changes the ride – the road damage and the ground detail are only drawn (the physics are unchanged; the same question is open for potholes, Phase 8 Q12). Since v5.08 leaves lie on the road from the leaf fall through the winter (in a pure broadleaf wood one or two per metre of road, in the Black Forest's mixed woods one every 2 – 4 m, few in open land) and shine when the road is wet. Leaves on a wet road could (a) only look slippery (shine, no effect); (b) cost a little speed and add a small wobble of the bike when ridden over at speed; (c) in a corner at speed with collisions and damage on, risk a slide (a crash like the others of Phase 12) – off in group rides by default; (d) only be a warning on the bike computer (\"wet leaves\"). Answer: b, and c only with damage on and never in group rides."
+  },
+  {
+   "time": "13:03:00",
+   "iso": "2026-11-22T13:03:00+01:00",
+   "text": "Answer:\n\n\n**4.8.8 Smooth junctions (investigation 2026-11-15; J1 built 2026-11-16, J2 built 2026-11-19, J3 planned)**\n\n- **4.8.8 Q6 – Side roads with too little room between the main road's surface and the next junction:** since J2 a side road's first metres lie on the main road's surface, flat across it (Q1: the main road keeps its surface). Where the side road leaves a steep main road at a narrow angle its mouth is 10 – 14 m from the junction's centre, and the main road's surface there lies up to 3 – 4 m above or below where the side road would be. When the side road's next junction (or a bridge) is only 20 – 35 m away, no profile in between can stay within its class gradient: in the Black Forest north a 33 m track has to fall 8.5 m over 10 m (88 %) between its two junction surfaces; in the packages built with J2b 101 (Liechtenstein) to 6,402 (Black Forest south) 5 m intervals are steeper than their class limit for this reason (grade_over_limit.junction_room), shown as short walls and steps of the road. A smaller case: a side road leaving with the main road's slope in the opposite direction keeps a short stretch steeper than its limit inside the blend (8 – 496 intervals per package). Options: (a) leave it (the walls stay until J3 looks at clusters of junctions); (b) at such junctions no road keeps its surface: the junction is blended between all its roads (the main road gets a small hump or dip, as at equal crossings); (c) the side road's mouth is put at the main road's edge instead of further out at narrow angles, so it leaves the main road's surface sooner, and the blend starts at the side road's own grade instead of the main road's slope along it; (d) as (c), and where it is still too steep the corner between the two roads slopes from the main road's edge to the side road (the main road's carriageway stays as it is). Answer: d, built with J3."
+  },
+  {
+   "time": "13:08:35",
+   "iso": "2026-11-22T13:08:35+01:00",
+   "text": "Answers:\n**7.1.7 Open questions (for the user)**\n\n- **7.1.7 Q21 – voice.spatial off with the hearing range:** voice is normally spatial: other riders get quieter with distance – full volume up to 5 m, silent beyond 10 m (Q20), riders one has selected at any distance. The setting voice.spatial off was meant as \"everybody at the same volume, no range\". Built: with spatial off every rider within the 10 m range is heard at the same volume, and selected riders at any distance; riders further away are still not heard, because the server sends their voice only within the range. Options: (a) as built; (b) spatial off removes the range too – the server would then have to know the setting and send everybody's voice to that rider. Asked 2026-11-17. Answer: a, which keeps the server's saving of sending voice only where it is heard – a suggestion, the spec makes none.\n\n- **7.1.7 Q22 – Unmuting while nobody hears you:** with the chosen defaults a rider joins every ride muted and with Who hears me: No one. Pressing M unmutes the microphone, but still nobody hears them until Who hears me is changed in the settings – easy to miss. Built: the first call's notice says so once (\"you join muted – M unmutes. Who hears you: no one (Settings > Voice > Voice room)\"), the HUD's voice line always shows \"heard by: no one\", and M itself says \nnothing more. Answer: (b) when M unmutes while Who hears me is No one, the HUD shows \"nobody hears you – Settings > Voice > Voice room\" for a few seconds.\n\n- **7.1.7 Q18 – Block, a rider's volume and the headphones (follow-up of Q9, with Q12 / Q17):** headphones on a rider's avatar mean \"this rider cannot hear you\" (Q11). A Block keeps two riders apart both ways, so each cannot hear the other; a rider's volume can also be set to 0 %, which silences them while their voice still arrives. Answer: Both (muted, blocked, 0%) should be whown to the other rider by showing headphones."
+  },
+  {
+   "time": "13:13:15",
+   "iso": "2026-11-22T13:13:15+01:00",
+   "text": "Answers:\n\n**Phase 8 – Textures and Regional Look**\n\n- **Phase 8 Q12 – Potholes in the ride feel:** since v4.75 the roads show cracks, potholes, broken edges and loose stones, chosen by OSM's smoothness tag (how good the surface is, from excellent to impassable). They are only painted: riding over a pothole feels and sounds like smooth tarmac, and the ridden surface and the physics are unchanged. Options: (a) later, riding over damage gives a bump – a short resistance kick on the trainer, a small camera shake and a sound; (b) a bad surface also raises the rolling resistance, so it is harder to pedal, as gravel is; (c) both; (d) keep it visual only. Answer: c, \n\n- **Phase 8 Q13 – Damage density:** how much damage a road shows depends on its wear grade, 1 (excellent) to 7 (horrible): e.g. how many potholes per kilometre a bad road gets. These amounts per grade, and the grade guessed for roads without the tag (Q14), are first guesses made while building it. Only 2 – 23 % of the road length in our worlds carries the tag; the rest is estimated. Options: (a) the user looks at the roads – screenshots or a ride – and says which grades show too much or too little, and the numbers are tuned to that; (b) keep the first guesses. Answer b for now\n\n\n- **Phase 8 Q14 – Untagged main roads:** where OSM does not say how good a road surface is – 77 % of Liechtenstein's road length, 88 % of the Black Forest's, 98 % of Tenerife's – the grade is guessed from the road's class: a main road (primary) is drawn as good, grade 2 (a few fine cracks), and a residential street as grade 3, between good and intermediate (cracks, patches, the odd small pothole). Answer: (b) draw untagged roads cleaner and plainer, with less damage than now, so that mostly the tagged roads show damage."
+  },
+  {
+   "time": "15:55:50",
+   "iso": "2026-11-22T15:55:50+01:00",
+   "text": "Browser version seems to be broken, keeps restarting on my IOS. Test and fix."
+  },
+  {
+   "time": "15:57:30",
+   "iso": "2026-11-22T15:57:30+01:00",
+   "text": "one rule for the world (save it in the according spec sections): do not put lights/latern poles in the road, only at the side."
+  },
+  {
+   "time": "16:07:40",
+   "iso": "2026-11-22T16:07:40+01:00",
+   "text": "I noticed that the rider does not move smooth anymore, its laggy/jumpy. investigate and fix."
+  },
+  {
+   "time": "16:08:52",
+   "iso": "2026-11-22T16:08:52+01:00",
+   "text": "i only saw the jumping in the videos, didnt test the desktop app yet."
+  },
+  {
+   "time": "16:09:08",
+   "iso": "2026-11-22T16:09:08+01:00",
+   "text": "i am on ios 26 with an iphone 15"
+  },
+  {
+   "time": "16:21:44",
+   "iso": "2026-11-22T16:21:44+01:00",
+   "text": "i tried opening it on safari and firefox on ios, both in the browser"
+  },
+  {
+   "time": "16:22:29",
+   "iso": "2026-11-22T16:22:29+01:00",
+   "text": "i see the ingame graphics realy qquick, like a coiple of ms and then it restart"
+  }
+ ],
+ "tokens": {
+  "total": {
+   "input": 4852,
+   "cache_write": 9272698,
+   "cache_read": 750656218,
+   "output": 1339323,
+   "total": 761273091,
+   "messages": 2275
+  },
+  "features": {
+   "Audio & voice": {
+    "input": 754,
+    "cache_write": 612245,
+    "cache_read": 100114246,
+    "output": 177746,
+    "total": 100904991,
+    "messages": 355
+   },
+   "Other": {
+    "input": 1780,
+    "cache_write": 3520522,
+    "cache_read": 311450283,
+    "output": 674395,
+    "total": 315646980,
+    "messages": 866
+   },
+   "Build, release & infra": {
+    "input": 192,
+    "cache_write": 484873,
+    "cache_read": 18963570,
+    "output": 38386,
+    "total": 19487021,
+    "messages": 86
+   },
+   "Planning & spec": {
+    "input": 1188,
+    "cache_write": 3220955,
+    "cache_read": 163835704,
+    "output": 265209,
+    "total": 167323056,
+    "messages": 559
+   },
+   "Worlds & terrain": {
+    "input": 34,
+    "cache_write": 13654,
+    "cache_read": 10834510,
+    "output": 8358,
+    "total": 10856556,
+    "messages": 14
+   },
+   "UI & menus": {
+    "input": 22,
+    "cache_write": 7390,
+    "cache_read": 5920057,
+    "output": 4546,
+    "total": 5932015,
+    "messages": 8
+   },
+   "Riders & bikes": {
+    "input": 436,
+    "cache_write": 1071225,
+    "cache_read": 43961871,
+    "output": 92656,
+    "total": 45126188,
+    "messages": 203
+   },
+   "Materials & look": {
+    "input": 278,
+    "cache_write": 124790,
+    "cache_read": 83997597,
+    "output": 36043,
+    "total": 84158708,
+    "messages": 101
+   },
+   "Art project": {
+    "input": 168,
+    "cache_write": 217044,
+    "cache_read": 11578380,
+    "output": 41984,
+    "total": 11837576,
+    "messages": 83
+   }
+  }
+ },
+ "incidents": {
+  "auto": [
+   {
+    "time": "00:00:18",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela unreachable (no route to host)"
+   },
+   {
+    "time": "00:00:18",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "disk C: on Win11Builder at 96 %"
+   },
+   {
+    "time": "10:10:49",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-abf67c311ed0566a9/target (37.6 GB)"
+   },
+   {
+    "time": "10:10:51",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-abf67c311ed0566a9/target (6.6 GB)"
+   },
+   {
+    "time": "11:12:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a3bc704eeaa8ea44c/target (41.5 GB)"
+   },
+   {
+    "time": "11:12:16",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a3bc704eeaa8ea44c/target (18.9 GB)"
+   },
+   {
+    "time": "12:15:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-abf67c311ed0566a9/target (8.5 GB)"
+   },
+   {
+    "time": "14:11:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a8c0efe2aadc28186/target (41.3 GB)"
+   },
+   {
+    "time": "15:21:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-leaves/target (26.2 GB)"
+   },
+   {
+    "time": "15:21:09",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a3aeb030bfa96a3ea/target (34.0 GB)"
+   },
+   {
+    "time": "15:34:40",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-addcd5dd97528cec7/target (43.0 GB)"
+   },
+   {
+    "time": "15:34:43",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-addcd5dd97528cec7/target (15.4 GB)"
+   },
+   {
+    "time": "15:51:49",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a326c373840a77e9b/target (47.5 GB)"
+   },
+   {
+    "time": "15:51:50",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a326c373840a77e9b/target (0.5 GB)"
+   },
+   {
+    "time": "16:08:59",
+    "kind": "runs-failed",
+    "source": "remote.sh",
+    "machine": "Win11Builder, leela, macos, marge",
+    "text": "7 failed remote.sh runs (Win11Builder 1, leela 1, macos 1, marge 4)"
+   },
+   {
+    "time": "16:10:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a8c0efe2aadc28186/target (8.9 GB)"
+   },
+   {
+    "time": "16:20:28",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a3aeb030bfa96a3ea/target (2.8 GB)"
+   },
+   {
+    "time": "16:29:36",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a326c373840a77e9b/target (3.1 GB)"
+   },
+   {
+    "time": "16:29:36",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a3aeb030bfa96a3ea/target (1.1 GB)"
+   },
+   {
+    "time": "16:29:36",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-addcd5dd97528cec7/target (1.2 GB)"
+   },
+   {
+    "time": "16:57:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-lamp-rule-before/target (3.3 GB)"
+   },
+   {
+    "time": "17:12:18",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a7af0f878b7bd5a0b/target (34.1 GB)"
+   },
+   {
+    "time": "17:31:39",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-addcd5dd97528cec7/target (2.8 GB)"
+   },
+   {
+    "time": "17:54:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a35a158ad167e5cc0/target (35.8 GB)"
+   },
+   {
+    "time": "18:44:48",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-motion/target (31.7 GB)"
+   },
+   {
+    "time": "18:44:51",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-ios/target (21.7 GB)"
+   },
+   {
+    "time": "18:44:54",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-fix-rider-motion-jitter/target (34.9 GB)"
+   },
+   {
+    "time": "18:44:56",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-fix-rider-motion-jitter/target (3.2 GB)"
+   },
+   {
+    "time": "20:28:20",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-HEAD/target (16.6 GB)"
+   },
+   {
+    "time": "20:28:28",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-HEAD/target (9.8 GB)"
+   },
+   {
+    "time": "20:29:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor failed OCW-HEAD/target (0.0 GB)"
+   },
+   {
+    "time": "21:04:24",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (ssh error)"
+   },
+   {
+    "time": "21:06:24",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "22:05:22",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW/target (0.2 GB)"
+   },
+   {
+    "time": "22:15:24",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "22:16:24",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   }
+  ],
+  "notes": "",
+  "noted": []
+ },
+ "features": [
+  {
+   "version": "5.24",
+   "title": "The Voice page gets two separate rows",
+   "commit": "a075e44",
+   "sha": "a075e440f0eb68785ffa6cc7c46c755b2c8442a9",
+   "time": "2026-11-22T09:13:11+01:00",
+   "merge": false,
+   "subject": "The Voice page gets two rows, My voice and I hear; voice off becomes both rows off (spec 7.1.7 Q16 layout decided)"
+  },
+  {
+   "version": "5.25",
+   "title": "The lips move while a rider is heard speaking",
+   "commit": "2688a68",
+   "sha": "2688a6833d40b7ee9110fb27072ff4178671576c",
+   "time": "2026-11-22T09:39:40+01:00",
+   "merge": false,
+   "subject": "The lips move while a rider is heard speaking: a short pulse on the near model, never while muted (spec Phase 4 Q24 (a))"
+  },
+  {
+   "version": "5.26",
+   "title": "Built: the Voice page has two separate rows, *My voice* and *I hear*",
+   "commit": "8d024a1",
+   "sha": "8d024a1e641e31d070f71ba71f5941d93d39dc0b",
+   "time": "2026-11-22T10:10:30+01:00",
+   "merge": true,
+   "subject": "Merge the Voice page with My voice and I hear rows, I hear nobody, old settings migrated (spec 7.1.7 Q16, 7.1.12; 5.26)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "5.27",
+   "title": "Built: the lips move while a rider is heard speaking",
+   "commit": "04ffd3f",
+   "sha": "04ffd3f65c129f4e7473a3337552e6397f35008e",
+   "time": "2026-11-22T11:11:43+01:00",
+   "merge": true,
+   "subject": "Merge the lips moving while a rider is heard speaking, never while muted, near model only (spec Phase 4 Q24, 5.27)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "5.28",
+   "title": "Input mapping stays a row of Settings → Controls",
+   "commit": "30fff7e",
+   "sha": "30fff7e46dd32888b7975c94ad382c0dfbf8bc90",
+   "time": "2026-11-22T12:57:58+01:00",
+   "merge": false,
+   "subject": "Input mapping stays a row of Settings → Controls (spec 3.2.5 Q1 (a))"
+  },
+  {
+   "version": "5.29",
+   "title": "Wet leaves on the road cost a little speed and add a small wobble at speed",
+   "commit": "cdd8818",
+   "sha": "cdd8818795a691b903748628170e103c749890c6",
+   "time": "2026-11-22T12:58:45+01:00",
+   "merge": false,
+   "subject": "Wet leaves cost a little speed and add a wobble at speed; with damage on (never in group rides) a corner on wet leaves can end in a slide (spec 4.6.2 Q6 (b), (c))"
+  },
+  {
+   "version": "5.30",
+   "title": "Side roads with too little room at junctions",
+   "commit": "0619b50",
+   "sha": "0619b5042f80f8331f518a07c94c11ab8e423269",
+   "time": "2026-11-22T13:03:10+01:00",
+   "merge": false,
+   "subject": "Side roads with too little room at junctions: mouth at the main road's edge, blend from the side road's grade, sloped corner – built with J3 (spec 4.8.8 Q6 (d))"
+  },
+  {
+   "version": "5.31",
+   "title": "Voice answers",
+   "commit": "5a433ea",
+   "sha": "5a433ea91813d1269aec0d0a13cba5a3c95e4c12",
+   "time": "2026-11-22T13:08:52+01:00",
+   "merge": false,
+   "subject": "Voice answers: spatial off keeps the range, a notice when the voice is on but nobody hears it, muted / blocked / 0 % all show headphones (spec 7.1.7 Q21, Q22, Q18)"
+  },
+  {
+   "version": "5.32",
+   "title": "Road damage in the ride",
+   "commit": "f8f2c50",
+   "sha": "f8f2c50f8b508f2109858ba7cd7b6cabc52bae64",
+   "time": "2026-11-22T13:13:26+01:00",
+   "merge": false,
+   "subject": "Road damage in the ride: bumps and more rolling resistance on bad surfaces; untagged roads drawn cleaner; damage amounts stay (spec Phase 8 Q12 (c), Q13 (b), Q14 (b))"
+  },
+  {
+   "version": "5.33",
+   "title": "Voice: \"nobody hears you\" on the HUD when My voice is turned on and nobody can hear it",
+   "commit": "191ef32",
+   "sha": "191ef32c9bb6e53bab8c07b8d3e26ef1d4b456c9",
+   "time": "2026-11-22T14:10:54+01:00",
+   "merge": true,
+   "subject": "Merge the nobody-hears-you notice and headphones for muted, blocked and 0 % volume (spec 7.1.7 Q22, Q18; 5.33)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "5.34",
+   "title": "Built: wet leaves on the road cost a little speed and wobble the bike at speed",
+   "commit": "cfa9219",
+   "sha": "cfa92199fa5c6ebf3292459f49d06247d764dc26",
+   "time": "2026-11-22T14:29:29+01:00",
+   "merge": true,
+   "subject": "Merge wet leaves on the road: a little speed cost and sway, a slide with damage on outside group rides (spec 4.6.2 Q6, 5.34)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-22T14:29:36+01:00",
+    "exit": 0,
+    "branch": "merge/leaves",
+    "command": "set -e; make check; make test-smoke; echo ALL-CHECKS-OK",
+    "log": "142936-marge-2958809.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 3167,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.35",
+   "title": "Road damage in the ride built",
+   "commit": "3388780",
+   "sha": "338878027bea9b7cbfe6e19d1aa4ce41582a5cd1",
+   "time": "2026-11-22T15:34:22+01:00",
+   "merge": true,
+   "subject": "Merge road damage in the ride (bumps, trainer kick, shake, sound, more rolling resistance) and untagged roads drawn cleaner (spec Phase 8 Q12, Q14; 5.35)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-22T15:21:51+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-addcd5dd97528cec7",
+    "command": "make check > /tmp/ocw-feel-check.log 2>&1; echo \"CHECK EXIT $?\"; grep -E \"FAILED|panicked|^error|Diff in\" -A7 /tmp/ocw-f",
+    "log": "152151-marge-3054400.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.36",
+   "title": "Built: smooth junctions J3 with 4.8.8 Q6",
+   "commit": "7325f56",
+   "sha": "7325f56631f8ab3d3c1993b10925309f2e3238bf",
+   "time": "2026-11-22T15:51:28+01:00",
+   "merge": true,
+   "subject": "Merge junctions J3 and 4.8.8 Q6 (d): side roads from the main road's edge at their own grade, clusters, forks, mini-roundabout discs, section JMRB, JNCT layout 2 (spec 4.8.8, 5.36; new open question 4.8.8 Q7; rebuilt packages not installed)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-22T16:15:52+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a35a158ad167e5cc0",
+    "command": "source ~/.cargo/env; cargo fmt --all -- --check 2>&1 | head -60; cargo test -p ocw-web --lib 2>&1 | grep -E \"^test resul",
+    "log": "161552-marge-3203499.log",
+    "how": "commit",
+    "suites": 3,
+    "passed": 101,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.37",
+   "title": "Street lamps never stand in a road, only beside it",
+   "commit": "103ca25",
+   "sha": "103ca25139c7c3db69ce8a1c4248018e972fa184",
+   "time": "2026-11-22T15:57:52+01:00",
+   "merge": false,
+   "subject": "Street lamps never stand in a road, only beside it (spec: Street lamps rule, 15H)"
+  },
+  {
+   "version": "5.38",
+   "title": "Built: street lamps never stand in a road",
+   "commit": "dc549a0",
+   "sha": "dc549a00121d3f464ba02da2bc6e81d7a2ab5817",
+   "time": "2026-11-22T17:11:59+01:00",
+   "merge": true,
+   "subject": "Merge street lamps only beside the road: no pole foot in any carriageway or junction surface, moved to the kerb or along the road or left out, with a lint (spec 5.38)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "5.39",
+   "title": "Fixed: the browser app restarting on an iPhone",
+   "commit": "8ed1061",
+   "sha": "8ed1061710ded40767252e9015dce63e61ae8511",
+   "time": "2026-11-22T17:53:50+01:00",
+   "merge": true,
+   "subject": "Merge the fix for the browser app restarting on an iPhone: a lost WebGL context stops the app, no fallback reload loop, a killed tab rides on with less memory once, phones keep fewer tiles (spec Phase 10 B7, 5.39)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-22T17:54:07+01:00",
+    "exit": 0,
+    "branch": "merge/ios",
+    "command": "set -e; make check; echo ALL-CHECKS-OK",
+    "log": "175407-marge-3394191.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 3202,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.40",
+   "title": "The riders move smoothly again at 25 frames a second",
+   "commit": "d02da08",
+   "sha": "d02da08c348617d4eb9b98b2ac91fb6563de97e8",
+   "time": "2026-11-22T17:59:51+01:00",
+   "merge": true,
+   "subject": "Merge smooth rider motion when snapshots are read a tick late (low frame rates, 25 fps capture videos): snapshots timed by their server tick (spec 6.3, 5.40)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-22T18:00:02+01:00",
+    "exit": 0,
+    "branch": "merge/motion",
+    "command": "set -e; make check; make test-smoke; make test-web; echo ALL-CHECKS-OK",
+    "log": "180002-marge-3421785.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 3207,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  }
+ ],
+ "deploys": [
+  {
+   "start": "2026-11-22T11:13:19+01:00",
+   "end": "2026-11-22T11:14:51+01:00",
+   "machine": "marge",
+   "commit": "04ffd3f",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-22T11:14:51+01:00",
+   "end": "2026-11-22T11:16:00+01:00",
+   "machine": "leela",
+   "commit": "04ffd3f",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-22T18:46:04+01:00",
+   "end": "2026-11-22T18:47:57+01:00",
+   "machine": "marge",
+   "commit": "d02da08",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-22T18:47:57+01:00",
+   "end": "2026-11-22T18:49:20+01:00",
+   "machine": "leela",
+   "commit": "d02da08",
+   "exit": 0
+  }
+ ],
+ "releases": [
+  {
+   "tag": "v0.2.5",
+   "name": "Open Cycling World 0.2.5 (development build)",
+   "time": "2026-11-22T20:27:46+01:00",
+   "prerelease": true
+  }
+ ],
+ "agent_jobs": [
+  {
+   "agent": "a4a3008b",
+   "task": "Day 11 video (2026-11-21)",
+   "branch": "worktree-agent-a4a3008b086870bf7",
+   "start": "2026-11-22T00:09:10+01:00",
+   "end": "2026-11-22T00:32:47+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "abf67c31",
+   "task": "Voice page: My voice and I hear (7.1.7 Q16)",
+   "branch": "worktree-agent-abf67c311ed0566a9",
+   "start": "2026-11-22T09:13:33+01:00",
+   "end": "2026-11-22T10:11:46+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a3bc704e",
+   "task": "Lips move while speaking (Phase 4 Q24)",
+   "branch": "worktree-agent-a3bc704eeaa8ea44c",
+   "start": "2026-11-22T09:40:00+01:00",
+   "end": "2026-11-22T11:13:12+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "afe2e619",
+   "task": "Release 0.2.5, all platforms + web",
+   "branch": "worktree-agent-afe2e61928b76970a",
+   "start": "2026-11-22T12:41:55+01:00",
+   "end": "2026-11-22T20:30:35+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a3aeb030",
+   "task": "Wet leaves affect the ride (4.6.2 Q6)",
+   "branch": "worktree-agent-a3aeb030bfa96a3ea",
+   "start": "2026-11-22T12:59:07+01:00",
+   "end": "2026-11-22T15:22:12+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a326c373",
+   "task": "Junctions J3 with side-road fix (4.8.8 Q6 d)",
+   "branch": "worktree-agent-a326c373840a77e9b",
+   "start": "2026-11-22T13:03:31+01:00",
+   "end": "2026-11-22T15:52:47+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a8c0efe2",
+   "task": "Voice Q22 notice, Q18 headphones",
+   "branch": "worktree-agent-a8c0efe2aadc28186",
+   "start": "2026-11-22T13:09:11+01:00",
+   "end": "2026-11-22T14:12:16+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "addcd5dd",
+   "task": "Road damage in the ride (Phase 8 Q12, Q14)",
+   "branch": "worktree-agent-addcd5dd97528cec7",
+   "start": "2026-11-22T13:13:53+01:00",
+   "end": "2026-11-22T15:35:41+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a35a158a",
+   "task": "Fix the browser app restarting on iOS",
+   "branch": "worktree-agent-a35a158ad167e5cc0",
+   "start": "2026-11-22T15:56:20+01:00",
+   "end": "2026-11-22T17:55:22+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a7af0f87",
+   "task": "Street lamps only beside the road",
+   "branch": "worktree-agent-a7af0f878b7bd5a0b",
+   "start": "2026-11-22T15:58:11+01:00",
+   "end": "2026-11-22T17:13:17+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a6ffd7a9",
+   "task": "Fix jumpy/laggy rider motion (regression)",
+   "branch": "worktree-agent-a6ffd7a97800530f4",
+   "start": "2026-11-22T16:08:02+01:00",
+   "end": "2026-11-22T18:45:56+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  }
+ ]
+}
