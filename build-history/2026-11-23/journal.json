@@ -1,0 +1,6008 @@
+{
+ "day": "2026-11-23",
+ "number": 13,
+ "commits": [
+  {
+   "sha": "4ad62fdb",
+   "time": "08:44:10",
+   "merge": false,
+   "subject": "Season jumps to the nearest representative day, the calendar sets the day at once; worlds without marked seasons offer only the jumps that change something (spec Phase 9 Q13 (a), Q14 (a))",
+   "added": 6,
+   "removed": 9
+  },
+  {
+   "sha": "dcb87d05",
+   "time": "09:21:56",
+   "merge": false,
+   "subject": "Season page checks whether the place has seasons: weak in Tenerife (one line, Summer and Winter only), all six in Liechtenstein and the Black Forest; no leaf fall from Tenerife's evergreen woods (spec Phase 9 Q13)",
+   "added": 757,
+   "removed": 28
+  },
+  {
+   "sha": "5adfcd42",
+   "time": "09:52:36",
+   "merge": true,
+   "subject": "Merge the season check: places with weak seasons (e.g. Tenerife) say so and offer only summer and winter, evergreen woods shed almost no leaves (spec Phase 9 Q13, 5.42)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "0c296af5",
+   "time": "10:24:00",
+   "merge": false,
+   "subject": "Street lamps mapped in OSM stand where mapped (moved beside the road when on it, the rows skip them); every lamp pole is an obstacle; point obstacles collide with their files' col_* proxies (world look Street lamps, Phase 12 K3, 15H / 15N)",
+   "added": 1854,
+   "removed": 92
+  },
+  {
+   "sha": "19e2aea3",
+   "time": "10:24:11",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-a765cbc595ec59a84",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "f006581a",
+   "time": "10:27:03",
+   "merge": false,
+   "subject": "Street lamps: list the tiles with mapped lamps in world-builder street-lamps, Schaan and Santa Cruz scenes, the rebuilt packages' numbers (spec 5.43)",
+   "added": 9,
+   "removed": 2
+  },
+  {
+   "sha": "ade1978a",
+   "time": "10:59:52",
+   "merge": false,
+   "subject": "Trees keep their leaf state at every distance (a see-through crown of twigs on bare trees, the same thinning crowns near and far); the junction fan is off in Unicorn mode and back when riding (spec 4.6.1 Fixed v5.42, 2.2.1, 5.42)",
+   "added": 453,
+   "removed": 23
+  },
+  {
+   "sha": "ea3eb92f",
+   "time": "11:04:34",
+   "merge": true,
+   "subject": "Merge street lamps from OSM lamp nodes and lamp poles as obstacles, obstacle shapes from the props files' collision proxies (spec Street lamps, K3, 15N; 5.43)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "06d85426",
+   "time": "11:30:16",
+   "merge": true,
+   "subject": "Merge the tree LOD fix (near and far crowns follow one rule, bare trees keep a see-through twig crown) and the junction fan hidden in flight (5.44)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "9e0d8469",
+   "time": "11:45:33",
+   "merge": false,
+   "subject": "OCW Studio Models workspace edits (E4): the model document with undo, gizmo, points, proxies in both forms, slots and materials, metadata, fixes, save with the model diff first, re-import (spec 16B, 16F E4; 5.44)",
+   "added": 4787,
+   "removed": 32
+  },
+  {
+   "sha": "a4d0f04e",
+   "time": "11:50:20",
+   "merge": false,
+   "subject": "Phones draw at pixel ratio 1.5, start at the page's size and keep the world only along their course: the iPhone's tab memory cut by a quarter to a half (spec 14 Phase 10 B7, B2)",
+   "added": 1585,
+   "removed": 162
+  },
+  {
+   "sha": "81f4abd9",
+   "time": "11:53:21",
+   "merge": false,
+   "subject": "Models E4: re-import sets the canonical generator as model import does; the Blender round trip picture; ONLY= for the shots script (spec 16B; 5.44)",
+   "added": 25,
+   "removed": 2
+  },
+  {
+   "sha": "bba21c4f",
+   "time": "11:57:00",
+   "merge": false,
+   "subject": "Phones: the world's driver takes the options the app set (the course cut and residency reached the decode only on the app side)",
+   "added": 6,
+   "removed": 1
+  },
+  {
+   "sha": "ab990042",
+   "time": "12:32:21",
+   "merge": false,
+   "subject": "The memory mode is applied to the world's options in one place, before the page hands them to the driver (regression test for the course cut that never reached the decode)",
+   "added": 47,
+   "removed": 11
+  },
+  {
+   "sha": "078570dc",
+   "time": "12:36:24",
+   "merge": true,
+   "subject": "Merge OCW Studio E4: editing models in the Models workspace (gizmo, rename/re-parent, anchors, proxies in both forms, paint slots, materials, metadata, validator fixes, diff before save, Blender re-import, all undoable; 5.45)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "375a21d5",
+   "time": "12:40:10",
+   "merge": false,
+   "subject": "A phone's land use is indexed with the course's tiles only: no copy of the whole section first (Tenerife: 75 MB less at the start)",
+   "added": 43,
+   "removed": 5
+  },
+  {
+   "sha": "07b46dce",
+   "time": "12:43:32",
+   "merge": false,
+   "subject": "Built: the unicorn's wing beat, gallop, flight and landing play in OCW Studio's Models viewer from the game's animation; OSM street lamps rebuilt into the middle and south Black Forest packages (5.45)",
+   "added": 782,
+   "removed": 12
+  },
+  {
+   "sha": "fcdb5d1d",
+   "time": "12:55:20",
+   "merge": false,
+   "subject": "Studio: rustfmt the flight cycles' header line",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "a2ada226",
+   "time": "13:01:07",
+   "merge": false,
+   "subject": "Spec 5.42: the iPhone's memory – phones at pixel ratio 1.5, the world along the course, the guard and the death steps, measured per world (14 Phase 10 B7, B2 10G)",
+   "added": 29,
+   "removed": 1
+  },
+  {
+   "sha": "e8fd6ab4",
+   "time": "13:02:22",
+   "merge": true,
+   "subject": "Merge iPhone browser memory cuts: page-size first frame, pixel ratio 1.5 on WebKit phones, small phone shadow maps, 1280x720 photos, one tile meshed at a time, the course cut of the world base, a memory guard and stepwise fallback (5.46)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ab7fb492",
+   "time": "13:48:28",
+   "merge": true,
+   "subject": "Merge OSM street lamps for Black Forest middle and south (lamps-build) and the unicorn's flight cycles in OCW Studio's Models viewer (5.47)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a73daf50",
+   "time": "13:50:24",
+   "merge": false,
+   "subject": "Plant files fixed in the generator before their Blender sources: shading scaled to at most 1 with shade_scale, leaf normals on the front side (Phase 15 Q11 (a), 5.48)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "94767ce8",
+   "time": "13:55:22",
+   "merge": false,
+   "subject": "Off the road every slope is ridden at its real gradient, the trainer caps its resistance anyway (Phase 13 Q7 (b), 5.49)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "2775d720",
+   "time": "13:56:27",
+   "merge": false,
+   "subject": "The unicorn lands anywhere on land except water, buildings and obstacles; on the route in events and fixed routes (Phase 13 Q8 (a), 5.50)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "d7681321",
+   "time": "13:56:55",
+   "merge": false,
+   "subject": "Riding off the road counts like any riding: FIT distance, elevation, time and the real GPS track, hearts by work (Phase 13 Q9 (a), 5.51)",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "ffe319ae",
+   "time": "14:02:29",
+   "merge": false,
+   "subject": "Junction profile tools for spec 4.8.8 Q6 (d) / Q7: side-road profiles of two packages, slope charts, fixed-camera shots",
+   "added": 404,
+   "removed": 0
+  },
+  {
+   "sha": "a67ff35b",
+   "time": "14:27:02",
+   "merge": false,
+   "subject": "Junction kinks smoothed: creases rounded and never above the main road, blended junctions smoothed, light terrain smoothing (4.8.8 Q7 (d), 5.52)",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "f5455606",
+   "time": "14:47:02",
+   "merge": false,
+   "subject": "Phase 13A off-road riding, stage 1: the ground map, 2D riding on the terrain in the session, landing anywhere in free ride",
+   "added": 2271,
+   "removed": 16
+  },
+  {
+   "sha": "d526dc9a",
+   "time": "15:21:25",
+   "merge": false,
+   "subject": "Phase 13A off-road riding, stage 2: prediction, client, landing ring, spec (v5.52)",
+   "added": 1189,
+   "removed": 227
+  },
+  {
+   "sha": "a17760b0",
+   "time": "15:50:13",
+   "merge": false,
+   "subject": "Plant files survive Blender: vertex colours kept at most 1 with extras.ocw.shade_scale, every leaf triangle with its normals on its front; the 108 plant files re-exported (spec 15G Q11 (a), 15P, v5.47)",
+   "added": 667,
+   "removed": 207
+  },
+  {
+   "sha": "fc78507a",
+   "time": "15:50:51",
+   "merge": true,
+   "subject": "Merge Phase 13A: riding off the road after a unicorn landing – land anywhere on land (red ring on water, buildings, obstacles), real gradients, the FIT track and hearts off-road, rejoining roads (5.53)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "4ec7834f",
+   "time": "15:55:31",
+   "merge": false,
+   "subject": "Built: junction kinks smoothed (4.8.8 Q7 (d)) – creases rounded, side roads never above the main road, blended junctions on one plane, light terrain smoothing; packages rebuilt into data/j4-build (5.53)",
+   "added": 2189,
+   "removed": 54
+  },
+  {
+   "sha": "cb69a327",
+   "time": "16:38:45",
+   "merge": true,
+   "subject": "Merge plant files that survive Blender: shading scaled to at most 1 with shade_scale, leaf normals on their own front; 108 of 108 plant files unchanged in the round trip (Phase 15 Q11 (a), 5.54)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "2023f700",
+   "time": "16:54:43",
+   "merge": false,
+   "subject": "Fix the flaky heap trace test: frame 2 follows a 256 MiB allocation, far above the parallel tests' noise",
+   "added": 7,
+   "removed": 2
+  },
+  {
+   "sha": "5eba81ea",
+   "time": "17:24:17",
+   "merge": false,
+   "subject": "Rule: the sides of a road are as smooth as the road – side bands follow the rounded corners and the smoothed profile, no gap, hole or lip (4.8.8 Rule, 5.55)",
+   "added": 4,
+   "removed": 1
+  },
+  {
+   "sha": "c45e59fd",
+   "time": "17:27:57",
+   "merge": false,
+   "subject": "WIP: J4 follow-up (never above main, junction_room guard, corner verges)",
+   "added": 415,
+   "removed": 84
+  },
+  {
+   "sha": "28819586",
+   "time": "17:28:19",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-a26ac3f82bbda79f8",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "1dd2ce82",
+   "time": "17:50:49",
+   "merge": false,
+   "subject": "J4 follow-up: never above the main road (mesh refined and cut, strips under it near the carriageway), creases and planes never make a road steeper (junction_room below J3), corner verges meet the arms' verges, lint side.* (4.8.8 Q7, Rule; 5.56)",
+   "added": 336,
+   "removed": 38
+  },
+  {
+   "sha": "7013fc71",
+   "time": "18:08:13",
+   "merge": true,
+   "subject": "Merge J4: junction kinks smoothed (creases rounded where there is room, blended junctions on a plane), side roads cut below the main road, junction_room below J3, light terrain smoothing, lint side.*; packages in j4-build, not installed (4.8.8 Q7 (d), 5.56)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "9968b832",
+   "time": "18:08:35",
+   "merge": false,
+   "subject": "Plant shade scale test: allow one 1/1000 step between the generator and the shipped file (the Mac's fused multiply-adds round 1.025 vs 1.026)",
+   "added": 10,
+   "removed": 1
+  },
+  {
+   "sha": "386bbb8b",
+   "time": "19:14:12",
+   "merge": false,
+   "subject": "J5 WIP: junction sides follow the edge lines with rounded corners, mouth rows lean with the main road / blended plane, sides smoothed along the outline, lint side.* measured against the surface's slope (4.8.8 Rule)",
+   "added": 1216,
+   "removed": 58
+  },
+  {
+   "sha": "0c952ede",
+   "time": "19:47:56",
+   "merge": false,
+   "subject": "Off the road every drawn tree is an obstacle, trunks made on demand near the rider (Phase 13 Q10 (a))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "faec1699",
+   "time": "19:53:28",
+   "merge": false,
+   "subject": "J5: the sides of a junction follow their roads – outlines along the real edge lines with rounded corners leaving each mouth along its strip, mouth rows leaning with the main road or the blended plane and turning flat past the mouth, the sides' heights smoothed along the outline, corner verges as wide as the ground asks (no wall), strips without folds at the mouth; lint side.* measured against the surface's slope (4.8.8 Rule)",
+   "added": 665,
+   "removed": 160
+  },
+  {
+   "sha": "0164808d",
+   "time": "19:53:40",
+   "merge": false,
+   "subject": "Collision proxies: a modelled mesh or a scaled unit empty, both kept (Phase 15 Q9 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "fe764355",
+   "time": "20:00:26",
+   "merge": false,
+   "subject": "Plants re-exported with their lowest point at the stem base, held props marked held (Phase 15 Q10 (a))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "0222ac2b",
+   "time": "20:00:51",
+   "merge": false,
+   "subject": "Unicorn and rider files survive Blender: cones to one tip, lips and mouth inside smoothed by corner angle; make test-blender 221 of 221 (Phase 15 Q11 follow-up, 15P, 5.57)",
+   "added": 241,
+   "removed": 19
+  },
+  {
+   "sha": "6320e4bc",
+   "time": "20:01:04",
+   "merge": true,
+   "subject": "Merge main (Phase 15 Q10 (a) decided)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "7acacdd8",
+   "time": "20:14:43",
+   "merge": false,
+   "subject": "J5: clippy (side lift loops, VertexRule kept in an Arc), the lint test of the sloping plane dropped (it passes on J4 too), the shots and charts scripts for J5 (4.8.8 Rule)",
+   "added": 65,
+   "removed": 21
+  },
+  {
+   "sha": "2b89c5f9",
+   "time": "20:23:22",
+   "merge": false,
+   "subject": "J5: clippy type aliases in the side lint",
+   "added": 23,
+   "removed": 18
+  },
+  {
+   "sha": "0860b539",
+   "time": "20:51:52",
+   "merge": false,
+   "subject": "Street lamp poles as obstacles in the browser too (streamed tiles near the rider, dropped with them); the first ride's hints apart on a phone (spec 12 K3, 3.2.3; 5.57)",
+   "added": 983,
+   "removed": 63
+  },
+  {
+   "sha": "d797f262",
+   "time": "20:53:39",
+   "merge": false,
+   "subject": "Built: off the road every drawn tree is an obstacle – trunks made on demand near riders deep in a wood from the trees the renderer draws; a crash at speed, a stop at walking pace (Phase 13 Q10 (a), 5.58)",
+   "added": 2029,
+   "removed": 173
+  },
+  {
+   "sha": "99c7d2fe",
+   "time": "20:54:12",
+   "merge": false,
+   "subject": "J5: a corner's verge keeps near the arms' widths at its ends (no notch beside the arm's verge)",
+   "added": 9,
+   "removed": 0
+  },
+  {
+   "sha": "150c93d8",
+   "time": "21:36:59",
+   "merge": false,
+   "subject": "Woods on the server: the trees baked per tile at load (37 MB for the northern Black Forest instead of 310 MB of inputs), radii in whole millimetres on every path; scenes in an inner wood (Phase 13 Q10)",
+   "added": 343,
+   "removed": 169
+  },
+  {
+   "sha": "2971aee0",
+   "time": "21:42:09",
+   "merge": false,
+   "subject": "Built: the sides of a road are as smooth as the road (4.8.8 Rule, J5) – spec with the J5 packages' lint (side.corner halved, side.kink 7 – 10 % fewer, not at 0: short arms, non-star chains, steep junctions), charts with the J5 package (v5.57)",
+   "added": 48,
+   "removed": 4
+  },
+  {
+   "sha": "384aa115",
+   "time": "21:48:33",
+   "merge": false,
+   "subject": "Browser lamp bump: the local server's contacts in netStats, dev.lamp coasting at 0 W in test-web-ios; the Android layout cases with element full screen; spec 5.57 numbers",
+   "added": 36,
+   "removed": 4
+  },
+  {
+   "sha": "c0895277",
+   "time": "21:55:25",
+   "merge": false,
+   "subject": "J5: fmt",
+   "added": 5,
+   "removed": 1
+  },
+  {
+   "sha": "7020bbdb",
+   "time": "21:58:07",
+   "merge": false,
+   "subject": "Q10 scenes in a dense wood of the northern Black Forest (runs of 4 and 9 m at a trunk); woods_bench finds runs inside the wood",
+   "added": 19,
+   "removed": 10
+  },
+  {
+   "sha": "269e12dd",
+   "time": "21:58:58",
+   "merge": true,
+   "subject": "Merge Phase 13 Q10 (a): off the road every drawn tree is an obstacle – trunks made per 40 m cell around off-road riders, the same trees as drawn, baked per tile on the server (5.60)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "cf7552ac",
+   "time": "22:03:50",
+   "merge": true,
+   "subject": "Merge J5: road sides follow the road – corner outlines along the real road edges with rounded corners, tilted mouth rows, verges as wide as the drop, side.* lint measured against the surface slope; packages in j5-build, not installed (4.8.8 Rule, 5.61)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ec048655",
+   "time": "22:44:14",
+   "merge": false,
+   "subject": "Plants stand on their stem base, held props marked held: the origin warning clean on every model file (Phase 15 Q10 (a), 5.61)",
+   "added": 333,
+   "removed": 49
+  },
+  {
+   "sha": "55b60864",
+   "time": "22:47:11",
+   "merge": true,
+   "subject": "Merge every model file survives Blender (unicorn ears and horn as cones, lips with corner-angle normals; 221 of 221) and every model stands on its origin (Phase 15 Q10 (a)) (5.62, 5.63)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "f18e33e8",
+   "time": "22:48:16",
+   "merge": true,
+   "subject": "Merge origin/main (woods Q10 (a), J5) into the browser lamp poles / phone hints branch; spec row renumbered 5.64",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "890b6e2c",
+   "time": "23:56:19",
+   "merge": false,
+   "subject": "Browser lamp poles only while the own rider is in wild mode (dropped back on the road): Liechtenstein with main's woods 439.8 MB peak (main 444.8); spec 5.64 numbers",
+   "added": 30,
+   "removed": 9
+  },
+  {
+   "sha": "7d15976d",
+   "time": "23:57:00",
+   "merge": true,
+   "subject": "Merge lamp poles as obstacles in the browser (ring around a wild rider) and the phone layout without overlaps (K3, 3.2.3; 5.64)",
+   "added": 0,
+   "removed": 0
+  }
+ ],
+ "merges": 17,
+ "lines_added": 23954,
+ "lines_removed": 1814,
+ "spec_versions": [
+  "5.43",
+  "4.6",
+  "5.42",
+  "4.8",
+  "5.57",
+  "5.64"
+ ],
+ "tests": null,
+ "media": [
+  {
+   "file": "090820-web-ios-phone-baseline-loop-local-1min.png",
+   "time": "09:08:20",
+   "kind": "image"
+  },
+  {
+   "file": "090820-web-ios-phone-baseline-loop-local-end.png",
+   "time": "09:08:20",
+   "kind": "image"
+  },
+  {
+   "file": "090820-web-ios-phone-baseline-loop-local-start.png",
+   "time": "09:08:20",
+   "kind": "image"
+  },
+  {
+   "file": "091003-web-ios-phone-baseline-loop-live-1min.png",
+   "time": "09:10:03",
+   "kind": "image"
+  },
+  {
+   "file": "091003-web-ios-phone-baseline-loop-live-end.png",
+   "time": "09:10:03",
+   "kind": "image"
+  },
+  {
+   "file": "091003-web-ios-phone-baseline-loop-live-start.png",
+   "time": "09:10:03",
+   "kind": "image"
+  },
+  {
+   "file": "091118-shot-wayland-season-weak-page-tenerife-coast.jpg",
+   "time": "09:11:18",
+   "kind": "image"
+  },
+  {
+   "file": "091133-shot-wayland-season-weak-page-tenerife-canadas.jpg",
+   "time": "09:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "091143-shot-wayland-season-weak-page-liechtenstein.jpg",
+   "time": "09:11:43",
+   "kind": "image"
+  },
+  {
+   "file": "091203-shot-wayland-season-weak-tenerife-coast-november.jpg",
+   "time": "09:12:03",
+   "kind": "image"
+  },
+  {
+   "file": "091224-shot-wayland-season-weak-tenerife-coast-july.jpg",
+   "time": "09:12:24",
+   "kind": "image"
+  },
+  {
+   "file": "095103-shot-ocw.jpg",
+   "time": "09:51:03",
+   "kind": "image"
+  },
+  {
+   "file": "095112-shot-wayland-ocw-wayland.jpg",
+   "time": "09:51:12",
+   "kind": "image"
+  },
+  {
+   "file": "095246-web-ios-phone-step-b2-loop-1min.png",
+   "time": "09:52:46",
+   "kind": "image"
+  },
+  {
+   "file": "095246-web-ios-phone-step-b2-loop-end.png",
+   "time": "09:52:46",
+   "kind": "image"
+  },
+  {
+   "file": "095246-web-ios-phone-step-b2-loop-start.png",
+   "time": "09:52:46",
+   "kind": "image"
+  },
+  {
+   "file": "095523-web-ios-phone-step-b2-hills-1min.png",
+   "time": "09:55:23",
+   "kind": "image"
+  },
+  {
+   "file": "095523-web-ios-phone-step-b2-hills-2min.png",
+   "time": "09:55:23",
+   "kind": "image"
+  },
+  {
+   "file": "095523-web-ios-phone-step-b2-hills-3min.png",
+   "time": "09:55:23",
+   "kind": "image"
+  },
+  {
+   "file": "095523-web-ios-phone-step-b2-hills-4min.png",
+   "time": "09:55:23",
+   "kind": "image"
+  },
+  {
+   "file": "095523-web-ios-phone-step-b2-hills-5min.png",
+   "time": "09:55:23",
+   "kind": "image"
+  },
+  {
+   "file": "095523-web-ios-phone-step-b2-hills-context-reloaded.png",
+   "time": "09:55:23",
+   "kind": "image"
+  },
+  {
+   "file": "095523-web-ios-phone-step-b2-hills-end.png",
+   "time": "09:55:23",
+   "kind": "image"
+  },
+  {
+   "file": "095523-web-ios-phone-step-b2-hills-start.png",
+   "time": "09:55:23",
+   "kind": "image"
+  },
+  {
+   "file": "095539-tree-lod-ov-east-before.jpg",
+   "time": "09:55:39",
+   "kind": "image"
+  },
+  {
+   "file": "095552-tree-lod-ov-north-before.jpg",
+   "time": "09:55:52",
+   "kind": "image"
+  },
+  {
+   "file": "095605-tree-lod-ov-unicorn-low-before.jpg",
+   "time": "09:56:05",
+   "kind": "image"
+  },
+  {
+   "file": "095618-tree-lod-ov-unicorn-high-before.jpg",
+   "time": "09:56:18",
+   "kind": "image"
+  },
+  {
+   "file": "100119-web-ios-phone-step-b2-liechtenstein-1min.png",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100119-web-ios-phone-step-b2-liechtenstein-2min.png",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100119-web-ios-phone-step-b2-liechtenstein-3min.png",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100119-web-ios-phone-step-b2-liechtenstein-4min.png",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100119-web-ios-phone-step-b2-liechtenstein-5min.png",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100119-web-ios-phone-step-b2-liechtenstein-context-reloaded.png",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100119-web-ios-phone-step-b2-liechtenstein-end.png",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100119-web-ios-phone-step-b2-liechtenstein-start.png",
+   "time": "10:01:19",
+   "kind": "image"
+  },
+  {
+   "file": "100722-web-ios-phone-step-b2-tenerife-1min.png",
+   "time": "10:07:22",
+   "kind": "image"
+  },
+  {
+   "file": "100722-web-ios-phone-step-b2-tenerife-2min.png",
+   "time": "10:07:22",
+   "kind": "image"
+  },
+  {
+   "file": "100722-web-ios-phone-step-b2-tenerife-3min.png",
+   "time": "10:07:22",
+   "kind": "image"
+  },
+  {
+   "file": "100722-web-ios-phone-step-b2-tenerife-4min.png",
+   "time": "10:07:22",
+   "kind": "image"
+  },
+  {
+   "file": "100722-web-ios-phone-step-b2-tenerife-5min.png",
+   "time": "10:07:22",
+   "kind": "image"
+  },
+  {
+   "file": "100722-web-ios-phone-step-b2-tenerife-context-reloaded.png",
+   "time": "10:07:22",
+   "kind": "image"
+  },
+  {
+   "file": "100722-web-ios-phone-step-b2-tenerife-end.png",
+   "time": "10:07:22",
+   "kind": "image"
+  },
+  {
+   "file": "100722-web-ios-phone-step-b2-tenerife-start.png",
+   "time": "10:07:22",
+   "kind": "image"
+  },
+  {
+   "file": "100840-tree-lod-map-top-before.jpg",
+   "time": "10:08:40",
+   "kind": "image"
+  },
+  {
+   "file": "100852-tree-lod-uni-plane-15m-nov-before.jpg",
+   "time": "10:08:52",
+   "kind": "image"
+  },
+  {
+   "file": "100905-tree-lod-uni-plane-40m-nov-before.jpg",
+   "time": "10:09:05",
+   "kind": "image"
+  },
+  {
+   "file": "100918-tree-lod-uni-plane-150m-nov-before.jpg",
+   "time": "10:09:18",
+   "kind": "image"
+  },
+  {
+   "file": "100931-tree-lod-uni-plane-15m-jul-before.jpg",
+   "time": "10:09:31",
+   "kind": "image"
+  },
+  {
+   "file": "100943-tree-lod-uni-hover-4m-nov-before.jpg",
+   "time": "10:09:43",
+   "kind": "image"
+  },
+  {
+   "file": "101020-tree-lod-uni-down-10m-before.jpg",
+   "time": "10:10:20",
+   "kind": "image"
+  },
+  {
+   "file": "101033-tree-lod-uni-down-30m-before.jpg",
+   "time": "10:10:33",
+   "kind": "image"
+  },
+  {
+   "file": "101045-tree-lod-uni-down-80m-before.jpg",
+   "time": "10:10:45",
+   "kind": "image"
+  },
+  {
+   "file": "101058-tree-lod-uni-down-200m-before.jpg",
+   "time": "10:10:58",
+   "kind": "image"
+  },
+  {
+   "file": "101111-tree-lod-uni-plane-down-60m-before.jpg",
+   "time": "10:11:11",
+   "kind": "image"
+  },
+  {
+   "file": "101210-tree-lod-uni-low-q-15m-before.jpg",
+   "time": "10:12:10",
+   "kind": "image"
+  },
+  {
+   "file": "101223-tree-lod-uni-low-q-40m-before.jpg",
+   "time": "10:12:23",
+   "kind": "image"
+  },
+  {
+   "file": "101235-tree-lod-uni-low-q-100m-before.jpg",
+   "time": "10:12:35",
+   "kind": "image"
+  },
+  {
+   "file": "101248-tree-lod-uni-med-q-40m-before.jpg",
+   "time": "10:12:48",
+   "kind": "image"
+  },
+  {
+   "file": "101301-tree-lod-uni-high-q-40m-before.jpg",
+   "time": "10:13:01",
+   "kind": "image"
+  },
+  {
+   "file": "101336-web-ios-phone-step-b2-black-forest-north-1min.png",
+   "time": "10:13:36",
+   "kind": "image"
+  },
+  {
+   "file": "101336-web-ios-phone-step-b2-black-forest-north-2min.png",
+   "time": "10:13:36",
+   "kind": "image"
+  },
+  {
+   "file": "101336-web-ios-phone-step-b2-black-forest-north-3min.png",
+   "time": "10:13:36",
+   "kind": "image"
+  },
+  {
+   "file": "101336-web-ios-phone-step-b2-black-forest-north-4min.png",
+   "time": "10:13:36",
+   "kind": "image"
+  },
+  {
+   "file": "101336-web-ios-phone-step-b2-black-forest-north-5min.png",
+   "time": "10:13:36",
+   "kind": "image"
+  },
+  {
+   "file": "101336-web-ios-phone-step-b2-black-forest-north-context-reloaded.png",
+   "time": "10:13:36",
+   "kind": "image"
+  },
+  {
+   "file": "101336-web-ios-phone-step-b2-black-forest-north-end.png",
+   "time": "10:13:36",
+   "kind": "image"
+  },
+  {
+   "file": "101336-web-ios-phone-step-b2-black-forest-north-start.png",
+   "time": "10:13:36",
+   "kind": "image"
+  },
+  {
+   "file": "101345-tree-lod-uni-gd-nov-30m-before.jpg",
+   "time": "10:13:45",
+   "kind": "image"
+  },
+  {
+   "file": "101358-tree-lod-uni-gd-nov-30m-gdoff-before.jpg",
+   "time": "10:13:58",
+   "kind": "image"
+  },
+  {
+   "file": "101411-tree-lod-uni-gd-jul-30m-before.jpg",
+   "time": "10:14:11",
+   "kind": "image"
+  },
+  {
+   "file": "101424-tree-lod-uni-gd-nov-70m-before.jpg",
+   "time": "10:14:24",
+   "kind": "image"
+  },
+  {
+   "file": "101529-tree-lod-uni-field-jul-120m-before.jpg",
+   "time": "10:15:29",
+   "kind": "image"
+  },
+  {
+   "file": "101542-tree-lod-uni-field-jul-300m-before.jpg",
+   "time": "10:15:42",
+   "kind": "image"
+  },
+  {
+   "file": "101554-tree-lod-uni-field-nov-120m-before.jpg",
+   "time": "10:15:54",
+   "kind": "image"
+  },
+  {
+   "file": "101607-tree-lod-uni-field-nov-40m-before.jpg",
+   "time": "10:16:07",
+   "kind": "image"
+  },
+  {
+   "file": "101706-tree-lod-uni-now-plane-20m-before.jpg",
+   "time": "10:17:06",
+   "kind": "image"
+  },
+  {
+   "file": "101719-tree-lod-uni-now-plane-60m-before.jpg",
+   "time": "10:17:19",
+   "kind": "image"
+  },
+  {
+   "file": "101731-tree-lod-uni-now-hover-25m-before.jpg",
+   "time": "10:17:31",
+   "kind": "image"
+  },
+  {
+   "file": "101744-tree-lod-uni-now-auto-25m-before.jpg",
+   "time": "10:17:44",
+   "kind": "image"
+  },
+  {
+   "file": "101948-tree-lod-li-wood-2026-11-23-600m-before.jpg",
+   "time": "10:19:48",
+   "kind": "image"
+  },
+  {
+   "file": "102001-tree-lod-li-wood-2026-11-23-330m-before.jpg",
+   "time": "10:20:01",
+   "kind": "image"
+  },
+  {
+   "file": "102014-tree-lod-li-wood-2026-11-23-250m-before.jpg",
+   "time": "10:20:14",
+   "kind": "image"
+  },
+  {
+   "file": "102026-tree-lod-li-wood-2026-11-23-150m-before.jpg",
+   "time": "10:20:26",
+   "kind": "image"
+  },
+  {
+   "file": "102039-tree-lod-li-wood-2026-11-23-60m-before.jpg",
+   "time": "10:20:39",
+   "kind": "image"
+  },
+  {
+   "file": "102105-osm-lamps-vaduz-night-wide-wayland.jpg",
+   "time": "10:21:05",
+   "kind": "image"
+  },
+  {
+   "file": "102157-osm-lamps-santacruz-night-wide-wayland.jpg",
+   "time": "10:21:57",
+   "kind": "image"
+  },
+  {
+   "file": "102211-osm-lamps-vaduz-lamp-bump-wayland.jpg",
+   "time": "10:22:11",
+   "kind": "image"
+  },
+  {
+   "file": "102401-tree-lod-li-wood-2026-11-23-600m-after.jpg",
+   "time": "10:24:01",
+   "kind": "image"
+  },
+  {
+   "file": "102414-tree-lod-li-wood-2026-11-23-330m-after.jpg",
+   "time": "10:24:14",
+   "kind": "image"
+  },
+  {
+   "file": "102427-tree-lod-li-wood-2026-11-23-250m-after.jpg",
+   "time": "10:24:27",
+   "kind": "image"
+  },
+  {
+   "file": "102441-tree-lod-li-wood-2026-11-23-150m-after.jpg",
+   "time": "10:24:41",
+   "kind": "image"
+  },
+  {
+   "file": "102520-tree-lod-li-wood-2026-07-15-330m-after.jpg",
+   "time": "10:25:20",
+   "kind": "image"
+  },
+  {
+   "file": "102546-tree-lod-li-wood-2026-07-15-150m-after.jpg",
+   "time": "10:25:46",
+   "kind": "image"
+  },
+  {
+   "file": "102612-tree-lod-li-wood-2026-10-28-600m-after.jpg",
+   "time": "10:26:12",
+   "kind": "image"
+  },
+  {
+   "file": "102625-tree-lod-li-wood-2026-10-28-330m-after.jpg",
+   "time": "10:26:25",
+   "kind": "image"
+  },
+  {
+   "file": "102638-tree-lod-li-wood-2026-10-28-250m-after.jpg",
+   "time": "10:26:38",
+   "kind": "image"
+  },
+  {
+   "file": "102651-tree-lod-li-wood-2026-10-28-150m-after.jpg",
+   "time": "10:26:51",
+   "kind": "image"
+  },
+  {
+   "file": "102704-tree-lod-li-wood-2026-10-28-60m-after.jpg",
+   "time": "10:27:04",
+   "kind": "image"
+  },
+  {
+   "file": "102717-tree-lod-li-wood-2026-05-10-600m-after.jpg",
+   "time": "10:27:17",
+   "kind": "image"
+  },
+  {
+   "file": "102730-tree-lod-li-wood-2026-05-10-330m-after.jpg",
+   "time": "10:27:30",
+   "kind": "image"
+  },
+  {
+   "file": "102744-tree-lod-li-wood-2026-05-10-250m-after.jpg",
+   "time": "10:27:44",
+   "kind": "image"
+  },
+  {
+   "file": "102757-tree-lod-li-wood-2026-05-10-150m-after.jpg",
+   "time": "10:27:57",
+   "kind": "image"
+  },
+  {
+   "file": "102810-tree-lod-li-wood-2026-05-10-60m-after.jpg",
+   "time": "10:28:10",
+   "kind": "image"
+  },
+  {
+   "file": "102826-tree-lod-bf-2026-11-23-n-after.jpg",
+   "time": "10:28:26",
+   "kind": "image"
+  },
+  {
+   "file": "102842-tree-lod-bf-2026-11-23-s-after.jpg",
+   "time": "10:28:42",
+   "kind": "image"
+  },
+  {
+   "file": "102858-tree-lod-bf-2026-07-15-n-after.jpg",
+   "time": "10:28:58",
+   "kind": "image"
+  },
+  {
+   "file": "102915-tree-lod-bf-2026-10-28-n-after.jpg",
+   "time": "10:29:15",
+   "kind": "image"
+  },
+  {
+   "file": "102931-tree-lod-bf-2026-11-23-n-before.jpg",
+   "time": "10:29:31",
+   "kind": "image"
+  },
+  {
+   "file": "102947-tree-lod-bf-2026-11-23-s-before.jpg",
+   "time": "10:29:47",
+   "kind": "image"
+  },
+  {
+   "file": "102958-osm-lamps-vaduz-night-wayland.jpg",
+   "time": "10:29:58",
+   "kind": "image"
+  },
+  {
+   "file": "103003-tree-lod-bf-2026-07-15-n-before.jpg",
+   "time": "10:30:03",
+   "kind": "image"
+  },
+  {
+   "file": "103018-tree-lod-bf-2026-10-28-n-before.jpg",
+   "time": "10:30:18",
+   "kind": "image"
+  },
+  {
+   "file": "103024-osm-lamps-santacruz-night-wayland.jpg",
+   "time": "10:30:24",
+   "kind": "image"
+  },
+  {
+   "file": "103032-tree-lod-li-wood-2026-07-15-600m-before.jpg",
+   "time": "10:30:32",
+   "kind": "image"
+  },
+  {
+   "file": "103039-osm-lamps-schaan-night-wayland.jpg",
+   "time": "10:30:39",
+   "kind": "image"
+  },
+  {
+   "file": "103044-tree-lod-li-wood-2026-07-15-330m-before.jpg",
+   "time": "10:30:44",
+   "kind": "image"
+  },
+  {
+   "file": "103057-tree-lod-li-wood-2026-07-15-250m-before.jpg",
+   "time": "10:30:57",
+   "kind": "image"
+  },
+  {
+   "file": "103110-tree-lod-li-wood-2026-07-15-150m-before.jpg",
+   "time": "10:31:10",
+   "kind": "image"
+  },
+  {
+   "file": "103122-tree-lod-li-wood-2026-07-15-60m-before.jpg",
+   "time": "10:31:22",
+   "kind": "image"
+  },
+  {
+   "file": "103130-osm-lamps-santacruz-mapped-night-wayland.jpg",
+   "time": "10:31:30",
+   "kind": "image"
+  },
+  {
+   "file": "103135-tree-lod-li-wood-2026-10-28-600m-before.jpg",
+   "time": "10:31:35",
+   "kind": "image"
+  },
+  {
+   "file": "103148-tree-lod-li-wood-2026-10-28-330m-before.jpg",
+   "time": "10:31:48",
+   "kind": "image"
+  },
+  {
+   "file": "103201-tree-lod-li-wood-2026-10-28-250m-before.jpg",
+   "time": "10:32:01",
+   "kind": "image"
+  },
+  {
+   "file": "103213-tree-lod-li-wood-2026-10-28-150m-before.jpg",
+   "time": "10:32:13",
+   "kind": "image"
+  },
+  {
+   "file": "103226-tree-lod-li-wood-2026-10-28-60m-before.jpg",
+   "time": "10:32:26",
+   "kind": "image"
+  },
+  {
+   "file": "103239-tree-lod-li-wood-2026-05-10-600m-before.jpg",
+   "time": "10:32:39",
+   "kind": "image"
+  },
+  {
+   "file": "103251-tree-lod-li-wood-2026-05-10-330m-before.jpg",
+   "time": "10:32:51",
+   "kind": "image"
+  },
+  {
+   "file": "103304-tree-lod-li-wood-2026-05-10-250m-before.jpg",
+   "time": "10:33:04",
+   "kind": "image"
+  },
+  {
+   "file": "103317-tree-lod-li-wood-2026-05-10-150m-before.jpg",
+   "time": "10:33:17",
+   "kind": "image"
+  },
+  {
+   "file": "103330-tree-lod-li-wood-2026-05-10-60m-before.jpg",
+   "time": "10:33:30",
+   "kind": "image"
+  },
+  {
+   "file": "105417-tree-lod-li-wood-2026-07-15-600m-after.jpg",
+   "time": "10:54:17",
+   "kind": "image"
+  },
+  {
+   "file": "105430-tree-lod-li-wood-2026-07-15-250m-after.jpg",
+   "time": "10:54:30",
+   "kind": "image"
+  },
+  {
+   "file": "105443-tree-lod-li-wood-2026-07-15-60m-after.jpg",
+   "time": "10:54:43",
+   "kind": "image"
+  },
+  {
+   "file": "105456-tree-lod-li-wood-2026-11-23-60m-after.jpg",
+   "time": "10:54:56",
+   "kind": "image"
+  },
+  {
+   "file": "105529-tree-lod-uni-forest-jul-12m-before.jpg",
+   "time": "10:55:29",
+   "kind": "image"
+  },
+  {
+   "file": "105541-tree-lod-uni-forest-jul-plane-15m-before.jpg",
+   "time": "10:55:41",
+   "kind": "image"
+  },
+  {
+   "file": "105554-tree-lod-uni-forest-nov-12m-before.jpg",
+   "time": "10:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "105730-tree-lod-uni-forest-jul-12m-after.jpg",
+   "time": "10:57:30",
+   "kind": "image"
+  },
+  {
+   "file": "105743-tree-lod-uni-forest-jul-plane-15m-after.jpg",
+   "time": "10:57:43",
+   "kind": "image"
+  },
+  {
+   "file": "105756-tree-lod-uni-forest-nov-12m-after.jpg",
+   "time": "10:57:56",
+   "kind": "image"
+  },
+  {
+   "file": "105815-junction-fan-fan-unicorn-before.jpg",
+   "time": "10:58:15",
+   "kind": "image"
+  },
+  {
+   "file": "105816-junction-fan-fan-unicorn-before.mp4",
+   "time": "10:58:16",
+   "kind": "video"
+  },
+  {
+   "file": "105835-junction-fan-fan-unicorn-after.jpg",
+   "time": "10:58:35",
+   "kind": "image"
+  },
+  {
+   "file": "105837-junction-fan-fan-unicorn-after.mp4",
+   "time": "10:58:37",
+   "kind": "video"
+  },
+  {
+   "file": "111436-ea3eb92f-shot-wayland-m3-helmet-road-side.jpg",
+   "time": "11:14:36",
+   "kind": "image"
+  },
+  {
+   "file": "111446-ea3eb92f-shot-wayland-m3-helmet-road-front.jpg",
+   "time": "11:14:46",
+   "kind": "image"
+  },
+  {
+   "file": "114614-models-e4-bike-node-gizmo-x11.jpg",
+   "time": "11:46:14",
+   "kind": "image"
+  },
+  {
+   "file": "114628-models-e4-bike-node-gizmo-wayland.jpg",
+   "time": "11:46:28",
+   "kind": "image"
+  },
+  {
+   "file": "114641-models-e4-bike-rotate-gizmo-x11.jpg",
+   "time": "11:46:41",
+   "kind": "image"
+  },
+  {
+   "file": "114655-models-e4-bike-rotate-gizmo-wayland.jpg",
+   "time": "11:46:55",
+   "kind": "image"
+  },
+  {
+   "file": "114708-models-e4-bike-scale-gizmo-x11.jpg",
+   "time": "11:47:08",
+   "kind": "image"
+  },
+  {
+   "file": "114722-models-e4-bike-scale-gizmo-wayland.jpg",
+   "time": "11:47:22",
+   "kind": "image"
+  },
+  {
+   "file": "114736-models-e4-anchor-added-x11.jpg",
+   "time": "11:47:36",
+   "kind": "image"
+  },
+  {
+   "file": "114750-models-e4-anchor-added-wayland.jpg",
+   "time": "11:47:50",
+   "kind": "image"
+  },
+  {
+   "file": "114803-models-e4-proxy-mesh-x11.jpg",
+   "time": "11:48:03",
+   "kind": "image"
+  },
+  {
+   "file": "114817-models-e4-proxy-mesh-wayland.jpg",
+   "time": "11:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "114830-models-e4-proxy-empty-x11.jpg",
+   "time": "11:48:30",
+   "kind": "image"
+  },
+  {
+   "file": "114845-models-e4-proxy-empty-wayland.jpg",
+   "time": "11:48:45",
+   "kind": "image"
+  },
+  {
+   "file": "114859-models-e4-slot-picker-x11.jpg",
+   "time": "11:48:59",
+   "kind": "image"
+  },
+  {
+   "file": "114913-models-e4-slot-picker-wayland.jpg",
+   "time": "11:49:13",
+   "kind": "image"
+  },
+  {
+   "file": "114927-models-e4-diff-before-save-x11.jpg",
+   "time": "11:49:27",
+   "kind": "image"
+  },
+  {
+   "file": "114944-models-e4-diff-before-save-wayland.jpg",
+   "time": "11:49:44",
+   "kind": "image"
+  },
+  {
+   "file": "115252-models-e4-blender-reimport-x11.jpg",
+   "time": "11:52:52",
+   "kind": "image"
+  },
+  {
+   "file": "115309-models-e4-blender-reimport-wayland.jpg",
+   "time": "11:53:09",
+   "kind": "image"
+  },
+  {
+   "file": "122912-web-ios-phone-after-tenerife-1min.png",
+   "time": "12:29:12",
+   "kind": "image"
+  },
+  {
+   "file": "122912-web-ios-phone-after-tenerife-2min.png",
+   "time": "12:29:12",
+   "kind": "image"
+  },
+  {
+   "file": "122912-web-ios-phone-after-tenerife-3min.png",
+   "time": "12:29:12",
+   "kind": "image"
+  },
+  {
+   "file": "122912-web-ios-phone-after-tenerife-4min.png",
+   "time": "12:29:12",
+   "kind": "image"
+  },
+  {
+   "file": "122912-web-ios-phone-after-tenerife-5min.png",
+   "time": "12:29:12",
+   "kind": "image"
+  },
+  {
+   "file": "122912-web-ios-phone-after-tenerife-context-reloaded.png",
+   "time": "12:29:12",
+   "kind": "image"
+  },
+  {
+   "file": "122912-web-ios-phone-after-tenerife-end.png",
+   "time": "12:29:12",
+   "kind": "image"
+  },
+  {
+   "file": "122912-web-ios-phone-after-tenerife-start.png",
+   "time": "12:29:12",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-1min.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-2min.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-3min.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-4min.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-5min.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-context-lost-again.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-context-reloaded.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-end.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "123522-web-ios-phone-after-black-forest-north-start.png",
+   "time": "12:35:22",
+   "kind": "image"
+  },
+  {
+   "file": "124048-web-ios-phone-after-b9-tenerife-1min.png",
+   "time": "12:40:48",
+   "kind": "image"
+  },
+  {
+   "file": "124048-web-ios-phone-after-b9-tenerife-2min.png",
+   "time": "12:40:48",
+   "kind": "image"
+  },
+  {
+   "file": "124048-web-ios-phone-after-b9-tenerife-3min.png",
+   "time": "12:40:48",
+   "kind": "image"
+  },
+  {
+   "file": "124048-web-ios-phone-after-b9-tenerife-4min.png",
+   "time": "12:40:48",
+   "kind": "image"
+  },
+  {
+   "file": "124048-web-ios-phone-after-b9-tenerife-5min.png",
+   "time": "12:40:48",
+   "kind": "image"
+  },
+  {
+   "file": "124048-web-ios-phone-after-b9-tenerife-context-reloaded.png",
+   "time": "12:40:48",
+   "kind": "image"
+  },
+  {
+   "file": "124048-web-ios-phone-after-b9-tenerife-end.png",
+   "time": "12:40:48",
+   "kind": "image"
+  },
+  {
+   "file": "124048-web-ios-phone-after-b9-tenerife-start.png",
+   "time": "12:40:48",
+   "kind": "image"
+  },
+  {
+   "file": "124133-web-ios-phone-after-liechtenstein-1min.png",
+   "time": "12:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "124133-web-ios-phone-after-liechtenstein-2min.png",
+   "time": "12:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "124133-web-ios-phone-after-liechtenstein-3min.png",
+   "time": "12:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "124133-web-ios-phone-after-liechtenstein-4min.png",
+   "time": "12:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "124133-web-ios-phone-after-liechtenstein-5min.png",
+   "time": "12:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "124133-web-ios-phone-after-liechtenstein-context-reloaded.png",
+   "time": "12:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "124133-web-ios-phone-after-liechtenstein-end.png",
+   "time": "12:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "124133-web-ios-phone-after-liechtenstein-start.png",
+   "time": "12:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "124704-web-ios-phone-after-b9-black-forest-north-1min.png",
+   "time": "12:47:04",
+   "kind": "image"
+  },
+  {
+   "file": "124704-web-ios-phone-after-b9-black-forest-north-2min.png",
+   "time": "12:47:04",
+   "kind": "image"
+  },
+  {
+   "file": "124704-web-ios-phone-after-b9-black-forest-north-3min.png",
+   "time": "12:47:04",
+   "kind": "image"
+  },
+  {
+   "file": "124704-web-ios-phone-after-b9-black-forest-north-4min.png",
+   "time": "12:47:04",
+   "kind": "image"
+  },
+  {
+   "file": "124704-web-ios-phone-after-b9-black-forest-north-5min.png",
+   "time": "12:47:04",
+   "kind": "image"
+  },
+  {
+   "file": "124704-web-ios-phone-after-b9-black-forest-north-context-reloaded.png",
+   "time": "12:47:04",
+   "kind": "image"
+  },
+  {
+   "file": "124704-web-ios-phone-after-b9-black-forest-north-end.png",
+   "time": "12:47:04",
+   "kind": "image"
+  },
+  {
+   "file": "124704-web-ios-phone-after-b9-black-forest-north-start.png",
+   "time": "12:47:04",
+   "kind": "image"
+  },
+  {
+   "file": "124743-web-ios-phone-after-hills-1min.png",
+   "time": "12:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "124743-web-ios-phone-after-hills-2min.png",
+   "time": "12:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "124743-web-ios-phone-after-hills-3min.png",
+   "time": "12:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "124743-web-ios-phone-after-hills-4min.png",
+   "time": "12:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "124743-web-ios-phone-after-hills-5min.png",
+   "time": "12:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "124743-web-ios-phone-after-hills-context-reloaded.png",
+   "time": "12:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "124743-web-ios-phone-after-hills-end.png",
+   "time": "12:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "124743-web-ios-phone-after-hills-start.png",
+   "time": "12:47:43",
+   "kind": "image"
+  },
+  {
+   "file": "125217-unicorn-cycles-wing-beat-wayland.jpg",
+   "time": "12:52:17",
+   "kind": "image"
+  },
+  {
+   "file": "125232-unicorn-cycles-gallop-wayland.jpg",
+   "time": "12:52:32",
+   "kind": "image"
+  },
+  {
+   "file": "125247-unicorn-cycles-wing-beat-x11.jpg",
+   "time": "12:52:47",
+   "kind": "image"
+  },
+  {
+   "file": "125304-unicorn-cycles-gallop-x11.jpg",
+   "time": "12:53:04",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-1min.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-2min.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-3min.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-4min.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-5min.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-context-reloaded.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-died-once.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-died-three-times.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-died-twice.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-end.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125337-web-ios-phone-after-loop-start.png",
+   "time": "12:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "125351-unicorn-cycles-wing-video-end.jpg",
+   "time": "12:53:51",
+   "kind": "image"
+  },
+  {
+   "file": "125355-unicorn-cycles-wing-cycle.mp4",
+   "time": "12:53:55",
+   "kind": "video"
+  },
+  {
+   "file": "125442-unicorn-cycles-landing-video-end.jpg",
+   "time": "12:54:42",
+   "kind": "image"
+  },
+  {
+   "file": "125444-unicorn-cycles-landing-cycle.mp4",
+   "time": "12:54:44",
+   "kind": "video"
+  },
+  {
+   "file": "135646-q6-creases-a-side-live.jpg",
+   "time": "13:56:46",
+   "kind": "image"
+  },
+  {
+   "file": "135700-q6-creases-a-side-j2b.jpg",
+   "time": "13:57:00",
+   "kind": "image"
+  },
+  {
+   "file": "135715-q6-creases-a-side-j3.jpg",
+   "time": "13:57:15",
+   "kind": "image"
+  },
+  {
+   "file": "135730-q6-creases-a-approach-live.jpg",
+   "time": "13:57:30",
+   "kind": "image"
+  },
+  {
+   "file": "135745-q6-creases-a-approach-j2b.jpg",
+   "time": "13:57:45",
+   "kind": "image"
+  },
+  {
+   "file": "135800-q6-creases-a-approach-j3.jpg",
+   "time": "13:58:00",
+   "kind": "image"
+  },
+  {
+   "file": "135808-q6-creases-chart-a-crease.png",
+   "time": "13:58:08",
+   "kind": "image"
+  },
+  {
+   "file": "135808-q6-creases-chart-b-blended.png",
+   "time": "13:58:08",
+   "kind": "image"
+  },
+  {
+   "file": "135808-q6-creases-chart-c-junction-room.png",
+   "time": "13:58:08",
+   "kind": "image"
+  },
+  {
+   "file": "135814-q6-creases-a-rider-live.jpg",
+   "time": "13:58:14",
+   "kind": "image"
+  },
+  {
+   "file": "135829-q6-creases-a-rider-j2b.jpg",
+   "time": "13:58:29",
+   "kind": "image"
+  },
+  {
+   "file": "135844-q6-creases-a-rider-j3.jpg",
+   "time": "13:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "135858-q6-creases-c-side-live.jpg",
+   "time": "13:58:58",
+   "kind": "image"
+  },
+  {
+   "file": "135911-q6-creases-c-side-j2b.jpg",
+   "time": "13:59:11",
+   "kind": "image"
+  },
+  {
+   "file": "135925-q6-creases-c-side-j3.jpg",
+   "time": "13:59:25",
+   "kind": "image"
+  },
+  {
+   "file": "135939-q6-creases-c-rider-live.jpg",
+   "time": "13:59:39",
+   "kind": "image"
+  },
+  {
+   "file": "135953-q6-creases-c-rider-j2b.jpg",
+   "time": "13:59:53",
+   "kind": "image"
+  },
+  {
+   "file": "140007-q6-creases-c-rider-j3.jpg",
+   "time": "14:00:07",
+   "kind": "image"
+  },
+  {
+   "file": "140021-q6-creases-c-up-live.jpg",
+   "time": "14:00:21",
+   "kind": "image"
+  },
+  {
+   "file": "140035-q6-creases-c-up-j2b.jpg",
+   "time": "14:00:35",
+   "kind": "image"
+  },
+  {
+   "file": "140049-q6-creases-c-up-j3.jpg",
+   "time": "14:00:49",
+   "kind": "image"
+  },
+  {
+   "file": "140103-q6-creases-b-side-live.jpg",
+   "time": "14:01:03",
+   "kind": "image"
+  },
+  {
+   "file": "140118-q6-creases-b-side-j3.jpg",
+   "time": "14:01:18",
+   "kind": "image"
+  },
+  {
+   "file": "140132-q6-creases-b-rider-live.jpg",
+   "time": "14:01:32",
+   "kind": "image"
+  },
+  {
+   "file": "140146-q6-creases-b-rider-j3.jpg",
+   "time": "14:01:46",
+   "kind": "image"
+  },
+  {
+   "file": "140202-q6-creases-compare-a-approach.jpg",
+   "time": "14:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "140202-q6-creases-compare-a-rider.jpg",
+   "time": "14:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "140202-q6-creases-compare-a-side.jpg",
+   "time": "14:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "140202-q6-creases-compare-b-rider.jpg",
+   "time": "14:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "140202-q6-creases-compare-b-side.jpg",
+   "time": "14:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "140202-q6-creases-compare-c-rider.jpg",
+   "time": "14:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "140202-q6-creases-compare-c-side.jpg",
+   "time": "14:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "140202-q6-creases-compare-c-up.jpg",
+   "time": "14:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "143505-plant-files-q11-li-forest-2026-07-15-far-before-generator.jpg",
+   "time": "14:35:05",
+   "kind": "image"
+  },
+  {
+   "file": "143521-plant-files-q11-li-forest-2026-07-15-near-before-generator.jpg",
+   "time": "14:35:21",
+   "kind": "image"
+  },
+  {
+   "file": "143537-plant-files-q11-li-forest-2026-11-23-far-before-generator.jpg",
+   "time": "14:35:37",
+   "kind": "image"
+  },
+  {
+   "file": "143553-plant-files-q11-li-forest-2026-11-23-near-before-generator.jpg",
+   "time": "14:35:53",
+   "kind": "image"
+  },
+  {
+   "file": "143614-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-07-15-near-before-generator.jpg",
+   "time": "14:36:14",
+   "kind": "image"
+  },
+  {
+   "file": "143633-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-07-15-far-before-generator.jpg",
+   "time": "14:36:33",
+   "kind": "image"
+  },
+  {
+   "file": "143653-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-11-23-near-before-generator.jpg",
+   "time": "14:36:53",
+   "kind": "image"
+  },
+  {
+   "file": "143715-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-11-23-far-before-generator.jpg",
+   "time": "14:37:15",
+   "kind": "image"
+  },
+  {
+   "file": "143737-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-near-before-generator.jpg",
+   "time": "14:37:37",
+   "kind": "image"
+  },
+  {
+   "file": "143757-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-far-before-generator.jpg",
+   "time": "14:37:57",
+   "kind": "image"
+  },
+  {
+   "file": "143817-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-near-before-generator.jpg",
+   "time": "14:38:17",
+   "kind": "image"
+  },
+  {
+   "file": "143838-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-far-before-generator.jpg",
+   "time": "14:38:38",
+   "kind": "image"
+  },
+  {
+   "file": "143900-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-near-before-generator.jpg",
+   "time": "14:39:00",
+   "kind": "image"
+  },
+  {
+   "file": "143922-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-far-before-generator.jpg",
+   "time": "14:39:22",
+   "kind": "image"
+  },
+  {
+   "file": "143944-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-near-before-generator.jpg",
+   "time": "14:39:44",
+   "kind": "image"
+  },
+  {
+   "file": "144007-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-far-before-generator.jpg",
+   "time": "14:40:07",
+   "kind": "image"
+  },
+  {
+   "file": "144029-plant-files-q11-tf-bananas-2026-07-15-near-before-generator.jpg",
+   "time": "14:40:29",
+   "kind": "image"
+  },
+  {
+   "file": "144052-plant-files-q11-tf-bananas-2026-11-23-near-before-generator.jpg",
+   "time": "14:40:52",
+   "kind": "image"
+  },
+  {
+   "file": "144108-plant-files-q11-li-forest-2026-07-15-far-before-files.jpg",
+   "time": "14:41:08",
+   "kind": "image"
+  },
+  {
+   "file": "144124-plant-files-q11-li-forest-2026-07-15-near-before-files.jpg",
+   "time": "14:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "144140-plant-files-q11-li-forest-2026-11-23-far-before-files.jpg",
+   "time": "14:41:40",
+   "kind": "image"
+  },
+  {
+   "file": "144156-plant-files-q11-li-forest-2026-11-23-near-before-files.jpg",
+   "time": "14:41:56",
+   "kind": "image"
+  },
+  {
+   "file": "144218-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-07-15-near-before-files.jpg",
+   "time": "14:42:18",
+   "kind": "image"
+  },
+  {
+   "file": "144238-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-07-15-far-before-files.jpg",
+   "time": "14:42:38",
+   "kind": "image"
+  },
+  {
+   "file": "144258-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-11-23-near-before-files.jpg",
+   "time": "14:42:58",
+   "kind": "image"
+  },
+  {
+   "file": "144319-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-11-23-far-before-files.jpg",
+   "time": "14:43:19",
+   "kind": "image"
+  },
+  {
+   "file": "144339-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-near-before-files.jpg",
+   "time": "14:43:39",
+   "kind": "image"
+  },
+  {
+   "file": "144359-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-far-before-files.jpg",
+   "time": "14:43:59",
+   "kind": "image"
+  },
+  {
+   "file": "144419-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-near-before-files.jpg",
+   "time": "14:44:19",
+   "kind": "image"
+  },
+  {
+   "file": "144438-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-far-before-files.jpg",
+   "time": "14:44:38",
+   "kind": "image"
+  },
+  {
+   "file": "144458-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-near-before-files.jpg",
+   "time": "14:44:58",
+   "kind": "image"
+  },
+  {
+   "file": "144517-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-far-before-files.jpg",
+   "time": "14:45:17",
+   "kind": "image"
+  },
+  {
+   "file": "144537-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-near-before-files.jpg",
+   "time": "14:45:37",
+   "kind": "image"
+  },
+  {
+   "file": "144557-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-far-before-files.jpg",
+   "time": "14:45:57",
+   "kind": "image"
+  },
+  {
+   "file": "144616-plant-files-q11-tf-bananas-2026-07-15-near-before-files.jpg",
+   "time": "14:46:16",
+   "kind": "image"
+  },
+  {
+   "file": "144635-plant-files-q11-tf-bananas-2026-11-23-near-before-files.jpg",
+   "time": "14:46:35",
+   "kind": "image"
+  },
+  {
+   "file": "144652-plant-files-q11-li-forest-2026-07-15-far-after-generator.jpg",
+   "time": "14:46:52",
+   "kind": "image"
+  },
+  {
+   "file": "144708-plant-files-q11-li-forest-2026-07-15-near-after-generator.jpg",
+   "time": "14:47:08",
+   "kind": "image"
+  },
+  {
+   "file": "144724-plant-files-q11-li-forest-2026-11-23-far-after-generator.jpg",
+   "time": "14:47:24",
+   "kind": "image"
+  },
+  {
+   "file": "144740-plant-files-q11-li-forest-2026-11-23-near-after-generator.jpg",
+   "time": "14:47:40",
+   "kind": "image"
+  },
+  {
+   "file": "144800-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-07-15-near-after-generator.jpg",
+   "time": "14:48:00",
+   "kind": "image"
+  },
+  {
+   "file": "144820-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-07-15-far-after-generator.jpg",
+   "time": "14:48:20",
+   "kind": "image"
+  },
+  {
+   "file": "144839-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-11-23-near-after-generator.jpg",
+   "time": "14:48:39",
+   "kind": "image"
+  },
+  {
+   "file": "144859-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-11-23-far-after-generator.jpg",
+   "time": "14:48:59",
+   "kind": "image"
+  },
+  {
+   "file": "144919-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-near-after-generator.jpg",
+   "time": "14:49:19",
+   "kind": "image"
+  },
+  {
+   "file": "144939-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-far-after-generator.jpg",
+   "time": "14:49:39",
+   "kind": "image"
+  },
+  {
+   "file": "144959-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-near-after-generator.jpg",
+   "time": "14:49:59",
+   "kind": "image"
+  },
+  {
+   "file": "145019-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-far-after-generator.jpg",
+   "time": "14:50:19",
+   "kind": "image"
+  },
+  {
+   "file": "145039-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-near-after-generator.jpg",
+   "time": "14:50:39",
+   "kind": "image"
+  },
+  {
+   "file": "145059-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-far-after-generator.jpg",
+   "time": "14:50:59",
+   "kind": "image"
+  },
+  {
+   "file": "145120-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-near-after-generator.jpg",
+   "time": "14:51:20",
+   "kind": "image"
+  },
+  {
+   "file": "145141-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-far-after-generator.jpg",
+   "time": "14:51:41",
+   "kind": "image"
+  },
+  {
+   "file": "145201-plant-files-q11-tf-bananas-2026-07-15-near-after-generator.jpg",
+   "time": "14:52:01",
+   "kind": "image"
+  },
+  {
+   "file": "145220-plant-files-q11-tf-bananas-2026-11-23-near-after-generator.jpg",
+   "time": "14:52:20",
+   "kind": "image"
+  },
+  {
+   "file": "145236-plant-files-q11-li-forest-2026-07-15-far-after-files.jpg",
+   "time": "14:52:36",
+   "kind": "image"
+  },
+  {
+   "file": "145252-plant-files-q11-li-forest-2026-07-15-near-after-files.jpg",
+   "time": "14:52:52",
+   "kind": "image"
+  },
+  {
+   "file": "145308-plant-files-q11-li-forest-2026-11-23-far-after-files.jpg",
+   "time": "14:53:08",
+   "kind": "image"
+  },
+  {
+   "file": "145324-plant-files-q11-li-forest-2026-11-23-near-after-files.jpg",
+   "time": "14:53:24",
+   "kind": "image"
+  },
+  {
+   "file": "145344-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-07-15-near-after-files.jpg",
+   "time": "14:53:44",
+   "kind": "image"
+  },
+  {
+   "file": "145404-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-07-15-far-after-files.jpg",
+   "time": "14:54:04",
+   "kind": "image"
+  },
+  {
+   "file": "145426-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-11-23-near-after-files.jpg",
+   "time": "14:54:26",
+   "kind": "image"
+  },
+  {
+   "file": "145446-e8fd6ab4-dirty-shot-wayland-bf-conifers-2026-11-23-far-after-files.jpg",
+   "time": "14:54:46",
+   "kind": "image"
+  },
+  {
+   "file": "145506-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-near-after-files.jpg",
+   "time": "14:55:06",
+   "kind": "image"
+  },
+  {
+   "file": "145528-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-far-after-files.jpg",
+   "time": "14:55:28",
+   "kind": "image"
+  },
+  {
+   "file": "145549-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-near-after-files.jpg",
+   "time": "14:55:49",
+   "kind": "image"
+  },
+  {
+   "file": "145611-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-far-after-files.jpg",
+   "time": "14:56:11",
+   "kind": "image"
+  },
+  {
+   "file": "145631-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-near-after-files.jpg",
+   "time": "14:56:31",
+   "kind": "image"
+  },
+  {
+   "file": "145652-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-far-after-files.jpg",
+   "time": "14:56:52",
+   "kind": "image"
+  },
+  {
+   "file": "145712-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-near-after-files.jpg",
+   "time": "14:57:12",
+   "kind": "image"
+  },
+  {
+   "file": "145731-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-far-after-files.jpg",
+   "time": "14:57:31",
+   "kind": "image"
+  },
+  {
+   "file": "145751-plant-files-q11-tf-bananas-2026-07-15-near-after-files.jpg",
+   "time": "14:57:51",
+   "kind": "image"
+  },
+  {
+   "file": "145811-plant-files-q11-tf-bananas-2026-11-23-near-after-files.jpg",
+   "time": "14:58:11",
+   "kind": "image"
+  },
+  {
+   "file": "150010-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-07-15-far-before-generator.jpg",
+   "time": "15:00:10",
+   "kind": "image"
+  },
+  {
+   "file": "150034-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-07-15-near-before-generator.jpg",
+   "time": "15:00:34",
+   "kind": "image"
+  },
+  {
+   "file": "150057-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-11-23-far-before-generator.jpg",
+   "time": "15:00:57",
+   "kind": "image"
+  },
+  {
+   "file": "150118-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-11-23-near-before-generator.jpg",
+   "time": "15:01:18",
+   "kind": "image"
+  },
+  {
+   "file": "150139-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-07-15-far-before-files.jpg",
+   "time": "15:01:39",
+   "kind": "image"
+  },
+  {
+   "file": "150202-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-07-15-near-before-files.jpg",
+   "time": "15:02:02",
+   "kind": "image"
+  },
+  {
+   "file": "150226-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-11-23-far-before-files.jpg",
+   "time": "15:02:26",
+   "kind": "image"
+  },
+  {
+   "file": "150249-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-11-23-near-before-files.jpg",
+   "time": "15:02:49",
+   "kind": "image"
+  },
+  {
+   "file": "150311-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-07-15-far-after-generator.jpg",
+   "time": "15:03:11",
+   "kind": "image"
+  },
+  {
+   "file": "150332-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-07-15-near-after-generator.jpg",
+   "time": "15:03:32",
+   "kind": "image"
+  },
+  {
+   "file": "150355-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-11-23-far-after-generator.jpg",
+   "time": "15:03:55",
+   "kind": "image"
+  },
+  {
+   "file": "150416-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-11-23-near-after-generator.jpg",
+   "time": "15:04:16",
+   "kind": "image"
+  },
+  {
+   "file": "150438-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-07-15-far-after-files.jpg",
+   "time": "15:04:38",
+   "kind": "image"
+  },
+  {
+   "file": "150459-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-07-15-near-after-files.jpg",
+   "time": "15:04:59",
+   "kind": "image"
+  },
+  {
+   "file": "150521-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-11-23-far-after-files.jpg",
+   "time": "15:05:21",
+   "kind": "image"
+  },
+  {
+   "file": "150545-e8fd6ab4-dirty-shot-wayland-bf-schauinsland-2026-11-23-near-after-files.jpg",
+   "time": "15:05:45",
+   "kind": "image"
+  },
+  {
+   "file": "150606-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-far-before-generator.jpg",
+   "time": "15:06:06",
+   "kind": "image"
+  },
+  {
+   "file": "150629-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-near-before-generator.jpg",
+   "time": "15:06:29",
+   "kind": "image"
+  },
+  {
+   "file": "150652-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-far-before-generator.jpg",
+   "time": "15:06:52",
+   "kind": "image"
+  },
+  {
+   "file": "150715-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-near-before-generator.jpg",
+   "time": "15:07:15",
+   "kind": "image"
+  },
+  {
+   "file": "150738-e8fd6ab4-dirty-shot-wayland-tf-palms-above-2026-07-15-near-before-generator.jpg",
+   "time": "15:07:38",
+   "kind": "image"
+  },
+  {
+   "file": "150800-e8fd6ab4-dirty-shot-wayland-tf-palms-above-2026-11-23-near-before-generator.jpg",
+   "time": "15:08:00",
+   "kind": "image"
+  },
+  {
+   "file": "150822-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-far-before-files.jpg",
+   "time": "15:08:22",
+   "kind": "image"
+  },
+  {
+   "file": "150844-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-near-before-files.jpg",
+   "time": "15:08:44",
+   "kind": "image"
+  },
+  {
+   "file": "150906-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-far-before-files.jpg",
+   "time": "15:09:06",
+   "kind": "image"
+  },
+  {
+   "file": "150928-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-near-before-files.jpg",
+   "time": "15:09:28",
+   "kind": "image"
+  },
+  {
+   "file": "150951-e8fd6ab4-dirty-shot-wayland-tf-palms-above-2026-07-15-near-before-files.jpg",
+   "time": "15:09:51",
+   "kind": "image"
+  },
+  {
+   "file": "151013-e8fd6ab4-dirty-shot-wayland-tf-palms-above-2026-11-23-near-before-files.jpg",
+   "time": "15:10:13",
+   "kind": "image"
+  },
+  {
+   "file": "151037-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-far-after-generator.jpg",
+   "time": "15:10:37",
+   "kind": "image"
+  },
+  {
+   "file": "151101-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-near-after-generator.jpg",
+   "time": "15:11:01",
+   "kind": "image"
+  },
+  {
+   "file": "151124-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-far-after-generator.jpg",
+   "time": "15:11:24",
+   "kind": "image"
+  },
+  {
+   "file": "151147-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-near-after-generator.jpg",
+   "time": "15:11:47",
+   "kind": "image"
+  },
+  {
+   "file": "151207-e8fd6ab4-dirty-shot-wayland-tf-palms-above-2026-07-15-near-after-generator.jpg",
+   "time": "15:12:07",
+   "kind": "image"
+  },
+  {
+   "file": "151228-e8fd6ab4-dirty-shot-wayland-tf-palms-above-2026-11-23-near-after-generator.jpg",
+   "time": "15:12:28",
+   "kind": "image"
+  },
+  {
+   "file": "151251-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-far-after-files.jpg",
+   "time": "15:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "151313-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-07-15-near-after-files.jpg",
+   "time": "15:13:13",
+   "kind": "image"
+  },
+  {
+   "file": "151335-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-far-after-files.jpg",
+   "time": "15:13:35",
+   "kind": "image"
+  },
+  {
+   "file": "151356-e8fd6ab4-dirty-shot-wayland-tf-palms-2026-11-23-near-after-files.jpg",
+   "time": "15:13:56",
+   "kind": "image"
+  },
+  {
+   "file": "151400-13a-ring-green-meadow.jpg",
+   "time": "15:14:00",
+   "kind": "image"
+  },
+  {
+   "file": "151416-e8fd6ab4-dirty-shot-wayland-tf-palms-above-2026-07-15-near-after-files.jpg",
+   "time": "15:14:16",
+   "kind": "image"
+  },
+  {
+   "file": "151437-e8fd6ab4-dirty-shot-wayland-tf-palms-above-2026-11-23-near-after-files.jpg",
+   "time": "15:14:37",
+   "kind": "image"
+  },
+  {
+   "file": "151502-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-far-before-generator.jpg",
+   "time": "15:15:02",
+   "kind": "image"
+  },
+  {
+   "file": "151522-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-near-before-generator.jpg",
+   "time": "15:15:22",
+   "kind": "image"
+  },
+  {
+   "file": "151542-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-far-before-generator.jpg",
+   "time": "15:15:42",
+   "kind": "image"
+  },
+  {
+   "file": "151604-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-near-before-generator.jpg",
+   "time": "15:16:04",
+   "kind": "image"
+  },
+  {
+   "file": "151626-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-far-before-files.jpg",
+   "time": "15:16:26",
+   "kind": "image"
+  },
+  {
+   "file": "151637-13a-ring-red-water.jpg",
+   "time": "15:16:37",
+   "kind": "image"
+  },
+  {
+   "file": "151646-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-near-before-files.jpg",
+   "time": "15:16:46",
+   "kind": "image"
+  },
+  {
+   "file": "151652-13a-ring-red-house.jpg",
+   "time": "15:16:52",
+   "kind": "image"
+  },
+  {
+   "file": "151706-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-far-before-files.jpg",
+   "time": "15:17:06",
+   "kind": "image"
+  },
+  {
+   "file": "151726-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-near-before-files.jpg",
+   "time": "15:17:26",
+   "kind": "image"
+  },
+  {
+   "file": "151746-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-far-after-generator.jpg",
+   "time": "15:17:46",
+   "kind": "image"
+  },
+  {
+   "file": "151803-13a-climb-steep-slope.jpg",
+   "time": "15:18:03",
+   "kind": "image"
+  },
+  {
+   "file": "151806-13a-climb-steep-slope.mp4",
+   "time": "15:18:06",
+   "kind": "video"
+  },
+  {
+   "file": "151807-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-near-after-generator.jpg",
+   "time": "15:18:07",
+   "kind": "image"
+  },
+  {
+   "file": "151828-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-far-after-generator.jpg",
+   "time": "15:18:28",
+   "kind": "image"
+  },
+  {
+   "file": "151848-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-near-after-generator.jpg",
+   "time": "15:18:48",
+   "kind": "image"
+  },
+  {
+   "file": "151908-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-far-after-files.jpg",
+   "time": "15:19:08",
+   "kind": "image"
+  },
+  {
+   "file": "151930-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-07-15-near-after-files.jpg",
+   "time": "15:19:30",
+   "kind": "image"
+  },
+  {
+   "file": "151950-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-far-after-files.jpg",
+   "time": "15:19:50",
+   "kind": "image"
+  },
+  {
+   "file": "152010-e8fd6ab4-dirty-shot-wayland-tf-agave-2026-11-23-near-after-files.jpg",
+   "time": "15:20:10",
+   "kind": "image"
+  },
+  {
+   "file": "152043-13a-meadow-to-road.jpg",
+   "time": "15:20:43",
+   "kind": "image"
+  },
+  {
+   "file": "152053-13a-meadow-to-road.mp4",
+   "time": "15:20:53",
+   "kind": "video"
+  },
+  {
+   "file": "152116-plant-files-q11-bf-schauinsland-2026-07-15-far-before-generator.jpg",
+   "time": "15:21:16",
+   "kind": "image"
+  },
+  {
+   "file": "152140-plant-files-q11-bf-schauinsland-2026-07-15-near-before-generator.jpg",
+   "time": "15:21:40",
+   "kind": "image"
+  },
+  {
+   "file": "152202-plant-files-q11-bf-schauinsland-2026-11-23-far-before-generator.jpg",
+   "time": "15:22:02",
+   "kind": "image"
+  },
+  {
+   "file": "152226-plant-files-q11-bf-schauinsland-2026-11-23-near-before-generator.jpg",
+   "time": "15:22:26",
+   "kind": "image"
+  },
+  {
+   "file": "152243-plant-files-q11-li-forest-2026-07-15-far-before-generator.jpg",
+   "time": "15:22:43",
+   "kind": "image"
+  },
+  {
+   "file": "152259-plant-files-q11-li-forest-2026-07-15-near-before-generator.jpg",
+   "time": "15:22:59",
+   "kind": "image"
+  },
+  {
+   "file": "152315-plant-files-q11-li-forest-2026-11-23-far-before-generator.jpg",
+   "time": "15:23:15",
+   "kind": "image"
+  },
+  {
+   "file": "152331-plant-files-q11-li-forest-2026-11-23-near-before-generator.jpg",
+   "time": "15:23:31",
+   "kind": "image"
+  },
+  {
+   "file": "152352-plant-files-q11-tf-agave-2026-07-15-far-before-generator.jpg",
+   "time": "15:23:52",
+   "kind": "image"
+  },
+  {
+   "file": "152415-plant-files-q11-tf-agave-2026-07-15-near-before-generator.jpg",
+   "time": "15:24:15",
+   "kind": "image"
+  },
+  {
+   "file": "152437-plant-files-q11-tf-agave-2026-11-23-far-before-generator.jpg",
+   "time": "15:24:37",
+   "kind": "image"
+  },
+  {
+   "file": "152459-plant-files-q11-tf-agave-2026-11-23-near-before-generator.jpg",
+   "time": "15:24:59",
+   "kind": "image"
+  },
+  {
+   "file": "152522-plant-files-q11-tf-bananas-2026-07-15-near-before-generator.jpg",
+   "time": "15:25:22",
+   "kind": "image"
+  },
+  {
+   "file": "152544-plant-files-q11-tf-bananas-2026-11-23-near-before-generator.jpg",
+   "time": "15:25:44",
+   "kind": "image"
+  },
+  {
+   "file": "152607-plant-files-q11-tf-palms-2026-07-15-far-before-generator.jpg",
+   "time": "15:26:07",
+   "kind": "image"
+  },
+  {
+   "file": "152630-plant-files-q11-tf-palms-2026-07-15-near-before-generator.jpg",
+   "time": "15:26:30",
+   "kind": "image"
+  },
+  {
+   "file": "152653-plant-files-q11-tf-palms-2026-11-23-far-before-generator.jpg",
+   "time": "15:26:53",
+   "kind": "image"
+  },
+  {
+   "file": "152706-j4-q7-chart-a-crease.png",
+   "time": "15:27:06",
+   "kind": "image"
+  },
+  {
+   "file": "152706-j4-q7-chart-b-blended.png",
+   "time": "15:27:06",
+   "kind": "image"
+  },
+  {
+   "file": "152707-j4-q7-chart-c-junction-room.png",
+   "time": "15:27:07",
+   "kind": "image"
+  },
+  {
+   "file": "152714-plant-files-q11-tf-palms-2026-11-23-near-before-generator.jpg",
+   "time": "15:27:14",
+   "kind": "image"
+  },
+  {
+   "file": "152736-plant-files-q11-tf-palms-above-2026-07-15-near-before-generator.jpg",
+   "time": "15:27:36",
+   "kind": "image"
+  },
+  {
+   "file": "152756-plant-files-q11-tf-palms-above-2026-11-23-near-before-generator.jpg",
+   "time": "15:27:56",
+   "kind": "image"
+  },
+  {
+   "file": "152821-plant-files-q11-bf-schauinsland-2026-07-15-far-before-files.jpg",
+   "time": "15:28:21",
+   "kind": "image"
+  },
+  {
+   "file": "152844-plant-files-q11-bf-schauinsland-2026-07-15-near-before-files.jpg",
+   "time": "15:28:44",
+   "kind": "image"
+  },
+  {
+   "file": "152907-plant-files-q11-bf-schauinsland-2026-11-23-far-before-files.jpg",
+   "time": "15:29:07",
+   "kind": "image"
+  },
+  {
+   "file": "152931-plant-files-q11-bf-schauinsland-2026-11-23-near-before-files.jpg",
+   "time": "15:29:31",
+   "kind": "image"
+  },
+  {
+   "file": "152948-plant-files-q11-li-forest-2026-07-15-far-before-files.jpg",
+   "time": "15:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "153005-plant-files-q11-li-forest-2026-07-15-near-before-files.jpg",
+   "time": "15:30:05",
+   "kind": "image"
+  },
+  {
+   "file": "153021-plant-files-q11-li-forest-2026-11-23-far-before-files.jpg",
+   "time": "15:30:21",
+   "kind": "image"
+  },
+  {
+   "file": "153037-plant-files-q11-li-forest-2026-11-23-near-before-files.jpg",
+   "time": "15:30:37",
+   "kind": "image"
+  },
+  {
+   "file": "153100-plant-files-q11-tf-agave-2026-07-15-far-before-files.jpg",
+   "time": "15:31:00",
+   "kind": "image"
+  },
+  {
+   "file": "153122-plant-files-q11-tf-agave-2026-07-15-near-before-files.jpg",
+   "time": "15:31:22",
+   "kind": "image"
+  },
+  {
+   "file": "153142-plant-files-q11-tf-agave-2026-11-23-far-before-files.jpg",
+   "time": "15:31:42",
+   "kind": "image"
+  },
+  {
+   "file": "153204-plant-files-q11-tf-agave-2026-11-23-near-before-files.jpg",
+   "time": "15:32:04",
+   "kind": "image"
+  },
+  {
+   "file": "153226-plant-files-q11-tf-bananas-2026-07-15-near-before-files.jpg",
+   "time": "15:32:26",
+   "kind": "image"
+  },
+  {
+   "file": "153247-plant-files-q11-tf-bananas-2026-11-23-near-before-files.jpg",
+   "time": "15:32:47",
+   "kind": "image"
+  },
+  {
+   "file": "153300-smoke-d526dc9a-shot-ocw.jpg",
+   "time": "15:33:00",
+   "kind": "image"
+  },
+  {
+   "file": "153307-plant-files-q11-tf-palms-2026-07-15-far-before-files.jpg",
+   "time": "15:33:07",
+   "kind": "image"
+  },
+  {
+   "file": "153309-smoke-d526dc9a-shot-wayland-ocw-wayland.jpg",
+   "time": "15:33:09",
+   "kind": "image"
+  },
+  {
+   "file": "153324-j4-q7-a-side-live.jpg",
+   "time": "15:33:24",
+   "kind": "image"
+  },
+  {
+   "file": "153327-plant-files-q11-tf-palms-2026-07-15-near-before-files.jpg",
+   "time": "15:33:27",
+   "kind": "image"
+  },
+  {
+   "file": "153339-j4-q7-a-side-j3.jpg",
+   "time": "15:33:39",
+   "kind": "image"
+  },
+  {
+   "file": "153347-plant-files-q11-tf-palms-2026-11-23-far-before-files.jpg",
+   "time": "15:33:47",
+   "kind": "image"
+  },
+  {
+   "file": "153353-j4-q7-a-side-j4.jpg",
+   "time": "15:33:53",
+   "kind": "image"
+  },
+  {
+   "file": "153407-plant-files-q11-tf-palms-2026-11-23-near-before-files.jpg",
+   "time": "15:34:07",
+   "kind": "image"
+  },
+  {
+   "file": "153428-plant-files-q11-tf-palms-above-2026-07-15-near-before-files.jpg",
+   "time": "15:34:28",
+   "kind": "image"
+  },
+  {
+   "file": "153448-plant-files-q11-tf-palms-above-2026-11-23-near-before-files.jpg",
+   "time": "15:34:48",
+   "kind": "image"
+  },
+  {
+   "file": "153450-j4-q7-a-rider-live.jpg",
+   "time": "15:34:50",
+   "kind": "image"
+  },
+  {
+   "file": "153505-j4-q7-a-rider-j3.jpg",
+   "time": "15:35:05",
+   "kind": "image"
+  },
+  {
+   "file": "153511-plant-files-q11-bf-schauinsland-2026-07-15-far-after-generator.jpg",
+   "time": "15:35:11",
+   "kind": "image"
+  },
+  {
+   "file": "153519-j4-q7-a-rider-j4.jpg",
+   "time": "15:35:19",
+   "kind": "image"
+  },
+  {
+   "file": "153533-j4-q7-b-side-live.jpg",
+   "time": "15:35:33",
+   "kind": "image"
+  },
+  {
+   "file": "153533-plant-files-q11-bf-schauinsland-2026-07-15-near-after-generator.jpg",
+   "time": "15:35:33",
+   "kind": "image"
+  },
+  {
+   "file": "153548-j4-q7-b-side-j3.jpg",
+   "time": "15:35:48",
+   "kind": "image"
+  },
+  {
+   "file": "153556-plant-files-q11-bf-schauinsland-2026-11-23-far-after-generator.jpg",
+   "time": "15:35:56",
+   "kind": "image"
+  },
+  {
+   "file": "153602-j4-q7-b-side-j4.jpg",
+   "time": "15:36:02",
+   "kind": "image"
+  },
+  {
+   "file": "153617-j4-q7-b-rider-live.jpg",
+   "time": "15:36:17",
+   "kind": "image"
+  },
+  {
+   "file": "153618-plant-files-q11-bf-schauinsland-2026-11-23-near-after-generator.jpg",
+   "time": "15:36:18",
+   "kind": "image"
+  },
+  {
+   "file": "153631-j4-q7-b-rider-j3.jpg",
+   "time": "15:36:31",
+   "kind": "image"
+  },
+  {
+   "file": "153635-plant-files-q11-li-forest-2026-07-15-far-after-generator.jpg",
+   "time": "15:36:35",
+   "kind": "image"
+  },
+  {
+   "file": "153645-j4-q7-b-rider-j4.jpg",
+   "time": "15:36:45",
+   "kind": "image"
+  },
+  {
+   "file": "153651-plant-files-q11-li-forest-2026-07-15-near-after-generator.jpg",
+   "time": "15:36:51",
+   "kind": "image"
+  },
+  {
+   "file": "153700-j4-q7-c-side-live.jpg",
+   "time": "15:37:00",
+   "kind": "image"
+  },
+  {
+   "file": "153707-plant-files-q11-li-forest-2026-11-23-far-after-generator.jpg",
+   "time": "15:37:07",
+   "kind": "image"
+  },
+  {
+   "file": "153714-j4-q7-c-side-j3.jpg",
+   "time": "15:37:14",
+   "kind": "image"
+  },
+  {
+   "file": "153723-plant-files-q11-li-forest-2026-11-23-near-after-generator.jpg",
+   "time": "15:37:23",
+   "kind": "image"
+  },
+  {
+   "file": "153728-j4-q7-c-side-j4.jpg",
+   "time": "15:37:28",
+   "kind": "image"
+  },
+  {
+   "file": "153743-j4-q7-c-rider-live.jpg",
+   "time": "15:37:43",
+   "kind": "image"
+  },
+  {
+   "file": "153744-plant-files-q11-tf-agave-2026-07-15-far-after-generator.jpg",
+   "time": "15:37:44",
+   "kind": "image"
+  },
+  {
+   "file": "153757-j4-q7-c-rider-j3.jpg",
+   "time": "15:37:57",
+   "kind": "image"
+  },
+  {
+   "file": "153805-plant-files-q11-tf-agave-2026-07-15-near-after-generator.jpg",
+   "time": "15:38:05",
+   "kind": "image"
+  },
+  {
+   "file": "153811-j4-q7-c-rider-j4.jpg",
+   "time": "15:38:11",
+   "kind": "image"
+  },
+  {
+   "file": "153826-j4-q7-c-up-live.jpg",
+   "time": "15:38:26",
+   "kind": "image"
+  },
+  {
+   "file": "153826-plant-files-q11-tf-agave-2026-11-23-far-after-generator.jpg",
+   "time": "15:38:26",
+   "kind": "image"
+  },
+  {
+   "file": "153841-j4-q7-c-up-j3.jpg",
+   "time": "15:38:41",
+   "kind": "image"
+  },
+  {
+   "file": "153848-plant-files-q11-tf-agave-2026-11-23-near-after-generator.jpg",
+   "time": "15:38:48",
+   "kind": "image"
+  },
+  {
+   "file": "153856-j4-q7-c-up-j4.jpg",
+   "time": "15:38:56",
+   "kind": "image"
+  },
+  {
+   "file": "153910-plant-files-q11-tf-bananas-2026-07-15-near-after-generator.jpg",
+   "time": "15:39:10",
+   "kind": "image"
+  },
+  {
+   "file": "153933-plant-files-q11-tf-bananas-2026-11-23-near-after-generator.jpg",
+   "time": "15:39:33",
+   "kind": "image"
+  },
+  {
+   "file": "153955-plant-files-q11-tf-palms-2026-07-15-far-after-generator.jpg",
+   "time": "15:39:55",
+   "kind": "image"
+  },
+  {
+   "file": "154018-plant-files-q11-tf-palms-2026-07-15-near-after-generator.jpg",
+   "time": "15:40:18",
+   "kind": "image"
+  },
+  {
+   "file": "154042-plant-files-q11-tf-palms-2026-11-23-far-after-generator.jpg",
+   "time": "15:40:42",
+   "kind": "image"
+  },
+  {
+   "file": "154105-plant-files-q11-tf-palms-2026-11-23-near-after-generator.jpg",
+   "time": "15:41:05",
+   "kind": "image"
+  },
+  {
+   "file": "154128-plant-files-q11-tf-palms-above-2026-07-15-near-after-generator.jpg",
+   "time": "15:41:28",
+   "kind": "image"
+  },
+  {
+   "file": "154152-plant-files-q11-tf-palms-above-2026-11-23-near-after-generator.jpg",
+   "time": "15:41:52",
+   "kind": "image"
+  },
+  {
+   "file": "154218-plant-files-q11-bf-schauinsland-2026-07-15-far-after-files.jpg",
+   "time": "15:42:18",
+   "kind": "image"
+  },
+  {
+   "file": "154242-plant-files-q11-bf-schauinsland-2026-07-15-near-after-files.jpg",
+   "time": "15:42:42",
+   "kind": "image"
+  },
+  {
+   "file": "154259-j4-q7-compare-a-rider.jpg",
+   "time": "15:42:59",
+   "kind": "image"
+  },
+  {
+   "file": "154259-j4-q7-compare-a-side.jpg",
+   "time": "15:42:59",
+   "kind": "image"
+  },
+  {
+   "file": "154259-j4-q7-compare-b-rider.jpg",
+   "time": "15:42:59",
+   "kind": "image"
+  },
+  {
+   "file": "154259-j4-q7-compare-b-side.jpg",
+   "time": "15:42:59",
+   "kind": "image"
+  },
+  {
+   "file": "154259-j4-q7-compare-c-rider.jpg",
+   "time": "15:42:59",
+   "kind": "image"
+  },
+  {
+   "file": "154259-j4-q7-compare-c-side.jpg",
+   "time": "15:42:59",
+   "kind": "image"
+  },
+  {
+   "file": "154259-j4-q7-compare-c-up.jpg",
+   "time": "15:42:59",
+   "kind": "image"
+  },
+  {
+   "file": "154307-plant-files-q11-bf-schauinsland-2026-11-23-far-after-files.jpg",
+   "time": "15:43:07",
+   "kind": "image"
+  },
+  {
+   "file": "154333-plant-files-q11-bf-schauinsland-2026-11-23-near-after-files.jpg",
+   "time": "15:43:33",
+   "kind": "image"
+  },
+  {
+   "file": "154351-plant-files-q11-li-forest-2026-07-15-far-after-files.jpg",
+   "time": "15:43:51",
+   "kind": "image"
+  },
+  {
+   "file": "154408-plant-files-q11-li-forest-2026-07-15-near-after-files.jpg",
+   "time": "15:44:08",
+   "kind": "image"
+  },
+  {
+   "file": "154425-plant-files-q11-li-forest-2026-11-23-far-after-files.jpg",
+   "time": "15:44:25",
+   "kind": "image"
+  },
+  {
+   "file": "154442-plant-files-q11-li-forest-2026-11-23-near-after-files.jpg",
+   "time": "15:44:42",
+   "kind": "image"
+  },
+  {
+   "file": "154505-plant-files-q11-tf-agave-2026-07-15-far-after-files.jpg",
+   "time": "15:45:05",
+   "kind": "image"
+  },
+  {
+   "file": "154527-plant-files-q11-tf-agave-2026-07-15-near-after-files.jpg",
+   "time": "15:45:27",
+   "kind": "image"
+  },
+  {
+   "file": "154551-plant-files-q11-tf-agave-2026-11-23-far-after-files.jpg",
+   "time": "15:45:51",
+   "kind": "image"
+  },
+  {
+   "file": "154615-plant-files-q11-tf-agave-2026-11-23-near-after-files.jpg",
+   "time": "15:46:15",
+   "kind": "image"
+  },
+  {
+   "file": "154637-plant-files-q11-tf-bananas-2026-07-15-near-after-files.jpg",
+   "time": "15:46:37",
+   "kind": "image"
+  },
+  {
+   "file": "154700-plant-files-q11-tf-bananas-2026-11-23-near-after-files.jpg",
+   "time": "15:47:00",
+   "kind": "image"
+  },
+  {
+   "file": "154720-plant-files-q11-tf-palms-2026-07-15-far-after-files.jpg",
+   "time": "15:47:20",
+   "kind": "image"
+  },
+  {
+   "file": "154740-plant-files-q11-tf-palms-2026-07-15-near-after-files.jpg",
+   "time": "15:47:40",
+   "kind": "image"
+  },
+  {
+   "file": "154803-plant-files-q11-tf-palms-2026-11-23-far-after-files.jpg",
+   "time": "15:48:03",
+   "kind": "image"
+  },
+  {
+   "file": "154825-plant-files-q11-tf-palms-2026-11-23-near-after-files.jpg",
+   "time": "15:48:25",
+   "kind": "image"
+  },
+  {
+   "file": "154846-plant-files-q11-tf-palms-above-2026-07-15-near-after-files.jpg",
+   "time": "15:48:46",
+   "kind": "image"
+  },
+  {
+   "file": "154906-plant-files-q11-tf-palms-above-2026-11-23-near-after-files.jpg",
+   "time": "15:49:06",
+   "kind": "image"
+  },
+  {
+   "file": "155358-j4-q7-a-approach-live.jpg",
+   "time": "15:53:58",
+   "kind": "image"
+  },
+  {
+   "file": "155413-j4-q7-a-approach-j3.jpg",
+   "time": "15:54:13",
+   "kind": "image"
+  },
+  {
+   "file": "155429-j4-q7-a-approach-j4.jpg",
+   "time": "15:54:29",
+   "kind": "image"
+  },
+  {
+   "file": "155444-j4-q7-terrain-edge-j3.jpg",
+   "time": "15:54:44",
+   "kind": "image"
+  },
+  {
+   "file": "155459-j4-q7-terrain-edge-j4.jpg",
+   "time": "15:54:59",
+   "kind": "image"
+  },
+  {
+   "file": "155513-j4-q7-terrain-meadow-j3.jpg",
+   "time": "15:55:13",
+   "kind": "image"
+  },
+  {
+   "file": "155529-j4-q7-terrain-meadow-j4.jpg",
+   "time": "15:55:29",
+   "kind": "image"
+  },
+  {
+   "file": "155540-j4-q7-compare-a-approach.jpg",
+   "time": "15:55:40",
+   "kind": "image"
+  },
+  {
+   "file": "155540-j4-q7-compare-terrain-edge.jpg",
+   "time": "15:55:40",
+   "kind": "image"
+  },
+  {
+   "file": "155540-j4-q7-compare-terrain-meadow.jpg",
+   "time": "15:55:40",
+   "kind": "image"
+  },
+  {
+   "file": "163636-a17760b0-shot-ocw.jpg",
+   "time": "16:36:36",
+   "kind": "image"
+  },
+  {
+   "file": "163647-a17760b0-shot-wayland-ocw-wayland.jpg",
+   "time": "16:36:47",
+   "kind": "image"
+  },
+  {
+   "file": "175120-j4-q7-a-side-live.jpg",
+   "time": "17:51:20",
+   "kind": "image"
+  },
+  {
+   "file": "175135-j4-q7-a-side-j3.jpg",
+   "time": "17:51:35",
+   "kind": "image"
+  },
+  {
+   "file": "175149-j4-q7-a-side-j4.jpg",
+   "time": "17:51:49",
+   "kind": "image"
+  },
+  {
+   "file": "175204-j4-q7-a-approach-live.jpg",
+   "time": "17:52:04",
+   "kind": "image"
+  },
+  {
+   "file": "175218-j4-q7-a-approach-j3.jpg",
+   "time": "17:52:18",
+   "kind": "image"
+  },
+  {
+   "file": "175233-j4-q7-a-approach-j4.jpg",
+   "time": "17:52:33",
+   "kind": "image"
+  },
+  {
+   "file": "175247-j4-q7-a-rider-live.jpg",
+   "time": "17:52:47",
+   "kind": "image"
+  },
+  {
+   "file": "175302-j4-q7-a-rider-j3.jpg",
+   "time": "17:53:02",
+   "kind": "image"
+  },
+  {
+   "file": "175316-j4-q7-a-rider-j4.jpg",
+   "time": "17:53:16",
+   "kind": "image"
+  },
+  {
+   "file": "175331-j4-q7-b-side-live.jpg",
+   "time": "17:53:31",
+   "kind": "image"
+  },
+  {
+   "file": "175346-j4-q7-b-side-j3.jpg",
+   "time": "17:53:46",
+   "kind": "image"
+  },
+  {
+   "file": "175400-j4-q7-b-side-j4.jpg",
+   "time": "17:54:00",
+   "kind": "image"
+  },
+  {
+   "file": "175415-j4-q7-b-rider-live.jpg",
+   "time": "17:54:15",
+   "kind": "image"
+  },
+  {
+   "file": "175429-j4-q7-b-rider-j3.jpg",
+   "time": "17:54:29",
+   "kind": "image"
+  },
+  {
+   "file": "175444-j4-q7-b-rider-j4.jpg",
+   "time": "17:54:44",
+   "kind": "image"
+  },
+  {
+   "file": "175458-j4-q7-c-side-live.jpg",
+   "time": "17:54:58",
+   "kind": "image"
+  },
+  {
+   "file": "175513-j4-q7-c-side-j3.jpg",
+   "time": "17:55:13",
+   "kind": "image"
+  },
+  {
+   "file": "175527-j4-q7-c-side-j4.jpg",
+   "time": "17:55:27",
+   "kind": "image"
+  },
+  {
+   "file": "175542-j4-q7-c-rider-live.jpg",
+   "time": "17:55:42",
+   "kind": "image"
+  },
+  {
+   "file": "175557-j4-q7-c-rider-j3.jpg",
+   "time": "17:55:57",
+   "kind": "image"
+  },
+  {
+   "file": "175611-j4-q7-c-rider-j4.jpg",
+   "time": "17:56:11",
+   "kind": "image"
+  },
+  {
+   "file": "175626-j4-q7-c-up-live.jpg",
+   "time": "17:56:26",
+   "kind": "image"
+  },
+  {
+   "file": "175640-j4-q7-c-up-j3.jpg",
+   "time": "17:56:40",
+   "kind": "image"
+  },
+  {
+   "file": "175655-j4-q7-c-up-j4.jpg",
+   "time": "17:56:55",
+   "kind": "image"
+  },
+  {
+   "file": "175709-j4-q7-terrain-edge-j3.jpg",
+   "time": "17:57:09",
+   "kind": "image"
+  },
+  {
+   "file": "175724-j4-q7-terrain-edge-j4.jpg",
+   "time": "17:57:24",
+   "kind": "image"
+  },
+  {
+   "file": "175738-j4-q7-terrain-meadow-j3.jpg",
+   "time": "17:57:38",
+   "kind": "image"
+  },
+  {
+   "file": "175753-j4-q7-terrain-meadow-j4.jpg",
+   "time": "17:57:53",
+   "kind": "image"
+  },
+  {
+   "file": "175807-j4-q7-a-corner-j4.jpg",
+   "time": "17:58:07",
+   "kind": "image"
+  },
+  {
+   "file": "175835-j4-q7-chart-a-crease.png",
+   "time": "17:58:35",
+   "kind": "image"
+  },
+  {
+   "file": "175835-j4-q7-chart-b-blended.png",
+   "time": "17:58:35",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-a-approach.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-a-rider.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-a-side.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-b-rider.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-b-side.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-c-rider.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-c-side.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-c-up.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-corner.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-terrain-edge.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-compare-terrain-meadow.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-corner-crop-after.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175844-j4-q7-corner-crop-before.jpg",
+   "time": "17:58:44",
+   "kind": "image"
+  },
+  {
+   "file": "175903-j4-q7-a-corner-joint-zoom.jpg",
+   "time": "17:59:03",
+   "kind": "image"
+  },
+  {
+   "file": "195137-9968b832-dirty-shot-wayland-q11-unicorn-head.jpg",
+   "time": "19:51:37",
+   "kind": "image"
+  },
+  {
+   "file": "195147-9968b832-dirty-shot-wayland-q11-unicorn-far.jpg",
+   "time": "19:51:47",
+   "kind": "image"
+  },
+  {
+   "file": "195159-9968b832-dirty-shot-wayland-q11-face-closeup.jpg",
+   "time": "19:51:59",
+   "kind": "image"
+  },
+  {
+   "file": "195209-9968b832-dirty-shot-wayland-lips-speaking.jpg",
+   "time": "19:52:09",
+   "kind": "image"
+  },
+  {
+   "file": "195259-9968b832-dirty-shot-wayland-q11-unicorn-head.jpg",
+   "time": "19:52:59",
+   "kind": "image"
+  },
+  {
+   "file": "195309-9968b832-dirty-shot-wayland-q11-unicorn-head-front.jpg",
+   "time": "19:53:09",
+   "kind": "image"
+  },
+  {
+   "file": "195320-9968b832-dirty-shot-wayland-q11-unicorn-far.jpg",
+   "time": "19:53:20",
+   "kind": "image"
+  },
+  {
+   "file": "195358-9968b832-dirty-shot-wayland-q11-unicorn-head.jpg",
+   "time": "19:53:58",
+   "kind": "image"
+  },
+  {
+   "file": "195409-9968b832-dirty-shot-wayland-q11-unicorn-head-front.jpg",
+   "time": "19:54:09",
+   "kind": "image"
+  },
+  {
+   "file": "195420-9968b832-dirty-shot-wayland-q11-unicorn-far.jpg",
+   "time": "19:54:20",
+   "kind": "image"
+  },
+  {
+   "file": "195430-9968b832-dirty-shot-wayland-q11-face-closeup.jpg",
+   "time": "19:54:30",
+   "kind": "image"
+  },
+  {
+   "file": "195441-9968b832-dirty-shot-wayland-lips-speaking.jpg",
+   "time": "19:54:41",
+   "kind": "image"
+  },
+  {
+   "file": "195501-q11-unicorn-lips-compare-lips-speaking-mouth.jpg",
+   "time": "19:55:01",
+   "kind": "image"
+  },
+  {
+   "file": "195501-q11-unicorn-lips-compare-q11-face-closeup-mouth.jpg",
+   "time": "19:55:01",
+   "kind": "image"
+  },
+  {
+   "file": "195722-lamps-layout-2026-11-23-web-ios-before-before-loop-1min.png",
+   "time": "19:57:22",
+   "kind": "image"
+  },
+  {
+   "file": "195722-lamps-layout-2026-11-23-web-ios-before-before-loop-2min.png",
+   "time": "19:57:22",
+   "kind": "image"
+  },
+  {
+   "file": "195722-lamps-layout-2026-11-23-web-ios-before-before-loop-3min.png",
+   "time": "19:57:22",
+   "kind": "image"
+  },
+  {
+   "file": "195722-lamps-layout-2026-11-23-web-ios-before-before-loop-4min.png",
+   "time": "19:57:22",
+   "kind": "image"
+  },
+  {
+   "file": "195722-lamps-layout-2026-11-23-web-ios-before-before-loop-5min.png",
+   "time": "19:57:22",
+   "kind": "image"
+  },
+  {
+   "file": "195722-lamps-layout-2026-11-23-web-ios-before-before-loop-context-reloaded.png",
+   "time": "19:57:22",
+   "kind": "image"
+  },
+  {
+   "file": "195722-lamps-layout-2026-11-23-web-ios-before-before-loop-end.png",
+   "time": "19:57:22",
+   "kind": "image"
+  },
+  {
+   "file": "195722-lamps-layout-2026-11-23-web-ios-before-before-loop-start.png",
+   "time": "19:57:22",
+   "kind": "image"
+  },
+  {
+   "file": "200020-9968b832-dirty-shot-wayland-q11-face-closeup.jpg",
+   "time": "20:00:20",
+   "kind": "image"
+  },
+  {
+   "file": "200031-9968b832-dirty-shot-wayland-lips-speaking.jpg",
+   "time": "20:00:31",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-1min.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-2min.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-3min.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-4min.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-5min.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-context-lost-again.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-context-reloaded.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-end.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "200314-lamps-layout-2026-11-23-web-ios-before-before-liechtenstein-start.png",
+   "time": "20:03:14",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-bf-fork-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-bf-path-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-bf-t-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-li-fork-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-li-letzanaweg-corner-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-li-letzanaweg-side-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-li-path-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-li-t-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-tf-fork-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-tf-path-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "202819-j5-sides-tf-t-j4.jpg",
+   "time": "20:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "205251-j5-sides-li-letzanaweg-corner-j5.jpg",
+   "time": "20:52:51",
+   "kind": "image"
+  },
+  {
+   "file": "205307-j5-sides-li-letzanaweg-side-j5.jpg",
+   "time": "20:53:07",
+   "kind": "image"
+  },
+  {
+   "file": "205322-j5-sides-li-t-j5.jpg",
+   "time": "20:53:22",
+   "kind": "image"
+  },
+  {
+   "file": "205337-j5-sides-li-fork-j5.jpg",
+   "time": "20:53:37",
+   "kind": "image"
+  },
+  {
+   "file": "205352-j5-sides-li-path-j5.jpg",
+   "time": "20:53:52",
+   "kind": "image"
+  },
+  {
+   "file": "210055-6320e4bc-dirty-shot-wayland-tf-prickly-pear-before.jpg",
+   "time": "21:00:55",
+   "kind": "image"
+  },
+  {
+   "file": "210117-6320e4bc-dirty-shot-wayland-tf-agave-before.jpg",
+   "time": "21:01:17",
+   "kind": "image"
+  },
+  {
+   "file": "210140-6320e4bc-dirty-shot-wayland-tf-teide-broom-before.jpg",
+   "time": "21:01:40",
+   "kind": "image"
+  },
+  {
+   "file": "210154-6320e4bc-dirty-shot-wayland-li-green-alder-before.jpg",
+   "time": "21:01:54",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-hints.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-hold.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-landscape-hints.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-landscape-hold.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-landscape-riding.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-landscape-stopped.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-landscape.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-riding.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-start.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone-stopped.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-iphone.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-layout-android-360x640.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-layout-android-640x360.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-layout-iphone-390x844.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-layout-iphone-844x390.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210548-lamps-layout-2026-11-23-web-webkit-after-web-webkit-mac.png",
+   "time": "21:05:48",
+   "kind": "image"
+  },
+  {
+   "file": "210833-lamps-layout-2026-11-23-web-ios-after-lamp-bump-liechtenstein-1min.png",
+   "time": "21:08:33",
+   "kind": "image"
+  },
+  {
+   "file": "210833-lamps-layout-2026-11-23-web-ios-after-lamp-bump-liechtenstein-end.png",
+   "time": "21:08:33",
+   "kind": "image"
+  },
+  {
+   "file": "210833-lamps-layout-2026-11-23-web-ios-after-lamp-bump-liechtenstein-lamp-after.png",
+   "time": "21:08:33",
+   "kind": "image"
+  },
+  {
+   "file": "210833-lamps-layout-2026-11-23-web-ios-after-lamp-bump-liechtenstein-lamp-approach.png",
+   "time": "21:08:33",
+   "kind": "image"
+  },
+  {
+   "file": "210833-lamps-layout-2026-11-23-web-ios-after-lamp-bump-liechtenstein-lamp-bump.png",
+   "time": "21:08:33",
+   "kind": "image"
+  },
+  {
+   "file": "210833-lamps-layout-2026-11-23-web-ios-after-lamp-bump-liechtenstein-start.png",
+   "time": "21:08:33",
+   "kind": "image"
+  },
+  {
+   "file": "210931-0c952ede-dirty-shot-wayland-q10-woods-stop.jpg",
+   "time": "21:09:31",
+   "kind": "image"
+  },
+  {
+   "file": "210945-lamps-layout-2026-11-23-web-ios-after-after-loop-1min.png",
+   "time": "21:09:45",
+   "kind": "image"
+  },
+  {
+   "file": "210945-lamps-layout-2026-11-23-web-ios-after-after-loop-2min.png",
+   "time": "21:09:45",
+   "kind": "image"
+  },
+  {
+   "file": "210945-lamps-layout-2026-11-23-web-ios-after-after-loop-3min.png",
+   "time": "21:09:45",
+   "kind": "image"
+  },
+  {
+   "file": "210945-lamps-layout-2026-11-23-web-ios-after-after-loop-4min.png",
+   "time": "21:09:45",
+   "kind": "image"
+  },
+  {
+   "file": "210945-lamps-layout-2026-11-23-web-ios-after-after-loop-5min.png",
+   "time": "21:09:45",
+   "kind": "image"
+  },
+  {
+   "file": "210945-lamps-layout-2026-11-23-web-ios-after-after-loop-context-reloaded.png",
+   "time": "21:09:45",
+   "kind": "image"
+  },
+  {
+   "file": "210945-lamps-layout-2026-11-23-web-ios-after-after-loop-end.png",
+   "time": "21:09:45",
+   "kind": "image"
+  },
+  {
+   "file": "210945-lamps-layout-2026-11-23-web-ios-after-after-loop-start.png",
+   "time": "21:09:45",
+   "kind": "image"
+  },
+  {
+   "file": "211024-0c952ede-dirty-video-wayland-q10-woods-crash-video.jpg",
+   "time": "21:10:24",
+   "kind": "image"
+  },
+  {
+   "file": "211024-0c952ede-dirty-video-wayland-q10-woods-crash-video.mp4",
+   "time": "21:10:24",
+   "kind": "video"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-1min.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-2min.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-3min.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-4min.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-5min.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-context-lost-again.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-context-reloaded.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-end.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "211537-lamps-layout-2026-11-23-web-ios-after-after-liechtenstein-start.png",
+   "time": "21:15:37",
+   "kind": "image"
+  },
+  {
+   "file": "212320-j5-sides-li-letzanaweg-corner-j5.jpg",
+   "time": "21:23:20",
+   "kind": "image"
+  },
+  {
+   "file": "212336-j5-sides-li-letzanaweg-side-j5.jpg",
+   "time": "21:23:36",
+   "kind": "image"
+  },
+  {
+   "file": "212352-j5-sides-li-t-j5.jpg",
+   "time": "21:23:52",
+   "kind": "image"
+  },
+  {
+   "file": "212408-j5-sides-li-fork-j5.jpg",
+   "time": "21:24:08",
+   "kind": "image"
+  },
+  {
+   "file": "212424-j5-sides-li-path-j5.jpg",
+   "time": "21:24:24",
+   "kind": "image"
+  },
+  {
+   "file": "212456-j5-sides-tf-t-j5.jpg",
+   "time": "21:24:56",
+   "kind": "image"
+  },
+  {
+   "file": "212529-j5-sides-tf-fork-j5.jpg",
+   "time": "21:25:29",
+   "kind": "image"
+  },
+  {
+   "file": "212601-j5-sides-tf-path-j5.jpg",
+   "time": "21:26:01",
+   "kind": "image"
+  },
+  {
+   "file": "212634-j5-sides-bf-t-j5.jpg",
+   "time": "21:26:34",
+   "kind": "image"
+  },
+  {
+   "file": "212704-j5-sides-bf-fork-j5.jpg",
+   "time": "21:27:04",
+   "kind": "image"
+  },
+  {
+   "file": "212733-j5-sides-bf-path-j5.jpg",
+   "time": "21:27:33",
+   "kind": "image"
+  },
+  {
+   "file": "212817-j5-sides-li-letzanaweg-joint-j4.jpg",
+   "time": "21:28:17",
+   "kind": "image"
+  },
+  {
+   "file": "212817-j5-sides-li-letzanaweg-joint-j5.jpg",
+   "time": "21:28:17",
+   "kind": "image"
+  },
+  {
+   "file": "212847-j5-sides-chart-a-crease.png",
+   "time": "21:28:47",
+   "kind": "image"
+  },
+  {
+   "file": "212847-j5-sides-chart-b-blended.png",
+   "time": "21:28:47",
+   "kind": "image"
+  },
+  {
+   "file": "212848-j5-sides-chart-c-junction-room.png",
+   "time": "21:28:48",
+   "kind": "image"
+  },
+  {
+   "file": "212848-plant-origin-q10-tf-prickly-pear-before.jpg",
+   "time": "21:28:48",
+   "kind": "image"
+  },
+  {
+   "file": "212915-plant-origin-q10-tf-agave-before.jpg",
+   "time": "21:29:15",
+   "kind": "image"
+  },
+  {
+   "file": "212943-6320e4bc-dirty-shot-wayland-tf-teide-broom-before.jpg",
+   "time": "21:29:43",
+   "kind": "image"
+  },
+  {
+   "file": "212959-6320e4bc-dirty-shot-wayland-li-green-alder-before.jpg",
+   "time": "21:29:59",
+   "kind": "image"
+  },
+  {
+   "file": "213356-d797f262-dirty-shot-wayland-q10-woods-stop.jpg",
+   "time": "21:33:56",
+   "kind": "image"
+  },
+  {
+   "file": "213501-d797f262-dirty-video-wayland-q10-woods-crash-video.jpg",
+   "time": "21:35:01",
+   "kind": "image"
+  },
+  {
+   "file": "213501-d797f262-dirty-video-wayland-q10-woods-crash-video.mp4",
+   "time": "21:35:01",
+   "kind": "video"
+  },
+  {
+   "file": "213526-d797f262-shot-ocw.jpg",
+   "time": "21:35:26",
+   "kind": "image"
+  },
+  {
+   "file": "213536-d797f262-shot-wayland-ocw-wayland.jpg",
+   "time": "21:35:36",
+   "kind": "image"
+  },
+  {
+   "file": "213600-plant-origin-q10-tf-teide-broom-before.jpg",
+   "time": "21:36:00",
+   "kind": "image"
+  },
+  {
+   "file": "213614-plant-origin-q10-li-green-alder-before.jpg",
+   "time": "21:36:14",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-hints.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-hold.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-landscape-hints.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-landscape-hold.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-landscape-riding.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-landscape-stopped.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-landscape.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-riding.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone-stopped.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-iphone.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-layout-android-360x640.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-layout-android-640x360.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-layout-iphone-390x844.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-layout-iphone-844x390.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214109-lamps-layout-2026-11-23-web-webkit-final-web-webkit-mac.png",
+   "time": "21:41:09",
+   "kind": "image"
+  },
+  {
+   "file": "214208-d797f262-dirty-shot-wayland-q10-woods-stop.jpg",
+   "time": "21:42:08",
+   "kind": "image"
+  },
+  {
+   "file": "214312-d797f262-dirty-video-wayland-q10-woods-crash-video.jpg",
+   "time": "21:43:12",
+   "kind": "image"
+  },
+  {
+   "file": "214312-d797f262-dirty-video-wayland-q10-woods-crash-video.mp4",
+   "time": "21:43:12",
+   "kind": "video"
+  },
+  {
+   "file": "214346-lamps-layout-2026-11-23-web-ios-final-lamp-bump-liechtenstein-1min.png",
+   "time": "21:43:46",
+   "kind": "image"
+  },
+  {
+   "file": "214346-lamps-layout-2026-11-23-web-ios-final-lamp-bump-liechtenstein-end.png",
+   "time": "21:43:46",
+   "kind": "image"
+  },
+  {
+   "file": "214346-lamps-layout-2026-11-23-web-ios-final-lamp-bump-liechtenstein-lamp-after.png",
+   "time": "21:43:46",
+   "kind": "image"
+  },
+  {
+   "file": "214346-lamps-layout-2026-11-23-web-ios-final-lamp-bump-liechtenstein-lamp-approach.png",
+   "time": "21:43:46",
+   "kind": "image"
+  },
+  {
+   "file": "214346-lamps-layout-2026-11-23-web-ios-final-lamp-bump-liechtenstein-lamp-bump.png",
+   "time": "21:43:46",
+   "kind": "image"
+  },
+  {
+   "file": "214346-lamps-layout-2026-11-23-web-ios-final-lamp-bump-liechtenstein-start.png",
+   "time": "21:43:46",
+   "kind": "image"
+  },
+  {
+   "file": "214432-scenes-q10-woods-crash-video-1280.mp4",
+   "time": "21:44:32",
+   "kind": "video"
+  },
+  {
+   "file": "215441-plant-origin-q10-tf-prickly-pear-after.jpg",
+   "time": "21:54:41",
+   "kind": "image"
+  },
+  {
+   "file": "215500-2971aee0-shot-ocw.jpg",
+   "time": "21:55:00",
+   "kind": "image"
+  },
+  {
+   "file": "215510-2971aee0-shot-wayland-ocw-wayland.jpg",
+   "time": "21:55:10",
+   "kind": "image"
+  },
+  {
+   "file": "215511-plant-origin-q10-tf-agave-after.jpg",
+   "time": "21:55:11",
+   "kind": "image"
+  },
+  {
+   "file": "215540-plant-origin-q10-tf-teide-broom-after.jpg",
+   "time": "21:55:40",
+   "kind": "image"
+  },
+  {
+   "file": "215555-plant-origin-q10-li-green-alder-after.jpg",
+   "time": "21:55:55",
+   "kind": "image"
+  },
+  {
+   "file": "215557-150c93d8-dirty-shot-wayland-q10-woods-stop.jpg",
+   "time": "21:55:57",
+   "kind": "image"
+  },
+  {
+   "file": "215624-plant-origin-q10-tf-teide-broom-above-after.jpg",
+   "time": "21:56:24",
+   "kind": "image"
+  },
+  {
+   "file": "215640-plant-origin-q10-li-green-alder-above-after.jpg",
+   "time": "21:56:40",
+   "kind": "image"
+  },
+  {
+   "file": "215711-plant-origin-q10-tf-prickly-pear-after-files.jpg",
+   "time": "21:57:11",
+   "kind": "image"
+  },
+  {
+   "file": "215721-150c93d8-dirty-video-wayland-q10-woods-crash-video.jpg",
+   "time": "21:57:21",
+   "kind": "image"
+  },
+  {
+   "file": "215721-150c93d8-dirty-video-wayland-q10-woods-crash-video.mp4",
+   "time": "21:57:21",
+   "kind": "video"
+  },
+  {
+   "file": "215739-plant-origin-q10-tf-agave-after-files.jpg",
+   "time": "21:57:39",
+   "kind": "image"
+  },
+  {
+   "file": "215811-plant-origin-q10-tf-teide-broom-after-files.jpg",
+   "time": "21:58:11",
+   "kind": "image"
+  },
+  {
+   "file": "215827-plant-origin-q10-li-green-alder-after-files.jpg",
+   "time": "21:58:27",
+   "kind": "image"
+  },
+  {
+   "file": "215859-plant-origin-q10-tf-teide-broom-above-after-files.jpg",
+   "time": "21:58:59",
+   "kind": "image"
+  },
+  {
+   "file": "215914-plant-origin-q10-li-green-alder-above-after-files.jpg",
+   "time": "21:59:14",
+   "kind": "image"
+  },
+  {
+   "file": "220534-6320e4bc-dirty-shot-wayland-tf-teide-broom-above-before.jpg",
+   "time": "22:05:34",
+   "kind": "image"
+  },
+  {
+   "file": "220550-6320e4bc-dirty-shot-wayland-li-green-alder-above-before.jpg",
+   "time": "22:05:50",
+   "kind": "image"
+  },
+  {
+   "file": "220723-6320e4bc-dirty-shot-wayland-q11-face-closeup.jpg",
+   "time": "22:07:23",
+   "kind": "image"
+  },
+  {
+   "file": "220734-6320e4bc-dirty-shot-wayland-lips-speaking.jpg",
+   "time": "22:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "221129-q11-unicorn-lips-compare-lips-speaking-mouth.jpg",
+   "time": "22:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "221129-q11-unicorn-lips-compare-q11-face-closeup-mouth.jpg",
+   "time": "22:11:29",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-hints.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-hold.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-landscape-hints.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-landscape-hold.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-landscape-riding.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-landscape-stopped.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-landscape.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-riding.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone-stopped.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-iphone.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-layout-android-360x640.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-layout-android-640x360.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-layout-iphone-390x844.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-layout-iphone-844x390.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224124-lamps-layout-2026-11-23-web-webkit-final2-web-webkit-mac.png",
+   "time": "22:41:24",
+   "kind": "image"
+  },
+  {
+   "file": "224503-j6-sides-plan-letzanaweg-j5.png",
+   "time": "22:45:03",
+   "kind": "image"
+  },
+  {
+   "file": "230313-j6-sides-zoom-letzanaweg-j5.png",
+   "time": "23:03:13",
+   "kind": "image"
+  },
+  {
+   "file": "230516-j6-sides-plan-letzanaweg-j6.png",
+   "time": "23:05:16",
+   "kind": "image"
+  },
+  {
+   "file": "230518-j6-sides-zoom-letzanaweg-j6.png",
+   "time": "23:05:18",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-hints.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-hold.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-landscape-hints.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-landscape-hold.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-landscape-riding.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-landscape-stopped.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-landscape.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-riding.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone-stopped.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-iphone.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-layout-android-360x640.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-layout-android-640x360.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-layout-iphone-390x844.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-layout-iphone-844x390.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "230734-lamps-layout-2026-11-23-web-webkit-merge-web-webkit-mac.png",
+   "time": "23:07:34",
+   "kind": "image"
+  },
+  {
+   "file": "231010-lamps-layout-2026-11-23-web-ios-merge-lamp-bump-liechtenstein-1min.png",
+   "time": "23:10:10",
+   "kind": "image"
+  },
+  {
+   "file": "231010-lamps-layout-2026-11-23-web-ios-merge-lamp-bump-liechtenstein-end.png",
+   "time": "23:10:10",
+   "kind": "image"
+  },
+  {
+   "file": "231010-lamps-layout-2026-11-23-web-ios-merge-lamp-bump-liechtenstein-lamp-after.png",
+   "time": "23:10:10",
+   "kind": "image"
+  },
+  {
+   "file": "231010-lamps-layout-2026-11-23-web-ios-merge-lamp-bump-liechtenstein-lamp-approach.png",
+   "time": "23:10:10",
+   "kind": "image"
+  },
+  {
+   "file": "231010-lamps-layout-2026-11-23-web-ios-merge-lamp-bump-liechtenstein-lamp-bump.png",
+   "time": "23:10:10",
+   "kind": "image"
+  },
+  {
+   "file": "231010-lamps-layout-2026-11-23-web-ios-merge-lamp-bump-liechtenstein-start.png",
+   "time": "23:10:10",
+   "kind": "image"
+  },
+  {
+   "file": "231133-lamps-layout-2026-11-23-web-ios-merge-merge-liechtenstein-1min.png",
+   "time": "23:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "231133-lamps-layout-2026-11-23-web-ios-merge-merge-liechtenstein-2min.png",
+   "time": "23:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "231133-lamps-layout-2026-11-23-web-ios-merge-merge-liechtenstein-3min.png",
+   "time": "23:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "231133-lamps-layout-2026-11-23-web-ios-merge-merge-liechtenstein-4min.png",
+   "time": "23:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "231133-lamps-layout-2026-11-23-web-ios-merge-merge-liechtenstein-5min.png",
+   "time": "23:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "231133-lamps-layout-2026-11-23-web-ios-merge-merge-liechtenstein-context-reloaded.png",
+   "time": "23:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "231133-lamps-layout-2026-11-23-web-ios-merge-merge-liechtenstein-end.png",
+   "time": "23:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "231133-lamps-layout-2026-11-23-web-ios-merge-merge-liechtenstein-start.png",
+   "time": "23:11:33",
+   "kind": "image"
+  },
+  {
+   "file": "231919-j6-sides-li-letzanaweg-corner-j6.jpg",
+   "time": "23:19:19",
+   "kind": "image"
+  },
+  {
+   "file": "231935-j6-sides-li-letzanaweg-side-j6.jpg",
+   "time": "23:19:35",
+   "kind": "image"
+  },
+  {
+   "file": "232300-j6-sides-li-letzanaweg-joint-j5.jpg",
+   "time": "23:23:00",
+   "kind": "image"
+  },
+  {
+   "file": "232300-j6-sides-li-letzanaweg-joint-j6.jpg",
+   "time": "23:23:00",
+   "kind": "image"
+  },
+  {
+   "file": "232831-j6-sides-case-cluster9.png",
+   "time": "23:28:31",
+   "kind": "image"
+  },
+  {
+   "file": "232836-j6-sides-case-short57.png",
+   "time": "23:28:36",
+   "kind": "image"
+  },
+  {
+   "file": "232840-j6-sides-case-other291.png",
+   "time": "23:28:40",
+   "kind": "image"
+  },
+  {
+   "file": "232844-j6-sides-case-short100.png",
+   "time": "23:28:44",
+   "kind": "image"
+  },
+  {
+   "file": "232949-lamps-layout-2026-11-23-web-ios-main-main-liechtenstein-1min.png",
+   "time": "23:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "232949-lamps-layout-2026-11-23-web-ios-main-main-liechtenstein-2min.png",
+   "time": "23:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "232949-lamps-layout-2026-11-23-web-ios-main-main-liechtenstein-3min.png",
+   "time": "23:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "232949-lamps-layout-2026-11-23-web-ios-main-main-liechtenstein-4min.png",
+   "time": "23:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "232949-lamps-layout-2026-11-23-web-ios-main-main-liechtenstein-5min.png",
+   "time": "23:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "232949-lamps-layout-2026-11-23-web-ios-main-main-liechtenstein-context-reloaded.png",
+   "time": "23:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "232949-lamps-layout-2026-11-23-web-ios-main-main-liechtenstein-end.png",
+   "time": "23:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "232949-lamps-layout-2026-11-23-web-ios-main-main-liechtenstein-start.png",
+   "time": "23:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "234222-lamps-layout-2026-11-23-web-ios-merge2-merge2-liechtenstein-1min.png",
+   "time": "23:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "234222-lamps-layout-2026-11-23-web-ios-merge2-merge2-liechtenstein-2min.png",
+   "time": "23:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "234222-lamps-layout-2026-11-23-web-ios-merge2-merge2-liechtenstein-3min.png",
+   "time": "23:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "234222-lamps-layout-2026-11-23-web-ios-merge2-merge2-liechtenstein-4min.png",
+   "time": "23:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "234222-lamps-layout-2026-11-23-web-ios-merge2-merge2-liechtenstein-5min.png",
+   "time": "23:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "234222-lamps-layout-2026-11-23-web-ios-merge2-merge2-liechtenstein-context-reloaded.png",
+   "time": "23:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "234222-lamps-layout-2026-11-23-web-ios-merge2-merge2-liechtenstein-end.png",
+   "time": "23:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "234222-lamps-layout-2026-11-23-web-ios-merge2-merge2-liechtenstein-start.png",
+   "time": "23:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "234811-lamps-layout-2026-11-23-web-ios-merge2-lamp-bump-liechtenstein-end.png",
+   "time": "23:48:11",
+   "kind": "image"
+  },
+  {
+   "file": "234811-lamps-layout-2026-11-23-web-ios-merge2-lamp-bump-liechtenstein-lamp-after.png",
+   "time": "23:48:11",
+   "kind": "image"
+  },
+  {
+   "file": "234811-lamps-layout-2026-11-23-web-ios-merge2-lamp-bump-liechtenstein-lamp-approach.png",
+   "time": "23:48:11",
+   "kind": "image"
+  },
+  {
+   "file": "234811-lamps-layout-2026-11-23-web-ios-merge2-lamp-bump-liechtenstein-lamp-bump.png",
+   "time": "23:48:11",
+   "kind": "image"
+  },
+  {
+   "file": "234811-lamps-layout-2026-11-23-web-ios-merge2-lamp-bump-liechtenstein-start.png",
+   "time": "23:48:11",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-hints.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-hold.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-landscape-hints.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-landscape-hold.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-landscape-riding.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-landscape-stopped.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-landscape.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-riding.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone-stopped.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-iphone.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-layout-android-360x640.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-layout-android-640x360.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-layout-iphone-390x844.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-layout-iphone-844x390.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235250-lamps-layout-2026-11-23-web-webkit-merge2-web-webkit-mac.png",
+   "time": "23:52:50",
+   "kind": "image"
+  },
+  {
+   "file": "235836-j6-sides-li-letzanaweg-corner-j6.jpg",
+   "time": "23:58:36",
+   "kind": "image"
+  },
+  {
+   "file": "235851-j6-sides-li-letzanaweg-side-j6.jpg",
+   "time": "23:58:51",
+   "kind": "image"
+  },
+  {
+   "file": "235906-j6-sides-li-t-j6.jpg",
+   "time": "23:59:06",
+   "kind": "image"
+  },
+  {
+   "file": "235921-j6-sides-li-fork-j6.jpg",
+   "time": "23:59:21",
+   "kind": "image"
+  },
+  {
+   "file": "235935-j6-sides-li-path-j6.jpg",
+   "time": "23:59:35",
+   "kind": "image"
+  }
+ ],
+ "images": 827,
+ "videos": 11,
+ "sounds": 0,
+ "builds": {
+  "runs": 342,
+  "seconds": 178391.1,
+  "cargo_s": 30433.0,
+  "compiled": 22414,
+  "wait_s": 31260.0,
+  "failed": [
+   {
+    "start": "2026-11-23T13:02:26+01:00",
+    "seconds": 2637.1,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "merge-ios",
+    "branch": "merge/ios",
+    "commit": "e8fd6ab4",
+    "command": "make check && make test-web-build && make test-smoke && make test-web-webkit && echo ALL-CHECKS-OK",
+    "exit": 2,
+    "log": "130226-leela-1419206.log",
+    "sync_s": 2.8,
+    "cargo_s": 2053.2,
+    "cargo_builds": 10,
+    "compiled": 2478,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-23T14:58:02+01:00",
+    "seconds": 2.6,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a26ac3f82bbda79f8",
+    "branch": "worktree-agent-a26ac3f82bbda79f8",
+    "commit": "ffe319ae-dirty",
+    "command": "for f in ~/src/OCW/data/j3-build/pilot/liechtenstein.ocwpkg ~/j4/iter1/pilot/liechtenstein.ocwpkg; do echo \"== $f\"; OCW_J3_WORLD=$f cargo test --release -p ocw-worldgen kinks_of_a_real_package -- -...",
+    "exit": 1,
+    "log": "145802-marge-1699918.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-23T16:38:48+01:00",
+    "seconds": 932.0,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "merge-q11",
+    "branch": "merge/q11",
+    "commit": "cb69a327",
+    "command": "make check && make test-web-build && make test-smoke && cargo run -q -p ocw-assets -- model export-all --check && echo ALL-CHECKS-OK",
+    "exit": 2,
+    "log": "163848-leela-1897130.log",
+    "sync_s": 2.8,
+    "cargo_s": 808.0,
+    "cargo_builds": 2,
+    "compiled": 1297,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-23T23:32:28+01:00",
+    "seconds": 130.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-adeca704a209ce81c",
+    "branch": "worktree-agent-adeca704a209ce81c",
+    "commit": "94e0b725-dirty",
+    "command": "cargo build --release -p ocw-worldgen --example above_probe 2>&1 | grep -E \"^error\" -A8; D=$HOME/src/OCW/data/j5-build; for p in pilot/liechtenstein tenerife/tenerife blackforest/blackforest-north ...",
+    "exit": 1,
+    "log": "233228-marge-2866955.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-23T23:44:02+01:00",
+    "seconds": 1348.0,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-adeca704a209ce81c",
+    "branch": "worktree-agent-adeca704a209ce81c",
+    "commit": "69f290ee",
+    "command": "scripts/j6-build.sh 2>&1",
+    "exit": 143,
+    "log": "234402-marge-2887568.log",
+    "sync_s": 0.6,
+    "cargo_s": 27.2,
+    "cargo_builds": 1,
+    "compiled": 4,
+    "wait_s": null
+   }
+  ],
+  "machines": {
+   "macos": {
+    "runs": 42,
+    "seconds": 5507.299999999998,
+    "failed": 0,
+    "cargo_s": 706.5,
+    "compiled": 40,
+    "wait_s": 40.0
+   },
+   "marge": {
+    "runs": 241,
+    "seconds": 145383.5,
+    "failed": 3,
+    "cargo_s": 20145.6,
+    "compiled": 13982,
+    "wait_s": 28298.0
+   },
+   "leela": {
+    "runs": 55,
+    "seconds": 25491.700000000008,
+    "failed": 2,
+    "cargo_s": 7666.299999999999,
+    "compiled": 8340,
+    "wait_s": 2922.0
+   },
+   "Win11Builder": {
+    "runs": 4,
+    "seconds": 2008.6,
+    "failed": 0,
+    "cargo_s": 1914.6,
+    "compiled": 52,
+    "wait_s": 0.0
+   }
+  },
+  "online": {
+   "leela": 1.0,
+   "marge": 1.0,
+   "Weela": 0.0,
+   "Win11Builder": 0.9993055555555556,
+   "macos": 1.0
+  },
+  "samples": 1440
+ },
+ "prompts": [
+  {
+   "time": "08:43:50",
+   "iso": "2026-11-23T08:43:50+01:00",
+   "text": "Answer to open questions:\n\n**Phase 9 – Sky, Time, Seasons and Weather**\n\n- **Phase 9 Q13 – The seasons' representative days:** on World → Time → Season choosing a season moves the date to a day that stands for that season at the world's place, keeping the time of day (Q11). Built as proposed (v4.28), open for confirmation: spring = halfway from the first green to full leaf; early summer = halfway from full leaf to summer; summer = the warmest day; autumn = the peak of the autumn colours; late autumn = when most leaves have fallen; winter = the middle of the snow season at the rider's altitude, else the coldest day; places without deciduous trees go by the temperature's year. The jump goes to the nearest such day: in November \"summer\" is the past July and \"winter\" the coming January. Answer: (a) the nearest, as built; \n\n- **Phase 9 Q14 – Calendar: does choosing a day set it or only select it:** on World → Time a calendar sets the world's date (v4.46). Built for now: a click, Enter or the gamepad's South button on a day sets that date at once and stays on the calendar, so the world changes while browsing; the Select button (9J, v4.45) sets the highlighted day and goes back. In most date pickers a click on a day only highlights it and OK confirms, so browsing never changes anything. Answer: (a) keep both as built; \n\nAdd on: Do check if the Map is in a region where there are seasons. E.g. in Tenerife there are not AFAIK."
+  },
+  {
+   "time": "08:51:29",
+   "iso": "2026-11-23T08:51:29+01:00",
+   "text": "the mobile browser version still crashes, on safari I have seen the blue hint box that it's maybe memory related"
+  },
+  {
+   "time": "08:55:18",
+   "iso": "2026-11-23T08:55:18+01:00",
+   "text": "is the a feature in spec file waiting for developement that we could start?"
+  },
+  {
+   "time": "09:24:44",
+   "iso": "2026-11-23T09:24:44+01:00",
+   "text": "do what you recommend: start 2 and 3 together now. They make the world more solid and don't collide with the iPhone work. E4 is the bigger next step after that."
+  },
+  {
+   "time": "09:35:27",
+   "iso": "2026-11-23T09:35:27+01:00",
+   "text": "there is a bug recently intoduced: the trees turn bald (without leaves) all of a sudden when gertting closer. Also there seems a dark big spot on the ground around the unicorn when flying ."
+  },
+  {
+   "time": "09:36:08",
+   "iso": "2026-11-23T09:36:08+01:00",
+   "text": "i noticed some flickering of the road turn hud, at least in unicorn mode. tuen it there off completely and reenable when riding again"
+  },
+  {
+   "time": "11:06:45",
+   "iso": "2026-11-23T11:06:45+01:00",
+   "text": "show me a foto of the face of the rider"
+  },
+  {
+   "time": "11:15:05",
+   "iso": "2026-11-23T11:15:05+01:00",
+   "text": "what are next steps to be implemented"
+  },
+  {
+   "time": "13:18:21",
+   "iso": "2026-11-23T13:18:21+01:00",
+   "text": "give me one open question"
+  },
+  {
+   "time": "13:22:25",
+   "iso": "2026-11-23T13:22:25+01:00",
+   "text": "show me en example of what you did with Q6 qnd what you did with the creases"
+  },
+  {
+   "time": "13:45:28",
+   "iso": "2026-11-23T13:45:28+01:00",
+   "text": "in the meantime, give ma another open question"
+  },
+  {
+   "time": "13:50:14",
+   "iso": "2026-11-23T13:50:14+01:00",
+   "text": "yes, (a)"
+  },
+  {
+   "time": "13:53:56",
+   "iso": "2026-11-23T13:53:56+01:00",
+   "text": "give me another quest"
+  },
+  {
+   "time": "13:55:12",
+   "iso": "2026-11-23T13:55:12+01:00",
+   "text": "(b), i guess the trainer will cap at somepoint anyway"
+  },
+  {
+   "time": "13:56:20",
+   "iso": "2026-11-23T13:56:20+01:00",
+   "text": "q8 (a)"
+  },
+  {
+   "time": "13:56:47",
+   "iso": "2026-11-23T13:56:47+01:00",
+   "text": "q9 (a)"
+  },
+  {
+   "time": "14:25:46",
+   "iso": "2026-11-23T14:25:46+01:00",
+   "text": "q6: the crease fix of making the road longer and more equal is good. make sure the side road does not stick out of the main road. better smoothen the whole terrain a bit without loosing too much precision. are there still open question regarding q6?"
+  },
+  {
+   "time": "17:24:01",
+   "iso": "2026-11-23T17:24:01+01:00",
+   "text": "can you make a rule in woeld building that smoothens the sides, too?"
+  },
+  {
+   "time": "19:45:53",
+   "iso": "2026-11-23T19:45:53+01:00",
+   "text": "give me an open question"
+  },
+  {
+   "time": "19:47:47",
+   "iso": "2026-11-23T19:47:47+01:00",
+   "text": "yes, (a). next question"
+  },
+  {
+   "time": "19:53:31",
+   "iso": "2026-11-23T19:53:31+01:00",
+   "text": "answer: yes, (a)"
+  },
+  {
+   "time": "20:00:12",
+   "iso": "2026-11-23T20:00:12+01:00",
+   "text": "yes, (a)"
+  }
+ ],
+ "tokens": {
+  "total": {
+   "input": 8758,
+   "cache_write": 25340532,
+   "cache_read": 1333461875,
+   "output": 2671809,
+   "total": 1361482974,
+   "messages": 4165
+  },
+  "features": {
+   "Materials & look": {
+    "input": 680,
+    "cache_write": 431726,
+    "cache_read": 108407278,
+    "output": 130542,
+    "total": 108970226,
+    "messages": 317
+   },
+   "Sky, time & weather": {
+    "input": 314,
+    "cache_write": 831016,
+    "cache_read": 34337739,
+    "output": 81214,
+    "total": 35250283,
+    "messages": 150
+   },
+   "Build, release & infra": {
+    "input": 324,
+    "cache_write": 242967,
+    "cache_read": 34186500,
+    "output": 73867,
+    "total": 34503658,
+    "messages": 148
+   },
+   "Planning & spec": {
+    "input": 3034,
+    "cache_write": 11706881,
+    "cache_read": 472665508,
+    "output": 877167,
+    "total": 485252590,
+    "messages": 1476
+   },
+   "Worlds & terrain": {
+    "input": 1192,
+    "cache_write": 2987196,
+    "cache_read": 213486628,
+    "output": 480422,
+    "total": 216955438,
+    "messages": 562
+   },
+   "Other": {
+    "input": 2048,
+    "cache_write": 5309470,
+    "cache_read": 320447897,
+    "output": 681355,
+    "total": 326440770,
+    "messages": 962
+   },
+   "UI & menus": {
+    "input": 48,
+    "cache_write": 27872,
+    "cache_read": 16980934,
+    "output": 7663,
+    "total": 17016517,
+    "messages": 18
+   },
+   "Riders & bikes": {
+    "input": 914,
+    "cache_write": 3508636,
+    "cache_read": 113216444,
+    "output": 292702,
+    "total": 117018696,
+    "messages": 437
+   },
+   "Art project": {
+    "input": 204,
+    "cache_write": 294768,
+    "cache_read": 19732947,
+    "output": 46877,
+    "total": 20074796,
+    "messages": 95
+   }
+  }
+ },
+ "incidents": {
+  "auto": [
+   {
+    "time": "00:00:25",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela unreachable (no route to host)"
+   },
+   {
+    "time": "00:00:25",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "disk C: on Win11Builder at 97 %"
+   },
+   {
+    "time": "09:51:37",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-adb67871eba1f1dad/target (12.6 GB)"
+   },
+   {
+    "time": "09:51:43",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-adb67871eba1f1dad/target (31.8 GB)"
+   },
+   {
+    "time": "09:51:54",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-adb67871eba1f1dad/target (0.0 GB)"
+   },
+   {
+    "time": "11:04:55",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a765cbc595ec59a84/target (43.4 GB)"
+   },
+   {
+    "time": "12:19:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-treelod/target (26.7 GB)"
+   },
+   {
+    "time": "12:19:11",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a318b069771a80073/target (31.6 GB)"
+   },
+   {
+    "time": "12:19:12",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a318b069771a80073/target (3.2 GB)"
+   },
+   {
+    "time": "12:34:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a318b069771a80073/target (7.8 GB)"
+   },
+   {
+    "time": "12:45:54",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a765cbc595ec59a84/target (2.8 GB)"
+   },
+   {
+    "time": "13:01:23",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-ios-memory-b3/target (16.7 GB)"
+   },
+   {
+    "time": "13:01:26",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-ios-memory-b3/target (16.1 GB)"
+   },
+   {
+    "time": "13:21:16",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-e4/target (27.5 GB)"
+   },
+   {
+    "time": "13:21:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a6f5aa9dab2456bee/target (32.7 GB)"
+   },
+   {
+    "time": "13:21:22",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a6f5aa9dab2456bee/target (22.1 GB)"
+   },
+   {
+    "time": "13:24:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a6f5aa9dab2456bee/target (1.5 GB)"
+   },
+   {
+    "time": "13:46:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-ios/target (32.2 GB)"
+   },
+   {
+    "time": "13:47:02",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-ios-memory-phone/target (48.2 GB)"
+   },
+   {
+    "time": "14:20:21",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-unicycles/target (27.0 GB)"
+   },
+   {
+    "time": "14:20:24",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aa8b83829082695f0/target (30.8 GB)"
+   },
+   {
+    "time": "14:45:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-aa8b83829082695f0/target (6.1 GB)"
+   },
+   {
+    "time": "16:43:48",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-aecca951247987cc1/target (28.4 GB)"
+   },
+   {
+    "time": "17:06:01",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "17:21:05",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-q11/target (31.2 GB)"
+   },
+   {
+    "time": "17:21:10",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-13a/target (27.0 GB)"
+   },
+   {
+    "time": "17:21:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a11958feda96480f3/target (40.5 GB)"
+   },
+   {
+    "time": "18:33:16",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-j4/target (27.1 GB)"
+   },
+   {
+    "time": "18:33:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a26ac3f82bbda79f8/target (39.7 GB)"
+   },
+   {
+    "time": "18:33:20",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-acb0f792245e83954/target (4.2 GB)"
+   },
+   {
+    "time": "19:49:09",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a26ac3f82bbda79f8/target (8.9 GB)"
+   },
+   {
+    "time": "20:00:48",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-aecca951247987cc1/target (2.4 GB)"
+   },
+   {
+    "time": "21:04:32",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (ssh error)"
+   },
+   {
+    "time": "21:05:32",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "22:00:24",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (19.0 GB)"
+   },
+   {
+    "time": "22:49:38",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-q10/target (27.3 GB)"
+   },
+   {
+    "time": "22:49:43",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-j5/target (27.4 GB)"
+   },
+   {
+    "time": "22:49:47",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-afa3443cd1461751c/target (42.0 GB)"
+   },
+   {
+    "time": "22:49:50",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-afa3443cd1461751c/target (20.9 GB)"
+   },
+   {
+    "time": "22:49:56",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a376904757b84bfd9/target (38.6 GB)"
+   },
+   {
+    "time": "23:08:03",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "23:26:05",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-batch/target (28.2 GB)"
+   },
+   {
+    "time": "23:26:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a8c5ac4818f5d30e5/target (39.7 GB)"
+   },
+   {
+    "time": "23:44:02",
+    "kind": "runs-failed",
+    "source": "remote.sh",
+    "machine": "leela, marge",
+    "text": "5 failed remote.sh runs (leela 2, marge 3)"
+   }
+  ],
+  "notes": "",
+  "noted": []
+ },
+ "features": [
+  {
+   "version": "5.41",
+   "title": "Season jumps go to the nearest representative day, the calendar keeps setting the day at…",
+   "commit": "4ad62fdb",
+   "sha": "4ad62fdbb5048c12a8b834296859953d60d314bb",
+   "time": "2026-11-23T08:44:10+01:00",
+   "merge": false,
+   "subject": "Season jumps to the nearest representative day, the calendar sets the day at once; worlds without marked seasons offer only the jumps that change something (spec Phase 9 Q13 (a), Q14 (a))"
+  },
+  {
+   "version": "5.42",
+   "title": "The Season page checks whether the world's place has seasons",
+   "commit": "5adfcd42",
+   "sha": "5adfcd42ef169a5eb4d3eb172ceffac11d39a007",
+   "time": "2026-11-23T09:52:36+01:00",
+   "merge": true,
+   "subject": "Merge the season check: places with weak seasons (e.g. Tenerife) say so and offer only summer and winter, evergreen woods shed almost no leaves (spec Phase 9 Q13, 5.42)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T09:22:00+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-adb67871eba1f1dad",
+    "command": "make check > /tmp/ocw-q13-check.log 2>&1; echo check=$?; grep -E \"^test result: FAILED|panicked|^error|FAILED\" /tmp/ocw-",
+    "log": "092200-marge-951492.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.43",
+   "title": "Built: street lamps mapped in OSM stand where they are mapped, and every street lamp's po…",
+   "commit": "ea3eb92f",
+   "sha": "ea3eb92fca3600b78a3890eaffe174f6d421e897",
+   "time": "2026-11-23T11:04:34+01:00",
+   "merge": true,
+   "subject": "Merge street lamps from OSM lamp nodes and lamp poles as obstacles, obstacle shapes from the props files' collision proxies (spec Street lamps, K3, 15N; 5.43)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T11:45:20+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a6f5aa9dab2456bee",
+    "command": "cargo test -p ocw-studio 2>&1 | grep -E \"test result|panicked\" -A6 | head -30",
+    "log": "114520-marge-1257730.log",
+    "how": "commit",
+    "suites": 1,
+    "passed": 77,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.44",
+   "title": "Fixed: trees no longer turn bald when coming closer",
+   "commit": "06d85426",
+   "sha": "06d85426856135b7aa2ed8a5186f90dae2106e21",
+   "time": "2026-11-23T11:30:16+01:00",
+   "merge": true,
+   "subject": "Merge the tree LOD fix (near and far crowns follow one rule, bare trees keep a see-through twig crown) and the junction fan hidden in flight (5.44)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T11:30:16+01:00",
+    "exit": 0,
+    "branch": "merge/treelod",
+    "command": "make check && make test-smoke",
+    "log": "113016-marge-1233226.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 3227,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.45",
+   "title": "Built: oCW Studio edits model files",
+   "commit": "078570dc",
+   "sha": "078570dc9de9f22cf413abd08387f411e9cfaf1f",
+   "time": "2026-11-23T12:36:24+01:00",
+   "merge": true,
+   "subject": "Merge OCW Studio E4: editing models in the Models workspace (gizmo, rename/re-parent, anchors, proxies in both forms, paint slots, materials, metadata, validator fixes, diff before save, Blender re-import, all undoable; 5.45)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T12:36:27+01:00",
+    "exit": 0,
+    "branch": "merge/e4",
+    "command": "make check && make test-web-build && make test-smoke && cargo run -q -p ocw-assets -- model export-all --check && echo A",
+    "log": "123627-marge-1374011.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 3247,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.46",
+   "title": "Fixed: the browser app dying on an iPhone in every ride, the test routes too",
+   "commit": "e8fd6ab4",
+   "sha": "e8fd6ab4153f515444e029a4df9e2e9aa148a869",
+   "time": "2026-11-23T13:02:22+01:00",
+   "merge": true,
+   "subject": "Merge iPhone browser memory cuts: page-size first frame, pixel ratio 1.5 on WebKit phones, small phone shadow maps, 1280x720 photos, one tile meshed at a time, the course cut of the world base, a memory guard and stepwise fallback (5.46)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T14:03:02+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a11958feda96480f3",
+    "command": "source ~/.cargo/env 2>/dev/null; cargo fmt --all; cargo run -q -p ocw-render --example export-flora > target/export.log ",
+    "log": "140302-marge-1592296.log",
+    "how": "commit",
+    "suites": 7,
+    "passed": 203,
+    "failed": 1,
+    "failed_suites": 1
+   }
+  },
+  {
+   "version": "5.47",
+   "title": "Built: the unicorn's wing beat, gallop, flight and landing play in OCW Studio's Models vi…",
+   "commit": "ab7fb492",
+   "sha": "ab7fb492984fe7d5d16b4bad0592b72956ff52cd",
+   "time": "2026-11-23T13:48:28+01:00",
+   "merge": true,
+   "subject": "Merge OSM street lamps for Black Forest middle and south (lamps-build) and the unicorn's flight cycles in OCW Studio's Models viewer (5.47)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T13:48:39+01:00",
+    "exit": 0,
+    "branch": "merge/unicycles",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "134839-marge-1552371.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 3258,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.48",
+   "title": "Plant files are fixed in the generator before their Blender sources are made",
+   "commit": "a73daf50",
+   "sha": "a73daf5040fdff3926b96ff74f921006e6e3db12",
+   "time": "2026-11-23T13:50:24+01:00",
+   "merge": false,
+   "subject": "Plant files fixed in the generator before their Blender sources: shading scaled to at most 1 with shade_scale, leaf normals on the front side (Phase 15 Q11 (a), 5.48)"
+  },
+  {
+   "version": "5.49",
+   "title": "Off the road after a unicorn landing every slope is ridden at its real gradient, however…",
+   "commit": "94767ce8",
+   "sha": "94767ce8f0b5dc7377f944f2947d29285a9ffeff",
+   "time": "2026-11-23T13:55:22+01:00",
+   "merge": false,
+   "subject": "Off the road every slope is ridden at its real gradient, the trainer caps its resistance anyway (Phase 13 Q7 (b), 5.49)"
+  },
+  {
+   "version": "5.50",
+   "title": "The unicorn lands anywhere on land inside the world's tiles",
+   "commit": "2775d720",
+   "sha": "2775d720d9ce8172e77c721443885f18ccda3068",
+   "time": "2026-11-23T13:56:27+01:00",
+   "merge": false,
+   "subject": "The unicorn lands anywhere on land except water, buildings and obstacles; on the route in events and fixed routes (Phase 13 Q8 (a), 5.50)"
+  },
+  {
+   "version": "5.51",
+   "title": "Riding off the road counts like any riding",
+   "commit": "d7681321",
+   "sha": "d76813218446b5a89cdaa3e507bb42f75fb87352",
+   "time": "2026-11-23T13:56:55+01:00",
+   "merge": false,
+   "subject": "Riding off the road counts like any riding: FIT distance, elevation, time and the real GPS track, hearts by work (Phase 13 Q9 (a), 5.51)"
+  },
+  {
+   "version": "5.52",
+   "title": "Junction kinks smoothed",
+   "commit": "a67ff35b",
+   "sha": "a67ff35bf40c129e3e60e3fe61475929ef93a868",
+   "time": "2026-11-23T14:27:02+01:00",
+   "merge": false,
+   "subject": "Junction kinks smoothed: creases rounded and never above the main road, blended junctions smoothed, light terrain smoothing (4.8.8 Q7 (d), 5.52)"
+  },
+  {
+   "version": "5.53",
+   "title": "Built: riding off the road after a unicorn landing",
+   "commit": "fc78507a",
+   "sha": "fc78507ab1a56f7a251b440fe41d9cd65468af5c",
+   "time": "2026-11-23T15:50:51+01:00",
+   "merge": true,
+   "subject": "Merge Phase 13A: riding off the road after a unicorn landing – land anywhere on land (red ring on water, buildings, obstacles), real gradients, the FIT track and hearts off-road, rejoining roads (5.53)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T15:50:51+01:00",
+    "exit": 0,
+    "branch": "merge/13a",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "155051-marge-1803995.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 3284,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.54",
+   "title": "Built: the plant files survive Blender",
+   "commit": "cb69a327",
+   "sha": "cb69a32778895811c4b323f4918cc4a77fda128a",
+   "time": "2026-11-23T16:38:45+01:00",
+   "merge": true,
+   "subject": "Merge plant files that survive Blender: shading scaled to at most 1 with shade_scale, leaf normals on their own front; 108 of 108 plant files unchanged in the round trip (Phase 15 Q11 (a), 5.54)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T15:50:16+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a11958feda96480f3",
+    "command": "source ~/.cargo/env; make check > target/q11-check.log 2>&1; echo CHECK=$?; make test-web-build > target/q11-web.log 2>&",
+    "log": "155016-marge-1802505.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.55",
+   "title": "Rule: the sides of a road are as smooth as the road",
+   "commit": "5eba81ea",
+   "sha": "5eba81eaf3cbac449ff62d8c5389b03f41c8bca4",
+   "time": "2026-11-23T17:24:17+01:00",
+   "merge": false,
+   "subject": "Rule: the sides of a road are as smooth as the road – side bands follow the rounded corners and the smoothed profile, no gap, hole or lip (4.8.8 Rule, 5.55)"
+  },
+  {
+   "version": "5.56",
+   "title": "Built: junction kinks smoothed",
+   "commit": "7013fc71",
+   "sha": "7013fc71ee01e9fac32a5d1a28625c7fc1306ff2",
+   "time": "2026-11-23T18:08:13+01:00",
+   "merge": true,
+   "subject": "Merge J4: junction kinks smoothed (creases rounded where there is room, blended junctions on a plane), side roads cut below the main road, junction_room below J3, light terrain smoothing, lint side.*; packages in j4-build, not installed (4.8.8 Q7 (d), 5.56)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T18:08:14+01:00",
+    "exit": 0,
+    "branch": "merge/j4",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "180814-marge-2115815.log",
+    "how": "commit",
+    "suites": 74,
+    "passed": 3302,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.57",
+   "title": "Off the road every drawn tree is an obstacle",
+   "commit": "0c952ede",
+   "sha": "0c952ede31aac16d070f5cbcdb3096dbed075569",
+   "time": "2026-11-23T19:47:56+01:00",
+   "merge": false,
+   "subject": "Off the road every drawn tree is an obstacle, trunks made on demand near the rider (Phase 13 Q10 (a))"
+  },
+  {
+   "version": "5.58",
+   "title": "A collision proxy col_* may be a modelled mesh or a scaled unit empty",
+   "commit": "0164808d",
+   "sha": "0164808d8bbb578d6b5ae4203550eda00c4a3dba",
+   "time": "2026-11-23T19:53:40+01:00",
+   "merge": false,
+   "subject": "Collision proxies: a modelled mesh or a scaled unit empty, both kept (Phase 15 Q9 (a))"
+  },
+  {
+   "version": "5.59",
+   "title": "Plants re-exported with their lowest point at the stem base, held props marked extras.ocw…",
+   "commit": "fe764355",
+   "sha": "fe7643552b1fad40287d613f910b9ebbf905df89",
+   "time": "2026-11-23T20:00:26+01:00",
+   "merge": false,
+   "subject": "Plants re-exported with their lowest point at the stem base, held props marked held (Phase 15 Q10 (a))"
+  },
+  {
+   "version": "5.60",
+   "title": "Built: off the road every drawn tree is an obstacle",
+   "commit": "269e12dd",
+   "sha": "269e12dd36ebf73543d2ebb72f3b6f4c16f1123f",
+   "time": "2026-11-23T21:58:58+01:00",
+   "merge": true,
+   "subject": "Merge Phase 13 Q10 (a): off the road every drawn tree is an obstacle – trunks made per 40 m cell around off-road riders, the same trees as drawn, baked per tile on the server (5.60)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T21:58:58+01:00",
+    "exit": 0,
+    "branch": "merge/q10",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "215858-marge-2582294.log",
+    "how": "commit",
+    "suites": 75,
+    "passed": 3319,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.61",
+   "title": "Built: the sides of a road are as smooth as the road",
+   "commit": "cf7552ac",
+   "sha": "cf7552acc0faf6cbfbf4ec4ab3397fad29f4141e",
+   "time": "2026-11-23T22:03:50+01:00",
+   "merge": true,
+   "subject": "Merge J5: road sides follow the road – corner outlines along the real road edges with rounded corners, tilted mouth rows, verges as wide as the drop, side.* lint measured against the surface slope; packages in j5-build, not installed (4.8.8 Rule, 5.61)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T23:04:06+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-adeca704a209ce81c",
+    "command": "P=$HOME/src/OCW/data/j6-build/pilot/liechtenstein.ocwpkg; O=$PWD/test-output/j6-sides; OCW_JUNCTION_WORLD=$P OCW_JUNCTIO",
+    "log": "230406-marge-2733285.log",
+    "how": "commit",
+    "suites": 1,
+    "passed": 1,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.62",
+   "title": "Built: every model file survives Blender",
+   "commit": "55b60864",
+   "sha": "55b608640310243922ec180ee9aa2957bf2c21e9",
+   "time": "2026-11-23T22:47:11+01:00",
+   "merge": true,
+   "subject": "Merge every model file survives Blender (unicorn ears and horn as cones, lips with corner-angle normals; 221 of 221) and every model stands on its origin (Phase 15 Q10 (a)) (5.62, 5.63)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T22:47:26+01:00",
+    "exit": 0,
+    "branch": "merge/batch",
+    "command": "make check && make test-web-build && make test-smoke && make test-blender && cargo run -q -p ocw-assets -- model export-",
+    "log": "224726-marge-2685208.log",
+    "how": "commit",
+    "suites": 75,
+    "passed": 3327,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.63",
+   "title": "Built: every model file stands on its origin",
+   "commit": "55b60864",
+   "sha": "55b608640310243922ec180ee9aa2957bf2c21e9",
+   "time": "2026-11-23T22:47:11+01:00",
+   "merge": true,
+   "subject": "Merge every model file survives Blender (unicorn ears and horn as cones, lips with corner-angle normals; 221 of 221) and every model stands on its origin (Phase 15 Q10 (a)) (5.62, 5.63)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T22:47:26+01:00",
+    "exit": 0,
+    "branch": "merge/batch",
+    "command": "make check && make test-web-build && make test-smoke && make test-blender && cargo run -q -p ocw-assets -- model export-",
+    "log": "224726-marge-2685208.log",
+    "how": "commit",
+    "suites": 75,
+    "passed": 3327,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.64",
+   "title": "Built: street lamp poles are obstacles in the browser too, and a phone's first-ride hints…",
+   "commit": "7d15976d",
+   "sha": "7d15976d7ba740e2a19fae68cbd4c1f62fd5124c",
+   "time": "2026-11-23T23:57:00+01:00",
+   "merge": true,
+   "subject": "Merge lamp poles as obstacles in the browser (ring around a wild rider) and the phone layout without overlaps (K3, 3.2.3; 5.64)",
+   "branch": "worktree-agent-aa2305c7d42929a88",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-23T22:48:21+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-aa2305c7d42929a88",
+    "command": "make check > /tmp/agentaa-check.log 2>&1; echo \"check exit $?\"; grep -E \"^error|FAILED|panicked|Diff in\" /tmp/agentaa-ch",
+    "log": "224821-marge-2687031.log",
+    "how": "branch",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  }
+ ],
+ "deploys": [
+  {
+   "start": "2026-11-23T12:20:19+01:00",
+   "end": "2026-11-23T12:29:48+01:00",
+   "machine": "marge",
+   "commit": "06d85426",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-23T12:29:48+01:00",
+   "end": "2026-11-23T12:31:05+01:00",
+   "machine": "leela",
+   "commit": "06d85426",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-23T17:22:26+01:00",
+   "end": "2026-11-23T17:25:00+01:00",
+   "machine": "marge",
+   "commit": "5eba81ea",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-23T17:25:00+01:00",
+   "end": "2026-11-23T17:26:45+01:00",
+   "machine": "leela",
+   "commit": "5eba81ea",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-23T23:28:27+01:00",
+   "end": "2026-11-23T23:36:50+01:00",
+   "machine": "marge",
+   "commit": "55b60864",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-23T23:36:50+01:00",
+   "end": "2026-11-23T23:38:18+01:00",
+   "machine": "leela",
+   "commit": "55b60864",
+   "exit": 0
+  }
+ ],
+ "releases": [],
+ "agent_jobs": [
+  {
+   "agent": "a825b47a",
+   "task": "Day 12 video (2026-11-22)",
+   "branch": "worktree-agent-a825b47aec0fd2418",
+   "start": "2026-11-23T00:15:13+01:00",
+   "end": "2026-11-23T00:45:51+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "adb67871",
+   "task": "Season check for worlds without seasons",
+   "branch": "worktree-agent-adb67871eba1f1dad",
+   "start": "2026-11-23T08:44:30+01:00",
+   "end": "2026-11-23T09:53:45+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "acbca6f0",
+   "task": "iPhone: cut browser memory drastically",
+   "branch": "worktree-agent-acbca6f009ac2ec66",
+   "start": "2026-11-23T08:51:52+01:00",
+   "end": "2026-11-23T13:48:01+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a765cbc5",
+   "task": "OSM street lamps; lamps and props as obstacles from proxies",
+   "branch": "worktree-agent-a765cbc595ec59a84",
+   "start": "2026-11-23T09:25:07+01:00",
+   "end": "2026-11-23T11:05:48+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a318b069",
+   "task": "Fix bald trees on approach, unicorn ground spot",
+   "branch": "worktree-agent-a318b069771a80073",
+   "start": "2026-11-23T09:35:50+01:00",
+   "end": "2026-11-23T12:20:08+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a6f5aa9d",
+   "task": "OCW Studio E4: Models workspace editing",
+   "branch": "worktree-agent-a6f5aa9dab2456bee",
+   "start": "2026-11-23T11:06:11+01:00",
+   "end": "2026-11-23T13:22:16+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "aa8b8382",
+   "task": "Black Forest lamps rebuild; unicorn cycles in Studio viewer",
+   "branch": "worktree-agent-aa8b83829082695f0",
+   "start": "2026-11-23T12:20:32+01:00",
+   "end": "2026-11-23T14:21:22+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "acb0f792",
+   "task": "Pictures: Q6 side-road mouths and Q7 creases",
+   "branch": "worktree-agent-acb0f792245e83954",
+   "start": "2026-11-23T13:23:11+01:00",
+   "end": "2026-11-23T14:27:28+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a11958fe",
+   "task": "Plant files survive Blender (Phase 15 Q11 a)",
+   "branch": "worktree-agent-a11958feda96480f3",
+   "start": "2026-11-23T13:50:52+01:00",
+   "end": "2026-11-23T17:22:10+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "aecca951",
+   "task": "Phase 13A: ride off the road after a unicorn landing",
+   "branch": "worktree-agent-aecca951247987cc1",
+   "start": "2026-11-23T14:21:44+01:00",
+   "end": "2026-11-23T16:44:52+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a26ac3f8",
+   "task": "Junction kinks Q7 (d), terrain smoothing, rebuild all packages",
+   "branch": "worktree-agent-a26ac3f82bbda79f8",
+   "start": "2026-11-23T14:27:27+01:00",
+   "end": "2026-11-23T18:34:18+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a3769047",
+   "task": "Rule: smooth road sides – junction corners and mouths (J5)",
+   "branch": "worktree-agent-a376904757b84bfd9",
+   "start": "2026-11-23T18:34:41+01:00",
+   "end": "2026-11-23T22:51:02+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "aa2305c7",
+   "task": "Browser: lamp poles as obstacles, phone layout overlap",
+   "branch": "worktree-agent-aa2305c7d42929a88",
+   "start": "2026-11-23T19:19:20+01:00",
+   "end": "2026-11-23T23:56:51+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a8c5ac48",
+   "task": "Unicorn head and rider lip normals survive Blender",
+   "branch": "worktree-agent-a8c5ac4818f5d30e5",
+   "start": "2026-11-23T19:19:21+01:00",
+   "end": "2026-11-23T23:28:11+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "afa3443c",
+   "task": "Phase 13 Q10: every drawn tree an obstacle off the road",
+   "branch": "worktree-agent-afa3443cd1461751c",
+   "start": "2026-11-23T19:49:17+01:00",
+   "end": "2026-11-23T22:51:01+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "adeca704",
+   "task": "J6: verge V-notch, above-main 0, remaining side faults",
+   "branch": "worktree-agent-adeca704a209ce81c",
+   "start": "2026-11-23T22:04:10+01:00",
+   "end": null,
+   "status": "started",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  }
+ ]
+}

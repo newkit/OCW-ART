@@ -1,0 +1,148 @@
+# OCW Build Diary – day 13 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-23/ (or ../DAY/ for another day).
+# Spec rows 5.41–5.63; no release.
+# Withheld: nothing – the day's 838 pictures and videos were checked (no
+# desktop captures, no host or user names, home paths or addresses; OCW
+# Studio's paths are relative (artwork/3dmodels/…); the browser's loading
+# screens show only the world's signing keys; only made-up riders – the
+# manifest's author in the Studio diff is Ada Rider).
+
+title = "Off the road"
+tagline = "In which Tenerife admits it has no autumn, street lamps step out of the map and into the riders' way, the trees keep their leaves, OCW Studio learns to edit, the iPhone goes on a diet – and the unicorn lands in a meadow, where the road ends and the woods begin."
+hero = "152043-13a-meadow-to-road.jpg"
+bpm = 132
+key = "C"
+style = "garage"                   # day 6 darkchip, 7 melodic deep house, 8 liquid dnb, 9 electro, 10 ambient, 11 trance, 12 dub: UK garage, a 2-step that skips past the third beat – for a day that leaves the road
+mode = "minor"
+outro = "Off the road, into the woods, back onto the road. 1,361 million tokens."
+teaser = "NEXT TIME: J6 – the notch in the verge."
+# The phone memory runs and the browser layout sweeps (the same ride again
+# and again), the X11 twins, the plant files' 200-odd pictures from behind
+# the unicorn's ears and the charts would flicker through the time-lapse:
+timelapse_skip = ["*web-ios-*", "*lamps-layout-*", "*-x11*", "*e8fd6ab4-dirty-*", "*-chart-*", "*-plan-*",
+                  "*-zoom-*", "*-case-*"]
+
+[[chapter]]
+time = "09:52"
+title = "Tenerife has no autumn"
+caption = "The Season page checks the place: Tenerife's weak seasons get one line and only Summer and Winter."
+prompt = "Add on: Do check if the Map is in a region where there are seasons. E.g. in Tenerife there are not AFAIK."
+shots = [
+  { file = "091118-shot-wayland-season-weak-page-tenerife-coast.jpg", seconds = 4.4, focus = [0.5, 0.4, 1.4], note = "evergreen, a 7 °C year" },
+  { file = "091143-shot-wayland-season-weak-page-liechtenstein.jpg", seconds = 3.8, focus = [0.22, 0.45, 1.4], note = "Liechtenstein: all six" },
+  { card = true, seconds = 3.6, text = "The Teide's summit cone: snow on 126 days. Puerto de la Cruz and Las Cañadas: no lying snow." },
+]
+
+[[chapter]]
+time = "11:04"
+title = "Lamps from the map"
+caption = "Street lamps mapped in OSM stand where they are mapped – and every pole is an obstacle a rider can hit."
+prompt = "do what you recommend: start 2 and 3 together now. They make the world more solid and don't collide with the iPhone work."
+shots = [
+  { file = "102105-osm-lamps-vaduz-night-wide-wayland.jpg", seconds = 3.8, note = "Vaduz at night" },
+  { file = "102211-osm-lamps-vaduz-lamp-bump-wayland.jpg", seconds = 4.2, focus = [0.62, 0.55, 1.5], note = "stopped by a lamp pole" },
+  { file = "103130-osm-lamps-santacruz-mapped-night-wayland.jpg", seconds = 3.6, note = "Santa Cruz" },
+  { card = true, seconds = 3.6, text = "Tenerife: 1,010 mapped lamps – 857 placed, 130 moved off the road. 60,977 poles in all." },
+]
+
+[[chapter]]
+time = "11:30"
+title = "Bald no more"
+caption = "Trees went bald as you came closer: near and far models disagreed. Now they agree, on every day of the year."
+prompt = "there is a bug recently intoduced: the trees turn bald (without leaves) all of a sudden when gertting closer."
+shots = [
+  { split = ["102026-tree-lod-li-wood-2026-11-23-150m-before.jpg", "102441-tree-lod-li-wood-2026-11-23-150m-after.jpg"], seconds = 4.9, note = "before | after" },
+  { file = "105456-tree-lod-li-wood-2026-11-23-60m-after.jpg", seconds = 3.6, note = "November: a crown of twigs" },
+  { file = "105837-junction-fan-fan-unicorn-after.mp4", seconds = 5.0, start = 1.0, note = "the junction fan: riding only" },
+]
+
+[[chapter]]
+time = "12:36"
+title = "Studio edits"
+caption = "OCW Studio edits model files: gizmo, rename, proxies, paint slots, undo – and the model diff before it saves."
+prompt = "E4 is the bigger next step after that."
+shots = [
+  { file = "114628-models-e4-bike-node-gizmo-wayland.jpg", seconds = 4.0, focus = [0.62, 0.45, 1.3], note = "move the saddle" },
+  { file = "114845-models-e4-proxy-empty-wayland.jpg", seconds = 3.6, focus = [0.7, 0.5, 1.4], note = "a proxy: a scaled box" },
+  { file = "114927-models-e4-diff-before-save-x11.jpg", seconds = 4.6, focus = [0.6, 0.48, 1.7], note = "diff first, then save" },
+]
+
+[[chapter]]
+time = "13:02"
+title = "The iPhone diet"
+caption = "Phones draw at pixel ratio 1.5 and keep only the world along their course. Each death goes a step further down."
+prompt = "the mobile browser version still crashes, on safari I have seen the blue hint box that it's maybe memory related"
+shots = [
+  { file = "125337-web-ios-phone-after-loop-1min.png", seconds = 3.6, note = "the Loop, 1 min" },
+  { file = "125337-web-ios-phone-after-loop-died-three-times.png", seconds = 4.0, focus = [0.5, 0.45, 1.6], note = "saver → minimal → stop" },
+  { card = true, seconds = 4.2, text = "Bevy made three 3840 × 2160 targets on a phone. Tenerife's base, cut to the course: 250 → 62 MB." },
+]
+
+[[chapter]]
+time = "13:48"
+title = "Flight cycles"
+caption = "Wing beat, gallop, flight and landing play in Studio's Models viewer – the game's own animation, not a copy."
+shots = [
+  { file = "125355-unicorn-cycles-wing-cycle.mp4", seconds = 4.0, note = "wing beat" },
+  { file = "125444-unicorn-cycles-landing-cycle.mp4", seconds = 4.0, note = "landing" },
+]
+
+[[chapter]]
+time = "13:50"
+title = "Yes, (a)"
+caption = "Four open questions, six minutes: plant files, steep slopes, where the unicorn lands, what off-road riding counts."
+prompt = "(b), i guess the trainer will cap at somepoint anyway"
+shots = [
+  { card = true, seconds = 4.4, text = "13:50 – 13:56: Q11 (a), Q7 (b), Q8 (a), Q9 (a). Off the road, every slope at its real gradient." },
+  { card = true, seconds = 4.0, text = "19:47 – 20:00: three more. Trees become obstacles, proxies stay two kinds, plants stand on their stems." },
+]
+
+[[chapter]]
+time = "15:50"
+title = "Off the road"
+caption = "The unicorn lands anywhere on land. The rider rides the meadow at its real gradient – and back onto the road."
+shots = [
+  { file = "151637-13a-ring-red-water.jpg", seconds = 3.6, focus = [0.45, 0.6, 1.4], note = "red ring: not on water" },
+  { file = "151806-13a-climb-steep-slope.mp4", seconds = 4.5, start = 2.0, note = "+60 %, 450 W: 3.6 km/h" },
+  { file = "152053-13a-meadow-to-road.mp4", seconds = 6.0, start = 4.0, speed = 2, note = "the road again" },
+]
+
+[[chapter]]
+time = "16:38"
+title = "Blender, both ways"
+caption = "Plant files come back from Blender unchanged: shading kept at most 1, every leaf lit from its own side."
+prompt = "yes, (a)"
+shots = [
+  { split = ["153448-plant-files-q11-tf-palms-above-2026-11-23-near-before-files.jpg", "154906-plant-files-q11-tf-palms-above-2026-11-23-near-after-files.jpg"], seconds = 4.9, note = "sunlit from above" },
+  { card = true, seconds = 3.6, text = "108 of 108 plant files unchanged. At 22:47: 221 of 221 model files, the unicorn's ears too." },
+]
+
+[[chapter]]
+time = "18:08"
+title = "J4: no more creases"
+caption = "Junction kinks rounded into vertical curves, side roads never above the main road, the terrain a little smoother."
+prompt = "q6: the crease fix of making the road longer and more equal is good. make sure the side road does not stick out of the main road."
+shots = [
+  { split = ["175135-j4-q7-a-side-j3.jpg", "175149-j4-q7-a-side-j4.jpg"], seconds = 4.9, note = "J3 | J4" },
+  { card = true, seconds = 3.6, text = "Kinks 33 – 44 % fewer than J3, creases 52 – 64 % fewer, in all five packages." },
+]
+
+[[chapter]]
+time = "21:58"
+title = "Into the woods"
+caption = "Off the road every drawn tree is an obstacle: a stop at walking pace, a crash at speed."
+prompt = "yes, (a). next question"
+shots = [
+  { file = "214432-scenes-q10-woods-crash-video-1280.mp4", seconds = 5.5, note = "Crash! (tree)" },
+  { card = true, seconds = 3.6, text = "The northern Black Forest's trunks baked into 37 MB instead of 310. A wood's cell: 7 µs." },
+]
+
+[[chapter]]
+time = "22:03"
+title = "Smooth sides"
+caption = "A new rule: the sides of a road are as smooth as the road. J5 rounds the corners of the verges."
+prompt = "can you make a rule in woeld building that smoothens the sides, too?"
+shots = [
+  { split = ["202819-j5-sides-li-letzanaweg-corner-j4.jpg", "212320-j5-sides-li-letzanaweg-corner-j5.jpg"], seconds = 4.9, note = "J4 | J5 – one notch left" },
+  { card = true, seconds = 3.6, text = "Corner faults halved (−49 to −54 %). Not at 0 yet: at 22:04 J6 starts." },
+]
