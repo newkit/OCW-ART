@@ -411,3 +411,37 @@ class DubTest(unittest.TestCase):
         s = M.stats(M.Music(74, "D", seed=12, style="dub").render(26, [(0, "groove"), (13, "groove")]))
         self.assertLess(s["peak_db"], -2.4)
         self.assertAlmostEqual(s["rms_db"], -19, delta=1.5)
+
+
+class GarageTest(unittest.TestCase):
+    """Day 13 (2026-11-23): UK garage, a style unlike days 6–12."""
+    SEGS = [(0, "intro"), (6, "drive"), (20, "groove"), (32, "groove"), (44, "groove"), (56, "groove"),
+            (68, "outro")]
+
+    def test_the_two_step_skips_the_third_beat(self):
+        pat = M.DRUMS["garage"]
+        self.assertEqual(pat["k"][0], "x")
+        self.assertEqual(pat["k"][8], ".")  # no kick on the third beat
+        self.assertEqual([i for i, c in enumerate(pat["s"]) if c != "."], [4, 12])
+
+    def test_heavily_swung_minor_ninths(self):
+        st = M.STYLES["garage"]
+        self.assertGreaterEqual(st["swing"], 0.15)
+        self.assertTrue(st["sevenths"] and st["ninths"])
+        m = M.Music(132, "C", seed=13, style="garage")
+        self.assertEqual(m.mode_name, "minor")
+
+    def test_chopped_stabs_and_a_bass_with_gaps(self):
+        self.assertEqual(M.STYLES["garage"]["harm"]["kind"], "stab")
+        for name in M.STYLES["garage"]["bass"]["patterns"]:
+            self.assertLess(sum(n[1] for n in M.BASS[name]), 16, name)
+
+    def test_a_drum_style_per_chapter(self):
+        m = M.Music(132, "C", seed=13, style="garage")
+        grooves = [s[1] for s in m.plan(80, self.SEGS) if s[-1] == "groove" and s[1]]
+        self.assertGreaterEqual(len(set(grooves) & set(M.STYLES["garage"]["grooves"])), 3, grooves)
+
+    def test_loud_enough_without_clipping(self):
+        s = M.stats(M.Music(132, "C", seed=13, style="garage").render(24, [(0, "groove"), (12, "groove")]))
+        self.assertLess(s["peak_db"], -2.4)
+        self.assertAlmostEqual(s["rms_db"], -19, delta=1.5)

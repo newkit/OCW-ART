@@ -68,6 +68,9 @@ class SpecRowTest(unittest.TestCase):
         self.assertEqual(F.row_title("**Fixed: the browser app restarting on an iPhone – a lost WebGL context "
                                      "now stops the app** (14 Phase 10 B7): …"),
                          "Fixed: the browser app restarting on an iPhone")
+        # an acronym keeps its case (day 13: "Built: oCW Studio edits model files")
+        self.assertEqual(F.row_title("**Built: OCW Studio edits model files – select nodes** (16F E4)"),
+                         "Built: OCW Studio edits model files")
         self.assertEqual(F.row_title("**Voice: \"nobody hears you\" on the HUD when My voice is turned on; "
                                      "headphones** (7.1.7 Q22): …"),
                          "Voice: \"nobody hears you\" on the HUD when My voice is turned on")

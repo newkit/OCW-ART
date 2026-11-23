@@ -22,7 +22,12 @@ on every off-beat; day 11) and `dub` (roots dub, about 74 bpm: dorian
 i–IV, the one-drop beat – kick and rim together on the third beat, nothing
 on the one –, a round melodic sub bass that rests on the downbeat, the
 guitar skank on 2 and 4 with a spring-like echo, a sustained organ, a reedy
-melodica lead with a long delay, dub stops; day 12).
+melodica lead with a long delay, dub stops; day 12) and `garage` (UK garage,
+2-step, about 132 bpm: minor 7th and 9th chords, the shuffled 2-step beat –
+the kick on the one and skipping past the third beat, the snare on 2 and 4,
+heavily swung 16th hats –, a bouncing sub bass that leaves gaps, chopped
+Rhodes-like chord stabs, a plucked lead with an echo like a cut-up vocal;
+day 13).
 A day script
 can name one (`style`, `mode`); by default the day number picks it. Within a
 video the music follows the sections – intro (title), drive (time-lapse),
@@ -100,6 +105,10 @@ BASS = {
     "rockers": [(0, 2, 0, 0), (3, 1, 0, 0), (4, 2, 2, 0), (7, 1, 0, 1), (8, 3, 0, 0), (12, 2, 1, 0),
                 (14, 2, 2, 0)],
     "dubwalk": [(2, 2, 0, 0), (4, 2, 1, 0), (6, 2, 2, 0), (8, 4, 0, 1), (12, 2, 2, 0), (14, 2, 1, 0)],
+    # UK garage: a bouncing sub that skips with the kick and leaves gaps
+    "skip": [(0, 2, 0, 0), (3, 1, 0, 0), (6, 2, 0, 1), (10, 2, 0, 0), (13, 1, 2, 0), (14, 2, 0, 0)],
+    "bounce": [(0, 3, 0, 0), (4, 1, 0, 1), (7, 2, 0, 0), (10, 1, 1, 0), (11, 2, 0, 0), (14, 1, 2, 0)],
+    "garagewalk": [(0, 2, 0, 0), (3, 2, 2, 0), (6, 1, 0, 1), (8, 2, 1, 0), (11, 2, 0, 0), (14, 2, 2, 0)],
 }
 
 # Arpeggio orders over [c0, c1, c2, c0+12, c1+12, c2+12].
@@ -196,6 +205,19 @@ DRUMS = {
     "dubhalf": {"k": "........x.....g.", "s": "........X.......", "o": "......x.........",
                 "r": "g.g.g.g.g.g.g.g."},
     "dubbreak": {"m": "........x.......", "h": "x...x...x...x..."},
+    # UK garage (132 bpm, heavily swung 16ths): the 2-step – the kick on the
+    # one and skipping past the third beat, the snare on 2 and 4, shuffled
+    # hats with ghosts –, a variant with a rim, speed garage (four on the
+    # floor, the open hat off the beat), a half-time breather; hats and rim
+    # in the breakdown.
+    "garage": {"k": "x.........x.....", "s": "....X.......X...", "h": "xgx.xgx.xgx.xgxg"},
+    "garage2": {"k": "x......x..x.....", "s": "....X.......X..g", "h": "x.xgx.xgx.xgx.xg",
+                "m": "...g......g....."},
+    "speed": {"k": "x...x...x...x...", "s": "....x.......x...", "o": "..x...x...x...x.",
+              "h": "g.g.g.g.g.g.g.g."},
+    "garagehalf": {"k": "x.........x..x..", "s": "........X.......", "h": "xgx.xgx.xgx.xgx.",
+                   "r": ".g.g.g.g.g.g.g.g"},
+    "garagebreak": {"h": "xgx.xgx.xgx.xgx.", "m": "....x.......x..."},
 }
 
 # Stab rhythms (chord hits): x hit; length of a hit in steps follows.
@@ -206,6 +228,8 @@ STABS = {
     "keys": ("x.........x.....", 10), "keys2": ("x.....x.....x...", 6), "keys3": ("x.......x.......", 8),
     # dub: the skank – short chops on 2 and 4, a double chop, the off-beats
     "skank": ("....x.......x...", 1), "skank2": ("....x.x.....x.x.", 1), "skank8": ("..x...x...x...x.", 1),
+    # UK garage: chopped chords that skip like the beat
+    "chop": ("x..x..x...x.....", 2), "chop2": ("..x..x....x..x..", 2), "chop3": ("x.....x..x......", 3),
 }
 
 STYLES = {
@@ -319,6 +343,20 @@ STYLES = {
         "cycle": True, "breakdown_drums": "dubbreak", "sweep": True,
         "fills": ["stop", "fill", "stop", "build"],
     },
+    "garage": {
+        "mode": "minor", "swing": 0.16,
+        "progs": [[0, 5, 3, 4], [0, 3, 6, 5], [5, 3, 0, 0], [0, 6, 5, 3]], "bridge": [3, 4, 5, 6],
+        "cadence": [3, 4, 0, 0], "sevenths": True, "ninths": True, "lift": [1],
+        "bass": {"wave": "deepbass", "gain": 0.27, "patterns": ["skip", "bounce", "garagewalk"]},
+        "harm": {"kind": "stab", "wave": "fm", "gain": 0.065, "octave": 0,
+                 "patterns": ["chop", "chop2", "chop3"]},
+        "lead": {"wave": "softpluck", "gain": 0.065, "octave": 12, "density": 0.34, "p16": 0.3,
+                 "legato": 0.6, "vibrato": 0.0, "echo": 0.36},
+        "pad": {"wave": "sinepad", "gain": 0.07, "lp": 0.04},
+        "kit": "garage", "drive": "garage2", "grooves": ["garage", "garage2", "speed", "garagehalf"],
+        "cycle": True, "breakdown_drums": "garagebreak", "sweep": True,
+        "fills": ["stop", "build", "fill", "stop"],
+    },
     "synthwave": {
         "mode": "minor", "swing": 0.0,
         "progs": [[0, 5, 2, 6], [0, 3, 5, 4], [5, 6, 0, 0], [0, 6, 5, 6]], "bridge": [3, 4, 5, 6],
@@ -398,6 +436,8 @@ KITS = {  # kick (f start, f end, decay s), snare (noise decay, tone Hz, tone ga
                "lp": 1.0, "clap": True},
     "dub": {"kick": (95, 40, 0.30), "snare": (0.08, 330.0, 0.6), "hat": 0.018, "bright": 0.75,
             "lp": 0.8},
+    "garage": {"kick": (125, 44, 0.20), "snare": (0.11, 0.0, 0.0), "hat": 0.014, "bright": 0.9,
+               "lp": 0.9, "clap": True},
 }
 
 VEL = {"x": 1.0, "X": 1.25, "g": 0.35, "o": 1.0}

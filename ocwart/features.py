@@ -73,7 +73,9 @@ def row_title(text: str, n: int = 90) -> str:
         b = re.match(r"(?i)(built|fixed)\s*:\s*(.+)", t)
         if b:
             what = re.split(r":\s| – | — |;\s|\.\s", b.group(2), maxsplit=1)[0].strip(" ,.")
-            t = b.group(1).capitalize() + ": " + what[:1].lower() + what[1:]
+            # (an acronym keeps its case: "OCW Studio edits …", not "oCW …")
+            first = what[:1] if what[1:2].isupper() else what[:1].lower()
+            t = b.group(1).capitalize() + ": " + first + what[1:]
         else:
             parts = re.split(r"(:\s| – | — |;\s|\.\s)", t, maxsplit=2)
             t = parts[0]
