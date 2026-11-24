@@ -27,7 +27,12 @@ melodica lead with a long delay, dub stops; day 12) and `garage` (UK garage,
 the kick on the one and skipping past the third beat, the snare on 2 and 4,
 heavily swung 16th hats –, a bouncing sub bass that leaves gaps, chopped
 Rhodes-like chord stabs, a plucked lead with an echo like a cut-up vocal;
-day 13).
+day 13) and `acid` (acid house / acid techno, about 128 bpm: minor, a
+squelching 303-like bass – a saw through a resonant low-pass whose cutoff
+snaps open on every note and closes again, accents and octave jumps in
+16ths –, a 909-like kit with a drum style per chapter – four on the floor
+with the open hat off the beat, a jacking ride, a broken break, half-time –,
+dry minor stabs, a hollow square lead with an echo; day 14).
 A day script
 can name one (`style`, `mode`); by default the day number picks it. Within a
 video the music follows the sections – intro (title), drive (time-lapse),
@@ -109,6 +114,12 @@ BASS = {
     "skip": [(0, 2, 0, 0), (3, 1, 0, 0), (6, 2, 0, 1), (10, 2, 0, 0), (13, 1, 2, 0), (14, 2, 0, 0)],
     "bounce": [(0, 3, 0, 0), (4, 1, 0, 1), (7, 2, 0, 0), (10, 1, 1, 0), (11, 2, 0, 0), (14, 1, 2, 0)],
     "garagewalk": [(0, 2, 0, 0), (3, 2, 2, 0), (6, 1, 0, 1), (8, 2, 1, 0), (11, 2, 0, 0), (14, 2, 2, 0)],
+    # acid: a 303 line in 16ths – the root, octave jumps, a few chord tones, rests
+    "acid": [(0, 1, 0, 0), (1, 1, 0, 1), (3, 1, 0, 0), (4, 1, 2, 0), (6, 1, 0, 1), (7, 1, 0, 0),
+             (9, 1, 1, 0), (10, 1, 0, 0), (11, 1, 0, 1), (13, 1, 0, 0), (14, 2, 2, 0)],
+    "acid2": [(0, 2, 0, 0), (2, 1, 0, 1), (3, 1, 0, 0), (5, 1, 1, 0), (6, 1, 0, 0), (8, 1, 0, 1),
+              (9, 1, 0, 0), (10, 1, 2, 1), (12, 1, 0, 0), (13, 1, 1, 0), (15, 1, 0, 1)],
+    "acidpedal": [(s, 1, 0, 1 if s in (2, 7, 10, 15) else 0) for s in range(16) if s not in (4, 12)],
 }
 
 # Arpeggio orders over [c0, c1, c2, c0+12, c1+12, c2+12].
@@ -218,6 +229,19 @@ DRUMS = {
     "garagehalf": {"k": "x.........x..x..", "s": "........X.......", "h": "xgx.xgx.xgx.xgx.",
                    "r": ".g.g.g.g.g.g.g.g"},
     "garagebreak": {"h": "xgx.xgx.xgx.xgx.", "m": "....x.......x..."},
+    # acid (128 bpm, a 909-like kit): four on the floor with the open hat off
+    # the beat and the clap on 2 and 4, a jacking variant with a 16th ride
+    # (the rim) and an extra kick, a broken break (kick on 1 and the "and"
+    # of 2 and 3), a half-time stomp; hats and the open hat in the breakdown.
+    "acid": {"k": "x...x...x...x...", "s": "....x.......x...", "o": "..x...x...x...x.",
+             "h": "x.x.x.x.x.x.x.x."},
+    "acidjack": {"k": "x...x...x...x..x", "s": "....X.......X...", "o": "..x...x...x...x.",
+                 "r": "xgxgxgxgxgxgxgxg"},
+    "acidbreak": {"k": "x.....x...x.....", "s": "....X.......X.g.", "h": "xxgxxxgxxxgxxxgx",
+                  "o": "..............x."},
+    "acidhalf": {"k": "x.......x.......", "s": "........X.......", "o": "..x...x...x...x.",
+                 "h": "g.g.g.g.g.g.g.g."},
+    "acidbreakdown": {"o": "..x...x...x...x.", "h": "x.g.x.g.x.g.x.g."},
 }
 
 # Stab rhythms (chord hits): x hit; length of a hit in steps follows.
@@ -230,6 +254,8 @@ STABS = {
     "skank": ("....x.......x...", 1), "skank2": ("....x.x.....x.x.", 1), "skank8": ("..x...x...x...x.", 1),
     # UK garage: chopped chords that skip like the beat
     "chop": ("x..x..x...x.....", 2), "chop2": ("..x..x....x..x..", 2), "chop3": ("x.....x..x......", 3),
+    # acid: dry minor stabs, sparse, off the beat
+    "acidstab": ("......x.......x.", 1), "acidstab2": ("..x.......x..x..", 1), "acidstab3": ("...x......x.....", 2),
 }
 
 STYLES = {
@@ -357,6 +383,20 @@ STYLES = {
         "cycle": True, "breakdown_drums": "garagebreak", "sweep": True,
         "fills": ["stop", "build", "fill", "stop"],
     },
+    "acid": {
+        "mode": "minor", "swing": 0.04,
+        "progs": [[0, 0, 0, 0], [0, 0, 5, 6], [0, 3, 0, 6], [5, 6, 0, 0]], "bridge": [3, 3, 5, 6],
+        "cadence": [5, 6, 0, 0], "sevenths": True, "lift": [2],
+        "bass": {"wave": "acid", "gain": 0.2, "patterns": ["acid", "acid2", "acidpedal"]},
+        "harm": {"kind": "stab", "wave": "pulse50", "gain": 0.04, "octave": 12,
+                 "patterns": ["acidstab", "acidstab2", "acidstab3"]},
+        "lead": {"wave": "softpulse", "gain": 0.06, "octave": 12, "density": 0.3, "p16": 0.25,
+                 "legato": 0.6, "vibrato": 0.0, "echo": 0.35},
+        "pad": {"wave": "saw", "gain": 0.06, "lp": 0.025},
+        "kit": "acid", "drive": "acidjack", "grooves": ["acid", "acidjack", "acidbreak", "acidhalf"],
+        "cycle": True, "breakdown_drums": "acidbreakdown", "sweep": True,
+        "fills": ["build", "stop", "fill", "build"],
+    },
     "synthwave": {
         "mode": "minor", "swing": 0.0,
         "progs": [[0, 5, 2, 6], [0, 3, 5, 4], [5, 6, 0, 0], [0, 6, 5, 6]], "bridge": [3, 4, 5, 6],
@@ -438,6 +478,8 @@ KITS = {  # kick (f start, f end, decay s), snare (noise decay, tone Hz, tone ga
             "lp": 0.8},
     "garage": {"kick": (125, 44, 0.20), "snare": (0.11, 0.0, 0.0), "hat": 0.014, "bright": 0.9,
                "lp": 0.9, "clap": True},
+    "acid": {"kick": (160, 46, 0.24), "snare": (0.12, 0.0, 0.0), "hat": 0.011, "bright": 1.0,
+             "lp": 1.0, "clap": True},
 }
 
 VEL = {"x": 1.0, "X": 1.25, "g": 0.35, "o": 1.0}
@@ -635,6 +677,21 @@ class Music:
                 out.append(y)
             e = _env(n, 20, 800)
             t = [(out[i] * 1.3 + 0.35 * math.sin(w * i)) * e[i] for i in range(n)]
+        elif wave == "acid":  # a 303: a saw through a resonant 2-pole low-pass whose cutoff snaps open
+            # on every note and closes again (a state-variable filter, q high, a little drive)
+            low = band = 0.0
+            q = 0.18
+            t = []
+            for i in range(n):
+                x = 2 * ((i * inc) % 1) - 1
+                fc = 180 + 2600 * math.exp(-i / (0.07 * R))
+                fk = 2 * math.sin(math.pi * min(fc, R / 6) / R)
+                low += fk * band
+                high = x - low - q * band
+                band += fk * high
+                t.append(math.tanh(1.6 * low + 0.5 * band))
+            e = _env(n, 25, 500)
+            t = [(t[i] * 0.9 + 0.35 * math.sin(w * i)) * e[i] for i in range(n)]
         elif wave == "piano":
             e = _env(n, 20, 1500)
             t = [sum(math.sin(w * k * i) / k ** 1.4 * math.exp(-i * k / (0.6 * R)) for k in (1, 2, 3, 4))

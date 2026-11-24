@@ -1,6 +1,6 @@
 # OCW Build Diary – Art Project Specification
 
-Version 3.2 – 24 November 2026
+Version 3.3 – 25 November 2026
 
 | Version | Change |
 |---|---|
@@ -27,6 +27,7 @@ Version 3.2 – 24 November 2026
 | 3.0 | **`trance`** (day 11, 2026-11-21, the day the tokens came back; a style unlike days 6–10): uplifting trance, aeolian (e.g. A minor, i–VI–III–VII), 136–140 bpm, four on the floor with the open hat on every off-beat and the clap on 2 and 4, a drum style per chapter in turn (trance, driving 16ths, rim and shaker, half-time lift), a rolling bass – three saw 16ths after every kick, never on the beat –, a gated detuned supersaw pad whose filter opens over each phrase, a plucked 16th arpeggio with an echo and a saw lead with vibrato (§3.2). Day 11 withholds one picture: Host a ride's join link showing the build machine's private network address (§2.5) |
 | 3.1 | **`dub`** (day 12, 2026-11-22, the day of smooth junctions and smooth riders; a style unlike days 6–11): roots dub, dorian (e.g. D dorian, i–IV), 72–76 bpm with swung 16ths, the one-drop beat (kick and rim together on the third beat, nothing on the one), a drum style per chapter in turn (one drop, rockers, steppers, a half-drop with the open hat), a round melodic sub bass that leaves the downbeat to the drop, the skank – short plucked chord chops on 2 and 4 – with a dotted-8th echo (chord stabs can now have an echo), a sustained organ, a reedy melodica-like pulse lead with a long delay, dub stops at chapter changes; rim and hats alone in the breakdown (§3.2) |
 | 3.2 | **`garage`** (day 13, 2026-11-23, the day the riders left the road; a style unlike days 6–12): UK garage, 2-step, minor with 7th and 9th chords (e.g. C minor), 130–134 bpm with heavily swung 16ths, the 2-step beat (the kick on the one and skipping past the third beat, the snare on 2 and 4, shuffled hats with ghosts), a drum style per chapter in turn (2-step, 2-step with a rim, speed garage – four on the floor with the open hat off the beat –, half-time), a bouncing sub bass that skips with the kick and leaves gaps, chopped Rhodes-like chord stabs, a plucked lead with an echo like a cut-up vocal; hats and rim in the breakdown (§3.2). Feature titles of "Built: …" / "Fixed: …" rows keep an acronym's case ("Built: OCW Studio edits model files", not "oCW") |
+| 3.3 | **`acid`** (day 14, 2026-11-24, the day of smooth road sides and the first WebXR build for a headset; a style unlike days 6–13): acid house / acid techno, minor with 7th chords (e.g. F minor), 126–130 bpm, a squelching 303-like bass – a saw through a resonant low-pass whose cutoff snaps open on every note and closes again – in 16ths with octave jumps, a 909-like kit with a drum style per chapter in turn (four on the floor with the open hat off the beat, a jacking variant with a 16th ride and an extra kick, a broken break, a half-time stomp), dry minor stabs off the beat, a hollow square lead with an echo; open hats and hats in the breakdown (§3.2). **Decision rows that start with the decision** (OCW's rule since 2026-11-16: "**The browser app is built with WebAssembly SIMD …** (decision by the user, 2026-11-24; Phase 10 Q10 (a); …)") get "Decided: Phase 10 Q10 – the browser app is built with …" too (§2.7); the question is the one named after the parenthesis' first ";", none when it names only sections. A name with inner capitals keeps its case ("WebXR", not "webXR") |
 
 ## 1. The brief
 
@@ -334,7 +335,9 @@ What got built each day, and by which agent job, is part of the record.
     10 Q8 – …") gets what was decided instead: "Decided: Phase 10 Q8 – the
     first clause of the answer" (user 2026-11-16: "use a description of
     what the user actually decided"). OCW's own rule since then: the row
-    starts with the decision itself.
+    starts with the decision itself, followed by "(decision by the user,
+    DATE; Phase 10 Q10 (a); …)"; such a row gets "Decided: Phase 10 Q10 –
+    its first clause" (v3.3).
     These come from `git log --first-parent -p` of the spec over the day.
   - *Landed by:* the first-parent commit whose diff added the final row
     (usually the merge; a direct "Spec X.Y" commit otherwise), with its time.
@@ -513,6 +516,7 @@ day is the same as appending the new day to the previous diary.
   | `electro` | phrygian (the bII chord) | booming 808 bass (a sine dropping into its pitch, a little drive) in syncopated 16ths with octave jumps, sequenced saw arpeggio with an echo, pulse lead with a delay, low-passed saw pad, an 808 kit with a long kick, clap and a cowbell-like rim | 124–128 bpm broken electro beat (kick on 1, the "a" of 2, the "and" of 3; clap on 2 and 4), a drum style per chapter in turn: electro, broken, cowbell, half-time; hats and rim in the breakdown |
   | `trance` | minor (aeolian), i–VI–III–VII | rolling saw bass (three 16ths after every kick, never on the beat), detuned supersaw pad whose filter opens over each phrase, plucked 16th arpeggio with an echo, saw lead with vibrato and a delay, a punchy kit with a clap | 136–140 bpm four-on-the-floor with the open hat on every off-beat, a drum style per chapter in turn: trance, driving 16ths, rim and shaker, half-time lift; hats alone in the breakdown (day 11) |
   | `dub` | dorian, i–IV | round sine-sub bass in a melodic line that rests on the downbeat, plucked skank chords on 2 and 4 with a dotted-8th echo, a sustained organ, a reedy pulse lead (a melodica) with a long delay, a soft kit with a rim click | 72–76 bpm one drop (kick and rim on beat 3), swung 16ths, a drum style per chapter in turn: one drop, rockers, steppers, half-drop; rim and hats in the breakdown; dub stops (day 12) |
+  | `acid` | minor with 7th chords | squelching 303-like bass (a saw through a resonant low-pass whose cutoff snaps open on every note) in 16ths with octave jumps, dry minor stabs off the beat, a hollow square lead with an echo, a dark low-passed saw pad, a 909-like kit with a clap | 126–130 bpm, a drum style per chapter in turn: four on the floor with the open hat off the beat, jacking (a 16th ride, an extra kick), a broken break, half-time; open hats and hats in the breakdown (day 14) |
   | `garage` | minor with 7th and 9th chords | bouncing sine-sub bass that skips with the kick and leaves gaps, chopped FM-Rhodes chord stabs, a plucked lead with an echo (a cut-up vocal), a soft sine pad, a crisp kit with a clap | 130–134 bpm 2-step (the kick on the one and past the third beat, the snare on 2 and 4), heavily swung 16th hats, a drum style per chapter in turn: 2-step, 2-step with a rim, speed garage, half-time; hats and rim in the breakdown (day 13) |
   | `ambient` | lydian with 7th and 9th chords | slow sine pad whose filter opens over each phrase, a sine drone (root, sometimes the fifth), music-box arpeggio and sparse music-box lead with an echo; **no drums** – no fills, crashes or risers | none: a quiet bed (day 10, the day without tokens) |
   | `liquid-dnb` | dorian with 7th and 9th chords | reese bass (two detuned low-passed saws) over a sine sub in long rolling notes, FM-Rhodes chords, airy detuned pad whose filter opens over each phrase, sparse FM lead with a dotted-8th delay, a crisp kit with ghost snares | 170–174 bpm two-step breakbeat (kick on 1 and the "and" of 3, snare on 2 and 4), a drum style per chapter in turn: two-step, rolling, ride, half-time; hats and rim in the breakdown |
@@ -578,7 +582,7 @@ key = "C"                          # music key, the tonic (optional)
 style = "funk"                     # music style (optional; default from the day
                                    # number): synthwave, funk, lofi, chiptune, house,
                                    # darkchip, melodic-deep-house, liquid-dnb,
-                                   # electro, ambient, trance, dub, garage (not in the automatic
+                                   # electro, ambient, trance, dub, garage, acid (not in the automatic
                                    # cycle)
 mode = "dorian"                    # music mode (optional; default the style's):
                                    # major, minor, dorian, mixolydian, lydian

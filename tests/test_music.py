@@ -445,3 +445,38 @@ class GarageTest(unittest.TestCase):
         s = M.stats(M.Music(132, "C", seed=13, style="garage").render(24, [(0, "groove"), (12, "groove")]))
         self.assertLess(s["peak_db"], -2.4)
         self.assertAlmostEqual(s["rms_db"], -19, delta=1.5)
+
+
+class AcidTest(unittest.TestCase):
+    """Day 14 (2026-11-24): acid, a style unlike days 6–13."""
+    SEGS = [(0, "intro"), (6, "drive"), (20, "groove"), (32, "groove"), (44, "groove"), (56, "groove"),
+            (68, "outro")]
+
+    def test_a_squelching_bass_in_sixteenths(self):
+        st = M.STYLES["acid"]
+        self.assertEqual(st["bass"]["wave"], "acid")
+        for name in st["bass"]["patterns"]:
+            self.assertGreaterEqual(len(M.BASS[name]), 10, name)
+            self.assertTrue(any(n[3] for n in M.BASS[name]), name)  # octave jumps
+
+    def test_the_filter_opens_on_each_note_and_closes(self):
+        m = M.Music(128, "F", seed=14, style="acid")
+        t = m.tone("acid", -24, 12000)
+        head, tail = t[200:1000], t[8000:8800]
+
+        def bright(xs):  # the energy of the first difference over the signal's: the higher, the brighter
+            return sum(abs(b - a) for a, b in zip(xs, xs[1:])) / max(1e-9, sum(abs(x) for x in xs))
+        self.assertGreater(bright(head), 1.4 * bright(tail))
+        self.assertLess(max(abs(x) for x in t), 1.5)
+
+    def test_four_on_the_floor_and_a_drum_style_per_chapter(self):
+        self.assertEqual(M.DRUMS["acid"]["k"], "x...x...x...x...")
+        m = M.Music(128, "F", seed=14, style="acid")
+        self.assertEqual(m.mode_name, "minor")
+        grooves = [s[1] for s in m.plan(80, self.SEGS) if s[-1] == "groove" and s[1]]
+        self.assertGreaterEqual(len(set(grooves) & set(M.STYLES["acid"]["grooves"])), 3, grooves)
+
+    def test_loud_enough_without_clipping(self):
+        s = M.stats(M.Music(128, "F", seed=14, style="acid").render(24, [(0, "groove"), (12, "groove")]))
+        self.assertLess(s["peak_db"], -2.4)
+        self.assertAlmostEqual(s["rms_db"], -19, delta=1.5)

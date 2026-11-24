@@ -46,6 +46,18 @@ def spec_rows_added(diff: str) -> list[tuple[str, str]]:
     return [(m.group(1), m.group(2)) for line in diff.splitlines() for m in [ADDED_ROW_RE.match(line)] if m]
 
 
+# "(decision by the user, 2026-11-24; Phase 10 Q10 (a); …)" in a row that
+# starts with the decision; group 1: what follows the first ";".
+DECIDED_RE = re.compile(r"\(decisions? (?:by the user|from the (?:build )?dashboard)[^;]*;\s*([^;]*)", re.I)
+
+
+def _keeps_case(what: str) -> bool:
+    """An acronym or a name with inner capitals keeps its case ("OCW Studio",
+    "WebXR"), a plain word does not ("The browser" → "the browser")."""
+    word = what.split(" ", 1)[0]
+    return any(c.isupper() for c in word[1:])
+
+
 def row_title(text: str, n: int = 90) -> str:
     """A row's title: its first clause, without parentheses and bold marks
     ("Phase 13 **G5's browser part built** (§14 …): …" → "Phase 13 G5's
@@ -67,6 +79,16 @@ def row_title(text: str, n: int = 90) -> str:
             t = f"Decided: {q.group(1)} – {what}" if what else f"Decided: {q.group(1)}"
         else:
             t = "Decided: " + re.split(r":\s| – | — |;\s|\.\s", rest, maxsplit=1)[0]
+    elif DECIDED_RE.search(text) and not re.match(r"(?i)(built|fixed)\s*:", t):
+        # OCW's rule since 2026-11-16: the row starts with the decision itself,
+        # "**The browser app is built with SIMD …** (decision by the user,
+        # 2026-11-24; Phase 10 Q10 (a); to be built)": say that it was decided,
+        # and which question it answered (named after the first ";").
+        ref = DECIDED_RE.search(text).group(1) or ""
+        q = re.search(r"((?:Phase \d+ |\d+[A-Z]? |§[\d.]+ )?Q\d+)", ref.split(";")[0])
+        what = re.split(r":\s| – | — |;\s|\.\s", t, maxsplit=1)[0].strip(" ,.")
+        first = what[:1] if _keeps_case(what) else what[:1].lower()
+        t = "Decided: " + (q.group(1) + " – " if q else "") + first + what[1:]
     else:
         # "Built: other riders' crashes … are heard …" / "Fixed: the browser
         # app restarting …" name only the state: show what was built or fixed.
@@ -74,7 +96,7 @@ def row_title(text: str, n: int = 90) -> str:
         if b:
             what = re.split(r":\s| – | — |;\s|\.\s", b.group(2), maxsplit=1)[0].strip(" ,.")
             # (an acronym keeps its case: "OCW Studio edits …", not "oCW …")
-            first = what[:1] if what[1:2].isupper() else what[:1].lower()
+            first = what[:1] if _keeps_case(what) else what[:1].lower()
             t = b.group(1).capitalize() + ": " + first + what[1:]
         else:
             parts = re.split(r"(:\s| – | — |;\s|\.\s)", t, maxsplit=2)

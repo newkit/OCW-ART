@@ -68,6 +68,18 @@ class SpecRowTest(unittest.TestCase):
         self.assertEqual(F.row_title("**Fixed: the browser app restarting on an iPhone – a lost WebGL context "
                                      "now stops the app** (14 Phase 10 B7): …"),
                          "Fixed: the browser app restarting on an iPhone")
+        # a row that starts with the decision itself (day 14): "Decided:", the question
+        self.assertEqual(F.row_title("**The browser app is built with WebAssembly SIMD in both builds (WebGPU and "
+                                     "WebGL 2); a browser without it gets \"too old\"** (decision by the user, "
+                                     "2026-11-24; Phase 10 Q10 (a); to be built)."),
+                         "Decided: Phase 10 Q10 – the browser app is built with WebAssembly SIMD in both builds")
+        self.assertEqual(F.row_title("**WebXR uses the floor as its reference (`local-floor`): the game floor …** "
+                                     "(decision by the user, 2026-11-24, after a sketch; Phase 14 Q8 (a))."),
+                         "Decided: Phase 14 Q8 – WebXR uses the floor as its reference")
+        self.assertEqual(F.row_title("**A local sensor bridge first, without accounts: the desktop app …** (decision "
+                                     "by the user, 2026-11-24, so the first runs (Phase 14 Q7 (b)) need not wait; "
+                                     "10D.2, 14I W4; to be built)."),
+                         "Decided: a local sensor bridge first, without accounts")
         # an acronym keeps its case (day 13: "Built: oCW Studio edits model files")
         self.assertEqual(F.row_title("**Built: OCW Studio edits model files – select nodes** (16F E4)"),
                          "Built: OCW Studio edits model files")
