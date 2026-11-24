@@ -1,0 +1,143 @@
+# OCW Build Diary – day 14 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-24/ (or ../DAY/ for another day).
+# Spec rows 5.65–5.80; no release.
+# Withheld: nothing – the day's 3,502 pictures and videos were checked (no
+# desktop captures, no host or user names, home paths or LAN addresses; the
+# sensor bridge's desktop page and its QR code carry only 127.0.0.1 (the
+# pairing code VZ00-… decodes to the loopback address); the headset page's
+# code 00Z8-… is the WebXR test's fixed fixture, not an address of the build
+# network; Join a ride shows the documentation address 192.0.2.10; OCW
+# Studio shows a temporary /tmp path; only made-up riders and bots).
+
+title = "Into the headset"
+tagline = "In which the verges lose their notch, side paths join the road's side, the browser sheds 19 MB, the potholes stop being twins, a desktop lends its trainer to a browser – and the rider looks down at a bike computer on the bars, in VR."
+hero = "192134-web-xr-web-xr-xr-computer.jpg"
+bpm = 128
+key = "F"
+style = "acid"                     # day 6 darkchip, 7 melodic deep house, 8 liquid dnb, 9 electro, 10 ambient, 11 trance, 12 dub, 13 garage: acid – a squelching 303 line for a day of sharp corners filed round
+mode = "minor"
+outro = "Sixteen spec rows, nine questions answered, one headset not yet worn. 960 million tokens."
+teaser = "NEXT TIME: a real headset on a real head?"
+# The browser size and speed runs (2,859 pictures of the same rides again and
+# again), the XR sweep frames, the lint plots and the comparison sheets would
+# flicker through the time-lapse:
+timelapse_skip = ["*wasm-size-*", "*xr-sweep-*", "*-plans-*", "*-plan-*", "*-case-*", "*-zoom-*", "*-cmp-*",
+                  "*-web-web-*"]
+
+[[chapter]]
+time = "02:13"
+title = "J6: the notch is gone"
+caption = "The verge's V at Letzanaweg runs on smoothly now, and no side road stands above the main road any more."
+shots = [
+  { split = ["../2026-11-23/212320-j5-sides-li-letzanaweg-corner-j5.jpg", "010932-j6-sides-li-letzanaweg-corner-j6.jpg"], seconds = 4.9, note = "J5 | J6" },
+  { card = true, seconds = 3.6, text = "Corner faults −17 to −22 %. Side roads above the main road: 0 in all five packages." },
+]
+
+[[chapter]]
+time = "05:53"
+title = "A smaller browser module"
+caption = "Bevy's features pruned to what the browser uses, wasm-opt on every release build."
+shots = [
+  { file = "021040-wasm-size-base-ios-loop-start.png", seconds = 3.8, note = "the phone run, before" },
+  { card = true, seconds = 4.0, text = "make web: 82.8 → 63.7 MB. The iPhones' module 47.4 → 43.4 MB, their peak 244 → 213 MB." },
+]
+
+[[chapter]]
+time = "07:25"
+title = "J7: paths join the side"
+caption = "Paths along a road are drawn as a band of its side – no junction mouths of their own. Sharp tips turn round."
+shots = [
+  { split = ["011033-j6-sides-li-path-j6.jpg", "065730-j7-sides-li-path-j7.jpg"], seconds = 4.9, note = "J6 | J7" },
+  { split = ["021601-j7-sides-ref-zoom-bfpath-j6.png", "052850-j7-sides-zoom-bfpath-j7.png"], seconds = 4.6, note = "a sharp tip, a round nose" },
+  { card = true, seconds = 3.4, text = "Corner faults −21 to −32 % on J6." },
+]
+
+[[chapter]]
+time = "09:01"
+title = "What's SIMD?"
+caption = "Two minutes after asking what it is, the user picks it: the browser app gets WebAssembly SIMD."
+prompt = "whats simd?"
+shots = [
+  { card = true, seconds = 4.2, text = "Phase 10 Q10 (a): SIMD in both builds. A browser without it is told it is too old." },
+  { file = "115910-web-web-webkit-too-old-ride.png", seconds = 3.8, note = "Safari 16.4 or newer, please" },
+]
+
+[[chapter]]
+time = "11:20"
+title = "Four answers in nine minutes"
+caption = "The headset loads from GitHub Pages, the bridge comes first, the floor is the real floor – after a sketch."
+prompt = "i dont fully the difference, can you sketch an example image of the two options?"
+shots = [
+  { card = true, seconds = 4.4, text = "11:21 Q6 (a): VR builds under /xr/. 11:22 Q7 (b): the sensor bridge before the first headset run." },
+  { card = true, seconds = 4.2, text = "11:27 Q8 (a): local-floor, the saddle at the profile's height. 11:29: a local bridge, no accounts." },
+]
+
+[[chapter]]
+time = "14:19"
+title = "Potholes, not twins"
+caption = "Every pothole its own outline, depth and angle; cracks in kinds; every road its own damage – and the ride feels it."
+prompt = "the potholes look all the same. create more variety in the portholes and cracks"
+shots = [
+  { split = ["132310-road-damage-midday-tenerife-horrible-km4-dry-left-before.jpg", "133133-road-damage-midday-tenerife-horrible-km4-dry-left-after.jpg"], seconds = 4.9, note = "Tenerife, before | after" },
+  { split = ["140909-road-damage-final-blackforest-horrible-km4.6-dry-along-before.jpg", "141314-road-damage-final-blackforest-horrible-km4.6-dry-along-after.jpg"], seconds = 4.9, note = "Black Forest: filled holes, cracks" },
+]
+
+[[chapter]]
+time = "14:35"
+title = "One table for distance"
+caption = "Props switch to their simple version at 60 m, the unicorn at 40 m like the riders, workshop pieces never."
+prompt = "(a) is fine"
+shots = [
+  { file = "134423-lod-q24-lamps-50-crop.jpg", seconds = 3.6, note = "a lamp at 50 m" },
+  { file = "134940-lod-q24-studio-unicorn-30.jpg", seconds = 3.8, focus = [0.78, 0.48, 2.2], note = "OCW Studio: the unicorn at 30 m" },
+  { card = true, seconds = 3.4, text = "The game and OCW Studio read the same table (16H Q24 (a))." },
+]
+
+[[chapter]]
+time = "14:36"
+title = "The local sensor bridge"
+caption = "The desktop keeps the trainer on Bluetooth and lends it to one browser on the same network, paired with a code."
+shots = [
+  { file = "133158-bridge-bridge-desktop.jpg", seconds = 4.4, focus = [0.48, 0.5, 1.4], note = "tested on one machine: 127.0.0.1" },
+  { file = "133158-bridge-bridge-browser-menu.jpg", seconds = 4.0, note = "the browser: paired" },
+  { file = "133158-bridge-bridge-browser-riding.jpg", seconds = 3.6, note = "\"Desktop trainer (bridge)\"" },
+  { card = true, seconds = 3.6, text = "WebTransport, a certificate both sides derive from the code. 3,375 tests pass." },
+]
+
+[[chapter]]
+time = "17:29"
+title = "Ready for a headset"
+caption = "The spike of 18 November on main: WebXR under /xr/, the eyes at the rider's height over the saddle."
+shots = [
+  { file = "171818-web-xr-web-xr-xr-sweep.mp4", seconds = 4.0, note = "an emulated headset looks round" },
+  { file = "171818-web-xr-web-xr-xr-standing.jpg", seconds = 3.8, note = "standing on the pedals" },
+]
+
+[[chapter]]
+time = "17:37"
+title = "J8: arms run on"
+caption = "A junction's arm runs on past a plain way split, and its mouths move out for the corners' radius."
+prompt = "improve junctions first"
+shots = [
+  { split = ["092256-j8-sides-li-j8-fix3392-j7.jpg", "123133-j8-sides-li-j8-fix3392-j8.jpg"], seconds = 4.9, note = "J7 | J8" },
+  { card = true, seconds = 3.4, text = "Corner faults another −5 to −9 %. No junction loses its surface." },
+]
+
+[[chapter]]
+time = "19:52"
+title = "A computer on the bars"
+caption = "In VR the HUD becomes a bike computer on the bars; the menu floats as a panel, the Touch controllers steer."
+shots = [
+  { file = "192134-web-xr-web-xr-xr-computer.jpg", seconds = 4.4, focus = [0.5, 0.62, 1.6], note = "150 W, right there" },
+  { file = "192134-web-xr-web-xr-xr-menu-left.jpg", seconds = 3.8, note = "the menu, in the world" },
+  { card = true, seconds = 3.6, text = "And a quest1 level for the oldest headset. Proved in an emulator – not yet on a head." },
+]
+
+[[chapter]]
+time = "23:17"
+title = "SIMD everywhere"
+caption = "WebGPU, WebGL 2 and WebXR all built with SIMD; the iPhones' module 43.5 → 40.9 MiB."
+prompt = "simd (a)"
+shots = [
+  { card = true, seconds = 4.0, text = "23:38: deployed to marge and leela. The site refuses a build without SIMD." },
+]

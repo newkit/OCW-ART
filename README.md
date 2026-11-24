@@ -15,14 +15,14 @@ day becomes a short video (title, a time-lapse of the whole day, the story in
 chapters, today's features, the numbers), and the days are joined into one
 growing diary video.
 
-<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-23/w/152043-13a-meadow-to-road.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/w/192134-web-xr-web-xr-xr-computer.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
 **▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
 **[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**14 build days** · **1222** commits · **7689** pictures · **247** videos · **17.45 billion** tokens · the diary video: 762.2 MB
+**15 build days** · **1277** commits · **11103** pictures · **320** videos · **18.34 billion** tokens · the diary video: 803.2 MB
 
 ## How the game grew
 
@@ -32,13 +32,21 @@ growing diary video.
 
 ## The build days
 
-### Day 14 · 2026-11-24 — (the day's story is written at the end of the day)
+### Day 15 · 2026-11-25 — (the day's story is written at the end of the day)
 
-<table><tr><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/000149-j6-sides-case-steep720.png.jpg" width="200" alt="j6 sides case steep720"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#6"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/002330-j6-sides-li-path-j6.jpg.jpg" width="200" alt="j6 sides li path j6"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#10"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/002502-j6-sides-li-letzanaweg-joint-j6.jpg.jpg" width="200" alt="j6 sides li letzanaweg joint j6"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#15"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/003939-j6-sides-plan-bfpath-j6.png.jpg" width="200" alt="j6 sides plan bfpath j6"></a></td></tr></table>
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-25/) · day zip and video: at the end of the day
 
-[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-24/) · day zip and video: at the end of the day
+**0** commits · **0** merges · **0** pictures · **0** videos · music: house
 
-**0** commits · **0** merges · **15** pictures · **0** videos · **67 million** tokens · music: chiptune
+### Day 14 · 2026-11-24 — Into the headset
+
+*In which the verges lose their notch, side paths join the road's side, the browser sheds 19 MB, the potholes stop being twins, a desktop lends its trainer to a browser – and the rider looks down at a bike computer on the bars, in VR.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-14-2026-11-24.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/192134-web-xr-web-xr-xr-computer.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-14-2026-11-24.mp4">day video</a> (41 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#25"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/010932-j6-sides-li-letzanaweg-corner-j6.jpg.jpg" width="200" alt="j6 sides li letzanaweg corner j6"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#2944"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/133133-road-damage-midday-tenerife-horrible-km4-dry-left-after.jpg.jpg" width="200" alt="road damage midday tenerife horrible km4 dry left after"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#3478"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/192134-web-xr-web-xr-xr-menu-left.jpg.jpg" width="200" alt="web xr web xr xr menu left"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-24/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-14-2026-11-24.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-24.zip) (862.4 MB)
+
+**51** commits · **13** merges · spec 5.65 → 5.80 · **3429** pictures · **73** videos · **960 million** tokens · music: acid
 
 ### Day 13 · 2026-11-23 — Off the road
 
@@ -48,7 +56,7 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-23/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-13-2026-11-23.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-23.zip) (557.5 MB)
 
-**64** commits · **17** merges · spec 5.41 → 5.64 · **827** pictures · **11** videos · **1.36 billion** tokens · music: garage
+**68** commits · **18** merges · spec 5.41 → 5.64 · **827** pictures · **11** videos · **1.36 billion** tokens · music: garage
 
 ### Day 12 · 2026-11-22 — Smooth, with bumps
 
