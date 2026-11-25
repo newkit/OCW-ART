@@ -22,7 +22,7 @@ growing diary video.
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**15 build days** · **1277** commits · **11103** pictures · **320** videos · **18.34 billion** tokens · the diary video: 803.2 MB
+**15 build days** · **1311** commits · **11427** pictures · **326** videos · **19.10 billion** tokens · the diary video: 803.2 MB
 
 ## How the game grew
 
@@ -34,9 +34,11 @@ growing diary video.
 
 ### Day 15 · 2026-11-25 — (the day's story is written at the end of the day)
 
+<table><tr><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/015329-web-b3w-web-mp-f0-off.jpg.jpg" width="200" alt="web b3w web mp f0 off"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#111"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/044025-web-web-webkit-layout-iphone-844x390.png.jpg" width="200" alt="web web webkit layout iphone 844x390"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#220"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/115959-0829ea18-shot-wayland-workshop-shoes-colour.jpg.jpg" width="200" alt="0829ea18 shot wayland workshop shoes colour"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#330"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/155643-2026-11-25-release-0.2.6-smoke-appimage-x11.jpg.jpg" width="200" alt="2026 11 25 release 0.2.6 smoke appimage x11"></a></td></tr></table>
+
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-25/) · day zip and video: at the end of the day
 
-**0** commits · **0** merges · **0** pictures · **0** videos · music: house
+**38** commits · **6** merges · spec 5.81 → 5.97 · **324** pictures · **6** videos · **752 million** tokens · music: house
 
 ### Day 14 · 2026-11-24 — Into the headset
 
@@ -45,6 +47,8 @@ growing diary video.
 <table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-14-2026-11-24.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/192134-web-xr-web-xr-xr-computer.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-14-2026-11-24.mp4">day video</a> (41 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#25"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/010932-j6-sides-li-letzanaweg-corner-j6.jpg.jpg" width="200" alt="j6 sides li letzanaweg corner j6"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#2944"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/133133-road-damage-midday-tenerife-horrible-km4-dry-left-after.jpg.jpg" width="200" alt="road damage midday tenerife horrible km4 dry left after"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-24/#3478"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/t/192134-web-xr-web-xr-xr-menu-left.jpg.jpg" width="200" alt="web xr web xr xr menu left"></a></td></tr></table>
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-24/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-14-2026-11-24.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-24.zip) (862.4 MB)
+
+Data: [day script](days/2026-11-24.toml) · [journal](build-history/2026-11-24/journal.md) · [journal (JSON)](build-history/2026-11-24/journal.json) · [tokens](build-history/2026-11-24/tokens.json) · [pictures and videos](build-history/2026-11-24/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-24.zip) (419 MB)
 
 **51** commits · **13** merges · spec 5.65 → 5.80 · **3429** pictures · **73** videos · **960 million** tokens · music: acid
 
@@ -56,7 +60,9 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-23/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-13-2026-11-23.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-23.zip) (557.5 MB)
 
-**68** commits · **18** merges · spec 5.41 → 5.64 · **827** pictures · **11** videos · **1.36 billion** tokens · music: garage
+Data: [day script](days/2026-11-23.toml) · [journal](build-history/2026-11-23/journal.md) · [journal (JSON)](build-history/2026-11-23/journal.json) · [tokens](build-history/2026-11-23/tokens.json) · [pictures and videos](build-history/2026-11-23/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-23.zip) (69.7 MB)
+
+**64** commits · **17** merges · spec 5.41 → 5.64 · **827** pictures · **11** videos · **1.36 billion** tokens · music: garage
 
 ### Day 12 · 2026-11-22 — Smooth, with bumps
 
@@ -65,6 +71,8 @@ growing diary video.
 <table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-12-2026-11-22.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/t/104431-q24-lips-lips-speaking.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-12-2026-11-22.mp4">day video</a> (54.5 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-22/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/t/094245-shot-wayland-menu-voice-rows.jpg.jpg" width="200" alt="shot wayland menu voice rows"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-22/#120"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/t/150149-junctions-j3-after-wayland-junction-mini-drone.jpg.jpg" width="200" alt="junctions j3 after wayland junction mini drone"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-22/#366"><img src="https://newkit.github.io/OCW-ART/days/2026-11-22/t/201502-windows-icon-0.2.5-ocw-desktop-256.png.jpg" width="200" alt="windows icon 0.2.5 ocw desktop 256"></a></td></tr></table>
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-22/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-12-2026-11-22.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-22.zip) (335.8 MB)
+
+Data: [day script](days/2026-11-22.toml) · [journal](build-history/2026-11-22/journal.md) · [journal (JSON)](build-history/2026-11-22/journal.json) · [tokens](build-history/2026-11-22/tokens.json) · [pictures and videos](build-history/2026-11-22/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-22.zip) (28 MB)
 
 **46** commits · **12** merges · spec 5.24 → 5.40 · **377** pictures · **10** videos · **761 million** tokens · music: dub
 
@@ -76,6 +84,8 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-21/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-11-2026-11-21.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-21.zip) (56.3 MB)
 
+Data: [day script](days/2026-11-21.toml) · [journal](build-history/2026-11-21/journal.md) · [journal (JSON)](build-history/2026-11-21/journal.json) · [tokens](build-history/2026-11-21/tokens.json) · [pictures and videos](build-history/2026-11-21/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-21.zip) (11.9 MB)
+
 **15** commits · **5** merges · spec 5.18 → 5.23 · **180** pictures · **3** videos · **321 million** tokens · music: trance
 
 ### Day 10 · 2026-11-20 — No tokens left
@@ -85,6 +95,8 @@ growing diary video.
 <table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-10-2026-11-20.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-20/t/120000-no-tokens-crab-pockets-0-terminal.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-10-2026-11-20.mp4">day video</a> (4.2 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-20/#3"><img src="https://newkit.github.io/OCW-ART/days/2026-11-20/t/120000-no-tokens-crab-pockets-2-pockets.jpg.jpg" width="200" alt="no tokens crab pockets 2 pockets"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-20/#4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-20/t/120000-no-tokens-crab-pockets-3-moth.jpg.jpg" width="200" alt="no tokens crab pockets 3 moth"></a></td></tr></table>
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-20/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-10-2026-11-20.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-20.zip) (4.1 MB)
+
+Data: [day script](days/2026-11-20.toml) · [journal](build-history/2026-11-20/journal.md) · [journal (JSON)](build-history/2026-11-20/journal.json) · [tokens](build-history/2026-11-20/tokens.json) · [incidents](build-history/2026-11-20/incidents.md) · [pictures and videos](build-history/2026-11-20/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-20.zip) (100.3 kB)
 
 **0** commits · **0** merges · **4** pictures · **1** videos · music: ambient
 
@@ -96,6 +108,8 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-19/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-09-2026-11-19.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-19.zip) (793.8 MB)
 
+Data: [day script](days/2026-11-19.toml) · [journal](build-history/2026-11-19/journal.md) · [journal (JSON)](build-history/2026-11-19/journal.json) · [tokens](build-history/2026-11-19/tokens.json) · [pictures and videos](build-history/2026-11-19/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-19.zip) (84.6 MB)
+
 **95** commits · **33** merges · spec 4.88 → 5.17 · **1380** pictures · **15** videos · **1.59 billion** tokens · music: electro
 
 ### Day 8 · 2026-11-18 — A map in the corner, cracks in the road
@@ -105,6 +119,8 @@ growing diary video.
 <table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-08-2026-11-18.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/001616-scenes-navi-wayland-navi-li-route-day-720p.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-08-2026-11-18.mp4">day video</a> (64.1 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#7"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/001726-scenes-navi-wayland-navi-tf-route-night.jpg.jpg" width="200" alt="scenes navi wayland navi tf route night"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#448"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/040605-strava-manual-2026-11-18-shot-wayland-ride-page-shot-wayland.jpg.jpg" width="200" alt="strava manual 2026 11 18 shot wayland ride page shot wayland"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-18/#951"><img src="https://newkit.github.io/OCW-ART/days/2026-11-18/t/213227-dashboard-battery-guard-battery-guard-cards.png.jpg" width="200" alt="dashboard battery guard battery guard cards"></a></td></tr></table>
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-18/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-08-2026-11-18.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-18.zip) (236.4 MB)
+
+Data: [day script](days/2026-11-18.toml) · [journal](build-history/2026-11-18/journal.md) · [journal (JSON)](build-history/2026-11-18/journal.json) · [tokens](build-history/2026-11-18/tokens.json) · [pictures and videos](build-history/2026-11-18/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-18.zip) (52.8 MB)
 
 **75** commits · **28** merges · spec 4.67 → 4.87 · **942** pictures · **9** videos · **883 million** tokens · music: liquid-dnb
 
@@ -116,6 +132,8 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-17/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-07-2026-11-17.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-17.zip) (336.3 MB)
 
+Data: [day script](days/2026-11-17.toml) · [journal](build-history/2026-11-17/journal.md) · [journal (JSON)](build-history/2026-11-17/journal.json) · [tokens](build-history/2026-11-17/tokens.json) · [pictures and videos](build-history/2026-11-17/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-17.zip) (44.8 MB)
+
 **78** commits · **23** merges · spec 4.39 → 4.68 · **1039** pictures · **8** videos · **2.07 billion** tokens · music: melodic-deep-house
 
 ### Day 6 · 2026-11-16 — Moving day, a photographer and a headset at midnight
@@ -125,6 +143,8 @@ growing diary video.
 <table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-06-2026-11-16.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/t/212337-shot-wayland-status-group-mixed.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-06-2026-11-16.mp4">day video</a> (64.3 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-16/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/t/131800-shot-wayland-studio-e1.jpg.jpg" width="200" alt="shot wayland studio e1"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-16/#208"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/t/181037-scenes-view-distance-view-distance-2km.jpg.jpg" width="200" alt="scenes view distance view distance 2km"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-16/#251"><img src="https://newkit.github.io/OCW-ART/days/2026-11-16/t/212307-shot-wayland-status-mouth-muted.jpg.jpg" width="200" alt="shot wayland status mouth muted"></a></td></tr></table>
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-16/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-06-2026-11-16.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-16.zip) (462.4 MB)
+
+Data: [day script](days/2026-11-16.toml) · [journal](build-history/2026-11-16/journal.md) · [journal (JSON)](build-history/2026-11-16/journal.json) · [tokens](build-history/2026-11-16/tokens.json) · [pictures and videos](build-history/2026-11-16/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-16.zip) (43.8 MB)
 
 **129** commits · **30** merges · spec 3.75 → 4.38 · **667** pictures · **1** videos · **1.74 billion** tokens · music: darkchip
 
@@ -136,6 +156,8 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-15/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-05-2026-11-15.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-15.zip) (502.8 MB)
 
+Data: [day script](days/2026-11-15.toml) · [journal](build-history/2026-11-15/journal.md) · [journal (JSON)](build-history/2026-11-15/journal.json) · [tokens](build-history/2026-11-15/tokens.json) · [incidents](build-history/2026-11-15/incidents.md) · [pictures and videos](build-history/2026-11-15/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-15.zip) (42.5 MB)
+
 **149** commits · **39** merges · spec 3.36 → 3.74 · **731** pictures · **9** videos · **1.66 billion** tokens · music: chiptune
 
 ### Day 4 · 2026-11-14 — The weather, the seasons and the 404
@@ -145,6 +167,8 @@ growing diary video.
 <table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-04-2026-11-14.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/150250-shot-wayland-season-vaduz-autumn.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-04-2026-11-14.mp4">day video</a> (134.4 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#10"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/022731-agent-scenes-2026-11-14-t7-orthophoto-ortho-malbun-after-wayland.jpg.jpg" width="200" alt="agent scenes 2026 11 14 t7 orthophoto ortho malbun after wayland"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#392"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/154228-shot-wayland-weather-physics-tailwind-vaduz.jpg.jpg" width="200" alt="shot wayland weather physics tailwind vaduz"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-14/#498"><img src="https://newkit.github.io/OCW-ART/days/2026-11-14/t/205239-agent-web-web-webgl2.jpg.jpg" width="200" alt="agent web web webgl2"></a></td></tr></table>
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-14/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-04-2026-11-14.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-14.zip) (1.3 GB)
+
+Data: [day script](days/2026-11-14.toml) · [journal](build-history/2026-11-14/journal.md) · [journal (JSON)](build-history/2026-11-14/journal.json) · [tokens](build-history/2026-11-14/tokens.json) · [pictures and videos](build-history/2026-11-14/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-14.zip) (32.7 MB)
 
 **160** commits · **49** merges · spec 2.66 → 3.35 · **535** pictures · **39** videos · **3.18 billion** tokens · music: chiptune
 
@@ -156,6 +180,8 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-13/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-03-2026-11-13.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-13.zip) (472.5 MB)
 
+Data: [day script](days/2026-11-13.toml) · [journal](build-history/2026-11-13/journal.md) · [journal (JSON)](build-history/2026-11-13/journal.json) · [tokens](build-history/2026-11-13/tokens.json) · [pictures and videos](build-history/2026-11-13/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-13.zip) (23 MB)
+
 **143** commits · **43** merges · spec 2.30 → 2.64 · **449** pictures · **29** videos · **1.97 billion** tokens · music: lofi
 
 ### Day 2 · 2026-11-12 — The night shift, the glow-up and a peloton across three operating systems
@@ -166,6 +192,8 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-12/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-02-2026-11-12.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-12.zip) (311.9 MB)
 
+Data: [day script](days/2026-11-12.toml) · [journal](build-history/2026-11-12/journal.md) · [journal (JSON)](build-history/2026-11-12/journal.json) · [tokens](build-history/2026-11-12/tokens.json) · [pictures and videos](build-history/2026-11-12/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-12.zip) (23.5 MB)
+
 **113** commits · **27** merges · spec 2.8 → 2.29 · **383** pictures · **63** videos · **873 million** tokens · music: funk
 
 ### Day 1 · 2026-11-11 — From five capsules to the Principality of Liechtenstein
@@ -175,6 +203,8 @@ growing diary video.
 <table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-01-2026-11-11.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/150218-lie-c.png.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-01-2026-11-11.mp4">day video</a> (33 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-11/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/012829-shot1.png.jpg" width="200" alt="shot1"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-11/#76"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/140719-cap.png.jpg" width="200" alt="cap"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-11/#186"><img src="https://newkit.github.io/OCW-ART/days/2026-11-11/t/233403-agent-bots-formation.png.jpg" width="200" alt="agent bots formation"></a></td></tr></table>
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-11/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-01-2026-11-11.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-11.zip) (138.1 MB)
+
+Data: [day script](days/2026-11-11.toml) · [journal](build-history/2026-11-11/journal.md) · [journal (JSON)](build-history/2026-11-11/journal.json) · [tokens](build-history/2026-11-11/tokens.json) · [pictures and videos](build-history/2026-11-11/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-11.zip) (9.2 MB)
 
 **155** commits · **35** merges · spec 1.3 → 2.6 · **160** pictures · **49** videos · **971 million** tokens · music: synthwave
 
@@ -226,6 +256,18 @@ OCW-ART/
 ├── tests/                 # unit tests (hermetic: fixture archives and repositories)
 └── build-history/         # the archive (masked text tracked, media in LFS or local)
 ```
+
+## All the data
+
+| What | Where |
+|---|---|
+| Every picture and video, day by day | [the gallery](https://newkit.github.io/OCW-ART/) · in Git LFS under [`build-history/`](build-history/) |
+| The diary video, the day videos, the day zips (full size) and the gallery zips | the release [`build-history`](https://github.com/newkit/OCW-ART/releases/tag/build-history) (checksums: [SHA256SUMS](https://github.com/newkit/OCW-ART/releases/download/build-history/SHA256SUMS)) |
+| Each day's story: chapters, shots, captions | [`days/`](days/) – one `DAY.toml` per day |
+| Each day's journal: commits, merges, spec versions, builds, prompts, incidents, features | `build-history/DAY/journal.md` and `journal.json` (linked under each day above) |
+| Token usage per day and agent | `build-history/DAY/tokens.json` (linked under each day above) |
+| The game itself: code, specification, releases | [OCW](https://github.com/newkit/OCW) · [SPECIFICATION.md](https://github.com/newkit/OCW/blob/main/SPECIFICATION.md) · [releases](https://github.com/newkit/OCW/releases) · [play in the browser](https://newkit.github.io/OCW/) |
+| How this diary is made, and its rules | [docs/ART-PROJECT.md](docs/ART-PROJECT.md) |
 
 ## Where the media live
 

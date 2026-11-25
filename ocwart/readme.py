@@ -167,6 +167,39 @@ def release_link(name: str | None, sizes: dict[str, int]) -> str | None:
     return f"{G.DOWNLOAD}{G.q(name)}" if name and name in sizes else None
 
 
+# The day's data the README links (ART-PROJECT §5.3): the masked text git tracks in the day folder.
+DAY_DATA = (("journal.md", "journal"), ("journal.json", "journal (JSON)"), ("tokens.json", "tokens"),
+            ("incidents.md", "incidents"), ("index.md", "index"), ("SHA256SUMS", "checksums"))
+
+
+def tracked(path: Path) -> bool:
+    """True when git tracks the file (so a link in the README works on GitHub)."""
+    try:
+        return bool(run(["git", "-C", str(ART), "ls-files", "--error-unmatch", str(path.relative_to(ART))],
+                        check=False, capture_output=True).returncode == 0)
+    except Exception:
+        return path.is_file()
+
+
+def data_links(day: str, sizes: dict[str, int]) -> list[str]:
+    """Every piece of the day's data: the day script, the tracked journal files, the media folder
+    (Git LFS) and the gallery zip of the release."""
+    out = []
+    script = DAYS / f"{day}.toml"
+    if script.is_file() and tracked(script):
+        out.append(f"[day script](days/{day}.toml)")
+    folder = C.HIST / day
+    for name, label in DAY_DATA:
+        if (folder / name).is_file() and tracked(folder / name):
+            out.append(f"[{label}](build-history/{day}/{name})")
+    if folder.is_dir() and tracked(folder / "journal.json"):
+        out.append(f"[pictures and videos](build-history/{day}/) (Git LFS)")
+    gz = f"gallery-{day}.zip"
+    if gz in sizes:
+        out.append(f"[⇩ gallery zip]({G.DOWNLOAD}{G.q(gz)}) ({human(sizes[gz])})")
+    return out
+
+
 def day_section(day: str, site: Site, sizes: dict[str, int]) -> str:
     sc, j = script_of(day), journal_of(day)
     num = j.get("number")
@@ -196,6 +229,9 @@ def day_section(day: str, site: Site, sizes: dict[str, int]) -> str:
     else:
         links.append("day zip and video: at the end of the day")
     lines += [" · ".join(links), ""]
+    data = data_links(day, sizes)
+    if data:
+        lines += ["Data: " + " · ".join(data), ""]
     nums = []
     if j.get("commits") is not None:
         nums.append(f"**{len(j['commits'])}** commits")

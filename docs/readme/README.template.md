@@ -81,6 +81,18 @@ OCW-ART/
 └── build-history/         # the archive (masked text tracked, media in LFS or local)
 ```
 
+## All the data
+
+| What | Where |
+|---|---|
+| Every picture and video, day by day | [the gallery](https://newkit.github.io/OCW-ART/) · in Git LFS under [`build-history/`](build-history/) |
+| The diary video, the day videos, the day zips (full size) and the gallery zips | the release [`build-history`](https://github.com/newkit/OCW-ART/releases/tag/build-history) (checksums: [SHA256SUMS](https://github.com/newkit/OCW-ART/releases/download/build-history/SHA256SUMS)) |
+| Each day's story: chapters, shots, captions | [`days/`](days/) – one `DAY.toml` per day |
+| Each day's journal: commits, merges, spec versions, builds, prompts, incidents, features | `build-history/DAY/journal.md` and `journal.json` (linked under each day above) |
+| Token usage per day and agent | `build-history/DAY/tokens.json` (linked under each day above) |
+| The game itself: code, specification, releases | [OCW](https://github.com/newkit/OCW) · [SPECIFICATION.md](https://github.com/newkit/OCW/blob/main/SPECIFICATION.md) · [releases](https://github.com/newkit/OCW/releases) · [play in the browser](https://newkit.github.io/OCW/) |
+| How this diary is made, and its rules | [docs/ART-PROJECT.md](docs/ART-PROJECT.md) |
+
 ## Where the media live
 
 | Where | What |
