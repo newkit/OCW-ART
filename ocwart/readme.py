@@ -175,7 +175,8 @@ DAY_DATA = (("journal.md", "journal"), ("journal.json", "journal (JSON)"), ("tok
 def tracked(path: Path) -> bool:
     """True when git tracks the file (so a link in the README works on GitHub)."""
     try:
-        return bool(run(["git", "-C", str(ART), "ls-files", "--error-unmatch", str(path.relative_to(ART))],
+        # Ask the repository that holds the file (the archive may live in another checkout than the code).
+        return bool(run(["git", "-C", str(path.parent), "ls-files", "--error-unmatch", path.name],
                         check=False, capture_output=True).returncode == 0)
     except Exception:
         return path.is_file()
