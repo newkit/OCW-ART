@@ -1,0 +1,135 @@
+# OCW Build Diary – day 15 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-25/ (or ../DAY/ for another day).
+# Spec rows 5.81–6.02; release 0.2.6.
+# Withheld: nothing – the day's 373 pictures and videos were checked (no
+# desktop captures, no host or user names, home paths or LAN addresses; the
+# sensor bridge's pages show only 127.0.0.1 (its pairing codes VZ00-… decode
+# to the loopback address); Join a ride shows the documentation address
+# 192.0.2.10; OCW Studio shows "~/…" and temporary /tmp paths; the trust
+# dialog's signer 'Ada Rider' is made up; only made-up riders and bots).
+
+title = "Chin up, 0.2.6"
+tagline = "In which two close junctions share one surface, a zebra crossing goes back where OSM has it, riders sprint in the drops, 0.2.6 ships with five J9 worlds – and the bubble under every rider's chin is gone."
+hero = "203837-7d97fded-dirty-shot-wayland-chin-a-side.jpg"
+bpm = 124
+key = "A"
+# style: none – the tool's rotation picks house for day 15 (days 6–14 chose
+# darkchip, melodic deep house, liquid dnb, electro, ambient, trance, dub,
+# garage, acid; house has not played yet)
+tests = 3550
+outro = "22 spec versions, one release, one 29-hour process ended. 863 million tokens."
+# The browser worker runs, the phone layouts, the release's browser tour,
+# the sharing screen's 15 s frames, the icons, plots and comparison sheets
+# would flicker through the time-lapse:
+timelapse_skip = ["*b3w-*", "*bridge-desktop-*s.jpg", "*web-web-webkit-*", "*release-0.2.6-web-*",
+                  "*windows-icon-*", "*-plans-*", "*chin-bubble-*"]
+
+[[chapter]]
+time = "06:27"
+title = "The desktop steps aside"
+caption = "While a browser rides on its trainer, the desktop shows a Sharing screen and pauses its own ride."
+prompt = "Answer to desktop while sharing with a browser: (c) a simple \"sharing\" screen"
+shots = [
+  { card = true, seconds = 4.0, text = "05:05: the bridge is read in a Web Worker – readings 0.37 ms old on arrival, 11 ms on the page's thread." },
+  { file = "055554-bridge-bridge-desktop-060s.jpg", seconds = 4.4, focus = [0.2, 0.3, 1.5], note = "\"Your trainer rides in Chrome\"" },
+]
+
+[[chapter]]
+time = "09:44"
+title = "Grips and the sprint"
+caption = "Riders change between the draped and the handshake grip every 20–90 s; a sprint goes to the drops, out of the saddle."
+prompt = "build option b, but keep a too and vary from time to time. also pay attention on how riders sprint, where they grap and how."
+shots = [
+  { file = "091517-347c53f8-dirty-shot-wayland-q31-handshake-side.jpg", seconds = 3.8, note = "the handshake grip" },
+  { file = "093744-9b0e9139-dirty-shot-wayland-q31-sprint-drops-side.jpg", seconds = 3.6, note = "deep in the hooks" },
+  { file = "093901-9b0e9139-dirty-video-wayland-q31-grip-then-sprint-video.mp4", seconds = 5.0, start = 9.5, note = "the bike rocks ±7°" },
+]
+
+[[chapter]]
+time = "12:15"
+title = "Caps per kind, kit from tiles"
+caption = "A better part never lowers another's gain; shorts, socks, shoes and gloves are picked from tiles under a row of colours."
+prompt = "b"
+shots = [
+  { file = "100502-cba2f214-shot-wayland-bike-stand-tiles-capped.jpg", seconds = 4.2, focus = [0.8, 0.45, 1.6], note = "each kind its own budget" },
+  { file = "115933-0829ea18-shot-wayland-workshop-socks-tiles.jpg", seconds = 4.0, focus = [0.78, 0.35, 1.5], note = "socks, with swatches" },
+]
+
+[[chapter]]
+time = "12:51"
+title = "A rule for test riders"
+caption = "From now on the test pictures vary the riders' bodies, kit and bike setup – not the same rider every time."
+prompt = "add a rule: when you do tests, do also vary the characters and the clothes, as well as the bike setzp."
+shots = [
+  { card = true, seconds = 3.6, text = "Rule, 12:51: test pictures and videos vary the riders' bodies, kit and bike setup." },
+]
+
+[[chapter]]
+time = "13:17"
+title = "J9: two junctions, one surface"
+caption = "Junctions 9 m apart shared a surface past a zebra crossing – the game drew it 4.5 m out. A crossing guard puts it back."
+prompt = "to see the improvents i need a release. do j9 and do a bump and release."
+shots = [
+  { split = ["092848-j9-sides-li-j9-fix2009-j8.jpg", "104817-j9-sides-li-j9-fix2009-j9.jpg"], seconds = 4.9, note = "J8 | J9: where's the zebra?" },
+  { split = ["104817-j9-sides-li-j9-fix2009-j9.jpg", "130831-j9-sides-li-j9-fix2009-j9.jpg"], seconds = 4.9, note = "J9 | with the crossing guard" },
+  { card = true, seconds = 4.2, text = "13:59: marge runs out of memory, the Black Forest south build is killed – it moves to leela, the middle to the Mac." },
+  { card = true, seconds = 4.2, text = "All five worlds rebuilt. Sharp side corners J8 → J9: Liechtenstein 266 → 234, Black Forest south 4,064 → 3,670." },
+]
+
+[[chapter]]
+time = "15:07"
+title = "Markers in the spec"
+caption = "Conflict markers from two stacked merges had slipped into the spec's workshop section. The spec check missed them."
+shots = [
+  { card = true, seconds = 4.0, text = "<<<<<<< ======= >>>>>>> removed, both \"built\" lines kept. New rule: no merge commit while a marker remains." },
+]
+
+[[chapter]]
+time = "16:15"
+title = "0.2.6 is out"
+caption = "Linux, Windows, macOS and the browser zip with SIMD, and all five J9 worlds – published as a pre-release."
+shots = [
+  { file = "155520-2026-11-25-release-0.2.6-smoke-web-world-web-world.jpg", seconds = 3.8, note = "the browser zip, Vaduz" },
+  { file = "155643-2026-11-25-release-0.2.6-smoke-appimage-x11.jpg", seconds = 3.8, note = "the AppImage, smoke-tested" },
+  { card = true, seconds = 3.6, text = "16:47: the 0.2.6 build and the J9 worlds installed on marge and leela." },
+]
+
+[[chapter]]
+time = "19:36"
+title = "29 hours of waiting"
+caption = "A J8 wait loop on marge waited for a process name that matched its own command line – it could never stop."
+prompt = "okay, end the stuck j8"
+shots = [
+  { card = true, seconds = 3.8, text = "Ended after 29 hours. One of marge's two build slots is free again." },
+]
+
+[[chapter]]
+time = "20:57"
+title = "Patches and trust"
+caption = "A world patch travels next to its package as .ocwpatch; ours live in git. OCW Studio asks before trusting a key."
+prompt = "16H Q14: yes, a"
+shots = [
+  { file = "201251-7d97fded-dirty-shot-wayland-studio-trust-dialog.jpg", seconds = 4.6, focus = [0.35, 0.3, 1.5], note = "the game's own dialog" },
+  { card = true, seconds = 3.6, text = "One trusted-keys list for both apps: a key trusted in one counts in the other." },
+]
+
+[[chapter]]
+time = "21:27"
+title = "A bubble on the chin"
+caption = "The chin was a four-sided ellipsoid whose centre lay outside the skull. It hung 2 cm under every near rider's face."
+prompt = "looks like there is a bubble attached to the chin"
+shots = [
+  { file = "204253-chin-bubble-geometry-before-chin-marked.png", seconds = 3.8, note = "the culprit, in magenta" },
+  { split = ["203837-7d97fded-dirty-shot-wayland-chin-a-side.jpg", "204108-7d97fded-dirty-shot-wayland-chin-a-side.jpg"], seconds = 4.9, note = "before | after" },
+  { split = ["203826-7d97fded-dirty-shot-wayland-chin-a-front.jpg", "204056-7d97fded-dirty-shot-wayland-chin-a-front.jpg"], seconds = 4.6, note = "one broad jaw now" },
+]
+
+[[chapter]]
+time = "22:48"
+title = "The map looks over the border"
+caption = "OCW Studio's 2D map draws the neighbouring worlds dimmed, the world's border as a line and the aerial photo as a layer."
+prompt = "yes, (a), show the neighboring world, when we have one. what happends when we don't have one?"
+shots = [
+  { file = "220123-studio-map-q15-bf-middle-neighbours.jpg", seconds = 4.2, focus = [0.82, 0.5, 1.6], note = "Black Forest middle and its neighbours" },
+  { file = "220314-studio-map-q15-li-aerial-on.jpg", seconds = 4.0, focus = [0.8, 0.5, 1.6], note = "Liechtenstein, aerial on" },
+]

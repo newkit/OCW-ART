@@ -15,14 +15,14 @@ day becomes a short video (title, a time-lapse of the whole day, the story in
 chapters, today's features, the numbers), and the days are joined into one
 growing diary video.
 
-<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-24/w/192134-web-xr-web-xr-xr-computer.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
+<p align="center"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/w/203837-7d97fded-dirty-shot-wayland-chin-a-side.jpg.jpg" width="860" alt="The OCW Build Diary"></a></p>
 
 **▶ [Watch the whole diary](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-diary.mp4)** ·
 **[Browse the gallery](https://newkit.github.io/OCW-ART/)** (every picture and video, day by day) ·
 [Day zips and videos](https://github.com/newkit/OCW-ART/releases/tag/build-history) ·
 [The brief and the rules](docs/ART-PROJECT.md)
 
-**15 build days** · **1311** commits · **11427** pictures · **326** videos · **19.10 billion** tokens · the diary video: 803.2 MB
+**16 build days** · **1321** commits · **11470** pictures · **326** videos · **19.21 billion** tokens · the diary video: 848.3 MB
 
 ## How the game grew
 
@@ -32,13 +32,23 @@ growing diary video.
 
 ## The build days
 
-### Day 15 · 2026-11-25 — (the day's story is written at the end of the day)
+### Day 16 · 2026-11-26 — (the day's story is written at the end of the day)
 
-<table><tr><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#1"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/015329-web-b3w-web-mp-f0-off.jpg.jpg" width="200" alt="web b3w web mp f0 off"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#111"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/044025-web-web-webkit-layout-iphone-844x390.png.jpg" width="200" alt="web web webkit layout iphone 844x390"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#220"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/115959-0829ea18-shot-wayland-workshop-shoes-colour.jpg.jpg" width="200" alt="0829ea18 shot wayland workshop shoes colour"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#330"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/155643-2026-11-25-release-0.2.6-smoke-appimage-x11.jpg.jpg" width="200" alt="2026 11 25 release 0.2.6 smoke appimage x11"></a></td></tr></table>
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-26/) · day zip and video: at the end of the day
 
-[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-25/) · day zip and video: at the end of the day
+**0** commits · **0** merges · **0** pictures · **0** videos · music: synthwave
 
-**38** commits · **6** merges · spec 5.81 → 5.97 · **324** pictures · **6** videos · **752 million** tokens · music: house
+### Day 15 · 2026-11-25 — Chin up, 0.2.6
+
+*In which two close junctions share one surface, a zebra crossing goes back where OSM has it, riders sprint in the drops, 0.2.6 ships with five J9 worlds – and the bubble under every rider's chin is gone.*
+
+<table><tr><td align="center" valign="top"><a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-15-2026-11-25.mp4"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/203837-7d97fded-dirty-shot-wayland-chin-a-side.jpg.jpg" width="200" alt="the day video"></a><br>▶ <a href="https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-15-2026-11-25.mp4">day video</a> (45.1 MB)</td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#126"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/055554-bridge-bridge-desktop-060s.jpg.jpg" width="200" alt="bridge bridge desktop 060s"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#329"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/155520-2026-11-25-release-0.2.6-smoke-web-world-web-world.jpg.jpg" width="200" alt="2026 11 25 release 0.2.6 smoke web world web world"></a></td><td align="center" valign="top"><a href="https://newkit.github.io/OCW-ART/days/2026-11-25/#367"><img src="https://newkit.github.io/OCW-ART/days/2026-11-25/t/220123-studio-map-q15-bf-middle-neighbours.jpg.jpg" width="200" alt="studio map q15 bf middle neighbours"></a></td></tr></table>
+
+[Gallery](https://newkit.github.io/OCW-ART/days/2026-11-25/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-15-2026-11-25.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-25.zip) (127 MB)
+
+Data: [day script](days/2026-11-25.toml) · [journal](build-history/2026-11-25/journal.md) · [journal (JSON)](build-history/2026-11-25/journal.json) · [tokens](build-history/2026-11-25/tokens.json) · [pictures and videos](build-history/2026-11-25/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-25.zip) (40.5 MB)
+
+**48** commits · **10** merges · spec 5.81 → 6.02 · **367** pictures · **6** videos · **863 million** tokens · music: house
 
 ### Day 14 · 2026-11-24 — Into the headset
 
@@ -48,7 +58,7 @@ growing diary video.
 
 [Gallery](https://newkit.github.io/OCW-ART/days/2026-11-24/) · [▶ Day video](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-diary-day-14-2026-11-24.mp4) · [⇩ Day zip](https://github.com/newkit/OCW-ART/releases/download/build-history/ocw-build-history-2026-11-24.zip) (862.4 MB)
 
-Data: [day script](days/2026-11-24.toml) · [journal](build-history/2026-11-24/journal.md) · [journal (JSON)](build-history/2026-11-24/journal.json) · [tokens](build-history/2026-11-24/tokens.json) · [pictures and videos](build-history/2026-11-24/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-24.zip) (419 MB)
+Data: [day script](days/2026-11-24.toml) · [journal](build-history/2026-11-24/journal.md) · [journal (JSON)](build-history/2026-11-24/journal.json) · [tokens](build-history/2026-11-24/tokens.json) · [pictures and videos](build-history/2026-11-24/) (Git LFS) · [⇩ gallery zip](https://github.com/newkit/OCW-ART/releases/download/build-history/gallery-2026-11-24.zip) (228.1 MB)
 
 **51** commits · **13** merges · spec 5.65 → 5.80 · **3429** pictures · **73** videos · **960 million** tokens · music: acid
 

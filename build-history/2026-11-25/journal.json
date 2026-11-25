@@ -1,0 +1,3574 @@
+{
+ "day": "2026-11-25",
+ "number": 15,
+ "commits": [
+  {
+   "sha": "c473eb11",
+   "time": "04:14:29",
+   "merge": false,
+   "subject": "Built: the browser reads its WebTransport connections in a Web Worker, snapshot jitter 13.6 -> 0.1 ms (60 fps) and 24.4 -> 0.1 ms (25 fps), the others 4x smoother; own rider worse at 25 fps (open) (Phase 10, 10G B3 worker, 5.81)",
+   "added": 2171,
+   "removed": 377
+  },
+  {
+   "sha": "75c64ff6",
+   "time": "05:04:32",
+   "merge": false,
+   "subject": "Network worker on by default for the sensor bridge only, the game link opt-in (net-worker=on): the own rider still moved less smoothly with it even with the worker's stamps in the ArrivalClock (Phase 10, 10G B3 worker, 5.81)",
+   "added": 165,
+   "removed": 51
+  },
+  {
+   "sha": "d9bc9fb1",
+   "time": "05:05:10",
+   "merge": true,
+   "subject": "Merge the sensor bridge read in a Web Worker (0.36 ms old on arrival) with the game link on the page's thread by default; net-worker=on opts the game link into the worker (10G B3, 5.81)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "2c0abf94",
+   "time": "05:07:51",
+   "merge": false,
+   "subject": "While sharing its trainer with a browser the desktop shows a simple Sharing screen and pauses its own ride (10D.2)",
+   "added": 2,
+   "removed": 1
+  },
+  {
+   "sha": "d4276df6",
+   "time": "06:26:25",
+   "merge": false,
+   "subject": "Built: the desktop's Sharing screen while a browser rides with its trainer, its own ride paused (10D.2, 5.83)",
+   "added": 1440,
+   "removed": 49
+  },
+  {
+   "sha": "b8572b79",
+   "time": "06:27:10",
+   "merge": true,
+   "subject": "Merge the desktop's Sharing screen: while a browser rides on its trainer the desktop shows the browser, live readings, the grade it sets, the bridge and Stop sharing, its own ride paused (10D.2, 5.83)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "347c53f8",
+   "time": "08:25:08",
+   "merge": false,
+   "subject": "Riders change between the draped and the handshake grip on the hoods; sprints in the drops, out of the saddle, rocking the bike (Phase 4 Q31 and sprint behaviour)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "3f336a8f",
+   "time": "09:00:05",
+   "merge": false,
+   "subject": "Part tiles keep the gain against the base part for the reference rider (Phase 4 Q26 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "d22f8b6b",
+   "time": "09:05:56",
+   "merge": false,
+   "subject": "Build caps per kind (rolling, aero, weight) so a better part never lowers the others' gains (Phase 4 Q27 (b))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "b4c2cffc",
+   "time": "09:09:35",
+   "merge": false,
+   "subject": "Kit pickers as tiles with a row of colour swatches (Phase 4 Q30 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "9b0e9139",
+   "time": "09:14:12",
+   "merge": false,
+   "subject": "Built: riders hold the road hoods draped or in the handshake grip and change every 20-90 s; sprints go to the drops deep in the hooks, out of the saddle, rocking the bike (14 Phase 4 Q31, 2.6, v5.85)",
+   "added": 1257,
+   "removed": 51
+  },
+  {
+   "sha": "cba2f214",
+   "time": "09:30:53",
+   "merge": false,
+   "subject": "Build caps per kind: rolling, aero, weight and drivetrain each within its own share of the limit (Phase 4 Q27 (b) built)",
+   "added": 493,
+   "removed": 82
+  },
+  {
+   "sha": "293c6c55",
+   "time": "09:39:27",
+   "merge": false,
+   "subject": "Q31 scenes: the sprint shots and the video from the front quarter (the chase camera lags at sprint speed)",
+   "added": 5,
+   "removed": 5
+  },
+  {
+   "sha": "9e70227f",
+   "time": "09:44:49",
+   "merge": true,
+   "subject": "Merge riders' hood grips (draped and handshake, changing every 20–90 s) and the sprint (drops, out of the saddle, the bike rocking) (Phase 4 Q31, 2.6; 5.88)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a0f23639",
+   "time": "09:48:06",
+   "merge": false,
+   "subject": "Junctions share a short edge and take the room a far end leaves (4.8.8 Rule, J9)",
+   "added": 607,
+   "removed": 10
+  },
+  {
+   "sha": "9f32a289",
+   "time": "10:06:01",
+   "merge": true,
+   "subject": "Merge build caps per kind: rolling, aero, weight and drivetrain each within their own budget, so a better part never lowers another part's gain (Phase 4 Q27 (b), 4G Caps; 5.89)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "7f4cebf5",
+   "time": "10:06:07",
+   "merge": false,
+   "subject": "Format the J9 tests",
+   "added": 14,
+   "removed": 2
+  },
+  {
+   "sha": "3940bcb3",
+   "time": "10:58:06",
+   "merge": false,
+   "subject": "Kit pickers as tiles with a row of colour swatches above them (Phase 4 Q30 (a))",
+   "added": 694,
+   "removed": 52
+  },
+  {
+   "sha": "1fb8e6c2",
+   "time": "11:32:46",
+   "merge": false,
+   "subject": "Kit tile scenes step to the right mirror slots; rustfmt",
+   "added": 9,
+   "removed": 6
+  },
+  {
+   "sha": "029cdcf3",
+   "time": "11:56:49",
+   "merge": false,
+   "subject": "Kit tiles frame the item: shorts on the legs, socks on the feet; tiles in the selected colour; std swatch marked",
+   "added": 74,
+   "removed": 9
+  },
+  {
+   "sha": "0829ea18",
+   "time": "11:57:12",
+   "merge": false,
+   "subject": "rustfmt; spec: kit tile framing and std swatch",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "9cbd20cc",
+   "time": "12:15:52",
+   "merge": true,
+   "subject": "Merge kit pickers as tiles: shorts, socks, shoes and gloves as picture tiles with a row of colour swatches above them (Phase 4 Q30 (a), 4N; 5.90)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "58ed70f9",
+   "time": "12:30:24",
+   "merge": false,
+   "subject": "Built: the sides of a road are as smooth as the road, J9 (4.8.8 Rule)",
+   "added": 41,
+   "removed": 2
+  },
+  {
+   "sha": "23c74451",
+   "time": "12:51:45",
+   "merge": false,
+   "subject": "Rule: test pictures and videos vary the riders' bodies, kit and bike setup",
+   "added": 2,
+   "removed": 0
+  },
+  {
+   "sha": "76f86d5e",
+   "time": "12:54:25",
+   "merge": false,
+   "subject": "A painted crossing stays where OSM has it: no shared patch or longer mouth swallows one (4.8.8 Rule, J9)",
+   "added": 372,
+   "removed": 18
+  },
+  {
+   "sha": "e0f43b25",
+   "time": "13:08:52",
+   "merge": false,
+   "subject": "Spec 4.8.8 Built (J9): painted crossings stay where OSM has them; Liechtenstein rebuilt",
+   "added": 10,
+   "removed": 9
+  },
+  {
+   "sha": "89b2322a",
+   "time": "13:17:20",
+   "merge": true,
+   "subject": "Merge J9: two close junctions share one surface, arms take the room before a bridge or split, painted crossings stay where OSM has them; side.corner −4 to −13 % (4.8.8 Rule, 5.91)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a337a60a",
+   "time": "13:58:14",
+   "merge": false,
+   "subject": "Release 0.2.6",
+   "added": 31,
+   "removed": 31
+  },
+  {
+   "sha": "06156163",
+   "time": "15:07:26",
+   "merge": false,
+   "subject": "Height points win over the gradient limit, as built (16H Q8 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "52d4029f",
+   "time": "15:07:49",
+   "merge": false,
+   "subject": "Spec: remove leftover conflict markers in 4N (Q30 and Q31 built lines kept)",
+   "added": 1,
+   "removed": 11
+  },
+  {
+   "sha": "bc7469ce",
+   "time": "15:34:58",
+   "merge": false,
+   "subject": "A world patch ships as its own .ocwpatch file next to the package, its checksum in the manifest (16H Q9 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "e02af7a3",
+   "time": "15:42:37",
+   "merge": false,
+   "subject": "Official world patches in git under worlds/<region>/patches/ (16H Q10 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "2ee32aba",
+   "time": "15:54:43",
+   "merge": false,
+   "subject": "Height point defaults stay 15 m snap and 100 m blend (16H Q11 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "fe185161",
+   "time": "15:59:32",
+   "merge": false,
+   "subject": "Studio camera hovers by default, plane under View → Flight (16H Q12 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "f59c9cb3",
+   "time": "16:04:39",
+   "merge": false,
+   "subject": "Spec 4.8.8 Built (J9): all five packages rebuilt with painted crossings kept in place (final lint, checksums, build machines; 5.91)",
+   "added": 12,
+   "removed": 11
+  },
+  {
+   "sha": "5ad9844f",
+   "time": "19:39:44",
+   "merge": false,
+   "subject": "Spec 16H Q14 elaborated: an example, what the game asks, what the studio does today, the shared trust list",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "c3fe597b",
+   "time": "19:40:01",
+   "merge": false,
+   "subject": "Spec 16H Q14: the studio does not read the trusted-keys list yet",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "7d97fded",
+   "time": "19:40:35",
+   "merge": false,
+   "subject": "Studio asks with the game's trust dialog for unknown user keys (16H Q14 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "429d9c25",
+   "time": "20:22:15",
+   "merge": false,
+   "subject": "A world patch travels next to its package, its SHA-256 in the manifest; our patches live in worlds/<region>/patches/ (16H Q9 (a), Q10 (a); spec 5.98)",
+   "added": 744,
+   "removed": 23
+  },
+  {
+   "sha": "2ce6b4cf",
+   "time": "20:36:13",
+   "merge": false,
+   "subject": "Built: OCW Studio asks with the game's trust dialog for unknown user keys and shares the game's trusted-keys list (spec 16H Q14 (a), 5.98)",
+   "added": 558,
+   "removed": 33
+  },
+  {
+   "sha": "3d16a5fc",
+   "time": "20:43:29",
+   "merge": false,
+   "subject": "Fixed: no bubble on the rider's chin (4N, v5.98)",
+   "added": 356,
+   "removed": 26
+  },
+  {
+   "sha": "65378fb8",
+   "time": "20:48:44",
+   "merge": false,
+   "subject": "Studio 2D map shows the joined neighbouring packages and the aerial-photo layer (16H Q15 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "cca0eae8",
+   "time": "20:50:59",
+   "merge": false,
+   "subject": "Studio 2D map: the world's border as a thin line (16H Q15)",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "37f45eb8",
+   "time": "20:55:13",
+   "merge": true,
+   "subject": "Merge world patches: <package>.ocwpatch shipped next to the package with its checksum in the manifest, official patches in git under worlds/<region>/patches/ (16H Q9 (a), Q10 (a); 5.99)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "c125ae44",
+   "time": "20:57:19",
+   "merge": true,
+   "subject": "Merge the studio's trust dialog: a world signed by an unknown user key asks with the game's dialog, one trusted-keys list for both apps (16H Q14 (a); 6.00)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "21b0f664",
+   "time": "21:27:36",
+   "merge": true,
+   "subject": "Merge the chin fix: one broad jaw instead of the 4-sided chin bubble, a gentler older jaw, beards covering it, the strap buckle under the chin (4N Fixed; 6.01)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "63480cea",
+   "time": "22:47:55",
+   "merge": false,
+   "subject": "Built: OCW Studio's 2D map draws the joined neighbouring packages dimmed, the world's border as a thin line and the aerial photo as a layer, off by default (16H Q15 (a); spec 6.02)",
+   "added": 1670,
+   "removed": 24
+  },
+  {
+   "sha": "84be3af7",
+   "time": "22:48:38",
+   "merge": true,
+   "subject": "Merge the studio's 2D map additions: neighbouring worlds dimmed, the world's border line, the aerial-photo layer (16H Q15 (a); 6.02)",
+   "added": 0,
+   "removed": 0
+  }
+ ],
+ "merges": 10,
+ "lines_added": 10782,
+ "lines_removed": 937,
+ "spec_versions": [
+  "4.8",
+  "4.8",
+  "5.98",
+  "6.02"
+ ],
+ "tests": null,
+ "media": [
+  {
+   "file": "015329-web-b3w-web-mp-f0-off.jpg",
+   "time": "01:53:29",
+   "kind": "image"
+  },
+  {
+   "file": "015415-web-b3w-web-mp-f0-auto.jpg",
+   "time": "01:54:15",
+   "kind": "image"
+  },
+  {
+   "file": "015500-web-b3w-web-mp-f40-off.jpg",
+   "time": "01:55:00",
+   "kind": "image"
+  },
+  {
+   "file": "015548-web-b3w-web-mp-f40-auto.jpg",
+   "time": "01:55:48",
+   "kind": "image"
+  },
+  {
+   "file": "015635-web-b3w-web-mp-refuse.jpg",
+   "time": "01:56:35",
+   "kind": "image"
+  },
+  {
+   "file": "020308-web-b3w-rounds-web-mp-r1-f40-auto.jpg",
+   "time": "02:03:08",
+   "kind": "image"
+  },
+  {
+   "file": "020356-web-b3w-rounds-web-mp-r1-f40-off.jpg",
+   "time": "02:03:56",
+   "kind": "image"
+  },
+  {
+   "file": "020443-web-b3w-rounds-web-mp-r1-f0-auto.jpg",
+   "time": "02:04:43",
+   "kind": "image"
+  },
+  {
+   "file": "020528-web-b3w-rounds-web-mp-r1-f0-off.jpg",
+   "time": "02:05:28",
+   "kind": "image"
+  },
+  {
+   "file": "020614-web-b3w-rounds-web-mp-r2-f40-auto.jpg",
+   "time": "02:06:14",
+   "kind": "image"
+  },
+  {
+   "file": "020701-web-b3w-rounds-web-mp-r2-f40-off.jpg",
+   "time": "02:07:01",
+   "kind": "image"
+  },
+  {
+   "file": "020748-web-b3w-rounds-web-mp-r2-f0-auto.jpg",
+   "time": "02:07:48",
+   "kind": "image"
+  },
+  {
+   "file": "020834-web-b3w-rounds-web-mp-r2-f0-off.jpg",
+   "time": "02:08:34",
+   "kind": "image"
+  },
+  {
+   "file": "020920-web-b3w-rounds-web-mp-r3-f40-auto.jpg",
+   "time": "02:09:20",
+   "kind": "image"
+  },
+  {
+   "file": "021007-web-b3w-rounds-web-mp-r3-f40-off.jpg",
+   "time": "02:10:07",
+   "kind": "image"
+  },
+  {
+   "file": "021054-web-b3w-rounds-web-mp-r3-f0-auto.jpg",
+   "time": "02:10:54",
+   "kind": "image"
+  },
+  {
+   "file": "021139-web-b3w-rounds-web-mp-r3-f0-off.jpg",
+   "time": "02:11:39",
+   "kind": "image"
+  },
+  {
+   "file": "022732-bridge-bridge-browser-menu.jpg",
+   "time": "02:27:32",
+   "kind": "image"
+  },
+  {
+   "file": "022732-bridge-bridge-browser-riding-late.jpg",
+   "time": "02:27:32",
+   "kind": "image"
+  },
+  {
+   "file": "022732-bridge-bridge-browser-riding.jpg",
+   "time": "02:27:32",
+   "kind": "image"
+  },
+  {
+   "file": "022732-bridge-bridge-desktop.jpg",
+   "time": "02:27:32",
+   "kind": "image"
+  },
+  {
+   "file": "023402-web-b3w-video-web-mp-video-f40-worker.jpg",
+   "time": "02:34:02",
+   "kind": "image"
+  },
+  {
+   "file": "023402-web-b3w-video-web-mp-video-f40-worker.mp4",
+   "time": "02:34:02",
+   "kind": "video"
+  },
+  {
+   "file": "024019-web-b3w-rounds2-web-mp-r1-f40-auto.jpg",
+   "time": "02:40:19",
+   "kind": "image"
+  },
+  {
+   "file": "024106-web-b3w-rounds2-web-mp-r1-f40-off.jpg",
+   "time": "02:41:06",
+   "kind": "image"
+  },
+  {
+   "file": "024153-web-b3w-rounds2-web-mp-r1-f0-auto.jpg",
+   "time": "02:41:53",
+   "kind": "image"
+  },
+  {
+   "file": "024238-web-b3w-rounds2-web-mp-r1-f0-off.jpg",
+   "time": "02:42:38",
+   "kind": "image"
+  },
+  {
+   "file": "024324-web-b3w-rounds2-web-mp-r2-f40-auto.jpg",
+   "time": "02:43:24",
+   "kind": "image"
+  },
+  {
+   "file": "024411-web-b3w-rounds2-web-mp-r2-f40-off.jpg",
+   "time": "02:44:11",
+   "kind": "image"
+  },
+  {
+   "file": "024459-web-b3w-rounds2-web-mp-r2-f0-auto.jpg",
+   "time": "02:44:59",
+   "kind": "image"
+  },
+  {
+   "file": "024544-web-b3w-rounds2-web-mp-r2-f0-off.jpg",
+   "time": "02:45:44",
+   "kind": "image"
+  },
+  {
+   "file": "024630-web-b3w-rounds2-web-mp-r3-f40-auto.jpg",
+   "time": "02:46:30",
+   "kind": "image"
+  },
+  {
+   "file": "024717-web-b3w-rounds2-web-mp-r3-f40-off.jpg",
+   "time": "02:47:17",
+   "kind": "image"
+  },
+  {
+   "file": "024805-web-b3w-rounds2-web-mp-r3-f0-auto.jpg",
+   "time": "02:48:05",
+   "kind": "image"
+  },
+  {
+   "file": "024850-web-b3w-rounds2-web-mp-r3-f0-off.jpg",
+   "time": "02:48:50",
+   "kind": "image"
+  },
+  {
+   "file": "025419-bridge-bridge-browser-menu.jpg",
+   "time": "02:54:19",
+   "kind": "image"
+  },
+  {
+   "file": "025419-bridge-bridge-browser-riding-late.jpg",
+   "time": "02:54:19",
+   "kind": "image"
+  },
+  {
+   "file": "025419-bridge-bridge-browser-riding.jpg",
+   "time": "02:54:19",
+   "kind": "image"
+  },
+  {
+   "file": "025419-bridge-bridge-desktop.jpg",
+   "time": "02:54:19",
+   "kind": "image"
+  },
+  {
+   "file": "030258-web-b3w-diag-web-mp-r1-f40-auto.jpg",
+   "time": "03:02:58",
+   "kind": "image"
+  },
+  {
+   "file": "030345-web-b3w-diag-web-mp-r1-f40-off.jpg",
+   "time": "03:03:45",
+   "kind": "image"
+  },
+  {
+   "file": "030432-web-b3w-diag-web-mp-r2-f40-auto.jpg",
+   "time": "03:04:32",
+   "kind": "image"
+  },
+  {
+   "file": "030520-web-b3w-diag-web-mp-r2-f40-off.jpg",
+   "time": "03:05:20",
+   "kind": "image"
+  },
+  {
+   "file": "031315-web-b3w-final-web-mp-r1-f40-auto.jpg",
+   "time": "03:13:15",
+   "kind": "image"
+  },
+  {
+   "file": "031402-web-b3w-final-web-mp-r1-f40-off.jpg",
+   "time": "03:14:02",
+   "kind": "image"
+  },
+  {
+   "file": "031449-web-b3w-final-web-mp-r1-f0-auto.jpg",
+   "time": "03:14:49",
+   "kind": "image"
+  },
+  {
+   "file": "031535-web-b3w-final-web-mp-r1-f0-off.jpg",
+   "time": "03:15:35",
+   "kind": "image"
+  },
+  {
+   "file": "031620-web-b3w-final-web-mp-r2-f40-auto.jpg",
+   "time": "03:16:20",
+   "kind": "image"
+  },
+  {
+   "file": "031708-web-b3w-final-web-mp-r2-f40-off.jpg",
+   "time": "03:17:08",
+   "kind": "image"
+  },
+  {
+   "file": "031755-web-b3w-final-web-mp-r2-f0-auto.jpg",
+   "time": "03:17:55",
+   "kind": "image"
+  },
+  {
+   "file": "031841-web-b3w-final-web-mp-r2-f0-off.jpg",
+   "time": "03:18:41",
+   "kind": "image"
+  },
+  {
+   "file": "031927-web-b3w-final-web-mp-r3-f40-auto.jpg",
+   "time": "03:19:27",
+   "kind": "image"
+  },
+  {
+   "file": "032014-web-b3w-final-web-mp-r3-f40-off.jpg",
+   "time": "03:20:14",
+   "kind": "image"
+  },
+  {
+   "file": "032102-web-b3w-final-web-mp-r3-f0-auto.jpg",
+   "time": "03:21:02",
+   "kind": "image"
+  },
+  {
+   "file": "032147-web-b3w-final-web-mp-r3-f0-off.jpg",
+   "time": "03:21:47",
+   "kind": "image"
+  },
+  {
+   "file": "032233-web-b3w-final-web-mp-refuse.jpg",
+   "time": "03:22:33",
+   "kind": "image"
+  },
+  {
+   "file": "032258-web-b3w-final-web-mp-video-f40-worker.jpg",
+   "time": "03:22:58",
+   "kind": "image"
+  },
+  {
+   "file": "032258-web-b3w-final-web-mp-video-f40-worker.mp4",
+   "time": "03:22:58",
+   "kind": "video"
+  },
+  {
+   "file": "032816-bridge-bridge-browser-menu.jpg",
+   "time": "03:28:16",
+   "kind": "image"
+  },
+  {
+   "file": "032816-bridge-bridge-browser-riding-late.jpg",
+   "time": "03:28:16",
+   "kind": "image"
+  },
+  {
+   "file": "032816-bridge-bridge-browser-riding.jpg",
+   "time": "03:28:16",
+   "kind": "image"
+  },
+  {
+   "file": "032816-bridge-bridge-desktop.jpg",
+   "time": "03:28:16",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-hints.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-hold.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-landscape-hints.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-landscape-hold.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-landscape-riding.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-landscape-stopped.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-landscape.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-riding.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-start.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone-stopped.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-iphone.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-layout-android-360x640.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-layout-android-640x360.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-layout-iphone-390x844.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-layout-iphone-844x390.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-mac.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "035004-web-web-webkit-too-old-ride.png",
+   "time": "03:50:04",
+   "kind": "image"
+  },
+  {
+   "file": "041103-bridge-bridge-browser-menu.jpg",
+   "time": "04:11:03",
+   "kind": "image"
+  },
+  {
+   "file": "041103-bridge-bridge-browser-riding-late.jpg",
+   "time": "04:11:03",
+   "kind": "image"
+  },
+  {
+   "file": "041103-bridge-bridge-browser-riding.jpg",
+   "time": "04:11:03",
+   "kind": "image"
+  },
+  {
+   "file": "041103-bridge-bridge-desktop.jpg",
+   "time": "04:11:03",
+   "kind": "image"
+  },
+  {
+   "file": "041249-web-b3w-final2-web-mp.jpg",
+   "time": "04:12:49",
+   "kind": "image"
+  },
+  {
+   "file": "041325-web-b3w-final2-web-mp-refuse.jpg",
+   "time": "04:13:25",
+   "kind": "image"
+  },
+  {
+   "file": "042202-web-b3w-fix-web-mp-r1-f40-auto.jpg",
+   "time": "04:22:02",
+   "kind": "image"
+  },
+  {
+   "file": "042249-web-b3w-fix-web-mp-r1-f40-off.jpg",
+   "time": "04:22:49",
+   "kind": "image"
+  },
+  {
+   "file": "042337-web-b3w-fix-web-mp-r1-f0-auto.jpg",
+   "time": "04:23:37",
+   "kind": "image"
+  },
+  {
+   "file": "042422-web-b3w-fix-web-mp-r1-f0-off.jpg",
+   "time": "04:24:22",
+   "kind": "image"
+  },
+  {
+   "file": "042508-web-b3w-fix-web-mp-r2-f40-auto.jpg",
+   "time": "04:25:08",
+   "kind": "image"
+  },
+  {
+   "file": "042556-web-b3w-fix-web-mp-r2-f40-off.jpg",
+   "time": "04:25:56",
+   "kind": "image"
+  },
+  {
+   "file": "042643-web-b3w-fix-web-mp-r2-f0-auto.jpg",
+   "time": "04:26:43",
+   "kind": "image"
+  },
+  {
+   "file": "042729-web-b3w-fix-web-mp-r2-f0-off.jpg",
+   "time": "04:27:29",
+   "kind": "image"
+  },
+  {
+   "file": "042814-web-b3w-fix-web-mp-r3-f40-auto.jpg",
+   "time": "04:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "042902-web-b3w-fix-web-mp-r3-f40-off.jpg",
+   "time": "04:29:02",
+   "kind": "image"
+  },
+  {
+   "file": "042949-web-b3w-fix-web-mp-r3-f0-auto.jpg",
+   "time": "04:29:49",
+   "kind": "image"
+  },
+  {
+   "file": "043035-web-b3w-fix-web-mp-r3-f0-off.jpg",
+   "time": "04:30:35",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-hints.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-hold.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-landscape-hints.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-landscape-hold.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-landscape-riding.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-landscape-stopped.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-landscape.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-riding.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone-stopped.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-iphone.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-layout-android-360x640.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-layout-android-640x360.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-layout-iphone-390x844.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-layout-iphone-844x390.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "044025-web-web-webkit-mac.png",
+   "time": "04:40:25",
+   "kind": "image"
+  },
+  {
+   "file": "045617-web-web-mp.jpg",
+   "time": "04:56:17",
+   "kind": "image"
+  },
+  {
+   "file": "050137-bridge-bridge-browser-menu.jpg",
+   "time": "05:01:37",
+   "kind": "image"
+  },
+  {
+   "file": "050137-bridge-bridge-browser-riding-late.jpg",
+   "time": "05:01:37",
+   "kind": "image"
+  },
+  {
+   "file": "050137-bridge-bridge-browser-riding.jpg",
+   "time": "05:01:37",
+   "kind": "image"
+  },
+  {
+   "file": "050137-bridge-bridge-desktop.jpg",
+   "time": "05:01:37",
+   "kind": "image"
+  },
+  {
+   "file": "050323-web-b3w-optin-web-mp-on.jpg",
+   "time": "05:03:23",
+   "kind": "image"
+  },
+  {
+   "file": "050349-web-b3w-optin-web-mp-refuse.jpg",
+   "time": "05:03:49",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-browser-menu.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-browser-riding-late.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-browser-riding.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-015s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-030s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-045s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-060s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-075s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-090s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-105s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-120s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-135s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-150s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-165s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-180s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop-195s.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "055554-bridge-bridge-desktop.jpg",
+   "time": "05:55:54",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-browser-menu.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-browser-riding-late.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-browser-riding.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-015s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-030s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-045s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-060s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-075s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-090s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-105s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-120s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-135s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-150s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-165s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-180s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop-195s.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "061319-bridge-bridge-desktop.jpg",
+   "time": "06:13:19",
+   "kind": "image"
+  },
+  {
+   "file": "090614-347c53f8-dirty-shot-ocw.jpg",
+   "time": "09:06:14",
+   "kind": "image"
+  },
+  {
+   "file": "090623-347c53f8-dirty-shot-wayland-ocw-wayland.jpg",
+   "time": "09:06:23",
+   "kind": "image"
+  },
+  {
+   "file": "090900-347c53f8-dirty-shot-wayland-q31-draped-side.jpg",
+   "time": "09:09:00",
+   "kind": "image"
+  },
+  {
+   "file": "091509-347c53f8-dirty-shot-wayland-q31-draped-above.jpg",
+   "time": "09:15:09",
+   "kind": "image"
+  },
+  {
+   "file": "091517-347c53f8-dirty-shot-wayland-q31-handshake-side.jpg",
+   "time": "09:15:17",
+   "kind": "image"
+  },
+  {
+   "file": "091525-347c53f8-dirty-shot-wayland-q31-handshake-front.jpg",
+   "time": "09:15:25",
+   "kind": "image"
+  },
+  {
+   "file": "091534-347c53f8-dirty-shot-wayland-q31-handshake-above.jpg",
+   "time": "09:15:34",
+   "kind": "image"
+  },
+  {
+   "file": "091542-347c53f8-dirty-shot-wayland-q31-sprint-drops-side.jpg",
+   "time": "09:15:42",
+   "kind": "image"
+  },
+  {
+   "file": "091550-347c53f8-dirty-shot-wayland-q31-sprint-body.jpg",
+   "time": "09:15:50",
+   "kind": "image"
+  },
+  {
+   "file": "091559-347c53f8-dirty-shot-wayland-q31-sprint-front.jpg",
+   "time": "09:15:59",
+   "kind": "image"
+  },
+  {
+   "file": "091648-347c53f8-dirty-video-wayland-q31-grip-then-sprint-video.jpg",
+   "time": "09:16:48",
+   "kind": "image"
+  },
+  {
+   "file": "091648-347c53f8-dirty-video-wayland-q31-grip-then-sprint-video.mp4",
+   "time": "09:16:48",
+   "kind": "video"
+  },
+  {
+   "file": "092635-j9-sides-li-letzanaweg-corner-j8.jpg",
+   "time": "09:26:35",
+   "kind": "image"
+  },
+  {
+   "file": "092650-j9-sides-li-letzanaweg-side-j8.jpg",
+   "time": "09:26:50",
+   "kind": "image"
+  },
+  {
+   "file": "092706-j9-sides-li-t-j8.jpg",
+   "time": "09:27:06",
+   "kind": "image"
+  },
+  {
+   "file": "092722-j9-sides-li-fork-j8.jpg",
+   "time": "09:27:22",
+   "kind": "image"
+  },
+  {
+   "file": "092748-j9-sides-bf-path-j8.jpg",
+   "time": "09:27:48",
+   "kind": "image"
+  },
+  {
+   "file": "092804-j9-sides-li-j8-run4721-j8.jpg",
+   "time": "09:28:04",
+   "kind": "image"
+  },
+  {
+   "file": "092819-j9-sides-li-j8-run4792-j8.jpg",
+   "time": "09:28:19",
+   "kind": "image"
+  },
+  {
+   "file": "092833-j9-sides-li-j8-fix3392-j8.jpg",
+   "time": "09:28:33",
+   "kind": "image"
+  },
+  {
+   "file": "092848-j9-sides-li-j9-fix2009-j8.jpg",
+   "time": "09:28:48",
+   "kind": "image"
+  },
+  {
+   "file": "092903-j9-sides-li-j9-fix5952-j8.jpg",
+   "time": "09:29:03",
+   "kind": "image"
+  },
+  {
+   "file": "092918-j9-sides-li-j9-fix2716-j8.jpg",
+   "time": "09:29:18",
+   "kind": "image"
+  },
+  {
+   "file": "092933-j9-sides-li-j9-fix966-j8.jpg",
+   "time": "09:29:33",
+   "kind": "image"
+  },
+  {
+   "file": "092948-j9-sides-li-j9-fix617-j8.jpg",
+   "time": "09:29:48",
+   "kind": "image"
+  },
+  {
+   "file": "093004-j9-sides-li-j9-fix483-j8.jpg",
+   "time": "09:30:04",
+   "kind": "image"
+  },
+  {
+   "file": "093744-9b0e9139-dirty-shot-wayland-q31-sprint-drops-side.jpg",
+   "time": "09:37:44",
+   "kind": "image"
+  },
+  {
+   "file": "093753-9b0e9139-dirty-shot-wayland-q31-sprint-body.jpg",
+   "time": "09:37:53",
+   "kind": "image"
+  },
+  {
+   "file": "093901-9b0e9139-dirty-video-wayland-q31-grip-then-sprint-video.jpg",
+   "time": "09:39:01",
+   "kind": "image"
+  },
+  {
+   "file": "093901-9b0e9139-dirty-video-wayland-q31-grip-then-sprint-video.mp4",
+   "time": "09:39:01",
+   "kind": "video"
+  },
+  {
+   "file": "093945-d22f8b6b-dirty-shot-wayland-bike-stand-tiles-capped.jpg",
+   "time": "09:39:45",
+   "kind": "image"
+  },
+  {
+   "file": "100426-cba2f214-shot-ocw.jpg",
+   "time": "10:04:26",
+   "kind": "image"
+  },
+  {
+   "file": "100435-cba2f214-shot-wayland-ocw-wayland.jpg",
+   "time": "10:04:35",
+   "kind": "image"
+  },
+  {
+   "file": "100502-cba2f214-shot-wayland-bike-stand-tiles-capped.jpg",
+   "time": "10:05:02",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-fork-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j8-fix3392-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j8-run4721-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j8-run4792-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j9-fix2009-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j9-fix2716-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j9-fix483-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j9-fix5952-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j9-fix617-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-j9-fix966-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-letzanaweg-corner-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-letzanaweg-side-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "104817-j9-sides-li-t-j9.jpg",
+   "time": "10:48:17",
+   "kind": "image"
+  },
+  {
+   "file": "111728-j9-smoke-7f4cebf5-dirty-shot-ocw.jpg",
+   "time": "11:17:28",
+   "kind": "image"
+  },
+  {
+   "file": "111738-j9-smoke-7f4cebf5-dirty-shot-wayland-ocw-wayland.jpg",
+   "time": "11:17:38",
+   "kind": "image"
+  },
+  {
+   "file": "112438-3940bcb3-shot-wayland-workshop-gloves-colour.jpg",
+   "time": "11:24:38",
+   "kind": "image"
+  },
+  {
+   "file": "112503-3940bcb3-shot-wayland-workshop-gloves-colour-phone.jpg",
+   "time": "11:25:03",
+   "kind": "image"
+  },
+  {
+   "file": "112529-3940bcb3-shot-wayland-workshop-shorts-colour.jpg",
+   "time": "11:25:29",
+   "kind": "image"
+  },
+  {
+   "file": "112554-3940bcb3-shot-wayland-workshop-socks-tiles.jpg",
+   "time": "11:25:54",
+   "kind": "image"
+  },
+  {
+   "file": "112619-3940bcb3-shot-wayland-workshop-shoes-colour.jpg",
+   "time": "11:26:19",
+   "kind": "image"
+  },
+  {
+   "file": "112814-j9-sides-bf-path-j9.jpg",
+   "time": "11:28:14",
+   "kind": "image"
+  },
+  {
+   "file": "115228-3940bcb3-shot-ocw.jpg",
+   "time": "11:52:28",
+   "kind": "image"
+  },
+  {
+   "file": "115237-3940bcb3-shot-wayland-ocw-wayland.jpg",
+   "time": "11:52:37",
+   "kind": "image"
+  },
+  {
+   "file": "115308-3940bcb3-dirty-shot-wayland-workshop-gloves-colour.jpg",
+   "time": "11:53:08",
+   "kind": "image"
+  },
+  {
+   "file": "115333-3940bcb3-dirty-shot-wayland-workshop-gloves-colour-phone.jpg",
+   "time": "11:53:33",
+   "kind": "image"
+  },
+  {
+   "file": "115359-3940bcb3-dirty-shot-wayland-workshop-shorts-colour.jpg",
+   "time": "11:53:59",
+   "kind": "image"
+  },
+  {
+   "file": "115424-3940bcb3-dirty-shot-wayland-workshop-socks-tiles.jpg",
+   "time": "11:54:24",
+   "kind": "image"
+  },
+  {
+   "file": "115450-3940bcb3-dirty-shot-wayland-workshop-shoes-colour.jpg",
+   "time": "11:54:50",
+   "kind": "image"
+  },
+  {
+   "file": "115817-0829ea18-shot-wayland-workshop-gloves-colour.jpg",
+   "time": "11:58:17",
+   "kind": "image"
+  },
+  {
+   "file": "115842-0829ea18-shot-wayland-workshop-gloves-colour-phone.jpg",
+   "time": "11:58:42",
+   "kind": "image"
+  },
+  {
+   "file": "115908-0829ea18-shot-wayland-workshop-shorts-colour.jpg",
+   "time": "11:59:08",
+   "kind": "image"
+  },
+  {
+   "file": "115933-0829ea18-shot-wayland-workshop-socks-tiles.jpg",
+   "time": "11:59:33",
+   "kind": "image"
+  },
+  {
+   "file": "115959-0829ea18-shot-wayland-workshop-shoes-colour.jpg",
+   "time": "11:59:59",
+   "kind": "image"
+  },
+  {
+   "file": "123837-j9-plans-fix2009-j9.png",
+   "time": "12:38:37",
+   "kind": "image"
+  },
+  {
+   "file": "124447-j9-plans-fix2009-j8.png",
+   "time": "12:44:47",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-fork-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j8-fix3392-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j8-run4721-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j8-run4792-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j9-fix2009-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j9-fix2716-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j9-fix483-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j9-fix5952-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j9-fix617-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-j9-fix966-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-letzanaweg-corner-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-letzanaweg-side-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "130831-j9-sides-li-t-j9.jpg",
+   "time": "13:08:31",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-desktop-128.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-desktop-16.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-desktop-24.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-desktop-256.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-desktop-32.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-desktop-48.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-desktop-64.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-studio-128.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-studio-16.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-studio-24.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-studio-256.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-studio-32.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-studio-48.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "143836-2026-11-25-release-0.2.6-windows-icon-ocw-studio-64.png",
+   "time": "14:38:36",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-calendar-select.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-calendar.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-console.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-damage-crash.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-damage-fresh.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-devices-collapsed.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-devices-expanded.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-downloads-OCW-2026-11-25-15-51-26.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-downloads-ocw-2026-11-25-15-51-52.webm",
+   "time": "15:50:00",
+   "kind": "video"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-gamepad.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-gps.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-history-delete.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-history-ride-file.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-history-ride-map.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-hud.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-input-mapping-capture.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-input-mapping-junctions.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-input-mapping-swapped.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-input-mapping.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-join.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-menu.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-photo-preview.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-ride.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-riders.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-settings.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-strava-recording-downloaded.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-strava-recording-saved-to-folder.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-strava-recording.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-strava-row.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-strava-steps.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-touch-hints.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-touch-hold.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-unicorn-flight.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-unicorn-inspect.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-unicorn-menu.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-weather.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web-workout-map.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155000-2026-11-25-release-0.2.6-web-webgpu-web.jpg",
+   "time": "15:50:00",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-calendar-select.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-calendar.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-console.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-damage-crash.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-damage-fresh.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-devices-collapsed.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-devices-expanded.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-downloads-OCW-2026-11-25-15-53-47.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-downloads-ocw-2026-11-25-15-54-14.webm",
+   "time": "15:52:24",
+   "kind": "video"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-gamepad.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-gps.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-history-delete.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-history-ride-file.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-history-ride-map.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-hud.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-input-mapping-capture.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-input-mapping-junctions.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-input-mapping-swapped.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-input-mapping.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-join.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-menu.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-photo-preview.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-ride.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-riders.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-settings.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-strava-recording-downloaded.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-strava-recording-saved-to-folder.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-strava-recording.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-strava-row.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-strava-steps.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-touch-hints.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-touch-hold.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-unicorn-flight.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-unicorn-inspect.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-unicorn-menu.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-weather.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2-workout-map.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155224-2026-11-25-release-0.2.6-web-webgl2-web-webgl2.jpg",
+   "time": "15:52:24",
+   "kind": "image"
+  },
+  {
+   "file": "155520-2026-11-25-release-0.2.6-smoke-web-world-web-world-cached-loading.jpg",
+   "time": "15:55:20",
+   "kind": "image"
+  },
+  {
+   "file": "155520-2026-11-25-release-0.2.6-smoke-web-world-web-world-cached.jpg",
+   "time": "15:55:20",
+   "kind": "image"
+  },
+  {
+   "file": "155520-2026-11-25-release-0.2.6-smoke-web-world-web-world-first-loading.jpg",
+   "time": "15:55:20",
+   "kind": "image"
+  },
+  {
+   "file": "155520-2026-11-25-release-0.2.6-smoke-web-world-web-world.jpg",
+   "time": "15:55:20",
+   "kind": "image"
+  },
+  {
+   "file": "155643-2026-11-25-release-0.2.6-smoke-appimage-x11.jpg",
+   "time": "15:56:43",
+   "kind": "image"
+  },
+  {
+   "file": "201251-7d97fded-dirty-shot-wayland-studio-trust-dialog.jpg",
+   "time": "20:12:51",
+   "kind": "image"
+  },
+  {
+   "file": "203551-7d97fded-dirty-shot-ocw.jpg",
+   "time": "20:35:51",
+   "kind": "image"
+  },
+  {
+   "file": "203602-7d97fded-dirty-shot-wayland-ocw-wayland.jpg",
+   "time": "20:36:02",
+   "kind": "image"
+  },
+  {
+   "file": "203826-7d97fded-dirty-shot-wayland-chin-a-front.jpg",
+   "time": "20:38:26",
+   "kind": "image"
+  },
+  {
+   "file": "203837-7d97fded-dirty-shot-wayland-chin-a-side.jpg",
+   "time": "20:38:37",
+   "kind": "image"
+  },
+  {
+   "file": "203848-7d97fded-dirty-shot-wayland-chin-a-below.jpg",
+   "time": "20:38:48",
+   "kind": "image"
+  },
+  {
+   "file": "203859-7d97fded-dirty-shot-wayland-chin-b-light-below.jpg",
+   "time": "20:38:59",
+   "kind": "image"
+  },
+  {
+   "file": "203910-7d97fded-dirty-shot-wayland-chin-c-aero-side.jpg",
+   "time": "20:39:10",
+   "kind": "image"
+  },
+  {
+   "file": "203921-7d97fded-dirty-shot-wayland-chin-d-tt-front-below.jpg",
+   "time": "20:39:21",
+   "kind": "image"
+  },
+  {
+   "file": "203932-7d97fded-dirty-shot-wayland-chin-e-70-chinstrap-below.jpg",
+   "time": "20:39:32",
+   "kind": "image"
+  },
+  {
+   "file": "203943-7d97fded-dirty-shot-wayland-chin-f-bare-editor.jpg",
+   "time": "20:39:43",
+   "kind": "image"
+  },
+  {
+   "file": "203954-7d97fded-dirty-shot-wayland-chin-f-bare-editor-clean.jpg",
+   "time": "20:39:54",
+   "kind": "image"
+  },
+  {
+   "file": "204004-7d97fded-dirty-shot-wayland-chin-g-far.jpg",
+   "time": "20:40:04",
+   "kind": "image"
+  },
+  {
+   "file": "204056-7d97fded-dirty-shot-wayland-chin-a-front.jpg",
+   "time": "20:40:56",
+   "kind": "image"
+  },
+  {
+   "file": "204108-7d97fded-dirty-shot-wayland-chin-a-side.jpg",
+   "time": "20:41:08",
+   "kind": "image"
+  },
+  {
+   "file": "204119-7d97fded-dirty-shot-wayland-chin-a-below.jpg",
+   "time": "20:41:19",
+   "kind": "image"
+  },
+  {
+   "file": "204129-7d97fded-dirty-shot-wayland-chin-b-light-below.jpg",
+   "time": "20:41:29",
+   "kind": "image"
+  },
+  {
+   "file": "204139-7d97fded-dirty-shot-wayland-chin-c-aero-side.jpg",
+   "time": "20:41:39",
+   "kind": "image"
+  },
+  {
+   "file": "204150-7d97fded-dirty-shot-wayland-chin-d-tt-front-below.jpg",
+   "time": "20:41:50",
+   "kind": "image"
+  },
+  {
+   "file": "204200-7d97fded-dirty-shot-wayland-chin-e-70-chinstrap-below.jpg",
+   "time": "20:42:00",
+   "kind": "image"
+  },
+  {
+   "file": "204211-7d97fded-dirty-shot-wayland-chin-f-bare-editor.jpg",
+   "time": "20:42:11",
+   "kind": "image"
+  },
+  {
+   "file": "204222-7d97fded-dirty-shot-wayland-chin-f-bare-editor-clean.jpg",
+   "time": "20:42:22",
+   "kind": "image"
+  },
+  {
+   "file": "204233-7d97fded-dirty-shot-wayland-chin-g-far.jpg",
+   "time": "20:42:33",
+   "kind": "image"
+  },
+  {
+   "file": "204252-chin-bubble-pairs-chin-a-below-before-after.jpg",
+   "time": "20:42:52",
+   "kind": "image"
+  },
+  {
+   "file": "204252-chin-bubble-pairs-chin-a-front-before-after.jpg",
+   "time": "20:42:52",
+   "kind": "image"
+  },
+  {
+   "file": "204252-chin-bubble-pairs-chin-a-side-before-after.jpg",
+   "time": "20:42:52",
+   "kind": "image"
+  },
+  {
+   "file": "204252-chin-bubble-pairs-chin-b-light-below-before-after.jpg",
+   "time": "20:42:52",
+   "kind": "image"
+  },
+  {
+   "file": "204252-chin-bubble-pairs-chin-c-aero-side-before-after.jpg",
+   "time": "20:42:52",
+   "kind": "image"
+  },
+  {
+   "file": "204253-chin-bubble-geometry-after-helmets-beards.png",
+   "time": "20:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "204253-chin-bubble-geometry-beards-before-after-proto.png",
+   "time": "20:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "204253-chin-bubble-geometry-before-chin-marked.png",
+   "time": "20:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "204253-chin-bubble-pairs-chin-d-tt-front-below-before-after.jpg",
+   "time": "20:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "204253-chin-bubble-pairs-chin-e-70-chinstrap-below-before-after.jpg",
+   "time": "20:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "204253-chin-bubble-pairs-chin-f-bare-editor-before-after.jpg",
+   "time": "20:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "204253-chin-bubble-pairs-chin-f-bare-editor-clean-before-after.jpg",
+   "time": "20:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "204253-chin-bubble-pairs-chin-g-far-before-after.jpg",
+   "time": "20:42:53",
+   "kind": "image"
+  },
+  {
+   "file": "220123-studio-map-q15-bf-middle-neighbours.jpg",
+   "time": "22:01:23",
+   "kind": "image"
+  },
+  {
+   "file": "220144-studio-map-q15-bf-middle-border.jpg",
+   "time": "22:01:44",
+   "kind": "image"
+  },
+  {
+   "file": "220206-studio-map-q15-bf-middle-aerial-off.jpg",
+   "time": "22:02:06",
+   "kind": "image"
+  },
+  {
+   "file": "220227-studio-map-q15-bf-middle-aerial-on.jpg",
+   "time": "22:02:27",
+   "kind": "image"
+  },
+  {
+   "file": "220243-studio-map-q15-li-border.jpg",
+   "time": "22:02:43",
+   "kind": "image"
+  },
+  {
+   "file": "220259-studio-map-q15-li-aerial-off.jpg",
+   "time": "22:02:59",
+   "kind": "image"
+  },
+  {
+   "file": "220314-studio-map-q15-li-aerial-on.jpg",
+   "time": "22:03:14",
+   "kind": "image"
+  }
+ ],
+ "images": 367,
+ "videos": 6,
+ "sounds": 0,
+ "builds": {
+  "runs": 171,
+  "seconds": 133962.0,
+  "cargo_s": 35068.5,
+  "compiled": 35841,
+  "wait_s": 32674.0,
+  "failed": [
+   {
+    "start": "2026-11-25T05:55:28+01:00",
+    "seconds": 7.0,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-ac4538e8aa1507e52",
+    "branch": "worktree-agent-ac4538e8aa1507e52",
+    "commit": "2c0abf94-dirty",
+    "command": "cargo clippy -p ocw-desktop --all-targets -- -D warnings 2>&1 | Select-String -Pattern \"^(error|warning)|Finished\" ; echo WIN_DONE",
+    "exit": 1,
+    "log": "055528-Win11Builder-1222554.log",
+    "sync_s": 3.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T05:55:45+01:00",
+    "seconds": 7.2,
+    "machine": "Weela",
+    "os": "windows",
+    "checkout": "agent-ac4538e8aa1507e52",
+    "branch": "worktree-agent-ac4538e8aa1507e52",
+    "commit": "2c0abf94-dirty",
+    "command": "cargo clippy -p ocw-desktop --all-targets -- -D warnings 2>&1 | Select-String -Pattern \"^(error|warning)|Finished\" ; echo WIN_DONE",
+    "exit": 1,
+    "log": "055545-Weela-1222897.log",
+    "sync_s": 4.1,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T06:56:26+01:00",
+    "seconds": 8.6,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "b8572b79",
+    "command": "cargo clippy -p ocw-desktop --all-targets -- -D warnings; if ($LASTEXITCODE -eq 0) { echo WIN-CLIPPY-OK }",
+    "exit": 1,
+    "log": "065626-Win11Builder-1324779.log",
+    "sync_s": 5.2,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T08:22:36+01:00",
+    "seconds": 1.2,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-ab692ee78e235e3a6",
+    "branch": "worktree-agent-ab692ee78e235e3a6",
+    "commit": "b8572b79-dirty",
+    "command": "scripts/j9-iter.sh base",
+    "exit": 127,
+    "log": "082236-marge-1444174.log",
+    "sync_s": 0.5,
+    "cargo_s": 0.2,
+    "cargo_builds": 1,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T08:37:13+01:00",
+    "seconds": 0.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "j9-main",
+    "branch": "main",
+    "commit": "",
+    "command": "cargo build --release -p ocw-desktop 2>&1 | tail -2; ls -la target/release/ocw-desktop",
+    "exit": 2,
+    "log": "083713-marge-1459863.log",
+    "sync_s": 0.3,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T10:12:47+01:00",
+    "seconds": 2586.8,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-a84893a6b55005fb9",
+    "branch": "worktree-agent-a84893a6b55005fb9",
+    "commit": "b4c2cffc-dirty",
+    "command": "cargo test -p ocw-render --lib workshop; if ($LASTEXITCODE -eq 0) { cargo test -p ocw-desktop workshop }; \"result $LASTEXITCODE\"",
+    "exit": 101,
+    "log": "101247-Win11Builder-1719530.log",
+    "sync_s": 16.2,
+    "cargo_s": 2559.0,
+    "cargo_builds": 2,
+    "compiled": 850,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T13:53:39+01:00",
+    "seconds": 31.7,
+    "machine": "macos",
+    "os": "macos",
+    "checkout": "agent-ab692ee78e235e3a6",
+    "branch": "worktree-agent-ab692ee78e235e3a6",
+    "commit": "e0f43b25",
+    "command": "cargo build --release -p world-builder 2>&1 | tail -1; D=$HOME/j9data; O=$HOME/j9out/blackforest; mkdir -p $O; P=\"--pbf $D/blackforest/freiburg-regbez.osm.pbf --pbf $D/blackforest/karlsruhe-regbez....",
+    "exit": 1,
+    "log": "135339-macos-2111519.log",
+    "sync_s": 1.0,
+    "cargo_s": 29.5,
+    "cargo_builds": 1,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T19:47:02+01:00",
+    "seconds": 4.4,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a074c1ca91e50f058",
+    "branch": "worktree-agent-a074c1ca91e50f058",
+    "commit": "f59c9cb3-dirty",
+    "command": "source ~/.cargo/env 2>/dev/null; cargo fmt --all -- --check && cargo test -q -p ocw-world manifest && cargo test -q -p world-builder dist && scripts/test-world-patches.sh",
+    "exit": 1,
+    "log": "194702-marge-2679001.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T19:47:32+01:00",
+    "seconds": 70.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a074c1ca91e50f058",
+    "branch": "worktree-agent-a074c1ca91e50f058",
+    "commit": "f59c9cb3-dirty",
+    "command": "source ~/.cargo/env 2>/dev/null; cargo fmt --all -- --check && cargo test -q -p ocw-world manifest && cargo test -q -p world-builder dist && scripts/test-world-patches.sh",
+    "exit": 101,
+    "log": "194732-marge-2679717.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T19:59:50+01:00",
+    "seconds": 578.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a1428acfb0cfceb95",
+    "branch": "worktree-agent-a1428acfb0cfceb95",
+    "commit": "7d97fded-dirty",
+    "command": "set -e; D=/tmp/ocw-q14-shot; rm -rf $D; mkdir -p $D/keys $D/friend; cp ~/src/OCW/data/pilot/liechtenstein.ocwpkg ~/src/OCW/data/pilot/liechtenstein.ocwpkg.manifest.json $D/friend/; cargo run -q -p ...",
+    "exit": 1,
+    "log": "195950-marge-2694014.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-25T20:25:56+01:00",
+    "seconds": 24.4,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a7634b603eab8e729",
+    "branch": "worktree-agent-a7634b603eab8e729",
+    "commit": "7d97fded-dirty",
+    "command": "cargo fmt --all && cargo test -p ocw-assets --lib 2>&1 | grep -E \"test result|FAILED|panicked|mm out|points|Road|Light|Aero|Time|left|right|\\[\" | head -60; git diff --stat",
+    "exit": 129,
+    "log": "202556-marge-2753944.log",
+    "sync_s": 0.6,
+    "cargo_s": 7.9,
+    "cargo_builds": 1,
+    "compiled": 0,
+    "wait_s": null
+   }
+  ],
+  "machines": {
+   "leela": {
+    "runs": 28,
+    "seconds": 36284.0,
+    "failed": 0,
+    "cargo_s": 13516.9,
+    "compiled": 14622,
+    "wait_s": 8711.0
+   },
+   "marge": {
+    "runs": 117,
+    "seconds": 79069.59999999996,
+    "failed": 6,
+    "cargo_s": 14199.399999999998,
+    "compiled": 18314,
+    "wait_s": 19972.0
+   },
+   "Win11Builder": {
+    "runs": 7,
+    "seconds": 6102.200000000001,
+    "failed": 3,
+    "cargo_s": 5914.8,
+    "compiled": 2060,
+    "wait_s": 0.0
+   },
+   "Weela": {
+    "runs": 1,
+    "seconds": 7.2,
+    "failed": 1,
+    "cargo_s": 0.0,
+    "compiled": 0,
+    "wait_s": 0.0
+   },
+   "macos": {
+    "runs": 18,
+    "seconds": 12499.0,
+    "failed": 1,
+    "cargo_s": 1437.4,
+    "compiled": 845,
+    "wait_s": 3991.0
+   }
+  },
+  "online": {
+   "leela": 1.0,
+   "marge": 1.0,
+   "Weela": 0.0,
+   "Win11Builder": 0.6395833333333333,
+   "macos": 1.0
+  },
+  "samples": 1440
+ },
+ "prompts": [
+  {
+   "time": "05:07:43",
+   "iso": "2026-11-25T05:07:43+01:00",
+   "text": "Answer to desktop while sharing with a browser:\n\t•\t(c) a simple \"sharing\" screen"
+  },
+  {
+   "time": "08:15:52",
+   "iso": "2026-11-25T08:15:52+01:00",
+   "text": "whats j9?"
+  },
+  {
+   "time": "08:18:50",
+   "iso": "2026-11-25T08:18:50+01:00",
+   "text": "to see the improvents i need a release. do j9 and do a bump and release."
+  },
+  {
+   "time": "08:21:41",
+   "iso": "2026-11-25T08:21:41+01:00",
+   "text": "give me annopen questiob"
+  },
+  {
+   "time": "08:22:40",
+   "iso": "2026-11-25T08:22:40+01:00",
+   "text": "create a sketch for a and b"
+  },
+  {
+   "time": "08:24:56",
+   "iso": "2026-11-25T08:24:56+01:00",
+   "text": "build option b, but keep a too and vary from time to time. also pay attention on how riders sprint, where they grap and how. add that to the behavior as well."
+  },
+  {
+   "time": "08:25:38",
+   "iso": "2026-11-25T08:25:38+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "08:59:55",
+   "iso": "2026-11-25T08:59:55+01:00",
+   "text": "p4 q26, keep (a)"
+  },
+  {
+   "time": "09:02:59",
+   "iso": "2026-11-25T09:02:59+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "09:05:47",
+   "iso": "2026-11-25T09:05:47+01:00",
+   "text": "b"
+  },
+  {
+   "time": "09:08:34",
+   "iso": "2026-11-25T09:08:34+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "09:09:27",
+   "iso": "2026-11-25T09:09:27+01:00",
+   "text": "yes, a"
+  },
+  {
+   "time": "12:51:37",
+   "iso": "2026-11-25T12:51:37+01:00",
+   "text": "add a rule: when you do tests, do also vary the characters and the clothes, as well as the bike setzp."
+  },
+  {
+   "time": "12:51:37",
+   "iso": "2026-11-25T12:51:37+01:00",
+   "text": "giVe me an oPen question"
+  },
+  {
+   "time": "14:10:52",
+   "iso": "2026-11-25T14:10:52+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "14:51:35",
+   "iso": "2026-11-25T14:51:35+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "15:07:14",
+   "iso": "2026-11-25T15:07:14+01:00",
+   "text": "a"
+  },
+  {
+   "time": "15:34:16",
+   "iso": "2026-11-25T15:34:16+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "15:34:48",
+   "iso": "2026-11-25T15:34:48+01:00",
+   "text": "a, next"
+  },
+  {
+   "time": "15:42:25",
+   "iso": "2026-11-25T15:42:25+01:00",
+   "text": "yes, a, next"
+  },
+  {
+   "time": "15:54:33",
+   "iso": "2026-11-25T15:54:33+01:00",
+   "text": "a, next"
+  },
+  {
+   "time": "15:59:22",
+   "iso": "2026-11-25T15:59:22+01:00",
+   "text": "a, next"
+  },
+  {
+   "time": "16:06:32",
+   "iso": "2026-11-25T16:06:32+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "19:35:54",
+   "iso": "2026-11-25T19:35:54+01:00",
+   "text": "okay, end the stuck j8"
+  },
+  {
+   "time": "19:36:29",
+   "iso": "2026-11-25T19:36:29+01:00",
+   "text": "update the open questions in appendix c"
+  },
+  {
+   "time": "19:36:51",
+   "iso": "2026-11-25T19:36:51+01:00",
+   "text": "yes"
+  },
+  {
+   "time": "19:37:26",
+   "iso": "2026-11-25T19:37:26+01:00",
+   "text": "is there something waiting to be implemwnted?"
+  },
+  {
+   "time": "19:38:47",
+   "iso": "2026-11-25T19:38:47+01:00",
+   "text": "yes, check j9"
+  },
+  {
+   "time": "19:38:47",
+   "iso": "2026-11-25T19:38:47+01:00",
+   "text": "elborate 16hq14"
+  },
+  {
+   "time": "19:40:23",
+   "iso": "2026-11-25T19:40:23+01:00",
+   "text": "yes, start a build for that"
+  },
+  {
+   "time": "19:48:14",
+   "iso": "2026-11-25T19:48:14+01:00",
+   "text": "16H Q14: yes, a"
+  },
+  {
+   "time": "20:02:24",
+   "iso": "2026-11-25T20:02:24+01:00",
+   "text": "did you fix the riders chin? if so, send me a photo"
+  },
+  {
+   "time": "20:10:03",
+   "iso": "2026-11-25T20:10:03+01:00",
+   "text": "looks like there is a bubble attached to the chin"
+  },
+  {
+   "time": "20:26:19",
+   "iso": "2026-11-25T20:26:19+01:00",
+   "text": "i can't find the open questions/appendix in the spec, am i blind?"
+  },
+  {
+   "time": "20:32:03",
+   "iso": "2026-11-25T20:32:03+01:00",
+   "text": "update the readme of art project, mayke sure to link all data up to now."
+  },
+  {
+   "time": "20:32:18",
+   "iso": "2026-11-25T20:32:18+01:00",
+   "text": "make this a habit everytime you build a day video"
+  },
+  {
+   "time": "20:32:45",
+   "iso": "2026-11-25T20:32:45+01:00",
+   "text": "give me an open question"
+  },
+  {
+   "time": "20:48:23",
+   "iso": "2026-11-25T20:48:23+01:00",
+   "text": "yes, (a), show the neighboring world, when we have one. what happends when we don't have one?"
+  },
+  {
+   "time": "20:50:51",
+   "iso": "2026-11-25T20:50:51+01:00",
+   "text": "yes, include border"
+  }
+ ],
+ "tokens": {
+  "total": {
+   "input": 6086,
+   "cache_write": 14933369,
+   "cache_read": 846932638,
+   "output": 1487461,
+   "total": 863359554,
+   "messages": 2756
+  },
+  "features": {
+   "Other": {
+    "input": 4218,
+    "cache_write": 11061278,
+    "cache_read": 642928386,
+    "output": 1046289,
+    "total": 655040171,
+    "messages": 1934
+   },
+   "Planning & spec": {
+    "input": 334,
+    "cache_write": 105506,
+    "cache_read": 70654766,
+    "output": 35151,
+    "total": 70795757,
+    "messages": 120
+   },
+   "Build, release & infra": {
+    "input": 204,
+    "cache_write": 746019,
+    "cache_read": 16593048,
+    "output": 76564,
+    "total": 17415835,
+    "messages": 90
+   },
+   "Riders & bikes": {
+    "input": 468,
+    "cache_write": 331609,
+    "cache_read": 50996121,
+    "output": 122623,
+    "total": 51450821,
+    "messages": 227
+   },
+   "Art project": {
+    "input": 8,
+    "cache_write": 7988,
+    "cache_read": 560151,
+    "output": 740,
+    "total": 568887,
+    "messages": 3
+   },
+   "Worlds & terrain": {
+    "input": 854,
+    "cache_write": 2680969,
+    "cache_read": 65200166,
+    "output": 206094,
+    "total": 68088083,
+    "messages": 382
+   }
+  }
+ },
+ "incidents": {
+  "auto": [
+   {
+    "time": "00:00:20",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela unreachable (no route to host)"
+   },
+   {
+    "time": "00:00:20",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (no route to host)"
+   },
+   {
+    "time": "05:44:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-b3w/target (32.6 GB)"
+   },
+   {
+    "time": "05:45:03",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a2f92b4653d455fcf/target (11.1 GB)"
+   },
+   {
+    "time": "05:45:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a2f92b4653d455fcf/target (43.4 GB)"
+   },
+   {
+    "time": "06:04:54",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "06:54:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-sharing/target (32.6 GB)"
+   },
+   {
+    "time": "06:55:03",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ac4538e8aa1507e52/target (51.1 GB)"
+   },
+   {
+    "time": "06:55:05",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-ac4538e8aa1507e52/target (6.3 GB)"
+   },
+   {
+    "time": "07:04:53",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "08:03:52",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "08:37:23",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "08:37:23",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "disk C: on Win11Builder at 96 %"
+   },
+   {
+    "time": "08:40:23",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (ssh error)"
+   },
+   {
+    "time": "08:41:23",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "08:54:18",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW/target (3.1 GB)"
+   },
+   {
+    "time": "09:02:57",
+    "kind": "unit-failed",
+    "source": "journal",
+    "machine": "deb",
+    "text": "ocw-art-collect.service failed (exit-code)"
+   },
+   {
+    "time": "10:39:52",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a035bde700eac4da0/target (37.8 GB)"
+   },
+   {
+    "time": "10:39:57",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-q31/target (33.2 GB)"
+   },
+   {
+    "time": "12:01:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-q27/target (32.7 GB)"
+   },
+   {
+    "time": "12:01:47",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-acf9387027895d279/target (34.2 GB)"
+   },
+   {
+    "time": "12:50:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-q30/target (32.7 GB)"
+   },
+   {
+    "time": "12:50:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a84893a6b55005fb9/target (40.7 GB)"
+   },
+   {
+    "time": "13:07:07",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a84893a6b55005fb9/target (12.8 GB)"
+   },
+   {
+    "time": "13:15:45",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-acf9387027895d279/target (6.6 GB)"
+   },
+   {
+    "time": "13:58:01",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-j9/target (32.7 GB)"
+   },
+   {
+    "time": "16:06:22",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ab692ee78e235e3a6/target (47.5 GB)"
+   },
+   {
+    "time": "16:06:24",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-ab692ee78e235e3a6/target (0.5 GB)"
+   },
+   {
+    "time": "20:25:56",
+    "kind": "runs-failed",
+    "source": "remote.sh",
+    "machine": "Weela, Win11Builder, macos, marge",
+    "text": "11 failed remote.sh runs (Weela 1, Win11Builder 3, macos 1, marge 6)"
+   },
+   {
+    "time": "20:55:31",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-patches/target (32.7 GB)"
+   },
+   {
+    "time": "20:55:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a074c1ca91e50f058/target (34.5 GB)"
+   },
+   {
+    "time": "21:12:29",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "21:13:29",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "21:25:08",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-trust/target (32.8 GB)"
+   },
+   {
+    "time": "21:25:10",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a1428acfb0cfceb95/target (7.9 GB)"
+   },
+   {
+    "time": "21:25:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a1428acfb0cfceb95/target (39.3 GB)"
+   },
+   {
+    "time": "22:07:47",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-chin/target (32.7 GB)"
+   },
+   {
+    "time": "22:07:52",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a7634b603eab8e729/target (32.7 GB)"
+   },
+   {
+    "time": "22:07:53",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a7634b603eab8e729/target (8.5 GB)"
+   },
+   {
+    "time": "23:16:42",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-map/target (32.8 GB)"
+   },
+   {
+    "time": "23:16:45",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a48a69f9733b946da/target (10.2 GB)"
+   },
+   {
+    "time": "23:16:49",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a48a69f9733b946da/target (32.8 GB)"
+   }
+  ],
+  "notes": "",
+  "noted": []
+ },
+ "features": [
+  {
+   "version": "5.81",
+   "title": "Built: the sensor bridge is read in a Web Worker by default",
+   "commit": "d9bc9fb1",
+   "sha": "d9bc9fb1425511c8c355cb9c7ade2a7a5a47ef3b",
+   "time": "2026-11-25T05:05:10+01:00",
+   "merge": true,
+   "subject": "Merge the sensor bridge read in a Web Worker (0.36 ms old on arrival) with the game link on the page's thread by default; net-worker=on opts the game link into the worker (10G B3, 5.81)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "5.82",
+   "title": "Decided: while the desktop shares its trainer with a browser, it shows a simple *Sharing*…",
+   "commit": "2c0abf94",
+   "sha": "2c0abf94802c1734e9bea937a062e40d24cce31a",
+   "time": "2026-11-25T05:07:51+01:00",
+   "merge": false,
+   "subject": "While sharing its trainer with a browser the desktop shows a simple Sharing screen and pauses its own ride (10D.2)"
+  },
+  {
+   "version": "5.83",
+   "title": "Built: the desktop's *Sharing* screen",
+   "commit": "b8572b79",
+   "sha": "b8572b79aea1b3b1f6c143bd15685fa074564ee1",
+   "time": "2026-11-25T06:27:10+01:00",
+   "merge": true,
+   "subject": "Merge the desktop's Sharing screen: while a browser rides on its trainer the desktop shows the browser, live readings, the grade it sets, the bridge and Stop sharing, its own ride paused (10D.2, 5.83)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-25T08:54:47+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ab692ee78e235e3a6",
+    "command": "OCW_J9_ROOM=1 cargo test --release -p ocw-world --lib -- an_arm_up_to_a_bridge two_junctions_on_a_short 2>&1 | grep -E -",
+    "log": "085447-marge-1477516.log",
+    "how": "commit",
+    "suites": 1,
+    "passed": 2,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.84",
+   "title": "Decided: Phase 4 Q31 – riders' hands change grip",
+   "commit": "347c53f8",
+   "sha": "347c53f85a34869ae3f39fe8c9f51c3413156d62",
+   "time": "2026-11-25T08:25:08+01:00",
+   "merge": false,
+   "subject": "Riders change between the draped and the handshake grip on the hoods; sprints in the drops, out of the saddle, rocking the bike (Phase 4 Q31 and sprint behaviour)"
+  },
+  {
+   "version": "5.85",
+   "title": "Decided: Phase 4 Q26 – the workshop's part tiles keep showing the gain against the slot's…",
+   "commit": "3f336a8f",
+   "sha": "3f336a8f4e44c7db70cef2f8f1e2c6261b05c69f",
+   "time": "2026-11-25T09:00:05+01:00",
+   "merge": false,
+   "subject": "Part tiles keep the gain against the base part for the reference rider (Phase 4 Q26 (a))"
+  },
+  {
+   "version": "5.86",
+   "title": "Decided: Phase 4 Q27 – the build caps work per kind",
+   "commit": "d22f8b6b",
+   "sha": "d22f8b6bab7681ef144a9e157d862c3d95a179ba",
+   "time": "2026-11-25T09:05:56+01:00",
+   "merge": false,
+   "subject": "Build caps per kind (rolling, aero, weight) so a better part never lowers the others' gains (Phase 4 Q27 (b))"
+  },
+  {
+   "version": "5.87",
+   "title": "Decided: Phase 4 Q30 – shorts, socks, shoes and gloves are picked from tiles like the par…",
+   "commit": "b4c2cffc",
+   "sha": "b4c2cffc66f705227c4f31c5a0c69d4d40ff09d2",
+   "time": "2026-11-25T09:09:35+01:00",
+   "merge": false,
+   "subject": "Kit pickers as tiles with a row of colour swatches (Phase 4 Q30 (a))"
+  },
+  {
+   "version": "5.88",
+   "title": "Built: riders hold the road hoods in two grips",
+   "commit": "9e70227f",
+   "sha": "9e70227f13089b9bf02ac34605bea0d4c3ae24b1",
+   "time": "2026-11-25T09:44:49+01:00",
+   "merge": true,
+   "subject": "Merge riders' hood grips (draped and handshake, changing every 20–90 s) and the sprint (drops, out of the saddle, the bike rocking) (Phase 4 Q31, 2.6; 5.88)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-25T09:44:49+01:00",
+    "exit": 0,
+    "branch": "merge/q31",
+    "command": "make check && make test-web-build && make test-smoke && cargo run -q -p ocw-assets -- model export-all --check && echo A",
+    "log": "094449-marge-1557788.log",
+    "how": "commit",
+    "suites": 81,
+    "passed": 3517,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.89",
+   "title": "Built: the build caps per kind",
+   "commit": "9f32a289",
+   "sha": "9f32a289d5883529ffa8d65903a53208c5a3b9eb",
+   "time": "2026-11-25T10:06:01+01:00",
+   "merge": true,
+   "subject": "Merge build caps per kind: rolling, aero, weight and drivetrain each within their own budget, so a better part never lowers another part's gain (Phase 4 Q27 (b), 4G Caps; 5.89)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-25T09:31:01+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-acf9387027895d279",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "093101-marge-1541087.log",
+    "how": "commit",
+    "suites": 81,
+    "passed": 3512,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.90",
+   "title": "Built: shorts, socks, shoes and gloves are picked from tiles",
+   "commit": "9cbd20cc",
+   "sha": "9cbd20cc76eefc95b1d7569e6f8e97e16b5d2b40",
+   "time": "2026-11-25T12:15:52+01:00",
+   "merge": true,
+   "subject": "Merge kit pickers as tiles: shorts, socks, shoes and gloves as picture tiles with a row of colour swatches above them (Phase 4 Q30 (a), 4N; 5.90)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-25T12:15:52+01:00",
+    "exit": 0,
+    "branch": "merge/q30",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "121552-marge-1955227.log",
+    "how": "commit",
+    "suites": 81,
+    "passed": 3526,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.91",
+   "title": "Built: the sides of a road are as smooth as the road, J9",
+   "commit": "89b2322a",
+   "sha": "89b2322a2a78823269fa68c8d3dc86f2543dc76a",
+   "time": "2026-11-25T13:17:20+01:00",
+   "merge": true,
+   "subject": "Merge J9: two close junctions share one surface, arms take the room before a bridge or split, painted crossings stay where OSM has them; side.corner −4 to −13 % (4.8.8 Rule, 5.91)",
+   "branch": "worktree-agent-ab692ee78e235e3a6",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-25T13:09:00+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ab692ee78e235e3a6",
+    "command": "make check > /tmp/j9-check2.log 2>&1; echo \"check rc=$?\"; tail -3 /tmp/j9-check2.log; make test-web-build > /tmp/j9-web2",
+    "log": "130900-marge-2062573.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "5.92",
+   "title": "Decided: 16H Q8 – a world patch's height points win over the road class's gradient limit",
+   "commit": "06156163",
+   "sha": "06156163db6a9ce4be27b7ef5e19dfc0333726b6",
+   "time": "2026-11-25T15:07:26+01:00",
+   "merge": false,
+   "subject": "Height points win over the gradient limit, as built (16H Q8 (a))"
+  },
+  {
+   "version": "5.93",
+   "title": "Decided: 16H Q9 – a world patch travels as its own file <package>.ocwpatch next to the pa…",
+   "commit": "bc7469ce",
+   "sha": "bc7469ce5019d3963a9133b8c398460f7056328b",
+   "time": "2026-11-25T15:34:58+01:00",
+   "merge": false,
+   "subject": "A world patch ships as its own .ocwpatch file next to the package, its checksum in the manifest (16H Q9 (a))"
+  },
+  {
+   "version": "5.94",
+   "title": "Decided: 16H Q10 – the project's own world patches live in git, in worlds/<region>/patche…",
+   "commit": "e02af7a3",
+   "sha": "e02af7a39f4f0459e32749243738ca1e26c27a98",
+   "time": "2026-11-25T15:42:37+01:00",
+   "merge": false,
+   "subject": "Official world patches in git under worlds/<region>/patches/ (16H Q10 (a))"
+  },
+  {
+   "version": "5.95",
+   "title": "Decided: 16H Q11 – a height point snaps to a road within 15 m of the click and its correc…",
+   "commit": "2ee32aba",
+   "sha": "2ee32aba067026fe7bd5112615c0bc20bc30fe90",
+   "time": "2026-11-25T15:54:43+01:00",
+   "merge": false,
+   "subject": "Height point defaults stay 15 m snap and 100 m blend (16H Q11 (a))"
+  },
+  {
+   "version": "5.96",
+   "title": "Decided: 16H Q12 – OCW Studio's 3D camera hovers by default",
+   "commit": "fe185161",
+   "sha": "fe185161535778bbac90cf75db07908cbefd89fc",
+   "time": "2026-11-25T15:59:32+01:00",
+   "merge": false,
+   "subject": "Studio camera hovers by default, plane under View → Flight (16H Q12 (a))"
+  },
+  {
+   "version": "5.97",
+   "title": "Decided: 16H Q14 – OCW Studio asks before opening a world signed by an unknown user key,…",
+   "commit": "7d97fded",
+   "sha": "7d97fded8b45f537957f5ccb704077abe1fbd204",
+   "time": "2026-11-25T19:40:35+01:00",
+   "merge": false,
+   "subject": "Studio asks with the game's trust dialog for unknown user keys (16H Q14 (a))"
+  },
+  {
+   "version": "5.98",
+   "title": "Decided: 16H Q15 – OCW Studio's 2D map also draws the neighbouring packages the game join…",
+   "commit": "65378fb8",
+   "sha": "65378fb8cab3dfbdb56615176c9fba90333d4cbe",
+   "time": "2026-11-25T20:48:44+01:00",
+   "merge": false,
+   "subject": "Studio 2D map shows the joined neighbouring packages and the aerial-photo layer (16H Q15 (a))"
+  },
+  {
+   "version": "5.99",
+   "title": "Built: a world patch travels as its own file <package>.ocwpatch next to the package, its…",
+   "commit": "37f45eb8",
+   "sha": "37f45eb87bb02de084bed09d06ff8edbe9459b4d",
+   "time": "2026-11-25T20:55:13+01:00",
+   "merge": true,
+   "subject": "Merge world patches: <package>.ocwpatch shipped next to the package with its checksum in the manifest, official patches in git under worlds/<region>/patches/ (16H Q9 (a), Q10 (a); 5.99)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.00",
+   "title": "Built: OCW Studio asks with the game's trust dialog before opening a world signed by an u…",
+   "commit": "c125ae44",
+   "sha": "c125ae442aef3ce12498200c4d205eaa0b632561",
+   "time": "2026-11-25T20:57:19+01:00",
+   "merge": true,
+   "subject": "Merge the studio's trust dialog: a world signed by an unknown user key asks with the game's dialog, one trusted-keys list for both apps (16H Q14 (a); 6.00)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-25T22:00:49+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a48a69f9733b946da",
+    "command": "rm -rf test-output/studio-map-q15; cargo test -p ocw-studio surround 2>&1 | grep -E \"^test |test result|panicked\" | head",
+    "log": "220049-marge-2957602.log",
+    "how": "commit",
+    "suites": 1,
+    "passed": 3,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.01",
+   "title": "Fixed: no bubble on the rider's chin",
+   "commit": "21b0f664",
+   "sha": "21b0f664bcfd96a2ae5d5af14fc10a9720490296",
+   "time": "2026-11-25T21:27:36+01:00",
+   "merge": true,
+   "subject": "Merge the chin fix: one broad jaw instead of the 4-sided chin bubble, a gentler older jaw, beards covering it, the strap buckle under the chin (4N Fixed; 6.01)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.02",
+   "title": "Built: OCW Studio's 2D map draws the neighbouring packages the game joins on, dimmed, the…",
+   "commit": "84be3af7",
+   "sha": "84be3af77cdbeb7e1fdddcbd62ec89d98317001a",
+   "time": "2026-11-25T22:48:38+01:00",
+   "merge": true,
+   "subject": "Merge the studio's 2D map additions: neighbouring worlds dimmed, the world's border line, the aerial-photo layer (16H Q15 (a); 6.02)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-25T22:48:38+01:00",
+    "exit": 0,
+    "branch": "merge/map",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "224838-marge-3059102.log",
+    "how": "commit",
+    "suites": 81,
+    "passed": 3550,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  }
+ ],
+ "deploys": [
+  {
+   "start": "2026-11-25T07:39:43+01:00",
+   "end": "2026-11-25T07:40:53+01:00",
+   "machine": "marge",
+   "commit": "b8572b79",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-25T07:40:53+01:00",
+   "end": "2026-11-25T07:41:50+01:00",
+   "machine": "leela",
+   "commit": "b8572b79",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-25T16:47:13+01:00",
+   "end": "2026-11-25T16:49:18+01:00",
+   "machine": "marge",
+   "commit": "f59c9cb3",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-25T16:49:18+01:00",
+   "end": "2026-11-25T16:50:52+01:00",
+   "machine": "leela",
+   "commit": "f59c9cb3",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-25T22:09:31+01:00",
+   "end": "2026-11-25T22:11:26+01:00",
+   "machine": "marge",
+   "commit": "21b0f664",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-25T22:11:27+01:00",
+   "end": "2026-11-25T22:49:21+01:00",
+   "machine": "leela",
+   "commit": "21b0f664",
+   "exit": 0
+  }
+ ],
+ "releases": [
+  {
+   "tag": "v0.2.6",
+   "name": "Open Cycling World 0.2.6 (development build)",
+   "time": "2026-11-25T16:15:41+01:00",
+   "prerelease": true
+  }
+ ],
+ "agent_jobs": [
+  {
+   "agent": "ad4f94da",
+   "task": "Day 14 video (2026-11-24)",
+   "branch": "worktree-agent-ad4f94da3cbe0cad8",
+   "start": "2026-11-25T00:08:29+01:00",
+   "end": "2026-11-25T00:57:47+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a2f92b46",
+   "task": "B3: WebTransport reading in a Web Worker",
+   "branch": "worktree-agent-a2f92b4653d455fcf",
+   "start": "2026-11-25T01:08:47+01:00",
+   "end": "2026-11-25T05:46:23+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "ac4538e8",
+   "task": "Desktop Sharing screen while the bridge is paired",
+   "branch": "worktree-agent-ac4538e8aa1507e52",
+   "start": "2026-11-25T05:08:06+01:00",
+   "end": "2026-11-25T06:56:20+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "ab692ee7",
+   "task": "J9: remaining junction side faults, packages for the release",
+   "branch": "worktree-agent-ab692ee78e235e3a6",
+   "start": "2026-11-25T08:19:12+01:00",
+   "end": "2026-11-25T16:06:19+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a035bde7",
+   "task": "Hood grips vary (draped / handshake) and sprint posture",
+   "branch": "worktree-agent-a035bde700eac4da0",
+   "start": "2026-11-25T08:25:33+01:00",
+   "end": "2026-11-25T10:41:38+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "acf93870",
+   "task": "Build caps per kind (Phase 4 Q27 b)",
+   "branch": "worktree-agent-acf9387027895d279",
+   "start": "2026-11-25T09:06:18+01:00",
+   "end": "2026-11-25T12:03:23+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a84893a6",
+   "task": "Kit pickers as tiles with colour swatches (Phase 4 Q30 a)",
+   "branch": "worktree-agent-a84893a6b55005fb9",
+   "start": "2026-11-25T09:09:53+01:00",
+   "end": "2026-11-25T12:51:26+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "ae2f826c",
+   "task": "Release 0.2.6, all platforms + J9 worlds",
+   "branch": "worktree-agent-ae2f826c4588c8300",
+   "start": "2026-11-25T13:58:43+01:00",
+   "end": "2026-11-25T16:16:28+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a074c1ca",
+   "task": "World patches: .ocwpatch next to the package, official patches in git (16H Q9, Q10)",
+   "branch": "worktree-agent-a074c1ca91e50f058",
+   "start": "2026-11-25T19:39:17+01:00",
+   "end": "2026-11-25T20:56:57+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a1428acf",
+   "task": "Studio trust dialog for unknown user keys (16H Q14 a)",
+   "branch": "worktree-agent-a1428acfb0cfceb95",
+   "start": "2026-11-25T19:41:03+01:00",
+   "end": "2026-11-25T21:26:40+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "chin",
+   "task": "Fix the bubble on the rider's chin",
+   "branch": "worktree-agent-pending",
+   "start": "2026-11-25T20:10:26+01:00",
+   "end": null,
+   "status": "started",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "a7634b60",
+   "task": "Fix the bubble on the rider's chin",
+   "branch": "worktree-agent-a7634b603eab8e729",
+   "start": "2026-11-25T20:10:31+01:00",
+   "end": "2026-11-25T22:09:15+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a48a69f9",
+   "task": "Studio 2D map: neighbouring worlds, aerial layer, border (16H Q15 a)",
+   "branch": "worktree-agent-a48a69f9733b946da",
+   "start": "2026-11-25T21:27:12+01:00",
+   "end": "2026-11-25T23:18:33+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  }
+ ]
+}
