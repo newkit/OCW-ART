@@ -25,3 +25,71 @@
 # Day 11: the Host a ride join link shows the build machine's address in the
 # home network (ocw://192.168.…), the private IP the text mask hides:
 2026-11-21/100651-shot-wayland-menu-hosting-voice-off.jpg
+
+# Day 16: the browser app's on-page log (?log=1) on phones, run on marge:
+# its Rust log lines carry the crates' source paths under the build user's
+# home (/home/<user>/.cargo/…); every log-panel screenshot is withheld, the
+# plain error screens stay:
+2026-11-26/224932-web-log-web-log-android-copy.png
+2026-11-26/224932-web-log-web-log-android-reload.png
+2026-11-26/224932-web-log-web-log-android-ride.png
+2026-11-26/224932-web-log-web-log-iphone-copy.png
+2026-11-26/224932-web-log-web-log-iphone-no-wasm-log.png
+2026-11-26/224932-web-log-web-log-iphone-reload.png
+2026-11-26/224932-web-log-web-log-iphone-ride.png
+2026-11-26/224932-web-log-web-log-iphone-taps.png
+2026-11-26/224932-web-log-web-log-iphone-too-old-log.png
+2026-11-26/232434-web-log-web-log-android-copy.png
+2026-11-26/232434-web-log-web-log-android-reload.png
+2026-11-26/232434-web-log-web-log-android-ride.png
+2026-11-26/232434-web-log-web-log-iphone-copy.png
+2026-11-26/232434-web-log-web-log-iphone-no-wasm-log.png
+2026-11-26/232434-web-log-web-log-iphone-reload.png
+2026-11-26/232434-web-log-web-log-iphone-ride.png
+2026-11-26/232434-web-log-web-log-iphone-taps.png
+2026-11-26/232434-web-log-web-log-iphone-too-old-log.png
+2026-11-26/232627-web-log-web-log-android-copy.png
+2026-11-26/232627-web-log-web-log-android-killed.png
+2026-11-26/232627-web-log-web-log-android-no-gpu-log.png
+2026-11-26/232627-web-log-web-log-android-no-wasm-log.png
+2026-11-26/232627-web-log-web-log-android-reload.png
+2026-11-26/232627-web-log-web-log-android-ride.png
+2026-11-26/232627-web-log-web-log-android-taps.png
+2026-11-26/232627-web-log-web-log-android-too-old-log.png
+2026-11-26/232627-web-log-web-log-iphone-copy.png
+2026-11-26/232627-web-log-web-log-iphone-killed.png
+2026-11-26/232627-web-log-web-log-iphone-no-wasm-log.png
+2026-11-26/232627-web-log-web-log-iphone-reload.png
+2026-11-26/232627-web-log-web-log-iphone-ride.png
+2026-11-26/232627-web-log-web-log-iphone-taps.png
+2026-11-26/232627-web-log-web-log-iphone-too-old-log.png
+2026-11-26/232854-web-log-web-log-android-copy.png
+2026-11-26/232854-web-log-web-log-android-killed.png
+2026-11-26/232854-web-log-web-log-android-no-gpu-log.png
+2026-11-26/232854-web-log-web-log-android-no-wasm-log.png
+2026-11-26/232854-web-log-web-log-android-reload.png
+2026-11-26/232854-web-log-web-log-android-ride.png
+2026-11-26/232854-web-log-web-log-android-taps.png
+2026-11-26/232854-web-log-web-log-android-too-old-log.png
+2026-11-26/232854-web-log-web-log-iphone-copy.png
+2026-11-26/232854-web-log-web-log-iphone-killed.png
+2026-11-26/232854-web-log-web-log-iphone-no-wasm-log.png
+2026-11-26/232854-web-log-web-log-iphone-reload.png
+2026-11-26/232854-web-log-web-log-iphone-ride.png
+2026-11-26/232854-web-log-web-log-iphone-taps.png
+2026-11-26/232854-web-log-web-log-iphone-too-old-log.png
+2026-11-26/234258-web-log-web-log-android-copy.png
+2026-11-26/234258-web-log-web-log-android-killed.png
+2026-11-26/234258-web-log-web-log-android-no-gpu-log.png
+2026-11-26/234258-web-log-web-log-android-no-wasm-log.png
+2026-11-26/234258-web-log-web-log-android-reload.png
+2026-11-26/234258-web-log-web-log-android-ride.png
+2026-11-26/234258-web-log-web-log-android-taps.png
+2026-11-26/234258-web-log-web-log-android-too-old-log.png
+2026-11-26/234258-web-log-web-log-iphone-copy.png
+2026-11-26/234258-web-log-web-log-iphone-killed.png
+2026-11-26/234258-web-log-web-log-iphone-no-wasm-log.png
+2026-11-26/234258-web-log-web-log-iphone-reload.png
+2026-11-26/234258-web-log-web-log-iphone-ride.png
+2026-11-26/234258-web-log-web-log-iphone-taps.png
+2026-11-26/234258-web-log-web-log-iphone-too-old-log.png

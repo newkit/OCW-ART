@@ -1,0 +1,148 @@
+# OCW Build Diary – day 16 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-26/ (or ../DAY/ for another day).
+# Spec rows 6.03–6.66; no release.
+# Withheld: 63 of the day's 317 pictures, videos and sounds – the browser
+# app's on-page log (?log=1) on phones shows the Rust log lines with the
+# crates' source paths under the build user's home (/home/<user>/.cargo/…);
+# every log-panel screenshot is withheld, the seven plain error screens stay
+# (build-history/withheld.txt). Checked and kept: the Fly.io server's status
+# page shows only public counts and the public server's own address and
+# certificate fingerprint; the ANT+ key page shows "0 of 16" digits; OCW Studio
+# shows "~/…" and /tmp paths; the BRouter dialog 127.0.0.1; only made-up
+# riders. The text: the Vercel and Fly.io tokens pasted into two prompts are
+# masked as <token> (ocwart/mask.py), the ANT+ network key appears nowhere.
+
+title = "A server of our own"
+tagline = "In which a flaky test turns out to be a 17 g stop, the accounts get hearts on Postgres, the game server moves into Frankfurt on Fly.io, Andorra becomes the fifth world – and the locals were right about the poles at Envalira."
+hero = "165347-scenes-unicorn-hornisgrinde-final-unicorn-hornisgrinde-tower.jpg"
+bpm = 112
+key = "D"
+# style: none – the tool's rotation picks synthwave for day 16 (every style
+# has played once by day 15; the cycle starts again with day 1's synthwave)
+tests = 3800
+outro = "64 spec versions, a fifth world, a server in Frankfurt, 230 GB freed. 1.71 billion tokens."
+teaser = "NEXT TIME: six rebuilt worlds with smooth shores."
+# The land-use runs, the browser log, the Fly.io test rides and the unicorn's
+# probe frames would flicker through the time-lapse:
+timelapse_skip = ["*landuse-*", "*web-log-*", "*remote-server-*", "*-remote-web-*", "*uh-probe*",
+                  "*andorra-web-memory-*", "*beard-fix-*-before*"]
+
+[[chapter]]
+time = "04:54"
+title = "OCW Studio's map, and a question"
+caption = "The 2D map draws its land use again – the texture was made in another egui context. A patch now asks before it loads."
+prompt = "The missing land use on OCW Studio's 2D map: should I start an agent to fix it? yes"
+shots = [
+  { file = "050046-landuse-compare-li-border-before-after.jpg", seconds = 4.6, note = "before | after" },
+  { file = "064900-studio-q16-q18-patch-question.jpg", seconds = 4.0, focus = [0.12, 0.25, 1.6], note = "\"Load this world's patch?\"" },
+  { file = "082033-fc80aa9f-dirty-shot-wayland-brouter-consent.jpg", seconds = 3.8, focus = [0.62, 0.5, 1.7], note = "asked once per server" },
+  { card = true, seconds = 3.8, text = "Road edits act on the whole OSM way. The planner tests use our own BRouter on marge." },
+]
+
+[[chapter]]
+time = "10:24"
+title = "No UDP on Vercel"
+caption = "The game talks over UDP, which Vercel cannot serve. So the game server goes to Fly.io – its UDP needs a credit card."
+prompt = "lets keep it simple for now and put the psql on fly, too. increase budget authorization to 16$."
+shots = [
+  { card = true, seconds = 3.8, text = "08:55: a Fly.io account. 10:10: a card added, $10 a month authorised; 10:24: $16, with Postgres." },
+]
+
+[[chapter]]
+time = "11:17"
+title = "Traffic, UFOs and a cow"
+caption = "Phase 18 is planned: cars, lorries, motorbikes, aircraft and UFOs, as a switch in Settings. Cars can hit riders."
+prompt = "q1-3: yes, as proposed. q4: yes, cars can hit riders. add a lunatic mode, where cares drive like crazy and overtake in stupid and dangerous situations"
+shots = [
+  { card = true, seconds = 4.0, text = "UFOs come to the unicorn, on clear nights – and to crop circles and the cow. Live aircraft from adsb.lol." },
+]
+
+[[chapter]]
+time = "11:51"
+title = "The flaky test was a bug"
+caption = "A gust put a bot level with the rider; the client braked the predicted bike from 7 to 3.7 m/s in one tick – a 17 g stop."
+shots = [
+  { card = true, seconds = 4.0, text = "The virtual brake now sheds at most 5 m/s² (0.5 g). 240 runs under load: 25 failures before, 0 after." },
+]
+
+[[chapter]]
+time = "13:45"
+title = "Hearts on the account"
+caption = "Accounts keep hearts, bikes, parts and kit on Postgres. The workshop, repairs and the rider belong to the account."
+shots = [
+  { file = "115208-workshop-account-workshop-account.jpg", seconds = 3.8, note = "the desktop's workshop" },
+  { file = "131746-web-web-account-workshop.jpg", seconds = 3.8, note = "the same, in the browser" },
+  { card = true, seconds = 3.6, text = "Five parts in one day: 5,000 ♥ to start, rides queued offline and credited once." },
+]
+
+[[chapter]]
+time = "14:10"
+title = "Beards and white panels"
+caption = "The stubble leaves the lips free, the chin-strap beard lies on the jaw – and the rims lose their white label panels."
+shots = [
+  { split = ["120116-beard-fix-beard-fix-b-speaking-before.jpg", "115454-15757bc7-shot-wayland-beard-fix-b-speaking.jpg"], seconds = 4.9, note = "lips found" },
+  { split = ["121746-a21f17df-dirty-shot-wayland-white-panels-stand-aero.jpg", "122138-a21f17df-dirty-shot-wayland-white-panels-stand-aero.jpg"], seconds = 4.9, note = "before | after" },
+]
+
+[[chapter]]
+time = "15:03"
+title = "marge is full"
+caption = "A merge failed with no code error at all: marge's disk stood at 100 %, 9 MB free."
+shots = [
+  { card = true, seconds = 3.8, text = "The build output of nine finished branches removed: about 230 GB. 259 GB free again." },
+  { card = true, seconds = 3.6, text = "15:22: remote.sh now deletes the files git no longer tracks on the build machines." },
+]
+
+[[chapter]]
+time = "15:41"
+title = "ANT+ without a stick"
+caption = "ANT+ heart rate is built for the desktop app against a simulated stick – no hardware needed, and no key shipped."
+shots = [
+  { file = "152622-ant-devices-A-6-ride-hud.png", seconds = 3.8, focus = [0.62, 0.05, 1.8], note = "HR 128, from a simulation" },
+  { file = "152651-ant-devices-B-2-typing-the-key.png", seconds = 3.6, focus = [0.35, 0.3, 1.5], note = "the key: yours to enter" },
+  { card = true, seconds = 3.6, text = "21:29: Garmin's driver on Windows; on Linux a pkexec helper installs the udev rule." },
+]
+
+[[chapter]]
+time = "16:47"
+title = "Andorra, and VR on main"
+caption = "The fifth world: all of Andorra, four climbs, stone-and-slate houses. A minute later PC VR lands on main."
+prompt = "add and build a world map for andorra. do all the estimations as for the other worlds"
+shots = [
+  { file = "154616-2026-11-26-andorra-gallina.mp4", seconds = 5.0, start = 1.0, note = "Coll de la Gallina" },
+  { file = "163206-vr-merge-2026-11-26-03-both-eyes.jpg", seconds = 3.8, note = "OpenXR, both eyes" },
+  { file = "185436-scenes-andorra-r1-readme-andorra-envalira-winter.jpg", seconds = 4.2, note = "Envalira in January" },
+  { file = "185510-scenes-andorra-r1-readme-andorra-vella.jpg", seconds = 4.0, note = "Andorra la Vella" },
+]
+
+[[chapter]]
+time = "16:53"
+title = "A unicorn over the Hornisgrinde"
+caption = "Rendered on request: the unicorn climbs past the summit's tower at golden hour, the drone circling it."
+prompt = "render me a nice image of the unicorn flying over hornisgrinde"
+shots = [
+  { file = "165433-scenes-unicorn-hornisgrinde-final-unicorn-hornisgrinde-sunset.jpg", seconds = 3.8, note = "into the evening sun" },
+  { file = "165541-scenes-unicorn-hornisgrinde-final-unicorn-hornisgrinde-orbit-video.mp4", seconds = 6.0, start = 3.0 },
+]
+
+[[chapter]]
+time = "19:13"
+title = "Ride together"
+caption = "Fly lost bundled and large UDP packets: --no-gso, --no-mtu-discovery. A lost browser handshake retries on a new flow."
+shots = [
+  { file = "170958-remote-server-remote-web-riding.jpg", seconds = 3.8, note = "a browser on the Fly server" },
+  { file = "191205-together-20261126-preview-start.jpg", seconds = 3.8, focus = [0.38, 0.4, 1.5], note = "Ride together, with voice over wss" },
+  { file = "231724-status-page-live-desktop.png", seconds = 4.2, focus = [0.5, 0.3, 1.5], note = "counts only" },
+]
+
+[[chapter]]
+time = "22:50"
+title = "The locals were right"
+caption = "Lakes get smooth shores and a water look; Andorra's slopes turn from sand to alpine grass. And the poles at Envalira?"
+prompt = "Envalira pass on an October evening - i think the poles dont belomg there. i spoke to some locals and they say there is nothing like that."
+shots = [
+  { file = "153525-2026-11-26-andorra-envalira-pass.jpg", seconds = 3.8, focus = [0.74, 0.3, 1.6], note = "the poles in question" },
+  { split = ["215346-water-ground-before-readme-andorra-unicorn.jpg", "225002-water-ground-after-readme-andorra-unicorn.jpg"], seconds = 4.9, note = "sand | alpine grass" },
+  { split = ["215418-water-ground-before-wg-mummelsee-above.jpg", "225002-water-ground-after-wg-mummelsee-above.jpg"], seconds = 4.9, note = "the Mummelsee" },
+  { card = true, seconds = 4.2, text = "Towers of a dismantled 110 kV line, mapped in OSM as removed: 23 gone at the pass, 5 in the Black Forest." },
+]

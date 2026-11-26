@@ -1,0 +1,5304 @@
+{
+ "day": "2026-11-26",
+ "number": 16,
+ "commits": [
+  {
+   "sha": "5e482567",
+   "time": "04:40:22",
+   "merge": false,
+   "subject": "Studio asks before loading the patch next to a package (16H Q16 (b))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "e949f664",
+   "time": "04:41:22",
+   "merge": false,
+   "subject": "Build package: patched/ next to the package, a build recipe with each official package for the full chain (16H Q17 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "f8a8c25f",
+   "time": "04:42:34",
+   "merge": false,
+   "subject": "Road edits act on the whole OSM way by default, the edge as the switch (16H Q18 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "01f783f4",
+   "time": "04:44:04",
+   "merge": false,
+   "subject": "The game lists the studio's saved routes next to the package and in the data dir; documented in the README (16H Q19 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "56870075",
+   "time": "04:54:57",
+   "merge": false,
+   "subject": "Fixed: OCW Studio's 2D map draws the land use again – its texture is made in the egui context that draws the map (16A Fixed; spec 6.03)",
+   "added": 207,
+   "removed": 24
+  },
+  {
+   "sha": "19694296",
+   "time": "05:41:52",
+   "merge": true,
+   "subject": "Merge the land-use fix for the studio's 2D map: the texture is made again in the egui context that draws it, never above the largest texture side (6.07)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "3997a6d7",
+   "time": "05:47:53",
+   "merge": false,
+   "subject": "Built: the game's route list offers the studio's routes next to the package and in the data dir, marked yours; Save route falls back to the data dir; README documents it (16H Q19 (a), v6.07)",
+   "added": 606,
+   "removed": 66
+  },
+  {
+   "sha": "72db9890",
+   "time": "06:11:54",
+   "merge": true,
+   "subject": "Merge the user's routes in the game's list: next to the package and in the data dir, marked yours; the studio's save fallback; README (16H Q19 (a); 6.08)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "b49743e8",
+   "time": "07:16:46",
+   "merge": false,
+   "subject": "OCW Studio asks before loading the patch next to a package, Build package runs the package's build recipe, road edits act on the whole OSM way by default (16H Q16 (b), Q17 (a), Q18 (a); spec 6.09)",
+   "added": 3332,
+   "removed": 168
+  },
+  {
+   "sha": "73941c84",
+   "time": "07:40:36",
+   "merge": false,
+   "subject": "Planner settings stay separate: the studio's planner.json, the game's own later (16H Q20 (b))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "34b1dab5",
+   "time": "07:43:30",
+   "merge": false,
+   "subject": "BRouter consent remembered per server (16H Q21 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "03e4f45d",
+   "time": "07:44:30",
+   "merge": false,
+   "subject": "Own BRouter on marge for the planner tests, data from our extracts (16H Q22 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "5c74de2f",
+   "time": "07:45:52",
+   "merge": true,
+   "subject": "Merge the studio's patch question, build recipes and whole-way road edits (16H Q16 (b), Q17 (a), Q18 (a); 6.12)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "fc80aa9f",
+   "time": "07:51:25",
+   "merge": false,
+   "subject": "Imported tracks keep a via-point every kilometre, as built (16H Q23 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "9943c7af",
+   "time": "08:46:39",
+   "merge": false,
+   "subject": "BRouter consent asked once per server and remembered; planner tests on our own BRouter built from our extract (16H Q21 (a), Q22 (a); 6.14)",
+   "added": 1676,
+   "removed": 38
+  },
+  {
+   "sha": "1d001b90",
+   "time": "08:59:51",
+   "merge": false,
+   "subject": "Base parts included with accounts (Phase 4 Q18 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "08e67ac1",
+   "time": "09:01:42",
+   "merge": false,
+   "subject": "Hearts: signed servers credit directly, other rides via the checked ride summary (Phase 4 Q19 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "3d17a923",
+   "time": "09:02:29",
+   "merge": false,
+   "subject": "Offline riding with the last synced bikes and kit, read-only, ride credited later (Phase 4 Q20 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "f62c5492",
+   "time": "09:03:12",
+   "merge": false,
+   "subject": "Accounts start fresh with 5,000 hearts, local test wallets not imported (Phase 4 Q21 (a))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "2372e833",
+   "time": "09:16:11",
+   "merge": false,
+   "subject": "Prepared: ocw-server with its bundled voice server on Fly.io, one always-on machine in fra (11.5; 6.18)",
+   "added": 304,
+   "removed": 1
+  },
+  {
+   "sha": "8c4ec441",
+   "time": "09:22:43",
+   "merge": true,
+   "subject": "Merge BRouter: the via-point question remembered per server, our own BRouter on marge for the planner tests (16H Q21 (a), Q22 (a); 6.18)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ba5e986c",
+   "time": "09:24:44",
+   "merge": true,
+   "subject": "Merge the Fly.io hosting setup for ocw-server with its bundled voice server: Dockerfile, fly.toml, start script, README and spec 11.5 (not deployed yet: Fly needs a card for the dedicated IPv4; 6.19)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "5cde9248",
+   "time": "09:57:51",
+   "merge": false,
+   "subject": "Built: accounts backend on PostgreSQL with the workshop, hearts ledger and ride credits (14 Phase 4, 4O; Q18-Q21 backend; 6.19)",
+   "added": 5818,
+   "removed": 23
+  },
+  {
+   "sha": "d04fe46e",
+   "time": "10:12:38",
+   "merge": false,
+   "subject": "Fly.io budget: at most $10 a month for the hosted server (11.5; 6.20)",
+   "added": 4,
+   "removed": 3
+  },
+  {
+   "sha": "3193fd15",
+   "time": "10:36:27",
+   "merge": false,
+   "subject": "Official builds fail on a vanished patch target (--strict-patch), users' builds warn (16H Q7 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "f5c0612b",
+   "time": "10:39:42",
+   "merge": false,
+   "subject": "Studio camera views stored in the world patch file (16H Q13 (b))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "3505028f",
+   "time": "10:42:03",
+   "merge": false,
+   "subject": "A road closed for bikes stays drawn and rideable, with warning signs at its ends (16H Q6)",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "b911da34",
+   "time": "10:52:32",
+   "merge": false,
+   "subject": "Spec Phase 10 Q11 elaborated: why the bridge matters on Apple devices, who is affected, group rides need WebTransport too, an example",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "bcd7c4f7",
+   "time": "10:56:48",
+   "merge": true,
+   "subject": "Merge the accounts backend on PostgreSQL: inventory, the hearts ledger, purchases and sales, signed-server credits and checked ride summaries (4O part 1; Phase 4 Q18-Q21 in the backend; 6.23)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "f18e1d4b",
+   "time": "10:57:19",
+   "merge": false,
+   "subject": "WIP: the desktop's workshop on the account, offline queue, server ride credits (4O part 2)",
+   "added": 1865,
+   "removed": 7
+  },
+  {
+   "sha": "225de8e7",
+   "time": "10:57:20",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-ae9ce66a8776a5e06",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "2f80984f",
+   "time": "11:01:47",
+   "merge": false,
+   "subject": "Sensor bridge on iOS before 26.4: ask to update, for now (Phase 10 Q11 (a))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "661719a4",
+   "time": "11:10:00",
+   "merge": false,
+   "subject": "WIP: studio signing, strict patch, views in patch, closed-for-bikes signs, binding filter",
+   "added": 1924,
+   "removed": 95
+  },
+  {
+   "sha": "52d0d9bc",
+   "time": "11:10:00",
+   "merge": true,
+   "subject": "Merge origin/main",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "d6f92474",
+   "time": "11:10:01",
+   "merge": false,
+   "subject": "WIP: virtual brake at most 5 m/s², client tests on a fixed clock and seed",
+   "added": 124,
+   "removed": 23
+  },
+  {
+   "sha": "c37c17f8",
+   "time": "11:10:18",
+   "merge": true,
+   "subject": "Merge origin/main",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "d3c1cea8",
+   "time": "11:17:40",
+   "merge": false,
+   "subject": "Plan traffic as a Settings switch: simulated road traffic, aircraft and UFOs; live aircraft from adsb.lol, no live road data (14 Phase 18, 6.25)",
+   "added": 148,
+   "removed": 2
+  },
+  {
+   "sha": "280f8620",
+   "time": "11:18:31",
+   "merge": true,
+   "subject": "Merge the traffic plan: Phase 18 – cars, lorries, motorbikes, aircraft and UFOs; live data sources researched; 10 open questions (6.25)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "cf128e15",
+   "time": "11:38:27",
+   "merge": false,
+   "subject": "Traffic: defaults, group-ride choice, car plans; cars can hit riders, and a lunatic mode (Phase 18 Q1-Q4)",
+   "added": 7,
+   "removed": 10
+  },
+  {
+   "sha": "b09100db",
+   "time": "11:39:30",
+   "merge": false,
+   "subject": "Live road data: a switch now, data once a suitable source exists; research continues (Phase 18 Q5)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "2d783aff",
+   "time": "11:41:38",
+   "merge": false,
+   "subject": "Live aircraft from adsb.lol as an opt-in, OpenSky as fallback (Phase 18 Q6)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "14a7943c",
+   "time": "11:42:11",
+   "merge": false,
+   "subject": "UFOs around the unicorn and rare night sightings (Phase 18 Q7 (b))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "53f0ce28",
+   "time": "11:42:57",
+   "merge": false,
+   "subject": "UFOs with all three: the unicorn, night sightings, crop circles and the cow (Phase 18 Q7 (c))",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "4750e5dd",
+   "time": "11:44:07",
+   "merge": false,
+   "subject": "Driver manners selectable in the traffic settings (Phase 18 Q8)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "59b2051e",
+   "time": "11:45:07",
+   "merge": false,
+   "subject": "Traffic on every device, fewer vehicles by quality level (Phase 18 Q9 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "5ee57d5d",
+   "time": "11:46:39",
+   "merge": false,
+   "subject": "Road traffic only on the desktop, aircraft everywhere (Phase 18 Q9 (b), corrected)",
+   "added": 3,
+   "removed": 2
+  },
+  {
+   "sha": "5024a6c1",
+   "time": "11:47:37",
+   "merge": false,
+   "subject": "Traffic priority: after the work in progress, simulated road traffic and aircraft first (Phase 18 Q10 (a))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "de06f5e4",
+   "time": "11:51:30",
+   "merge": false,
+   "subject": "Fixed: the virtual brake of autodrive sheds speed at most 5 m/s², so prediction error no longer brakes the own rider 3-4 m/s on the client; group bump test deterministic (6.25)",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "6ba7b19b",
+   "time": "11:51:58",
+   "merge": false,
+   "subject": "ANT+ key entered by the user, not shipped, for now (Phase 17 Q1 (b))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "a8c27d55",
+   "time": "11:52:26",
+   "merge": false,
+   "subject": "Live road data: the DGT incident feed suits Tenerife now; live density only behind a registration (Phase 18 Q5 research, new Q11)",
+   "added": 57,
+   "removed": 14
+  },
+  {
+   "sha": "73181477",
+   "time": "11:52:45",
+   "merge": false,
+   "subject": "ANT+: build without hardware, the stick test postponed (Phase 17 Q2)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "df4e9f4b",
+   "time": "11:52:46",
+   "merge": false,
+   "subject": "Built: signed in, the desktop's workshop is the account's; rides queued offline and credited once; certified game servers credit hearts at a ride's end (4O part 2; Q19 (a), Q20 (a); 6.24)",
+   "added": 184,
+   "removed": 42
+  },
+  {
+   "sha": "372aad1f",
+   "time": "11:53:15",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-ae9ce66a8776a5e06",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "f6bebe49",
+   "time": "11:53:49",
+   "merge": true,
+   "subject": "Merge the live road-data research: the DGT incident feed suits Tenerife now; Swiss and German live counts need registration (Phase 18 18D, new Q11; 6.37)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "460d2aca",
+   "time": "11:54:49",
+   "merge": false,
+   "subject": "ANT+ on the desktop first, in the browser via the bridge and WebUSB (Phase 17 Q3)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "a21f17df",
+   "time": "11:57:18",
+   "merge": false,
+   "subject": "Live road data: register for opentransportdata.swiss and Mobilithek too (Phase 18 Q11 (b), (c))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "27eab829",
+   "time": "12:01:51",
+   "merge": false,
+   "subject": "Fixed: the chin-strap beard lies on the jaw line from ear to ear, and the stubble beards leave the lips free, also while speaking (4N Fixed)",
+   "added": 701,
+   "removed": 74
+  },
+  {
+   "sha": "6402f53f",
+   "time": "12:02:06",
+   "merge": true,
+   "subject": "Merge origin/main (the beard fix renumbered 6.40)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "fcf55f13",
+   "time": "12:42:54",
+   "merge": true,
+   "subject": "Merge the fix of the flaky prediction test: the virtual brake sheds speed at a hard stop's rate (5 m/s²) on server and client alike; client tests on a fixed clock and weather seed (6.40)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "98c46a0a",
+   "time": "12:52:01",
+   "merge": false,
+   "subject": "ANT+ now; heart rate first, power and FE-C planned too; straps picked by hand (Phase 17 Q4 (b), Q5, Q6 (c))",
+   "added": 6,
+   "removed": 8
+  },
+  {
+   "sha": "77fff69b",
+   "time": "13:03:00",
+   "merge": false,
+   "subject": "Fixed: no white panels on the bikes – deep rims, disc wheel and down tube show rim colour and paint (6.40)",
+   "added": 160,
+   "removed": 50
+  },
+  {
+   "sha": "6b4be99c",
+   "time": "13:18:46",
+   "merge": false,
+   "subject": "Built: the browser app has the desktop's workshop on the signed-in rider's account, purchases without blocking the page, the workshop kept for offline, rides queued for the account; anonymous riders stay locked (4O part 3, W5c in the browser, B6 parity; 6.38)",
+   "added": 1325,
+   "removed": 167
+  },
+  {
+   "sha": "e281a2a2",
+   "time": "13:21:11",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-ae9ce66a8776a5e06",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "197286d3",
+   "time": "13:28:59",
+   "merge": false,
+   "subject": "Built: repairs on the account at the local garage's prices with the ride's damage kept there, and game servers that count only the parts a signed-in rider owns (4O part 4: W5d's BikeChange ownership check, W6 with accounts; 6.44)",
+   "added": 867,
+   "removed": 28
+  },
+  {
+   "sha": "3b8daab1",
+   "time": "13:40:42",
+   "merge": false,
+   "subject": "Built: the rider is the account's – name, weight, height, FTP, bike profile, character and kit look kept with the account, the same on every computer and in the browser, its name unique on the backend (4O part 5, W5b; 6.45)",
+   "added": 1062,
+   "removed": 16
+  },
+  {
+   "sha": "394f5ff4",
+   "time": "13:45:18",
+   "merge": true,
+   "subject": "Merge accounts part 2: signed in, the desktop's workshop is the account's; rides queued offline and credited once; certified game servers credit hearts at a ride's end (4O part 2; Q19 (a), Q20 (a); 6.42)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "0243bd91",
+   "time": "13:45:42",
+   "merge": true,
+   "subject": "Merge accounts parts 3 and 4: the browser's workshop on the account (the workshop moved into ocw-ui), repairs with accounts and the game server's ownership check (4O; 6.43, 6.44)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "6b811538",
+   "time": "13:47:37",
+   "merge": false,
+   "subject": "remote.sh: delete files removed or moved away here in the machines' checkouts too",
+   "added": 255,
+   "removed": 14
+  },
+  {
+   "sha": "b415979d",
+   "time": "13:50:22",
+   "merge": false,
+   "subject": "OCW Studio signs its builds with the user's own key; strict patches for official builds; views in the patch; closed-for-bikes roads stay rideable with warning signs; N / Z in the studio (4.21 item, 16H Q6, Q7 (a), Q13 (b); 6.25)",
+   "added": 154,
+   "removed": 38
+  },
+  {
+   "sha": "826a7174",
+   "time": "14:03:33",
+   "merge": false,
+   "subject": "Deployed: ocw-server with its voice server on Fly.io, voice from https pages over wss://ocw-server.fly.dev, Fly.io budget at most $16 a month (11.5; 6.25)",
+   "added": 571,
+   "removed": 20
+  },
+  {
+   "sha": "59a7da04",
+   "time": "14:03:54",
+   "merge": true,
+   "subject": "Merge origin/main into the Fly.io deployment branch (the version row renumbered to 6.43)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "4cdea4f1",
+   "time": "14:09:58",
+   "merge": false,
+   "subject": "Fly.io (11.5; 6.43): Chromium's WebTransport handshake to the Fly server fails 3 of 4 times, recorded as open",
+   "added": 3,
+   "removed": 3
+  },
+  {
+   "sha": "fdd25b8c",
+   "time": "14:10:33",
+   "merge": true,
+   "subject": "Merge: no white label panels on rims and down tubes – removed from the bike generator, all six bike files re-exported (6.45)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "40385e02",
+   "time": "14:10:52",
+   "merge": true,
+   "subject": "Merge: the chin-strap beard lies on the jaw line, the stubble beards leave the lips free (4N; 6.46)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "a471203b",
+   "time": "14:11:07",
+   "merge": true,
+   "subject": "Merge OCW Studio: built packages signed with the user's own key, N/Z without console noise, --strict-patch, camera views in the patch, roads closed for bikes stay rideable with warning signs (4.21, 16H Q6, Q7, Q13; 6.47)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "51a7d006",
+   "time": "14:28:58",
+   "merge": true,
+   "subject": "Merge remote-tracking branch 'origin/main' into worktree-agent-ae9ce66a8776a5e06",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "1f9ba6da",
+   "time": "14:55:55",
+   "merge": false,
+   "subject": "Spec 6.43, CLAUDE.md: remote.sh deletes stale files on the build machines (11.2 Stale files)",
+   "added": 5,
+   "removed": 3
+  },
+  {
+   "sha": "31585b16",
+   "time": "15:09:31",
+   "merge": true,
+   "subject": "Merge main (accounts parts 3 and 4) into the combined merge",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "aed18ae0",
+   "time": "15:22:13",
+   "merge": true,
+   "subject": "Merge the remote.sh fix: the build machines' checkouts drop files git no longer tracks, on Linux, macOS and Windows (11.2; 6.48)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "8b650fed",
+   "time": "15:41:12",
+   "merge": false,
+   "subject": "ANT+ heart rate for the desktop app, built without hardware (spec 14 Phase 17 A1-A3, 6.42)",
+   "added": 6503,
+   "removed": 103
+  },
+  {
+   "sha": "fa289dcd",
+   "time": "16:05:45",
+   "merge": true,
+   "subject": "Merge origin/main into the Fly.io deployment branch (the Fly row renumbered to 6.48)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "e8bdb186",
+   "time": "16:38:27",
+   "merge": false,
+   "subject": "Fifth world: Andorra – the whole country in one package with four climbs and Andorra's own estimates (6.42)",
+   "added": 812,
+   "removed": 22
+  },
+  {
+   "sha": "f3f2d963",
+   "time": "16:46:46",
+   "merge": true,
+   "subject": "Merge agent/vr-x1 onto main: PC VR in the desktop app (OpenXR, --vr, --vr-sim, vr command, quality vr) sharing the bike computer, controller mapping, eye projection and camera look with WebXR (spec 6.48, 14 Phase 11 X1, 11J)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "2482a3fe",
+   "time": "16:47:12",
+   "merge": true,
+   "subject": "Merge accounts part 5: the rider is the account's – name, weight, height, FTP, bike and look kept with the account, unique names, both apps riding it when signed in (4O W5b; 6.49)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "6365e44f",
+   "time": "16:47:34",
+   "merge": true,
+   "subject": "Merge ANT+ heart rate for the desktop app, built without hardware: decoding, the stick service with a simulated stick, the Devices page with the key entry (Phase 17 A1-A3; 6.50)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "df7f8b67",
+   "time": "16:47:41",
+   "merge": true,
+   "subject": "Merge the fifth world, Andorra: built like the others with all estimates, four climbs (Envalira, Arcalís, Coll d'Ordino, Coll de la Gallina) (6.51)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "21e22b82",
+   "time": "16:48:07",
+   "merge": true,
+   "subject": "Merge PC VR onto main: OpenXR in the desktop app (the agent/vr-x1 branch), sharing the session, bike computer, controllers and eye projection with WebXR (Phase 11 X1; 6.52)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ffb61848",
+   "time": "17:12:50",
+   "merge": false,
+   "subject": "Fixed: browsers join the Fly.io server reliably – a WebTransport handshake without an answer is tried again on a new connection (a new UDP flow), up to 3 more times (11.5 Lost UDP flows; 6.49)",
+   "added": 290,
+   "removed": 13
+  },
+  {
+   "sha": "affc26c0",
+   "time": "17:13:09",
+   "merge": true,
+   "subject": "Merge origin/main into the Fly.io branch (the Fly rows renumbered to 6.49 and 6.50)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "ba69b807",
+   "time": "17:24:15",
+   "merge": true,
+   "subject": "Merge the Fly.io server: ocw-server with its voice server deployed (--no-gso, --no-mtu-discovery, wss:// on 443), and browsers retrying a lost WebTransport handshake on a new UDP flow (11.5; 6.53, 6.54)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "d491f70d",
+   "time": "18:15:12",
+   "merge": false,
+   "subject": "Andorra within its border for now; Andorra on the live page (4.7 Q1)",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "50e0ac45",
+   "time": "19:02:09",
+   "merge": false,
+   "subject": "README: Andorra in the Worlds gallery – the Port d'Envalira in January snow and Andorra la Vella; scenes readme-andorra-* to render them again",
+   "added": 95,
+   "removed": 3
+  },
+  {
+   "sha": "bdb142fc",
+   "time": "19:03:10",
+   "merge": true,
+   "subject": "Merge the Andorra artwork: README Worlds with five regions and an Andorra row (Envalira in winter, Andorra la Vella), credits for Sentinel-2 and the forest layers; eight readme-andorra scenes",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "6850ec17",
+   "time": "19:05:57",
+   "merge": false,
+   "subject": "Riding together on the public page: the preview joins the Fly.io server with voice, learning its certificate hashes at runtime (11.5 Join info; 6.56)",
+   "added": 1091,
+   "removed": 97
+  },
+  {
+   "sha": "de4139f4",
+   "time": "19:12:28",
+   "merge": false,
+   "subject": "Preview start page: the lead names riding together on the public server (11.5 Join info)",
+   "added": 3,
+   "removed": 1
+  },
+  {
+   "sha": "c11db780",
+   "time": "19:13:11",
+   "merge": true,
+   "subject": "Merge riding together on the public page: the Fly server's join info (/join.json with the current and next certificate hashes), voice over wss, the start page's Ride together (11.5, B8a; 6.56)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "84d86b07",
+   "time": "20:34:49",
+   "merge": false,
+   "subject": "The public server keeps logging joins with name and IP (decision)",
+   "added": 2,
+   "removed": 1
+  },
+  {
+   "sha": "fd113570",
+   "time": "21:02:32",
+   "merge": false,
+   "subject": "ANT stick on Linux: a pkexec helper installs the udev rule (Phase 17 Q8 (b))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "516c26d1",
+   "time": "21:08:29",
+   "merge": false,
+   "subject": "No COM-port route for ANT sticks on Windows; proposed: drive Garmin's libusb-win32 driver (Phase 17 Q7 research)",
+   "added": 38,
+   "removed": 9
+  },
+  {
+   "sha": "59244c25",
+   "time": "21:29:04",
+   "merge": false,
+   "subject": "ANT stick on Windows through Garmin's libusb-win32 driver, Zadig as fallback (Phase 17 Q7 (d))",
+   "added": 4,
+   "removed": 7
+  },
+  {
+   "sha": "562b6ebb",
+   "time": "21:29:21",
+   "merge": false,
+   "subject": "Spec: the Q7 decision row is 6.60 (6.59 was taken by the research row)",
+   "added": 2,
+   "removed": 2
+  },
+  {
+   "sha": "324b5d71",
+   "time": "21:43:48",
+   "merge": false,
+   "subject": "PC VR menu: the WebXR panel, shared (Phase 11 Q11 (a))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "e62294d6",
+   "time": "21:44:49",
+   "merge": false,
+   "subject": "VR bike computer between the TT extensions (Phase 11 Q12 (c))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "34eac71b",
+   "time": "21:45:51",
+   "merge": false,
+   "subject": "VR: the fitted computer part becomes the VR bike computer (Phase 11 Q13 (b))",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "fedfa78b",
+   "time": "21:52:44",
+   "merge": false,
+   "subject": "ANT stick on Windows through Garmin's libusb-win32 driver; Linux access rule through pkexec (Phase 17 Q7 (d), Q8 (b))",
+   "added": 1933,
+   "removed": 37
+  },
+  {
+   "sha": "42e87345",
+   "time": "21:59:07",
+   "merge": false,
+   "subject": "VR kiosk: local server for now, ocw-server with bots once it runs again (Phase 11 Q14)",
+   "added": 4,
+   "removed": 4
+  },
+  {
+   "sha": "3174ba08",
+   "time": "22:42:47",
+   "merge": false,
+   "subject": "ANT+ driver / access pages: in the desktop page list, notes short enough for a 16:9 page",
+   "added": 14,
+   "removed": 18
+  },
+  {
+   "sha": "1b560575",
+   "time": "23:05:41",
+   "merge": false,
+   "subject": "Status page for the Fly.io server: / for browsers, /stats.json, counts only (spec 11.5)",
+   "added": 1428,
+   "removed": 43
+  },
+  {
+   "sha": "1dde18f3",
+   "time": "23:23:17",
+   "merge": false,
+   "subject": "Status page deployed on Fly (release v6): checks recorded (spec 11.5)",
+   "added": 1,
+   "removed": 1
+  },
+  {
+   "sha": "733ca32d",
+   "time": "23:29:12",
+   "merge": true,
+   "subject": "Merge the Fly server's public status page (/ and /stats.json, counts only) (11.5; 6.65)",
+   "added": 0,
+   "removed": 0
+  },
+  {
+   "sha": "22d76884",
+   "time": "23:29:26",
+   "merge": true,
+   "subject": "Merge ANT+ access: Garmin's libusb-win32 driver on Windows (WinUSB first, then libusb0), the pkexec udev helper on Linux (Phase 17 Q7 (d), Q8 (b); 6.66)",
+   "added": 0,
+   "removed": 0
+  }
+ ],
+ "merges": 36,
+ "lines_added": 33718,
+ "lines_removed": 1447,
+ "spec_versions": [
+  "6.03",
+  "6.09",
+  "11.5",
+  "6.43",
+  "6.48",
+  "11.5",
+  "11.5"
+ ],
+ "tests": null,
+ "media": [
+  {
+   "file": "043859-landuse-before-1600x900-bf-middle-neighbours.jpg",
+   "time": "04:38:59",
+   "kind": "image"
+  },
+  {
+   "file": "043920-landuse-before-1600x900-bf-middle-border.jpg",
+   "time": "04:39:20",
+   "kind": "image"
+  },
+  {
+   "file": "043942-landuse-before-1600x900-bf-middle-aerial-off.jpg",
+   "time": "04:39:42",
+   "kind": "image"
+  },
+  {
+   "file": "044003-landuse-before-1600x900-bf-middle-aerial-on.jpg",
+   "time": "04:40:03",
+   "kind": "image"
+  },
+  {
+   "file": "044019-landuse-before-1600x900-li-border.jpg",
+   "time": "04:40:19",
+   "kind": "image"
+  },
+  {
+   "file": "044035-landuse-before-1600x900-li-aerial-off.jpg",
+   "time": "04:40:35",
+   "kind": "image"
+  },
+  {
+   "file": "044050-landuse-before-1600x900-li-aerial-on.jpg",
+   "time": "04:40:50",
+   "kind": "image"
+  },
+  {
+   "file": "044112-landuse-before-2560x1440-bf-middle-neighbours.jpg",
+   "time": "04:41:12",
+   "kind": "image"
+  },
+  {
+   "file": "044133-landuse-before-2560x1440-bf-middle-border.jpg",
+   "time": "04:41:33",
+   "kind": "image"
+  },
+  {
+   "file": "044154-landuse-before-2560x1440-bf-middle-aerial-off.jpg",
+   "time": "04:41:54",
+   "kind": "image"
+  },
+  {
+   "file": "044216-landuse-before-2560x1440-bf-middle-aerial-on.jpg",
+   "time": "04:42:16",
+   "kind": "image"
+  },
+  {
+   "file": "044232-landuse-before-2560x1440-li-border.jpg",
+   "time": "04:42:32",
+   "kind": "image"
+  },
+  {
+   "file": "044247-landuse-before-2560x1440-li-aerial-off.jpg",
+   "time": "04:42:47",
+   "kind": "image"
+  },
+  {
+   "file": "044303-landuse-before-2560x1440-li-aerial-on.jpg",
+   "time": "04:43:03",
+   "kind": "image"
+  },
+  {
+   "file": "045624-landuse-after-1600x900-bf-middle-neighbours.jpg",
+   "time": "04:56:24",
+   "kind": "image"
+  },
+  {
+   "file": "045645-landuse-after-1600x900-bf-middle-border.jpg",
+   "time": "04:56:45",
+   "kind": "image"
+  },
+  {
+   "file": "045707-landuse-after-1600x900-bf-middle-aerial-off.jpg",
+   "time": "04:57:07",
+   "kind": "image"
+  },
+  {
+   "file": "045728-landuse-after-1600x900-bf-middle-aerial-on.jpg",
+   "time": "04:57:28",
+   "kind": "image"
+  },
+  {
+   "file": "045744-landuse-after-1600x900-li-border.jpg",
+   "time": "04:57:44",
+   "kind": "image"
+  },
+  {
+   "file": "045800-landuse-after-1600x900-li-aerial-off.jpg",
+   "time": "04:58:00",
+   "kind": "image"
+  },
+  {
+   "file": "045815-landuse-after-1600x900-li-aerial-on.jpg",
+   "time": "04:58:15",
+   "kind": "image"
+  },
+  {
+   "file": "045836-landuse-after-2560x1440-bf-middle-neighbours.jpg",
+   "time": "04:58:36",
+   "kind": "image"
+  },
+  {
+   "file": "045858-landuse-after-2560x1440-bf-middle-border.jpg",
+   "time": "04:58:58",
+   "kind": "image"
+  },
+  {
+   "file": "045919-landuse-after-2560x1440-bf-middle-aerial-off.jpg",
+   "time": "04:59:19",
+   "kind": "image"
+  },
+  {
+   "file": "045941-landuse-after-2560x1440-bf-middle-aerial-on.jpg",
+   "time": "04:59:41",
+   "kind": "image"
+  },
+  {
+   "file": "045957-landuse-after-2560x1440-li-border.jpg",
+   "time": "04:59:57",
+   "kind": "image"
+  },
+  {
+   "file": "050012-landuse-after-2560x1440-li-aerial-off.jpg",
+   "time": "05:00:12",
+   "kind": "image"
+  },
+  {
+   "file": "050028-landuse-after-2560x1440-li-aerial-on.jpg",
+   "time": "05:00:28",
+   "kind": "image"
+  },
+  {
+   "file": "050046-landuse-compare-bf-middle-neighbours-before-after.jpg",
+   "time": "05:00:46",
+   "kind": "image"
+  },
+  {
+   "file": "050046-landuse-compare-li-border-before-after.jpg",
+   "time": "05:00:46",
+   "kind": "image"
+  },
+  {
+   "file": "052717-q19-q19-routes.jpg",
+   "time": "05:27:17",
+   "kind": "image"
+  },
+  {
+   "file": "064900-studio-q16-q18-patch-question.jpg",
+   "time": "06:49:00",
+   "kind": "image"
+  },
+  {
+   "file": "065048-studio-q16-q18-whole-way-selected.jpg",
+   "time": "06:50:48",
+   "kind": "image"
+  },
+  {
+   "file": "065104-studio-q16-q18-edge-only-selected.jpg",
+   "time": "06:51:04",
+   "kind": "image"
+  },
+  {
+   "file": "082033-fc80aa9f-dirty-shot-wayland-brouter-consent.jpg",
+   "time": "08:20:33",
+   "kind": "image"
+  },
+  {
+   "file": "082051-fc80aa9f-dirty-shot-wayland-brouter-vaduz-malbun.jpg",
+   "time": "08:20:51",
+   "kind": "image"
+  },
+  {
+   "file": "084603-fc80aa9f-dirty-shot-ocw.jpg",
+   "time": "08:46:03",
+   "kind": "image"
+  },
+  {
+   "file": "084612-fc80aa9f-dirty-shot-wayland-ocw-wayland.jpg",
+   "time": "08:46:12",
+   "kind": "image"
+  },
+  {
+   "file": "104505-remote-server-desktop.jpg",
+   "time": "10:45:05",
+   "kind": "image"
+  },
+  {
+   "file": "104526-remote-server-remote-web-.mic.wav",
+   "time": "10:45:26",
+   "kind": "audio"
+  },
+  {
+   "file": "104526-remote-server-remote-web-end.jpg",
+   "time": "10:45:26",
+   "kind": "image"
+  },
+  {
+   "file": "104526-remote-server-remote-web-joined.jpg",
+   "time": "10:45:26",
+   "kind": "image"
+  },
+  {
+   "file": "104526-remote-server-remote-web-riding.jpg",
+   "time": "10:45:26",
+   "kind": "image"
+  },
+  {
+   "file": "105534-ba5e986c-dirty-shot-wayland-beard-fix-a-front.jpg",
+   "time": "10:55:34",
+   "kind": "image"
+  },
+  {
+   "file": "105545-ba5e986c-dirty-shot-wayland-beard-fix-a-side.jpg",
+   "time": "10:55:45",
+   "kind": "image"
+  },
+  {
+   "file": "105557-ba5e986c-dirty-shot-wayland-beard-fix-a-below.jpg",
+   "time": "10:55:57",
+   "kind": "image"
+  },
+  {
+   "file": "105607-ba5e986c-dirty-shot-wayland-beard-fix-b-front.jpg",
+   "time": "10:56:07",
+   "kind": "image"
+  },
+  {
+   "file": "105619-ba5e986c-dirty-shot-wayland-beard-fix-b-speaking.jpg",
+   "time": "10:56:19",
+   "kind": "image"
+  },
+  {
+   "file": "105630-ba5e986c-dirty-shot-wayland-beard-fix-b-below.jpg",
+   "time": "10:56:30",
+   "kind": "image"
+  },
+  {
+   "file": "105641-ba5e986c-dirty-shot-wayland-beard-fix-c-chinstrap-70-side.jpg",
+   "time": "10:56:41",
+   "kind": "image"
+  },
+  {
+   "file": "105652-ba5e986c-dirty-shot-wayland-beard-fix-d-chinstrap-20-below.jpg",
+   "time": "10:56:52",
+   "kind": "image"
+  },
+  {
+   "file": "105703-ba5e986c-dirty-shot-wayland-beard-fix-e-stubble-60-speaking.jpg",
+   "time": "10:57:03",
+   "kind": "image"
+  },
+  {
+   "file": "105714-ba5e986c-dirty-shot-wayland-beard-fix-f-shortstubble-bare.jpg",
+   "time": "10:57:14",
+   "kind": "image"
+  },
+  {
+   "file": "115208-workshop-account-workshop-account.jpg",
+   "time": "11:52:08",
+   "kind": "image"
+  },
+  {
+   "file": "115239-smoke-leela-smoke-wayland.jpg",
+   "time": "11:52:39",
+   "kind": "image"
+  },
+  {
+   "file": "115239-smoke-leela-smoke-x11.jpg",
+   "time": "11:52:39",
+   "kind": "image"
+  },
+  {
+   "file": "115412-15757bc7-shot-wayland-beard-fix-a-front.jpg",
+   "time": "11:54:12",
+   "kind": "image"
+  },
+  {
+   "file": "115423-15757bc7-shot-wayland-beard-fix-a-side.jpg",
+   "time": "11:54:23",
+   "kind": "image"
+  },
+  {
+   "file": "115434-15757bc7-shot-wayland-beard-fix-a-below.jpg",
+   "time": "11:54:34",
+   "kind": "image"
+  },
+  {
+   "file": "115444-15757bc7-shot-wayland-beard-fix-b-front.jpg",
+   "time": "11:54:44",
+   "kind": "image"
+  },
+  {
+   "file": "115454-15757bc7-shot-wayland-beard-fix-b-speaking.jpg",
+   "time": "11:54:54",
+   "kind": "image"
+  },
+  {
+   "file": "115505-15757bc7-shot-wayland-beard-fix-b-below.jpg",
+   "time": "11:55:05",
+   "kind": "image"
+  },
+  {
+   "file": "115516-15757bc7-shot-wayland-beard-fix-c-chinstrap-70-side.jpg",
+   "time": "11:55:16",
+   "kind": "image"
+  },
+  {
+   "file": "115527-15757bc7-shot-wayland-beard-fix-d-chinstrap-20-below.jpg",
+   "time": "11:55:27",
+   "kind": "image"
+  },
+  {
+   "file": "115537-15757bc7-shot-wayland-beard-fix-e-stubble-60-speaking.jpg",
+   "time": "11:55:37",
+   "kind": "image"
+  },
+  {
+   "file": "115548-15757bc7-shot-wayland-beard-fix-f-shortstubble-bare.jpg",
+   "time": "11:55:48",
+   "kind": "image"
+  },
+  {
+   "file": "115558-15757bc7-shot-wayland-beard-fix-g-chinstrap-bare.jpg",
+   "time": "11:55:58",
+   "kind": "image"
+  },
+  {
+   "file": "115609-15757bc7-shot-wayland-beard-fix-h-far.jpg",
+   "time": "11:56:09",
+   "kind": "image"
+  },
+  {
+   "file": "120116-beard-fix-beard-fix-a-below-before.jpg",
+   "time": "12:01:16",
+   "kind": "image"
+  },
+  {
+   "file": "120116-beard-fix-beard-fix-a-front-before.jpg",
+   "time": "12:01:16",
+   "kind": "image"
+  },
+  {
+   "file": "120116-beard-fix-beard-fix-a-side-before.jpg",
+   "time": "12:01:16",
+   "kind": "image"
+  },
+  {
+   "file": "120116-beard-fix-beard-fix-b-below-before.jpg",
+   "time": "12:01:16",
+   "kind": "image"
+  },
+  {
+   "file": "120116-beard-fix-beard-fix-b-front-before.jpg",
+   "time": "12:01:16",
+   "kind": "image"
+  },
+  {
+   "file": "120116-beard-fix-beard-fix-b-speaking-before.jpg",
+   "time": "12:01:16",
+   "kind": "image"
+  },
+  {
+   "file": "121746-a21f17df-dirty-shot-wayland-white-panels-stand-aero.jpg",
+   "time": "12:17:46",
+   "kind": "image"
+  },
+  {
+   "file": "121757-a21f17df-dirty-shot-wayland-white-panels-road-aero.jpg",
+   "time": "12:17:57",
+   "kind": "image"
+  },
+  {
+   "file": "121811-a21f17df-dirty-shot-wayland-white-panels-stand-tt.jpg",
+   "time": "12:18:11",
+   "kind": "image"
+  },
+  {
+   "file": "121822-a21f17df-dirty-shot-wayland-white-panels-road-tt.jpg",
+   "time": "12:18:22",
+   "kind": "image"
+  },
+  {
+   "file": "122138-a21f17df-dirty-shot-wayland-white-panels-stand-aero.jpg",
+   "time": "12:21:38",
+   "kind": "image"
+  },
+  {
+   "file": "122205-a21f17df-dirty-shot-wayland-white-panels-road-aero.jpg",
+   "time": "12:22:05",
+   "kind": "image"
+  },
+  {
+   "file": "122219-a21f17df-dirty-shot-wayland-white-panels-stand-tt.jpg",
+   "time": "12:22:19",
+   "kind": "image"
+  },
+  {
+   "file": "122230-a21f17df-dirty-shot-wayland-white-panels-road-tt.jpg",
+   "time": "12:22:30",
+   "kind": "image"
+  },
+  {
+   "file": "122246-a21f17df-dirty-shot-wayland-white-panels-stand-endurance-carbon.jpg",
+   "time": "12:22:46",
+   "kind": "image"
+  },
+  {
+   "file": "122259-a21f17df-dirty-shot-wayland-white-panels-stand-gravel.jpg",
+   "time": "12:22:59",
+   "kind": "image"
+  },
+  {
+   "file": "122313-a21f17df-dirty-shot-wayland-white-panels-stand-mtb.jpg",
+   "time": "12:23:13",
+   "kind": "image"
+  },
+  {
+   "file": "125452-studio-signing-closed-roads-game-closed-road-sign-near.jpg",
+   "time": "12:54:52",
+   "kind": "image"
+  },
+  {
+   "file": "125452-studio-signing-closed-roads-game-closed-road-sign.jpg",
+   "time": "12:54:52",
+   "kind": "image"
+  },
+  {
+   "file": "125452-studio-signing-closed-roads-game-trust-dialog.jpg",
+   "time": "12:54:52",
+   "kind": "image"
+  },
+  {
+   "file": "125452-studio-signing-closed-roads-game-world-menu.jpg",
+   "time": "12:54:52",
+   "kind": "image"
+  },
+  {
+   "file": "125452-studio-signing-closed-roads-studio-built-signed.jpg",
+   "time": "12:54:52",
+   "kind": "image"
+  },
+  {
+   "file": "125452-studio-signing-closed-roads-studio-sign-dialog.jpg",
+   "time": "12:54:52",
+   "kind": "image"
+  },
+  {
+   "file": "130411-studio-signing-closed-roads-game-world-menu.jpg",
+   "time": "13:04:11",
+   "kind": "image"
+  },
+  {
+   "file": "131413-beard-fix-smoke-wayland-leela.jpg",
+   "time": "13:14:13",
+   "kind": "image"
+  },
+  {
+   "file": "131413-beard-fix-smoke-x11-leela.jpg",
+   "time": "13:14:13",
+   "kind": "image"
+  },
+  {
+   "file": "131746-web-web-account-linked.jpg",
+   "time": "13:17:46",
+   "kind": "image"
+  },
+  {
+   "file": "131746-web-web-account-signed-in.jpg",
+   "time": "13:17:46",
+   "kind": "image"
+  },
+  {
+   "file": "131746-web-web-account-signed-out.jpg",
+   "time": "13:17:46",
+   "kind": "image"
+  },
+  {
+   "file": "131746-web-web-account-workshop.jpg",
+   "time": "13:17:46",
+   "kind": "image"
+  },
+  {
+   "file": "135535-remote-server-desktop.jpg",
+   "time": "13:55:35",
+   "kind": "image"
+  },
+  {
+   "file": "135556-remote-server-remote-web-end.jpg",
+   "time": "13:55:56",
+   "kind": "image"
+  },
+  {
+   "file": "135556-remote-server-remote-web-joined.jpg",
+   "time": "13:55:56",
+   "kind": "image"
+  },
+  {
+   "file": "135556-remote-server-remote-web-riding.jpg",
+   "time": "13:55:56",
+   "kind": "image"
+  },
+  {
+   "file": "152602-ant-devices-A-1-scan.png",
+   "time": "15:26:02",
+   "kind": "image"
+  },
+  {
+   "file": "152611-ant-devices-A-2-paired.png",
+   "time": "15:26:11",
+   "kind": "image"
+  },
+  {
+   "file": "152612-ant-devices-A-3-ant.png",
+   "time": "15:26:12",
+   "kind": "image"
+  },
+  {
+   "file": "152616-ant-devices-A-4-strap-page.png",
+   "time": "15:26:16",
+   "kind": "image"
+  },
+  {
+   "file": "152618-ant-devices-A-5-use-for-heart-rate.png",
+   "time": "15:26:18",
+   "kind": "image"
+  },
+  {
+   "file": "152622-ant-devices-A-6-ride-hud.png",
+   "time": "15:26:22",
+   "kind": "image"
+  },
+  {
+   "file": "152632-ant-devices-A-end.jpg",
+   "time": "15:26:32",
+   "kind": "image"
+  },
+  {
+   "file": "152649-ant-devices-B-1-key-needed.png",
+   "time": "15:26:49",
+   "kind": "image"
+  },
+  {
+   "file": "152650-ant-devices-B-end.jpg",
+   "time": "15:26:50",
+   "kind": "image"
+  },
+  {
+   "file": "152651-ant-devices-B-2-typing-the-key.png",
+   "time": "15:26:51",
+   "kind": "image"
+  },
+  {
+   "file": "152716-ant-devices-C-end.jpg",
+   "time": "15:27:16",
+   "kind": "image"
+  },
+  {
+   "file": "153525-2026-11-26-andorra-envalira-pass.jpg",
+   "time": "15:35:25",
+   "kind": "image"
+  },
+  {
+   "file": "153550-2026-11-26-andorra-arcalis.jpg",
+   "time": "15:35:50",
+   "kind": "image"
+  },
+  {
+   "file": "154611-2026-11-26-andorra-gallina.jpg",
+   "time": "15:46:11",
+   "kind": "image"
+  },
+  {
+   "file": "154616-2026-11-26-andorra-gallina.mp4",
+   "time": "15:46:16",
+   "kind": "video"
+  },
+  {
+   "file": "154643-2026-11-26-andorra-andorra-la-vella.jpg",
+   "time": "15:46:43",
+   "kind": "image"
+  },
+  {
+   "file": "155115-2026-11-26-andorra-studio.jpg",
+   "time": "15:51:15",
+   "kind": "image"
+  },
+  {
+   "file": "160107-2026-11-26-andorra-web-web-world-cached-loading.jpg",
+   "time": "16:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "160107-2026-11-26-andorra-web-web-world-cached.jpg",
+   "time": "16:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "160107-2026-11-26-andorra-web-web-world-first-loading.jpg",
+   "time": "16:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "160107-2026-11-26-andorra-web-web-world-teleport.jpg",
+   "time": "16:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "160107-2026-11-26-andorra-web-web-world.jpg",
+   "time": "16:01:07",
+   "kind": "image"
+  },
+  {
+   "file": "160201-2026-11-26-andorra-web-memory-andorra-webgpu-web-world-first-loading.jpg",
+   "time": "16:02:01",
+   "kind": "image"
+  },
+  {
+   "file": "160201-2026-11-26-andorra-web-memory-andorra-webgpu-web-world-teleport.jpg",
+   "time": "16:02:01",
+   "kind": "image"
+  },
+  {
+   "file": "160201-2026-11-26-andorra-web-memory-andorra-webgpu-web-world.jpg",
+   "time": "16:02:01",
+   "kind": "image"
+  },
+  {
+   "file": "160249-2026-11-26-andorra-web-memory-andorra-webgl2-web-world-webgl2-first-loading.jpg",
+   "time": "16:02:49",
+   "kind": "image"
+  },
+  {
+   "file": "160249-2026-11-26-andorra-web-memory-andorra-webgl2-web-world-webgl2-teleport.jpg",
+   "time": "16:02:49",
+   "kind": "image"
+  },
+  {
+   "file": "160249-2026-11-26-andorra-web-memory-andorra-webgl2-web-world-webgl2.jpg",
+   "time": "16:02:49",
+   "kind": "image"
+  },
+  {
+   "file": "160410-vr-merge-2026-11-26-00-monado-left-eye.jpg",
+   "time": "16:04:10",
+   "kind": "image"
+  },
+  {
+   "file": "161353-98c46a0a-dirty-shot-ocw.jpg",
+   "time": "16:13:53",
+   "kind": "image"
+  },
+  {
+   "file": "161403-98c46a0a-dirty-shot-wayland-ocw-wayland.jpg",
+   "time": "16:14:03",
+   "kind": "image"
+  },
+  {
+   "file": "163125-vr-merge-2026-11-26-01-bike-computer-left-eye.jpg",
+   "time": "16:31:25",
+   "kind": "image"
+  },
+  {
+   "file": "163143-vr-merge-2026-11-26-02-controls-hint-left-eye.jpg",
+   "time": "16:31:43",
+   "kind": "image"
+  },
+  {
+   "file": "163206-vr-merge-2026-11-26-03-both-eyes.jpg",
+   "time": "16:32:06",
+   "kind": "image"
+  },
+  {
+   "file": "163245-vr-merge-2026-11-26-04-chase-mirror.jpg",
+   "time": "16:32:45",
+   "kind": "image"
+  },
+  {
+   "file": "163732-remote-server-desktop.jpg",
+   "time": "16:37:32",
+   "kind": "image"
+  },
+  {
+   "file": "163744-98c46a0a-dirty-shot-wayland-final-envalira-soldeu.jpg",
+   "time": "16:37:44",
+   "kind": "image"
+  },
+  {
+   "file": "164007-remote-server-remote-web-end.jpg",
+   "time": "16:40:07",
+   "kind": "image"
+  },
+  {
+   "file": "164007-remote-server-remote-web-joined.jpg",
+   "time": "16:40:07",
+   "kind": "image"
+  },
+  {
+   "file": "164007-remote-server-remote-web-riding.jpg",
+   "time": "16:40:07",
+   "kind": "image"
+  },
+  {
+   "file": "164012-remote-server-remote-web-end.jpg",
+   "time": "16:40:12",
+   "kind": "image"
+  },
+  {
+   "file": "164012-remote-server-remote-web-joined.jpg",
+   "time": "16:40:12",
+   "kind": "image"
+  },
+  {
+   "file": "164012-remote-server-remote-web-riding.jpg",
+   "time": "16:40:12",
+   "kind": "image"
+  },
+  {
+   "file": "164342-remote-server-joins-remote-web-joined.jpg",
+   "time": "16:43:42",
+   "kind": "image"
+  },
+  {
+   "file": "164701-remote-server-joins-remote-web-joined.jpg",
+   "time": "16:47:01",
+   "kind": "image"
+  },
+  {
+   "file": "164727-scenes-uh-probe1-uh-a-west.jpg",
+   "time": "16:47:27",
+   "kind": "image"
+  },
+  {
+   "file": "164753-scenes-uh-probe1-uh-b-east.jpg",
+   "time": "16:47:53",
+   "kind": "image"
+  },
+  {
+   "file": "164819-scenes-uh-probe1-uh-c-north.jpg",
+   "time": "16:48:19",
+   "kind": "image"
+  },
+  {
+   "file": "164842-scenes-uh-probe1-uh-d-plane.jpg",
+   "time": "16:48:42",
+   "kind": "image"
+  },
+  {
+   "file": "164958-scenes-uh-probe2-uh-e-slope.jpg",
+   "time": "16:49:58",
+   "kind": "image"
+  },
+  {
+   "file": "165007-remote-server-joins-remote-web-joined.jpg",
+   "time": "16:50:07",
+   "kind": "image"
+  },
+  {
+   "file": "165021-scenes-uh-probe2-uh-f-front.jpg",
+   "time": "16:50:21",
+   "kind": "image"
+  },
+  {
+   "file": "165044-scenes-uh-probe2-uh-g-mummelsee.jpg",
+   "time": "16:50:44",
+   "kind": "image"
+  },
+  {
+   "file": "165107-scenes-uh-probe2-uh-h-sunset.jpg",
+   "time": "16:51:07",
+   "kind": "image"
+  },
+  {
+   "file": "165200-scenes-uh-probe2-uh-v-circle.jpg",
+   "time": "16:52:00",
+   "kind": "image"
+  },
+  {
+   "file": "165215-scenes-uh-probe2-uh-v-circle.mp4",
+   "time": "16:52:15",
+   "kind": "video"
+  },
+  {
+   "file": "165317-remote-server-joins-remote-web-joined.jpg",
+   "time": "16:53:17",
+   "kind": "image"
+  },
+  {
+   "file": "165347-scenes-unicorn-hornisgrinde-final-unicorn-hornisgrinde-tower.jpg",
+   "time": "16:53:47",
+   "kind": "image"
+  },
+  {
+   "file": "165410-scenes-unicorn-hornisgrinde-final-unicorn-hornisgrinde-plateau.jpg",
+   "time": "16:54:10",
+   "kind": "image"
+  },
+  {
+   "file": "165433-scenes-unicorn-hornisgrinde-final-unicorn-hornisgrinde-sunset.jpg",
+   "time": "16:54:33",
+   "kind": "image"
+  },
+  {
+   "file": "165527-scenes-unicorn-hornisgrinde-final-unicorn-hornisgrinde-orbit-video.jpg",
+   "time": "16:55:27",
+   "kind": "image"
+  },
+  {
+   "file": "165541-scenes-unicorn-hornisgrinde-final-unicorn-hornisgrinde-orbit-video.mp4",
+   "time": "16:55:41",
+   "kind": "video"
+  },
+  {
+   "file": "165610-unicorn-hornisgrinde-unicorn-hornisgrinde-orbit-720p.mp4",
+   "time": "16:56:10",
+   "kind": "video"
+  },
+  {
+   "file": "165639-remote-server-joins-remote-web-joined.jpg",
+   "time": "16:56:39",
+   "kind": "image"
+  },
+  {
+   "file": "170000-remote-server-joins-remote-web-joined.jpg",
+   "time": "17:00:00",
+   "kind": "image"
+  },
+  {
+   "file": "170306-remote-server-joins-remote-web-joined.jpg",
+   "time": "17:03:06",
+   "kind": "image"
+  },
+  {
+   "file": "170626-remote-server-joins-remote-web-joined.jpg",
+   "time": "17:06:26",
+   "kind": "image"
+  },
+  {
+   "file": "170951-remote-server-desktop.jpg",
+   "time": "17:09:51",
+   "kind": "image"
+  },
+  {
+   "file": "170953-remote-server-remote-web-end.jpg",
+   "time": "17:09:53",
+   "kind": "image"
+  },
+  {
+   "file": "170953-remote-server-remote-web-joined.jpg",
+   "time": "17:09:53",
+   "kind": "image"
+  },
+  {
+   "file": "170953-remote-server-remote-web-riding.jpg",
+   "time": "17:09:53",
+   "kind": "image"
+  },
+  {
+   "file": "170958-remote-server-remote-web-end.jpg",
+   "time": "17:09:58",
+   "kind": "image"
+  },
+  {
+   "file": "170958-remote-server-remote-web-joined.jpg",
+   "time": "17:09:58",
+   "kind": "image"
+  },
+  {
+   "file": "170958-remote-server-remote-web-riding.jpg",
+   "time": "17:09:58",
+   "kind": "image"
+  },
+  {
+   "file": "185419-scenes-andorra-r1-readme-andorra-envalira.jpg",
+   "time": "18:54:19",
+   "kind": "image"
+  },
+  {
+   "file": "185436-scenes-andorra-r1-readme-andorra-envalira-winter.jpg",
+   "time": "18:54:36",
+   "kind": "image"
+  },
+  {
+   "file": "185453-scenes-andorra-r1-readme-andorra-gallina.jpg",
+   "time": "18:54:53",
+   "kind": "image"
+  },
+  {
+   "file": "185510-scenes-andorra-r1-readme-andorra-vella.jpg",
+   "time": "18:55:10",
+   "kind": "image"
+  },
+  {
+   "file": "185527-scenes-andorra-r1-readme-andorra-arcalis.jpg",
+   "time": "18:55:27",
+   "kind": "image"
+  },
+  {
+   "file": "185540-scenes-andorra-r1-readme-andorra-unicorn.jpg",
+   "time": "18:55:40",
+   "kind": "image"
+  },
+  {
+   "file": "185557-scenes-andorra-r1-readme-andorra-dawn.jpg",
+   "time": "18:55:57",
+   "kind": "image"
+  },
+  {
+   "file": "185704-scenes-andorra-r2-readme-andorra-envalira.jpg",
+   "time": "18:57:04",
+   "kind": "image"
+  },
+  {
+   "file": "185721-scenes-andorra-r2-readme-andorra-envalira-winter.jpg",
+   "time": "18:57:21",
+   "kind": "image"
+  },
+  {
+   "file": "185738-scenes-andorra-r2-readme-andorra-gallina.jpg",
+   "time": "18:57:38",
+   "kind": "image"
+  },
+  {
+   "file": "185755-scenes-andorra-r2-readme-andorra-vella.jpg",
+   "time": "18:57:55",
+   "kind": "image"
+  },
+  {
+   "file": "185812-scenes-andorra-r2-readme-andorra-arcalis.jpg",
+   "time": "18:58:12",
+   "kind": "image"
+  },
+  {
+   "file": "185829-scenes-andorra-r2-readme-andorra-dawn.jpg",
+   "time": "18:58:29",
+   "kind": "image"
+  },
+  {
+   "file": "185857-scenes-andorra-r2-readme-andorra-envalira-video.jpg",
+   "time": "18:58:57",
+   "kind": "image"
+  },
+  {
+   "file": "185909-scenes-andorra-r2-readme-andorra-envalira-video.mp4",
+   "time": "18:59:09",
+   "kind": "video"
+  },
+  {
+   "file": "185958-scenes-andorra-r2-readme-andorra-envalira-video-small.mp4",
+   "time": "18:59:58",
+   "kind": "video"
+  },
+  {
+   "file": "190010-scenes-andorra-r3-readme-andorra-envalira.jpg",
+   "time": "19:00:10",
+   "kind": "image"
+  },
+  {
+   "file": "190027-scenes-andorra-r3-readme-andorra-envalira-winter.jpg",
+   "time": "19:00:27",
+   "kind": "image"
+  },
+  {
+   "file": "190044-scenes-andorra-r3-readme-andorra-vella.jpg",
+   "time": "19:00:44",
+   "kind": "image"
+  },
+  {
+   "file": "190101-scenes-andorra-r3-readme-andorra-dawn.jpg",
+   "time": "19:01:01",
+   "kind": "image"
+  },
+  {
+   "file": "191007-together-20261126-remote-web-end.jpg",
+   "time": "19:10:07",
+   "kind": "image"
+  },
+  {
+   "file": "191007-together-20261126-remote-web-joined.jpg",
+   "time": "19:10:07",
+   "kind": "image"
+  },
+  {
+   "file": "191007-together-20261126-remote-web-riding.jpg",
+   "time": "19:10:07",
+   "kind": "image"
+  },
+  {
+   "file": "191015-together-20261126-remote-web-end.jpg",
+   "time": "19:10:15",
+   "kind": "image"
+  },
+  {
+   "file": "191015-together-20261126-remote-web-joined.jpg",
+   "time": "19:10:15",
+   "kind": "image"
+  },
+  {
+   "file": "191015-together-20261126-remote-web-riding.jpg",
+   "time": "19:10:15",
+   "kind": "image"
+  },
+  {
+   "file": "191147-together-20261126-preview-credits.jpg",
+   "time": "19:11:47",
+   "kind": "image"
+  },
+  {
+   "file": "191205-together-20261126-preview-start.jpg",
+   "time": "19:12:05",
+   "kind": "image"
+  },
+  {
+   "file": "215314-water-ground-before-readme-andorra-envalira.jpg",
+   "time": "21:53:14",
+   "kind": "image"
+  },
+  {
+   "file": "215332-water-ground-before-readme-andorra-envalira-winter.jpg",
+   "time": "21:53:32",
+   "kind": "image"
+  },
+  {
+   "file": "215346-water-ground-before-readme-andorra-unicorn.jpg",
+   "time": "21:53:46",
+   "kind": "image"
+  },
+  {
+   "file": "215418-water-ground-before-wg-mummelsee-above.jpg",
+   "time": "21:54:18",
+   "kind": "image"
+  },
+  {
+   "file": "215455-water-ground-before-wg-titisee.jpg",
+   "time": "21:54:55",
+   "kind": "image"
+  },
+  {
+   "file": "215511-water-ground-before-wg-rhine.jpg",
+   "time": "21:55:11",
+   "kind": "image"
+  },
+  {
+   "file": "215526-water-ground-before-wg-valira.jpg",
+   "time": "21:55:26",
+   "kind": "image"
+  },
+  {
+   "file": "215551-water-ground-before-wg-hornisgrinde-far.jpg",
+   "time": "21:55:51",
+   "kind": "image"
+  },
+  {
+   "file": "215603-water-ground-before-wg-envalira-pass.jpg",
+   "time": "21:56:03",
+   "kind": "image"
+  },
+  {
+   "file": "215630-water-ground-before-wg-teide-high.jpg",
+   "time": "21:56:30",
+   "kind": "image"
+  },
+  {
+   "file": "221502-status-page-local-phone.png",
+   "time": "22:15:02",
+   "kind": "image"
+  },
+  {
+   "file": "223449-42e87345-dirty-shot-fly-join.jpg",
+   "time": "22:34:49",
+   "kind": "image"
+  },
+  {
+   "file": "224932-web-log-web-log-iphone-no-wasm.png",
+   "time": "22:49:32",
+   "kind": "image"
+  },
+  {
+   "file": "224932-web-log-web-log-iphone-too-old.png",
+   "time": "22:49:32",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-readme-andorra-arcalis.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-readme-andorra-envalira-winter.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-readme-andorra-envalira.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-readme-andorra-unicorn.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-readme-teide.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-showcase-mummelsee.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-showcase-schluchsee.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-wg-envalira-pass.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-wg-hornisgrinde-far-noon.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-wg-hornisgrinde-far.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-wg-mummelsee-above.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-wg-rhine.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-wg-teide-high.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-wg-titisee.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "225002-water-ground-after-wg-valira.jpg",
+   "time": "22:50:02",
+   "kind": "image"
+  },
+  {
+   "file": "231224-34eac71b-dirty-shot-ocw.jpg",
+   "time": "23:12:24",
+   "kind": "image"
+  },
+  {
+   "file": "231234-34eac71b-dirty-shot-wayland-ocw-wayland.jpg",
+   "time": "23:12:34",
+   "kind": "image"
+  },
+  {
+   "file": "231659-status-page-live-phone.png",
+   "time": "23:16:59",
+   "kind": "image"
+  },
+  {
+   "file": "231724-status-page-live-desktop.png",
+   "time": "23:17:24",
+   "kind": "image"
+  },
+  {
+   "file": "231750-status-page-live-phone-dark.png",
+   "time": "23:17:50",
+   "kind": "image"
+  },
+  {
+   "file": "231751-status-page-voice-remote-web-end.jpg",
+   "time": "23:17:51",
+   "kind": "image"
+  },
+  {
+   "file": "231751-status-page-voice-remote-web-joined.jpg",
+   "time": "23:17:51",
+   "kind": "image"
+  },
+  {
+   "file": "231751-status-page-voice-remote-web-riding.jpg",
+   "time": "23:17:51",
+   "kind": "image"
+  },
+  {
+   "file": "232111-status-page-voice2-remote-web-end.jpg",
+   "time": "23:21:11",
+   "kind": "image"
+  },
+  {
+   "file": "232111-status-page-voice2-remote-web-joined.jpg",
+   "time": "23:21:11",
+   "kind": "image"
+  },
+  {
+   "file": "232111-status-page-voice2-remote-web-riding.jpg",
+   "time": "23:21:11",
+   "kind": "image"
+  },
+  {
+   "file": "232120-status-page-voice2-remote-web-end.jpg",
+   "time": "23:21:20",
+   "kind": "image"
+  },
+  {
+   "file": "232120-status-page-voice2-remote-web-joined.jpg",
+   "time": "23:21:20",
+   "kind": "image"
+  },
+  {
+   "file": "232120-status-page-voice2-remote-web-riding.jpg",
+   "time": "23:21:20",
+   "kind": "image"
+  },
+  {
+   "file": "232434-web-log-web-log-iphone-no-wasm.png",
+   "time": "23:24:34",
+   "kind": "image"
+  },
+  {
+   "file": "232434-web-log-web-log-iphone-too-old.png",
+   "time": "23:24:34",
+   "kind": "image"
+  },
+  {
+   "file": "232627-web-log-web-log-android-no-gpu.png",
+   "time": "23:26:27",
+   "kind": "image"
+  },
+  {
+   "file": "232627-web-log-web-log-android-no-wasm.png",
+   "time": "23:26:27",
+   "kind": "image"
+  },
+  {
+   "file": "232627-web-log-web-log-android-too-old.png",
+   "time": "23:26:27",
+   "kind": "image"
+  },
+  {
+   "file": "235419-42e87345-dirty-shot-ocw.jpg",
+   "time": "23:54:19",
+   "kind": "image"
+  },
+  {
+   "file": "235430-42e87345-dirty-shot-wayland-ocw-wayland.jpg",
+   "time": "23:54:30",
+   "kind": "image"
+  }
+ ],
+ "images": 247,
+ "videos": 6,
+ "sounds": 1,
+ "builds": {
+  "runs": 283,
+  "seconds": 198335.2,
+  "cargo_s": 68067.2,
+  "compiled": 67863,
+  "wait_s": 47453.0,
+  "failed": [
+   {
+    "start": "2026-11-26T05:11:19+01:00",
+    "seconds": 99.6,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-ad266d1e347afb128",
+    "branch": "worktree-agent-ad266d1e347afb128",
+    "commit": "01f783f4-dirty",
+    "command": "make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "051119-leela-3880287.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 634,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T09:12:26+01:00",
+    "seconds": 1.3,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "fc80aa9f-dirty",
+    "command": "bash test-output/fly/mem-measure.sh",
+    "exit": 127,
+    "log": "091226-marge-160770.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T09:30:24+01:00",
+    "seconds": 129.9,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "f62c5492-dirty",
+    "command": "make test-accounts && make check && make test-web-build && echo ALL-GREEN",
+    "exit": 2,
+    "log": "093024-leela-207338.log",
+    "sync_s": 3.0,
+    "cargo_s": 120.0,
+    "cargo_builds": 1,
+    "compiled": 282,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T09:33:07+01:00",
+    "seconds": 199.2,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "f62c5492-dirty",
+    "command": "make test-accounts && make check && make test-web-build && echo ALL-GREEN",
+    "exit": 2,
+    "log": "093307-leela-210544.log",
+    "sync_s": 0.8,
+    "cargo_s": 10.0,
+    "cargo_builds": 1,
+    "compiled": 724,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T09:40:01+01:00",
+    "seconds": 660.8,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "f62c5492-dirty",
+    "command": "make test-accounts && make check && make test-web-build && echo ALL-GREEN",
+    "exit": 2,
+    "log": "094001-leela-218307.log",
+    "sync_s": 0.8,
+    "cargo_s": 647.4,
+    "cargo_builds": 3,
+    "compiled": 538,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T10:45:04+01:00",
+    "seconds": 214.5,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "OCW_REMOTE_HOST=213.188.222.85 OCW_REMOTE_CERT=0ae1fb51a5eacb8fb1beb577b107b5fa5f7b177f89ccd4cae299c8e23a86ff77 OCW_REMOTE_WEB=\"server=https://213.188.222.85:47801&cert-hash=ca40c77412819e3d107b0db...",
+    "exit": 1,
+    "log": "104504-marge-345637.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T10:49:43+01:00",
+    "seconds": 168.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "python3 scripts/test-remote-web.py --query \"server=https://213.188.222.85:47801&cert-hash=ca40c77412819e3d107b0db8f0c9839beff6678973521639dec64944e3b85cc6\" --out test-output/remote-server/web-debug...",
+    "exit": 1,
+    "log": "104943-marge-352715.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T10:51:26+01:00",
+    "seconds": 71.6,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a52ff8004742f6ccd",
+    "branch": "worktree-agent-a52ff8004742f6ccd",
+    "commit": "ba5e986c-dirty",
+    "command": "make check",
+    "exit": 2,
+    "log": "105126-marge-356012.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 64
+   },
+   {
+    "start": "2026-11-26T10:45:14+01:00",
+    "seconds": 677.2,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "make check && make test-web-build && make test-smoke && echo CHECKS-OK",
+    "exit": 2,
+    "log": "104514-leela-346024.log",
+    "sync_s": 3.1,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 671
+   },
+   {
+    "start": "2026-11-26T11:10:37+01:00",
+    "seconds": 17.8,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "225de8e7-dirty",
+    "command": "cargo fmt --all --check; cargo clippy --workspace --all-targets -- -D warnings && cargo test -p ocw-client ride_summary && cargo test -p ocw-server credit && cargo test -p ocw-desktop account && ca...",
+    "exit": 101,
+    "log": "111037-leela-404620.log",
+    "sync_s": 0.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 14,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T11:11:44+01:00",
+    "seconds": 4.7,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "111144-marge-406918.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T11:16:34+01:00",
+    "seconds": 993.1,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "225de8e7-dirty",
+    "command": "cargo fmt --all --check; cargo clippy --workspace --all-targets -- -D warnings && cargo test -p ocw-client ride_summary && cargo test -p ocw-server credit && cargo test -p ocw-desktop account && ca...",
+    "exit": 101,
+    "log": "111634-leela-412770.log",
+    "sync_s": 0.8,
+    "cargo_s": 424.2,
+    "cargo_builds": 4,
+    "compiled": 165,
+    "wait_s": 558
+   },
+   {
+    "start": "2026-11-26T11:33:31+01:00",
+    "seconds": 168.5,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "225de8e7-dirty",
+    "command": "cargo fmt --all --check && cargo clippy -p ocw-desktop --all-targets -- -D warnings && cargo test -p ocw-desktop account && cargo test -p ocw-desktop workshop",
+    "exit": 101,
+    "log": "113331-leela-431365.log",
+    "sync_s": 0.9,
+    "cargo_s": 42.6,
+    "cargo_builds": 3,
+    "compiled": 49,
+    "wait_s": 116
+   },
+   {
+    "start": "2026-11-26T11:36:46+01:00",
+    "seconds": 6.2,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "225de8e7-dirty",
+    "command": "make test-accounts && make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "113646-leela-435063.log",
+    "sync_s": 0.8,
+    "cargo_s": 0.2,
+    "cargo_builds": 1,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T11:36:46+01:00",
+    "seconds": 836.7,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "225de8e7-dirty",
+    "command": "scripts/workshop-account-shot.sh test-output/workshop-account/workshop-account.jpg && ls -la test-output/workshop-account",
+    "exit": 1,
+    "log": "113646-marge-435109.log",
+    "sync_s": 0.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 589
+   },
+   {
+    "start": "2026-11-26T11:46:41+01:00",
+    "seconds": 356.0,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a38bf8cc98eb9bbc7",
+    "branch": "worktree-agent-a38bf8cc98eb9bbc7",
+    "commit": "52d0d9bc-dirty",
+    "command": "bash target/a38/phase-a.sh && bash target/a38/phase-b.sh",
+    "exit": 1,
+    "log": "114641-marge-447076.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 242
+   },
+   {
+    "start": "2026-11-26T12:03:38+01:00",
+    "seconds": 845.5,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "make web && make web-worlds && OCW_REMOTE_HOST=213.188.222.85 OCW_REMOTE_CERT=0ae1fb51a5eacb8fb1beb577b107b5fa5f7b177f89ccd4cae299c8e23a86ff77 OCW_REMOTE_WEB=\"server=https%3A%2F%2F213.188.222.85%3A...",
+    "exit": 1,
+    "log": "120338-marge-475116.log",
+    "sync_s": 0.8,
+    "cargo_s": 241.0,
+    "cargo_builds": 2,
+    "compiled": 58,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T12:18:53+01:00",
+    "seconds": 328.2,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "python3 scripts/test-remote-web.py --query \"server=https%3A%2F%2F213.188.222.85%3A47801&cert-hash=ca40c77412819e3d107b0db8f0c9839beff6678973521639dec64944e3b85cc6\" --out test-output/remote-server/p...",
+    "exit": 1,
+    "log": "121853-marge-513802.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T12:26:11+01:00",
+    "seconds": 364.6,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "OCW_REMOTE_HOST=213.188.222.85 OCW_REMOTE_CERT=0ae1fb51a5eacb8fb1beb577b107b5fa5f7b177f89ccd4cae299c8e23a86ff77 OCW_REMOTE_WEB=\"server=https%3A%2F%2F213.188.222.85%3A47801&cert-hash=ca40c77412819e3...",
+    "exit": 1,
+    "log": "122611-marge-522295.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T12:33:24+01:00",
+    "seconds": 366.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "OCW_REMOTE_HOST=213.188.222.85 OCW_REMOTE_CERT=0ae1fb51a5eacb8fb1beb577b107b5fa5f7b177f89ccd4cae299c8e23a86ff77 OCW_REMOTE_WEB=\"server=https%3A%2F%2F213.188.222.85%3A47801&cert-hash=ca40c77412819e3...",
+    "exit": 1,
+    "log": "123324-marge-529994.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T12:36:52+01:00",
+    "seconds": 241.6,
+    "machine": "macos",
+    "os": "macos",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "372aad1f-dirty",
+    "command": "rm -rf apps/desktop/src/workshop; cargo fmt --all --check && cargo test -p ocw-ui && cargo test -p ocw-web && cargo test -p ocw-desktop workshop && cargo test -p ocw-desktop account && cargo test -...",
+    "exit": 101,
+    "log": "123652-macos-533593.log",
+    "sync_s": 0.9,
+    "cargo_s": 232.0,
+    "cargo_builds": 2,
+    "compiled": 68,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T12:50:12+01:00",
+    "seconds": 754.5,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "125012-marge-574316.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 749
+   },
+   {
+    "start": "2026-11-26T13:24:17+01:00",
+    "seconds": 412.7,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "OCW_REMOTE_HOST=213.188.222.85 OCW_REMOTE_CERT=0ae1fb51a5eacb8fb1beb577b107b5fa5f7b177f89ccd4cae299c8e23a86ff77 OCW_REMOTE_WEB=\"server=https%3A%2F%2F213.188.222.85%3A47801&cert-hash=ca40c77412819e3...",
+    "exit": 1,
+    "log": "132417-marge-637239.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T13:31:28+01:00",
+    "seconds": 9.1,
+    "machine": "macos",
+    "os": "macos",
+    "checkout": "agent-a5e3f9902d7341373",
+    "branch": "worktree-agent-a5e3f9902d7341373",
+    "commit": "98c46a0a-dirty",
+    "command": "cargo fmt --all -- --check && cargo test -q -p ocw-sky 2>&1 | tail -5 && cargo test -q -p ocw-world 2>&1 | grep -E \"test result|FAILED|panicked|failed\" | head -20 && cargo test -q -p world-builder ...",
+    "exit": 1,
+    "log": "133128-macos-645357.log",
+    "sync_s": 5.3,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T13:32:17+01:00",
+    "seconds": 216.3,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "OCW_REMOTE_HOST=213.188.222.85 OCW_REMOTE_CERT=0ae1fb51a5eacb8fb1beb577b107b5fa5f7b177f89ccd4cae299c8e23a86ff77 OCW_REMOTE_WEB=\"server=https%3A%2F%2F213.188.222.85%3A47801&cert-hash=ca40c77412819e3...",
+    "exit": 1,
+    "log": "133217-marge-646554.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T13:40:46+01:00",
+    "seconds": 950.4,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-ae9ce66a8776a5e06",
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "commit": "3b8daab1",
+    "command": "free -g | head -2; rm -rf apps/desktop/src/workshop; make test-accounts && make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "134046-marge-657543.log",
+    "sync_s": 0.8,
+    "cargo_s": 776.5,
+    "cargo_builds": 3,
+    "compiled": 856,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T13:55:34+01:00",
+    "seconds": 394.2,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "OCW_REMOTE_HOST=213.188.222.85 OCW_REMOTE_CERT=0ae1fb51a5eacb8fb1beb577b107b5fa5f7b177f89ccd4cae299c8e23a86ff77 OCW_REMOTE_WEB=\"server=https%3A%2F%2F213.188.222.85%3A47801&cert-hash=ca40c77412819e3...",
+    "exit": 1,
+    "log": "135534-marge-700019.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T14:03:23+01:00",
+    "seconds": 382.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-af97cd2d46c527ce9",
+    "branch": "worktree-agent-af97cd2d46c527ce9",
+    "commit": "d04fe46e-dirty",
+    "command": "OCW_REMOTE_HOST=213.188.222.85 OCW_REMOTE_CERT=0ae1fb51a5eacb8fb1beb577b107b5fa5f7b177f89ccd4cae299c8e23a86ff77 OCW_REMOTE_WEB=\"server=https%3A%2F%2F213.188.222.85%3A47801&cert-hash=ca40c77412819e3...",
+    "exit": 1,
+    "log": "140323-marge-733854.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T14:06:15+01:00",
+    "seconds": 261.5,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5e3f9902d7341373",
+    "branch": "worktree-agent-a5e3f9902d7341373",
+    "commit": "98c46a0a-dirty",
+    "command": "free -g | head -2; make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "140615-marge-736921.log",
+    "sync_s": 1.1,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 732,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T14:06:04+01:00",
+    "seconds": 3127.4,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-a5e3f9902d7341373",
+    "branch": "worktree-agent-a5e3f9902d7341373",
+    "commit": "98c46a0a-dirty",
+    "command": "{ [ -L data/andorra ] || ln -s ~/src/OCW/data/andorra data/andorra; } && scripts/fetch-imagery.sh andorra && scripts/fetch-forest.sh andorra && scripts/build-andorra.sh",
+    "exit": 1,
+    "log": "140604-leela-736679.log",
+    "sync_s": 0.9,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 3094
+   },
+   {
+    "start": "2026-11-26T14:58:56+01:00",
+    "seconds": 266.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5e3f9902d7341373",
+    "branch": "worktree-agent-a5e3f9902d7341373",
+    "commit": "98c46a0a-dirty",
+    "command": "scripts/fetch-imagery.sh andorra && du -sh data/andorra/imagery && tail -8 data/andorra/SOURCES.md",
+    "exit": 135,
+    "log": "145856-marge-791487.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T14:12:25+01:00",
+    "seconds": 3059.9,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5e3f9902d7341373",
+    "branch": "worktree-agent-a5e3f9902d7341373",
+    "commit": "98c46a0a-dirty",
+    "command": "make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "141225-marge-743593.log",
+    "sync_s": 0.8,
+    "cargo_s": 1662.8,
+    "cargo_builds": 6,
+    "compiled": 1478,
+    "wait_s": 976
+   },
+   {
+    "start": "2026-11-26T14:11:07+01:00",
+    "seconds": 3140.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "merge-trio",
+    "branch": "merge/trio",
+    "commit": "a471203b",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "exit": 2,
+    "log": "141107-marge-742351.log",
+    "sync_s": 1.0,
+    "cargo_s": 2486.0,
+    "cargo_builds": 11,
+    "compiled": 2200,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T15:09:31+01:00",
+    "seconds": 7.0,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "merge-trio",
+    "branch": "merge/trio",
+    "commit": "31585b16",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "exit": 2,
+    "log": "150931-marge-828752.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T14:58:56+01:00",
+    "seconds": 1597.5,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-a5e3f9902d7341373",
+    "branch": "worktree-agent-a5e3f9902d7341373",
+    "commit": "98c46a0a-dirty",
+    "command": "{ [ -L data/andorra ] || ln -s ~/src/OCW/data/andorra data/andorra; } && scripts/fetch-forest.sh andorra && cat data/andorra/forest/index.json | head -c 600",
+    "exit": 1,
+    "log": "145856-leela-791511.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 456
+   },
+   {
+    "start": "2026-11-26T15:03:57+01:00",
+    "seconds": 1302.6,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "agent-a5e3f9902d7341373",
+    "branch": "worktree-agent-a5e3f9902d7341373",
+    "commit": "98c46a0a-dirty",
+    "command": "{ [ -L data/andorra ] || ln -s ~/src/OCW/data/andorra data/andorra; } && { [ -x $HOME/andorra-imagery-venv/bin/python3 ] || python3 -m venv $HOME/andorra-imagery-venv; } && $HOME/andorra-imagery-ve...",
+    "exit": 1,
+    "log": "150357-leela-796589.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 1297
+   },
+   {
+    "start": "2026-11-26T15:51:50+01:00",
+    "seconds": 17.3,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-a0839f554de0ec454",
+    "branch": "merge/vr-x1",
+    "commit": "31585b16-dirty",
+    "command": "cargo clippy --workspace --all-targets -- -D warnings 2>&1 | Select-String -Pattern \"^(error|warning)\" -Context 0,8 | Select-Object -First 40; \"CLIPPY=$LASTEXITCODE\"; cargo clippy -p ocw-desktop -p...",
+    "exit": 1,
+    "log": "155150-Win11Builder-901989.log",
+    "sync_s": 15.4,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T17:55:09+01:00",
+    "seconds": 221.4,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "ba69b807",
+    "command": "   set -e   D=/var/tmp/ocw   put() { install -m $1 \"$2\" \"$D/.$3.new\" && mv -f \"$D/.$3.new\" \"$D/$3\"; }   # Voice chat (spec §7) where clang 21 is installed (its bindings need it).   if command -v cl...",
+    "exit": 101,
+    "log": "175509-marge-1131160.log",
+    "sync_s": 0.7,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T17:58:51+01:00",
+    "seconds": 187.7,
+    "machine": "leela",
+    "os": "linux",
+    "checkout": "OCW",
+    "branch": "main",
+    "commit": "ba69b807",
+    "command": "   set -e   D=/var/tmp/ocw   put() { install -m $1 \"$2\" \"$D/.$3.new\" && mv -f \"$D/.$3.new\" \"$D/$3\"; }   # Voice chat (spec §7) where clang 21 is installed (its bindings need it).   if command -v cl...",
+    "exit": 101,
+    "log": "175851-leela-1134582.log",
+    "sync_s": 1.2,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T18:26:49+01:00",
+    "seconds": 84.3,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5aa4517aa9fcba7e",
+    "branch": "worktree-agent-a5aa4517aa9fcba7e",
+    "commit": "ba69b807-dirty",
+    "command": "cargo fmt --all -- --check; cargo test -p ocw-server --lib -- join_http tls:: && cargo test -p ocw-server --bin ocw-server && cargo test -p ocw-server --test webtransport_loopback && cargo test -p ...",
+    "exit": 101,
+    "log": "182649-marge-1185963.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 368,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T18:29:05+01:00",
+    "seconds": 10.6,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5aa4517aa9fcba7e",
+    "branch": "worktree-agent-a5aa4517aa9fcba7e",
+    "commit": "d491f70d-dirty",
+    "command": "cargo fmt --all -- --check && cargo test -p ocw-server --lib -- join_http tls:: && cargo test -p ocw-server --bin ocw-server && cargo test -p ocw-server --test webtransport_loopback && cargo test -...",
+    "exit": 101,
+    "log": "182905-marge-1188182.log",
+    "sync_s": 0.6,
+    "cargo_s": 6.2,
+    "cargo_builds": 1,
+    "compiled": 1,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T18:29:48+01:00",
+    "seconds": 170.9,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5aa4517aa9fcba7e",
+    "branch": "worktree-agent-a5aa4517aa9fcba7e",
+    "commit": "d491f70d-dirty",
+    "command": "cargo fmt --all -- --check && cargo test -p ocw-server --lib -- join_http tls:: && cargo test -p ocw-server --test webtransport_loopback && make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "182948-marge-1188998.log",
+    "sync_s": 0.6,
+    "cargo_s": 9.8,
+    "cargo_builds": 2,
+    "compiled": 725,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T18:34:51+01:00",
+    "seconds": 593.8,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5aa4517aa9fcba7e",
+    "branch": "worktree-agent-a5aa4517aa9fcba7e",
+    "commit": "d491f70d-dirty",
+    "command": "cargo fmt --all -- --check && make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "183451-marge-1193687.log",
+    "sync_s": 0.6,
+    "cargo_s": 411.9,
+    "cargo_builds": 2,
+    "compiled": 521,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T19:10:06+01:00",
+    "seconds": 70.7,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5aa4517aa9fcba7e",
+    "branch": "worktree-agent-a5aa4517aa9fcba7e",
+    "commit": "6850ec17",
+    "command": "O=test-output/together-$(date +%Y%m%d); S=target/together/site; python3 scripts/test-remote-web.py --together --dir $S --https --out $O --name \"Ada Rider\" --hear \"Bea Climber\" --seconds 40 > $O.ada...",
+    "exit": 1,
+    "log": "191006-marge-1255682.log",
+    "sync_s": 0.6,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T21:52:34+01:00",
+    "seconds": 163.4,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a4ff3c8abd356f67f",
+    "branch": "worktree-agent-a4ff3c8abd356f67f",
+    "commit": "562b6ebb-dirty",
+    "command": "make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "215234-marge-1486382.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 429,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T21:56:18+01:00",
+    "seconds": 488.2,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a4ff3c8abd356f67f",
+    "branch": "worktree-agent-a4ff3c8abd356f67f",
+    "commit": "fedfa78b-dirty",
+    "command": "make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "215618-marge-1490603.log",
+    "sync_s": 0.6,
+    "cargo_s": 468.5,
+    "cargo_builds": 2,
+    "compiled": 375,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T22:05:12+01:00",
+    "seconds": 36.4,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a4ff3c8abd356f67f",
+    "branch": "worktree-agent-a4ff3c8abd356f67f",
+    "commit": "fedfa78b-dirty",
+    "command": "make check && make test-web-build && make test-smoke",
+    "exit": 2,
+    "log": "220512-marge-1525636.log",
+    "sync_s": 0.7,
+    "cargo_s": 15.7,
+    "cargo_builds": 2,
+    "compiled": 10,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T21:49:47+01:00",
+    "seconds": 1052.0,
+    "machine": "Win11Builder",
+    "os": "windows",
+    "checkout": "agent-a4ff3c8abd356f67f",
+    "branch": "worktree-agent-a4ff3c8abd356f67f",
+    "commit": "562b6ebb-dirty",
+    "command": "cargo clippy -p ocw-desktop -p ocw-client -p ocw-ui --all-targets -- -D warnings; if ($LASTEXITCODE -ne 0) { exit 1 }; cargo test -p ocw-desktop devices; if ($LASTEXITCODE -ne 0) { exit 1 }; cargo ...",
+    "exit": 1,
+    "log": "214947-Win11Builder-1483297.log",
+    "sync_s": 6.4,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 656,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T22:06:23+01:00",
+    "seconds": 338.3,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a4ff3c8abd356f67f",
+    "branch": "worktree-agent-a4ff3c8abd356f67f",
+    "commit": "fedfa78b-dirty",
+    "command": "cargo test -p ocw-desktop --bin ocw-desktop menu::tests && make check && make test-web-build && make test-smoke",
+    "exit": 101,
+    "log": "220623-marge-1527533.log",
+    "sync_s": 0.7,
+    "cargo_s": 336.0,
+    "cargo_builds": 1,
+    "compiled": 49,
+    "wait_s": null
+   },
+   {
+    "start": "2026-11-26T22:14:47+01:00",
+    "seconds": 546.2,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5e80efcdf1cc0fcd",
+    "branch": "worktree-agent-a5e80efcdf1cc0fcd",
+    "commit": "42e87345-dirty",
+    "command": "bash scripts/test-kiosk.sh",
+    "exit": 143,
+    "log": "221447-marge-1538095.log",
+    "sync_s": 1.1,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 528
+   },
+   {
+    "start": "2026-11-26T22:27:54+01:00",
+    "seconds": 304.1,
+    "machine": "marge",
+    "os": "linux",
+    "checkout": "agent-a5e80efcdf1cc0fcd",
+    "branch": "worktree-agent-a5e80efcdf1cc0fcd",
+    "commit": "42e87345-dirty",
+    "command": "c=$(mktemp -d /var/tmp/ocw-joincfg.XXXX); XDG_CONFIG_HOME=$c OCW_APP=/var/tmp/ocw/ocw-desktop OCW_SIZE=1280x720 .claude/skills/run-ocw/drive.sh shot test-output/kiosk-remote/fly-join.jpg 50 -- --no...",
+    "exit": 1,
+    "log": "222754-marge-1553020.log",
+    "sync_s": 0.8,
+    "cargo_s": null,
+    "cargo_builds": 0,
+    "compiled": 0,
+    "wait_s": 303
+   }
+  ],
+  "machines": {
+   "marge": {
+    "runs": 198,
+    "seconds": 109731.49999999988,
+    "failed": 34,
+    "cargo_s": 44558.399999999994,
+    "compiled": 48367,
+    "wait_s": 10125.0
+   },
+   "leela": {
+    "runs": 54,
+    "seconds": 71897.30000000002,
+    "failed": 13,
+    "cargo_s": 15847.499999999998,
+    "compiled": 17137,
+    "wait_s": 32776.0
+   },
+   "macos": {
+    "runs": 22,
+    "seconds": 3543.7999999999993,
+    "failed": 2,
+    "cargo_s": 1417.6,
+    "compiled": 240,
+    "wait_s": 529.0
+   },
+   "Win11Builder": {
+    "runs": 9,
+    "seconds": 13162.6,
+    "failed": 2,
+    "cargo_s": 6243.7,
+    "compiled": 2119,
+    "wait_s": 4023.0
+   }
+  },
+  "online": {
+   "leela": 1.0,
+   "marge": 1.0,
+   "Weela": 0.0,
+   "Win11Builder": 0.9881944444444445,
+   "macos": 1.0
+  },
+  "samples": 1440
+ },
+ "prompts": [
+  {
+   "time": "04:32:21",
+   "iso": "2026-11-26T04:32:21+01:00",
+   "text": "The missing land use on OCW Studio's 2D map: should I start an agent to fix it? yes"
+  },
+  {
+   "time": "04:38:03",
+   "iso": "2026-11-26T04:38:03+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "04:40:13",
+   "iso": "2026-11-26T04:40:13+01:00",
+   "text": "b"
+  },
+  {
+   "time": "04:41:11",
+   "iso": "2026-11-26T04:41:11+01:00",
+   "text": "a"
+  },
+  {
+   "time": "04:42:24",
+   "iso": "2026-11-26T04:42:24+01:00",
+   "text": "a"
+  },
+  {
+   "time": "04:43:39",
+   "iso": "2026-11-26T04:43:39+01:00",
+   "text": "a, add to documentation"
+  },
+  {
+   "time": "04:45:14",
+   "iso": "2026-11-26T04:45:14+01:00",
+   "text": "is there a description on how to do the echo voice test, is it in readme?"
+  },
+  {
+   "time": "07:18:36",
+   "iso": "2026-11-26T07:18:36+01:00",
+   "text": "next question"
+  },
+  {
+   "time": "07:40:21",
+   "iso": "2026-11-26T07:40:21+01:00",
+   "text": "b"
+  },
+  {
+   "time": "07:43:21",
+   "iso": "2026-11-26T07:43:21+01:00",
+   "text": "a"
+  },
+  {
+   "time": "07:44:19",
+   "iso": "2026-11-26T07:44:19+01:00",
+   "text": "a"
+  },
+  {
+   "time": "07:51:16",
+   "iso": "2026-11-26T07:51:16+01:00",
+   "text": "q23 a"
+  },
+  {
+   "time": "07:52:15",
+   "iso": "2026-11-26T07:52:15+01:00",
+   "text": "yes"
+  },
+  {
+   "time": "08:40:01",
+   "iso": "2026-11-26T08:40:01+01:00",
+   "text": "I wan to host the ocw-server and the voice server on vercel. I created an api key: <token> and started the import of OCW and the deploy of ocw-server. Can you take over and make sure those two servers are running. also implement the accounts now using a db (postgres?) on vercel."
+  },
+  {
+   "time": "08:46:19",
+   "iso": "2026-11-26T08:46:19+01:00",
+   "text": "the team is newkit. okay then lets only put the accounts with psql and the bike / hearts / parts thing there."
+  },
+  {
+   "time": "08:54:22",
+   "iso": "2026-11-26T08:54:22+01:00",
+   "text": "stop with vercel for now"
+  },
+  {
+   "time": "08:55:59",
+   "iso": "2026-11-26T08:55:59+01:00",
+   "text": "i created a fly.io account <token>"
+  },
+  {
+   "time": "08:59:38",
+   "iso": "2026-11-26T08:59:38+01:00",
+   "text": "q18 (a)"
+  },
+  {
+   "time": "09:01:28",
+   "iso": "2026-11-26T09:01:28+01:00",
+   "text": "q19 a"
+  },
+  {
+   "time": "09:02:17",
+   "iso": "2026-11-26T09:02:17+01:00",
+   "text": "q20 a"
+  },
+  {
+   "time": "09:02:59",
+   "iso": "2026-11-26T09:02:59+01:00",
+   "text": "q21 a"
+  },
+  {
+   "time": "09:04:42",
+   "iso": "2026-11-26T09:04:42+01:00",
+   "text": "yes"
+  },
+  {
+   "time": "10:10:57",
+   "iso": "2026-11-26T10:10:57+01:00",
+   "text": "okay, added a payment option to fly.io"
+  },
+  {
+   "time": "10:11:30",
+   "iso": "2026-11-26T10:11:30+01:00",
+   "text": "10$ budget per month is authorizes"
+  },
+  {
+   "time": "10:14:34",
+   "iso": "2026-11-26T10:14:34+01:00",
+   "text": "whats the user secret? where did it come from?"
+  },
+  {
+   "time": "10:18:37",
+   "iso": "2026-11-26T10:18:37+01:00",
+   "text": "i have created that secret but its not used. it can be safely removed"
+  },
+  {
+   "time": "10:20:16",
+   "iso": "2026-11-26T10:20:16+01:00",
+   "text": "what would be the costs for the psql on fly as well?"
+  },
+  {
+   "time": "10:24:51",
+   "iso": "2026-11-26T10:24:51+01:00",
+   "text": "lets keep it simple for now and put the psql on fly, too. increase budget authorization to 16$."
+  },
+  {
+   "time": "10:25:36",
+   "iso": "2026-11-26T10:25:36+01:00",
+   "text": "yes, a"
+  },
+  {
+   "time": "10:31:14",
+   "iso": "2026-11-26T10:31:14+01:00",
+   "text": "what else can be developed?"
+  },
+  {
+   "time": "10:32:25",
+   "iso": "2026-11-26T10:32:25+01:00",
+   "text": "okay, develop 1.-8."
+  },
+  {
+   "time": "10:33:47",
+   "iso": "2026-11-26T10:33:47+01:00",
+   "text": "give me the next open question"
+  },
+  {
+   "time": "10:36:14",
+   "iso": "2026-11-26T10:36:14+01:00",
+   "text": "okay, a"
+  },
+  {
+   "time": "10:39:27",
+   "iso": "2026-11-26T10:39:27+01:00",
+   "text": "b"
+  },
+  {
+   "time": "10:41:36",
+   "iso": "2026-11-26T10:41:36+01:00",
+   "text": "put warning signs, but let it be ridable"
+  },
+  {
+   "time": "10:51:23",
+   "iso": "2026-11-26T10:51:23+01:00",
+   "text": "planning: make a switch in settings for turning on traffic. this are cars, lorries, motobikes planes, helicopters, ufos and such. investigate if its possible to get any real time data on density / jams as well as flight data, eg flightradar24 or similiar."
+  },
+  {
+   "time": "10:52:03",
+   "iso": "2026-11-26T10:52:03+01:00",
+   "text": "elaborate p10q11"
+  },
+  {
+   "time": "10:57:15",
+   "iso": "2026-11-26T10:57:15+01:00",
+   "text": "a for now"
+  },
+  {
+   "time": "11:01:32",
+   "iso": "2026-11-26T11:01:32+01:00",
+   "text": "open questions?"
+  },
+  {
+   "time": "11:07:50",
+   "iso": "2026-11-26T11:07:50+01:00",
+   "text": "i disnt mean to stop anything, continue everything"
+  },
+  {
+   "time": "11:38:03",
+   "iso": "2026-11-26T11:38:03+01:00",
+   "text": "q1-3: yes, as proposed. q4: yes, cars can hit riders. add a lunatic mode, where cares drive like crazy and overtake in stupid and dangerous situations"
+  },
+  {
+   "time": "11:39:16",
+   "iso": "2026-11-26T11:39:16+01:00",
+   "text": "q5: ivestigate where to get data and add a switch for that. implement when there are datasources available that suit us"
+  },
+  {
+   "time": "11:41:22",
+   "iso": "2026-11-26T11:41:22+01:00",
+   "text": "q6: yes"
+  },
+  {
+   "time": "11:41:53",
+   "iso": "2026-11-26T11:41:53+01:00",
+   "text": "q7: yes"
+  },
+  {
+   "time": "11:42:44",
+   "iso": "2026-11-26T11:42:44+01:00",
+   "text": "q7: a,b,c"
+  },
+  {
+   "time": "11:43:53",
+   "iso": "2026-11-26T11:43:53+01:00",
+   "text": "q8: make options a,b,c selectalble in traffic settings in game menu"
+  },
+  {
+   "time": "11:44:56",
+   "iso": "2026-11-26T11:44:56+01:00",
+   "text": "q9: yes"
+  },
+  {
+   "time": "11:45:41",
+   "iso": "2026-11-26T11:45:41+01:00",
+   "text": "q9: b"
+  },
+  {
+   "time": "11:46:27",
+   "iso": "2026-11-26T11:46:27+01:00",
+   "text": "yes, change q9, i made a mistake"
+  },
+  {
+   "time": "11:47:27",
+   "iso": "2026-11-26T11:47:27+01:00",
+   "text": "q10: a"
+  },
+  {
+   "time": "11:50:08",
+   "iso": "2026-11-26T11:50:08+01:00",
+   "text": "what are the ant+ questions?"
+  },
+  {
+   "time": "11:51:46",
+   "iso": "2026-11-26T11:51:46+01:00",
+   "text": "q1: b for now"
+  },
+  {
+   "time": "11:52:29",
+   "iso": "2026-11-26T11:52:29+01:00",
+   "text": "q2: postpone the hw test, just prepare and build"
+  },
+  {
+   "time": "11:54:34",
+   "iso": "2026-11-26T11:54:34+01:00",
+   "text": "q3: a, but also b"
+  },
+  {
+   "time": "11:57:00",
+   "iso": "2026-11-26T11:57:00+01:00",
+   "text": "18q11: b,c"
+  },
+  {
+   "time": "12:17:07",
+   "iso": "2026-11-26T12:17:07+01:00",
+   "text": "gibe me the open questions"
+  },
+  {
+   "time": "12:51:40",
+   "iso": "2026-11-26T12:51:40+01:00",
+   "text": "q4 b , q5: a,b, q6: c"
+  },
+  {
+   "time": "13:14:55",
+   "iso": "2026-11-26T13:14:55+01:00",
+   "text": "add and build a world map for andorra. do all the estimations as for the other worlds"
+  },
+  {
+   "time": "15:26:54",
+   "iso": "2026-11-26T15:26:54+01:00",
+   "text": "yes, do the fly agent"
+  },
+  {
+   "time": "15:27:22",
+   "iso": "2026-11-26T15:27:22+01:00",
+   "text": "would i need the marge vr build output"
+  },
+  {
+   "time": "15:28:39",
+   "iso": "2026-11-26T15:28:39+01:00",
+   "text": "yes and yes"
+  },
+  {
+   "time": "15:32:51",
+   "iso": "2026-11-26T15:32:51+01:00",
+   "text": "yes, a"
+  },
+  {
+   "time": "16:07:47",
+   "iso": "2026-11-26T16:07:47+01:00",
+   "text": "render me a nice image of the unicorn flying over hornisgrinde"
+  },
+  {
+   "time": "16:09:21",
+   "iso": "2026-11-26T16:09:21+01:00",
+   "text": "also make a short video clip of the unicorn, have the drown swirl around so that unicorn and landscape is visible"
+  },
+  {
+   "time": "16:10:14",
+   "iso": "2026-11-26T16:10:14+01:00",
+   "text": "is everything clear for the ant plus HR snsor connction and recording?"
+  },
+  {
+   "time": "16:16:22",
+   "iso": "2026-11-26T16:16:22+01:00",
+   "text": "retrieve the ant key and tell me here"
+  },
+  {
+   "time": "16:19:16",
+   "iso": "2026-11-26T16:19:16+01:00",
+   "text": "yes"
+  },
+  {
+   "time": "18:14:16",
+   "iso": "2026-11-26T18:14:16+01:00",
+   "text": "1: yea"
+  },
+  {
+   "time": "18:14:53",
+   "iso": "2026-11-26T18:14:53+01:00",
+   "text": "2: yes"
+  },
+  {
+   "time": "18:36:32",
+   "iso": "2026-11-26T18:36:32+01:00",
+   "text": "create some artwork of Andorra, put it here and also put it in the readme"
+  },
+  {
+   "time": "20:34:27",
+   "iso": "2026-11-26T20:34:27+01:00",
+   "text": "1: yes 2: show an image 3: whats the question"
+  },
+  {
+   "time": "20:53:59",
+   "iso": "2026-11-26T20:53:59+01:00",
+   "text": "2: yes fix that but in a general way. for instance i noticed all lakes and rivers have that zig zag pattern. fix it for all similar cases"
+  },
+  {
+   "time": "21:01:32",
+   "iso": "2026-11-26T21:01:32+01:00",
+   "text": "q7 investigate b"
+  },
+  {
+   "time": "21:02:20",
+   "iso": "2026-11-26T21:02:20+01:00",
+   "text": "q8:b"
+  },
+  {
+   "time": "21:28:53",
+   "iso": "2026-11-26T21:28:53+01:00",
+   "text": "yes, q7 d"
+  },
+  {
+   "time": "21:41:07",
+   "iso": "2026-11-26T21:41:07+01:00",
+   "text": "Envalira pass on an October evening - i think the poles dont belomg there. i spoke to some locals and they say there is nothing like that."
+  },
+  {
+   "time": "21:42:40",
+   "iso": "2026-11-26T21:42:40+01:00",
+   "text": "give me a vr question"
+  },
+  {
+   "time": "21:43:38",
+   "iso": "2026-11-26T21:43:38+01:00",
+   "text": "yes, a"
+  },
+  {
+   "time": "21:44:39",
+   "iso": "2026-11-26T21:44:39+01:00",
+   "text": "c"
+  },
+  {
+   "time": "21:45:42",
+   "iso": "2026-11-26T21:45:42+01:00",
+   "text": "b"
+  },
+  {
+   "time": "21:47:11",
+   "iso": "2026-11-26T21:47:11+01:00",
+   "text": "is the fly.io seever up and running? does is have a website?"
+  },
+  {
+   "time": "21:56:59",
+   "iso": "2026-11-26T21:56:59+01:00",
+   "text": "yes, build the statistic page for the server"
+  },
+  {
+   "time": "21:58:57",
+   "iso": "2026-11-26T21:58:57+01:00",
+   "text": "q14, as proposed"
+  },
+  {
+   "time": "21:59:52",
+   "iso": "2026-11-26T21:59:52+01:00",
+   "text": "can i do the voice echo test from my fone? the webapp does not run on my phone (still). can u fix that, too?"
+  },
+  {
+   "time": "22:03:30",
+   "iso": "2026-11-26T22:03:30+01:00",
+   "text": "q15?"
+  },
+  {
+   "time": "22:04:20",
+   "iso": "2026-11-26T22:04:20+01:00",
+   "text": "would it help to watch the browser console? how to open?"
+  },
+  {
+   "time": "22:05:45",
+   "iso": "2026-11-26T22:05:45+01:00",
+   "text": "have the kiosks connect to the new fly.io server"
+  },
+  {
+   "time": "22:06:49",
+   "iso": "2026-11-26T22:06:49+01:00",
+   "text": "yes build the log option for the browser"
+  }
+ ],
+ "tokens": {
+  "total": {
+   "input": 12882,
+   "cache_write": 22246946,
+   "cache_read": 1681826412,
+   "output": 3532680,
+   "total": 1707618920,
+   "messages": 5960
+  },
+  "features": {
+   "Other": {
+    "input": 6456,
+    "cache_write": 9986430,
+    "cache_read": 872601115,
+    "output": 1821228,
+    "total": 884415229,
+    "messages": 2978
+   },
+   "Planning & spec": {
+    "input": 1490,
+    "cache_write": 4289045,
+    "cache_read": 163109744,
+    "output": 353488,
+    "total": 167753767,
+    "messages": 697
+   },
+   "Art project": {
+    "input": 824,
+    "cache_write": 1476140,
+    "cache_read": 75899568,
+    "output": 162756,
+    "total": 77539288,
+    "messages": 359
+   },
+   "Audio & voice": {
+    "input": 488,
+    "cache_write": 685128,
+    "cache_read": 45929326,
+    "output": 117549,
+    "total": 46732491,
+    "messages": 231
+   },
+   "Riders & bikes": {
+    "input": 204,
+    "cache_write": 214202,
+    "cache_read": 17007393,
+    "output": 103609,
+    "total": 17325408,
+    "messages": 97
+   },
+   "UI & menus": {
+    "input": 260,
+    "cache_write": 504833,
+    "cache_read": 26471559,
+    "output": 94479,
+    "total": 27071131,
+    "messages": 121
+   },
+   "Build, release & infra": {
+    "input": 1124,
+    "cache_write": 2381988,
+    "cache_read": 161989893,
+    "output": 379211,
+    "total": 164752216,
+    "messages": 524
+   },
+   "Worlds & terrain": {
+    "input": 1276,
+    "cache_write": 1289541,
+    "cache_read": 251113896,
+    "output": 305895,
+    "total": 252710608,
+    "messages": 608
+   },
+   "Multiplayer & server": {
+    "input": 760,
+    "cache_write": 1419639,
+    "cache_read": 67703918,
+    "output": 194465,
+    "total": 69318782,
+    "messages": 345
+   }
+  }
+ },
+ "incidents": {
+  "auto": [
+   {
+    "time": "00:00:30",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Weela",
+    "text": "Weela unreachable (no route to host)"
+   },
+   {
+    "time": "00:00:30",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "disk C: on Win11Builder at 97 %"
+   },
+   {
+    "time": "06:10:08",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-landuse/target (32.8 GB)"
+   },
+   {
+    "time": "06:10:11",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a219c9b503ec94ccf/target (38.8 GB)"
+   },
+   {
+    "time": "06:10:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a219c9b503ec94ccf/target (3.1 GB)"
+   },
+   {
+    "time": "06:51:57",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-routes/target (32.8 GB)"
+   },
+   {
+    "time": "06:52:03",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-ad266d1e347afb128/target (40.7 GB)"
+   },
+   {
+    "time": "06:52:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ad266d1e347afb128/target (7.6 GB)"
+   },
+   {
+    "time": "07:46:09",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-q16/target (32.9 GB)"
+   },
+   {
+    "time": "07:46:13",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a8045880f0c5689dc/target (46.3 GB)"
+   },
+   {
+    "time": "07:46:14",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a8045880f0c5689dc/target (0.4 GB)"
+   },
+   {
+    "time": "09:22:54",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-brouter/target (32.9 GB)"
+   },
+   {
+    "time": "09:22:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ac80ed3b3b3781bb1/target (41.2 GB)"
+   },
+   {
+    "time": "09:51:42",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-fly/target (28.2 GB)"
+   },
+   {
+    "time": "10:37:46",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (timeout)"
+   },
+   {
+    "time": "10:40:46",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "10:57:01",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-accounts/target (35.3 GB)"
+   },
+   {
+    "time": "12:24:40",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (3.2 GB)"
+   },
+   {
+    "time": "12:34:55",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW/target (0.5 GB)"
+   },
+   {
+    "time": "12:43:09",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-flaky/target (33.7 GB)"
+   },
+   {
+    "time": "12:43:11",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a52ff8004742f6ccd/target (6.1 GB)"
+   },
+   {
+    "time": "12:43:15",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a52ff8004742f6ccd/target (35.8 GB)"
+   },
+   {
+    "time": "13:53:49",
+    "kind": "disk-full",
+    "source": "dashboard",
+    "machine": "marge",
+    "text": "disk home on marge at 90 %"
+   },
+   {
+    "time": "14:17:20",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:27:45",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:38:11",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:48:34",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "14:58:49",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor alert  (0.0 GB)"
+   },
+   {
+    "time": "15:04:01",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-studio-logo/target (20.0 GB)"
+   },
+   {
+    "time": "15:04:03",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-fps/target (20.9 GB)"
+   },
+   {
+    "time": "15:04:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-models-e3/target (20.7 GB)"
+   },
+   {
+    "time": "15:04:06",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-activities/target (25.4 GB)"
+   },
+   {
+    "time": "15:04:08",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-j8-sides/target (39.5 GB)"
+   },
+   {
+    "time": "15:04:09",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ad6678d7086339e61/target (9.1 GB)"
+   },
+   {
+    "time": "15:04:12",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a14a9b861052bbda3/target (35.5 GB)"
+   },
+   {
+    "time": "15:04:14",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a38bf8cc98eb9bbc7/target (41.9 GB)"
+   },
+   {
+    "time": "15:04:16",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-acc2/target (35.5 GB)"
+   },
+   {
+    "time": "15:09:00",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a367743c92249633c/target (7.4 GB)"
+   },
+   {
+    "time": "15:09:00",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a35b38f26955e38d0/target (2.0 GB)"
+   },
+   {
+    "time": "15:21:42",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-ad6678d7086339e61/target (35.6 GB)"
+   },
+   {
+    "time": "15:21:49",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a38bf8cc98eb9bbc7/target (13.4 GB)"
+   },
+   {
+    "time": "15:21:56",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-trio/target (47.1 GB)"
+   },
+   {
+    "time": "15:29:14",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ad6678d7086339e61/target (0.8 GB)"
+   },
+   {
+    "time": "15:59:41",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ab692ee78e235e3a6/target (6.3 GB)"
+   },
+   {
+    "time": "16:46:46",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-sync/target (29.6 GB)"
+   },
+   {
+    "time": "17:22:58",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-ae9ce66a8776a5e06/target (50.0 GB)"
+   },
+   {
+    "time": "17:23:05",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-ae9ce66a8776a5e06/target (72.2 GB)"
+   },
+   {
+    "time": "17:23:12",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a5c7498037cda739c/target (34.0 GB)"
+   },
+   {
+    "time": "17:23:15",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a5c7498037cda739c/target (16.0 GB)"
+   },
+   {
+    "time": "17:23:20",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a5e3f9902d7341373/target (0.5 GB)"
+   },
+   {
+    "time": "17:23:24",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a5e3f9902d7341373/target (21.2 GB)"
+   },
+   {
+    "time": "17:23:33",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-three/target (39.2 GB)"
+   },
+   {
+    "time": "17:23:37",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-vr-x1/target (39.2 GB)"
+   },
+   {
+    "time": "17:23:45",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-merge-acc2/target (39.6 GB)"
+   },
+   {
+    "time": "17:30:52",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-a5e3f9902d7341373/target (3.4 GB)"
+   },
+   {
+    "time": "17:30:52",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "macos",
+    "text": "janitor delete OCW-worktree-agent-ae9ce66a8776a5e06/target (29.9 GB)"
+   },
+   {
+    "time": "17:54:29",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-fly2/target (35.0 GB)"
+   },
+   {
+    "time": "17:54:38",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-af97cd2d46c527ce9/target (89.0 GB)"
+   },
+   {
+    "time": "19:03:19",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a334c6ab7508061fd/target (3.6 GB)"
+   },
+   {
+    "time": "19:44:04",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-merge-join/target (35.0 GB)"
+   },
+   {
+    "time": "19:44:10",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "marge",
+    "text": "janitor delete OCW-worktree-agent-a5aa4517aa9fcba7e/target (37.9 GB)"
+   },
+   {
+    "time": "19:44:12",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "leela",
+    "text": "janitor delete OCW-worktree-agent-a5aa4517aa9fcba7e/target (3.8 GB)"
+   },
+   {
+    "time": "21:04:54",
+    "kind": "machine-offline",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder unreachable (ssh error)"
+   },
+   {
+    "time": "21:18:54",
+    "kind": "machine-online",
+    "source": "dashboard",
+    "machine": "Win11Builder",
+    "text": "Win11Builder back online"
+   },
+   {
+    "time": "22:27:54",
+    "kind": "runs-failed",
+    "source": "remote.sh",
+    "machine": "Win11Builder, leela, macos, marge",
+    "text": "51 failed remote.sh runs (Win11Builder 2, leela 13, macos 2, marge 34)"
+   },
+   {
+    "time": "22:29:24",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a24df0177fc9a4e22/target (2.3 GB)"
+   },
+   {
+    "time": "22:40:30",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-ad1da90d7521d908e/target (0.5 GB)"
+   },
+   {
+    "time": "22:40:30",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a03e9957572339d7f/target (7.9 GB)"
+   },
+   {
+    "time": "23:10:09",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a64cacd30a467fa11/target (2.3 GB)"
+   },
+   {
+    "time": "23:19:53",
+    "kind": "janitor-delete",
+    "source": "janitor",
+    "machine": "Win11Builder",
+    "text": "janitor delete OCW-worktree-agent-a01e442248925aa9a/target (2.3 GB)"
+   }
+  ],
+  "notes": "",
+  "noted": []
+ },
+ "features": [
+  {
+   "version": "6.03",
+   "title": "Decided: 16H Q16 – when OCW Studio opens a package with a patch file <package>.ocwpatch n…",
+   "commit": "5e482567",
+   "sha": "5e48256771081e8bcf18b8490db787fbd0af2d93",
+   "time": "2026-11-26T04:40:22+01:00",
+   "merge": false,
+   "subject": "Studio asks before loading the patch next to a package (16H Q16 (b))"
+  },
+  {
+   "version": "6.04",
+   "title": "Decided: 16H Q17 – OCW Studio's *Build package* keeps writing patched/<name>.ocwpkg next…",
+   "commit": "e949f664",
+   "sha": "e949f664529816068de19ce47f8f1c5bde8651ab",
+   "time": "2026-11-26T04:41:22+01:00",
+   "merge": false,
+   "subject": "Build package: patched/ next to the package, a build recipe with each official package for the full chain (16H Q17 (a))"
+  },
+  {
+   "version": "6.05",
+   "title": "Decided: 16H Q18 – a road edit in OCW Studio acts on the whole OSM way by default",
+   "commit": "f8a8c25f",
+   "sha": "f8a8c25fee379c47941252f284aa2caad917d9d4",
+   "time": "2026-11-26T04:42:34+01:00",
+   "merge": false,
+   "subject": "Road edits act on the whole OSM way by default, the edge as the switch (16H Q18 (a))"
+  },
+  {
+   "version": "6.06",
+   "title": "Decided: 16H Q19 – the game's route list offers the package's own routes, every routes/*.…",
+   "commit": "01f783f4",
+   "sha": "01f783f44dbdbe8cc94a8b3c859aac9aeab93239",
+   "time": "2026-11-26T04:44:04+01:00",
+   "merge": false,
+   "subject": "The game lists the studio's saved routes next to the package and in the data dir; documented in the README (16H Q19 (a))"
+  },
+  {
+   "version": "6.07",
+   "title": "Fixed: OCW Studio's 2D map draws the open package's land use again",
+   "commit": "19694296",
+   "sha": "19694296088b024c7184aba6dd78eaad24531d84",
+   "time": "2026-11-26T05:41:52+01:00",
+   "merge": true,
+   "subject": "Merge the land-use fix for the studio's 2D map: the texture is made again in the egui context that draws it, never above the largest texture side (6.07)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T06:52:56+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-a8045880f0c5689dc",
+    "command": "make check && make test-web-build && make test-smoke",
+    "log": "065256-marge-4071226.log",
+    "how": "commit",
+    "suites": 81,
+    "passed": 3572,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.08",
+   "title": "Built: the game's route list offers the package's own routes, then the user's, marked \"yo…",
+   "commit": "72db9890",
+   "sha": "72db9890b9a30de632f649ff8e3aa481a2a95d0c",
+   "time": "2026-11-26T06:11:54+01:00",
+   "merge": true,
+   "subject": "Merge the user's routes in the game's list: next to the package and in the data dir, marked yours; the studio's save fallback; README (16H Q19 (a); 6.08)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.09",
+   "title": "Decided: 16H Q20 – the route planner's settings stay separate",
+   "commit": "73941c84",
+   "sha": "73941c84cc92282705ec7668203c002a467e4d4c",
+   "time": "2026-11-26T07:40:36+01:00",
+   "merge": false,
+   "subject": "Planner settings stay separate: the studio's planner.json, the game's own later (16H Q20 (b))"
+  },
+  {
+   "version": "6.10",
+   "title": "Decided: 16H Q21 – sending the via-points to a BRouter server is asked once per server an…",
+   "commit": "34b1dab5",
+   "sha": "34b1dab52ed840d37dd29f6491f386f1dd8262bc",
+   "time": "2026-11-26T07:43:30+01:00",
+   "merge": false,
+   "subject": "BRouter consent remembered per server (16H Q21 (a))"
+  },
+  {
+   "version": "6.11",
+   "title": "Decided: 16H Q22 – the planner tests use our own BRouter on marge",
+   "commit": "03e4f45d",
+   "sha": "03e4f45dab005b6539562fbdf6b51180e41fa793",
+   "time": "2026-11-26T07:44:30+01:00",
+   "merge": false,
+   "subject": "Own BRouter on marge for the planner tests, data from our extracts (16H Q22 (a))"
+  },
+  {
+   "version": "6.12",
+   "title": "Built: OCW Studio asks before loading the patch next to a package, *Build package* runs t…",
+   "commit": "5c74de2f",
+   "sha": "5c74de2fbbe2fe31aa852d9479f4ec3272325e54",
+   "time": "2026-11-26T07:45:52+01:00",
+   "merge": true,
+   "subject": "Merge the studio's patch question, build recipes and whole-way road edits (16H Q16 (b), Q17 (a), Q18 (a); 6.12)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.13",
+   "title": "Decided: 16H Q23 – an imported GPX track keeps a via-point every kilometre, so dragging o…",
+   "commit": "fc80aa9f",
+   "sha": "fc80aa9f6c41149376065a3b6d1b7c84003a4825",
+   "time": "2026-11-26T07:51:25+01:00",
+   "merge": false,
+   "subject": "Imported tracks keep a via-point every kilometre, as built (16H Q23 (a))"
+  },
+  {
+   "version": "6.14",
+   "title": "Decided: Phase 4 Q18 – with accounts, every rider's base parts are included",
+   "commit": "1d001b90",
+   "sha": "1d001b90571e9726055e5f6318db5b956a313730",
+   "time": "2026-11-26T08:59:51+01:00",
+   "merge": false,
+   "subject": "Base parts included with accounts (Phase 4 Q18 (a))"
+  },
+  {
+   "version": "6.15",
+   "title": "Decided: Phase 4 Q19 – hearts are credited directly only by game servers whose key is sig…",
+   "commit": "08e67ac1",
+   "sha": "08e67ac1505507ce3d8a1a09d782ce85261350f7",
+   "time": "2026-11-26T09:01:42+01:00",
+   "merge": false,
+   "subject": "Hearts: signed servers credit directly, other rides via the checked ride summary (Phase 4 Q19 (a))"
+  },
+  {
+   "version": "6.16",
+   "title": "Decided: Phase 4 Q20 – a signed-in rider without internet, or with the server down, rides…",
+   "commit": "3d17a923",
+   "sha": "3d17a923f733491640aa3dfccd2c46e244b628bf",
+   "time": "2026-11-26T09:02:29+01:00",
+   "merge": false,
+   "subject": "Offline riding with the last synced bikes and kit, read-only, ride credited later (Phase 4 Q20 (a))"
+  },
+  {
+   "version": "6.17",
+   "title": "Decided: Phase 4 Q21 – with accounts every rider starts fresh with 5,000 ♥ and nothing ow…",
+   "commit": "f62c5492",
+   "sha": "f62c54929175d445dc7fa168bfb68f213ee81c5b",
+   "time": "2026-11-26T09:03:12+01:00",
+   "merge": false,
+   "subject": "Accounts start fresh with 5,000 hearts, local test wallets not imported (Phase 4 Q21 (a))"
+  },
+  {
+   "version": "6.18",
+   "title": "Built: sending the via-points to a BRouter server is asked once per server and the answer…",
+   "commit": "8c4ec441",
+   "sha": "8c4ec441349bb99f49079b91a7478a09fedefef6",
+   "time": "2026-11-26T09:22:43+01:00",
+   "merge": true,
+   "subject": "Merge BRouter: the via-point question remembered per server, our own BRouter on marge for the planner tests (16H Q21 (a), Q22 (a); 6.18)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.19",
+   "title": "Prepared: ocw-server with its bundled voice server on Fly.io",
+   "commit": "ba5e986c",
+   "sha": "ba5e986cecd1c19f2cae3bbe838b84bb2b5dc057",
+   "time": "2026-11-26T09:24:44+01:00",
+   "merge": true,
+   "subject": "Merge the Fly.io hosting setup for ocw-server with its bundled voice server: Dockerfile, fly.toml, start script, README and spec 11.5 (not deployed yet: Fly needs a card for the dedicated IPv4; 6.19)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T10:51:26+01:00",
+    "exit": 2,
+    "branch": "worktree-agent-a52ff8004742f6ccd",
+    "command": "make check",
+    "log": "105126-marge-356012.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.20",
+   "title": "Decided: 16H Q7 – a world patch whose target road is gone in a newer OSM build fails our…",
+   "commit": "3193fd15",
+   "sha": "3193fd157ed52c2483d43503d1a6db0549ec6956",
+   "time": "2026-11-26T10:36:27+01:00",
+   "merge": false,
+   "subject": "Official builds fail on a vanished patch target (--strict-patch), users' builds warn (16H Q7 (a))"
+  },
+  {
+   "version": "6.21",
+   "title": "Decided: 16H Q13 – OCW Studio's saved camera views are stored in the world patch file, so…",
+   "commit": "f5c0612b",
+   "sha": "f5c0612b68fb6eeeae7503f0f01a27a30368d6df",
+   "time": "2026-11-26T10:39:42+01:00",
+   "merge": false,
+   "subject": "Studio camera views stored in the world patch file (16H Q13 (b))"
+  },
+  {
+   "version": "6.22",
+   "title": "Decided: 16H Q6 – a road marked *closed for bikes* in a world patch stays drawn and ridea…",
+   "commit": "3505028f",
+   "sha": "3505028fa2bf86ee025961c6acb1ceb31f7aba6b",
+   "time": "2026-11-26T10:42:03+01:00",
+   "merge": false,
+   "subject": "A road closed for bikes stays drawn and rideable, with warning signs at its ends (16H Q6)"
+  },
+  {
+   "version": "6.23",
+   "title": "Built: the accounts backend keeps every account's hearts, bikes, parts and kit in Postgre…",
+   "commit": "bcd7c4f7",
+   "sha": "bcd7c4f76fc382892f3d1c73f5d44492994be4d4",
+   "time": "2026-11-26T10:56:48+01:00",
+   "merge": true,
+   "subject": "Merge the accounts backend on PostgreSQL: inventory, the hearts ledger, purchases and sales, signed-server credits and checked ride summaries (4O part 1; Phase 4 Q18-Q21 in the backend; 6.23)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.24",
+   "title": "Decided: Phase 10 Q11 – on iPhones and iPads before iOS / iPadOS 26.4 the sensor bridge s…",
+   "commit": "2f80984f",
+   "sha": "2f80984f42fc68795cf7c3df966f99330ed72f2b",
+   "time": "2026-11-26T11:01:47+01:00",
+   "merge": false,
+   "subject": "Sensor bridge on iOS before 26.4: ask to update, for now (Phase 10 Q11 (a))"
+  },
+  {
+   "version": "6.25",
+   "title": "Planned: traffic as a switch in Settings",
+   "commit": "280f8620",
+   "sha": "280f86206e0cd9a8424d4dac75291d76c675aab2",
+   "time": "2026-11-26T11:18:31+01:00",
+   "merge": true,
+   "subject": "Merge the traffic plan: Phase 18 – cars, lorries, motorbikes, aircraft and UFOs; live data sources researched; 10 open questions (6.25)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.26",
+   "title": "Decided: Phase 18 Q1 – traffic decisions",
+   "commit": "cf128e15",
+   "sha": "cf128e15e71a756aee56eef7eab30ec7200aea53",
+   "time": "2026-11-26T11:38:27+01:00",
+   "merge": false,
+   "subject": "Traffic: defaults, group-ride choice, car plans; cars can hit riders, and a lunatic mode (Phase 18 Q1-Q4)"
+  },
+  {
+   "version": "6.27",
+   "title": "Decided: Phase 18 Q5 – live road-traffic data",
+   "commit": "b09100db",
+   "sha": "b09100dbd29a97e3e9a80581bd1e009d28b763c0",
+   "time": "2026-11-26T11:39:30+01:00",
+   "merge": false,
+   "subject": "Live road data: a switch now, data once a suitable source exists; research continues (Phase 18 Q5)"
+  },
+  {
+   "version": "6.28",
+   "title": "Decided: Phase 18 Q6 – live aircraft come from adsb.lol as an opt-in",
+   "commit": "2d783aff",
+   "sha": "2d783aff6809ac9db3db1a17e2d87965fb127247",
+   "time": "2026-11-26T11:41:38+01:00",
+   "merge": false,
+   "subject": "Live aircraft from adsb.lol as an opt-in, OpenSky as fallback (Phase 18 Q6)"
+  },
+  {
+   "version": "6.29",
+   "title": "Decided: Phase 18 Q7 – UFOs come to the unicorn in god mode",
+   "commit": "14a7943c",
+   "sha": "14a7943ce8648e5d798c3f838558a19ac5a8e668",
+   "time": "2026-11-26T11:42:11+01:00",
+   "merge": false,
+   "subject": "UFOs around the unicorn and rare night sightings (Phase 18 Q7 (b))"
+  },
+  {
+   "version": "6.30",
+   "title": "Decided: Phase 18 Q7 – UFOs get the scenes too",
+   "commit": "53f0ce28",
+   "sha": "53f0ce2874b8ee306ebc4f9891622f3edf6e3de6",
+   "time": "2026-11-26T11:42:57+01:00",
+   "merge": false,
+   "subject": "UFOs with all three: the unicorn, night sightings, crop circles and the cow (Phase 18 Q7 (c))"
+  },
+  {
+   "version": "6.31",
+   "title": "Decided: Phase 18 Q8 – drivers' manners are a setting in Settings → Traffic",
+   "commit": "4750e5dd",
+   "sha": "4750e5dd2a9698d691e09f17090e6458bf45ca6f",
+   "time": "2026-11-26T11:44:07+01:00",
+   "merge": false,
+   "subject": "Driver manners selectable in the traffic settings (Phase 18 Q8)"
+  },
+  {
+   "version": "6.32",
+   "title": "Decided: Phase 18 Q9 – traffic is available on every device",
+   "commit": "59b2051e",
+   "sha": "59b2051ebf59596bd446052bbc43d1cab9eed16a",
+   "time": "2026-11-26T11:45:07+01:00",
+   "merge": false,
+   "subject": "Traffic on every device, fewer vehicles by quality level (Phase 18 Q9 (a))"
+  },
+  {
+   "version": "6.33",
+   "title": "Road traffic only in the desktop app",
+   "commit": "5ee57d5d",
+   "sha": "5ee57d5dcaeca9d5a6eefdc66a3ec66e7026093b",
+   "time": "2026-11-26T11:46:39+01:00",
+   "merge": false,
+   "subject": "Road traffic only on the desktop, aircraft everywhere (Phase 18 Q9 (b), corrected)"
+  },
+  {
+   "version": "6.34",
+   "title": "Decided: Phase 18 Q10 – traffic comes after the open work of the phases in progress",
+   "commit": "5024a6c1",
+   "sha": "5024a6c10dbb56b6b029c0d664216ea4ae51b4d5",
+   "time": "2026-11-26T11:47:37+01:00",
+   "merge": false,
+   "subject": "Traffic priority: after the work in progress, simulated road traffic and aircraft first (Phase 18 Q10 (a))"
+  },
+  {
+   "version": "6.35",
+   "title": "Decided: Phase 17 Q1 – the ANT+ network key is not shipped",
+   "commit": "6ba7b19b",
+   "sha": "6ba7b19bbe780ef837ac64469e6de2c22f0b8221",
+   "time": "2026-11-26T11:51:58+01:00",
+   "merge": false,
+   "subject": "ANT+ key entered by the user, not shipped, for now (Phase 17 Q1 (b))"
+  },
+  {
+   "version": "6.36",
+   "title": "Decided: Phase 17 Q2 – ANT+ heart rate is prepared and built without hardware",
+   "commit": "73181477",
+   "sha": "731814771cd1d2042d28388f10bc1e922b26d366",
+   "time": "2026-11-26T11:52:45+01:00",
+   "merge": false,
+   "subject": "ANT+: build without hardware, the stick test postponed (Phase 17 Q2)"
+  },
+  {
+   "version": "6.37",
+   "title": "Live road data sources researched again",
+   "commit": "f6bebe49",
+   "sha": "f6bebe4936ce6c0fcbd51ae87849831bec1ed7f9",
+   "time": "2026-11-26T11:53:49+01:00",
+   "merge": true,
+   "subject": "Merge the live road-data research: the DGT incident feed suits Tenerife now; Swiss and German live counts need registration (Phase 18 18D, new Q11; 6.37)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.38",
+   "title": "Decided: Phase 17 Q3 – ANT+ comes to the desktop app first and to the browser both ways",
+   "commit": "460d2aca",
+   "sha": "460d2acac2c792493770808bb6b05f0f89714e65",
+   "time": "2026-11-26T11:54:49+01:00",
+   "merge": false,
+   "subject": "ANT+ on the desktop first, in the browser via the bridge and WebUSB (Phase 17 Q3)"
+  },
+  {
+   "version": "6.39",
+   "title": "Decided: Phase 18 Q11 – live road data for all three worlds",
+   "commit": "a21f17df",
+   "sha": "a21f17df4f75fb2b457cd7ebdfb7b418fde8ed9f",
+   "time": "2026-11-26T11:57:18+01:00",
+   "merge": false,
+   "subject": "Live road data: register for opentransportdata.swiss and Mobilithek too (Phase 18 Q11 (b), (c))"
+  },
+  {
+   "version": "6.40",
+   "title": "Fixed: the virtual brake of autodrive sheds speed at most 5 m/s², no longer all at once,…",
+   "commit": "fcf55f13",
+   "sha": "fcf55f13e4eada94ab7eb532d360f688b36e7588",
+   "time": "2026-11-26T12:42:54+01:00",
+   "merge": true,
+   "subject": "Merge the fix of the flaky prediction test: the virtual brake sheds speed at a hard stop's rate (5 m/s²) on server and client alike; client tests on a fixed clock and weather seed (6.40)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.41",
+   "title": "Decided: Phase 17 Q4 – ANT+ starts now, without hardware",
+   "commit": "98c46a0a",
+   "sha": "98c46a0a5ca8275a238bec4884ddb9b95c09f80b",
+   "time": "2026-11-26T12:52:01+01:00",
+   "merge": false,
+   "subject": "ANT+ now; heart rate first, power and FE-C planned too; straps picked by hand (Phase 17 Q4 (b), Q5, Q6 (c))"
+  },
+  {
+   "version": "6.42",
+   "title": "Built: signed in, the desktop's workshop is the account's",
+   "commit": "394f5ff4",
+   "sha": "394f5ff402b1c012e4182c1ffc1927ca0f474edb",
+   "time": "2026-11-26T13:45:18+01:00",
+   "merge": true,
+   "subject": "Merge accounts part 2: signed in, the desktop's workshop is the account's; rides queued offline and credited once; certified game servers credit hearts at a ride's end (4O part 2; Q19 (a), Q20 (a); 6.42)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T12:42:51+01:00",
+    "exit": 0,
+    "branch": "worktree-agent-ae9ce66a8776a5e06",
+    "command": "rm -rf apps/desktop/src/workshop; make web && make test-web-account; ls test-output/web | grep web-account | tail -8",
+    "log": "124251-marge-540102.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.43",
+   "title": "Built: the browser app has the desktop's workshop",
+   "commit": "31585b16",
+   "sha": "31585b16b5cdbd93e8b82e71865701fe8488f945",
+   "time": "2026-11-26T15:09:31+01:00",
+   "merge": true,
+   "subject": "Merge main (accounts parts 3 and 4) into the combined merge",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T16:16:01+01:00",
+    "exit": 0,
+    "branch": "merge/vr-x1",
+    "command": "ss -lunp 2>/dev/null | grep -E \":4781[0-3]\" ; make check > /tmp/ocw-vrx1-check2.log 2>&1; echo CHECK=$?; grep -E \"test r",
+    "log": "161601-marge-952694.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.44",
+   "title": "Built: repairs on the account",
+   "commit": "31585b16",
+   "sha": "31585b16b5cdbd93e8b82e71865701fe8488f945",
+   "time": "2026-11-26T15:09:31+01:00",
+   "merge": true,
+   "subject": "Merge main (accounts parts 3 and 4) into the combined merge",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T16:16:01+01:00",
+    "exit": 0,
+    "branch": "merge/vr-x1",
+    "command": "ss -lunp 2>/dev/null | grep -E \":4781[0-3]\" ; make check > /tmp/ocw-vrx1-check2.log 2>&1; echo CHECK=$?; grep -E \"test r",
+    "log": "161601-marge-952694.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.45",
+   "title": "Fixed: no white panels on the bikes",
+   "commit": "fdd25b8c",
+   "sha": "fdd25b8c49399c4188338b8921ff8cc74ff4fe98",
+   "time": "2026-11-26T14:10:33+01:00",
+   "merge": true,
+   "subject": "Merge: no white label panels on rims and down tubes – removed from the bike generator, all six bike files re-exported (6.45)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.46",
+   "title": "Fixed: the chin-strap beard lies on the jaw line from ear to ear, and the stubble beards…",
+   "commit": "40385e02",
+   "sha": "40385e029e01855f62ed159c03636f0336acbf39",
+   "time": "2026-11-26T14:10:52+01:00",
+   "merge": true,
+   "subject": "Merge: the chin-strap beard lies on the jaw line, the stubble beards leave the lips free (4N; 6.46)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.47",
+   "title": "Built: OCW Studio signs the packages it builds with the user's own key, made on the first…",
+   "commit": "a471203b",
+   "sha": "a471203b8db4f17567848d8bd43cb39edad008ce",
+   "time": "2026-11-26T14:11:07+01:00",
+   "merge": true,
+   "subject": "Merge OCW Studio: built packages signed with the user's own key, N/Z without console noise, --strict-patch, camera views in the patch, roads closed for bikes stay rideable with warning signs (4.21, 16H Q6, Q7, Q13; 6.47)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T15:04:19+01:00",
+    "exit": 0,
+    "branch": "merge/trio",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "150419-marge-799326.log",
+    "how": "commit",
+    "suites": 86,
+    "passed": 3650,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.48",
+   "title": "Fixed: remote.sh deletes on the build machines the files removed or moved away here, so a…",
+   "commit": "aed18ae0",
+   "sha": "aed18ae00c604200097919790dcfb432a1e97523",
+   "time": "2026-11-26T15:22:13+01:00",
+   "merge": true,
+   "subject": "Merge the remote.sh fix: the build machines' checkouts drop files git no longer tracks, on Linux, macOS and Windows (11.2; 6.48)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T16:10:34+01:00",
+    "exit": 0,
+    "branch": "merge/sync",
+    "command": "make check && echo ALL-CHECKS-OK",
+    "log": "161034-marge-947440.log",
+    "how": "commit",
+    "suites": 86,
+    "passed": 3654,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.49",
+   "title": "Built: the rider is the account's",
+   "commit": "2482a3fe",
+   "sha": "2482a3fe1dca214efdca793da906790d2fff7f3f",
+   "time": "2026-11-26T16:47:12+01:00",
+   "merge": true,
+   "subject": "Merge accounts part 5: the rider is the account's – name, weight, height, FTP, bike and look kept with the account, unique names, both apps riding it when signed in (4O W5b; 6.49)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.50",
+   "title": "ANT+ heart rate is built for the desktop app, without hardware",
+   "commit": "6365e44f",
+   "sha": "6365e44fd60e656a63f3a5c3254a516584bcae65",
+   "time": "2026-11-26T16:47:34+01:00",
+   "merge": true,
+   "subject": "Merge ANT+ heart rate for the desktop app, built without hardware: decoding, the stick service with a simulated stick, the Devices page with the key entry (Phase 17 A1-A3; 6.50)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.51",
+   "title": "Fifth world",
+   "commit": "df7f8b67",
+   "sha": "df7f8b67928ea590a79617912f75a638ee634fc9",
+   "time": "2026-11-26T16:47:41+01:00",
+   "merge": true,
+   "subject": "Merge the fifth world, Andorra: built like the others with all estimates, four climbs (Envalira, Arcalís, Coll d'Ordino, Coll de la Gallina) (6.51)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.52",
+   "title": "Built: PC VR merged onto main",
+   "commit": "21e22b82",
+   "sha": "21e22b82393f03fe11b9f06fc40e00319b78c64e",
+   "time": "2026-11-26T16:48:07+01:00",
+   "merge": true,
+   "subject": "Merge PC VR onto main: OpenXR in the desktop app (the agent/vr-x1 branch), sharing the session, bike computer, controllers and eye projection with WebXR (Phase 11 X1; 6.52)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T16:48:11+01:00",
+    "exit": 0,
+    "branch": "merge/three",
+    "command": "make test-accounts && make check && make test-web-build && make test-smoke && make test-vr-monado && echo ALL-CHECKS-OK",
+    "log": "164811-marge-986773.log",
+    "how": "commit",
+    "suites": 95,
+    "passed": 3800,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.53",
+   "title": "Deployed: ocw-server with its bundled voice server runs on Fly.io",
+   "commit": "ba69b807",
+   "sha": "ba69b807583508317d40dc4379f8187ca1917d70",
+   "time": "2026-11-26T17:24:15+01:00",
+   "merge": true,
+   "subject": "Merge the Fly.io server: ocw-server with its voice server deployed (--no-gso, --no-mtu-discovery, wss:// on 443), and browsers retrying a lost WebTransport handshake on a new UDP flow (11.5; 6.53, 6.54)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T18:26:49+01:00",
+    "exit": 101,
+    "branch": "worktree-agent-a5aa4517aa9fcba7e",
+    "command": "cargo fmt --all -- --check; cargo test -p ocw-server --lib -- join_http tls:: && cargo test -p ocw-server --bin ocw-serv",
+    "log": "182649-marge-1185963.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.54",
+   "title": "Fixed: browsers join the Fly.io server reliably",
+   "commit": "ba69b807",
+   "sha": "ba69b807583508317d40dc4379f8187ca1917d70",
+   "time": "2026-11-26T17:24:15+01:00",
+   "merge": true,
+   "subject": "Merge the Fly.io server: ocw-server with its voice server deployed (--no-gso, --no-mtu-discovery, wss:// on 443), and browsers retrying a lost WebTransport handshake on a new UDP flow (11.5; 6.53, 6.54)",
+   "branch": null,
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T18:26:49+01:00",
+    "exit": 101,
+    "branch": "worktree-agent-a5aa4517aa9fcba7e",
+    "command": "cargo fmt --all -- --check; cargo test -p ocw-server --lib -- join_http tls:: && cargo test -p ocw-server --bin ocw-serv",
+    "log": "182649-marge-1185963.log",
+    "how": "commit",
+    "suites": 0,
+    "passed": 0,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.55",
+   "title": "Decided: 7 Q1 – andorra stays within its border for now",
+   "commit": "d491f70d",
+   "sha": "d491f70d44cf9698e532b8abf2b4ec17775ae298",
+   "time": "2026-11-26T18:15:12+01:00",
+   "merge": false,
+   "subject": "Andorra within its border for now; Andorra on the live page (4.7 Q1)"
+  },
+  {
+   "version": "6.56",
+   "title": "Riding together on the public page",
+   "commit": "c11db780",
+   "sha": "c11db78022e6ff51d72538a5dd30e393aab568b0",
+   "time": "2026-11-26T19:13:11+01:00",
+   "merge": true,
+   "subject": "Merge riding together on the public page: the Fly server's join info (/join.json with the current and next certificate hashes), voice over wss, the start page's Ride together (11.5, B8a; 6.56)",
+   "branch": "worktree-agent-a5aa4517aa9fcba7e",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T19:13:12+01:00",
+    "exit": 0,
+    "branch": "merge/join",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "191312-marge-1259658.log",
+    "how": "commit",
+    "suites": 88,
+    "passed": 3741,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  },
+  {
+   "version": "6.57",
+   "title": "Decided: the public Fly server keeps logging joins with the rider's name and IP address,…",
+   "commit": "84d86b07",
+   "sha": "84d86b0789f9855ab60719b9c637ce1cb06b0784",
+   "time": "2026-11-26T20:34:49+01:00",
+   "merge": false,
+   "subject": "The public server keeps logging joins with name and IP (decision)"
+  },
+  {
+   "version": "6.58",
+   "title": "Decided: Phase 17 Q8 – on Linux the ANT stick's access rule is installed by a helper, ocw…",
+   "commit": "fd113570",
+   "sha": "fd11357072a0ce8e0fd57baa67a593bf6f44cf3d",
+   "time": "2026-11-26T21:02:32+01:00",
+   "merge": false,
+   "subject": "ANT stick on Linux: a pkexec helper installs the udev rule (Phase 17 Q8 (b))"
+  },
+  {
+   "version": "6.59",
+   "title": "No COM-port route for ANT sticks on Windows",
+   "commit": "516c26d1",
+   "sha": "516c26d1b4bd70aaffa3edb80c95dcacf5b38035",
+   "time": "2026-11-26T21:08:29+01:00",
+   "merge": false,
+   "subject": "No COM-port route for ANT sticks on Windows; proposed: drive Garmin's libusb-win32 driver (Phase 17 Q7 research)"
+  },
+  {
+   "version": "6.60",
+   "title": "Decided: Phase 17 Q7 – on Windows the desktop app talks to the ANT stick through Garmin's…",
+   "commit": "562b6ebb",
+   "sha": "562b6ebb194b3c6939ef6486be7acddd048c2699",
+   "time": "2026-11-26T21:29:21+01:00",
+   "merge": false,
+   "subject": "Spec: the Q7 decision row is 6.60 (6.59 was taken by the research row)"
+  },
+  {
+   "version": "6.61",
+   "title": "Decided: Phase 11 Q11 – in the PC headset the in-game menu opens as the same panel as in…",
+   "commit": "324b5d71",
+   "sha": "324b5d711da3f740834cb1d0b47068c7af9086ea",
+   "time": "2026-11-26T21:43:48+01:00",
+   "merge": false,
+   "subject": "PC VR menu: the WebXR panel, shared (Phase 11 Q11 (a))"
+  },
+  {
+   "version": "6.62",
+   "title": "Decided: Phase 11 Q12 – in VR on the time-trial bike the bike computer moves between the…",
+   "commit": "e62294d6",
+   "sha": "e62294d65ccfe9f992fd96402c245cc20bb758ce",
+   "time": "2026-11-26T21:44:49+01:00",
+   "merge": false,
+   "subject": "VR bike computer between the TT extensions (Phase 11 Q12 (c))"
+  },
+  {
+   "version": "6.63",
+   "title": "Decided: Phase 11 Q13 – in VR a bike computer part fitted in the workshop becomes the VR…",
+   "commit": "34eac71b",
+   "sha": "34eac71b0e18d6ce0478afbd3592ad562a5ec6f8",
+   "time": "2026-11-26T21:45:51+01:00",
+   "merge": false,
+   "subject": "VR: the fitted computer part becomes the VR bike computer (Phase 11 Q13 (b))"
+  },
+  {
+   "version": "6.64",
+   "title": "Decided: Phase 11 Q14 – the Windows VR kiosk keeps the app's local server while it is sto…",
+   "commit": "42e87345",
+   "sha": "42e873458910e1278c7d4e1028e889098141c0ae",
+   "time": "2026-11-26T21:59:07+01:00",
+   "merge": false,
+   "subject": "VR kiosk: local server for now, ocw-server with bots once it runs again (Phase 11 Q14)"
+  },
+  {
+   "version": "6.65",
+   "title": "A public status page for the Fly.io server",
+   "commit": "733ca32d",
+   "sha": "733ca32d4ca1698967b5f810939862d93fa152a2",
+   "time": "2026-11-26T23:29:12+01:00",
+   "merge": true,
+   "subject": "Merge the Fly server's public status page (/ and /stats.json, counts only) (11.5; 6.65)",
+   "branch": null,
+   "check": null
+  },
+  {
+   "version": "6.66",
+   "title": "Built: the ANT stick works on Windows through Garmin's own libusb-win32 driver, and on Li…",
+   "commit": "22d76884",
+   "sha": "22d768847fa192b6775b1665e12dfc843b66587a",
+   "time": "2026-11-26T23:29:26+01:00",
+   "merge": true,
+   "subject": "Merge ANT+ access: Garmin's libusb-win32 driver on Windows (WinUSB first, then libusb0), the pkexec udev helper on Linux (Phase 17 Q7 (d), Q8 (b); 6.66)",
+   "branch": "worktree-agent-a4ff3c8abd356f67f",
+   "check": {
+    "machine": "marge",
+    "time": "2026-11-26T23:29:27+01:00",
+    "exit": 0,
+    "branch": "merge/pair",
+    "command": "make check && make test-web-build && make test-smoke && echo ALL-CHECKS-OK",
+    "log": "232927-marge-1666829.log",
+    "how": "commit",
+    "suites": 86,
+    "passed": 3769,
+    "failed": 0,
+    "failed_suites": 0
+   }
+  }
+ ],
+ "deploys": [
+  {
+   "start": "2026-11-26T06:53:39+01:00",
+   "end": "2026-11-26T06:55:46+01:00",
+   "machine": "marge",
+   "commit": "72db9890",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-26T06:55:46+01:00",
+   "end": "2026-11-26T06:56:54+01:00",
+   "machine": "leela",
+   "commit": "72db9890",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-26T17:55:09+01:00",
+   "end": "2026-11-26T17:58:51+01:00",
+   "machine": "marge",
+   "commit": "ba69b807",
+   "exit": 101
+  },
+  {
+   "start": "2026-11-26T17:58:51+01:00",
+   "end": "2026-11-26T18:01:59+01:00",
+   "machine": "leela",
+   "commit": "ba69b807",
+   "exit": 101
+  },
+  {
+   "start": "2026-11-26T18:02:12+01:00",
+   "end": "2026-11-26T18:03:30+01:00",
+   "machine": "marge",
+   "commit": "ba69b807",
+   "exit": 0
+  },
+  {
+   "start": "2026-11-26T18:03:30+01:00",
+   "end": "2026-11-26T18:04:39+01:00",
+   "machine": "leela",
+   "commit": "ba69b807",
+   "exit": 0
+  }
+ ],
+ "releases": [],
+ "agent_jobs": [
+  {
+   "agent": "a219c9b5",
+   "task": "Fix the missing land use on the studio's 2D map",
+   "branch": "worktree-agent-a219c9b503ec94ccf",
+   "start": "2026-11-26T04:32:44+01:00",
+   "end": "2026-11-26T06:11:33+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "ad266d1e",
+   "task": "The game lists the studio's saved routes; README (16H Q19 a)",
+   "branch": "worktree-agent-ad266d1e347afb128",
+   "start": "2026-11-26T04:44:24+01:00",
+   "end": "2026-11-26T06:53:25+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a8045880",
+   "task": "Studio: ask before loading a patch, build recipes, whole-way road edits (16H Q16-Q18)",
+   "branch": "worktree-agent-a8045880f0c5689dc",
+   "start": "2026-11-26T06:12:19+01:00",
+   "end": "2026-11-26T07:47:37+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "ac80ed3b",
+   "task": "BRouter: consent per server, own BRouter on marge for the planner tests (16H Q21, Q22)",
+   "branch": "worktree-agent-ac80ed3b3b3781bb1",
+   "start": "2026-11-26T07:52:34+01:00",
+   "end": "2026-11-26T09:24:20+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "af97cd2d",
+   "task": "Host ocw-server and the voice server on Fly.io",
+   "branch": "worktree-agent-af97cd2d46c527ce9",
+   "start": "2026-11-26T08:56:55+01:00",
+   "end": "2026-11-26T09:16:51+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "ae9ce66a",
+   "task": "Accounts backend: inventory and hearts on Postgres (4O, Phase 4 Q18-Q21)",
+   "branch": "worktree-agent-ae9ce66a8776a5e06",
+   "start": "2026-11-26T09:05:09+01:00",
+   "end": "2026-11-26T10:13:59+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a52ff800",
+   "task": "Fix the flaky client prediction test",
+   "branch": "worktree-agent-a52ff8004742f6ccd",
+   "start": "2026-11-26T10:33:19+01:00",
+   "end": null,
+   "status": "started",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "a38bf8cc",
+   "task": "Studio: sign built worlds with the user's own key; N/Z keys",
+   "branch": "worktree-agent-a38bf8cc98eb9bbc7",
+   "start": "2026-11-26T10:33:19+01:00",
+   "end": null,
+   "status": "started",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "ad6678d7",
+   "task": "Rider faces: chin-strap beard on the jaw, stubble clear of the lips",
+   "branch": "worktree-agent-ad6678d7086339e61",
+   "start": "2026-11-26T10:33:20+01:00",
+   "end": null,
+   "status": "started",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "acd594c7",
+   "task": "Art README: the evolution strip to day 15",
+   "branch": "worktree-agent-acd594c76a00d8d1d",
+   "start": "2026-11-26T10:33:38+01:00",
+   "end": "2026-11-26T10:39:58+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "aa7e3fb0",
+   "task": "Planning: traffic (cars, lorries, motorbikes, aircraft, UFOs) and real-time data",
+   "branch": "worktree-agent-aa7e3fb012b5bbc59",
+   "start": "2026-11-26T10:51:52+01:00",
+   "end": null,
+   "status": "started",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "aefaf1b3",
+   "task": "Fly: ocw-server deploy tests and wss:// (continued)",
+   "branch": "worktree-agent-af97cd2d46c527ce9",
+   "start": "2026-11-26T11:09:39+01:00",
+   "end": "2026-11-26T14:42:42+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "ab18f006",
+   "task": "Accounts part 2: the desktop client (continued)",
+   "branch": "worktree-agent-ae9ce66a8776a5e06",
+   "start": "2026-11-26T11:09:39+01:00",
+   "end": "2026-11-26T17:22:51+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 6
+  },
+  {
+   "agent": "ad8dfd66",
+   "task": "Studio: own-key signing, N/Z, --strict-patch, views in the patch, closed roads (continued)",
+   "branch": "worktree-agent-a38bf8cc98eb9bbc7",
+   "start": "2026-11-26T11:09:40+01:00",
+   "end": "2026-11-26T15:21:42+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a8912406",
+   "task": "Rider faces: chin-strap beard, stubble (continued)",
+   "branch": "worktree-agent-ad6678d7086339e61",
+   "start": "2026-11-26T11:09:40+01:00",
+   "end": "2026-11-26T15:21:33+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a8812bf5",
+   "task": "Fix the flaky client prediction test (continued)",
+   "branch": "worktree-agent-a52ff8004742f6ccd",
+   "start": "2026-11-26T11:09:41+01:00",
+   "end": "2026-11-26T12:44:41+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a3e11a1a",
+   "task": "Planning: traffic and real-time data (restarted)",
+   "branch": "worktree-agent-a3e11a1a74cd24a9d",
+   "start": "2026-11-26T11:09:41+01:00",
+   "end": "2026-11-26T11:18:38+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "aa3a4bee",
+   "task": "Research: live road-traffic data sources (Phase 18 Q5)",
+   "branch": "worktree-agent-aa3a4bee9ea25eecb",
+   "start": "2026-11-26T11:40:00+01:00",
+   "end": "2026-11-26T11:53:57+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a14a9b86",
+   "task": "Remove the white squares on frames and rims (all models)",
+   "branch": "worktree-agent-a14a9b861052bbda3",
+   "start": "2026-11-26T12:05:55+01:00",
+   "end": "2026-11-26T15:21:27+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a5c74980",
+   "task": "ANT+ heart rate on the desktop, without hardware (Phase 17 A1-A3)",
+   "branch": "worktree-agent-a5c7498037cda739c",
+   "start": "2026-11-26T12:52:24+01:00",
+   "end": "2026-11-26T17:23:05+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a5e3f990",
+   "task": "New world: Andorra, built like the others with all estimates",
+   "branch": "worktree-agent-a5e3f9902d7341373",
+   "start": "2026-11-26T13:15:22+01:00",
+   "end": "2026-11-26T17:23:15+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a8422046",
+   "task": "remote.sh: drop files git no longer tracks on the build machines",
+   "branch": "worktree-agent-a84220468db398dc9",
+   "start": "2026-11-26T13:41:47+01:00",
+   "end": "2026-11-26T16:46:42+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "aa3c6429",
+   "task": "Fly: the browser's WebTransport connection to the Fly server",
+   "branch": "worktree-agent-af97cd2d46c527ce9",
+   "start": "2026-11-26T15:27:17+01:00",
+   "end": "2026-11-26T17:54:24+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a0839f55",
+   "task": "Bring PC VR (agent/vr-x1, OpenXR via Link) onto main",
+   "branch": "worktree-agent-a0839f554de0ec454",
+   "start": "2026-11-26T15:33:07+01:00",
+   "end": "2026-11-26T17:23:24+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a635a78a",
+   "task": "Render: the unicorn flying over the Hornisgrinde",
+   "branch": "worktree-agent-a635a78a2503edd00",
+   "start": "2026-11-26T16:08:00+01:00",
+   "end": "2026-11-26T16:56:54+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a5aa4517",
+   "task": "The live page rides and talks on the Fly server",
+   "branch": "worktree-agent-a5aa4517aa9fcba7e",
+   "start": "2026-11-26T18:14:47+01:00",
+   "end": "2026-11-26T19:43:59+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a334c6ab",
+   "task": "Andorra artwork for the README",
+   "branch": "worktree-agent-a334c6ab7508061fd",
+   "start": "2026-11-26T18:36:52+01:00",
+   "end": "2026-11-26T19:03:17+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a0d2648e",
+   "task": "Landscape: smooth lakes and rivers, far terrain, high slopes, tall objects (all worlds)",
+   "branch": "worktree-agent-a0d2648e3477afb9f",
+   "start": "2026-11-26T20:54:23+01:00",
+   "end": "2026-11-26T23:43:54+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a30a6ccf",
+   "task": "Research: the ANT stick over a COM port on Windows (Phase 17 Q7 b)",
+   "branch": "worktree-agent-a30a6ccf39e63ee87",
+   "start": "2026-11-26T21:01:52+01:00",
+   "end": "2026-11-26T21:09:14+01:00",
+   "status": "merged",
+   "interruptions": 0,
+   "merged": null,
+   "events": 3
+  },
+  {
+   "agent": "a4ff3c8a",
+   "task": "ANT+: Garmin's driver on Windows, the udev helper on Linux (Phase 17 Q7 d, Q8 b)",
+   "branch": "worktree-agent-a4ff3c8abd356f67f",
+   "start": "2026-11-26T21:29:44+01:00",
+   "end": "2026-11-26T23:28:58+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a17e3f1a",
+   "task": "Fly server: a public status and statistics page",
+   "branch": "worktree-agent-a17e3f1a7b680b441",
+   "start": "2026-11-26T21:57:22+01:00",
+   "end": "2026-11-26T23:23:51+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  },
+  {
+   "agent": "a5e80efc",
+   "task": "Kiosks join the Fly server (remote mode)",
+   "branch": "worktree-agent-a5e80efcdf1cc0fcd",
+   "start": "2026-11-26T22:06:14+01:00",
+   "end": null,
+   "status": "started",
+   "interruptions": 0,
+   "merged": null,
+   "events": 1
+  },
+  {
+   "agent": "abd1e924",
+   "task": "Browser app: an on-page log for phones (?log=1)",
+   "branch": "worktree-agent-abd1e9245b48c678b",
+   "start": "2026-11-26T22:07:07+01:00",
+   "end": "2026-11-26T23:55:08+01:00",
+   "status": "reported",
+   "interruptions": 0,
+   "merged": null,
+   "events": 2
+  }
+ ]
+}
