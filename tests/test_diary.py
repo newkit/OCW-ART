@@ -219,6 +219,24 @@ class MachinesConfTest(Fixture):
             self.assertEqual(mask.mask("~/olduser-notes", secrets), "~/olduser-notes")
             self.assertEqual([k for _, k in mask.private_findings("Ada Realname", secrets)], ["a real person's name"])
 
+    def test_tokens_and_keys(self):
+        """API tokens pasted into a prompt (a Vercel and a Fly.io token,
+        2026-11-26) and mask_secrets (a hex key in any spelling); commit and
+        certificate hashes stay."""
+        t = ("key vck_3fmKxLSg1TLSOWDBycZ4rY2A5BRr2bdClOIDXjtD, fly FlyV1 fm2_lJPECAAAAAAAGk6N+xBD/ISq==,fm2_abcdefABCDEF0123 "
+             "gh ghp_abcdefghijklmnopqrstuvwxyz0123456789 commit 5e482567 cert 0ae1fb51a5eacb8fb1beb577b107b5fa5")
+        self.assertEqual(mask.mask(t), "key <token>, fly <token> gh <token> commit 5e482567 "
+                         "cert 0ae1fb51a5eacb8fb1beb577b107b5fa5")
+        conf = self.tmp / "ocw-art.toml"
+        conf.write_text('mask_secrets = ["0011AABBCCDDEEFF"]\n')
+        with mock.patch.object(mask, "machines_conf", return_value=None), mock.patch.object(mask, "_SECRETS", None), \
+                mock.patch.object(core, "CONFIG", conf), mock.patch.dict(os.environ, {"OCW_ART_NO_MACHINES": "1"}):
+            secrets = mask._secrets()
+            for k in ("0011aabbccddeeff", "00 11 AA BB CC DD EE FF", "0x00, 0x11, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF"):
+                self.assertEqual(mask.mask(f"the key {k}.", secrets), "the key <secret>.")
+            self.assertEqual(mask.mask("ab0011aabbccddeeff00", secrets), "ab0011aabbccddeeff00")
+            self.assertEqual([k for _, k in mask.private_findings("vck_abcdefghijklmnopqrstu", secrets)], ["a token or key"])
+
 
 class CheckMaskedTest(Fixture):
     def write(self, rel, text):

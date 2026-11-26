@@ -1,5 +1,6 @@
 """Masking (ART-PROJECT §2.3, §2.5): build machines' hosts and users, home
-directories, e-mail and private IP addresses; the tracked text files and check-masked."""
+directories, e-mail and private IP addresses, API tokens and keys; the tracked
+text files and check-masked."""
 
 from __future__ import annotations
 
@@ -73,6 +74,19 @@ PRIVATE_IP_RE = re.compile(
     r"\.\d{1,3}\.\d{1,3}\b")
 
 
+# API tokens pasted into a prompt (2026-11-26: a Vercel and a Fly.io token):
+# Vercel (vck_…), Fly.io (FlyV1 fm2_…,fm2_…; fm1_, fo1_), GitHub (ghp_…,
+# github_pat_…), Anthropic and OpenAI style (sk-…), Slack (xox?-…), AWS key ids.
+TOKEN_RE = re.compile(
+    r"\bFlyV1\s+[A-Za-z0-9_+/=,.-]{16,}"
+    r"|\b(?:vck|fm[12]|fo1)_[A-Za-z0-9_+/=-]{16,}"
+    r"|\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,})"
+    r"|\bsk-(?:ant-)?[A-Za-z0-9_-]{20,}"
+    r"|\bxox[abprs]-[A-Za-z0-9-]{10,}"
+    r"|\bAKIA[0-9A-Z]{16}\b")
+TOKEN_REP = "<token>"
+SECRET_REP = "<secret>"
+
 _SECRETS: list[tuple[str, str]] | None = None
 
 
@@ -136,7 +150,10 @@ def _private_words() -> list[tuple[str, str]]:
     `mask_users`, user names that are no build machine's (e.g. the
     coordinator's former user on deb), masked as "user"; `mask_names`, real
     people's names that reached a prompt or a commit, masked as "<name>"
-    (test data uses only made-up names, §2.5)."""
+    (test data uses only made-up names, §2.5); `mask_secrets`, keys that
+    must never be published (e.g. the ANT+ network key, which may not be
+    published under its terms), masked as "<secret>" – a hex key also when
+    written with spaces, colons, commas or 0x between its bytes."""
     if not C.CONFIG.is_file():
         return []
     try:
@@ -144,7 +161,19 @@ def _private_words() -> list[tuple[str, str]]:
     except tomllib.TOMLDecodeError as e:
         raise SystemExit(f"{C.CONFIG.name}: {e}") from None
     return ([(u, "user") for u in conf.get("mask_users", []) if len(u) >= 3]
-            + [(n, NAME_REP) for n in conf.get("mask_names", []) if len(n) >= 3])
+            + [(n, NAME_REP) for n in conf.get("mask_names", []) if len(n) >= 3]
+            + [(k, SECRET_REP) for k in conf.get("mask_secrets", []) if len(k) >= 8])
+
+
+def _secret_re(value: str) -> re.Pattern:
+    """A secret as written; a hex key (an even number of hex digits) also
+    byte by byte with separators or 0x prefixes, in any case."""
+    hexd = re.sub(r"(?i)0x|[\s:,_-]", "", value)
+    if len(hexd) >= 8 and len(hexd) % 2 == 0 and re.fullmatch(r"[0-9A-Fa-f]+", hexd):
+        sep = r"(?:\s*[:,_-]?\s*(?:0x)?)"
+        body = sep.join(re.escape(hexd[i:i + 2]) for i in range(0, len(hexd), 2))
+        return re.compile(r"(?i)(?<![0-9a-f])(?:0x)?" + body + r"(?![0-9a-f])")
+    return re.compile(re.escape(value))
 
 
 # Any home directory (Linux, macOS, Windows; also JSON-escaped backslashes).
@@ -164,14 +193,17 @@ def _mask_steps(secrets):
     directories first (a user name is part of both), then the users, then
     the generic patterns."""
     hosts = [("build-machine host", lambda t, v=v, r=r: t.replace(v, r))
-             for v, r in secrets if r not in ("user", "~", NAME_REP)]
+             for v, r in secrets if r not in ("user", "~", NAME_REP, SECRET_REP)]
+    keys = [("a token or key", lambda t, rx=_secret_re(v): rx.sub(SECRET_REP, t))
+            for v, r in secrets if r == SECRET_REP]
+    keys.append(("a token or key", lambda t: TOKEN_RE.sub(TOKEN_REP, t)))
     names = [("a real person's name", lambda t, v=v: re.sub(re.escape(v), NAME_REP, t, flags=re.I))
              for v, r in secrets if r == NAME_REP]
     homes = [("home directory", lambda t, v=v: t.replace(v, "~")) for v, r in secrets if r == "~"]
     homes.append(("home directory", lambda t: HOME_RE.sub("~", t)))
     users = [("build-machine user", lambda t, rx=_user_re(v): rx.sub("user", t))
              for v, r in secrets if r == "user"]
-    return [*hosts, *homes, *users, *names,
+    return [*keys, *hosts, *homes, *users, *names,
             ("e-mail address", lambda t: EMAIL_RE.sub("<e-mail>", t)),
             ("private IP address", lambda t: PRIVATE_IP_RE.sub("<ip>", t))]
 

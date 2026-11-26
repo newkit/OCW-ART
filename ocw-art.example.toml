@@ -14,6 +14,10 @@ ocw_repo = "../OCW"
 
 # More private words for the mask (docs/ART-PROJECT.md §2.5; never printed):
 # user names that are no build machine's (masked as "user") and real people's
-# names that reached a prompt or a commit (masked as "<name>").
+# names that reached a prompt or a commit (masked as "<name>"), and keys that
+# must never be published (masked as "<secret>"; a hex key also byte by byte,
+# "AB CD …", "0xAB, 0xCD", any case). API tokens (Vercel, Fly.io, GitHub, …)
+# are masked without a setting.
 # mask_users = ["oldname"]
 # mask_names = ["First Last"]
+# mask_secrets = ["0011223344556677"]

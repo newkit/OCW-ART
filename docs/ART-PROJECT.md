@@ -262,7 +262,11 @@ plain git (since v2.0 the day folders' pictures and videos are in Git LFS, §2.8
   (`/home/NAME`, `/Users/NAME`, `C:\Users\NAME`) with `~`, the private
   words of the git-ignored `ocw-art.toml` (`mask_users` → `user`, e.g. the
   coordinator's former user on deb; `mask_names` → `<name>`, a real person's
-  name that reached a prompt), e-mail addresses
+  name that reached a prompt; `mask_secrets` → `<secret>`, a key that may
+  never be published, such as the ANT+ network key, a hex key also written
+  byte by byte), API tokens (Vercel `vck_…`, Fly.io `FlyV1 fm2_…`, GitHub,
+  `sk-…`, Slack, AWS key ids) with `<token>` (2026-11-27: two tokens had
+  reached day 16's prompts), e-mail addresses
   with `<e-mail>` and private IP addresses with `<ip>`. A user name is masked
   as a word of its own (`claude@host`, `"claude"`). It is not masked inside a
   path or a name such as `~/.claude/` or `claude.ai`.
