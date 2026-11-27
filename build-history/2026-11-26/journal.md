@@ -1,6 +1,6 @@
 # OCW build diary – day 16, 2026-11-26
 
-111 commits (36 merges), +33718 / −1447 lines, 247 images, 6 videos, 1 sounds.
+113 commits (36 merges), +38985 / −1517 lines, 247 images, 6 videos, 1 sounds.
 
 ## Commits
 
@@ -113,10 +113,12 @@
 | 21:52 | `fedfa78b` | ANT stick on Windows through Garmin's libusb-win32 driver; Linux access rule through pkexec (Phase 17 Q7 (d), Q8 (b)) |
 | 21:59 | `42e87345` | VR kiosk: local server for now, ocw-server with bots once it runs again (Phase 11 Q14) |
 | 22:42 | `3174ba08` | ANT+ driver / access pages: in the desktop page list, notes short enough for a 16:9 page |
+| 22:53 | `bdb1f14b` | Lakes and rivers follow their OSM outlines, water material, far forests, alpine ground, no phantom pylons (spec 4.6.3, v6.58) |
 | 23:05 | `1b560575` | Status page for the Fly.io server: / for browsers, /stats.json, counts only (spec 11.5) |
 | 23:23 | `1dde18f3` | Status page deployed on Fly (release v6): checks recorded (spec 11.5) |
 | 23:29 | `733ca32d` (merge) | Merge the Fly server's public status page (/ and /stats.json, counts only) (11.5; 6.65) |
 | 23:29 | `22d76884` (merge) | Merge ANT+ access: Garmin's libusb-win32 driver on Windows (WinUSB first, then libusb0), the pkexec udev helper on Linux (Phase 17 Q7 (d), Q8 (b); 6.66) |
+| 23:54 | `78acd165` | Browser app: an on-page log a rider can open on a phone and send (spec 14 Phase 10, 10G, v6.65) |
 
 ## Builds and build servers
 

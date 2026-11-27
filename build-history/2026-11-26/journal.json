@@ -859,6 +859,14 @@
    "removed": 18
   },
   {
+   "sha": "bdb1f14b",
+   "time": "22:53:32",
+   "merge": false,
+   "subject": "Lakes and rivers follow their OSM outlines, water material, far forests, alpine ground, no phantom pylons (spec 4.6.3, v6.58)",
+   "added": 4179,
+   "removed": 63
+  },
+  {
    "sha": "1b560575",
    "time": "23:05:41",
    "merge": false,
@@ -889,17 +897,26 @@
    "subject": "Merge ANT+ access: Garmin's libusb-win32 driver on Windows (WinUSB first, then libusb0), the pkexec udev helper on Linux (Phase 17 Q7 (d), Q8 (b); 6.66)",
    "added": 0,
    "removed": 0
+  },
+  {
+   "sha": "78acd165",
+   "time": "23:54:39",
+   "merge": false,
+   "subject": "Browser app: an on-page log a rider can open on a phone and send (spec 14 Phase 10, 10G, v6.65)",
+   "added": 1088,
+   "removed": 7
   }
  ],
  "merges": 36,
- "lines_added": 33718,
- "lines_removed": 1447,
+ "lines_added": 38985,
+ "lines_removed": 1517,
  "spec_versions": [
   "6.03",
   "6.09",
   "11.5",
   "6.43",
   "6.48",
+  "4.6",
   "11.5",
   "11.5"
  ],

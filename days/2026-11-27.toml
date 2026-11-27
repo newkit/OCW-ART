@@ -1,0 +1,167 @@
+# OCW Build Diary – day 17 (docs/ART-PROJECT.md §4 describes every field).
+# Shots are files in build-history/2026-11-27/ (or ../DAY/ for another day).
+# Spec rows 6.67–6.99; release 0.2.7 (with Andorra).
+# Withheld: nothing – the day's 718 pictures and videos were checked. The
+# browser app's on-page log (?log=1), new since day 16, writes the crates'
+# paths as "cargo:bevy_…" and "~/…" itself (ocw-log.js), and every log panel
+# on the phones' screenshots shows only relative source paths, the test
+# address 127.0.0.1 and "(hidden)" names (the full console logs with the build
+# user's home stay in logs/, masked in the zip). The Fly.io status page shows
+# the made-up rider Fenna Freewheel, the bot Echo and the public server's own
+# address and certificate fingerprint; the ANT+ pages show "set" or
+# "********** 10 of 16"; OCW Studio shows artwork/3dmodels; no desktop
+# captures. The text: the iPhone page logs pasted into the prompts hold the
+# phone's model, browser and language only, names "(hidden)" – no secrets;
+# the ANT+ key and the Vercel and Fly.io tokens appear nowhere.
+
+title = "Traffic, and a UFO took the cow"
+tagline = "In which the iPhone gives up its shadows and its photographer, the heart beats pink, 0.2.7 ships with Andorra, cars learn to pass at 1.5 m (lunatics excepted), an airliner flies with the unicorn – and something lifts a cow over Liechtenstein."
+hero = "132621-2026-11-27-aircraft-flyby-airliner-still-7-s.jpg"
+bpm = 104
+key = "E"
+style = "funk"                     # day 16 synthwave restarted the rotation; funk has not played since day 2 – a slap bass for a day of traffic
+mode = "dorian"
+tests = 3799                       # the last full count of the day (04:03, 88 suites)
+outro = "32 spec versions, a release with Andorra, ten traffic steps, one cow. 1.81 billion tokens."
+teaser = "NEXT TIME: real worlds on the iPhone?"
+# The phone bisect's log panels, the release's browser tour, the icons, the
+# plots and the landscape runs would flicker through the time-lapse:
+timelapse_skip = ["*web-bisect-*", "*web-log-*", "*-web-webkit-*", "*release-0.2.7-web-*",
+                  "*windows-icon-*", "*t4plots-*", "*traffic-junctions-*", "*landscape-compare-*",
+                  "*web-load-*", "*heart-*-zoom*"]
+
+[[chapter]]
+time = "02:45"
+title = "Names on the road"
+caption = "The lakes' new shores roll out to marge, leela and Fly. Then the status page names who is riding – no IPs, no positions."
+prompt = "11.5 Q1: yes, show riders name"
+shots = [
+  { card = true, seconds = 3.8, text = "01:11: the landscape fixes on marge and leela, then the Fly.io server and the live page. Fly goes from v7 to v11 today." },
+  { file = "034512-statuspage-names-statuspage-live-desktop.png", seconds = 4.4, focus = [0.35, 0.4, 1.8], note = "a made-up rider and Echo" },
+]
+
+[[chapter]]
+time = "02:48"
+title = "What closes the iPhone?"
+caption = "The page dies on an iPhone. Switches in the address bisect it: every shadow variant kills it – shadows off on iOS WebGL 2."
+prompt = "here is the log of the crashing browser app: Whats the RC?"
+shots = [
+  { file = "093951-2026-11-27-ios-shadows-web-bisect-iphone-killed.png", seconds = 4.0, note = "\"the browser closed the page\"" },
+  { file = "133519-web-bisect-web-bisect-android-base-photo-1.jpg", seconds = 3.8, note = "the ride photographer's photo" },
+  { card = true, seconds = 3.8, text = "13:17: the photographer was next – the first ride photo closed the page. Photos off on iOS WebGL 2 too." },
+]
+
+[[chapter]]
+time = "04:58"
+title = "Rust-brown and no glow"
+caption = "Dry grass above the tree line turns a darker russet, and the far land stops glowing in the low evening sun."
+prompt = "Landscape follow-ups: yes, rust-brown dry grass, weaker evening haze."
+shots = [
+  { split = ["030618-scenes-landscape-before-wg-envalira-pass.jpg", "043814-scenes-landscape-after-wg-envalira-pass.jpg"], seconds = 4.9, note = "Envalira: sand | russet" },
+  { split = ["030726-scenes-landscape-before-unicorn-hornisgrinde-sunset.jpg", "043922-scenes-landscape-after-unicorn-hornisgrinde-sunset.jpg"], seconds = 4.9, note = "the evening glow, toned down" },
+]
+
+[[chapter]]
+time = "07:15"
+title = "Traffic, part one"
+caption = "Settings → Traffic, TRFC and AERO data in every world, a traffic core with car following and signals – and 15 models."
+prompt = "start implementing traffic"
+shots = [
+  { file = "055542-vehicles-t6-airliner-twinjet-day-wayland.jpg", seconds = 3.6, focus = [0.62, 0.48, 1.5] },
+  { file = "055714-vehicles-t6-lorry-articulated-box-day-wayland.jpg", seconds = 3.4, focus = [0.68, 0.5, 1.5] },
+  { file = "055812-vehicles-t6-ufo-saucer-day-wayland.jpg", seconds = 3.4, focus = [0.68, 0.55, 1.5], note = "a vehicle like any other" },
+  { file = "070448-t1-scenes-menu-traffic.jpg", seconds = 4.0, focus = [0.35, 0.35, 1.5], note = "UFOs: rare" },
+]
+
+[[chapter]]
+time = "08:58"
+title = "A beating pink heart"
+caption = "The heart next to the heart rate beats with it – and turns pink and pounds while the rate climbs."
+prompt = "make the hear of the HR pounding  in pink whe HR increases"
+shots = [
+  { split = ["080323-heart-web-web-webgl2-normal-zoom.png", "080323-heart-web-web-webgl2-pink-zoom.png"], seconds = 4.6, note = "126 | 159 and rising" },
+  { file = "084046-heart-heart-ride-zoom.mp4", seconds = 5.0, start = 8.0 },
+]
+
+[[chapter]]
+time = "09:08"
+title = "Aircraft and contrails"
+caption = "Airways, approaches, helicopters, gliders and balloons – contrails where the air is cold and wet, heard with the delay of sound."
+shots = [
+  { file = "093213-scenes-t8-air-air-tfn-approach.mp4", seconds = 5.0, start = 6.0, note = "an approach to Tenerife North" },
+  { file = "093300-scenes-t8-air-air-contrails-blackforest.jpg", seconds = 3.8, focus = [0.5, 0.3, 1.6] },
+  { file = "094652-scenes-t8-air2-air-contrails-timelapse.mp4", seconds = 4.5, start = 2.0, speed = 2 },
+]
+
+[[chapter]]
+time = "10:27"
+title = "1.5 m, or wait"
+caption = "Cars pass riders only with the legal distance, a free lane and a clear view – unless the driver is a lunatic."
+prompt = "add a lunatic mode, where cares drive like crazy and overtake in stupid and dangerous situations"
+shots = [
+  { file = "093602-2026-11-27-traffic-t4-t4plots-passes-polite.png", seconds = 4.0, focus = [0.5, 0.35, 1.3], note = "polite: 0 closer than the law" },
+  { file = "093602-2026-11-27-traffic-t4-t4plots-passes-lunatic.png", seconds = 4.0, focus = [0.5, 0.35, 1.3], note = "lunatic: 1,264 closer" },
+  { file = "093912-8c9ebc25-dirty-video-wayland-traffic-boxes-video.mp4", seconds = 4.5, start = 1.0, note = "the server's traffic, as boxes" },
+]
+
+[[chapter]]
+time = "11:48"
+title = "0.2.7, with Andorra"
+caption = "A world switch no longer crashes on a late build, every app joins the public Fly server first – and 0.2.7 ships with Andorra."
+prompt = "when the landscape check, traffic implementarion and default server tasks are done and tested successfully, bump bersion and do a release."
+shots = [
+  { file = "073254-desktop-join-public-fly-liechtenstein.jpg", seconds = 3.8, note = "joined: the public server" },
+  { file = "122422-2026-11-27-release-0.2.7-windows-icon-ocw-desktop-256.png", seconds = 3.2, note = "0.2.7 for Windows" },
+  { file = "121612-2026-11-27-release-0.2.7-web-world-webgpu-web-world.jpg", seconds = 3.8, note = "the browser tour of 0.2.7" },
+  { card = true, seconds = 3.8, text = "12:26: and Vercel deploys nothing any more on a push – the servers run on Fly.io." },
+]
+
+[[chapter]]
+time = "12:06"
+title = "Wing to wing"
+caption = "Planes look tiny in the pictures, so a drone and the unicorn fly with an airliner and a helicopter over Tenerife."
+prompt = "planes are pretty small in the images i've seen. create a flyby with a drone and the unicorn"
+shots = [
+  { file = "132617-2026-11-27-aircraft-flyby-airliner-flyby-1280.mp4", seconds = 7.0, start = 2.0, note = "drawn at true size" },
+  { file = "132621-2026-11-27-aircraft-flyby-helicopter-flyby-1280.mp4", seconds = 5.0, start = 4.0 },
+]
+
+[[chapter]]
+time = "14:09"
+title = "ANT+ grows up"
+caption = "Smart trainers over ANT+ FE-C, a stick in the browser over WebUSB, torque-only power meters and speed/cadence sensors."
+shots = [
+  { file = "130431-ant-fec-B-ride-erg.jpg", seconds = 3.8, note = "ERG mode over FE-C" },
+  { file = "132153-2026-11-27-ant-webusb-web-ant-chromium-key-typing.jpg", seconds = 4.0, focus = [0.3, 0.35, 1.6], note = "the key stays in this browser" },
+  { file = "145654-ant-power-A-2-power-meter-page.png", seconds = 3.6, focus = [0.82, 0.3, 1.5], note = "calibrated: offset 512" },
+]
+
+[[chapter]]
+time = "15:05"
+title = "Lamps, spray and no jam"
+caption = "The queue at Liechtenstein's main junctions dissolves; cars get models, lamps, spray, engines and a Doppler whoosh."
+shots = [
+  { file = "141126-traffic-junctions-compare-60min.png", seconds = 4.4, note = "before | after, 60 min" },
+  { file = "150746-6ba1cb74-dirty-shot-traffic-night-x11.jpg", seconds = 3.8, focus = [0.45, 0.4, 1.5] },
+  { file = "151553-6ba1cb74-dirty-video-traffic-dusk-rain-x11.mp4", seconds = 5.0, start = 0.5 },
+]
+
+[[chapter]]
+time = "18:37"
+title = "They came for the cow"
+caption = "Rare UFOs on clear nights: crop circles that stay, a curious visitor for the unicorn – and a cow beamed a field away."
+shots = [
+  { file = "181944-b56d226a-dirty-video-wayland-ufo-crop-circle-morning.jpg", seconds = 3.8, note = "the next morning" },
+  { file = "182205-b56d226a-dirty-video-wayland-ufo-cow-beam-video.mp4", seconds = 7.0, start = 5.0, speed = 2, note = "the cow, in the beam" },
+  { file = "182517-b56d226a-dirty-video-wayland-ufo-unicorn-dusk-video.mp4", seconds = 6.0, start = 20.0, speed = 2 },
+]
+
+[[chapter]]
+time = "19:22"
+title = "Buses, parked cars, real planes"
+caption = "Buses run their OSM lines and open their doors, cars park on the kerb, and real aircraft come live from adsb.lol."
+shots = [
+  { file = "182830-bus18b-bus-stop-doors-day-wayland.jpg", seconds = 3.8, note = "doors open" },
+  { file = "191352-bus18b-bus-stop-video-wayland.mp4", seconds = 5.0, start = 2.0, speed = 2 },
+  { file = "192327-894edf69-dirty-shot-wayland-air-live-tenerife.jpg", seconds = 4.0, focus = [0.45, 0.5, 1.4], note = "live, without identities" },
+]
