@@ -1,0 +1,11 @@
+# Every 5 minutes: new test output is copied before an agent's worktree goes.
+[Unit]
+Description=OCW Build Diary: frequent gather timer
+
+[Timer]
+OnCalendar=*:0/5
+AccuracySec=30s
+Unit=ocw-art-gather.service
+
+[Install]
+WantedBy=timers.target

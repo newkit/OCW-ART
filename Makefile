@@ -101,20 +101,20 @@ lfs-commit: ## Commit the days' media to LFS, one commit per day, within the bud
 lfs-push: ## Push the archive's commits (LFS objects first) and verify the LFS file list
 	$(DIARY) lfs-push
 
-UNITS = ocw-art-collect.service ocw-art-collect.timer
+UNITS = ocw-art-collect.service ocw-art-collect.timer ocw-art-gather.service ocw-art-gather.timer
 USER_UNITS = $(HOME)/.config/systemd/user
 
 install-timer: ## Install and start the hourly collector as a systemd user timer (this checkout)
 	mkdir -p $(USER_UNITS)
 	for u in $(UNITS); do sed 's|@REPO@|$(CURDIR)|g' systemd/$$u > $(USER_UNITS)/$$u; done
 	systemctl --user daemon-reload
-	systemctl --user enable --now ocw-art-collect.timer
+	systemctl --user enable --now ocw-art-collect.timer ocw-art-gather.timer
 	@echo "Art collector: hourly (make timer-status); to run without a login: sudo loginctl enable-linger $$USER"
 
 uninstall-timer: ## Stop and remove the hourly collector's systemd user timer
-	-systemctl --user disable --now ocw-art-collect.timer
+	-systemctl --user disable --now ocw-art-collect.timer ocw-art-gather.timer
 	-systemctl --user stop ocw-art-collect.service
-	rm -f $(USER_UNITS)/ocw-art-collect.service $(USER_UNITS)/ocw-art-collect.timer
+	rm -f $(addprefix $(USER_UNITS)/,$(UNITS))
 	-systemctl --user daemon-reload
 
 timer-status: ## The collector timer's next/last run and the last run's status file

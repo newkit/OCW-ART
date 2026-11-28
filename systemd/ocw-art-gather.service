@@ -1,0 +1,20 @@
+# Copies new pictures, videos and logs of today from every OCW checkout and
+# agent worktree into build-history/ (docs/ART-PROJECT.md §5.1), so that a
+# worktree removed minutes after its agent finished does not take them along.
+# Light: no sheets, gallery or LFS (the hourly collector does those).
+[Unit]
+Description=OCW Build Diary: frequent gather of new test output
+
+[Service]
+Type=oneshot
+WorkingDirectory=@REPO@
+ExecStart=/usr/bin/python3 @REPO@/diary.py gather
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=TMPDIR=%h/tmp
+ExecStartPre=/bin/mkdir -p %h/tmp
+# Skip this round when the hourly collector holds the lock.
+Environment=OCW_ART_LOCK_WAIT=20
+SuccessExitStatus=1 75
+TimeoutStartSec=10min
+Nice=10
+IOSchedulingClass=idle
